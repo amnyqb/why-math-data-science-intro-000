@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>System Dynamics in 3D</title>
+<style>
+  :root { --bg:#0b1d33; --ink:#cfe6ff; --dim:#7fa3c7; --prey:#4ade80; --pred:#f87171; --line:#3b6ea5; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:13px/1.4 ui-monospace,Menlo,Consolas,monospace; overflow:hidden; }
+  canvas#scene { position:fixed; inset:0; width:100%; height:100%; display:block; }
+  #hud { position:fixed; top:12px; left:12px; width:250px; padding:12px; background:rgba(11,29,51,.85); border:1px solid var(--line); border-radius:6px; max-height:calc(100% - 24px); overflow:auto; }
+  #hud h1 { font-size:14px; margin:0 0 2px; letter-spacing:.04em; }
+  #hud p { margin:0 0 8px; color:var(--dim); font-size:11px; }
+  .row { margin:6px 0; }
+  .row label { display:flex; justify-content:space-between; color:var(--dim); }
+  .row b { color:var(--ink); font-weight:600; }
+  input[type=range] { width:100%; accent-color:#5aa9ff; }
+  .btns { display:flex; gap:6px; margin:10px 0 4px; }
+  button { flex:1; background:#12304f; color:var(--ink); border:1px solid var(--line); border-radius:4px; padding:6px; font:inherit; cursor:pointer; }
+  button:hover { background:#1b4670; }
+  #readout { margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); }
+  #readout .p { color:var(--prey); } #readout .q { color:var(--pred); }
+  #chart { position:fixed; right:12px; top:12px; width:360px; height:150px; background:rgba(11,29,51,.85); border:1px solid var(--line); border-radius:6px; }
+  #err { position:fixed; inset:auto 12px 12px 12px; color:#fca5a5; display:none; }
+  @media (max-width:700px) { #hud { width:190px; font-size:11px; } #chart { width:240px; height:110px; } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<canvas id="scene"></canvas>
+<div id="hud">
+  <h1>PREDATOR–PREY · 3D</h1>
+  <p>Two stocks, four flows, two feedback loops. Drag to orbit, scroll to zoom.</p>
+  <div id="controls"></div>
+  <div class="btns"><button id="play">Pause</button><button id="reset">Reset</button></div>
+  <div id="readout"></div>
+</div>
+<canvas id="chart" width="720" height="300"></canvas>
+<div id="err"></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+/* ---------- System dynamics model ---------- */
+const P = { alpha:1.1, beta:0.4, delta:0.1, gamma:0.4, x0:10, y0:4, speed:1.5 };
+const DEFS = [
+  ['alpha','Prey growth α',0.2,2,0.05],
+  ['beta','Predation β',0.1,1,0.05],
+  ['delta','Predator efficiency δ',0.02,0.3,0.01],
+  ['gamma','Predator death γ',0.1,1,0.05],
+  ['x0','Initial prey',1,20,1],
+  ['y0','Initial predators',1,12,1],
+  ['speed','Sim speed',0.2,5,0.1],
+];
+const S = { x:P.x0, y:P.y0, t:0 };
+const flows = (x,y) => [P.alpha*x, P.beta*x*y, P.delta*x*y, P.gamma*y]; // prey birth, predation, pred birth, pred death
+const deriv = (x,y) => { const f = flows(x,y); return [f[0]-f[1], f[2]-f[3]]; };
+function rk4(h){
+  const {x,y} = S;
+  const k1 = deriv(x,y);
+  const k2 = deriv(x+h/2*k1[0], y+h/2*k1[1]);
+  const k3 = deriv(x+h/2*k2[0], y+h/2*k2[1]);
+  const k4 = deriv(x+h*k3[0], y+h*k3[1]);
+  S.x = Math.max(1e-6, x + h/6*(k1[0]+2*k2[0]+2*k3[0]+k4[0]));
+  S.y = Math.max(1e-6, y + h/6*(k1[1]+2*k2[1]+2*k3[1]+k4[1]));
+  S.t += h;
+}
+
+/* ---------- UI ---------- */
+const ctl = document.getElementById('controls');
+for (const [k,label,min,max,step] of DEFS){
+  const row = document.createElement('div'); row.className='row';
+  row.innerHTML = `<label>${label}<b id="v_${k}">${P[k]}</b></label><input type="range" id="s_${k}" min="${min}" max="${max}" step="${step}" value="${P[k]}">`;
+  ctl.appendChild(row);
+  row.querySelector('input').addEventListener('input', e => {
+    P[k] = parseFloat(e.target.value);
+    document.getElementById('v_'+k).textContent = P[k];
+    if (k==='x0'||k==='y0') resetSim();
+  });
+}
+let playing = true;
+const playBtn = document.getElementById('play');
+playBtn.onclick = () => { playing = !playing; playBtn.textContent = playing ? 'Pause' : 'Resume'; };
+document.getElementById('reset').onclick = () => resetSim();
+function resetSim(){ S.x=P.x0; S.y=P.y0; S.t=0; hist.length=0; }
+
+/* ---------- Scene ---------- */
+const canvas = document.getElementById('scene');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias:true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0b1d33);
+scene.fog = new THREE.Fog(0x0b1d33, 22, 44);
+const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+camera.position.set(-1.5, 5, 18);
+const orbit = new OrbitControls(camera, canvas);
+orbit.target.set(-1.5, 3, 1); orbit.enableDamping = true; orbit.maxPolarAngle = Math.PI*0.52;
+scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+const sun = new THREE.DirectionalLight(0xffffff, 1.1); sun.position.set(6,12,8); scene.add(sun);
+const grid = new THREE.GridHelper(40, 40, 0x3b6ea5, 0x1d3f66); scene.add(grid);
+
+const PREY = 0x4ade80, PRED = 0xf87171, FLOW = 0x5ad1ff;
+const TANK_H = 4, TANK_R = 1.4, CAP = { prey:20, pred:12 };
+
+function label(text, color='#cfe6ff', w=4, size=26){
+  const c = document.createElement('canvas'); c.width = 512; c.height = 96;
+  const g = c.getContext('2d'); g.font = `${size}px ui-monospace,Menlo,Consolas,monospace`;
+  g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = color; g.fillText(text, 256, 48);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map:new THREE.CanvasTexture(c), transparent:true, depthTest:false }));
+  s.scale.set(w, w*96/512, 1); return s;
+}
+function cloud(pos){
+  const m = new THREE.Mesh(new THREE.IcosahedronGeometry(0.55,1), new THREE.MeshBasicMaterial({ color:0x7fa3c7, wireframe:true }));
+  m.position.copy(pos); scene.add(m);
+}
+function tank(x, color, name){
+  const g = new THREE.Group(); g.position.x = x;
+  const shell = new THREE.CylinderGeometry(TANK_R, TANK_R, TANK_H, 40, 1, true);
+  g.add(new THREE.Mesh(shell, new THREE.MeshPhysicalMaterial({ color:0x9fd0ff, transparent:true, opacity:0.12, side:THREE.DoubleSide, depthWrite:false })));
+  const edges = new THREE.LineSegments(new THREE.EdgesGeometry(shell, 1), new THREE.LineBasicMaterial({ color:0x9fd0ff }));
+  g.children[0].position.y = edges.position.y = TANK_H/2; g.add(edges);
+  for (let i=0;i<=4;i++){ // level rings
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(TANK_R+0.01, 0.012, 6, 48), new THREE.MeshBasicMaterial({ color:0x9fd0ff }));
+    ring.rotation.x = Math.PI/2; ring.position.y = i*TANK_H/4; g.add(ring);
+  }
+  const liquid = new THREE.Mesh(new THREE.CylinderGeometry(TANK_R-0.08, TANK_R-0.08, 1, 40), new THREE.MeshStandardMaterial({ color, transparent:true, opacity:0.85, roughness:0.35 }));
+  g.add(liquid);
+  const lab = label('STOCK · '+name, '#'+color.toString(16).padStart(6,'0'), 4.2); lab.position.y = -0.7; g.add(lab);
+  scene.add(g); return liquid;
+}
+const preyLiq = tank(-4, PREY, 'PREY');
+const predLiq = tank( 4, PRED, 'PREDATORS');
+
+/* Flow pipes with moving particles */
+const pipes = [];
+function pipe(a, b, caption, ref, dy=0.75, tint=FLOW){
+  a = new THREE.Vector3(...a); b = new THREE.Vector3(...b);
+  const len = a.distanceTo(b);
+  const cyl = new THREE.Mesh(new THREE.CylinderGeometry(0.1,0.1,len,12,1,true), new THREE.MeshBasicMaterial({ color:0x3b6ea5, wireframe:true }));
+  cyl.position.copy(a).lerp(b,0.5); cyl.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), b.clone().sub(a).normalize());
+  scene.add(cyl);
+  const N = 24, pos = new Float32Array(N*3), ph = Array.from({length:N}, (_,i)=>i/N);
+  const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({ color:tint, size:0.2, depthWrite:false }));
+  pts.frustumCulled = false; scene.add(pts);
+  const valve = new THREE.Mesh(new THREE.OctahedronGeometry(0.28), new THREE.MeshStandardMaterial({ color:tint, emissive:tint, emissiveIntensity:0.4 }));
+  valve.position.copy(a).lerp(b,0.5); scene.add(valve);
+  const cap = label(caption, '#cfe6ff', 4.6, 28); cap.position.copy(valve.position).add(new THREE.Vector3(0,dy,0)); scene.add(cap);
+  pipes.push({ a, b, ph, pos, geo, valve, ref });
+}
+// [0] prey births, [1] predation, [2] predator births, [3] predator deaths
+pipe([-4,7,0],[-4,4.15,0], 'births  α·prey', 12);
+pipe([-4,0.7,1.4],[-4,0.7,5], 'predation  β·prey·pred', 12, -0.9);
+pipe([ 4,7,0],[ 4,4.15,0], 'births  δ·prey·pred', 4);
+pipe([ 4,0.7,1.4],[ 4,0.7,5], 'deaths  γ·pred', 2.5, -0.9);
+cloud(new THREE.Vector3(-4,7.4,0)); cloud(new THREE.Vector3(4,7.4,0));
+cloud(new THREE.Vector3(-4,0.7,5.5)); cloud(new THREE.Vector3(4,0.7,5.5));
+
+/* Information link: the feedback that couples the stocks */
+const link = new THREE.Line(
+  new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-2.6,4.8,0), new THREE.Vector3(2.6,4.8,0)]),
+  new THREE.LineDashedMaterial({ color:0xfbbf24, dashSize:0.25, gapSize:0.15 }));
+link.computeLineDistances(); scene.add(link);
+const linkLab = label('feedback: prey ↔ predators', '#fbbf24', 4); linkLab.position.set(0,5.3,0); scene.add(linkLab);
+
+/* ---------- Time-series chart ---------- */
+const chart = document.getElementById('chart'), cg = chart.getContext('2d');
+const hist = []; const WINDOW = 25;
+function drawChart(){
+  const W = chart.width, H = chart.height; cg.clearRect(0,0,W,H);
+  cg.strokeStyle = '#1d3f66'; cg.lineWidth = 1;
+  for (let i=1;i<4;i++){ cg.beginPath(); cg.moveTo(0,H*i/4); cg.lineTo(W,H*i/4); cg.stroke(); }
+  if (hist.length < 2) return;
+  const t1 = hist[hist.length-1][0], t0 = Math.max(0, t1-WINDOW);
+  const ymax = Math.max(5, ...hist.map(h => Math.max(h[1],h[2]))) * 1.1;
+  for (const [idx,col] of [[1,'#4ade80'],[2,'#f87171']]){
+    cg.beginPath(); cg.strokeStyle = col; cg.lineWidth = 2.5;
+    hist.forEach((h,i) => { const px = (h[0]-t0)/WINDOW*W, py = H - 14 - (h[idx]/ymax)*(H-28); i ? cg.lineTo(px,py) : cg.moveTo(px,py); });
+    cg.stroke();
+  }
+  cg.fillStyle = '#7fa3c7'; cg.font = '20px ui-monospace,monospace';
+  cg.fillText('population vs time', 10, 22);
+}
+
+/* ---------- Main loop ---------- */
+const readout = document.getElementById('readout');
+const clock = new THREE.Clock();
+function resize(){
+  const w = innerWidth, h = innerHeight;
+  renderer.setSize(w,h,false); camera.aspect = w/h; camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize); resize();
+
+function frame(){
+  const dt = Math.min(clock.getDelta(), 0.05);
+  if (playing){
+    const simDt = dt*P.speed, steps = Math.max(1, Math.ceil(simDt/0.01));
+    for (let i=0;i<steps;i++) rk4(simDt/steps);
+    hist.push([S.t, S.x, S.y]);
+    while (hist.length && hist[0][0] < S.t - WINDOW) hist.shift();
+  }
+  const hx = Math.max(0.001, TANK_H*Math.min(S.x/CAP.prey,1)), hy = Math.max(0.001, TANK_H*Math.min(S.y/CAP.pred,1));
+  preyLiq.scale.y = hx; preyLiq.position.y = hx/2;
+  predLiq.scale.y = hy; predLiq.position.y = hy/2;
+
+  const f = flows(S.x, S.y);
+  pipes.forEach((p,i) => {
+    const r = f[i], speed = playing ? 0.12 + 0.5*Math.min(r/p.ref, 1.6) : 0;
+    for (let k=0;k<p.ph.length;k++){
+      p.ph[k] = (p.ph[k] + speed*dt) % 1;
+      const q = new THREE.Vector3().copy(p.a).lerp(p.b, p.ph[k]);
+      p.pos[k*3]=q.x; p.pos[k*3+1]=q.y; p.pos[k*3+2]=q.z;
+    }
+    p.geo.attributes.position.needsUpdate = true;
+    p.valve.scale.setScalar(0.6 + 0.8*Math.min(r/p.ref, 1.6));
+    p.valve.rotation.y += dt*2;
+  });
+  readout.innerHTML = `t = ${S.t.toFixed(1)}<br><span class="p">prey &nbsp;&nbsp;&nbsp;${S.x.toFixed(2)}</span><br><span class="q">predators ${S.y.toFixed(2)}</span><br>`
+    + `equilibrium: prey ${(P.gamma/P.delta).toFixed(1)}, pred ${(P.alpha/P.beta).toFixed(1)}`;
+  drawChart();
+  orbit.update(); renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+frame();
+window.addEventListener('error', e => { const el = document.getElementById('err'); el.style.display='block'; el.textContent = 'Error: ' + e.message; });
+</script>
+</body>
+</html>
