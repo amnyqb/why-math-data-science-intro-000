@@ -14,7 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL = os.path.join(HERE, "cartpole.sdm")
 SERIES = "CartX,CartV,PoleTh,PoleW,Force"
 # page field -> model constant
-FIELDS = {"x": "x0", "v": "v0", "th": "th0", "w": "w0", "M": "M", "m": "m", "l": "l",
+FIELDS = {"x": "x0", "v": "v0", "th": "th0", "w": "w0", "M": "CartMass", "m": "PoleMass", "l": "HalfLen",
           "kth": "kth", "kw": "kw", "kx": "kx", "kv": "kv", "ref": "ref",
           "Fmax": "Fmax", "Fuser": "Fuser", "auto": "Auto"}
 

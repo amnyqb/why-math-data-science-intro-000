@@ -4,7 +4,7 @@ and the feedback controller written as ordinary equations."""
 import json
 
 consts = {  # name: (value, comment)
-    "M": 1.0, "m": 0.1, "l": 0.5, "g": 9.81, "b": 0.1, "c": 0.02,
+    "CartMass": 1.0, "PoleMass": 0.1, "HalfLen": 0.5, "Grav": 9.81, "CartFric": 0.1, "PoleFric": 0.02,
     "kth": 50, "kw": 10, "kx": 2, "kv": 3, "ref": 0, "Fmax": 30,
     "Fuser": 0, "Auto": 1,
     "x0": 0, "v0": 0, "th0": 0.12, "w0": 0,
@@ -13,9 +13,9 @@ stocks = {"CartX": "x0", "CartV": "v0", "PoleTh": "th0", "PoleW": "w0"}
 auxes = {
     "Fraw": "IF THEN ELSE(Auto > 0.5, kx*(CartX-ref) + kv*CartV + kth*PoleTh + kw*PoleW, 0) + Fuser",
     "Force": "MAX(0-Fmax, MIN(Fmax, Fraw))",
-    "Tmp": "(Force - b*CartV + m*l*PoleW*PoleW*SIN(PoleTh))/(M+m)",
-    "PoleAccel": "(g*SIN(PoleTh) - COS(PoleTh)*Tmp)/(l*(4/3 - m*COS(PoleTh)*COS(PoleTh)/(M+m))) - c*PoleW",
-    "CartAccel": "Tmp - m*l*PoleAccel*COS(PoleTh)/(M+m)",
+    "Tmp": "(Force - CartFric*CartV + PoleMass*HalfLen*PoleW*PoleW*SIN(PoleTh))/(CartMass+PoleMass)",
+    "PoleAccel": "(Grav*SIN(PoleTh) - COS(PoleTh)*Tmp)/(HalfLen*(4/3 - PoleMass*COS(PoleTh)*COS(PoleTh)/(CartMass+PoleMass))) - PoleFric*PoleW",
+    "CartAccel": "Tmp - PoleMass*HalfLen*PoleAccel*COS(PoleTh)/(CartMass+PoleMass)",
 }
 flows = {  # name: (equation, stock it feeds)
     "dX": ("CartV", "CartX"), "dV": ("CartAccel", "CartV"),
@@ -35,7 +35,7 @@ for n, eq in auxes.items(): add(n, "Aux", eq)
 for n, (eq, st) in flows.items(): add(n, "Flow", eq, to=ids[st])
 
 model = {"title": "Cart-Pole (inverted pendulum on a cart)",
-         "vars": vars_, "next_id": nid,
+         "vars": vars_, "links": [], "next_id": nid,
          "settings": {"initial_time": 0.0, "final_time": 0.1, "time_step": 0.005,
                       "time_units": "Second", "method": "RungeKutta4"}}
 json.dump(model, open("cartpole.sdm", "w"), indent=1)

@@ -3,7 +3,7 @@
  "vars": [
   {
    "id": 1,
-   "name": "M",
+   "name": "CartMass",
    "kind": "Constant",
    "equation": "1.0",
    "units": "",
@@ -26,7 +26,7 @@
   },
   {
    "id": 2,
-   "name": "m",
+   "name": "PoleMass",
    "kind": "Constant",
    "equation": "0.1",
    "units": "",
@@ -49,7 +49,7 @@
   },
   {
    "id": 3,
-   "name": "l",
+   "name": "HalfLen",
    "kind": "Constant",
    "equation": "0.5",
    "units": "",
@@ -72,7 +72,7 @@
   },
   {
    "id": 4,
-   "name": "g",
+   "name": "Grav",
    "kind": "Constant",
    "equation": "9.81",
    "units": "",
@@ -95,7 +95,7 @@
   },
   {
    "id": 5,
-   "name": "b",
+   "name": "CartFric",
    "kind": "Constant",
    "equation": "0.1",
    "units": "",
@@ -118,7 +118,7 @@
   },
   {
    "id": 6,
-   "name": "c",
+   "name": "PoleFric",
    "kind": "Constant",
    "equation": "0.02",
    "units": "",
@@ -557,7 +557,7 @@
    "id": 25,
    "name": "Tmp",
    "kind": "Aux",
-   "equation": "(Force - b*CartV + m*l*PoleW*PoleW*SIN(PoleTh))/(M+m)",
+   "equation": "(Force - CartFric*CartV + PoleMass*HalfLen*PoleW*PoleW*SIN(PoleTh))/(CartMass+PoleMass)",
    "units": "",
    "comment": "",
    "pos": [
@@ -580,7 +580,7 @@
    "id": 26,
    "name": "PoleAccel",
    "kind": "Aux",
-   "equation": "(g*SIN(PoleTh) - COS(PoleTh)*Tmp)/(l*(4/3 - m*COS(PoleTh)*COS(PoleTh)/(M+m))) - c*PoleW",
+   "equation": "(Grav*SIN(PoleTh) - COS(PoleTh)*Tmp)/(HalfLen*(4/3 - PoleMass*COS(PoleTh)*COS(PoleTh)/(CartMass+PoleMass))) - PoleFric*PoleW",
    "units": "",
    "comment": "",
    "pos": [
@@ -603,7 +603,7 @@
    "id": 27,
    "name": "CartAccel",
    "kind": "Aux",
-   "equation": "Tmp - m*l*PoleAccel*COS(PoleTh)/(M+m)",
+   "equation": "Tmp - PoleMass*HalfLen*PoleAccel*COS(PoleTh)/(CartMass+PoleMass)",
    "units": "",
    "comment": "",
    "pos": [
@@ -715,6 +715,7 @@
    ]
   }
  ],
+ "links": [],
  "next_id": 32,
  "settings": {
   "initial_time": 0.0,
