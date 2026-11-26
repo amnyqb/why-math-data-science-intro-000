@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cart-Pole Control Lab</title>
+<style>
+  :root { --bg:#0b1d33; --ink:#cfe6ff; --dim:#7fa3c7; --line:#3b6ea5; --th:#5ad1ff; --x:#4ade80; --f:#fbbf24; --bad:#f87171; color-scheme:dark; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:13px/1.4 ui-monospace,Menlo,Consolas,monospace; overflow:hidden; }
+  canvas#scene { position:fixed; inset:0; width:100%; height:100%; display:block; touch-action:none; }
+  #hud { position:fixed; top:12px; left:12px; width:260px; padding:12px; background:rgba(11,29,51,.88); border:1px solid var(--line); border-radius:6px; max-height:calc(100% - 24px); overflow:auto; }
+  #hud h1 { font-size:14px; margin:0 0 2px; letter-spacing:.04em; }
+  #hud p { margin:0 0 8px; color:var(--dim); font-size:11px; }
+  h2 { font-size:11px; margin:12px 0 2px; color:var(--dim); text-transform:uppercase; letter-spacing:.1em; }
+  .row { margin:5px 0; }
+  .row label { display:flex; justify-content:space-between; color:var(--dim); }
+  .row b { color:var(--ink); font-weight:600; }
+  input[type=range] { width:100%; accent-color:#5aa9ff; }
+  .btns { display:flex; gap:6px; margin:8px 0 4px; }
+  button { flex:1; background:#12304f; color:var(--ink); border:1px solid var(--line); border-radius:4px; padding:7px 4px; font:inherit; cursor:pointer; user-select:none; touch-action:none; }
+  button:hover { background:#1b4670; }
+  button.on { background:#1d5a8f; border-color:#5ad1ff; }
+  #status { margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); }
+  #state { font-weight:700; }
+  #chart { position:fixed; right:12px; bottom:12px; width:380px; height:160px; background:rgba(11,29,51,.88); border:1px solid var(--line); border-radius:6px; }
+  #pad { position:fixed; left:50%; bottom:14px; transform:translateX(-50%); display:flex; gap:10px; }
+  #pad button { width:84px; padding:12px 0; font-size:16px; }
+  @media (max-width:760px) { #hud { width:200px; font-size:11px; } #chart { width:220px; height:100px; right:8px; bottom:70px; } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<canvas id="scene"></canvas>
+<div id="hud">
+  <h1>CART-POLE · CONTROL LAB</h1>
+  <p>Keep the pole upright. Hold ← → (or the buttons) to push the cart. Switch AUTO on to let a state-feedback controller balance it.</p>
+  <div class="btns"><button id="mode">Mode: AUTO</button><button id="reset">Reset</button></div>
+  <div class="btns"><button id="poke">Poke pole</button><button id="pause">Pause</button></div>
+  <div id="status"><div id="state"></div><div id="readout"></div></div>
+  <h2>Plant</h2><div id="g_plant"></div>
+  <h2>Controller</h2><p>F = kx·(x−r) + kv·v + kθ·θ + kω·ω</p><div id="g_ctl"></div>
+</div>
+<canvas id="chart" width="760" height="320"></canvas>
+<div id="pad"><button id="left">◀ push</button><button id="right">push ▶</button></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+/* ---------- Physics: cart (M) + uniform pole (m, half-length l) ---------- */
+const g = 9.81, XLIM = 2.5, S = 3;            // rail half-length (m) and world scale
+const P = { M:1, m:0.1, l:0.5, th0:0.12, kth:50, kw:10, kx:2, kv:3, ref:0, Fmax:30, Fuser:15 };
+const B_CART = 0.1, C_POLE = 0.02;
+const st = { x:0, v:0, th:P.th0, w:0, t:0, F:0 };
+let auto = true, paused = false, userDir = 0;
+
+function accel(s, F){
+  const sn = Math.sin(s.th), cs = Math.cos(s.th);
+  const tmp = (F - B_CART*s.v + P.m*P.l*s.w*s.w*sn)/(P.M+P.m);
+  const wd = (g*sn - cs*tmp)/(P.l*(4/3 - P.m*cs*cs/(P.M+P.m))) - C_POLE*s.w;
+  const vd = tmp - P.m*P.l*wd*cs/(P.M+P.m);
+  return [s.v, vd, s.w, wd];
+}
+function step(h){
+  let F = 0;
+  if (auto) F = P.kx*(st.x-P.ref) + P.kv*st.v + P.kth*st.th + P.kw*st.w;
+  F += userDir*P.Fuser;
+  F = Math.max(-P.Fmax, Math.min(P.Fmax, F)); st.F = F;
+  const f = (a) => accel({x:a[0],v:a[1],th:a[2],w:a[3]}, F);
+  const y = [st.x, st.v, st.th, st.w];
+  const add = (a,b,k) => a.map((q,i)=>q+b[i]*k);
+  const k1=f(y), k2=f(add(y,k1,h/2)), k3=f(add(y,k2,h/2)), k4=f(add(y,k3,h));
+  const n = y.map((q,i)=>q+h/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]));
+  [st.x, st.v, st.th, st.w] = n; st.t += h;
+  if (Math.abs(st.x) > XLIM){ st.x = Math.sign(st.x)*XLIM; st.v *= -0.3; }   // rail end stops
+  if (st.th > Math.PI) st.th -= 2*Math.PI; if (st.th < -Math.PI) st.th += 2*Math.PI;
+}
+const hist = [];
+function reset(){ Object.assign(st,{x:0,v:0,th:P.th0,w:0,t:0,F:0}); hist.length = 0; }
+
+/* ---------- UI ---------- */
+function slider(parent, key, label, min, max, stp, onchange){
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = `<label>${label}<b id="v_${key}">${P[key]}</b></label><input type="range" id="s_${key}" min="${min}" max="${max}" step="${stp}" value="${P[key]}">`;
+  parent.appendChild(row);
+  row.querySelector('input').addEventListener('input', e => {
+    P[key] = parseFloat(e.target.value); document.getElementById('v_'+key).textContent = P[key]; onchange && onchange();
+  });
+}
+const gp = document.getElementById('g_plant'), gc = document.getElementById('g_ctl');
+slider(gp,'M','Cart mass (kg)',0.3,3,0.1);
+slider(gp,'m','Pole mass (kg)',0.05,0.5,0.05, rebuild);
+slider(gp,'l','Pole half-length (m)',0.2,1,0.05, rebuild);
+slider(gp,'th0','Initial tilt (rad)',-0.5,0.5,0.01, reset);
+slider(gp,'Fmax','Motor limit (N)',5,50,1);
+slider(gc,'kth','kθ  angle',0,120,1);
+slider(gc,'kw','kω  angular rate',0,30,0.5);
+slider(gc,'kx','kx  position',-2,10,0.5);
+slider(gc,'kv','kv  velocity',-2,10,0.5);
+slider(gc,'ref','Target position r (m)',-2,2,0.1, moveTarget);
+const modeBtn = document.getElementById('mode');
+function setMode(a){ auto = a; modeBtn.textContent = 'Mode: ' + (a ? 'AUTO' : 'MANUAL'); modeBtn.classList.toggle('on', a); }
+modeBtn.onclick = () => setMode(!auto); setMode(true);
+document.getElementById('reset').onclick = reset;
+document.getElementById('poke').onclick = () => { st.w += 2.5; };
+const pauseBtn = document.getElementById('pause');
+pauseBtn.onclick = () => { paused = !paused; pauseBtn.textContent = paused ? 'Resume' : 'Pause'; };
+const hold = (id, dir) => { const b = document.getElementById(id);
+  b.addEventListener('pointerdown', e => { userDir = dir; b.setPointerCapture(e.pointerId); });
+  const up = () => { if (userDir === dir) userDir = 0; };
+  b.addEventListener('pointerup', up); b.addEventListener('pointercancel', up); };
+hold('left', -1); hold('right', 1);
+addEventListener('keydown', e => { if (e.key==='ArrowLeft'||e.key==='a') userDir=-1; if (e.key==='ArrowRight'||e.key==='d') userDir=1; if (e.key.startsWith('Arrow')) e.preventDefault(); });
+addEventListener('keyup', e => { if (['ArrowLeft','a','ArrowRight','d'].includes(e.key)) userDir = 0; });
+
+/* ---------- Scene ---------- */
+const canvas = document.getElementById('scene');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias:true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x0b1d33); scene.fog = new THREE.Fog(0x0b1d33, 25, 55);
+const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 120);
+camera.position.set(-1, 5.5, 17);
+const orbit = new OrbitControls(camera, canvas); orbit.target.set(-1, 2.2, 0); orbit.enableDamping = true; orbit.maxPolarAngle = Math.PI*0.52;
+scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+const sun = new THREE.DirectionalLight(0xffffff, 1.1); sun.position.set(5,12,9); scene.add(sun);
+scene.add(new THREE.GridHelper(40, 40, 0x3b6ea5, 0x1d3f66));
+
+// rail with end stops and distance ticks (1 m)
+const railMat = new THREE.MeshStandardMaterial({ color:0x4a6f99, metalness:0.4, roughness:0.4 });
+const rail = new THREE.Mesh(new THREE.BoxGeometry(2*XLIM*S+1.2, 0.2, 0.5), railMat); rail.position.y = 0.1; scene.add(rail);
+for (const sgn of [-1,1]){ const stop = new THREE.Mesh(new THREE.BoxGeometry(0.3,0.9,0.7), new THREE.MeshStandardMaterial({ color:0xf87171 })); stop.position.set(sgn*(XLIM*S+0.45),0.45,0); scene.add(stop); }
+for (let k=-2;k<=2;k++){ const t = new THREE.Mesh(new THREE.BoxGeometry(0.04,0.02,0.7), new THREE.MeshBasicMaterial({ color:0xcfe6ff })); t.position.set(k*S,0.21,0); scene.add(t); }
+function label(text, color='#cfe6ff', w=1.6){
+  const c = document.createElement('canvas'); c.width = 256; c.height = 64; const q = c.getContext('2d');
+  q.font = '30px ui-monospace,Menlo,monospace'; q.textAlign='center'; q.textBaseline='middle'; q.fillStyle=color; q.fillText(text,128,32);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map:new THREE.CanvasTexture(c), transparent:true, depthTest:false })); s.scale.set(w,w/4,1); return s;
+}
+for (let k=-2;k<=2;k++){ const l = label(k+' m'); l.position.set(k*S,-0.4,0.6); scene.add(l); }
+
+// target marker
+const target = new THREE.Group();
+target.add(new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,2.2,8), new THREE.MeshBasicMaterial({ color:0x4ade80 })));
+target.children[0].position.y = 1.1;
+const flag = new THREE.Mesh(new THREE.PlaneGeometry(0.6,0.35), new THREE.MeshBasicMaterial({ color:0x4ade80, side:THREE.DoubleSide })); flag.position.set(0.3,2,0); target.add(flag);
+const tl = label('target r','#4ade80',1.4); tl.position.set(0,2.5,0); target.add(tl); scene.add(target);
+function moveTarget(){ target.position.x = P.ref*S; }
+
+// cart
+const cart = new THREE.Group(); scene.add(cart);
+const body = new THREE.Mesh(new THREE.BoxGeometry(1.5,0.55,0.9), new THREE.MeshStandardMaterial({ color:0x2f81c7, metalness:0.3, roughness:0.4 })); body.position.y = 0.7; cart.add(body);
+for (const dx of [-0.5,0.5]) for (const dz of [-0.5,0.5]){ const w = new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.2,0.12,20), new THREE.MeshStandardMaterial({ color:0x1b2a3d })); w.rotation.x = Math.PI/2; w.position.set(dx,0.4,dz); cart.add(w); }
+const pivotY = 1.0;
+// pole (rebuilt when length / mass change)
+const pole = new THREE.Group(); pole.position.y = pivotY; cart.add(pole);
+const pin = new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.12,1.0,16), new THREE.MeshStandardMaterial({ color:0xcfe6ff })); pin.rotation.x = Math.PI/2; pin.position.y = pivotY; cart.add(pin);
+let rod, bob;
+function rebuild(){
+  if (rod){ pole.remove(rod); pole.remove(bob); }
+  const L = 2*P.l*S;
+  rod = new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,L,16), new THREE.MeshStandardMaterial({ color:0xfbbf24, metalness:0.2, roughness:0.4 })); rod.position.y = L/2; pole.add(rod);
+  bob = new THREE.Mesh(new THREE.SphereGeometry(0.15 + P.m*0.8, 24, 16), new THREE.MeshStandardMaterial({ color:0xf87171 })); bob.position.y = L; pole.add(bob);
+}
+rebuild(); moveTarget();
+
+// force arrow
+const arrow = new THREE.ArrowHelper(new THREE.Vector3(1,0,0), new THREE.Vector3(0,0.7,1.0), 1, 0xfbbf24, 0.35, 0.25); scene.add(arrow);
+
+/* ---------- Chart ---------- */
+const chart = document.getElementById('chart'), cg = chart.getContext('2d'), WIN = 8;
+function drawChart(){
+  const W = chart.width, H = chart.height; cg.clearRect(0,0,W,H);
+  cg.strokeStyle = '#1d3f66'; cg.lineWidth = 1; cg.beginPath(); cg.moveTo(0,H/2); cg.lineTo(W,H/2); cg.stroke();
+  const t1 = st.t, t0 = t1 - WIN;
+  const series = [[1,'#5ad1ff',Math.PI/4],[2,'#4ade80',XLIM],[3,'#fbbf24',P.Fmax]];
+  for (const [i,col,sc] of series){
+    cg.beginPath(); cg.strokeStyle = col; cg.lineWidth = 2.5; let first = true;
+    for (const h of hist){ if (h[0] < t0) continue; const px = (h[0]-t0)/WIN*W, py = H/2 - Math.max(-1,Math.min(1,h[i]/sc))*(H/2-8); first ? cg.moveTo(px,py) : cg.lineTo(px,py); first = false; }
+    cg.stroke();
+  }
+  cg.font = '20px ui-monospace,monospace';
+  cg.fillStyle = '#5ad1ff'; cg.fillText('angle ±45°', 10, 22);
+  cg.fillStyle = '#4ade80'; cg.fillText('position ±2.5 m', 150, 22);
+  cg.fillStyle = '#fbbf24'; cg.fillText('force ±limit', 360, 22);
+}
+
+/* ---------- Loop ---------- */
+const stateEl = document.getElementById('state'), readEl = document.getElementById('readout');
+const clock = new THREE.Clock();
+function resize(){ renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); }
+addEventListener('resize', resize); resize();
+let acc = 0;
+function frame(){
+  const dt = Math.min(clock.getDelta(), 0.05);
+  if (!paused){
+    acc += dt; const h = 0.004;
+    while (acc >= h){ step(h); acc -= h; }
+    hist.push([st.t, st.th, st.x, st.F]); while (hist.length && hist[0][0] < st.t - WIN) hist.shift();
+  }
+  cart.position.x = st.x*S; pole.rotation.z = -st.th;
+  const F = st.F, len = Math.max(0.01, Math.abs(F)/P.Fmax*2.6);
+  arrow.position.set(st.x*S - Math.sign(F||1)*0.75 + (F>=0?-0.0:0), 0.7, 0.95);
+  arrow.setDirection(new THREE.Vector3(Math.sign(F)||1,0,0)); arrow.setLength(len, Math.min(0.35,len), 0.2);
+  arrow.position.x = st.x*S + (F>=0 ? -0.75 - len : 0.75 + len);
+  const up = Math.abs(st.th) < 0.1 && Math.abs(st.w) < 0.5, fallen = Math.abs(st.th) > 1.2;
+  stateEl.textContent = fallen ? 'POLE DOWN — press Reset' : up ? 'BALANCED' : 'WOBBLING';
+  stateEl.style.color = fallen ? 'var(--bad)' : up ? 'var(--x)' : 'var(--f)';
+  readEl.innerHTML = `t ${st.t.toFixed(1)} s<br>angle ${(st.th*57.2958).toFixed(1)}°<br>cart x ${st.x.toFixed(2)} m<br>force ${st.F.toFixed(1)} N`;
+  drawChart(); orbit.update(); renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+frame();
+</script>
+</body>
+</html>
