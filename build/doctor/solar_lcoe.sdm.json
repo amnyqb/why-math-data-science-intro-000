@@ -1,0 +1,119 @@
+{
+  "findings": [
+    {
+      "code": "R1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "doc": "TODO: what is OM and where does its number come from?",
+              "name": "OM",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Yield and where does its number come from?",
+              "name": "Yield",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Degradation and where does its number come from?",
+              "name": "Degradation",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Debt Share and where does its number come from?",
+              "name": "Debt Share",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Cost of Debt and where does its number come from?",
+              "name": "Cost of Debt",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Cost of Equity and where does its number come from?",
+              "name": "Cost of Equity",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Inflation and where does its number come from?",
+              "name": "Inflation",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Real WACC and where does its number come from?",
+              "name": "Real WACC",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Output and where does its number come from?",
+              "name": "Output",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is LCOE and where does its number come from?",
+              "name": "LCOE",
+              "op": "set_doc"
+            }
+          ],
+          "title": "Add a prompt to describe the 10 undocumented variables"
+        }
+      ],
+      "id": 1,
+      "message": "10 of 12 variables have no description, starting with “OM”",
+      "rule": "R1",
+      "severity": "info",
+      "source": "SDM-Doc (Martinez-Moyano 2012): every variable is documented",
+      "var": "OM"
+    },
+    {
+      "code": "R3",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "manifest": {
+                "bindings": [],
+                "description": "",
+                "goals": [],
+                "levers": [],
+                "outputs": [],
+                "reduced_from": "",
+                "scenarios": [],
+                "tests": [
+                  "Fraunhofer ISE 2024 levelised cost"
+                ],
+                "title": "Solar PV levelised cost",
+                "validity": []
+              },
+              "op": "set_manifest"
+            }
+          ],
+          "title": "Write a draft manifest from the constants and the stocks"
+        }
+      ],
+      "id": 2,
+      "message": "The model has no run manifest (levers with ranges, outputs), so a reader cannot tell what may be changed or what to look at",
+      "rule": "R3",
+      "severity": "info",
+      "source": "Reproducibility practice: state the inputs, their ranges and the results that matter",
+      "var": null
+    }
+  ],
+  "gate": "Publish",
+  "model": {
+    "auxiliaries": 3,
+    "constants": 9,
+    "documentation_coverage_pct": 16.666666666666668,
+    "flows": 0,
+    "lookups": 0,
+    "loops": 0,
+    "stocks": 0,
+    "units_coverage_pct": 100.0
+  },
+  "summary": "0 errors, 0 warnings, 2 fixes available, 0 fixes applied"
+}

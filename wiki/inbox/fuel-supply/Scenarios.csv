@@ -1,0 +1,6 @@
+Scenario,Variable,Value
+Bigger trucks,Barrels per truck,250
+Earlier target,Target day,20
+Double Jazan diesel skids,Max trucks per day[Jazan - Diesel],48
+Combined,Barrels per truck,250
+Combined,Target day,20

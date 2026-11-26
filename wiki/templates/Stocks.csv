@@ -1,0 +1,4 @@
+Name,Initial value,Units,Never negative,Description
+Susceptible,9990,People,,
+Infected,10,People,,
+Recovered,0,People,,

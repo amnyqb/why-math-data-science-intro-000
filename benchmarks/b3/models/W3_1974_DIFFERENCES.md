@@ -1,0 +1,17 @@
+Both programs step explicitly with Euler: every state is updated from the rates of the previous step, then every auxiliary is evaluated at the new time. PyWorld3 (`world3.py` `_run_world3`, loop over `k`; rates are stored at index `kl = k`, states read `[jk] = [k-1]`) and Dynamist (`Euler`, all variables in dependency order, then stocks by `dt x flows`) are the same scheme, so there is no integration difference and the two agree at dt = 1, 0.5 and 0.25 alike. The time grid is the same (1900 to 2100 inclusive, 401 points at dt = 0.5).
+
+The smooths and delays map one to one:
+
+| PyWorld3 (`specials.py`) | Dynamist | Start value |
+|---|---|---|
+| `Smooth` (:128), euler: `out[k] = out[k-1] + dt/delay (in[k-1] - out[k-1])` | `SMOOTH` | input at k=0 (the same) |
+| `Dlinf3` (:261), three stages of `delay/3`, output stage 3 | `SMOOTH3` | all stages = input at k=0 (the same) |
+| `Delay3` (:199), same stages, output stage 3 | `DELAY3` | **different**, see 1 |
+
+What differs, all in the first step or so of the run (none touches the equations):
+
+1. **DELAY3 start (PPAPR = DELAY3(PPGR, PPTD)).** `Delay3._init_out_arr` (`specials.py:241-242`) starts every stage at `in * 3 / delay`, so the outflow at 1900 is 0.15 x PPGR (delay 20) instead of PPGR. A DYNAMO or Dynamist DELAY3 starts at the input. Effect: PyWorld3's pollution stock first falls (absorption exceeds the small inflow) where Dynamist's rises. The persistent pollution index differs by up to several hundred percent around 1906 when the index is still below 0.2, and is back within 1% from 1947 on. The variant `--delay3-init pw3` (`DELAY3I(PPGR, PPTD, PPGR*3/PPTD)`) reproduces PyWorld3: worst checkpoint difference 0.04%.
+2. **Initial-value loops.** Three smooths sit in a loop of initial values (LUFD in CUF-IO-IOPC-JPICU-PJIS-J-LUF; AI in AI-AIPH-LYMC-LY-MPLD-FIALD-CAI; PFR in PFR-FALM-AIPH-LYMC-LY-F-FPC-FR). Dynamist needs a start value for each (`SMOOTHI`). PyWorld3 resolves them by repeated passes at k=0 in which `cuf[0]=1`, `ai[0]=5e9` and `pfr[0]=1` are preset (`capital.py:392`, `agriculture.py:474-475`); the values it stores at k=0 (lufd 1.336, ai 6.21e9, pfr 1.171) are the inputs of the last pass, not the values used in that pass. Effect: PyWorld3's k=0 row is not a consistent state (for example IO[0] is computed with CUF=1 but CUF[0] is stored as 0.983) and its rates at 1900 differ by 1.7% (IO) to 5% (food per capita) from a consistent evaluation. The default build starts the three smooths at the values PyWorld3 stores (`--smooth-init pw3`), so the smoothed states agree from the second step on; with the book's own start values (`--smooth-init book`: LUFD=1, AI=5e9, PFR=1) the early states differ for a few years (smoothing times 2 years) and the checkpoints stay within 0.6%.
+3. **Lagged deaths.** `d[k]` is the sum of the deaths of step k-1 (`population.py:800`), and `cbr[k]` uses `b[k-1]`. Nothing depends on them in the standard run (birth rate switches to deaths only after PET = 4000), so `D`, `CDR`, `CBR` in the Dynamist model are the current-step values and carry no weight; the `B` equation leaves out the PET branch.
+
+PyWorld3 versus the 1974 book is a separate question that this replication does not settle: the Dynamist model is transcribed from PyWorld3, so any place where PyWorld3 departs from the book is inherited. Visible in the code: `FIOAC` stays at its constant (`IET = 4000`), `PPGF` is a constant 1, and `LUFD` is a first-order smooth of `LUF`.

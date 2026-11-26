@@ -1,0 +1,612 @@
+{
+  "title": "Bass diffusion: how a new product spreads",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Potential Adopters",
+      "kind": "Stock",
+      "equation": "Market Size",
+      "units": "household",
+      "comment": "",
+      "pos": [
+        740.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Adopters",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "household",
+      "comment": "",
+      "pos": [
+        740.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        190.0
+      ],
+      "to_pt": [
+        820.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Adoption",
+      "kind": "Flow",
+      "equation": "Innovator Adoption + Imitator Adoption",
+      "units": "household/Year",
+      "comment": "",
+      "pos": [
+        540.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 1,
+      "to": 2,
+      "from_pt": [
+        460.0,
+        100.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Innovator Adoption",
+      "kind": "Aux",
+      "equation": "Advertising Effect * Potential Adopters",
+      "units": "household/Year",
+      "comment": "",
+      "pos": [
+        340.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Imitator Adoption",
+      "kind": "Aux",
+      "equation": "Word of Mouth Effect * Adopters * Potential Adopters / Market Size",
+      "units": "household/Year",
+      "comment": "",
+      "pos": [
+        340.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Advertising Effect",
+      "kind": "Constant",
+      "equation": "0.02",
+      "units": "1/Year",
+      "comment": "",
+      "pos": [
+        140.0,
+        100.0
+      ],
+      "table": [],
+      "slider": [
+        0.0,
+        0.1
+      ],
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": true,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Word of Mouth Effect",
+      "kind": "Constant",
+      "equation": "0.45",
+      "units": "1/Year",
+      "comment": "",
+      "pos": [
+        140.0,
+        190.0
+      ],
+      "table": [],
+      "slider": [
+        0.0,
+        1.0
+      ],
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": true,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Market Size",
+      "kind": "Constant",
+      "equation": "500000",
+      "units": "household",
+      "comment": "",
+      "pos": [
+        140.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        280.0
+      ],
+      "to_pt": [
+        220.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Adoption Fraction",
+      "kind": "Aux",
+      "equation": "Adopters / Market Size",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        340.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        280.0
+      ],
+      "to_pt": [
+        420.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Imitation Share",
+      "kind": "Aux",
+      "equation": "Imitator Adoption / MAX(Adoption, 0.000001)",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        340.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        370.0
+      ],
+      "to_pt": [
+        420.0,
+        370.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 5,
+      "from": 4,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 6,
+      "from": 1,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 8,
+      "from": 7,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 2,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 1,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 11,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 13,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 15,
+      "to": 1,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 15,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 2,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 15,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 7,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 23,
+      "from": 3,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 20.0,
+    "time_step": 0.0009765625,
+    "time_units": "Year",
+    "method": "Euler"
+  },
+  "next_id": 27,
+  "sheets": [],
+  "groups": [
+    {
+      "id": 24,
+      "name": "Adoption engine",
+      "members": [
+        1,
+        2,
+        3
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 25,
+      "name": "Two sources of adoption",
+      "members": [
+        4,
+        7,
+        21
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 26,
+      "name": "Behaviour parameters",
+      "members": [
+        11,
+        13
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 27,
+      "name": "Market",
+      "members": [
+        15,
+        18
+      ],
+      "view": 0,
+      "color": null
+    }
+  ],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "purpose": {
+    "problem": "How fast does a new household product reach its market, and what shapes the S-curve?",
+    "kind": "understand behaviour",
+    "out_of_scope": "price, competitors, repeat purchase, supply limits",
+    "objectives": [
+      {
+        "title": "Reach the market",
+        "kind": "grow to a plateau",
+        "test": "Adopters follow an S-curve and level off at Market Size (500000 households) within 20 years.",
+        "var": "Adopters"
+      }
+    ]
+  }
+}

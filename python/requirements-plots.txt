@@ -1,0 +1,5 @@
+seaborn>=0.13
+matplotlib>=3.8
+# only for plots.sankey (plotly draws the layout; kaleido exports SVG/PNG and needs Chrome installed):
+plotly>=5.20
+kaleido>=1.0

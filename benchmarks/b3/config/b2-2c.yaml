@@ -1,0 +1,19 @@
+# B2-2 Market Growth (Forrester 1968), Stella rebuild of CBSDLab/market-growth (Warren Farr), scenario C.
+# C: damped oscillation (Mojtahedzadeh 2015 Fig. 3, Table 1). F: growth with cycles (his Fig. 10, Table 2).
+# FROZEN before any score is computed.
+model: build/mg_C.sdm
+steps:
+  screen: {trajectories: 50, levels: 4, seed: 1, tau: 0.1, linear_cut: 0.1, converge_tau: 0.9, csv: results/b2-2c/screen.csv}
+  importance: {samples: 1024, seed: 1, bootstrap: 100, ensemble: 30}
+  dominance: {csv: results/b2-2c/dominance.csv}
+  run: {series: "Backlog BL7", csv: results/b2-2c/base_run.csv}
+  reduce: {out: build/mg_C_reduced.sdm, log: results/b2-2c/reduction_log.csv, samples: 1024, seed: 1, st_threshold: 0.01}
+  verify: {_args: [build/mg_C_reduced.sdm], ensemble: 50, seed: 1, max_nrmse: 0.05, min_mode_agreement: 0.9, min_goal_tau: 0.9}
+scoring:
+  half_cycle_tolerance: 0.15      # relative; durations of Backlog half-cycles against the paper's table
+  paper_half_cycles: [16.9, 17.7, 17.6, 17.1, 17.4]
+  first_order_share: 0.5          # C: combined share of time dominant of first-order loops at least this
+  loops:
+    delivery_delay: {contains: ["Backlog BL7", "Delivery Delay Indicated DDI12", "Delivery Delay Recognized by Market DDRM14"], excludes: ["Delivery Rate DR10", "Salesmen S1"]}
+    sales_growth: {contains: ["Salesmen S1", "Orders Booked OB3"], polarity: R}
+    capacity_expansion: {contains: ["Production Capacity Ordering PCO24"], excludes: ["Salesmen S1"]}

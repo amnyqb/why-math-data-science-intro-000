@@ -1,0 +1,244 @@
+{
+  "title": "non-a2a-gf",
+  "vars": [
+    {
+      "id": 2,
+      "name": "Converter 1",
+      "kind": "Aux",
+      "equation": "TIME",
+      "units": "",
+      "comment": "",
+      "pos": [
+        167.0,
+        159.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 3,
+      "set": "Product",
+      "by_item": [
+        {
+          "item": "Pizza",
+          "equation": "",
+          "table": [
+            [
+              1.0,
+              97.3
+            ],
+            [
+              2.0,
+              91.4
+            ],
+            [
+              3.0,
+              86.5
+            ],
+            [
+              4.0,
+              78.4
+            ],
+            [
+              5.0,
+              71.9
+            ],
+            [
+              6.0,
+              65.9
+            ],
+            [
+              7.0,
+              57.8
+            ],
+            [
+              8.0,
+              50.3
+            ],
+            [
+              9.0,
+              43.8
+            ],
+            [
+              10.0,
+              33.0
+            ],
+            [
+              11.0,
+              20.0
+            ],
+            [
+              12.0,
+              2.7
+            ],
+            [
+              13.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "item": "Salad",
+          "equation": "",
+          "table": [
+            [
+              1.0,
+              2.2
+            ],
+            [
+              2.0,
+              5.9
+            ],
+            [
+              3.0,
+              10.3
+            ],
+            [
+              4.0,
+              14.9
+            ],
+            [
+              5.0,
+              19.5
+            ],
+            [
+              6.0,
+              30.8
+            ],
+            [
+              7.0,
+              45.4
+            ],
+            [
+              8.0,
+              53.5
+            ],
+            [
+              9.0,
+              62.2
+            ],
+            [
+              10.0,
+              68.6
+            ],
+            [
+              11.0,
+              80.0
+            ],
+            [
+              12.0,
+              92.4
+            ],
+            [
+              13.0,
+              100.0
+            ]
+          ]
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [],
+  "notes": [],
+  "settings": {
+    "initial_time": 1.0,
+    "final_time": 13.0,
+    "time_step": 0.25,
+    "time_units": "months",
+    "method": "Euler"
+  },
+  "next_id": 3,
+  "sheets": [
+    {
+      "id": 3,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "Product",
+      "items": [
+        "Pizza",
+        "Salad"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

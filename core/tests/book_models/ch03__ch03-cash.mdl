@@ -1,0 +1,61 @@
+{UTF-8}
+{ Chapter 1: growing broke. A profitable distributor whose customers pay after two months.
+  Sales grow; costs are paid at once; cash comes in only when receivables are collected. }
+Base Sales=
+	1000
+	~	kSAR/month
+	~	|
+Sales Growth=
+	120
+	~	kSAR/month/month
+	~	Sales rise by 120 kSAR a month every month from month 6 to month 30.
+	|
+Sales=
+	Base Sales + RAMP(Sales Growth, 6, 30)
+	~	kSAR/month
+	~	|
+Cost Ratio=
+	0.92
+	~	dmnl
+	~	Costs are 92% of sales: an 8% margin.
+	|
+Payments=
+	Sales * Cost Ratio
+	~	kSAR/month
+	~	Suppliers and staff are paid in the month the sale is made.
+	|
+Collection Time=
+	2.5
+	~	month
+	~	Average time customers take to pay (days sales outstanding of about 75 days).
+	|
+Collections=
+	Receivables / Collection Time
+	~	kSAR/month
+	~	|
+Receivables= INTEG(
+	Sales - Collections,
+	2500)
+	~	kSAR
+	~	Starts in balance: two and a half months of base sales.
+	|
+Cash= INTEG(
+	Collections - Payments,
+	500)
+	~	kSAR
+	~	|
+Profit=
+	Sales - Payments
+	~	kSAR/month
+	~	Accounting profit per month.
+	|
+Cumulative Profit= INTEG(
+	Profit,
+	0)
+	~	kSAR
+	~	Accounting profit: recognised when the sale is made, not when cash arrives.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 48 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

@@ -1,0 +1,61 @@
+Name,Initial value,Units,Never negative,Description,Per,Combine,Module
+Retailer on hand,Initial inventory,Case,yes,Cases in stock.,,,Retailer
+Retailer backlog,0,Case,yes,Orders received and not yet shipped.,,,Retailer
+Retailer shipment pipe 1,Initial demand * TIME STEP,Case,,Cases in transit.,,,Retailer
+Retailer shipment pipe 2,Initial demand * TIME STEP,Case,,Cases in transit.,,,Retailer
+Retailer order pipe 1,Initial demand * TIME STEP,Case,,Orders on their way to the next stage.,,,Retailer
+Retailer order pipe 2,Initial demand * TIME STEP,Case,,Orders on their way to the next stage.,,,Retailer
+Retailer expected demand,Initial demand,Case/Week,,Smoothed orders received.,,,Retailer
+Retailer cost,0,Currency,,Cost so far.,,,Results and tests
+Retailer window cost,0,Currency,,Cost within the counted window.,,,Results and tests
+Retailer order sum,0,Case,,Sum of orders placed in the window.,,,Results and tests
+Retailer order sumsq,0,Case^2/Week,,Sum of squared orders placed in the window.,,,Results and tests
+Retailer window backlog,0,Case*Week,,Backlog summed over the window.,,,Results and tests
+Retailer peak order,0,Case/Week,,Highest order placed so far.,,,Results and tests
+Retailer peak time,0,Week,,When the highest order was placed.,,,Results and tests
+Wholesaler on hand,Initial inventory,Case,yes,Cases in stock.,,,Wholesaler
+Wholesaler backlog,0,Case,yes,Orders received and not yet shipped.,,,Wholesaler
+Wholesaler shipment pipe 1,Initial demand * TIME STEP,Case,,Cases in transit.,,,Wholesaler
+Wholesaler shipment pipe 2,Initial demand * TIME STEP,Case,,Cases in transit.,,,Wholesaler
+Wholesaler order pipe 1,Initial demand * TIME STEP,Case,,Orders on their way to the next stage.,,,Wholesaler
+Wholesaler order pipe 2,Initial demand * TIME STEP,Case,,Orders on their way to the next stage.,,,Wholesaler
+Wholesaler expected demand,Initial demand,Case/Week,,Smoothed orders received.,,,Wholesaler
+Wholesaler cost,0,Currency,,Cost so far.,,,Results and tests
+Wholesaler window cost,0,Currency,,Cost within the counted window.,,,Results and tests
+Wholesaler order sum,0,Case,,Sum of orders placed in the window.,,,Results and tests
+Wholesaler order sumsq,0,Case^2/Week,,Sum of squared orders placed in the window.,,,Results and tests
+Wholesaler window backlog,0,Case*Week,,Backlog summed over the window.,,,Results and tests
+Wholesaler peak order,0,Case/Week,,Highest order placed so far.,,,Results and tests
+Wholesaler peak time,0,Week,,When the highest order was placed.,,,Results and tests
+Distributor on hand,Initial inventory,Case,yes,Cases in stock.,,,Distributor
+Distributor backlog,0,Case,yes,Orders received and not yet shipped.,,,Distributor
+Distributor shipment pipe 1,Initial demand * TIME STEP,Case,,Cases in transit.,,,Distributor
+Distributor shipment pipe 2,Initial demand * TIME STEP,Case,,Cases in transit.,,,Distributor
+Distributor order pipe 1,Initial demand * TIME STEP,Case,,Orders on their way to the next stage.,,,Distributor
+Distributor order pipe 2,Initial demand * TIME STEP,Case,,Orders on their way to the next stage.,,,Distributor
+Distributor expected demand,Initial demand,Case/Week,,Smoothed orders received.,,,Distributor
+Distributor cost,0,Currency,,Cost so far.,,,Results and tests
+Distributor window cost,0,Currency,,Cost within the counted window.,,,Results and tests
+Distributor order sum,0,Case,,Sum of orders placed in the window.,,,Results and tests
+Distributor order sumsq,0,Case^2/Week,,Sum of squared orders placed in the window.,,,Results and tests
+Distributor window backlog,0,Case*Week,,Backlog summed over the window.,,,Results and tests
+Distributor peak order,0,Case/Week,,Highest order placed so far.,,,Results and tests
+Distributor peak time,0,Week,,When the highest order was placed.,,,Results and tests
+Factory on hand,Initial inventory,Case,yes,Cases in stock.,,,Factory
+Factory backlog,0,Case,yes,Orders received and not yet shipped.,,,Factory
+Factory production pipe 1,Initial demand * TIME STEP,Case,,Cases in production.,,,Factory
+Factory production pipe 2,Initial demand * TIME STEP,Case,,Cases in production.,,,Factory
+Factory production pipe 3,Initial demand * TIME STEP,Case,,Cases in production.,,,Factory
+Factory expected demand,Initial demand,Case/Week,,Smoothed orders received.,,,Factory
+Factory cost,0,Currency,,Cost so far.,,,Results and tests
+Factory window cost,0,Currency,,Cost within the counted window.,,,Results and tests
+Factory order sum,0,Case,,Sum of orders placed in the window.,,,Results and tests
+Factory order sumsq,0,Case^2/Week,,Sum of squared orders placed in the window.,,,Results and tests
+Factory window backlog,0,Case*Week,,Backlog summed over the window.,,,Results and tests
+Factory peak order,0,Case/Week,,Highest order placed so far.,,,Results and tests
+Factory peak time,0,Week,,When the highest order was placed.,,,Results and tests
+Window weeks,0,Week,,Weeks counted so far.,,,Results and tests
+Demand sum,0,Case,,Sum of customer demand in the window.,,,Results and tests
+Demand sumsq,0,Case^2/Week,,Sum of squared customer demand in the window.,,,Results and tests
+Retailer window shipped,0,Case,,Cases shipped to customers in the window.,,,Results and tests
+Retailer window demand,0,Case,,Cases customers asked for in the window.,,,Results and tests

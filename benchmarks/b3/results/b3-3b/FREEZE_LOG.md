@@ -1,0 +1,1 @@
+- 2026-11-20: refrozen 72e4763760d5 -> 3469322114e1: first reduce refused two heavy-tailed goals; declared transform log on them (manifest); added the verify step. Seen before: gate refusals, convergence flags of screen and importance. No reduction or score existed yet

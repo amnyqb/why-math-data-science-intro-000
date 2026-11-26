@@ -1,0 +1,712 @@
+{
+  "goals": [
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1101822828.303978,
+          "mu_star": 1101822836.6316009,
+          "n": 200,
+          "param": "initial nonrenewable resources",
+          "sigma": 1659265400.759691
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 313355206.72539496,
+          "mu_star": 3742036908.033308,
+          "n": 200,
+          "param": "industrial capital output ratio 1",
+          "sigma": 5510960704.116334
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1654554911.6327543,
+          "mu_star": 3055921704.5872755,
+          "n": 200,
+          "param": "average life of industrial capital 1",
+          "sigma": 5057656518.599577
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 7348482723.135471,
+          "mu_star": 7465483169.104995,
+          "n": 200,
+          "param": "desired completed family size normal",
+          "sigma": 4607648558.681076
+        },
+        {
+          "class": "negligible",
+          "mu": 293603358.93458366,
+          "mu_star": 315272495.709893,
+          "n": 200,
+          "param": "persistent pollution transmission delay",
+          "sigma": 717133681.6087712
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1047257231.7206845,
+          "mu_star": 1047616570.4899293,
+          "n": 200,
+          "param": "social adjustment delay",
+          "sigma": 771514945.3582722
+        },
+        {
+          "class": "negligible",
+          "mu": 627887718.683956,
+          "mu_star": 632139999.6944468,
+          "n": 200,
+          "param": "lifetime perception delay",
+          "sigma": 523163218.3371423
+        },
+        {
+          "class": "negligible",
+          "mu": 222934479.57843724,
+          "mu_star": 337428375.12451994,
+          "n": 200,
+          "param": "health services impact delay",
+          "sigma": 357648365.69903916
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "technology development delay",
+          "sigma": 0.0
+        },
+        {
+          "class": "negligible",
+          "mu": -119439023.7081003,
+          "mu_star": 227587502.32993698,
+          "n": 200,
+          "param": "initial land fertility",
+          "sigma": 321127532.172183
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "desired food ratio",
+          "sigma": 0.0
+        },
+        {
+          "class": "negligible",
+          "mu": -93286516.24793673,
+          "mu_star": 168622205.6700108,
+          "n": 200,
+          "param": "persistent pollution generation factor 1",
+          "sigma": 421305210.7086037
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -214709667.1541788,
+          "mu_star": 1310379775.9166653,
+          "n": 200,
+          "param": "service capital output ratio 1",
+          "sigma": 2404093231.20405
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 700804251.1307266,
+          "mu_star": 1092987673.5724587,
+          "n": 200,
+          "param": "average life of service capital 1",
+          "sigma": 2333254698.287037
+        },
+        {
+          "class": "negligible",
+          "mu": 708710480.4774628,
+          "mu_star": 714466088.0401814,
+          "n": 200,
+          "param": "average life of land normal",
+          "sigma": 1241630437.2295175
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 639417431.1210295,
+          "mu_star": 756983428.5019115,
+          "n": 200,
+          "param": "maximum total fertility normal",
+          "sigma": 913237056.0712142
+        },
+        {
+          "class": "negligible",
+          "mu": -61734254.759106286,
+          "mu_star": 214249206.9631168,
+          "n": 200,
+          "param": "average life of agricultural inputs 1",
+          "sigma": 452142674.8382081
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1494939282.657461,
+          "mu_star": 1501435310.49718,
+          "n": 200,
+          "param": "income expectation averaging time",
+          "sigma": 1213168907.005904
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Population peak",
+      "kendall_r_vs_2r": 0.9736842105263158,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1934.0571805927557,
+          "mu_star": 1934.0571805927557,
+          "n": 200,
+          "param": "initial nonrenewable resources",
+          "sigma": 3156.940310609809
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -3282.4400228615054,
+          "mu_star": 3290.5173529307767,
+          "n": 200,
+          "param": "industrial capital output ratio 1",
+          "sigma": 3930.7252304697286
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1623.7515526993789,
+          "mu_star": 1704.2890949945922,
+          "n": 200,
+          "param": "average life of industrial capital 1",
+          "sigma": 2418.1511352178836
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -3605.9552076813516,
+          "mu_star": 3605.9552076813516,
+          "n": 200,
+          "param": "desired completed family size normal",
+          "sigma": 3974.4955150126953
+        },
+        {
+          "class": "negligible",
+          "mu": 58.452572526301644,
+          "mu_star": 106.47991764662682,
+          "n": 200,
+          "param": "persistent pollution transmission delay",
+          "sigma": 248.45022877296498
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -656.3967777468794,
+          "mu_star": 661.658702284692,
+          "n": 200,
+          "param": "social adjustment delay",
+          "sigma": 1164.5724053717367
+        },
+        {
+          "class": "negligible",
+          "mu": -282.43212636267776,
+          "mu_star": 287.7896867319169,
+          "n": 200,
+          "param": "lifetime perception delay",
+          "sigma": 477.7748885291258
+        },
+        {
+          "class": "negligible",
+          "mu": -146.50709779824433,
+          "mu_star": 169.71718610386142,
+          "n": 200,
+          "param": "health services impact delay",
+          "sigma": 317.17709583940416
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "technology development delay",
+          "sigma": 0.0
+        },
+        {
+          "class": "negligible",
+          "mu": 136.67209111944848,
+          "mu_star": 142.43447937460917,
+          "n": 200,
+          "param": "initial land fertility",
+          "sigma": 315.1729573529782
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "desired food ratio",
+          "sigma": 0.0
+        },
+        {
+          "class": "negligible",
+          "mu": -29.445153185483996,
+          "mu_star": 67.82639765232541,
+          "n": 200,
+          "param": "persistent pollution generation factor 1",
+          "sigma": 200.50975325702234
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1109.6546147853655,
+          "mu_star": 1160.1027364604236,
+          "n": 200,
+          "param": "service capital output ratio 1",
+          "sigma": 1840.8259110869449
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 354.45266459873096,
+          "mu_star": 400.227820536285,
+          "n": 200,
+          "param": "average life of service capital 1",
+          "sigma": 926.9510313812406
+        },
+        {
+          "class": "negligible",
+          "mu": 211.14441560487873,
+          "mu_star": 250.0116467487738,
+          "n": 200,
+          "param": "average life of land normal",
+          "sigma": 473.6960573805396
+        },
+        {
+          "class": "negligible",
+          "mu": -207.41917602874418,
+          "mu_star": 220.23769013191034,
+          "n": 200,
+          "param": "maximum total fertility normal",
+          "sigma": 335.57046069541326
+        },
+        {
+          "class": "negligible",
+          "mu": -22.093192162622174,
+          "mu_star": 125.1917594383136,
+          "n": 200,
+          "param": "average life of agricultural inputs 1",
+          "sigma": 415.7864813089653
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -937.9657758986375,
+          "mu_star": 938.3543647282564,
+          "n": 200,
+          "param": "income expectation averaging time",
+          "sigma": 1503.15042090315
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Industrial output per capita peak",
+      "kendall_r_vs_2r": 0.9736842105263158,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -46.27704650636182,
+          "mu_star": 61.809192430404394,
+          "n": 200,
+          "param": "initial nonrenewable resources",
+          "sigma": 81.67674607989461
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 47.37825426443458,
+          "mu_star": 85.38603994343573,
+          "n": 200,
+          "param": "industrial capital output ratio 1",
+          "sigma": 106.89737001350419
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -47.79299639632199,
+          "mu_star": 64.67567210952811,
+          "n": 200,
+          "param": "average life of industrial capital 1",
+          "sigma": 84.28827287870455
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -122.0182132353707,
+          "mu_star": 125.2701305795039,
+          "n": 200,
+          "param": "desired completed family size normal",
+          "sigma": 101.99033550909037
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -19.1613126660094,
+          "mu_star": 27.750737110015145,
+          "n": 200,
+          "param": "persistent pollution transmission delay",
+          "sigma": 42.11628101166108
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -12.993901212524358,
+          "mu_star": 16.095516454296813,
+          "n": 200,
+          "param": "social adjustment delay",
+          "sigma": 41.8957713722602
+        },
+        {
+          "class": "negligible",
+          "mu": -4.468677793644637,
+          "mu_star": 6.639943205243506,
+          "n": 200,
+          "param": "lifetime perception delay",
+          "sigma": 15.309856431367422
+        },
+        {
+          "class": "negligible",
+          "mu": -3.534469373797775,
+          "mu_star": 6.951100988802118,
+          "n": 200,
+          "param": "health services impact delay",
+          "sigma": 17.17670243671281
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "technology development delay",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 37.38628631499901,
+          "mu_star": 41.30311514104246,
+          "n": 200,
+          "param": "initial land fertility",
+          "sigma": 54.08740096292218
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "desired food ratio",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 3.175400220982792,
+          "mu_star": 19.00561114158268,
+          "n": 200,
+          "param": "persistent pollution generation factor 1",
+          "sigma": 37.843241885394285
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 17.26123858843566,
+          "mu_star": 35.62083803543692,
+          "n": 200,
+          "param": "service capital output ratio 1",
+          "sigma": 61.85977276339792
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -20.47614613206564,
+          "mu_star": 26.609652692672793,
+          "n": 200,
+          "param": "average life of service capital 1",
+          "sigma": 49.19929796793759
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 47.86466758412296,
+          "mu_star": 50.22898099808634,
+          "n": 200,
+          "param": "average life of land normal",
+          "sigma": 86.8593295625816
+        },
+        {
+          "class": "negligible",
+          "mu": -6.164640583586801,
+          "mu_star": 12.334776869420686,
+          "n": 200,
+          "param": "maximum total fertility normal",
+          "sigma": 18.418390931090645
+        },
+        {
+          "class": "negligible",
+          "mu": -2.616813001776314,
+          "mu_star": 9.911142106405855,
+          "n": 200,
+          "param": "average life of agricultural inputs 1",
+          "sigma": 18.06670351969585
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -9.014230460261437,
+          "mu_star": 20.32798082764806,
+          "n": 200,
+          "param": "income expectation averaging time",
+          "sigma": 47.59896754256182
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Food per capita lowest",
+      "kendall_r_vs_2r": 0.9868421052631579,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 109.96004333275916,
+          "mu_star": 109.96004333275916,
+          "n": 200,
+          "param": "initial nonrenewable resources",
+          "sigma": 319.53207402127936
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -165.75288162627797,
+          "mu_star": 166.60509680755231,
+          "n": 200,
+          "param": "industrial capital output ratio 1",
+          "sigma": 342.3652009484032
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 78.09207628246634,
+          "mu_star": 87.20238504872616,
+          "n": 200,
+          "param": "average life of industrial capital 1",
+          "sigma": 273.9346113250715
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -21.31759647509547,
+          "mu_star": 72.52286977165322,
+          "n": 200,
+          "param": "desired completed family size normal",
+          "sigma": 222.85993268730195
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -28.870404490202922,
+          "mu_star": 30.157423061340932,
+          "n": 200,
+          "param": "persistent pollution transmission delay",
+          "sigma": 69.69040993614784
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 7.943081098866111,
+          "mu_star": 31.777139456066035,
+          "n": 200,
+          "param": "social adjustment delay",
+          "sigma": 115.64379015733033
+        },
+        {
+          "class": "negligible",
+          "mu": -1.3535413888452041,
+          "mu_star": 12.015181565406772,
+          "n": 200,
+          "param": "lifetime perception delay",
+          "sigma": 42.2050006349364
+        },
+        {
+          "class": "negligible",
+          "mu": 1.554032260341813,
+          "mu_star": 4.936396012177538,
+          "n": 200,
+          "param": "health services impact delay",
+          "sigma": 17.56171327282698
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "technology development delay",
+          "sigma": 0.0
+        },
+        {
+          "class": "negligible",
+          "mu": -0.266779067209278,
+          "mu_star": 10.15746802968315,
+          "n": 200,
+          "param": "initial land fertility",
+          "sigma": 46.52362443181638
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 200,
+          "param": "desired food ratio",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 64.70639451172829,
+          "mu_star": 65.65811520208236,
+          "n": 200,
+          "param": "persistent pollution generation factor 1",
+          "sigma": 185.29984822032077
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -56.92499333565144,
+          "mu_star": 59.38290630065268,
+          "n": 200,
+          "param": "service capital output ratio 1",
+          "sigma": 213.0999300029459
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 19.7050382711128,
+          "mu_star": 21.594007835862488,
+          "n": 200,
+          "param": "average life of service capital 1",
+          "sigma": 78.86316770277755
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -8.715380666529471,
+          "mu_star": 22.6809493778819,
+          "n": 200,
+          "param": "average life of land normal",
+          "sigma": 76.64104015615509
+        },
+        {
+          "class": "negligible",
+          "mu": -1.8691702064600697,
+          "mu_star": 11.159110115326282,
+          "n": 200,
+          "param": "maximum total fertility normal",
+          "sigma": 48.46647929219079
+        },
+        {
+          "class": "negligible",
+          "mu": -2.0262479415442773,
+          "mu_star": 9.289665532932721,
+          "n": 200,
+          "param": "average life of agricultural inputs 1",
+          "sigma": 29.710754015495855
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 7.741188319501869,
+          "mu_star": 33.266981245939,
+          "n": 200,
+          "param": "income expectation averaging time",
+          "sigma": 120.39173065019632
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Persistent pollution index peak",
+      "kendall_r_vs_2r": 0.9736842105263158,
+      "top_overlap": 1.0
+    }
+  ],
+  "levels": 4,
+  "params": [
+    {
+      "max": 2000000000000.0,
+      "min": 500000000000.0,
+      "name": "initial nonrenewable resources"
+    },
+    {
+      "max": 4.0,
+      "min": 2.0,
+      "name": "industrial capital output ratio 1"
+    },
+    {
+      "max": 20.0,
+      "min": 10.0,
+      "name": "average life of industrial capital 1"
+    },
+    {
+      "max": 5.0,
+      "min": 2.5,
+      "name": "desired completed family size normal"
+    },
+    {
+      "max": 40.0,
+      "min": 10.0,
+      "name": "persistent pollution transmission delay"
+    },
+    {
+      "max": 40.0,
+      "min": 10.0,
+      "name": "social adjustment delay"
+    },
+    {
+      "max": 40.0,
+      "min": 10.0,
+      "name": "lifetime perception delay"
+    },
+    {
+      "max": 40.0,
+      "min": 10.0,
+      "name": "health services impact delay"
+    },
+    {
+      "max": 40.0,
+      "min": 10.0,
+      "name": "technology development delay"
+    },
+    {
+      "max": 750.0,
+      "min": 450.0,
+      "name": "initial land fertility"
+    },
+    {
+      "max": 2.5,
+      "min": 1.5,
+      "name": "desired food ratio"
+    },
+    {
+      "max": 1.5,
+      "min": 0.5,
+      "name": "persistent pollution generation factor 1"
+    },
+    {
+      "max": 1.5,
+      "min": 0.5,
+      "name": "service capital output ratio 1"
+    },
+    {
+      "max": 30.0,
+      "min": 10.0,
+      "name": "average life of service capital 1"
+    },
+    {
+      "max": 2000.0,
+      "min": 500.0,
+      "name": "average life of land normal"
+    },
+    {
+      "max": 14.0,
+      "min": 10.0,
+      "name": "maximum total fertility normal"
+    },
+    {
+      "max": 4.0,
+      "min": 1.0,
+      "name": "average life of agricultural inputs 1"
+    },
+    {
+      "max": 6.0,
+      "min": 1.5,
+      "name": "income expectation averaging time"
+    }
+  ],
+  "runs": 3800,
+  "seed": 1,
+  "trajectories": 100
+}

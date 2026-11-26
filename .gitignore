@@ -1,3 +1,17 @@
+/target
+
+# benchmark B1: downloaded and generated data, scratch, build output
+benchmarks/b1/data/
+benchmarks/b1/build/
+benchmarks/b1/forecast/target/
+__pycache__/
+
+# benchmark B2: downloaded third-party models and run output
+benchmarks/b2/external/
+benchmarks/b2/build/
+benchmarks/b3/papers/
+benchmarks/b3/build/
+CONTABO-SERVER.md
 .DS_Store
 .ipynb_checkpoints
 __pycache__

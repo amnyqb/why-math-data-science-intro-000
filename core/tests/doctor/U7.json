@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE U7: units that cannot be read"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Power",
+  "kind": "constant",
+  "equation": "5",
+  "units": "kwhh/Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "kWh",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "F",
+  "kind": "flow",
+  "equation": "Power",
+  "units": "kWh/Day",
+  "doc": "test",
+  "to": "S"
+ }
+]

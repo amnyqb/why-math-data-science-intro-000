@@ -1,0 +1,90 @@
+{
+  "checks_failed": 0,
+  "goals": [
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.2235674129920365,
+      "ensemble_nrmse_mean": 0.04102525544087277,
+      "failed_runs": 0,
+      "goal": "Population peak",
+      "goal_value_tau": 0.9251485148514852,
+      "mode_agreement": 0.9207920792079208,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.1668961125782647,
+      "ensemble_nrmse_mean": 0.04372227029330322,
+      "failed_runs": 0,
+      "goal": "Industrial output per capita peak",
+      "goal_value_tau": 0.9386138613861386,
+      "mode_agreement": 0.9306930693069307,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.48300880697341925,
+      "ensemble_nrmse_mean": 0.06569994515482584,
+      "failed_runs": 0,
+      "goal": "Food per capita lowest",
+      "goal_value_tau": 0.9196039603960396,
+      "mode_agreement": 0.801980198019802,
+      "pass_error": false,
+      "pass_modes": false,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.1702701628067041,
+      "ensemble_nrmse_mean": 0.031684399232783794,
+      "failed_runs": 0,
+      "goal": "Persistent pollution index peak",
+      "goal_value_tau": 0.9417706476530006,
+      "mode_agreement": 0.9702970297029703,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    }
+  ],
+  "pass": false,
+  "policies": [],
+  "runs": 101,
+  "shared_parameters": [
+    "initial nonrenewable resources",
+    "industrial capital output ratio 1",
+    "average life of industrial capital 1",
+    "desired completed family size normal",
+    "persistent pollution transmission delay",
+    "social adjustment delay",
+    "initial land fertility",
+    "persistent pollution generation factor 1",
+    "service capital output ratio 1",
+    "average life of service capital 1",
+    "average life of land normal",
+    "income expectation averaging time"
+  ]
+}

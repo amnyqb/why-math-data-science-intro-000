@@ -1,0 +1,48 @@
+{UTF-8}
+{ Chapter 13: a population that ages. Fourteen age classes of five years; every five years each class moves up to the next.
+  How many people are 65 or older in 2040, and how fast does the share of old people grow? }
+age : a0, a5, a10, a15, a20, a25, a30, a35, a40, a45, a50, a55, a60, a65plus ~ ~ |
+Start population[age]=
+	60, 62, 64, 66, 68, 70, 68, 64, 60, 56, 50, 44, 36, 60
+	~	thousand people
+	~	People in each class in 2020.
+	|
+Mortality[age]=
+	0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.003, 0.003, 0.003, 0.003, 0.01, 0.05
+	~	1/year
+	~	The share of each class that dies each year.
+	|
+Fertility=
+	0.045
+	~	1/year
+	~	Births a year per person aged 20 to 39.
+	|
+Births per year=
+	Fertility * (Population[a20] + Population[a25] + Population[a30] + Population[a35])
+	~	thousand people/year
+	~	New people. They join the youngest class when the classes move up.
+	|
+Population[age]= INTEG(
+	Change[age],
+	Start population[age])
+	~	thousand people
+	~	~	|
+Change[age]=
+	AGE(Population, every=5, entrants=Births per year) - Mortality[age] * Population[age]
+	~	thousand people/year
+	~	The classes move up every five years and the youngest is refilled with the births of the period; deaths in every class.
+	|
+Total=
+	SUM(Population[age!])
+	~	thousand people
+	~	Everyone.
+	|
+Old share=
+	Population[a65plus] / Total
+	~	dmnl
+	~	The share of people who are 65 or older.
+	|
+INITIAL TIME = 0 ~ year ~ |
+FINAL TIME = 50 ~ year ~ |
+TIME STEP = 1 ~ year ~ |
+SAVEPER = 1 ~ year ~ |

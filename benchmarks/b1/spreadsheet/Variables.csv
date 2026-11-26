@@ -1,0 +1,71 @@
+Name,Equation,Units,Description,Per,Combine,Module
+Week,TIME + TIME STEP,Week,Board week being played: the step from TIME to TIME + 1 is week TIME + 1.,,,Demand and settings
+Customer demand,"IF THEN ELSE(Demand regime = 0, Base demand + (Step demand - Base demand) * STEP(1, Step week - TIME STEP), IF THEN ELSE(Demand regime = 1, MAX(0, RANDOM NORMAL(0, 1000, Demand mean, Demand sd, Demand seed)), Demand data))",Case/Week,What customers ask of the retailer this week.,,,Demand and settings
+In window,"IF THEN ELSE(TIME >= Test start, 1, 0)",Dmnl,1 once the counted window has begun.,,,Results and tests
+Retailer available,Retailer on hand + Retailer shipment pipe 2,Case,On hand after this week's receipt (step 1).,,,Retailer
+Retailer end on hand,Retailer available - Retailer shipments out * TIME STEP,Case,On hand at the end of the week (step 3).,,,Retailer
+Retailer end backlog,Retailer backlog + (Retailer orders received - Retailer shipments out) * TIME STEP,Case,Backlog at the end of the week (step 3).,,,Retailer
+Retailer inventory,Retailer end on hand - Retailer end backlog,Case,Effective inventory at the end of the week (negative when in backlog).,,,Retailer
+Retailer updated expectation,Retailer expected demand + Retailer theta * (Retailer orders received - Retailer expected demand) * TIME STEP,Case/Week,Expected demand after this week's orders.,,,Retailer
+Retailer supply line,Retailer order pipe 1 + Wholesaler end backlog + Wholesaler shipments out * TIME STEP + Retailer shipment pipe 1,Case,"Ordered and not yet received, including the supplier's backlog (end of week).",,,Retailer
+Retailer equilibrium S prime,Initial inventory + Retailer beta * Initial demand * 3 * TIME STEP,Case,Desired stock that keeps the starting equilibrium flat.,,,Retailer
+Retailer S prime used,"IF THEN ELSE(Use equilibrium S prime = 1, Retailer equilibrium S prime, Retailer S prime)",Case,Desired stock in use.,,,Retailer
+Retailer AA order,"MAX(0, Retailer updated expectation + Retailer alpha * (Retailer S prime used - Retailer inventory - Retailer beta * Retailer supply line))",Case/Week,Anchoring and adjustment (Sterman 1989).,,,Retailer
+Retailer base stock order,"MAX(0, Retailer base stock level - Retailer inventory - Retailer supply line) / TIME STEP",Case/Week,Order up to the base-stock level.,,,Retailer
+Retailer rule order,"IF THEN ELSE(Retailer policy = 1, Retailer base stock order, Retailer AA order)",Case/Week,Order the policy asks for.,,,Retailer
+Retailer cost rate,Holding cost * Retailer end on hand + Backlog cost * Retailer end backlog,Currency/Week,"Cost this week, on the end-of-week stocks (board game).",,,Results and tests
+Wholesaler available,Wholesaler on hand + Wholesaler shipment pipe 2,Case,On hand after this week's receipt (step 1).,,,Wholesaler
+Wholesaler end on hand,Wholesaler available - Wholesaler shipments out * TIME STEP,Case,On hand at the end of the week (step 3).,,,Wholesaler
+Wholesaler end backlog,Wholesaler backlog + (Wholesaler orders received - Wholesaler shipments out) * TIME STEP,Case,Backlog at the end of the week (step 3).,,,Wholesaler
+Wholesaler inventory,Wholesaler end on hand - Wholesaler end backlog,Case,Effective inventory at the end of the week (negative when in backlog).,,,Wholesaler
+Wholesaler updated expectation,Wholesaler expected demand + Wholesaler theta * (Wholesaler orders received - Wholesaler expected demand) * TIME STEP,Case/Week,Expected demand after this week's orders.,,,Wholesaler
+Wholesaler supply line,Wholesaler order pipe 1 + Distributor end backlog + Distributor shipments out * TIME STEP + Wholesaler shipment pipe 1,Case,"Ordered and not yet received, including the supplier's backlog (end of week).",,,Wholesaler
+Wholesaler equilibrium S prime,Initial inventory + Wholesaler beta * Initial demand * 3 * TIME STEP,Case,Desired stock that keeps the starting equilibrium flat.,,,Wholesaler
+Wholesaler S prime used,"IF THEN ELSE(Use equilibrium S prime = 1, Wholesaler equilibrium S prime, Wholesaler S prime)",Case,Desired stock in use.,,,Wholesaler
+Wholesaler AA order,"MAX(0, Wholesaler updated expectation + Wholesaler alpha * (Wholesaler S prime used - Wholesaler inventory - Wholesaler beta * Wholesaler supply line))",Case/Week,Anchoring and adjustment (Sterman 1989).,,,Wholesaler
+Wholesaler base stock order,"MAX(0, Wholesaler base stock level - Wholesaler inventory - Wholesaler supply line) / TIME STEP",Case/Week,Order up to the base-stock level.,,,Wholesaler
+Wholesaler rule order,"IF THEN ELSE(Wholesaler policy = 1, Wholesaler base stock order, Wholesaler AA order)",Case/Week,Order the policy asks for.,,,Wholesaler
+Wholesaler cost rate,Holding cost * Wholesaler end on hand + Backlog cost * Wholesaler end backlog,Currency/Week,"Cost this week, on the end-of-week stocks (board game).",,,Results and tests
+Distributor available,Distributor on hand + Distributor shipment pipe 2,Case,On hand after this week's receipt (step 1).,,,Distributor
+Distributor end on hand,Distributor available - Distributor shipments out * TIME STEP,Case,On hand at the end of the week (step 3).,,,Distributor
+Distributor end backlog,Distributor backlog + (Distributor orders received - Distributor shipments out) * TIME STEP,Case,Backlog at the end of the week (step 3).,,,Distributor
+Distributor inventory,Distributor end on hand - Distributor end backlog,Case,Effective inventory at the end of the week (negative when in backlog).,,,Distributor
+Distributor updated expectation,Distributor expected demand + Distributor theta * (Distributor orders received - Distributor expected demand) * TIME STEP,Case/Week,Expected demand after this week's orders.,,,Distributor
+Distributor supply line,Distributor order pipe 1 + Factory end backlog + Factory shipments out * TIME STEP + Distributor shipment pipe 1,Case,"Ordered and not yet received, including the supplier's backlog (end of week).",,,Distributor
+Distributor equilibrium S prime,Initial inventory + Distributor beta * Initial demand * 3 * TIME STEP,Case,Desired stock that keeps the starting equilibrium flat.,,,Distributor
+Distributor S prime used,"IF THEN ELSE(Use equilibrium S prime = 1, Distributor equilibrium S prime, Distributor S prime)",Case,Desired stock in use.,,,Distributor
+Distributor AA order,"MAX(0, Distributor updated expectation + Distributor alpha * (Distributor S prime used - Distributor inventory - Distributor beta * Distributor supply line))",Case/Week,Anchoring and adjustment (Sterman 1989).,,,Distributor
+Distributor base stock order,"MAX(0, Distributor base stock level - Distributor inventory - Distributor supply line) / TIME STEP",Case/Week,Order up to the base-stock level.,,,Distributor
+Distributor rule order,"IF THEN ELSE(Distributor policy = 1, Distributor base stock order, Distributor AA order)",Case/Week,Order the policy asks for.,,,Distributor
+Distributor cost rate,Holding cost * Distributor end on hand + Backlog cost * Distributor end backlog,Currency/Week,"Cost this week, on the end-of-week stocks (board game).",,,Results and tests
+Factory available,Factory on hand + Factory production pipe 3,Case,On hand after this week's receipt (step 1).,,,Factory
+Factory end on hand,Factory available - Factory shipments out * TIME STEP,Case,On hand at the end of the week (step 3).,,,Factory
+Factory end backlog,Factory backlog + (Factory orders received - Factory shipments out) * TIME STEP,Case,Backlog at the end of the week (step 3).,,,Factory
+Factory inventory,Factory end on hand - Factory end backlog,Case,Effective inventory at the end of the week (negative when in backlog).,,,Factory
+Factory updated expectation,Factory expected demand + Factory theta * (Factory orders received - Factory expected demand) * TIME STEP,Case/Week,Expected demand after this week's orders.,,,Factory
+Factory supply line,Factory production pipe 1 + Factory production pipe 2,Case,"Ordered and not yet received, including the supplier's backlog (end of week).",,,Factory
+Factory equilibrium S prime,Initial inventory + Factory beta * Initial demand * 2 * TIME STEP,Case,Desired stock that keeps the starting equilibrium flat.,,,Factory
+Factory S prime used,"IF THEN ELSE(Use equilibrium S prime = 1, Factory equilibrium S prime, Factory S prime)",Case,Desired stock in use.,,,Factory
+Factory AA order,"MAX(0, Factory updated expectation + Factory alpha * (Factory S prime used - Factory inventory - Factory beta * Factory supply line))",Case/Week,Anchoring and adjustment (Sterman 1989).,,,Factory
+Factory base stock order,"MAX(0, Factory base stock level - Factory inventory - Factory supply line) / TIME STEP",Case/Week,Order up to the base-stock level.,,,Factory
+Factory rule order,"IF THEN ELSE(Factory policy = 1, Factory base stock order, Factory AA order)",Case/Week,Order the policy asks for.,,,Factory
+Factory cost rate,Holding cost * Factory end on hand + Backlog cost * Factory end backlog,Currency/Week,"Cost this week, on the end-of-week stocks (board game).",,,Results and tests
+Demand variance,"ZIDZ(Demand sumsq, Window weeks) - ZIDZ(Demand sum, Window weeks) ^ 2",Case^2/Week^2,Variance of customer demand in the window.,,,Results and tests
+Retailer order variance,"ZIDZ(Retailer order sumsq, Window weeks) - ZIDZ(Retailer order sum, Window weeks) ^ 2",Case^2/Week^2,Variance of orders placed in the window.,,,Results and tests
+Retailer bullwhip,"ZIDZ(Retailer order variance, Demand variance)",Dmnl,Variance of orders placed over variance of customer demand.,,,Results and tests
+Retailer average backlog,"ZIDZ(Retailer window backlog, Window weeks)",Case,Average backlog in the window.,,,Results and tests
+Wholesaler order variance,"ZIDZ(Wholesaler order sumsq, Window weeks) - ZIDZ(Wholesaler order sum, Window weeks) ^ 2",Case^2/Week^2,Variance of orders placed in the window.,,,Results and tests
+Wholesaler bullwhip,"ZIDZ(Wholesaler order variance, Demand variance)",Dmnl,Variance of orders placed over variance of customer demand.,,,Results and tests
+Wholesaler average backlog,"ZIDZ(Wholesaler window backlog, Window weeks)",Case,Average backlog in the window.,,,Results and tests
+Distributor order variance,"ZIDZ(Distributor order sumsq, Window weeks) - ZIDZ(Distributor order sum, Window weeks) ^ 2",Case^2/Week^2,Variance of orders placed in the window.,,,Results and tests
+Distributor bullwhip,"ZIDZ(Distributor order variance, Demand variance)",Dmnl,Variance of orders placed over variance of customer demand.,,,Results and tests
+Distributor average backlog,"ZIDZ(Distributor window backlog, Window weeks)",Case,Average backlog in the window.,,,Results and tests
+Factory order variance,"ZIDZ(Factory order sumsq, Window weeks) - ZIDZ(Factory order sum, Window weeks) ^ 2",Case^2/Week^2,Variance of orders placed in the window.,,,Results and tests
+Factory bullwhip,"ZIDZ(Factory order variance, Demand variance)",Dmnl,Variance of orders placed over variance of customer demand.,,,Results and tests
+Factory average backlog,"ZIDZ(Factory window backlog, Window weeks)",Case,Average backlog in the window.,,,Results and tests
+Chain window cost,Retailer window cost + Wholesaler window cost + Distributor window cost + Factory window cost,Currency,Total cost of the chain in the window (the primary metric).,,,Results and tests
+Chain cost,Retailer cost + Wholesaler cost + Distributor cost + Factory cost,Currency,Total cost of the chain so far.,,,Results and tests
+Fill rate,"ZIDZ(Retailer window shipped, Retailer window demand)",Dmnl,Share of customer demand met from stock in the window.,,,Results and tests
+Equilibrium gap,"IF THEN ELSE(Week < Step week, IF THEN ELSE(Use equilibrium S prime = 1, ABS(Retailer orders placed - Base demand) + ABS(Wholesaler orders placed - Base demand) + ABS(Distributor orders placed - Base demand) + ABS(Factory orders placed - Base demand), 0), 0)",Case/Week,"Total distance of the orders from equilibrium before the step, when the equilibrium desired stock is in use (T2).",,,Results and tests
+Amplification holds,"IF THEN ELSE(Retailer peak order < Wholesaler peak order, IF THEN ELSE(Wholesaler peak order < Distributor peak order, IF THEN ELSE(Distributor peak order < Factory peak order, 1, 0), 0), 0)",Dmnl,1 if the highest order grows at every stage going upstream (T3).,,,Results and tests
+Peaks later upstream,"IF THEN ELSE(Retailer peak time <= Wholesaler peak time, IF THEN ELSE(Wholesaler peak time <= Distributor peak time, IF THEN ELSE(Distributor peak time <= Factory peak time, IF THEN ELSE(Retailer peak time < Factory peak time, 1, 0), 0), 0), 0)",Dmnl,"1 if the highest order comes no earlier at each stage going upstream, and strictly later at the factory (T3).",,,Results and tests

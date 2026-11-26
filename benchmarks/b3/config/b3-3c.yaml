@@ -1,0 +1,6 @@
+# B3-3c World3 1974, sensitivity lever set. Tests the Vermeulen and de Jongh and Thissen 1976 findings (addendum keys, frozen).
+# FROZEN before any run. Rule: every lever over nominal x [0.7, 1.3]. Transform log declared for the two heavy-tailed goals.
+model: build/w3_1974_c.sdm
+steps:
+  screen: {trajectories: 100, levels: 4, seed: 1, tau: 0.1, linear_cut: 0.1, converge_tau: 0.9, workers: 8, csv: results/b3-3c/screen.csv}
+  importance: {samples: 2048, seed: 1, bootstrap: 100, ensemble: 0, workers: 8}

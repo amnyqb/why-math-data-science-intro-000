@@ -1,0 +1,759 @@
+{
+ "title": "Imported model",
+ "vars": [
+  {
+   "id": 1,
+   "name": "Base Demand",
+   "kind": "Constant",
+   "equation": "100",
+   "units": "cases/week",
+   "comment": "Demand before growth starts.",
+   "pos": [
+    120.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 2,
+   "name": "Growth",
+   "kind": "Constant",
+   "equation": "2",
+   "units": "cases/week/week",
+   "comment": "Weekly increase in demand while the market grows.",
+   "pos": [
+    310.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 3,
+   "name": "Growth Start",
+   "kind": "Constant",
+   "equation": "5",
+   "units": "week",
+   "comment": "When demand starts to grow.",
+   "pos": [
+    500.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 4,
+   "name": "Growth End",
+   "kind": "Constant",
+   "equation": "30",
+   "units": "week",
+   "comment": "When demand stops growing.",
+   "pos": [
+    690.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 5,
+   "name": "Demand",
+   "kind": "Aux",
+   "equation": "Base Demand + RAMP(Growth, Growth Start, Growth End)",
+   "units": "cases/week",
+   "comment": "Customer demand.",
+   "pos": [
+    880.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 6,
+   "name": "Averaging Time",
+   "kind": "Constant",
+   "equation": "4",
+   "units": "week",
+   "comment": "Time over which planners average demand.",
+   "pos": [
+    120.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 7,
+   "name": "Forecast Horizon",
+   "kind": "Constant",
+   "equation": "4",
+   "units": "week",
+   "comment": "How far ahead the trend-following planner projects.",
+   "pos": [
+    310.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 8,
+   "name": "Adaptive Belief",
+   "kind": "Aux",
+   "equation": "SMOOTH(Demand, Averaging Time)",
+   "units": "cases/week",
+   "comment": "Exponential smoothing: adaptive expectations.",
+   "pos": [
+    500.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 9,
+   "name": "Adaptive Belief 3",
+   "kind": "Aux",
+   "equation": "SMOOTH3(Demand, Averaging Time)",
+   "units": "cases/week",
+   "comment": "Third-order smoothing with the same average delay.",
+   "pos": [
+    690.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 10,
+   "name": "Perceived Trend",
+   "kind": "Aux",
+   "equation": "TREND(Demand, Averaging Time, 0)",
+   "units": "1/week",
+   "comment": "Fractional growth the planner believes in.",
+   "pos": [
+    880.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 11,
+   "name": "Extrapolative Belief",
+   "kind": "Aux",
+   "equation": "((Demand) * (1 + TREND(Demand, Averaging Time, 0) * (Forecast Horizon)))",
+   "units": "cases/week",
+   "comment": "Demand now projected ahead at the perceived trend.",
+   "pos": [
+    120.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 38,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  }
+ ],
+ "links": [
+  {
+   "id": 12,
+   "from": 1,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 13,
+   "from": 2,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 14,
+   "from": 3,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 15,
+   "from": 4,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 16,
+   "from": 5,
+   "to": 8,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 17,
+   "from": 6,
+   "to": 8,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 18,
+   "from": 5,
+   "to": 9,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 19,
+   "from": 6,
+   "to": 9,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 20,
+   "from": 5,
+   "to": 10,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 21,
+   "from": 6,
+   "to": 10,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 22,
+   "from": 5,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 23,
+   "from": 6,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 24,
+   "from": 7,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  }
+ ],
+ "notes": [],
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 60.0,
+  "time_step": 0.0625,
+  "time_units": "week",
+  "method": "Euler"
+ },
+ "next_id": 181,
+ "sheets": [
+  {
+   "id": 38,
+   "name": "Model",
+   "kind": "Diagram",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "cld": {
+    "nodes": [],
+    "links": [],
+    "loops": []
+   },
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "caption": "",
+   "source": ""
+  },
+  {
+   "name": "Causal loops",
+   "kind": "CausalLoop",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "id": 180,
+   "cld": {
+    "nodes": [
+     {
+      "id": 169,
+      "text": "Belief",
+      "pos": [
+       172.7,
+       210.0
+      ]
+     },
+     {
+      "id": 170,
+      "text": "Belief Error",
+      "pos": [
+       417.7,
+       68.5
+      ]
+     },
+     {
+      "id": 171,
+      "text": "Belief Update",
+      "pos": [
+       417.7,
+       351.5
+      ]
+     },
+     {
+      "id": 172,
+      "text": "Demand",
+      "pos": [
+       572.4,
+       68.8
+      ]
+     },
+     {
+      "id": 173,
+      "text": "Averaging Time",
+      "pos": [
+       609.7,
+       351.1
+      ]
+     }
+    ],
+    "links": [
+     {
+      "id": 174,
+      "from": 169,
+      "to": 170,
+      "bend": -81.6,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 175,
+      "from": 170,
+      "to": 171,
+      "bend": -81.6,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 176,
+      "from": 171,
+      "to": 169,
+      "bend": -81.6,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 177,
+      "from": 172,
+      "to": 170,
+      "bend": 18.6,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 178,
+      "from": 173,
+      "to": 171,
+      "bend": -23.0,
+      "polarity": "-",
+      "delay": false
+     }
+    ],
+    "loops": [
+     {
+      "id": 179,
+      "pos": [
+       336.0,
+       210.0
+      ],
+      "reinforcing": false,
+      "label": "B1 Updating the belief",
+      "clockwise": true
+     }
+    ]
+   },
+   "caption": "",
+   "source": ""
+  }
+ ],
+ "groups": [],
+ "modules": [],
+ "scenarios": [],
+ "trend_style": {
+  "title": "",
+  "subtitle": "",
+  "x_label": "",
+  "y_label": "",
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "legend": "TopRight",
+  "grid": true,
+  "line_width": 1.0,
+  "markers": false,
+  "time_marker": true,
+  "compare": true,
+  "colors": []
+ },
+ "sets": [],
+ "arrow_shape": "Curved",
+ "arrow_head": "Filled",
+ "diagram_style": "Classic",
+ "module_style": "Detailed",
+ "functions": [],
+ "checks": [],
+ "defs": [],
+ "instances": [],
+ "manifest": {
+  "title": "",
+  "description": "",
+  "levers": [],
+  "outputs": [],
+  "scenarios": [],
+  "bindings": [],
+  "validity": [],
+  "tests": [],
+  "goals": [],
+  "reduced_from": ""
+ },
+ "figure_style": {
+  "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+  "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+  "text_scale": 0.9,
+  "line_scale": 1.15,
+  "width_mm": 130.0,
+  "background": "#ffffff",
+  "colors": {
+   "accent": "#000000",
+   "accent_soft": "#ffffff",
+   "aux": "#000000",
+   "border": "#000000",
+   "constant": "#000000",
+   "error": "#000000",
+   "flow": "#000000",
+   "grid": "#ffffff",
+   "link": "#000000",
+   "lookup": "#000000",
+   "muted": "#000000",
+   "ok": "#000000",
+   "panel": "#ffffff",
+   "stock": "#000000",
+   "stock_fill": "#ffffff",
+   "surface": "#ffffff",
+   "text": "#000000"
+  },
+  "arrow_shape": "curved",
+  "arrow_head": "filled",
+  "arrow_weight": 1,
+  "diagram_style": "classic",
+  "caption_size": 13.0
+ }
+}

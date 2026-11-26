@@ -1,0 +1,246 @@
+[
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "100"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.02"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Year"
+ },
+ {
+  "op": "set_setting",
+  "key": "method",
+  "value": "euler"
+ },
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "Fishery commons: open access versus a managed fleet"
+ },
+ {
+  "op": "add_var",
+  "name": "Fish",
+  "kind": "stock",
+  "equation": "900",
+  "units": "tonne"
+ },
+ {
+  "op": "add_var",
+  "name": "Boats",
+  "kind": "stock",
+  "equation": "20",
+  "units": "boats"
+ },
+ {
+  "op": "add_var",
+  "name": "Fish Growth",
+  "kind": "flow",
+  "equation": "Growth Rate * Fish * (1 - Fish / Carrying Capacity)",
+  "units": "tonne/Year",
+  "to": "Fish"
+ },
+ {
+  "op": "add_var",
+  "name": "Catch",
+  "kind": "flow",
+  "equation": "MIN(Catchability * Boats * Fish, Quota)",
+  "units": "tonne/Year",
+  "from": "Fish"
+ },
+ {
+  "op": "add_var",
+  "name": "Revenue",
+  "kind": "aux",
+  "equation": "Price * Catch",
+  "units": "kUSD/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Fleet Cost",
+  "kind": "aux",
+  "equation": "Cost Per Boat * Boats",
+  "units": "kUSD/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Profit",
+  "kind": "aux",
+  "equation": "Revenue - Fleet Cost",
+  "units": "kUSD/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Boat Purchases",
+  "kind": "flow",
+  "equation": "MIN(MAX(Profit, 0) * Fleet Response, MAX(Fleet Limit - Boats, 0) / TIME STEP)",
+  "units": "boats/Year",
+  "to": "Boats"
+ },
+ {
+  "op": "add_var",
+  "name": "Boat Retirements",
+  "kind": "flow",
+  "equation": "MIN(MAX(-Profit, 0) * Fleet Response, Boats / TIME STEP)",
+  "units": "boats/Year",
+  "from": "Boats"
+ },
+ {
+  "op": "add_var",
+  "name": "Growth Rate",
+  "kind": "constant",
+  "equation": "0.5",
+  "units": "1/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Carrying Capacity",
+  "kind": "constant",
+  "equation": "1000",
+  "units": "tonne"
+ },
+ {
+  "op": "add_var",
+  "name": "Catchability",
+  "kind": "constant",
+  "equation": "0.001",
+  "units": "1/boats/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Price",
+  "kind": "constant",
+  "equation": "10",
+  "units": "kUSD/tonne"
+ },
+ {
+  "op": "add_var",
+  "name": "Cost Per Boat",
+  "kind": "constant",
+  "equation": "2",
+  "units": "kUSD/boats/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Fleet Response",
+  "kind": "constant",
+  "equation": "0.05",
+  "units": "boats/kUSD"
+ },
+ {
+  "op": "add_var",
+  "name": "Quota",
+  "kind": "constant",
+  "equation": "100000",
+  "units": "tonne/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Fleet Limit",
+  "kind": "constant",
+  "equation": "100000",
+  "units": "boats"
+ },
+ {
+  "op": "add_var",
+  "name": "Max Sustainable Yield",
+  "kind": "aux",
+  "equation": "Growth Rate * Carrying Capacity / 4",
+  "units": "tonne/Year"
+ },
+ {
+  "op": "add_group",
+  "name": "Fish stock",
+  "vars": [
+   "Fish",
+   "Fish Growth",
+   "Catch",
+   "Growth Rate",
+   "Carrying Capacity",
+   "Catchability",
+   "Max Sustainable Yield"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Fleet",
+  "vars": [
+   "Boats",
+   "Boat Purchases",
+   "Boat Retirements",
+   "Fleet Response"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Money",
+  "vars": [
+   "Revenue",
+   "Fleet Cost",
+   "Profit",
+   "Price",
+   "Cost Per Boat"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Policy levers",
+  "vars": [
+   "Quota",
+   "Fleet Limit"
+  ]
+ },
+ {
+  "op": "set_lever",
+  "var": "Quota",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Quota",
+  "min": 0,
+  "max": 300
+ },
+ {
+  "op": "set_lever",
+  "var": "Fleet Limit",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Fleet Limit",
+  "min": 0,
+  "max": 600
+ },
+ {
+  "op": "set_purpose",
+  "problem": "Why does a fishery open to everyone end up with a small stock and a big idle fleet, and which rule keeps both the fish and the profit?",
+  "kind": "design a policy",
+  "out_of_scope": "several species, fish age classes, price changes, fuel and crew markets"
+ },
+ {
+  "op": "add_objective",
+  "title": "Keep the stock healthy",
+  "kind": "stay within a band",
+  "test": "Fish stays above half of Carrying Capacity (500 tonne) at the end of the 100 years.",
+  "var": "Fish"
+ },
+ {
+  "op": "add_objective",
+  "title": "Keep the fleet profitable",
+  "kind": "grow to a plateau",
+  "test": "Profit settles at a positive level instead of falling to zero.",
+  "var": "Profit"
+ }
+]

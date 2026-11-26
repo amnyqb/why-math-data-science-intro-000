@@ -1,0 +1,3 @@
+id,finding,reproduced,evidence
+C1,"FIOAC, ICOR and ALIC are among the five most influential levers",False,"top five by mean ST: ['FIOAC1', 'RLT', 'ICOR1', 'FIOAC2', 'LEN']; ranks FIOAC1 1, FIOAC2 4, ICOR1 3, ALIC1 7"
+C2,"agriculture, resource and pollution levers are in the lower half",True,"median rank 14.0 of 23; ranks LYF1 10, ILF 9, LFH 8, ALAI1 18, LFERTI 15, NRI 13, PPGF1 17, PPTD1 19"

@@ -1,0 +1,5 @@
+# Key freeze log (round 2)
+- 2026-11-20 keys/b3-3b/answer_key.yaml sha256 5d490dcdd2883a2f5fcdbe28867fa3a6a8fd78b43bcc04e33b89761140268caa (41 entries from Thissen 1978; written by the lit-keyer agent without access to results; checker fixes by the orchestrator: YAML quoting, one footnote on the Eq. 6 slope, explicit digitised: false on four entries whose numbers the text states). Any edit invalidates scores for B3-3b.
+- 2026-11-20 keys/b3-3b/addendum_thissen1976_capital_resource.yaml sha256 18bed3973e8b0719d376b416e1862dc92ed6f03da516afa49373fb01fd1cbb3b (31 entries; lit-keyer agent without access to results; one section number corrected by the orchestrator: V-A)
+- 2026-11-20 keys/b3-3b/addendum_vermeulen_dejongh_sensitivity.yaml sha256 65d61380a4ddf3741f3b4f43d6071bf5766ab88125db56291e3acbe429fe7a60 (14 entries; Tables 1-4 and Figs 1-5 of the paper are garbled OCR and unused)
+- 2026-11-20 keys/b3-3b/addendum_thissen1978_lessons.yaml sha256 e4af2c4d4f98c967e1c83228521316062739e17aa9298bdf6f962dbaa83d1a0c (28 entries from Thissen's 1978 PhD thesis, TH Eindhoven; printed pages 116-121 are missing from the supplied PDF and unused)

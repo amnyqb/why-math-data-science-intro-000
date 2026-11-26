@@ -1,0 +1,346 @@
+{
+  "title": "",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Population",
+      "kind": "Stock",
+      "equation": "10",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        160.0,
+        320.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Growth rate",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "1/Year",
+      "comment": "Growth per person a year when there is plenty of room.",
+      "pos": [
+        140.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Capacity",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "Person",
+      "comment": "How many the place can carry.",
+      "pos": [
+        370.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Crowding",
+      "kind": "Aux",
+      "equation": "Population / Capacity",
+      "units": "",
+      "comment": "Share of the capacity in use: 0 empty, 1 full.",
+      "pos": [
+        345.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Growth",
+      "kind": "Flow",
+      "equation": "Population * Growth rate * (1 - Crowding)",
+      "units": "Person/Year",
+      "comment": "Births net of crowding.",
+      "pos": [
+        30.0,
+        255.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 1,
+      "from_pt": [
+        -100.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 5,
+      "from": 1,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 6,
+      "from": 3,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 8,
+      "from": 1,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 2,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 4,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 30.0,
+    "time_step": 0.0625,
+    "time_units": "Year",
+    "method": "Euler"
+  },
+  "next_id": 11,
+  "sheets": [
+    {
+      "id": 11,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "Growth runs into a limit",
+    "description": "Logistic growth: a reinforcing loop that crowding turns into a balancing one.",
+    "levers": [
+      {
+        "name": "Growth rate",
+        "units": "1/Year",
+        "min": 0.1,
+        "max": 1.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      },
+      {
+        "name": "Capacity",
+        "units": "Person",
+        "min": 500.0,
+        "max": 2000.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      }
+    ],
+    "outputs": [
+      {
+        "variable": "Population",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      }
+    ],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [
+      {
+        "name": "Population at 30 years",
+        "output": "Population",
+        "measure": "final",
+        "direction": "max",
+        "policies": [],
+        "protected_ranking": false,
+        "transform": ""
+      }
+    ],
+    "reduced_from": ""
+  }
+}

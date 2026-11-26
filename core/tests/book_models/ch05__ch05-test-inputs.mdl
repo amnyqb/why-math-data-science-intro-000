@@ -1,0 +1,75 @@
+{UTF-8}
+{ Chapter 4: asking a warehouse three questions with a step, a pulse and a ramp.
+  Set one of Step Size, Pulse Volume or Ramp Slope above zero (one scenario each). }
+Step Size=
+	0
+	~	cases/week
+	~	Scenario "Step": 20. A lasting rise in demand from week 5.
+	|
+Pulse Volume=
+	0
+	~	cases
+	~	Scenario "Pulse": 80. One extra burst of orders during week 5.
+	|
+Ramp Slope=
+	0
+	~	cases/week/week
+	~	Scenario "Ramp": 2. Demand grows from week 5 to week 40, then levels off.
+	|
+Demand=
+	100 + STEP(Step Size, 5) + Pulse Volume * PULSE(5, Pulse Width) / Pulse Width + RAMP(Ramp Slope, 5, 40)
+	~	cases/week
+	~	Customer demand: 100 a week plus the chosen test input. Dividing the pulse volume (cases) by its width (weeks) gives a rate.
+	|
+Pulse Width=
+	1
+	~	week
+	~	|
+Expected Demand=
+	SMOOTH(Demand, Demand Smoothing Time)
+	~	cases/week
+	~	What the planner believes demand is: demand averaged over about 4 weeks.
+	|
+Demand Smoothing Time=
+	4
+	~	week
+	~	|
+Inventory Coverage=
+	2
+	~	week
+	~	Weeks of expected demand the warehouse wants to hold.
+	|
+Desired Inventory=
+	Expected Demand * Inventory Coverage
+	~	cases
+	~	|
+Inventory Adjustment Time=
+	3
+	~	week
+	~	How quickly the planner closes the gap between desired and actual inventory.
+	|
+Production=
+	MAX(0, Expected Demand + (Desired Inventory - Inventory) / Inventory Adjustment Time)
+	~	cases/week
+	~	Replace expected demand and close part of the inventory gap. MAX keeps it from going negative.
+	|
+Minimum Ship Time=
+	0.5
+	~	week
+	~	The fastest the warehouse can empty its shelves.
+	|
+Shipments=
+	MIN(Demand, Inventory / Minimum Ship Time)
+	~	cases/week
+	~	Ship what is ordered, but never more than the shelves allow.
+	|
+Inventory= INTEG(
+	Production - Shipments,
+	200)
+	~	cases
+	~	Starts in balance: 200 cases, two weeks of the starting demand of 100 (written as a number so the diagram needs no initial-value link).
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 60 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |

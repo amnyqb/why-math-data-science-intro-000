@@ -1,0 +1,80 @@
+{UTF-8}
+{ Chapter 2: a maintenance workshop whose productivity responds to work pressure (after Oliva and Sterman 2001). }
+Base Arrivals=
+	100
+	~	jobs/week
+	~	Jobs arriving each week before the change.
+	|
+Demand Increase=
+	0.2
+	~	dmnl
+	~	Fractional rise in arrivals from week 10.
+	|
+Job Arrivals=
+	Base Arrivals * (1 + STEP(Demand Increase, 10))
+	~	jobs/week
+	~	|
+Backlog= INTEG(
+	Job Arrivals - Job Completions,
+	400)
+	~	jobs
+	~	Jobs waiting or in work.
+	|
+Target Delivery Time=
+	4
+	~	week
+	~	Time the workshop aims to take to complete a job.
+	|
+Desired Completions=
+	Backlog / Target Delivery Time
+	~	jobs/week
+	~	|
+Staff=
+	20
+	~	person
+	~	|
+Standard Productivity=
+	5
+	~	jobs/person/week
+	~	Jobs per person per week at normal effort.
+	|
+Standard Capacity=
+	Staff * Standard Productivity
+	~	jobs/week
+	~	|
+Work Pressure=
+	XIDZ(Desired Completions, Standard Capacity, 3)
+	~	dmnl
+	~	Ratio of the completion rate needed to the normal capacity.
+	|
+Pressure Table(
+	[(0,0)-(3,2)],(0,0.6),(0.5,0.8),(1,1),(1.5,1.2),(2,1.3),(2.5,1.33),(3,1.35))
+	~	dmnl
+	~	Below normal pressure people slow down; above it they work faster, up to about 35% more.
+	|
+Effect of Pressure=
+	Pressure Table(Work Pressure)
+	~	dmnl
+	~	|
+Productivity=
+	Standard Productivity * Effect of Pressure
+	~	jobs/person/week
+	~	|
+Minimum Job Time=
+	1
+	~	week
+	~	Shortest time in which a job can be done.
+	|
+Job Completions=
+	MIN(Staff * Productivity, Backlog / Minimum Job Time)
+	~	jobs/week
+	~	|
+Delivery Time=
+	Backlog / Job Completions
+	~	week
+	~	Little's law: average time a job spends in the workshop.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 60 ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |
+SAVEPER = 0.125 ~ week ~ |

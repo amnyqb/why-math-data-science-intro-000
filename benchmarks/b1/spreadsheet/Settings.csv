@@ -1,0 +1,7 @@
+Setting,Value
+Title,Beer game on M5 (B1 pilot)
+Initial time,0
+Final time,36
+Time step,1
+Time units,Week
+Method,Euler

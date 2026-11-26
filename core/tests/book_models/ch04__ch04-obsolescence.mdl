@@ -1,0 +1,25 @@
+{UTF-8}
+{ Chapter 2: writing equations with units. A stock of spare parts that becomes obsolete at 10% a week. }
+Obsolescence Fraction=
+	0.1
+	~	1/week
+	~	Share of the parts on hand that becomes obsolete each week.
+	|
+Receipts=
+	STEP(30, 20)
+	~	parts/week
+	~	No receipts until week 20, then 30 parts a week.
+	|
+Obsolescence=
+	Parts On Hand * Obsolescence Fraction
+	~	parts/week
+	~	|
+Parts On Hand= INTEG(
+	Receipts - Obsolescence,
+	1000)
+	~	parts
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 60 ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |
+SAVEPER = 0.125 ~ week ~ |

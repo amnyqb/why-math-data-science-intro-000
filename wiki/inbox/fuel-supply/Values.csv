@@ -1,0 +1,343 @@
+Name,Item,Value
+Capacity,Hail 2 - Crude,506.329750867
+Max fill,Hail 2 - Crude,0.92
+Min fill,Hail 2 - Crude,0.6
+Opening stock,Hail 2 - Crude,498.102563667
+Ready,Hail 2 - Crude,1
+Max trucks per day,Hail 2 - Crude,264
+Capacity,Hail 2 - Diesel,49.689503501
+Max fill,Hail 2 - Diesel,0.92
+Min fill,Hail 2 - Diesel,0.85
+Opening stock,Hail 2 - Diesel,41.236171
+Ready,Hail 2 - Diesel,1
+Max trucks per day,Hail 2 - Diesel,48
+Capacity,Layla PP - Crude,90.57
+Max fill,Layla PP - Crude,0.85
+Min fill,Layla PP - Crude,0.75
+Opening stock,Layla PP - Crude,70.502565667
+Ready,Layla PP - Crude,1
+Max trucks per day,Layla PP - Crude,144
+Capacity,Layla PP - Diesel,31.13456232
+Max fill,Layla PP - Diesel,0.85
+Min fill,Layla PP - Diesel,0.85
+Opening stock,Layla PP - Diesel,24.41159
+Ready,Layla PP - Diesel,1
+Max trucks per day,Layla PP - Diesel,48
+Capacity,Qassim - Diesel,264.172043931
+Max fill,Qassim - Diesel,0
+Min fill,Qassim - Diesel,0.85
+Opening stock,Qassim - Diesel,249.781795064
+Ready,Qassim - Diesel,0
+Max trucks per day,Qassim - Diesel,99999
+Capacity,Qassim 2 - Diesel,0
+Max fill,Qassim 2 - Diesel,0
+Min fill,Qassim 2 - Diesel,0.85
+Opening stock,Qassim 2 - Diesel,0
+Ready,Qassim 2 - Diesel,0
+Max trucks per day,Qassim 2 - Diesel,99999
+Capacity,The Ninth - Diesel,503.184845582
+Max fill,The Ninth - Diesel,0.9
+Min fill,The Ninth - Diesel,0.85
+Opening stock,The Ninth - Diesel,430.523131
+Ready,The Ninth - Diesel,1
+Max trucks per day,The Ninth - Diesel,216
+Capacity,The Tenth - Diesel,364.809013047
+Max fill,The Tenth - Diesel,0.92
+Min fill,The Tenth - Diesel,0.85
+Opening stock,The Tenth - Diesel,333.171679333
+Ready,The Tenth - Diesel,1
+Max trucks per day,The Tenth - Diesel,336
+Capacity,Wadi Adawasir - Crude,295.61
+Max fill,Wadi Adawasir - Crude,0.86
+Min fill,Wadi Adawasir - Crude,0.65
+Opening stock,Wadi Adawasir - Crude,248.093549333
+Ready,Wadi Adawasir - Crude,1
+Max trucks per day,Wadi Adawasir - Crude,144
+Capacity,Wadi Adawasir - Diesel,56.608295128
+Max fill,Wadi Adawasir - Diesel,0.83
+Min fill,Wadi Adawasir - Diesel,0.85
+Opening stock,Wadi Adawasir - Diesel,45.542262846
+Ready,Wadi Adawasir - Diesel,1
+Max trucks per day,Wadi Adawasir - Diesel,48
+Capacity,AL-Quorayyat - Crude,704
+Max fill,AL-Quorayyat - Crude,1
+Min fill,AL-Quorayyat - Crude,0.45
+Opening stock,AL-Quorayyat - Crude,575.004651944
+Ready,AL-Quorayyat - Crude,1
+Max trucks per day,AL-Quorayyat - Crude,168
+Capacity,AL-Quorayyat - Diesel,216.550630145
+Max fill,AL-Quorayyat - Diesel,1
+Min fill,AL-Quorayyat - Diesel,0.85
+Opening stock,AL-Quorayyat - Diesel,176.018390787
+Ready,AL-Quorayyat - Diesel,1
+Max trucks per day,AL-Quorayyat - Diesel,72
+Capacity,Al-Jouf - Crude,144.381550867
+Max fill,Al-Jouf - Crude,1
+Min fill,Al-Jouf - Crude,0.5
+Opening stock,Al-Jouf - Crude,140.889273334
+Ready,Al-Jouf - Crude,1
+Max trucks per day,Al-Jouf - Crude,96
+Capacity,Al-Jouf - Diesel,133.763
+Max fill,Al-Jouf - Diesel,1
+Min fill,Al-Jouf - Diesel,0.85
+Opening stock,Al-Jouf - Diesel,118.727848542
+Ready,Al-Jouf - Diesel,1
+Max trucks per day,Al-Jouf - Diesel,48
+Capacity,Arar - Crude,283
+Max fill,Arar - Crude,1
+Min fill,Arar - Crude,0.5
+Opening stock,Arar - Crude,247.91431406
+Ready,Arar - Crude,1
+Max trucks per day,Arar - Crude,192
+Capacity,Arar - Diesel,185.272660143
+Max fill,Arar - Diesel,1
+Min fill,Arar - Diesel,0.85
+Opening stock,Arar - Diesel,156.006511097
+Ready,Arar - Diesel,1
+Max trucks per day,Arar - Diesel,72
+Capacity,QURAYYAH CC - Diesel,320.780339059
+Max fill,QURAYYAH CC - Diesel,0.9
+Min fill,QURAYYAH CC - Diesel,0.6
+Opening stock,QURAYYAH CC - Diesel,288.639721538
+Ready,QURAYYAH CC - Diesel,1
+Max trucks per day,QURAYYAH CC - Diesel,99999
+Capacity,Rafhaa - Crude,312
+Max fill,Rafhaa - Crude,0.96
+Min fill,Rafhaa - Crude,0.5
+Opening stock,Rafhaa - Crude,290.448279968
+Ready,Rafhaa - Crude,1
+Max trucks per day,Rafhaa - Crude,96
+Capacity,Rafhaa - Diesel,222.0303
+Max fill,Rafhaa - Diesel,0.95
+Min fill,Rafhaa - Diesel,0.85
+Opening stock,Rafhaa - Diesel,180.829658586
+Ready,Rafhaa - Diesel,1
+Max trucks per day,Rafhaa - Diesel,48
+Capacity,Asir - Diesel,388.9619
+Max fill,Asir - Diesel,0.95
+Min fill,Asir - Diesel,0.5
+Opening stock,Asir - Diesel,347.301434777
+Ready,Asir - Diesel,1
+Max trucks per day,Asir - Diesel,144
+Capacity,Jazan - Crude,976.52454001
+Max fill,Jazan - Crude,0.9
+Min fill,Jazan - Crude,0.5
+Opening stock,Jazan - Crude,851.402299893
+Ready,Jazan - Crude,1
+Max trucks per day,Jazan - Crude,216
+Capacity,Jazan - Diesel,319.132408689
+Max fill,Jazan - Diesel,0.9
+Min fill,Jazan - Diesel,0.85
+Opening stock,Jazan - Diesel,267.617923415
+Ready,Jazan - Diesel,1
+Max trucks per day,Jazan - Diesel,24
+Capacity,Najran - Crude,317.635433773
+Max fill,Najran - Crude,0.3
+Min fill,Najran - Crude,0.22
+Opening stock,Najran - Crude,99.115737
+Ready,Najran - Crude,1
+Max trucks per day,Najran - Crude,264
+Capacity,Sharorah - Crude,283.04148
+Max fill,Sharorah - Crude,0.95
+Min fill,Sharorah - Crude,0.55
+Opening stock,Sharorah - Crude,244.522965253
+Ready,Sharorah - Crude,1
+Max trucks per day,Sharorah - Crude,96
+Capacity,Sharorah - Diesel,143.468637819
+Max fill,Sharorah - Diesel,0.95
+Min fill,Sharorah - Diesel,0.85
+Opening stock,Sharorah - Diesel,131.404305835
+Ready,Sharorah - Diesel,1
+Max trucks per day,Sharorah - Diesel,48
+Capacity,TIHAMA - Crude,819.84539
+Max fill,TIHAMA - Crude,0.95
+Min fill,TIHAMA - Crude,0.45
+Opening stock,TIHAMA - Crude,643.513577444
+Ready,TIHAMA - Crude,1
+Max trucks per day,TIHAMA - Crude,240
+Capacity,TIHAMA - Diesel,272.88344
+Max fill,TIHAMA - Diesel,0.92
+Min fill,TIHAMA - Diesel,0.85
+Opening stock,TIHAMA - Diesel,247.214465371
+Ready,TIHAMA - Diesel,1
+Max trucks per day,TIHAMA - Diesel,96
+Capacity,Al-Wajh - Crude,188.694
+Max fill,Al-Wajh - Crude,0.97
+Min fill,Al-Wajh - Crude,0.5
+Opening stock,Al-Wajh - Crude,183.368150286
+Ready,Al-Wajh - Crude,1
+Max trucks per day,Al-Wajh - Crude,72
+Capacity,Jeddah South - Diesel,70.44576
+Max fill,Jeddah South - Diesel,0.85
+Min fill,Jeddah South - Diesel,0.65
+Opening stock,Jeddah South - Diesel,51.919430715
+Ready,Jeddah South - Diesel,1
+Max trucks per day,Jeddah South - Diesel,96
+Capacity,Rabigh Gas - Diesel,62.898
+Max fill,Rabigh Gas - Diesel,0.95
+Min fill,Rabigh Gas - Diesel,0.85
+Opening stock,Rabigh Gas - Diesel,56.893158219
+Ready,Rabigh Gas - Diesel,1
+Max trucks per day,Rabigh Gas - Diesel,99999
+Capacity,Shoaiba - Diesel,13.83756
+Max fill,Shoaiba - Diesel,0.98
+Min fill,Shoaiba - Diesel,0.85
+Opening stock,Shoaiba - Diesel,12.973355981
+Ready,Shoaiba - Diesel,1
+Max trucks per day,Shoaiba - Diesel,99999
+Capacity,Shoaiba C.C. - Diesel,62.898
+Max fill,Shoaiba C.C. - Diesel,0.98
+Min fill,Shoaiba C.C. - Diesel,0.4
+Opening stock,Shoaiba C.C. - Diesel,61.319985947
+Ready,Shoaiba C.C. - Diesel,1
+Max trucks per day,Shoaiba C.C. - Diesel,0
+Capacity,Tabuk PP2 - Crude,430.85203
+Max fill,Tabuk PP2 - Crude,0.97
+Min fill,Tabuk PP2 - Crude,0.5
+Opening stock,Tabuk PP2 - Crude,413.968533785
+Ready,Tabuk PP2 - Crude,1
+Max trucks per day,Tabuk PP2 - Crude,120
+Capacity,Tabuk PP2 - Diesel,385.4766828
+Max fill,Tabuk PP2 - Diesel,0.97
+Min fill,Tabuk PP2 - Diesel,0.5
+Opening stock,Tabuk PP2 - Diesel,364.310136982
+Ready,Tabuk PP2 - Diesel,1
+Max trucks per day,Tabuk PP2 - Diesel,48
+Capacity,PP11 - ASL,311.320463962
+Max fill,PP11 - ASL,0
+Min fill,PP11 - ASL,0.5
+Opening stock,PP11 - ASL,200
+Ready,PP11 - ASL,0
+Max trucks per day,PP11 - ASL,99999
+Capacity,PP12 - ASL,405.805998341
+Max fill,PP12 - ASL,0
+Min fill,PP12 - ASL,0.5
+Opening stock,PP12 - ASL,345.88003
+Ready,PP12 - ASL,0
+Max trucks per day,PP12 - ASL,99999
+Capacity,PP14 - ASL,381.942457039
+Max fill,PP14 - ASL,0
+Min fill,PP14 - ASL,0.85
+Opening stock,PP14 - ASL,222.504640308
+Ready,PP14 - ASL,0
+Max trucks per day,PP14 - ASL,99999
+Capacity,PP8 - Crude,613.256530553
+Max fill,PP8 - Crude,0.975
+Min fill,PP8 - Crude,0.5
+Opening stock,PP8 - Crude,598.45026
+Ready,PP8 - Crude,1
+Max trucks per day,PP8 - Crude,264
+Capacity,PP8 - Diesel,625.836151693
+Max fill,PP8 - Diesel,0.9
+Min fill,PP8 - Diesel,0.85
+Opening stock,PP8 - Diesel,561.135737
+Ready,PP8 - Diesel,1
+Max trucks per day,PP8 - Diesel,24
+Capacity,PPQC3 - Diesel,107.668977333
+Max fill,PPQC3 - Diesel,0.91
+Min fill,PPQC3 - Diesel,0.85
+Opening stock,PPQC3 - Diesel,92.313119667
+Ready,PPQC3 - Diesel,1
+Max trucks per day,PPQC3 - Diesel,99999
+Capacity,Marifq IWPP - Diesel,459.156171594
+Max fill,Marifq IWPP - Diesel,0
+Min fill,Marifq IWPP - Diesel,0.6
+Opening stock,Marifq IWPP - Diesel,438.308846052
+Ready,Marifq IWPP - Diesel,0
+Max trucks per day,Marifq IWPP - Diesel,99999
+Capacity,QIPP 1 - Diesel,566.08295128
+Max fill,QIPP 1 - Diesel,1
+Min fill,QIPP 1 - Diesel,0.6
+Opening stock,QIPP 1 - Diesel,462.301076878
+Ready,QIPP 1 - Diesel,1
+Max trucks per day,QIPP 1 - Diesel,99999
+Capacity,Wad Al Shamal - ASL,377.388634187
+Max fill,Wad Al Shamal - ASL,0.95
+Min fill,Wad Al Shamal - ASL,0.6
+Opening stock,Wad Al Shamal - ASL,307.563591557
+Ready,Wad Al Shamal - ASL,1
+Max trucks per day,Wad Al Shamal - ASL,0
+Capacity,Asir - Crude,94.347158547
+Max fill,Asir - Crude,0.95
+Min fill,Asir - Crude,0.85
+Opening stock,Asir - Crude,59.165546042
+Ready,Asir - Crude,1
+Max trucks per day,Asir - Crude,96
+Capacity,Bisha - Diesel,344.82
+Max fill,Bisha - Diesel,0.86
+Min fill,Bisha - Diesel,0.5
+Opening stock,Bisha - Diesel,296.689003
+Ready,Bisha - Diesel,1
+Max trucks per day,Bisha - Diesel,192
+Capacity,Najran - Diesel,80.824065822
+Max fill,Najran - Diesel,0.3
+Min fill,Najran - Diesel,0.85
+Opening stock,Najran - Diesel,29.956362037
+Ready,Najran - Diesel,1
+Max trucks per day,Najran - Diesel,24
+Capacity,Shuqaiq - Diesel,69.187916268
+Max fill,Shuqaiq - Diesel,1
+Min fill,Shuqaiq - Diesel,0.85
+Opening stock,Shuqaiq - Diesel,48.621653925
+Ready,Shuqaiq - Diesel,1
+Max trucks per day,Shuqaiq - Diesel,99999
+Capacity,Al-Wajh - Diesel,144.6654
+Max fill,Al-Wajh - Diesel,0.97
+Min fill,Al-Wajh - Diesel,0.65
+Opening stock,Al-Wajh - Diesel,116.812274734
+Ready,Al-Wajh - Diesel,1
+Max trucks per day,Al-Wajh - Diesel,72
+Capacity,Duba - Diesel,150.95544
+Max fill,Duba - Diesel,0.995
+Min fill,Duba - Diesel,0.65
+Opening stock,Duba - Diesel,150.22961623
+Ready,Duba - Diesel,1
+Max trucks per day,Duba - Diesel,96
+Capacity,Duba Green - ASL,188.694
+Max fill,Duba Green - ASL,0.95
+Min fill,Duba Green - ASL,0.65
+Opening stock,Duba Green - ASL,127.5131153
+Ready,Duba Green - ASL,1
+Max trucks per day,Duba Green - ASL,72
+Capacity,Madinah PP2 - Diesel,44
+Max fill,Madinah PP2 - Diesel,0.95
+Min fill,Madinah PP2 - Diesel,0.65
+Opening stock,Madinah PP2 - Diesel,43.003349249
+Ready,Madinah PP2 - Diesel,1
+Max trucks per day,Madinah PP2 - Diesel,144
+Capacity,Makkah - Diesel,283.041
+Max fill,Makkah - Diesel,0.95
+Min fill,Makkah - Diesel,0.65
+Opening stock,Makkah - Diesel,266.435493041
+Ready,Makkah - Diesel,1
+Max trucks per day,Makkah - Diesel,240
+Capacity,Rabigh 2 - Diesel,68.4707628
+Max fill,Rabigh 2 - Diesel,0.95
+Min fill,Rabigh 2 - Diesel,0.85
+Opening stock,Rabigh 2 - Diesel,63.509148417
+Ready,Rabigh 2 - Diesel,1
+Max trucks per day,Rabigh 2 - Diesel,99999
+Capacity,Rabigh CC + Steam - Diesel,16.66797
+Max fill,Rabigh CC + Steam - Diesel,0.77
+Min fill,Rabigh CC + Steam - Diesel,0.5
+Opening stock,Rabigh CC + Steam - Diesel,12.726654404
+Ready,Rabigh CC + Steam - Diesel,1
+Max trucks per day,Rabigh CC + Steam - Diesel,99999
+Capacity,Rabigh IPP II - ASL,309.173194321
+Max fill,Rabigh IPP II - ASL,0.95
+Min fill,Rabigh IPP II - ASL,0.65
+Opening stock,Rabigh IPP II - ASL,217.8660924
+Ready,Rabigh IPP II - ASL,1
+Max trucks per day,Rabigh IPP II - ASL,0
+Capacity,Rabigh Steam - Diesel,15.7245
+Max fill,Rabigh Steam - Diesel,0
+Min fill,Rabigh Steam - Diesel,0.85
+Opening stock,Rabigh Steam - Diesel,14.458183561
+Ready,Rabigh Steam - Diesel,0
+Max trucks per day,Rabigh Steam - Diesel,99999
+Capacity,Taiba 1 - Diesel,277.9588416
+Max fill,Taiba 1 - Diesel,0
+Min fill,Taiba 1 - Diesel,0.85
+Opening stock,Taiba 1 - Diesel,222.9293814
+Ready,Taiba 1 - Diesel,0
+Max trucks per day,Taiba 1 - Diesel,99999

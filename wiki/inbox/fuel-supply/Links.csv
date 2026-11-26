@@ -1,0 +1,22 @@
+Cause,Effect,Polarity,Delay,Notes
+Stock optimal plan,Gap per day,-,,"The fuller the tank, the smaller the gap to close"
+Target stock,Gap per day,+,,
+Days left,Gap per day,-,,"More days left, a smaller daily share"
+Gap per day,Required MB,+,,
+Consumption forecast,Required MB,+,,
+Required MB,Trucks needed,+,,
+Trucks needed,Trucks planned,+,,
+Max trucks per day,Trucks planned,+,,Skid limit
+Trucks planned,Delivery optimal plan,+,,
+Max fill,Target stock,+,,
+Capacity,Target stock,+,,
+Current plan trucks,Delivery current plan,+,,
+Target stock,Shortage vs target,+,,
+Closing stock current,Shortage vs target,-,,
+Min fill,Below minimum,+,,
+Closing fill current,Below minimum,-,,
+Skid capacity,Max trucks per day,+,,"More unloading skids in service, more trucks per day (concept outside the model)"
+Plant tank limit,Max fill,+,,"Capacity, overflow, safety and security limits set by the plants (Stock_Limits)"
+Facility readiness,Ready,+,,Fuel receipt declined or unloading facilities not ready (Stock_Limits)
+Expired waybills,Delivery current plan,-,yes,Scheduled trucks that expire without loading
+Truck availability,Trucks planned,+,,

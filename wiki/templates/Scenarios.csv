@@ -1,0 +1,5 @@
+Scenario,Variable,Value
+Distancing,Contact Rate,3
+Masks,Infectivity,0.15
+Both,Contact Rate,3
+Both,Infectivity,0.15

@@ -1,0 +1,313 @@
+{
+  "title": "",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Water in tub",
+      "kind": "Stock",
+      "equation": "50",
+      "units": "Litre",
+      "comment": "The stock: what has built up.",
+      "pos": [
+        160.0,
+        320.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 8,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Tap setting",
+      "kind": "Constant",
+      "equation": "6",
+      "units": "Litre/Minute",
+      "comment": "Tap flow for the first ten minutes.",
+      "pos": [
+        140.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 8,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Drain rate",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "Litre/Minute",
+      "comment": "How fast the drain empties the tub.",
+      "pos": [
+        370.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 8,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Tap",
+      "kind": "Flow",
+      "equation": "IF THEN ELSE(TIME < 10, Tap setting, 2)",
+      "units": "Litre/Minute",
+      "comment": "Inflow: the tap runs at its setting for ten minutes, then is turned down to 2.",
+      "pos": [
+        30.0,
+        255.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 1,
+      "from_pt": [
+        -100.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 8,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Drain",
+      "kind": "Flow",
+      "equation": "Drain rate",
+      "units": "Litre/Minute",
+      "comment": "Outflow.",
+      "pos": [
+        290.0,
+        385.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 1,
+      "to": null,
+      "from_pt": [
+        460.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        450.0
+      ],
+      "view": 8,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 5,
+      "from": 2,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 7,
+      "from": 3,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 20.0,
+    "time_step": 0.25,
+    "time_units": "Minute",
+    "method": "Euler"
+  },
+  "next_id": 8,
+  "sheets": [
+    {
+      "id": 8,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "The bathtub",
+    "description": "A stock fed by one flow and drained by another.",
+    "levers": [
+      {
+        "name": "Tap setting",
+        "units": "Litre/Minute",
+        "min": 0.0,
+        "max": 10.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      },
+      {
+        "name": "Drain rate",
+        "units": "Litre/Minute",
+        "min": 0.0,
+        "max": 10.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      }
+    ],
+    "outputs": [
+      {
+        "variable": "Water in tub",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      }
+    ],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [
+      {
+        "name": "Water at the end",
+        "output": "Water in tub",
+        "measure": "final",
+        "direction": "min",
+        "policies": [],
+        "protected_ranking": false,
+        "transform": ""
+      },
+      {
+        "name": "Most water",
+        "output": "Water in tub",
+        "measure": "peak",
+        "direction": "min",
+        "policies": [],
+        "protected_ranking": false,
+        "transform": ""
+      }
+    ],
+    "reduced_from": ""
+  }
+}

@@ -1,0 +1,29 @@
+{UTF-8}
+{ Chapter 1: a warehouse is a bathtub. Deliveries come in, shipments go out; inventory is what has accumulated. }
+Average Flow=
+	100
+	~	cases/week
+	~	|
+Seasonal Swing=
+	50
+	~	cases/week
+	~	|
+Deliveries=
+	Average Flow + Seasonal Swing * SIN(2 * 3.14159 * Time / 52)
+	~	cases/week
+	~	Deliveries swing over the year, peaking in week 13.
+	|
+Shipments=
+	Average Flow + Seasonal Swing * SIN(2 * 3.14159 * (Time - 13) / 52)
+	~	cases/week
+	~	Shipments follow the same seasonal swing, 13 weeks later.
+	|
+Inventory= INTEG(
+	Deliveries - Shipments,
+	500)
+	~	cases
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 52 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |

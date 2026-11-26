@@ -1,0 +1,36 @@
+{UTF-8}
+{ Chapter 3: a team with steady hiring and a constant attrition fraction. The first-order stock that finds its own balance. }
+Planned Hiring=
+	10
+	~	people/month
+	~	Hires the budget allows each month.
+	|
+Hiring=
+	Planned Hiring
+	~	people/month
+	~	New staff joining each month.
+	|
+Attrition Fraction=
+	0.025
+	~	1/month
+	~	Share of staff leaving each month (2.5% a month, about 26% a year).
+	|
+Attrition=
+	Staff * Attrition Fraction
+	~	people/month
+	~	Staff leaving each month.
+	|
+Initial Staff=
+	100
+	~	people
+	~	|
+Staff= INTEG(
+	Hiring - Attrition,
+	Initial Staff)
+	~	people
+	~	People on the payroll.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 160 ~ month ~ |
+TIME STEP = 0.125 ~ month ~ |
+SAVEPER = 0.125 ~ month ~ |

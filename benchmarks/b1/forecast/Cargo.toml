@@ -1,0 +1,10 @@
+[package]
+name = "b1-forecast"
+version = "0.1.0"
+edition = "2021"
+
+# a separate workspace: the benchmark's forecaster is not part of the Dynamist build
+[workspace]
+
+[dependencies]
+augurs = { version = "0.10", features = ["ets"] }

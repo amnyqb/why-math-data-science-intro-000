@@ -1,0 +1,42 @@
+{UTF-8}
+{ Chapter 11: an emergency room. Patients arrive; a fixed team treats them. More arrive than leave for a while.
+  How long do people wait, and how many have waited too long? }
+Arrivals=
+	8 + STEP(4, 6) - STEP(4, 18)
+	~	patients/hour
+	~	Arrivals: 8 an hour, 12 an hour between hour 6 and hour 18 (a flu outbreak).
+	|
+Treatment capacity=
+	10
+	~	patients/hour
+	~	What the team can treat each hour.
+	|
+Treated=
+	MIN(Treatment capacity, Waiting / TIME STEP + Arrivals)
+	~	patients/hour
+	~	Treatment: full capacity, unless there is nobody left to treat.
+	|
+Waiting=
+	QUEUE(Arrivals, Treated, init=0)
+	~	patients
+	~	The waiting room: people leave oldest first.
+	|
+Average wait=
+	WAIT(Waiting)
+	~	hours
+	~	How long the people in the waiting room have waited, on average.
+	|
+Longest wait=
+	WAIT(Waiting, measure=oldest)
+	~	hours
+	~	How long the person who has waited longest has waited.
+	|
+Waiting over 2 hours=
+	WAIT(Waiting, measure=count, older_than=2)
+	~	patients
+	~	How many have waited more than 2 hours: the number a hospital reports.
+	|
+INITIAL TIME = 0 ~ hour ~ |
+FINAL TIME = 48 ~ hour ~ |
+TIME STEP = 0.25 ~ hour ~ |
+SAVEPER = 0.25 ~ hour ~ |

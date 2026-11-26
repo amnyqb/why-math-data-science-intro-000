@@ -1,0 +1,2440 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "Initial Population",
+      "kind": "Constant",
+      "equation": "15985",
+      "units": "",
+      "comment": "",
+      "pos": [
+        484.0,
+        350.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "Towns",
+      "by_item": [
+        {
+          "item": "Acton",
+          "equation": "21924",
+          "table": []
+        },
+        {
+          "item": "Acushnet",
+          "equation": "10303",
+          "table": []
+        },
+        {
+          "item": "Adams",
+          "equation": "8485",
+          "table": []
+        },
+        {
+          "item": "Agawam",
+          "equation": "28438",
+          "table": []
+        },
+        {
+          "item": "Alford",
+          "equation": "494",
+          "table": []
+        },
+        {
+          "item": "Amesbury",
+          "equation": "16283",
+          "table": []
+        },
+        {
+          "item": "Amherst",
+          "equation": "37819",
+          "table": []
+        },
+        {
+          "item": "Andover",
+          "equation": "33201",
+          "table": []
+        },
+        {
+          "item": "Aquinnah",
+          "equation": "311",
+          "table": []
+        },
+        {
+          "item": "Arlington",
+          "equation": "42844",
+          "table": []
+        },
+        {
+          "item": "Ashburnham",
+          "equation": "6081",
+          "table": []
+        },
+        {
+          "item": "Ashby",
+          "equation": "3074",
+          "table": []
+        },
+        {
+          "item": "Ashfield",
+          "equation": "1737",
+          "table": []
+        },
+        {
+          "item": "Ashland",
+          "equation": "16593",
+          "table": []
+        },
+        {
+          "item": "Athol",
+          "equation": "11584",
+          "table": []
+        },
+        {
+          "item": "Attleboro",
+          "equation": "43593",
+          "table": []
+        },
+        {
+          "item": "Auburn",
+          "equation": "16188",
+          "table": []
+        },
+        {
+          "item": "Avon",
+          "equation": "4356",
+          "table": []
+        },
+        {
+          "item": "Ayer",
+          "equation": "7427",
+          "table": []
+        },
+        {
+          "item": "Barnstable",
+          "equation": "45193",
+          "table": []
+        },
+        {
+          "item": "Barre",
+          "equation": "5398",
+          "table": []
+        },
+        {
+          "item": "Becket",
+          "equation": "1779",
+          "table": []
+        },
+        {
+          "item": "Bedford",
+          "equation": "13320",
+          "table": []
+        },
+        {
+          "item": "Belchertown",
+          "equation": "14649",
+          "table": []
+        },
+        {
+          "item": "Bellingham",
+          "equation": "16332",
+          "table": []
+        },
+        {
+          "item": "Belmont",
+          "equation": "24729",
+          "table": []
+        },
+        {
+          "item": "Berkley",
+          "equation": "6411",
+          "table": []
+        },
+        {
+          "item": "Berlin",
+          "equation": "2866",
+          "table": []
+        },
+        {
+          "item": "Bernardston",
+          "equation": "2129",
+          "table": []
+        },
+        {
+          "item": "Beverly",
+          "equation": "39502",
+          "table": []
+        },
+        {
+          "item": "Billerica",
+          "equation": "40243",
+          "table": []
+        },
+        {
+          "item": "Blackstone",
+          "equation": "9026",
+          "table": []
+        },
+        {
+          "item": "Blandford",
+          "equation": "1233",
+          "table": []
+        },
+        {
+          "item": "Bolton",
+          "equation": "4897",
+          "table": []
+        },
+        {
+          "item": "Boston",
+          "equation": "617660",
+          "table": []
+        },
+        {
+          "item": "Bourne",
+          "equation": "19754",
+          "table": []
+        },
+        {
+          "item": "Boxborough",
+          "equation": "4996",
+          "table": []
+        },
+        {
+          "item": "Boxford",
+          "equation": "7965",
+          "table": []
+        },
+        {
+          "item": "Boylston",
+          "equation": "4355",
+          "table": []
+        },
+        {
+          "item": "Braintree",
+          "equation": "35744",
+          "table": []
+        },
+        {
+          "item": "Brewster",
+          "equation": "9820",
+          "table": []
+        },
+        {
+          "item": "Bridgewater",
+          "equation": "26563",
+          "table": []
+        },
+        {
+          "item": "Brimfield",
+          "equation": "3609",
+          "table": []
+        },
+        {
+          "item": "Brockton",
+          "equation": "93810",
+          "table": []
+        },
+        {
+          "item": "Brookfield",
+          "equation": "3390",
+          "table": []
+        },
+        {
+          "item": "Brookline",
+          "equation": "58732",
+          "table": []
+        },
+        {
+          "item": "Buckland",
+          "equation": "1902",
+          "table": []
+        },
+        {
+          "item": "Burlington",
+          "equation": "24498",
+          "table": []
+        },
+        {
+          "item": "Cambridge",
+          "equation": "105162",
+          "table": []
+        },
+        {
+          "item": "Canton",
+          "equation": "21561",
+          "table": []
+        },
+        {
+          "item": "Carlisle",
+          "equation": "4852",
+          "table": []
+        },
+        {
+          "item": "Carver",
+          "equation": "11509",
+          "table": []
+        },
+        {
+          "item": "Charlemont",
+          "equation": "1266",
+          "table": []
+        },
+        {
+          "item": "Charlton",
+          "equation": "12981",
+          "table": []
+        },
+        {
+          "item": "Chatham",
+          "equation": "6125",
+          "table": []
+        },
+        {
+          "item": "Chelmsford",
+          "equation": "33802",
+          "table": []
+        },
+        {
+          "item": "Chelsea",
+          "equation": "35177",
+          "table": []
+        },
+        {
+          "item": "Cheshire",
+          "equation": "3235",
+          "table": []
+        },
+        {
+          "item": "Chester",
+          "equation": "1337",
+          "table": []
+        },
+        {
+          "item": "Chesterfield",
+          "equation": "1222",
+          "table": []
+        },
+        {
+          "item": "Chicopee",
+          "equation": "55298",
+          "table": []
+        },
+        {
+          "item": "Chilmark",
+          "equation": "866",
+          "table": []
+        },
+        {
+          "item": "Clarksburg",
+          "equation": "1702",
+          "table": []
+        },
+        {
+          "item": "Clinton",
+          "equation": "13606",
+          "table": []
+        },
+        {
+          "item": "Cohasset",
+          "equation": "7542",
+          "table": []
+        },
+        {
+          "item": "Colrain",
+          "equation": "1671",
+          "table": []
+        },
+        {
+          "item": "Concord",
+          "equation": "17668",
+          "table": []
+        },
+        {
+          "item": "Conway",
+          "equation": "1897",
+          "table": []
+        },
+        {
+          "item": "Cummington",
+          "equation": "872",
+          "table": []
+        },
+        {
+          "item": "Dalton",
+          "equation": "6756",
+          "table": []
+        },
+        {
+          "item": "Danvers",
+          "equation": "26493",
+          "table": []
+        },
+        {
+          "item": "Dartmouth",
+          "equation": "34032",
+          "table": []
+        },
+        {
+          "item": "Dedham",
+          "equation": "24729",
+          "table": []
+        },
+        {
+          "item": "Deerfield",
+          "equation": "5125",
+          "table": []
+        },
+        {
+          "item": "Dennis",
+          "equation": "14207",
+          "table": []
+        },
+        {
+          "item": "Dighton",
+          "equation": "7086",
+          "table": []
+        },
+        {
+          "item": "Douglas",
+          "equation": "8471",
+          "table": []
+        },
+        {
+          "item": "Dover",
+          "equation": "5589",
+          "table": []
+        },
+        {
+          "item": "Dracut",
+          "equation": "29457",
+          "table": []
+        },
+        {
+          "item": "Dudley",
+          "equation": "11390",
+          "table": []
+        },
+        {
+          "item": "Dunstable",
+          "equation": "3179",
+          "table": []
+        },
+        {
+          "item": "Duxbury",
+          "equation": "15059",
+          "table": []
+        },
+        {
+          "item": "East Bridgewater",
+          "equation": "13794",
+          "table": []
+        },
+        {
+          "item": "East Brookfield",
+          "equation": "2183",
+          "table": []
+        },
+        {
+          "item": "East Longmeadow",
+          "equation": "15720",
+          "table": []
+        },
+        {
+          "item": "Eastham",
+          "equation": "4956",
+          "table": []
+        },
+        {
+          "item": "Easthampton",
+          "equation": "16053",
+          "table": []
+        },
+        {
+          "item": "Easton",
+          "equation": "23112",
+          "table": []
+        },
+        {
+          "item": "Edgartown",
+          "equation": "4067",
+          "table": []
+        },
+        {
+          "item": "Egremont",
+          "equation": "1225",
+          "table": []
+        },
+        {
+          "item": "Erving",
+          "equation": "1800",
+          "table": []
+        },
+        {
+          "item": "Essex",
+          "equation": "3504",
+          "table": []
+        },
+        {
+          "item": "Everett",
+          "equation": "41667",
+          "table": []
+        },
+        {
+          "item": "Fairhaven",
+          "equation": "15873",
+          "table": []
+        },
+        {
+          "item": "Fall River",
+          "equation": "88857",
+          "table": []
+        },
+        {
+          "item": "Falmouth",
+          "equation": "31531",
+          "table": []
+        },
+        {
+          "item": "Fitchburg",
+          "equation": "40318",
+          "table": []
+        },
+        {
+          "item": "Florida",
+          "equation": "752",
+          "table": []
+        },
+        {
+          "item": "Foxborough",
+          "equation": "16865",
+          "table": []
+        },
+        {
+          "item": "Framingham",
+          "equation": "68318",
+          "table": []
+        },
+        {
+          "item": "Franklin",
+          "equation": "31635",
+          "table": []
+        },
+        {
+          "item": "Freetown",
+          "equation": "8870",
+          "table": []
+        },
+        {
+          "item": "Gardner",
+          "equation": "20228",
+          "table": []
+        },
+        {
+          "item": "Georgetown",
+          "equation": "8183",
+          "table": []
+        },
+        {
+          "item": "Gill",
+          "equation": "1500",
+          "table": []
+        },
+        {
+          "item": "Gloucester",
+          "equation": "28789",
+          "table": []
+        },
+        {
+          "item": "Goshen",
+          "equation": "1054",
+          "table": []
+        },
+        {
+          "item": "Gosnold",
+          "equation": "75",
+          "table": []
+        },
+        {
+          "item": "Grafton",
+          "equation": "17765",
+          "table": []
+        },
+        {
+          "item": "Granby",
+          "equation": "6240",
+          "table": []
+        },
+        {
+          "item": "Granville",
+          "equation": "1566",
+          "table": []
+        },
+        {
+          "item": "Great Barrington",
+          "equation": "7104",
+          "table": []
+        },
+        {
+          "item": "Greenfield",
+          "equation": "17456",
+          "table": []
+        },
+        {
+          "item": "Groton",
+          "equation": "10646",
+          "table": []
+        },
+        {
+          "item": "Groveland",
+          "equation": "6459",
+          "table": []
+        },
+        {
+          "item": "Hadley",
+          "equation": "5250",
+          "table": []
+        },
+        {
+          "item": "Halifax",
+          "equation": "7518",
+          "table": []
+        },
+        {
+          "item": "Hamilton",
+          "equation": "7764",
+          "table": []
+        },
+        {
+          "item": "Hampden",
+          "equation": "5139",
+          "table": []
+        },
+        {
+          "item": "Hancock",
+          "equation": "717",
+          "table": []
+        },
+        {
+          "item": "Hanover",
+          "equation": "13879",
+          "table": []
+        },
+        {
+          "item": "Hanson",
+          "equation": "10209",
+          "table": []
+        },
+        {
+          "item": "Hardwick",
+          "equation": "2990",
+          "table": []
+        },
+        {
+          "item": "Harvard",
+          "equation": "6520",
+          "table": []
+        },
+        {
+          "item": "Harwich",
+          "equation": "12243",
+          "table": []
+        },
+        {
+          "item": "Hatfield",
+          "equation": "3279",
+          "table": []
+        },
+        {
+          "item": "Haverhill",
+          "equation": "60879",
+          "table": []
+        },
+        {
+          "item": "Hawley",
+          "equation": "337",
+          "table": []
+        },
+        {
+          "item": "Heath",
+          "equation": "706",
+          "table": []
+        },
+        {
+          "item": "Hingham",
+          "equation": "22157",
+          "table": []
+        },
+        {
+          "item": "Hinsdale",
+          "equation": "2032",
+          "table": []
+        },
+        {
+          "item": "Holbrook",
+          "equation": "10791",
+          "table": []
+        },
+        {
+          "item": "Holden",
+          "equation": "17346",
+          "table": []
+        },
+        {
+          "item": "Holland",
+          "equation": "2481",
+          "table": []
+        },
+        {
+          "item": "Holliston",
+          "equation": "13547",
+          "table": []
+        },
+        {
+          "item": "Holyoke",
+          "equation": "39880",
+          "table": []
+        },
+        {
+          "item": "Hopedale",
+          "equation": "5911",
+          "table": []
+        },
+        {
+          "item": "Hopkinton",
+          "equation": "14925",
+          "table": []
+        },
+        {
+          "item": "Hubbardston",
+          "equation": "4382",
+          "table": []
+        },
+        {
+          "item": "Hudson",
+          "equation": "19063",
+          "table": []
+        },
+        {
+          "item": "Hull",
+          "equation": "10293",
+          "table": []
+        },
+        {
+          "item": "Huntington",
+          "equation": "2180",
+          "table": []
+        },
+        {
+          "item": "Ipswich",
+          "equation": "13175",
+          "table": []
+        },
+        {
+          "item": "Kingston",
+          "equation": "12629",
+          "table": []
+        },
+        {
+          "item": "Lakeville",
+          "equation": "10602",
+          "table": []
+        },
+        {
+          "item": "Lancaster",
+          "equation": "8055",
+          "table": []
+        },
+        {
+          "item": "Lanesborough",
+          "equation": "3091",
+          "table": []
+        },
+        {
+          "item": "Lawrence",
+          "equation": "76377",
+          "table": []
+        },
+        {
+          "item": "Lee",
+          "equation": "5943",
+          "table": []
+        },
+        {
+          "item": "Leicester",
+          "equation": "10970",
+          "table": []
+        },
+        {
+          "item": "Lenox",
+          "equation": "5025",
+          "table": []
+        },
+        {
+          "item": "Leominster",
+          "equation": "40759",
+          "table": []
+        },
+        {
+          "item": "Leverett",
+          "equation": "1851",
+          "table": []
+        },
+        {
+          "item": "Lexington",
+          "equation": "31394",
+          "table": []
+        },
+        {
+          "item": "Leyden",
+          "equation": "711",
+          "table": []
+        },
+        {
+          "item": "Lincoln",
+          "equation": "6362",
+          "table": []
+        },
+        {
+          "item": "Littleton",
+          "equation": "8924",
+          "table": []
+        },
+        {
+          "item": "Longmeadow",
+          "equation": "15784",
+          "table": []
+        },
+        {
+          "item": "Lowell",
+          "equation": "106519",
+          "table": []
+        },
+        {
+          "item": "Ludlow",
+          "equation": "21103",
+          "table": []
+        },
+        {
+          "item": "Lunenburg",
+          "equation": "10086",
+          "table": []
+        },
+        {
+          "item": "Lynn",
+          "equation": "90329",
+          "table": []
+        },
+        {
+          "item": "Lynnfield",
+          "equation": "11596",
+          "table": []
+        },
+        {
+          "item": "Malden",
+          "equation": "59450",
+          "table": []
+        },
+        {
+          "item": "Manchester by the Sea",
+          "equation": "5136",
+          "table": []
+        },
+        {
+          "item": "Mansfield",
+          "equation": "23184",
+          "table": []
+        },
+        {
+          "item": "Marblehead",
+          "equation": "19808",
+          "table": []
+        },
+        {
+          "item": "Marion",
+          "equation": "4907",
+          "table": []
+        },
+        {
+          "item": "Marlborough",
+          "equation": "38499",
+          "table": []
+        },
+        {
+          "item": "Marshfield",
+          "equation": "25132",
+          "table": []
+        },
+        {
+          "item": "Mashpee",
+          "equation": "14006",
+          "table": []
+        },
+        {
+          "item": "Mattapoisett",
+          "equation": "6045",
+          "table": []
+        },
+        {
+          "item": "Maynard",
+          "equation": "10106",
+          "table": []
+        },
+        {
+          "item": "Medfield",
+          "equation": "12024",
+          "table": []
+        },
+        {
+          "item": "Medford",
+          "equation": "56173",
+          "table": []
+        },
+        {
+          "item": "Medway",
+          "equation": "12752",
+          "table": []
+        },
+        {
+          "item": "Melrose",
+          "equation": "26983",
+          "table": []
+        },
+        {
+          "item": "Mendon",
+          "equation": "5839",
+          "table": []
+        },
+        {
+          "item": "Merrimac",
+          "equation": "6338",
+          "table": []
+        },
+        {
+          "item": "Methuen",
+          "equation": "47255",
+          "table": []
+        },
+        {
+          "item": "Middleborough",
+          "equation": "23116",
+          "table": []
+        },
+        {
+          "item": "Middlefield",
+          "equation": "521",
+          "table": []
+        },
+        {
+          "item": "Middleton",
+          "equation": "8987",
+          "table": []
+        },
+        {
+          "item": "Milford",
+          "equation": "27999",
+          "table": []
+        },
+        {
+          "item": "Millbury",
+          "equation": "13261",
+          "table": []
+        },
+        {
+          "item": "Millis",
+          "equation": "7891",
+          "table": []
+        },
+        {
+          "item": "Millville",
+          "equation": "3190",
+          "table": []
+        },
+        {
+          "item": "Milton",
+          "equation": "27003",
+          "table": []
+        },
+        {
+          "item": "Monroe",
+          "equation": "121",
+          "table": []
+        },
+        {
+          "item": "Monson",
+          "equation": "8560",
+          "table": []
+        },
+        {
+          "item": "Montague",
+          "equation": "8437",
+          "table": []
+        },
+        {
+          "item": "Monterey",
+          "equation": "961",
+          "table": []
+        },
+        {
+          "item": "Montgomery",
+          "equation": "838",
+          "table": []
+        },
+        {
+          "item": "Mount Washington",
+          "equation": "167",
+          "table": []
+        },
+        {
+          "item": "Nahant",
+          "equation": "3410",
+          "table": []
+        },
+        {
+          "item": "Nantucket",
+          "equation": "10172",
+          "table": []
+        },
+        {
+          "item": "Natick",
+          "equation": "33006",
+          "table": []
+        },
+        {
+          "item": "Needham",
+          "equation": "28886",
+          "table": []
+        },
+        {
+          "item": "New Ashford",
+          "equation": "228",
+          "table": []
+        },
+        {
+          "item": "New Bedford",
+          "equation": "95072",
+          "table": []
+        },
+        {
+          "item": "New Braintree",
+          "equation": "999",
+          "table": []
+        },
+        {
+          "item": "New Marlborough",
+          "equation": "1509",
+          "table": []
+        },
+        {
+          "item": "New Salem",
+          "equation": "990",
+          "table": []
+        },
+        {
+          "item": "Newbury",
+          "equation": "6666",
+          "table": []
+        },
+        {
+          "item": "Newburyport",
+          "equation": "17416",
+          "table": []
+        },
+        {
+          "item": "Newton",
+          "equation": "85146",
+          "table": []
+        },
+        {
+          "item": "Norfolk",
+          "equation": "11227",
+          "table": []
+        },
+        {
+          "item": "North Adams",
+          "equation": "13708",
+          "table": []
+        },
+        {
+          "item": "North Andover",
+          "equation": "28352",
+          "table": []
+        },
+        {
+          "item": "North Attleborough",
+          "equation": "28712",
+          "table": []
+        },
+        {
+          "item": "North Brookfield",
+          "equation": "4680",
+          "table": []
+        },
+        {
+          "item": "North Reading",
+          "equation": "14892",
+          "table": []
+        },
+        {
+          "item": "Northampton",
+          "equation": "28549",
+          "table": []
+        },
+        {
+          "item": "Northborough",
+          "equation": "14155",
+          "table": []
+        },
+        {
+          "item": "Northbridge",
+          "equation": "15707",
+          "table": []
+        },
+        {
+          "item": "Northfield",
+          "equation": "3032",
+          "table": []
+        },
+        {
+          "item": "Norton",
+          "equation": "19031",
+          "table": []
+        },
+        {
+          "item": "Norwell",
+          "equation": "10506",
+          "table": []
+        },
+        {
+          "item": "Norwood",
+          "equation": "28602",
+          "table": []
+        },
+        {
+          "item": "Oak Bluffs",
+          "equation": "4527",
+          "table": []
+        },
+        {
+          "item": "Oakham",
+          "equation": "1902",
+          "table": []
+        },
+        {
+          "item": "Orange",
+          "equation": "7839",
+          "table": []
+        },
+        {
+          "item": "Orleans",
+          "equation": "5890",
+          "table": []
+        },
+        {
+          "item": "Otis",
+          "equation": "1612",
+          "table": []
+        },
+        {
+          "item": "Oxford",
+          "equation": "13709",
+          "table": []
+        },
+        {
+          "item": "Palmer",
+          "equation": "12140",
+          "table": []
+        },
+        {
+          "item": "Paxton",
+          "equation": "4806",
+          "table": []
+        },
+        {
+          "item": "Peabody",
+          "equation": "51251",
+          "table": []
+        },
+        {
+          "item": "Pelham",
+          "equation": "1321",
+          "table": []
+        },
+        {
+          "item": "Pembroke",
+          "equation": "17837",
+          "table": []
+        },
+        {
+          "item": "Pepperell",
+          "equation": "11497",
+          "table": []
+        },
+        {
+          "item": "Peru",
+          "equation": "847",
+          "table": []
+        },
+        {
+          "item": "Petersham",
+          "equation": "1234",
+          "table": []
+        },
+        {
+          "item": "Phillipston",
+          "equation": "1682",
+          "table": []
+        },
+        {
+          "item": "Pittsfield",
+          "equation": "44737",
+          "table": []
+        },
+        {
+          "item": "Plainfield",
+          "equation": "648",
+          "table": []
+        },
+        {
+          "item": "Plainville",
+          "equation": "8264",
+          "table": []
+        },
+        {
+          "item": "Plymouth",
+          "equation": "56468",
+          "table": []
+        },
+        {
+          "item": "Plympton",
+          "equation": "2820",
+          "table": []
+        },
+        {
+          "item": "Princeton",
+          "equation": "3413",
+          "table": []
+        },
+        {
+          "item": "Provincetown",
+          "equation": "2942",
+          "table": []
+        },
+        {
+          "item": "Quincy",
+          "equation": "92271",
+          "table": []
+        },
+        {
+          "item": "Randolph",
+          "equation": "32112",
+          "table": []
+        },
+        {
+          "item": "Raynham",
+          "equation": "13383",
+          "table": []
+        },
+        {
+          "item": "Reading",
+          "equation": "24747",
+          "table": []
+        },
+        {
+          "item": "Rehoboth",
+          "equation": "11608",
+          "table": []
+        },
+        {
+          "item": "Revere",
+          "equation": "51755",
+          "table": []
+        },
+        {
+          "item": "Richmond",
+          "equation": "1475",
+          "table": []
+        },
+        {
+          "item": "Rochester",
+          "equation": "5232",
+          "table": []
+        },
+        {
+          "item": "Rockland",
+          "equation": "17489",
+          "table": []
+        },
+        {
+          "item": "Rockport",
+          "equation": "6952",
+          "table": []
+        },
+        {
+          "item": "Rowe",
+          "equation": "393",
+          "table": []
+        },
+        {
+          "item": "Rowley",
+          "equation": "5856",
+          "table": []
+        },
+        {
+          "item": "Royalston",
+          "equation": "1258",
+          "table": []
+        },
+        {
+          "item": "Russell",
+          "equation": "1775",
+          "table": []
+        },
+        {
+          "item": "Rutland",
+          "equation": "7973",
+          "table": []
+        },
+        {
+          "item": "Salem",
+          "equation": "41340",
+          "table": []
+        },
+        {
+          "item": "Salisbury",
+          "equation": "8283",
+          "table": []
+        },
+        {
+          "item": "Sandisfield",
+          "equation": "915",
+          "table": []
+        },
+        {
+          "item": "Sandwich",
+          "equation": "20675",
+          "table": []
+        },
+        {
+          "item": "Saugus",
+          "equation": "26628",
+          "table": []
+        },
+        {
+          "item": "Savoy",
+          "equation": "692",
+          "table": []
+        },
+        {
+          "item": "Scituate",
+          "equation": "18133",
+          "table": []
+        },
+        {
+          "item": "Seekonk",
+          "equation": "13722",
+          "table": []
+        },
+        {
+          "item": "Sharon",
+          "equation": "17612",
+          "table": []
+        },
+        {
+          "item": "Sheffield",
+          "equation": "3257",
+          "table": []
+        },
+        {
+          "item": "Shelburne",
+          "equation": "1893",
+          "table": []
+        },
+        {
+          "item": "Sherborn",
+          "equation": "4119",
+          "table": []
+        },
+        {
+          "item": "Shirley",
+          "equation": "7211",
+          "table": []
+        },
+        {
+          "item": "Shrewsbury",
+          "equation": "35608",
+          "table": []
+        },
+        {
+          "item": "Shutesbury",
+          "equation": "1771",
+          "table": []
+        },
+        {
+          "item": "Somerset",
+          "equation": "18165",
+          "table": []
+        },
+        {
+          "item": "Somerville",
+          "equation": "75754",
+          "table": []
+        },
+        {
+          "item": "South Hadley",
+          "equation": "17514",
+          "table": []
+        },
+        {
+          "item": "Southampton",
+          "equation": "5792",
+          "table": []
+        },
+        {
+          "item": "Southborough",
+          "equation": "9767",
+          "table": []
+        },
+        {
+          "item": "Southbridge",
+          "equation": "16719",
+          "table": []
+        },
+        {
+          "item": "Southwick",
+          "equation": "9502",
+          "table": []
+        },
+        {
+          "item": "Spencer",
+          "equation": "11688",
+          "table": []
+        },
+        {
+          "item": "Springfield",
+          "equation": "153060",
+          "table": []
+        },
+        {
+          "item": "Sterling",
+          "equation": "7808",
+          "table": []
+        },
+        {
+          "item": "Stockbridge",
+          "equation": "1947",
+          "table": []
+        },
+        {
+          "item": "Stoneham",
+          "equation": "21437",
+          "table": []
+        },
+        {
+          "item": "Stoughton",
+          "equation": "26962",
+          "table": []
+        },
+        {
+          "item": "Stow",
+          "equation": "6590",
+          "table": []
+        },
+        {
+          "item": "Sturbridge",
+          "equation": "9268",
+          "table": []
+        },
+        {
+          "item": "Sudbury",
+          "equation": "17659",
+          "table": []
+        },
+        {
+          "item": "Sunderland",
+          "equation": "3684",
+          "table": []
+        },
+        {
+          "item": "Sutton",
+          "equation": "8963",
+          "table": []
+        },
+        {
+          "item": "Swampscott",
+          "equation": "13787",
+          "table": []
+        },
+        {
+          "item": "Swansea",
+          "equation": "15865",
+          "table": []
+        },
+        {
+          "item": "Taunton",
+          "equation": "55874",
+          "table": []
+        },
+        {
+          "item": "Templeton",
+          "equation": "8013",
+          "table": []
+        },
+        {
+          "item": "Tewksbury",
+          "equation": "28961",
+          "table": []
+        },
+        {
+          "item": "Tisbury",
+          "equation": "3949",
+          "table": []
+        },
+        {
+          "item": "Tolland",
+          "equation": "485",
+          "table": []
+        },
+        {
+          "item": "Topsfield",
+          "equation": "6085",
+          "table": []
+        },
+        {
+          "item": "Townsend",
+          "equation": "8926",
+          "table": []
+        },
+        {
+          "item": "Truro",
+          "equation": "2003",
+          "table": []
+        },
+        {
+          "item": "Tyngsborough",
+          "equation": "11292",
+          "table": []
+        },
+        {
+          "item": "Tyringham",
+          "equation": "327",
+          "table": []
+        },
+        {
+          "item": "Upton",
+          "equation": "7542",
+          "table": []
+        },
+        {
+          "item": "Uxbridge",
+          "equation": "13457",
+          "table": []
+        },
+        {
+          "item": "Wakefield",
+          "equation": "24932",
+          "table": []
+        },
+        {
+          "item": "Wales",
+          "equation": "1838",
+          "table": []
+        },
+        {
+          "item": "Walpole",
+          "equation": "24070",
+          "table": []
+        },
+        {
+          "item": "Waltham",
+          "equation": "60632",
+          "table": []
+        },
+        {
+          "item": "Ware",
+          "equation": "9872",
+          "table": []
+        },
+        {
+          "item": "Wareham",
+          "equation": "21822",
+          "table": []
+        },
+        {
+          "item": "Warren",
+          "equation": "5135",
+          "table": []
+        },
+        {
+          "item": "Warwick",
+          "equation": "780",
+          "table": []
+        },
+        {
+          "item": "Washington",
+          "equation": "538",
+          "table": []
+        },
+        {
+          "item": "Watertown",
+          "equation": "31915",
+          "table": []
+        },
+        {
+          "item": "Wayland",
+          "equation": "12994",
+          "table": []
+        },
+        {
+          "item": "Webster",
+          "equation": "16767",
+          "table": []
+        },
+        {
+          "item": "Wellesley",
+          "equation": "27982",
+          "table": []
+        },
+        {
+          "item": "Wellfleet",
+          "equation": "2750",
+          "table": []
+        },
+        {
+          "item": "Wendell",
+          "equation": "848",
+          "table": []
+        },
+        {
+          "item": "Wenham",
+          "equation": "4875",
+          "table": []
+        },
+        {
+          "item": "West Boylston",
+          "equation": "7669",
+          "table": []
+        },
+        {
+          "item": "West Bridgewater",
+          "equation": "6916",
+          "table": []
+        },
+        {
+          "item": "West Brookfield",
+          "equation": "3701",
+          "table": []
+        },
+        {
+          "item": "West Newbury",
+          "equation": "4235",
+          "table": []
+        },
+        {
+          "item": "West Springfield",
+          "equation": "28391",
+          "table": []
+        },
+        {
+          "item": "West Stockbridge",
+          "equation": "1306",
+          "table": []
+        },
+        {
+          "item": "West Tisbury",
+          "equation": "2740",
+          "table": []
+        },
+        {
+          "item": "Westborough",
+          "equation": "18272",
+          "table": []
+        },
+        {
+          "item": "Westfield",
+          "equation": "41094",
+          "table": []
+        },
+        {
+          "item": "Westford",
+          "equation": "21951",
+          "table": []
+        },
+        {
+          "item": "Westhampton",
+          "equation": "1607",
+          "table": []
+        },
+        {
+          "item": "Westminster",
+          "equation": "7277",
+          "table": []
+        },
+        {
+          "item": "Weston",
+          "equation": "11261",
+          "table": []
+        },
+        {
+          "item": "Westport",
+          "equation": "15532",
+          "table": []
+        },
+        {
+          "item": "Westwood",
+          "equation": "14618",
+          "table": []
+        },
+        {
+          "item": "Weymouth",
+          "equation": "53743",
+          "table": []
+        },
+        {
+          "item": "Whately",
+          "equation": "1496",
+          "table": []
+        },
+        {
+          "item": "Whitman",
+          "equation": "14489",
+          "table": []
+        },
+        {
+          "item": "Wilbraham",
+          "equation": "14219",
+          "table": []
+        },
+        {
+          "item": "Williamsburg",
+          "equation": "2482",
+          "table": []
+        },
+        {
+          "item": "Williamstown",
+          "equation": "7754",
+          "table": []
+        },
+        {
+          "item": "Wilmington",
+          "equation": "22325",
+          "table": []
+        },
+        {
+          "item": "Winchendon",
+          "equation": "10300",
+          "table": []
+        },
+        {
+          "item": "Winchester",
+          "equation": "21374",
+          "table": []
+        },
+        {
+          "item": "Windsor",
+          "equation": "899",
+          "table": []
+        },
+        {
+          "item": "Winthrop",
+          "equation": "17497",
+          "table": []
+        },
+        {
+          "item": "Woburn",
+          "equation": "38120",
+          "table": []
+        },
+        {
+          "item": "Worcester",
+          "equation": "181045",
+          "table": []
+        },
+        {
+          "item": "Worthington",
+          "equation": "1156",
+          "table": []
+        },
+        {
+          "item": "Wrentham",
+          "equation": "10955",
+          "table": []
+        },
+        {
+          "item": "Yarmouth",
+          "equation": "23793",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Deaths",
+      "kind": "Flow",
+      "equation": "DELAYMTR(Births, Lifespan, 8, Population/Lifespan)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        608.0,
+        276.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 4,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        708.0,
+        276.0
+      ],
+      "view": 0,
+      "set": "Towns",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Population",
+      "kind": "Stock",
+      "equation": "Initial Population",
+      "units": "",
+      "comment": "",
+      "pos": [
+        488.0,
+        276.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "Towns",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Birthrate",
+      "kind": "Constant",
+      "equation": "0.1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        339.0,
+        218.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "Towns",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Births",
+      "kind": "Flow",
+      "equation": "Birthrate*Population",
+      "units": "",
+      "comment": "",
+      "pos": [
+        368.0,
+        276.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 4,
+      "from_pt": [
+        268.0,
+        276.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "Towns",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Lifespan",
+      "kind": "Constant",
+      "equation": "70",
+      "units": "",
+      "comment": "",
+      "pos": [
+        629.0,
+        221.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 8,
+      "from": 4,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 4,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 5,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 6,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 7,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 2,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 20.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 13,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "Towns",
+      "items": [
+        "Abington",
+        "Acton",
+        "Acushnet",
+        "Adams",
+        "Agawam",
+        "Alford",
+        "Amesbury",
+        "Amherst",
+        "Andover",
+        "Aquinnah",
+        "Arlington",
+        "Ashburnham",
+        "Ashby",
+        "Ashfield",
+        "Ashland",
+        "Athol",
+        "Attleboro",
+        "Auburn",
+        "Avon",
+        "Ayer",
+        "Barnstable",
+        "Barre",
+        "Becket",
+        "Bedford",
+        "Belchertown",
+        "Bellingham",
+        "Belmont",
+        "Berkley",
+        "Berlin",
+        "Bernardston",
+        "Beverly",
+        "Billerica",
+        "Blackstone",
+        "Blandford",
+        "Bolton",
+        "Boston",
+        "Bourne",
+        "Boxborough",
+        "Boxford",
+        "Boylston",
+        "Braintree",
+        "Brewster",
+        "Bridgewater",
+        "Brimfield",
+        "Brockton",
+        "Brookfield",
+        "Brookline",
+        "Buckland",
+        "Burlington",
+        "Cambridge",
+        "Canton",
+        "Carlisle",
+        "Carver",
+        "Charlemont",
+        "Charlton",
+        "Chatham",
+        "Chelmsford",
+        "Chelsea",
+        "Cheshire",
+        "Chester",
+        "Chesterfield",
+        "Chicopee",
+        "Chilmark",
+        "Clarksburg",
+        "Clinton",
+        "Cohasset",
+        "Colrain",
+        "Concord",
+        "Conway",
+        "Cummington",
+        "Dalton",
+        "Danvers",
+        "Dartmouth",
+        "Dedham",
+        "Deerfield",
+        "Dennis",
+        "Dighton",
+        "Douglas",
+        "Dover",
+        "Dracut",
+        "Dudley",
+        "Dunstable",
+        "Duxbury",
+        "East Bridgewater",
+        "East Brookfield",
+        "East Longmeadow",
+        "Eastham",
+        "Easthampton",
+        "Easton",
+        "Edgartown",
+        "Egremont",
+        "Erving",
+        "Essex",
+        "Everett",
+        "Fairhaven",
+        "Fall River",
+        "Falmouth",
+        "Fitchburg",
+        "Florida",
+        "Foxborough",
+        "Framingham",
+        "Franklin",
+        "Freetown",
+        "Gardner",
+        "Georgetown",
+        "Gill",
+        "Gloucester",
+        "Goshen",
+        "Gosnold",
+        "Grafton",
+        "Granby",
+        "Granville",
+        "Great Barrington",
+        "Greenfield",
+        "Groton",
+        "Groveland",
+        "Hadley",
+        "Halifax",
+        "Hamilton",
+        "Hampden",
+        "Hancock",
+        "Hanover",
+        "Hanson",
+        "Hardwick",
+        "Harvard",
+        "Harwich",
+        "Hatfield",
+        "Haverhill",
+        "Hawley",
+        "Heath",
+        "Hingham",
+        "Hinsdale",
+        "Holbrook",
+        "Holden",
+        "Holland",
+        "Holliston",
+        "Holyoke",
+        "Hopedale",
+        "Hopkinton",
+        "Hubbardston",
+        "Hudson",
+        "Hull",
+        "Huntington",
+        "Ipswich",
+        "Kingston",
+        "Lakeville",
+        "Lancaster",
+        "Lanesborough",
+        "Lawrence",
+        "Lee",
+        "Leicester",
+        "Lenox",
+        "Leominster",
+        "Leverett",
+        "Lexington",
+        "Leyden",
+        "Lincoln",
+        "Littleton",
+        "Longmeadow",
+        "Lowell",
+        "Ludlow",
+        "Lunenburg",
+        "Lynn",
+        "Lynnfield",
+        "Malden",
+        "Manchester by the Sea",
+        "Mansfield",
+        "Marblehead",
+        "Marion",
+        "Marlborough",
+        "Marshfield",
+        "Mashpee",
+        "Mattapoisett",
+        "Maynard",
+        "Medfield",
+        "Medford",
+        "Medway",
+        "Melrose",
+        "Mendon",
+        "Merrimac",
+        "Methuen",
+        "Middleborough",
+        "Middlefield",
+        "Middleton",
+        "Milford",
+        "Millbury",
+        "Millis",
+        "Millville",
+        "Milton",
+        "Monroe",
+        "Monson",
+        "Montague",
+        "Monterey",
+        "Montgomery",
+        "Mount Washington",
+        "Nahant",
+        "Nantucket",
+        "Natick",
+        "Needham",
+        "New Ashford",
+        "New Bedford",
+        "New Braintree",
+        "New Marlborough",
+        "New Salem",
+        "Newbury",
+        "Newburyport",
+        "Newton",
+        "Norfolk",
+        "North Adams",
+        "North Andover",
+        "North Attleborough",
+        "North Brookfield",
+        "North Reading",
+        "Northampton",
+        "Northborough",
+        "Northbridge",
+        "Northfield",
+        "Norton",
+        "Norwell",
+        "Norwood",
+        "Oak Bluffs",
+        "Oakham",
+        "Orange",
+        "Orleans",
+        "Otis",
+        "Oxford",
+        "Palmer",
+        "Paxton",
+        "Peabody",
+        "Pelham",
+        "Pembroke",
+        "Pepperell",
+        "Peru",
+        "Petersham",
+        "Phillipston",
+        "Pittsfield",
+        "Plainfield",
+        "Plainville",
+        "Plymouth",
+        "Plympton",
+        "Princeton",
+        "Provincetown",
+        "Quincy",
+        "Randolph",
+        "Raynham",
+        "Reading",
+        "Rehoboth",
+        "Revere",
+        "Richmond",
+        "Rochester",
+        "Rockland",
+        "Rockport",
+        "Rowe",
+        "Rowley",
+        "Royalston",
+        "Russell",
+        "Rutland",
+        "Salem",
+        "Salisbury",
+        "Sandisfield",
+        "Sandwich",
+        "Saugus",
+        "Savoy",
+        "Scituate",
+        "Seekonk",
+        "Sharon",
+        "Sheffield",
+        "Shelburne",
+        "Sherborn",
+        "Shirley",
+        "Shrewsbury",
+        "Shutesbury",
+        "Somerset",
+        "Somerville",
+        "South Hadley",
+        "Southampton",
+        "Southborough",
+        "Southbridge",
+        "Southwick",
+        "Spencer",
+        "Springfield",
+        "Sterling",
+        "Stockbridge",
+        "Stoneham",
+        "Stoughton",
+        "Stow",
+        "Sturbridge",
+        "Sudbury",
+        "Sunderland",
+        "Sutton",
+        "Swampscott",
+        "Swansea",
+        "Taunton",
+        "Templeton",
+        "Tewksbury",
+        "Tisbury",
+        "Tolland",
+        "Topsfield",
+        "Townsend",
+        "Truro",
+        "Tyngsborough",
+        "Tyringham",
+        "Upton",
+        "Uxbridge",
+        "Wakefield",
+        "Wales",
+        "Walpole",
+        "Waltham",
+        "Ware",
+        "Wareham",
+        "Warren",
+        "Warwick",
+        "Washington",
+        "Watertown",
+        "Wayland",
+        "Webster",
+        "Wellesley",
+        "Wellfleet",
+        "Wendell",
+        "Wenham",
+        "West Boylston",
+        "West Bridgewater",
+        "West Brookfield",
+        "West Newbury",
+        "West Springfield",
+        "West Stockbridge",
+        "West Tisbury",
+        "Westborough",
+        "Westfield",
+        "Westford",
+        "Westhampton",
+        "Westminster",
+        "Weston",
+        "Westport",
+        "Westwood",
+        "Weymouth",
+        "Whately",
+        "Whitman",
+        "Wilbraham",
+        "Williamsburg",
+        "Williamstown",
+        "Wilmington",
+        "Winchendon",
+        "Winchester",
+        "Windsor",
+        "Winthrop",
+        "Woburn",
+        "Worcester",
+        "Worthington",
+        "Wrentham",
+        "Yarmouth"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

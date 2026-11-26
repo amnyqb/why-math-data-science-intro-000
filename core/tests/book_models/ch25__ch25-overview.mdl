@@ -1,0 +1,125 @@
+{UTF-8}
+{ Chapter 25 overview: the service firm with constants and minor auxiliaries folded into the equations, for the stock and flow figure only. }
+Customers= INTEG(Referrals - Customer Losses, 2000)
+	~	customers
+	~	Active customers.
+	|
+Referrals=
+	Customers * (0.07) * Attractiveness * (1 - Customers / (20000))
+	~	customers/month
+	~	Word of mouth: customers bring customers while the market is not yet served.
+	|
+Customer Losses=
+	Customers * (0.02) / MAX(0.2, Attractiveness)
+	~	customers/month
+	~	Churn rises as attractiveness falls.
+	|
+Customer Requests=
+	Customers * (0.5)
+	~	jobs/month
+	~	
+	|
+Rework Returns=
+	Completions * (1 - Quality) * (0.5)
+	~	jobs/month
+	~	Faulty jobs sent back are redone free of charge.
+	|
+Backlog= INTEG(Customer Requests + Rework Returns - Completions, 500)
+	~	jobs
+	~	
+	|
+Effective Staff=
+	MAX(0, Veterans + Rookies * ((0.5) - (0.1)))
+	~	person
+	~	
+	|
+Work Pressure=
+	XIDZ((Backlog / (0.5)), (Effective Staff * (160) / Standard Time per Job), 2)
+	~	dmnl
+	~	
+	|
+Actual Time per Job=
+	Standard Time per Job * (MIN(1.2, MAX(0.7, 1 - (0.3) * (Work Pressure - 1))))
+	~	hours/job
+	~	
+	|
+Capacity=
+	Effective Staff * (160) / Actual Time per Job
+	~	jobs/month
+	~	
+	|
+Completions=
+	MIN(Capacity, Backlog / (0.25))
+	~	jobs/month
+	~	
+	|
+Quality=
+	MIN(1, (Actual Time per Job / (8)) ^ (1.5))
+	~	dmnl
+	~	Fraction of jobs done right first time.
+	|
+Standard Change=
+	((MIN((8), (0) * (8) + (1 - (0)) * Actual Time per Job)) - Standard Time per Job) / IF THEN ELSE((MIN((8), (0) * (8) + (1 - (0)) * Actual Time per Job)) < Standard Time per Job, (6), (24))
+	~	hours/job/month
+	~	
+	|
+Standard Time per Job= INTEG(Standard Change, 8)
+	~	hours/job
+	~	The norm used for planning staff.
+	|
+Desired Effective Staff=
+	(MAX(0, (MAX(0, (SMOOTH(Customer Requests + Rework Returns, (3))) * (1 + (XIDZ(Customer Requests + Rework Returns - (SMOOTH(Customer Requests + Rework Returns, (3))), (SMOOTH(Customer Requests + Rework Returns, (3))) * (3), 0)) * (0)))) + (Backlog - (MAX(0, (SMOOTH(Customer Requests + Rework Returns, (3))) * (1 + (XIDZ(Customer Requests + Rework Returns - (SMOOTH(Customer Requests + Rework Returns, (3))), (SMOOTH(Customer Requests + Rework Returns, (3))) * (3), 0)) * (0)))) * (0.5)) / (6))) * Standard Time per Job / (160) * (1 + (0))
+	~	person
+	~	
+	|
+Veteran Attrition=
+	Veterans / (36)
+	~	person/month
+	~	
+	|
+Rookie Quits=
+	Rookies / (24)
+	~	person/month
+	~	
+	|
+Hiring=
+	MAX(0, Veteran Attrition + Rookie Quits + (Desired Effective Staff - Effective Staff) / (3))
+	~	person/month
+	~	Replaces leavers and closes the gap in effective staff; ignores rookies still assimilating.
+	|
+Assimilation=
+	Rookies / ((6) * MIN(2, MAX(1, 1 + (1) * (Work Pressure - 1))))
+	~	person/month
+	~	
+	|
+Rookies= INTEG(Hiring - Assimilation - Rookie Quits, 8)
+	~	person
+	~	
+	|
+Veterans= INTEG(Assimilation - Veteran Attrition, 47)
+	~	person
+	~	
+	|
+Attractiveness=
+	((SMOOTH(Quality, 3)) ^ (1)) * (MIN(1.2, MAX(0.3, ((0.5) / (SMOOTH((XIDZ(Backlog, Completions, (0.5))), 2))) ^ 0.5))) * (((400) / (400)) ^ (-(1.5)))
+	~	dmnl
+	~	
+	|
+Revenue=
+	(Completions - Rework Returns) * (400)
+	~	$/month
+	~	Rework is not billed.
+	|
+Cash= INTEG(Revenue - Costs, 500000)
+	~	$
+	~	
+	|
+Costs=
+	((Rookies + Veterans) * (6000)) + (Hiring * (10000)) + (40000)
+	~	$/month
+	~	Wages, hiring and fixed costs.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 180 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

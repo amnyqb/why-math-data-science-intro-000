@@ -1,0 +1,101 @@
+{UTF-8}
+Base Demand=
+	100
+	~	cases/week
+	~	Customer demand before the step.
+	|
+
+Step Height=
+	20
+	~	cases/week
+	~	Permanent rise in customer demand.
+	|
+
+Step Time=
+	5
+	~	week
+	~	Week the rise happens.
+	|
+
+Customer Demand=
+	Base Demand + STEP(Step Height, Step Time)
+	~	cases/week
+	~	Orders from the next stage down (or consumers).
+	|
+
+Desired Inventory=
+	400
+	~	cases
+	~	Net inventory the stage aims to hold.
+	|
+
+Supply Delay=
+	4
+	~	week
+	~	Average time from order to receipt.
+	|
+
+Adjustment Time=
+	4
+	~	week
+	~	Time over which gaps are corrected.
+	|
+
+Supply Line Weight=
+	0.34
+	~	dmnl
+	~	Fraction of the supply line gap counted (beta).
+	|
+
+Expectation Time=
+	2
+	~	week
+	~	Smoothing time for expected demand.
+	|
+
+Expected Demand=
+	SMOOTH(Customer Demand, Expectation Time)
+	~	cases/week
+	~	Demand the stage expects.
+	|
+
+Net Inventory=
+	INTEG(Arrivals - Shipments, 400)
+	~	cases
+	~	Inventory minus backlog.
+	|
+
+Shipments=
+	Customer Demand
+	~	cases/week
+	~	Shipments equal incoming orders (negative net inventory is backlog).
+	|
+
+Arrivals=
+	DELAY3(Orders, Supply Delay)
+	~	cases/week
+	~	Goods received.
+	|
+
+Supply Line=
+	INTEG(Orders - Arrivals, 400)
+	~	cases
+	~	Goods ordered but not yet received.
+	|
+
+Desired Supply Line=
+	Supply Delay * Expected Demand
+	~	cases
+	~	Supply line needed to receive expected demand.
+	|
+
+Orders=
+	MAX(0, Expected Demand + (Desired Inventory - Net Inventory + Supply Line Weight * (Desired Supply Line - Supply Line)) / Adjustment Time)
+	~	cases/week
+	~	Anchoring and adjustment ordering rule.
+	|
+
+FINAL TIME = 60 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |

@@ -1,0 +1,58 @@
+{UTF-8}
+{ Chapter 3: a warehouse that orders to close the gap to its target. With and without replacing expected shipments. }
+Base Shipments=
+	100
+	~	cases/day
+	~	|
+Shipment Increase=
+	20
+	~	cases/day
+	~	Rise in shipments from day 30.
+	|
+Shipments=
+	Base Shipments + STEP(Shipment Increase, 30)
+	~	cases/day
+	~	Cases shipped to customers each day.
+	|
+Averaging Time=
+	3
+	~	day
+	~	Time over which the planner averages recent shipments.
+	|
+Expected Shipments=
+	SMOOTH(Shipments, Averaging Time)
+	~	cases/day
+	~	The planner's estimate of the shipment rate.
+	|
+Replace Shipments=
+	1
+	~	dmnl
+	~	1: receipts replace expected shipments; 0: receipts only close the gap.
+	|
+Target Inventory=
+	800
+	~	cases
+	~	|
+Adjustment Time=
+	5
+	~	day
+	~	Time to close a gap between target and inventory.
+	|
+Inventory Gap=
+	Target Inventory - Inventory
+	~	cases
+	~	|
+Receipts=
+	MAX(0, Replace Shipments * Expected Shipments + Inventory Gap / Adjustment Time)
+	~	cases/day
+	~	Cases received each day (supplier delivers at once).
+	|
+Inventory= INTEG(
+	Receipts - Shipments,
+	800)
+	~	cases
+	~	|
+INITIAL TIME = 0 ~ day ~ |
+FINAL TIME = 60 ~ day ~ |
+TIME STEP = 0.0625 ~ day ~ |
+SAVEPER = 0.0625 ~ day ~ |

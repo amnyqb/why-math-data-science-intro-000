@@ -1,0 +1,13 @@
+Cause,Effect,Polarity,Delay,Notes
+Contact Rate,Infection Rate,+,,
+Infectivity,Infection Rate,+,,
+Susceptible,Infection Rate,+,,
+Fraction Infected,Infection Rate,+,,
+Effect of Awareness,Infection Rate,,,
+Infected,Recovery Rate,+,,
+Illness Duration,Recovery Rate,-,,
+Susceptible,Total Population,,,
+Infected,Total Population,,,
+Recovered,Total Population,,,
+Infected,Fraction Infected,+,,
+Total Population,Fraction Infected,-,,

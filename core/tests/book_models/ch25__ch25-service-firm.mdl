@@ -1,0 +1,393 @@
+{UTF-8}
+{ Chapter 25: an integrated service firm. Illustrative parameters, not data from a real firm. }
+Market Size=
+	20000
+	~	customers
+	~	Customers the firm could ever serve in its region.
+	|
+Referral Rate=
+	0.07
+	~	1/month
+	~	New customers won per existing customer per month, at full attractiveness and an empty market.
+	|
+Base Churn=
+	0.02
+	~	1/month
+	~	Fraction of customers lost per month when service is as expected.
+	|
+Customers= INTEG(Referrals - Customer Losses, 2000)
+	~	customers
+	~	Active customers.
+	|
+Referrals=
+	Customers * Referral Rate * Attractiveness * (1 - Customers / Market Size)
+	~	customers/month
+	~	Word of mouth: customers bring customers while the market is not yet served.
+	|
+Customer Losses=
+	Customers * Base Churn / MAX(0.2, Attractiveness)
+	~	customers/month
+	~	Churn rises as attractiveness falls.
+	|
+Requests per Customer=
+	0.5
+	~	jobs/customer/month
+	~	
+	|
+Customer Requests=
+	Customers * Requests per Customer
+	~	jobs/month
+	~	
+	|
+Rework Share=
+	0.5
+	~	dmnl
+	~	Share of faulty jobs that customers send back.
+	|
+Rework Returns=
+	Completions * (1 - Quality) * Rework Share
+	~	jobs/month
+	~	Faulty jobs sent back are redone free of charge.
+	|
+Backlog= INTEG(Customer Requests + Rework Returns - Completions, 500)
+	~	jobs
+	~	
+	|
+Target Delivery Time=
+	0.5
+	~	month
+	~	
+	|
+Desired Completions=
+	Backlog / Target Delivery Time
+	~	jobs/month
+	~	
+	|
+Hours per Person=
+	160
+	~	hours/person/month
+	~	
+	|
+Rookie Productivity=
+	0.5
+	~	dmnl
+	~	A rookie does half the work of a veteran.
+	|
+Mentoring per Rookie=
+	0.1
+	~	dmnl
+	~	Share of a veteran taken up by each rookie.
+	|
+Effective Staff=
+	MAX(0, Veterans + Rookies * (Rookie Productivity - Mentoring per Rookie))
+	~	person
+	~	
+	|
+Standard Capacity=
+	Effective Staff * Hours per Person / Standard Time per Job
+	~	jobs/month
+	~	Capacity if every job got the standard time.
+	|
+Work Pressure=
+	XIDZ(Desired Completions, Standard Capacity, 2)
+	~	dmnl
+	~	
+	|
+Time Sensitivity=
+	0.3
+	~	dmnl
+	~	How strongly staff cut time per job under pressure.
+	|
+Time Effect=
+	MIN(1.2, MAX(0.7, 1 - Time Sensitivity * (Work Pressure - 1)))
+	~	dmnl
+	~	Under pressure staff spend less time per job (down to 70%); with slack, up to 20% more.
+	|
+Actual Time per Job=
+	Standard Time per Job * Time Effect
+	~	hours/job
+	~	
+	|
+Capacity=
+	Effective Staff * Hours per Person / Actual Time per Job
+	~	jobs/month
+	~	
+	|
+Minimum Delivery Time=
+	0.25
+	~	month
+	~	
+	|
+Completions=
+	MIN(Capacity, Backlog / Minimum Delivery Time)
+	~	jobs/month
+	~	
+	|
+Required Time per Job=
+	8
+	~	hours/job
+	~	Time a job needs to be done right first time.
+	|
+Quality Exponent=
+	1.5
+	~	dmnl
+	~	
+	|
+Quality=
+	MIN(1, (Actual Time per Job / Required Time per Job) ^ Quality Exponent)
+	~	dmnl
+	~	Fraction of jobs done right first time.
+	|
+Goal Anchoring=
+	0
+	~	dmnl
+	~	0: the standard drifts to the time actually spent; 1: the standard is held at the required time.
+	|
+Indicated Standard=
+	MIN(Required Time per Job, Goal Anchoring * Required Time per Job + (1 - Goal Anchoring) * Actual Time per Job)
+	~	hours/job
+	~	The norm follows the time actually spent, but never above the required time.
+	|
+Erosion Time=
+	6
+	~	month
+	~	Time for the standard to fall to the time actually spent.
+	|
+Recovery Time=
+	24
+	~	month
+	~	Time for the standard to rise again.
+	|
+Standard Change=
+	(Indicated Standard - Standard Time per Job) / IF THEN ELSE(Indicated Standard < Standard Time per Job, Erosion Time, Recovery Time)
+	~	hours/job/month
+	~	
+	|
+Standard Time per Job= INTEG(Standard Change, 8)
+	~	hours/job
+	~	The norm used for planning staff.
+	|
+Demand Averaging Time=
+	3
+	~	month
+	~	
+	|
+Average Requests=
+	SMOOTH(Customer Requests + Rework Returns, Demand Averaging Time)
+	~	jobs/month
+	~	
+	|
+Requests Trend=
+	XIDZ(Customer Requests + Rework Returns - Average Requests, Average Requests * Demand Averaging Time, 0)
+	~	1/month
+	~	Perceived fractional growth of requests.
+	|
+Forecast Horizon=
+	0
+	~	month
+	~	Policy: how far ahead hiring looks (0 = no anticipation).
+	|
+Expected Requests=
+	MAX(0, Average Requests * (1 + Requests Trend * Forecast Horizon))
+	~	jobs/month
+	~	
+	|
+Backlog Correction Time=
+	6
+	~	month
+	~	
+	|
+Desired Throughput=
+	MAX(0, Expected Requests + (Backlog - Expected Requests * Target Delivery Time) / Backlog Correction Time)
+	~	jobs/month
+	~	
+	|
+Capacity Buffer=
+	0
+	~	dmnl
+	~	Policy: extra staff as a fraction of the requirement.
+	|
+Desired Effective Staff=
+	Desired Throughput * Standard Time per Job / Hours per Person * (1 + Capacity Buffer)
+	~	person
+	~	
+	|
+Hiring Time=
+	3
+	~	month
+	~	
+	|
+Veteran Tenure=
+	36
+	~	month
+	~	
+	|
+Rookie Quit Time=
+	24
+	~	month
+	~	
+	|
+Veteran Attrition=
+	Veterans / Veteran Tenure
+	~	person/month
+	~	
+	|
+Rookie Quits=
+	Rookies / Rookie Quit Time
+	~	person/month
+	~	
+	|
+Hiring=
+	MAX(0, Veteran Attrition + Rookie Quits + (Desired Effective Staff - Effective Staff) / Hiring Time)
+	~	person/month
+	~	Replaces leavers and closes the gap in effective staff; ignores rookies still assimilating.
+	|
+Base Assimilation Time=
+	6
+	~	month
+	~	
+	|
+Mentoring Sensitivity=
+	1
+	~	dmnl
+	~	How much pressure slows assimilation (veterans skip mentoring).
+	|
+Assimilation Time=
+	Base Assimilation Time * MIN(2, MAX(1, 1 + Mentoring Sensitivity * (Work Pressure - 1)))
+	~	month
+	~	
+	|
+Assimilation=
+	Rookies / Assimilation Time
+	~	person/month
+	~	
+	|
+Rookies= INTEG(Hiring - Assimilation - Rookie Quits, 8)
+	~	person
+	~	
+	|
+Veterans= INTEG(Assimilation - Veteran Attrition, 47)
+	~	person
+	~	
+	|
+Perceived Quality=
+	SMOOTH(Quality, 3)
+	~	dmnl
+	~	
+	|
+Quality Sensitivity=
+	1
+	~	dmnl
+	~	
+	|
+Quality Effect=
+	Perceived Quality ^ Quality Sensitivity
+	~	dmnl
+	~	
+	|
+Delivery Time=
+	XIDZ(Backlog, Completions, Target Delivery Time)
+	~	month
+	~	
+	|
+Perceived Delivery Time=
+	SMOOTH(Delivery Time, 2)
+	~	month
+	~	
+	|
+Delay Effect=
+	MIN(1.2, MAX(0.3, (Target Delivery Time / Perceived Delivery Time) ^ 0.5))
+	~	dmnl
+	~	
+	|
+Price=
+	400
+	~	$/job
+	~	
+	|
+Reference Price=
+	400
+	~	$/job
+	~	Competitors' price.
+	|
+Price Elasticity=
+	1.5
+	~	dmnl
+	~	
+	|
+Price Effect=
+	(Price / Reference Price) ^ (-Price Elasticity)
+	~	dmnl
+	~	
+	|
+Attractiveness=
+	Quality Effect * Delay Effect * Price Effect
+	~	dmnl
+	~	
+	|
+Revenue=
+	(Completions - Rework Returns) * Price
+	~	$/month
+	~	Rework is not billed.
+	|
+Wage=
+	6000
+	~	$/person/month
+	~	
+	|
+Wage Bill=
+	(Rookies + Veterans) * Wage
+	~	$/month
+	~	
+	|
+Hiring Cost per Person=
+	10000
+	~	$/person
+	~	
+	|
+Hiring Costs=
+	Hiring * Hiring Cost per Person
+	~	$/month
+	~	
+	|
+Fixed Costs=
+	40000
+	~	$/month
+	~	
+	|
+Net Cash Flow=
+	Revenue - Wage Bill - Hiring Costs - Fixed Costs
+	~	$/month
+	~	
+	|
+Cash= INTEG(Net Cash Flow, 500000)
+	~	$
+	~	
+	|
+Discount Rate=
+	0.01
+	~	1/month
+	~	1% a month.
+	|
+Discounting=
+	Discount Factor * Discount Rate
+	~	1/month
+	~	
+	|
+Discount Factor= INTEG(-Discounting, 1)
+	~	dmnl
+	~	
+	|
+Discounted Cash=
+	Net Cash Flow * Discount Factor
+	~	$/month
+	~	
+	|
+Present Value= INTEG(Discounted Cash, 0)
+	~	$
+	~	Net present value of cash flows to date at 1% a month.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 180 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

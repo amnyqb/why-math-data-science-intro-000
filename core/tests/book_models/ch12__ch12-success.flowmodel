@@ -1,0 +1,1328 @@
+{
+ "title": "Imported model",
+ "vars": [
+  {
+   "id": 1,
+   "name": "Marketing Budget",
+   "kind": "Constant",
+   "equation": "100",
+   "units": "kUSD/month",
+   "comment": "",
+   "pos": [
+    120.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 2,
+   "name": "Favouritism",
+   "kind": "Constant",
+   "equation": "2",
+   "units": "dmnl",
+   "comment": "How strongly the budget follows success: 0 equal split, 1 proportional to revenue, 2 more than proportional.",
+   "pos": [
+    310.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 3,
+   "name": "Weight A",
+   "kind": "Aux",
+   "equation": "Perceived Revenue A ^ Favouritism",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    500.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 4,
+   "name": "Weight B",
+   "kind": "Aux",
+   "equation": "Perceived Revenue B ^ Favouritism",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    690.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 5,
+   "name": "Share A",
+   "kind": "Aux",
+   "equation": "Weight A / (Weight A + Weight B)",
+   "units": "dmnl",
+   "comment": "Share of the budget given to line A.",
+   "pos": [
+    880.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 6,
+   "name": "Marketing A",
+   "kind": "Aux",
+   "equation": "Marketing Budget * Share A",
+   "units": "kUSD/month",
+   "comment": "",
+   "pos": [
+    120.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 7,
+   "name": "Marketing B",
+   "kind": "Aux",
+   "equation": "Marketing Budget * (1 - Share A)",
+   "units": "kUSD/month",
+   "comment": "",
+   "pos": [
+    310.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 8,
+   "name": "Customers per kUSD",
+   "kind": "Constant",
+   "equation": "0.5",
+   "units": "customer/kUSD",
+   "comment": "Customers won per thousand dollars of marketing.",
+   "pos": [
+    500.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 9,
+   "name": "Customer Life",
+   "kind": "Constant",
+   "equation": "24",
+   "units": "month",
+   "comment": "",
+   "pos": [
+    690.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 10,
+   "name": "Acquisition A",
+   "kind": "Flow",
+   "equation": "Marketing A * Customers per kUSD",
+   "units": "customer/month",
+   "comment": "",
+   "pos": [
+    570.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 14,
+   "from_pt": [
+    470.0,
+    380.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 11,
+   "name": "Acquisition B",
+   "kind": "Flow",
+   "equation": "Marketing B * Customers per kUSD",
+   "units": "customer/month",
+   "comment": "",
+   "pos": [
+    760.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 15,
+   "from_pt": [
+    660.0,
+    380.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 12,
+   "name": "Churn A",
+   "kind": "Flow",
+   "equation": "Customers A / Customer Life",
+   "units": "customer/month",
+   "comment": "",
+   "pos": [
+    810.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 14,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    910.0,
+    380.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 13,
+   "name": "Churn B",
+   "kind": "Flow",
+   "equation": "Customers B / Customer Life",
+   "units": "customer/month",
+   "comment": "",
+   "pos": [
+    1000.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 15,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    1100.0,
+    380.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 14,
+   "name": "Customers A",
+   "kind": "Stock",
+   "equation": "520",
+   "units": "customer",
+   "comment": "",
+   "pos": [
+    690.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 15,
+   "name": "Customers B",
+   "kind": "Stock",
+   "equation": "480",
+   "units": "customer",
+   "comment": "",
+   "pos": [
+    880.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 16,
+   "name": "Revenue per Customer",
+   "kind": "Constant",
+   "equation": "1",
+   "units": "kUSD/customer/month",
+   "comment": "",
+   "pos": [
+    120.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 17,
+   "name": "Revenue A",
+   "kind": "Aux",
+   "equation": "Customers A * Revenue per Customer",
+   "units": "kUSD/month",
+   "comment": "",
+   "pos": [
+    310.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 18,
+   "name": "Revenue B",
+   "kind": "Aux",
+   "equation": "Customers B * Revenue per Customer",
+   "units": "kUSD/month",
+   "comment": "",
+   "pos": [
+    500.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 19,
+   "name": "Reporting Time",
+   "kind": "Constant",
+   "equation": "3",
+   "units": "month",
+   "comment": "Time for revenue to show in the reports used for budgeting.",
+   "pos": [
+    690.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 20,
+   "name": "Perceived Revenue A",
+   "kind": "Aux",
+   "equation": "SMOOTH(Revenue A, Reporting Time) / Revenue Unit",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    880.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 21,
+   "name": "Perceived Revenue B",
+   "kind": "Aux",
+   "equation": "SMOOTH(Revenue B, Reporting Time) / Revenue Unit",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    120.0,
+    640.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 22,
+   "name": "Revenue Unit",
+   "kind": "Constant",
+   "equation": "1",
+   "units": "kUSD/month",
+   "comment": "Makes perceived revenue dimensionless before it is raised to a power.",
+   "pos": [
+    310.0,
+    640.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 69,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  }
+ ],
+ "links": [
+  {
+   "id": 23,
+   "from": 20,
+   "to": 3,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 24,
+   "from": 2,
+   "to": 3,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 25,
+   "from": 21,
+   "to": 4,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 26,
+   "from": 2,
+   "to": 4,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 27,
+   "from": 3,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 28,
+   "from": 4,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 29,
+   "from": 1,
+   "to": 6,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 30,
+   "from": 5,
+   "to": 6,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 31,
+   "from": 1,
+   "to": 7,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 32,
+   "from": 5,
+   "to": 7,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 33,
+   "from": 6,
+   "to": 10,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 34,
+   "from": 8,
+   "to": 10,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 35,
+   "from": 7,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 36,
+   "from": 8,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 37,
+   "from": 14,
+   "to": 12,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 38,
+   "from": 9,
+   "to": 12,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 39,
+   "from": 15,
+   "to": 13,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 40,
+   "from": 9,
+   "to": 13,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 41,
+   "from": 14,
+   "to": 17,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 42,
+   "from": 16,
+   "to": 17,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 43,
+   "from": 15,
+   "to": 18,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 44,
+   "from": 16,
+   "to": 18,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 45,
+   "from": 17,
+   "to": 20,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 46,
+   "from": 19,
+   "to": 20,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 47,
+   "from": 22,
+   "to": 20,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 48,
+   "from": 18,
+   "to": 21,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 49,
+   "from": 19,
+   "to": 21,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 50,
+   "from": 22,
+   "to": 21,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  }
+ ],
+ "notes": [],
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 96.0,
+  "time_step": 0.0625,
+  "time_units": "month",
+  "method": "Euler"
+ },
+ "next_id": 267,
+ "sheets": [
+  {
+   "id": 69,
+   "name": "Model",
+   "kind": "Diagram",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "cld": {
+    "nodes": [],
+    "links": [],
+    "loops": []
+   },
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "caption": "",
+   "source": ""
+  },
+  {
+   "name": "Causal loops",
+   "kind": "CausalLoop",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "id": 266,
+   "cld": {
+    "nodes": [
+     {
+      "id": 253,
+      "text": "Share to A",
+      "pos": [
+       340.0,
+       250.0
+      ]
+     },
+     {
+      "id": 254,
+      "text": "Marketing A",
+      "pos": [
+       115.0,
+       120.1
+      ]
+     },
+     {
+      "id": 255,
+      "text": "Customers A",
+      "pos": [
+       115.0,
+       379.9
+      ]
+     },
+     {
+      "id": 256,
+      "text": "Marketing B",
+      "pos": [
+       565.0,
+       120.1
+      ]
+     },
+     {
+      "id": 257,
+      "text": "Customers B",
+      "pos": [
+       565.0,
+       379.9
+      ]
+     }
+    ],
+    "links": [
+     {
+      "id": 258,
+      "from": 253,
+      "to": 254,
+      "bend": 75.0,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 259,
+      "from": 254,
+      "to": 255,
+      "bend": 75.0,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 260,
+      "from": 255,
+      "to": 253,
+      "bend": 75.0,
+      "polarity": "+",
+      "delay": true
+     },
+     {
+      "id": 261,
+      "from": 253,
+      "to": 256,
+      "bend": -75.0,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 262,
+      "from": 256,
+      "to": 257,
+      "bend": -75.0,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 263,
+      "from": 257,
+      "to": 253,
+      "bend": -75.0,
+      "polarity": "-",
+      "delay": true
+     }
+    ],
+    "loops": [
+     {
+      "id": 264,
+      "pos": [
+       190.0,
+       250.0
+      ],
+      "reinforcing": true,
+      "label": "R1 Line A wins",
+      "clockwise": false
+     },
+     {
+      "id": 265,
+      "pos": [
+       490.0,
+       250.0
+      ],
+      "reinforcing": true,
+      "label": "R2 Line B loses",
+      "clockwise": true
+     }
+    ]
+   },
+   "caption": "Relative achievement: success to the successful",
+   "source": ""
+  }
+ ],
+ "groups": [],
+ "modules": [],
+ "scenarios": [],
+ "trend_style": {
+  "title": "",
+  "subtitle": "",
+  "x_label": "",
+  "y_label": "",
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "legend": "TopRight",
+  "grid": true,
+  "line_width": 1.0,
+  "markers": false,
+  "time_marker": true,
+  "compare": true,
+  "colors": []
+ },
+ "sets": [],
+ "arrow_shape": "Curved",
+ "arrow_head": "Filled",
+ "diagram_style": "Classic",
+ "module_style": "Detailed",
+ "functions": [],
+ "checks": [],
+ "defs": [],
+ "instances": [],
+ "manifest": {
+  "title": "",
+  "description": "",
+  "levers": [],
+  "outputs": [],
+  "scenarios": [],
+  "bindings": [],
+  "validity": [],
+  "tests": [],
+  "goals": [],
+  "reduced_from": ""
+ },
+ "figure_style": {
+  "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+  "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+  "text_scale": 0.9,
+  "line_scale": 1.15,
+  "width_mm": 130.0,
+  "background": "#ffffff",
+  "colors": {
+   "accent": "#000000",
+   "accent_soft": "#ffffff",
+   "aux": "#000000",
+   "border": "#000000",
+   "constant": "#000000",
+   "error": "#000000",
+   "flow": "#000000",
+   "grid": "#ffffff",
+   "link": "#000000",
+   "lookup": "#000000",
+   "muted": "#000000",
+   "ok": "#000000",
+   "panel": "#ffffff",
+   "stock": "#000000",
+   "stock_fill": "#ffffff",
+   "surface": "#ffffff",
+   "text": "#000000"
+  },
+  "arrow_shape": "curved",
+  "arrow_head": "filled",
+  "arrow_weight": 1,
+  "diagram_style": "classic",
+  "caption_size": 13.0
+ }
+}

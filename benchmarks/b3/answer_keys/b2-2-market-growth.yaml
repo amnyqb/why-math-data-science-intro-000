@@ -1,0 +1,47 @@
+# B2-2 Market Growth. Entries come from Mojtahedzadeh (2015, ISDC P1307) and Phaff et al. (2008, ISDC PHAFF116), both read in full
+# (papers/*.pdf). Page numbers are those of the papers. The model they analyse is Forrester (1968) as in Morecroft (1983) (Phaff) and
+# Forrester's original (Mojtahedzadeh). Our copy is a third-party Stella rebuild: see the report for the version risk.
+- case: B2-2C
+  finding: Half-cycle durations of Backlog in the damped oscillation (months)
+  type: behaviour
+  value: [16.9, 17.7, 17.6, 17.1, 17.4]
+  qualitative: false
+  source: Mojtahedzadeh 2015, p. 11 (Table 1, half-cycles 1 to 5)
+  version: Forrester 1968 Market Growth as analysed in Mojtahedzadeh 2015, Fig. 3
+- case: B2-2C
+  finding: The third-order delivery delay loop (loop 2 of his Fig. 8, Backlog to delivery delay recognised by company and by market to sales effectiveness to orders booked) is responsible for the periodicity of the half-cycles
+  type: dominant_loop
+  qualitative: true
+  source: Mojtahedzadeh 2015, p. 10 (Pathway Participation Analysis of damped Oscillation in Backlog)
+  version: Forrester 1968 Market Growth as analysed in Mojtahedzadeh 2015, Fig. 3
+- case: B2-2C
+  finding: Minor first-order loops around the stock variables drive the stability of the half-cycles
+  type: dominant_loop
+  qualitative: true
+  source: Mojtahedzadeh 2015, pp. 10-11 (text and Table 1, stability factor dominated by the backlog loop)
+  version: Forrester 1968 Market Growth as analysed in Mojtahedzadeh 2015, Fig. 3
+- case: B2-2F
+  finding: Half-cycle durations of Backlog in the growth with cycles (months)
+  type: behaviour
+  value: [35.3, 14.0, 31.2, 12.0]
+  qualitative: false
+  source: Mojtahedzadeh 2015, p. 15 (Table 2, half-cycles 1 to 4)
+  version: Forrester 1968 Market Growth as analysed in Mojtahedzadeh 2015, Fig. 10
+- case: B2-2F
+  finding: The sales growth loop (loop 1 of his Fig. 8, reinforcing, through Salesmen and Orders Booked) dominates and creates the growth trend of the cycles in Backlog
+  type: dominant_loop
+  qualitative: true
+  source: Mojtahedzadeh 2015, p. 14 (end of Pathway Participation Analysis of Unstable Growth)
+  version: Forrester 1968 Market Growth as analysed in Mojtahedzadeh 2015, Fig. 10
+- case: B2-2F
+  finding: The delivery delay loop (loop 2) and the capacity expansion loop (loop 3) together explain the crossings of capacity and order rate ("high delivery delay simultaneously causes the expansion of capacity and the suppression of orders")
+  type: dominant_loop
+  qualitative: true
+  source: Mojtahedzadeh 2015, p. 14
+  version: Forrester 1968 Market Growth as analysed in Mojtahedzadeh 2015, Fig. 10
+- case: B2-2
+  finding: The utilisation of capacity hardly deviates from its initial value, so it can be excluded; eliminating it gives a run virtually identical to the reference run (the loops that contain it, loops 10 and 17, are the best candidates for superfluous structure)
+  type: reduction_size
+  qualitative: true
+  source: Phaff et al. 2008, p. 15 (Section 4.1, Table 1 and the text after it)
+  version: Market Growth model of Forrester 1968 and Morecroft 1983 as used by Phaff et al. 2008, Fig. 3 (overshoot and collapse)

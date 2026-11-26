@@ -1,0 +1,211 @@
+{
+  "goals": [
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "negligible",
+          "mu": 1.4788170688007085e-15,
+          "mu_star": 4.738875958310018e-14,
+          "n": 100,
+          "param": "Productivity per Worker",
+          "sigma": 1.0011642599510873e-13
+        },
+        {
+          "class": "linear",
+          "mu": 100.0,
+          "mu_star": 100.0,
+          "n": 100,
+          "param": "Desired Inventory",
+          "sigma": 6.706669406132014e-14
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -25.09187631618603,
+          "mu_star": 25.09187631618603,
+          "n": 100,
+          "param": "Hiring Time",
+          "sigma": 23.042523048868567
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -29.470365015645225,
+          "mu_star": 29.470365015645225,
+          "n": 100,
+          "param": "Inventory Correction Time",
+          "sigma": 29.07845245143011
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -12.599714856941473,
+          "mu_star": 12.599714856941473,
+          "n": 100,
+          "param": "Demand Adjustment Time",
+          "sigma": 14.673963711843243
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -62.81398375370697,
+          "mu_star": 62.81398375370697,
+          "n": 100,
+          "param": "Demand Step",
+          "sigma": 34.46387329460062
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Inventory trough",
+      "kendall_r_vs_2r": 1.0,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -83.9875710719549,
+          "mu_star": 83.9875710719549,
+          "n": 100,
+          "param": "Productivity per Worker",
+          "sigma": 37.72837695203067
+        },
+        {
+          "class": "negligible",
+          "mu": -1.7053025658242404e-15,
+          "mu_star": 6.0751403907488565e-15,
+          "n": 100,
+          "param": "Desired Inventory",
+          "sigma": 1.2512230055334136e-14
+        },
+        {
+          "class": "negligible",
+          "mu": 1.627709968247987,
+          "mu_star": 1.627709968247987,
+          "n": 100,
+          "param": "Hiring Time",
+          "sigma": 1.9729495496834515
+        },
+        {
+          "class": "negligible",
+          "mu": -2.0012446260231,
+          "mu_star": 2.0012446260231,
+          "n": 100,
+          "param": "Inventory Correction Time",
+          "sigma": 2.5498525196603348
+        },
+        {
+          "class": "negligible",
+          "mu": 0.008574481532195453,
+          "mu_star": 0.41056721131149376,
+          "n": 100,
+          "param": "Demand Adjustment Time",
+          "sigma": 0.7763607772965933
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 16.472157779750933,
+          "mu_star": 16.472157779750933,
+          "n": 100,
+          "param": "Demand Step",
+          "sigma": 9.272286793409657
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Workforce peak",
+      "kendall_r_vs_2r": 1.0,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "negligible",
+          "mu": 4.369837824924616e-15,
+          "mu_star": 1.0796696869874723e-13,
+          "n": 100,
+          "param": "Productivity per Worker",
+          "sigma": 2.5230450630767795e-13
+        },
+        {
+          "class": "linear",
+          "mu": 99.99999999999999,
+          "mu_star": 99.99999999999999,
+          "n": 100,
+          "param": "Desired Inventory",
+          "sigma": 1.0756493354520612e-13
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1.9184838684456174,
+          "mu_star": 10.073649614684523,
+          "n": 100,
+          "param": "Hiring Time",
+          "sigma": 16.634024325979688
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -12.592918755306428,
+          "mu_star": 15.601973654905676,
+          "n": 100,
+          "param": "Inventory Correction Time",
+          "sigma": 30.35650268171954
+        },
+        {
+          "class": "negligible",
+          "mu": -6.260406288490811,
+          "mu_star": 7.02379583449756,
+          "n": 100,
+          "param": "Demand Adjustment Time",
+          "sigma": 11.710268004541122
+        },
+        {
+          "class": "negligible",
+          "mu": -1.733562988523872,
+          "mu_star": 9.048719754964024,
+          "n": 100,
+          "param": "Demand Step",
+          "sigma": 15.101718836701107
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Inventory at 30 months",
+      "kendall_r_vs_2r": 1.0,
+      "top_overlap": 0.6666666666666666
+    }
+  ],
+  "levels": 4,
+  "params": [
+    {
+      "max": 4.0,
+      "min": 1.0,
+      "name": "Productivity per Worker"
+    },
+    {
+      "max": 150.0,
+      "min": 50.0,
+      "name": "Desired Inventory"
+    },
+    {
+      "max": 8.0,
+      "min": 1.0,
+      "name": "Hiring Time"
+    },
+    {
+      "max": 8.0,
+      "min": 0.5,
+      "name": "Inventory Correction Time"
+    },
+    {
+      "max": 8.0,
+      "min": 0.5,
+      "name": "Demand Adjustment Time"
+    },
+    {
+      "max": 20.0,
+      "min": 0.0,
+      "name": "Demand Step"
+    }
+  ],
+  "runs": 700,
+  "seed": 1,
+  "trajectories": 50
+}

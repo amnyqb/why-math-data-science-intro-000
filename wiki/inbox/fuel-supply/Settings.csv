@@ -1,0 +1,7 @@
+Setting,Value
+Title,"Fuel supply planning, November 2026"
+Initial time,15
+Final time,31
+Time step,1
+Time units,Day of November
+Method,Euler

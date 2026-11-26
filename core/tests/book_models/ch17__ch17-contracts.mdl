@@ -1,0 +1,30 @@
+{UTF-8}
+{ Chapter 17: one stock, two loops. Service contracts won by references from existing contracts (R1) and lost faster as contracts crowd a fixed service capacity (B1). }
+Win Rate=
+	0.2
+	~	1/month
+	~	New contracts won per month per existing contract, through references.
+	|
+Service Capacity=
+	1000
+	~	contracts
+	~	Contracts the service team can hold before crowding drives losses up to the win rate.
+	|
+Contract Wins=
+	Contracts * Win Rate
+	~	contracts/month
+	~	|
+Contract Losses=
+	Contracts * Win Rate * Contracts / Service Capacity
+	~	contracts/month
+	~	Losses rise with crowding: each contract's loss rate grows with the share of capacity in use.
+	|
+Contracts= INTEG(
+	Contract Wins - Contract Losses,
+	50)
+	~	contracts
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 48 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

@@ -1,0 +1,12 @@
+Name,Variable,Min,Max,When,Kind,Tolerance,Reference,Stocks,Inflows,Outflows
+T1 beer is conserved in the chain,,,,always,balance,,,Retailer on hand;Retailer shipment pipe 1;Retailer shipment pipe 2;Wholesaler on hand;Wholesaler shipment pipe 1;Wholesaler shipment pipe 2;Distributor on hand;Distributor shipment pipe 1;Distributor shipment pipe 2;Factory on hand;Factory production pipe 1;Factory production pipe 2;Factory production pipe 3,Factory orders placed,Retailer shipments out
+T2 equilibrium stays flat before the step,Equilibrium gap,,,always,reference,1e-09,0:0,,,
+T3 orders amplify going upstream,Amplification holds,1,,end,,,,,,
+Retailer on hand never negative,Retailer on hand,,,always,nonneg,,,,,
+Retailer orders never negative,Retailer orders placed,,,always,nonneg,,,,,
+Wholesaler on hand never negative,Wholesaler on hand,,,always,nonneg,,,,,
+Wholesaler orders never negative,Wholesaler orders placed,,,always,nonneg,,,,,
+Distributor on hand never negative,Distributor on hand,,,always,nonneg,,,,,
+Distributor orders never negative,Distributor orders placed,,,always,nonneg,,,,,
+Factory on hand never negative,Factory on hand,,,always,nonneg,,,,,
+Factory orders never negative,Factory orders placed,,,always,nonneg,,,,,

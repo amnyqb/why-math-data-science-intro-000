@@ -1,0 +1,16 @@
+[Unit]
+Description=Cart-pole 3D lab (dynamist engine bridge)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/cartpole/site/demo/engine/bridge.py --dyn /opt/cartpole/dynamist/target/release/dyn --host 127.0.0.1 --port 8765
+Restart=always
+User=nobody
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

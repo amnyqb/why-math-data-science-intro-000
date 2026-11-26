@@ -1,0 +1,125 @@
+{UTF-8}
+{ Chapter 11: the plant decision under uncertainty. A first phase is built now; a second phase can be added at a decision point, once the first phase has shown what demand, prices and ramp-up really are. Scenario factors scale the margin; the large plant of section 11.6 is the case Phase 1 = 3 million, 10 months, 60,000 a month, and no expansion. }
+Construction Cost=
+	1.8e+06
+	~	dollars
+	~	Phase 1 cost, including the site and infrastructure that phase 2 will share.
+	|
+Construction Time=
+	6
+	~	month
+	~	|
+Construction Spending=
+	IF THEN ELSE(Time < Construction Time, Construction Cost / Construction Time, 0)
+	~	dollars/month
+	~	|
+Plant Available=
+	STEP(1, Construction Time)
+	~	dmnl
+	~	|
+Ramp Up Time=
+	6
+	~	month
+	~	Average time to reach full output once a phase is built (scenario factor).
+	|
+Ramp Up=
+	(Plant Available - Utilisation) / Ramp Up Time
+	~	1/month
+	~	|
+Utilisation= INTEG(
+	Ramp Up,
+	0)
+	~	dmnl
+	~	|
+Full Margin=
+	35000
+	~	dollars/month
+	~	Phase 1 margin at full output, at planned demand and price.
+	|
+Demand Factor=
+	1
+	~	dmnl
+	~	Realised demand relative to plan (scenario factor).
+	|
+Price Factor=
+	1
+	~	dmnl
+	~	Realised margin per unit relative to plan (scenario factor).
+	|
+Margin Factor=
+	Demand Factor * Price Factor
+	~	dmnl
+	~	|
+Expand=
+	0
+	~	dmnl
+	~	1 if phase 2 is built at the decision point; set by the decision rule, from what phase 1 has shown by then.
+	|
+Decision Time=
+	30
+	~	month
+	~	|
+Expansion Cost=
+	1.2e+06
+	~	dollars
+	~	|
+Expansion Build Time=
+	5
+	~	month
+	~	|
+Expansion Spending=
+	IF THEN ELSE(Time >= Decision Time :AND: Time < Decision Time + Expansion Build Time, Expand * Expansion Cost / Expansion Build Time, 0)
+	~	dollars/month
+	~	|
+Expansion Available=
+	Expand * STEP(1, Decision Time + Expansion Build Time)
+	~	dmnl
+	~	|
+Expansion Ramp Up=
+	(Expansion Available - Expansion Utilisation) / Ramp Up Time
+	~	1/month
+	~	|
+Expansion Utilisation= INTEG(
+	Expansion Ramp Up,
+	0)
+	~	dmnl
+	~	|
+Expansion Full Margin=
+	25000
+	~	dollars/month
+	~	Phase 2 margin at full output, at planned demand and price.
+	|
+Margin=
+	Margin Factor * (Full Margin * Utilisation + Expansion Full Margin * Expansion Utilisation)
+	~	dollars/month
+	~	|
+Cash Flow=
+	Margin - Construction Spending - Expansion Spending
+	~	dollars/month
+	~	|
+Cumulative Cash= INTEG(
+	Cash Flow,
+	0)
+	~	dollars
+	~	|
+Discount Rate=
+	0.01
+	~	1/month
+	~	|
+Discount Factor=
+	EXP(-Discount Rate * Time)
+	~	dmnl
+	~	|
+Discounted Cash Flow=
+	Cash Flow * Discount Factor
+	~	dollars/month
+	~	|
+Present Value= INTEG(
+	Discounted Cash Flow,
+	0)
+	~	dollars
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 120 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

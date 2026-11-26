@@ -1,0 +1,569 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Initial Inventory",
+      "kind": "Constant",
+      "equation": "500",
+      "units": "units",
+      "comment": "Inventory at the start of the run: in operation, the estimate from the latest count.",
+      "pos": [
+        420.0,
+        70.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Inventory",
+      "kind": "Stock",
+      "equation": "Initial Inventory",
+      "units": "units",
+      "comment": "Units on hand at the depot.",
+      "pos": [
+        420.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Forecast Demand",
+      "kind": "Constant",
+      "equation": "100",
+      "units": "units/week",
+      "comment": "Shipments the plan expects each week.",
+      "pos": [
+        420.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Shipments",
+      "kind": "Flow",
+      "equation": "Forecast Demand",
+      "units": "units/week",
+      "comment": "Units shipped; in the model, equal to the forecast.",
+      "pos": [
+        600.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 2,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        750.0,
+        200.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Target Inventory",
+      "kind": "Constant",
+      "equation": "500",
+      "units": "units",
+      "comment": "Inventory the depot plans to hold.",
+      "pos": [
+        110.0,
+        90.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Adjustment Time",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "week",
+      "comment": "Time over which a gap between target and estimated inventory is planned away.",
+      "pos": [
+        110.0,
+        320.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Production",
+      "kind": "Flow",
+      "equation": "MAX(0, Forecast Demand + (Target Inventory - Initial Inventory) / Adjustment Time)",
+      "units": "units/week",
+      "comment": "Production planned for the week from the estimated inventory at its start.",
+      "pos": [
+        240.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 2,
+      "from_pt": [
+        90.0,
+        200.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 8,
+      "from": 1,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 3,
+      "to": 4,
+      "bend": 20.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 3,
+      "to": 7,
+      "bend": -20.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 5,
+      "to": 7,
+      "bend": -10.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 1,
+      "to": 7,
+      "bend": 20.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 6,
+      "to": 7,
+      "bend": 10.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 1.0,
+    "time_step": 0.0625,
+    "time_units": "week",
+    "method": "Euler"
+  },
+  "next_id": 150,
+  "sheets": [
+    {
+      "id": 14,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 149,
+      "name": "Causal loops",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 134,
+            "text": "True Inventory",
+            "pos": [
+              175.0,
+              200.0
+            ]
+          },
+          {
+            "id": 135,
+            "text": "Weekly Count",
+            "pos": [
+              290.0,
+              85.0
+            ]
+          },
+          {
+            "id": 136,
+            "text": "Estimated Inventory",
+            "pos": [
+              405.0,
+              200.0
+            ]
+          },
+          {
+            "id": 137,
+            "text": "Production Plan",
+            "pos": [
+              290.0,
+              315.0
+            ]
+          },
+          {
+            "id": 138,
+            "text": "Count Error",
+            "pos": [
+              150.0,
+              45.0
+            ]
+          },
+          {
+            "id": 139,
+            "text": "Model Prediction",
+            "pos": [
+              500.0,
+              70.0
+            ]
+          },
+          {
+            "id": 140,
+            "text": "Actual Demand",
+            "pos": [
+              110.0,
+              345.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 141,
+            "from": 134,
+            "to": 135,
+            "bend": -33.7,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 142,
+            "from": 135,
+            "to": 136,
+            "bend": -33.7,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 143,
+            "from": 136,
+            "to": 137,
+            "bend": -33.7,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 144,
+            "from": 137,
+            "to": 134,
+            "bend": -33.7,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 145,
+            "from": 138,
+            "to": 135,
+            "bend": -29.1,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 146,
+            "from": 139,
+            "to": 136,
+            "bend": -32.2,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 147,
+            "from": 140,
+            "to": 134,
+            "bend": -31.8,
+            "polarity": "-",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 148,
+            "pos": [
+              290.0,
+              225.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Planning from the count",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

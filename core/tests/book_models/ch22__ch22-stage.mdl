@@ -1,0 +1,79 @@
+{UTF-8}
+{ Chapter 22: one stage of the distribution chain. }
+Incoming Orders=
+	100 + STEP(20, 5)
+	~	units/week
+	~	Orders from the next stage down; shipped at once.
+	|
+Adjustment Time=
+	4
+	~	week
+	~	
+	|
+Supply Line Weight=
+	0.3
+	~	dmnl
+	~	
+	|
+Forecast Time=
+	4
+	~	week
+	~	
+	|
+Coverage=
+	4
+	~	week
+	~	
+	|
+Transit Time=
+	3
+	~	week
+	~	
+	|
+Expected Demand= INTEG(
+	(Incoming Orders - Expected Demand) / Forecast Time,
+	100)
+	~	units/week
+	~	
+	|
+Target Inventory=
+	Expected Demand * Coverage
+	~	units
+	~	
+	|
+Desired Supply Line=
+	Expected Demand * Transit Time
+	~	units
+	~	
+	|
+Orders=
+	MAX(0, Expected Demand + (Target Inventory - Net Inventory + Supply Line Weight * (Desired Supply Line - Supply Line)) / Adjustment Time)
+	~	units/week
+	~	
+	|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	300)
+	~	units
+	~	
+	|
+Arrivals=
+	Supply Line / Transit Time
+	~	units/week
+	~	
+	|
+Net Inventory= INTEG(
+	Arrivals - Shipments,
+	400)
+	~	units
+	~	
+	|
+Shipments=
+	Incoming Orders
+	~	units/week
+	~	
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 100 ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |
+SAVEPER = 0.125 ~ week ~ |

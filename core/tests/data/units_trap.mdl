@@ -1,0 +1,7 @@
+Tank = INTEG(Delivery - Use, 100) ~ MB ~ thousand barrels |
+Delivery = 5000 ~ barrel/Day ~ written in barrels |
+Use = Tank * Use Fraction ~ MB/Day ~ |
+Use Fraction = 5 ~ %/Day ~ meant as 5 percent |
+Power = 100 ~ MW ~ |
+Energy = INTEG(Power, 0) ~ kWh ~ |
+INITIAL TIME = 0 ~ Day ~ | FINAL TIME = 10 ~ Day ~ | TIME STEP = 1 ~ Day ~ | SAVEPER = 1 ~ Day ~ |

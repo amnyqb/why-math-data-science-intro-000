@@ -1,0 +1,56 @@
+{UTF-8}
+{ Chapter 21 figure: the ordering structure of ch21-supply (noise and cost accounting omitted; the desired supply line, Supply Delay times Expected Demand, is written inside Orders). }
+Demand=
+	100 + STEP(20, 10)
+	~	units/week
+	~		|
+Forecast Time=
+	4
+	~	week
+	~		|
+Expected Demand=
+	SMOOTH(Demand, Forecast Time)
+	~	units/week
+	~		|
+Safety Weeks=
+	2
+	~	week
+	~		|
+Desired Inventory=
+	Safety Weeks * Expected Demand
+	~	units
+	~		|
+Net Inventory= INTEG(
+	Arrivals - Demand,
+	200)
+	~	units
+	~		|
+Supply Delay=
+	4
+	~	week
+	~		|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	400)
+	~	units
+	~		|
+Arrivals=
+	Supply Line / Supply Delay
+	~	units/week
+	~		|
+Adjustment Time=
+	2
+	~	week
+	~		|
+Supply Line Weight=
+	0
+	~	dmnl
+	~		|
+Orders=
+	MAX(0, Expected Demand + (Desired Inventory - Net Inventory) / Adjustment Time + Supply Line Weight * (Supply Delay * Expected Demand - Supply Line) / Adjustment Time)
+	~	units/week
+	~		|
+FINAL TIME = 104 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |

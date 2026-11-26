@@ -1,0 +1,727 @@
+{
+ "title": "Cart-Pole (inverted pendulum on a cart)",
+ "vars": [
+  {
+   "id": 1,
+   "name": "CartMass",
+   "kind": "Constant",
+   "equation": "1.0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    40.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    40.0
+   ],
+   "to_pt": [
+    0.0,
+    40.0
+   ]
+  },
+  {
+   "id": 2,
+   "name": "PoleMass",
+   "kind": "Constant",
+   "equation": "0.1",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    110.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    110.0
+   ],
+   "to_pt": [
+    0.0,
+    110.0
+   ]
+  },
+  {
+   "id": 3,
+   "name": "HalfLen",
+   "kind": "Constant",
+   "equation": "0.5",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    180.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    180.0
+   ],
+   "to_pt": [
+    0.0,
+    180.0
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Grav",
+   "kind": "Constant",
+   "equation": "9.81",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    250.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    250.0
+   ],
+   "to_pt": [
+    0.0,
+    250.0
+   ]
+  },
+  {
+   "id": 5,
+   "name": "CartFric",
+   "kind": "Constant",
+   "equation": "0.1",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    320.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    320.0
+   ],
+   "to_pt": [
+    0.0,
+    320.0
+   ]
+  },
+  {
+   "id": 6,
+   "name": "PoleFric",
+   "kind": "Constant",
+   "equation": "0.02",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    390.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    390.0
+   ],
+   "to_pt": [
+    0.0,
+    390.0
+   ]
+  },
+  {
+   "id": 7,
+   "name": "kth",
+   "kind": "Constant",
+   "equation": "50",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    460.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    460.0
+   ],
+   "to_pt": [
+    0.0,
+    460.0
+   ]
+  },
+  {
+   "id": 8,
+   "name": "kw",
+   "kind": "Constant",
+   "equation": "10",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    530.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    530.0
+   ],
+   "to_pt": [
+    0.0,
+    530.0
+   ]
+  },
+  {
+   "id": 9,
+   "name": "kx",
+   "kind": "Constant",
+   "equation": "2",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    600.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    600.0
+   ],
+   "to_pt": [
+    0.0,
+    600.0
+   ]
+  },
+  {
+   "id": 10,
+   "name": "kv",
+   "kind": "Constant",
+   "equation": "3",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    670.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    670.0
+   ],
+   "to_pt": [
+    0.0,
+    670.0
+   ]
+  },
+  {
+   "id": 11,
+   "name": "ref",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    740.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    740.0
+   ],
+   "to_pt": [
+    0.0,
+    740.0
+   ]
+  },
+  {
+   "id": 12,
+   "name": "Fmax",
+   "kind": "Constant",
+   "equation": "30",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    810.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    810.0
+   ],
+   "to_pt": [
+    0.0,
+    810.0
+   ]
+  },
+  {
+   "id": 13,
+   "name": "Fuser",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    880.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    880.0
+   ],
+   "to_pt": [
+    0.0,
+    880.0
+   ]
+  },
+  {
+   "id": 14,
+   "name": "Auto",
+   "kind": "Constant",
+   "equation": "1",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    950.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    950.0
+   ],
+   "to_pt": [
+    0.0,
+    950.0
+   ]
+  },
+  {
+   "id": 15,
+   "name": "x0",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1020.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1020.0
+   ],
+   "to_pt": [
+    0.0,
+    1020.0
+   ]
+  },
+  {
+   "id": 16,
+   "name": "v0",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1090.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1090.0
+   ],
+   "to_pt": [
+    0.0,
+    1090.0
+   ]
+  },
+  {
+   "id": 17,
+   "name": "th0",
+   "kind": "Constant",
+   "equation": "0.12",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1160.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1160.0
+   ],
+   "to_pt": [
+    0.0,
+    1160.0
+   ]
+  },
+  {
+   "id": 18,
+   "name": "w0",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1230.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1230.0
+   ],
+   "to_pt": [
+    0.0,
+    1230.0
+   ]
+  },
+  {
+   "id": 19,
+   "name": "CartX",
+   "kind": "Stock",
+   "equation": "x0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1300.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1300.0
+   ],
+   "to_pt": [
+    0.0,
+    1300.0
+   ]
+  },
+  {
+   "id": 20,
+   "name": "CartV",
+   "kind": "Stock",
+   "equation": "v0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1370.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1370.0
+   ],
+   "to_pt": [
+    0.0,
+    1370.0
+   ]
+  },
+  {
+   "id": 21,
+   "name": "PoleTh",
+   "kind": "Stock",
+   "equation": "th0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1440.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1440.0
+   ],
+   "to_pt": [
+    0.0,
+    1440.0
+   ]
+  },
+  {
+   "id": 22,
+   "name": "PoleW",
+   "kind": "Stock",
+   "equation": "w0",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1510.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1510.0
+   ],
+   "to_pt": [
+    0.0,
+    1510.0
+   ]
+  },
+  {
+   "id": 23,
+   "name": "Fraw",
+   "kind": "Aux",
+   "equation": "IF THEN ELSE(Auto > 0.5, kx*(CartX-ref) + kv*CartV + kth*PoleTh + kw*PoleW, 0) + Fuser",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1580.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1580.0
+   ],
+   "to_pt": [
+    0.0,
+    1580.0
+   ]
+  },
+  {
+   "id": 24,
+   "name": "Force",
+   "kind": "Aux",
+   "equation": "MAX(0-Fmax, MIN(Fmax, Fraw))",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1650.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1650.0
+   ],
+   "to_pt": [
+    0.0,
+    1650.0
+   ]
+  },
+  {
+   "id": 25,
+   "name": "Tmp",
+   "kind": "Aux",
+   "equation": "(Force - CartFric*CartV + PoleMass*HalfLen*PoleW*PoleW*SIN(PoleTh))/(CartMass+PoleMass)",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1720.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1720.0
+   ],
+   "to_pt": [
+    0.0,
+    1720.0
+   ]
+  },
+  {
+   "id": 26,
+   "name": "PoleAccel",
+   "kind": "Aux",
+   "equation": "(Grav*SIN(PoleTh) - COS(PoleTh)*Tmp)/(HalfLen*(4/3 - PoleMass*COS(PoleTh)*COS(PoleTh)/(CartMass+PoleMass))) - PoleFric*PoleW",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1790.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1790.0
+   ],
+   "to_pt": [
+    0.0,
+    1790.0
+   ]
+  },
+  {
+   "id": 27,
+   "name": "CartAccel",
+   "kind": "Aux",
+   "equation": "Tmp - PoleMass*HalfLen*PoleAccel*COS(PoleTh)/(CartMass+PoleMass)",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1860.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    0.0,
+    1860.0
+   ],
+   "to_pt": [
+    0.0,
+    1860.0
+   ]
+  },
+  {
+   "id": 28,
+   "name": "dX",
+   "kind": "Flow",
+   "equation": "CartV",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    1930.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": 19,
+   "from_pt": [
+    0.0,
+    1930.0
+   ],
+   "to_pt": [
+    0.0,
+    1930.0
+   ]
+  },
+  {
+   "id": 29,
+   "name": "dV",
+   "kind": "Flow",
+   "equation": "CartAccel",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    2000.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": 20,
+   "from_pt": [
+    0.0,
+    2000.0
+   ],
+   "to_pt": [
+    0.0,
+    2000.0
+   ]
+  },
+  {
+   "id": 30,
+   "name": "dTh",
+   "kind": "Flow",
+   "equation": "PoleW",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    2070.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": 21,
+   "from_pt": [
+    0.0,
+    2070.0
+   ],
+   "to_pt": [
+    0.0,
+    2070.0
+   ]
+  },
+  {
+   "id": 31,
+   "name": "dW",
+   "kind": "Flow",
+   "equation": "PoleAccel",
+   "units": "",
+   "comment": "",
+   "pos": [
+    300.0,
+    2140.0
+   ],
+   "non_negative": false,
+   "from": null,
+   "to": 22,
+   "from_pt": [
+    0.0,
+    2140.0
+   ],
+   "to_pt": [
+    0.0,
+    2140.0
+   ]
+  }
+ ],
+ "links": [],
+ "next_id": 32,
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 0.1,
+  "time_step": 0.005,
+  "time_units": "Second",
+  "method": "RungeKutta4"
+ }
+}

@@ -1,0 +1,7 @@
+Module,Description
+Demand and settings,"What customers ask for each week (a step, i.i.d. noise or a data series) and the cost and start values."
+Retailer,"Sells to customers. Holds stock and backlog, smooths the orders it receives, decides how much to order."
+Wholesaler,"Supplies the retailer, with shipment and order delays of two weeks each way."
+Distributor,Supplies the wholesaler.
+Factory,Produces for the distributor; its production takes two weeks.
+Results and tests,"Costs, order variance and bullwhip by stage, fill rate, and the quantities the in-model tests watch."

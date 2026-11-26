@@ -1,0 +1,1477 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Base Arrivals",
+      "kind": "Constant",
+      "equation": "500",
+      "units": "cases/week",
+      "comment": "Cases arriving each week before the change.",
+      "pos": [
+        92.0,
+        44.8
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Arrival Change",
+      "kind": "Constant",
+      "equation": "0.2",
+      "units": "dmnl",
+      "comment": "Fractional change in arrivals from week 10 (0.2 = 20% more; -1 = no arrivals).",
+      "pos": [
+        204.0,
+        44.8
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Case Arrivals",
+      "kind": "Flow",
+      "equation": "Base Arrivals * (1 + STEP(Arrival Change, 10))",
+      "units": "cases/week",
+      "comment": "",
+      "pos": [
+        144.0,
+        134.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 4,
+      "from_pt": [
+        44.0,
+        134.4
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Backlog",
+      "kind": "Stock",
+      "equation": "1000",
+      "units": "cases",
+      "comment": "Open cases waiting or in progress.",
+      "pos": [
+        268.0,
+        134.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Closed Cases",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "cases",
+      "comment": "Cumulative cases closed since week 0.",
+      "pos": [
+        540.0,
+        134.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Target Service Time",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "week",
+      "comment": "Time the centre aims to take to close a case.",
+      "pos": [
+        132.0,
+        336.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Desired Completions",
+      "kind": "Aux",
+      "equation": "Backlog / Target Service Time",
+      "units": "cases/week",
+      "comment": "",
+      "pos": [
+        268.0,
+        257.6
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Standard Productivity",
+      "kind": "Constant",
+      "equation": "25",
+      "units": "cases/person/week",
+      "comment": "Cases a trained person closes per week at normal pace.",
+      "pos": [
+        324.0,
+        448.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Standard Capacity",
+      "kind": "Aux",
+      "equation": "Staff * Standard Productivity",
+      "units": "cases/week",
+      "comment": "",
+      "pos": [
+        492.0,
+        448.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Work Pressure",
+      "kind": "Aux",
+      "equation": "XIDZ(Desired Completions, Standard Capacity, 2)",
+      "units": "dmnl",
+      "comment": "Desired completions relative to normal capacity; 2 when there are no staff.",
+      "pos": [
+        372.0,
+        336.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Pressure Sensitivity",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "dmnl",
+      "comment": "How strongly staff speed up (or slow down) under pressure; 0 switches the loop off.",
+      "pos": [
+        368.0,
+        190.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Productivity Effect",
+      "kind": "Aux",
+      "equation": "MIN(1.25, MAX(0.75, 1 + Pressure Sensitivity * (Work Pressure - 1)))",
+      "units": "dmnl",
+      "comment": "Overtime and shortcuts: up to 25% faster under pressure, up to 25% slower when work is short.",
+      "pos": [
+        428.0,
+        257.6
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Capacity",
+      "kind": "Aux",
+      "equation": "Standard Capacity * Productivity Effect",
+      "units": "cases/week",
+      "comment": "",
+      "pos": [
+        556.0,
+        257.6
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Minimum Processing Time",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "week",
+      "comment": "The fastest a case can be closed, however many staff there are.",
+      "pos": [
+        476.0,
+        44.8
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Completions",
+      "kind": "Flow",
+      "equation": "MIN(Capacity, Backlog / Minimum Processing Time)",
+      "units": "cases/week",
+      "comment": "Limited by staff capacity and by the work available.",
+      "pos": [
+        412.0,
+        134.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 4,
+      "to": 5,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Desired Staff",
+      "kind": "Aux",
+      "equation": "Desired Completions / Standard Productivity",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        156.0,
+        425.6
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Hiring Time",
+      "kind": "Constant",
+      "equation": "6",
+      "units": "week",
+      "comment": "Time to decide, advertise and recruit.",
+      "pos": [
+        68.0,
+        504.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Average Tenure",
+      "kind": "Constant",
+      "equation": "100",
+      "units": "week",
+      "comment": "",
+      "pos": [
+        644.0,
+        504.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Quits",
+      "kind": "Flow",
+      "equation": "Staff / Average Tenure",
+      "units": "person/week",
+      "comment": "",
+      "pos": [
+        604.0,
+        582.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 24,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        700.0,
+        582.4
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Hiring",
+      "kind": "Flow",
+      "equation": "MAX(0, (Desired Staff - Staff) / Hiring Time + Quits)",
+      "units": "person/week",
+      "comment": "Replaces quits and closes the staff gap; ignores people already in training.",
+      "pos": [
+        156.0,
+        582.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 22,
+      "from_pt": [
+        68.0,
+        582.4
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Training Time",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "",
+      "pos": [
+        380.0,
+        504.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Trainees",
+      "kind": "Stock",
+      "equation": "0.8",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        268.0,
+        582.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Graduations",
+      "kind": "Flow",
+      "equation": "Trainees / Training Time",
+      "units": "person/week",
+      "comment": "",
+      "pos": [
+        380.0,
+        582.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 22,
+      "to": 24,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Staff",
+      "kind": "Stock",
+      "equation": "20",
+      "units": "person",
+      "comment": "Trained staff.",
+      "pos": [
+        492.0,
+        582.4
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 50,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 25,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 26,
+      "from": 2,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 27,
+      "from": 4,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 28,
+      "from": 6,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 29,
+      "from": 24,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 30,
+      "from": 8,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 31,
+      "from": 7,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 32,
+      "from": 9,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 33,
+      "from": 11,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 34,
+      "from": 10,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 35,
+      "from": 9,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 36,
+      "from": 12,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 13,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 38,
+      "from": 4,
+      "to": 15,
+      "bend": -30.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 39,
+      "from": 14,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 40,
+      "from": 7,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 41,
+      "from": 8,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 42,
+      "from": 24,
+      "to": 19,
+      "bend": -25.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 43,
+      "from": 18,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 44,
+      "from": 16,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 45,
+      "from": 24,
+      "to": 20,
+      "bend": -89.6,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 46,
+      "from": 17,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 47,
+      "from": 19,
+      "to": 20,
+      "bend": -134.4,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 48,
+      "from": 22,
+      "to": 23,
+      "bend": -25.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 49,
+      "from": 21,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 60.0,
+    "time_step": 0.0625,
+    "time_units": "week",
+    "method": "Euler"
+  },
+  "next_id": 362,
+  "sheets": [
+    {
+      "id": 50,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 361,
+      "name": "Causal loops",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 339,
+            "text": "Backlog",
+            "pos": [
+              184.6,
+              416.6
+            ]
+          },
+          {
+            "id": 340,
+            "text": "Work Pressure",
+            "pos": [
+              324.0,
+              277.2
+            ]
+          },
+          {
+            "id": 341,
+            "text": "Capacity",
+            "pos": [
+              463.5,
+              416.6
+            ]
+          },
+          {
+            "id": 342,
+            "text": "Completions",
+            "pos": [
+              324.0,
+              556.0
+            ]
+          },
+          {
+            "id": 343,
+            "text": "Desired Staff",
+            "pos": [
+              110.4,
+              126.9
+            ]
+          },
+          {
+            "id": 344,
+            "text": "Hiring",
+            "pos": [
+              324.0,
+              -9.2
+            ]
+          },
+          {
+            "id": 345,
+            "text": "Staff",
+            "pos": [
+              537.7,
+              126.9
+            ]
+          },
+          {
+            "id": 346,
+            "text": "Case Arrivals",
+            "pos": [
+              21.6,
+              416.6
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 347,
+            "from": 339,
+            "to": 340,
+            "bend": -40.8,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 348,
+            "from": 340,
+            "to": 341,
+            "bend": -40.8,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 349,
+            "from": 341,
+            "to": 342,
+            "bend": -40.8,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 350,
+            "from": 342,
+            "to": 339,
+            "bend": -40.8,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 351,
+            "from": 339,
+            "to": 343,
+            "bend": -53.5,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 352,
+            "from": 343,
+            "to": 344,
+            "bend": -36.9,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 353,
+            "from": 344,
+            "to": 345,
+            "bend": -36.9,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 354,
+            "from": 345,
+            "to": 341,
+            "bend": -53.5,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 355,
+            "from": 345,
+            "to": 344,
+            "bend": 144.6,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 356,
+            "from": 345,
+            "to": 340,
+            "bend": -31.3,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 357,
+            "from": 346,
+            "to": 339,
+            "bend": 19.6,
+            "polarity": "+",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 358,
+            "pos": [
+              324.0,
+              416.6
+            ],
+            "reinforcing": false,
+            "label": "B1 Work pace",
+            "clockwise": true
+          },
+          {
+            "id": 359,
+            "pos": [
+              324.0,
+              150.5
+            ],
+            "reinforcing": false,
+            "label": "B2 Hiring",
+            "clockwise": true
+          },
+          {
+            "id": 360,
+            "pos": [
+              460.7,
+              -53.7
+            ],
+            "reinforcing": false,
+            "label": "B3 Staff gap",
+            "clockwise": false
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [
+    {
+      "name": "Cases are conserved",
+      "var": "",
+      "min": null,
+      "max": null,
+      "when": "Always",
+      "kind": "Balance",
+      "tolerance": null,
+      "relative": false,
+      "reference": [],
+      "stocks": [
+        "Backlog",
+        "Closed Cases"
+      ],
+      "inflows": [
+        "Case Arrivals"
+      ],
+      "outflows": []
+    },
+    {
+      "name": "People are conserved",
+      "var": "",
+      "min": null,
+      "max": null,
+      "when": "Always",
+      "kind": "Balance",
+      "tolerance": null,
+      "relative": false,
+      "reference": [],
+      "stocks": [
+        "Trainees",
+        "Staff"
+      ],
+      "inflows": [
+        "Hiring"
+      ],
+      "outflows": [
+        "Quits"
+      ]
+    },
+    {
+      "name": "Backlog never negative",
+      "var": "Backlog",
+      "min": null,
+      "max": null,
+      "when": "Always",
+      "kind": "NonNeg",
+      "tolerance": null,
+      "relative": false,
+      "reference": [],
+      "stocks": [],
+      "inflows": [],
+      "outflows": []
+    }
+  ],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE S1: a name nobody defined"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Level",
+  "kind": "stock",
+  "equation": "10",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Inflow",
+  "kind": "flow",
+  "equation": "Intake Rate",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "Level"
+ },
+ {
+  "op": "add_var",
+  "name": "Intake Rat",
+  "kind": "constant",
+  "equation": "2",
+  "units": "widget/Day",
+  "doc": "test"
+ }
+]

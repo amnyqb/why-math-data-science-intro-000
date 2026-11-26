@@ -1,0 +1,695 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "Start population",
+      "kind": "Constant",
+      "equation": "60",
+      "units": "thousand people",
+      "comment": "People in each class in 2020.",
+      "pos": [
+        150.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": "age",
+      "by_item": [
+        {
+          "item": "a5",
+          "equation": "62",
+          "table": []
+        },
+        {
+          "item": "a10",
+          "equation": "64",
+          "table": []
+        },
+        {
+          "item": "a15",
+          "equation": "66",
+          "table": []
+        },
+        {
+          "item": "a20",
+          "equation": "68",
+          "table": []
+        },
+        {
+          "item": "a25",
+          "equation": "70",
+          "table": []
+        },
+        {
+          "item": "a30",
+          "equation": "68",
+          "table": []
+        },
+        {
+          "item": "a35",
+          "equation": "64",
+          "table": []
+        },
+        {
+          "item": "a45",
+          "equation": "56",
+          "table": []
+        },
+        {
+          "item": "a50",
+          "equation": "50",
+          "table": []
+        },
+        {
+          "item": "a55",
+          "equation": "44",
+          "table": []
+        },
+        {
+          "item": "a60",
+          "equation": "36",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Mortality",
+      "kind": "Constant",
+      "equation": "0.001",
+      "units": "1/year",
+      "comment": "The share of each class that dies each year.",
+      "pos": [
+        400.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": "age",
+      "by_item": [
+        {
+          "item": "a40",
+          "equation": "0.003",
+          "table": []
+        },
+        {
+          "item": "a45",
+          "equation": "0.003",
+          "table": []
+        },
+        {
+          "item": "a50",
+          "equation": "0.003",
+          "table": []
+        },
+        {
+          "item": "a55",
+          "equation": "0.003",
+          "table": []
+        },
+        {
+          "item": "a60",
+          "equation": "0.01",
+          "table": []
+        },
+        {
+          "item": "a65plus",
+          "equation": "0.05",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Fertility",
+      "kind": "Constant",
+      "equation": "0.045",
+      "units": "1/year",
+      "comment": "Births a year per person aged 20 to 39.",
+      "pos": [
+        650.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Births per year",
+      "kind": "Aux",
+      "equation": "Fertility * (Population[a20] + Population[a25] + Population[a30] + Population[a35])",
+      "units": "thousand people/year",
+      "comment": "New people. They join the youngest class when the classes move up.",
+      "pos": [
+        650.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Population",
+      "kind": "Stock",
+      "equation": "Start population",
+      "units": "thousand people",
+      "comment": "~",
+      "pos": [
+        420.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": "age",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Change",
+      "kind": "Flow",
+      "equation": "AGE(Population, every=5, entrants=Births per year) - Mortality * Population",
+      "units": "thousand people/year",
+      "comment": "The classes move up every five years and the youngest is refilled with the births of the period; deaths in every class.",
+      "pos": [
+        180.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 6,
+      "from_pt": [
+        50.0,
+        135.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": "age",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Total",
+      "kind": "Aux",
+      "equation": "TOTAL(Population)",
+      "units": "thousand people",
+      "comment": "Everyone.",
+      "pos": [
+        420.0,
+        340.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Old share",
+      "kind": "Aux",
+      "equation": "Population[a65plus] / Total",
+      "units": "dmnl",
+      "comment": "The share of people who are 65 or older.",
+      "pos": [
+        650.0,
+        340.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 19,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 10,
+      "from": 4,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 6,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 2,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 6,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 5,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 3,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 6,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 6,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 8,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 50.0,
+    "time_step": 1.0,
+    "time_units": "year",
+    "method": "Euler"
+  },
+  "next_id": 29,
+  "sheets": [
+    {
+      "id": 19,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "Figure 13.1  Population by age group.",
+      "source": "Chapter 13 example model"
+    },
+    {
+      "id": 29,
+      "name": "Causal loops",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 20,
+            "text": "Population",
+            "pos": [
+              182.5,
+              60.0
+            ]
+          },
+          {
+            "id": 21,
+            "text": "Change",
+            "pos": [
+              182.5,
+              320.0
+            ]
+          },
+          {
+            "id": 24,
+            "text": "Births per year",
+            "pos": [
+              839.9935,
+              270.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 22,
+            "from": 20,
+            "to": 21,
+            "bend": -130.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 23,
+            "from": 21,
+            "to": 20,
+            "bend": -130.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 25,
+            "from": 24,
+            "to": 21,
+            "bend": -70.00001,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 26,
+            "from": 20,
+            "to": 24,
+            "bend": -70.00001,
+            "polarity": "+",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 27,
+            "pos": [
+              182.5,
+              190.0
+            ],
+            "reinforcing": true,
+            "label": "R1",
+            "clockwise": true
+          },
+          {
+            "id": 28,
+            "pos": [
+              401.66452,
+              216.66667
+            ],
+            "reinforcing": true,
+            "label": "R2",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "Figure 13.2  Births and ageing feed the population.",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "age",
+      "items": [
+        "a0",
+        "a5",
+        "a10",
+        "a15",
+        "a20",
+        "a25",
+        "a30",
+        "a35",
+        "a40",
+        "a45",
+        "a50",
+        "a55",
+        "a60",
+        "a65plus"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Source Serif 4",
+    "mono_font": "Source Code Pro",
+    "text_scale": 1.0,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "colors": {
+      "aux": "#b5651d",
+      "flow": "#2b7a78",
+      "link": "#5c6370",
+      "stock": "#1f3a5f",
+      "stock_fill": "#eef3fa",
+      "text": "#1a1a1a"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "cards",
+    "caption_size": 13.0
+  }
+}

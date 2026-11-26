@@ -1,0 +1,196 @@
+[
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "60"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.001"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Year"
+ },
+ {
+  "op": "set_setting",
+  "key": "method",
+  "value": "euler"
+ },
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "Predator and prey: Lotka-Volterra cycles"
+ },
+ {
+  "op": "add_var",
+  "name": "Prey",
+  "kind": "stock",
+  "equation": "40",
+  "units": "prey"
+ },
+ {
+  "op": "add_var",
+  "name": "Predators",
+  "kind": "stock",
+  "equation": "15",
+  "units": "predators"
+ },
+ {
+  "op": "add_var",
+  "name": "Prey Births",
+  "kind": "flow",
+  "equation": "Prey Growth Rate * Prey * (1 - Logistic On * Prey / Prey Capacity)",
+  "units": "prey/Year",
+  "to": "Prey"
+ },
+ {
+  "op": "add_var",
+  "name": "Prey Eaten",
+  "kind": "flow",
+  "equation": "Attack Rate * Prey * Predators",
+  "units": "prey/Year",
+  "from": "Prey"
+ },
+ {
+  "op": "add_var",
+  "name": "Predator Births",
+  "kind": "flow",
+  "equation": "Conversion Rate * Prey * Predators",
+  "units": "predators/Year",
+  "to": "Predators"
+ },
+ {
+  "op": "add_var",
+  "name": "Predator Deaths",
+  "kind": "flow",
+  "equation": "Predator Death Rate * Predators",
+  "units": "predators/Year",
+  "from": "Predators"
+ },
+ {
+  "op": "add_var",
+  "name": "Prey Growth Rate",
+  "kind": "constant",
+  "equation": "0.8",
+  "units": "1/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Attack Rate",
+  "kind": "constant",
+  "equation": "0.04",
+  "units": "1/predators/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Conversion Rate",
+  "kind": "constant",
+  "equation": "0.01",
+  "units": "1/prey/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Predator Death Rate",
+  "kind": "constant",
+  "equation": "0.6",
+  "units": "1/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Logistic On",
+  "kind": "constant",
+  "equation": "0",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Prey Capacity",
+  "kind": "constant",
+  "equation": "200",
+  "units": "prey"
+ },
+ {
+  "op": "add_group",
+  "name": "Prey",
+  "vars": [
+   "Prey",
+   "Prey Births",
+   "Prey Eaten",
+   "Prey Growth Rate",
+   "Attack Rate"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Predators",
+  "vars": [
+   "Predators",
+   "Predator Births",
+   "Predator Deaths",
+   "Conversion Rate",
+   "Predator Death Rate"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Logistic option",
+  "vars": [
+   "Logistic On",
+   "Prey Capacity"
+  ]
+ },
+ {
+  "op": "set_lever",
+  "var": "Logistic On",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Logistic On",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "set_lever",
+  "var": "Prey Capacity",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Prey Capacity",
+  "min": 100,
+  "max": 1000
+ },
+ {
+  "op": "set_lever",
+  "var": "Attack Rate",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Attack Rate",
+  "min": 0.02,
+  "max": 0.08
+ },
+ {
+  "op": "set_purpose",
+  "problem": "Why do predator and prey numbers rise and fall in endless cycles, and what changes when the prey also crowd themselves?",
+  "kind": "understand a mechanism",
+  "out_of_scope": "age structure, space, several prey species"
+ },
+ {
+  "op": "add_objective",
+  "title": "Keep both populations alive",
+  "kind": "stay within a band",
+  "test": "Prey and Predators stay above zero in the 60 years (they cycle, they do not die out).",
+  "var": "Predators"
+ }
+]

@@ -1,0 +1,92 @@
+{
+  "checks_failed": 0,
+  "goals": [
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.05991540111148388,
+      "ensemble_nrmse_mean": 0.017848212855050324,
+      "failed_runs": 0,
+      "goal": "Population peak",
+      "goal_value_tau": 0.9794059405940594,
+      "mode_agreement": 0.9504950495049505,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.026802150870161433,
+      "ensemble_nrmse_mean": 0.008116221986907785,
+      "failed_runs": 0,
+      "goal": "Industrial output per capita peak",
+      "goal_value_tau": 0.9849504950495049,
+      "mode_agreement": 0.9702970297029703,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.09320914200480215,
+      "ensemble_nrmse_mean": 0.020952652237825747,
+      "failed_runs": 0,
+      "goal": "Food per capita lowest",
+      "goal_value_tau": 0.9710891089108911,
+      "mode_agreement": 0.9603960396039604,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.019259200960199778,
+      "ensemble_nrmse_mean": 0.0038855495272521272,
+      "failed_runs": 0,
+      "goal": "Persistent pollution index peak",
+      "goal_value_tau": 0.9928712871287129,
+      "mode_agreement": 1.0,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    }
+  ],
+  "pass": true,
+  "policies": [],
+  "runs": 101,
+  "shared_parameters": [
+    "NRI",
+    "ICOR1",
+    "ALIC1",
+    "DCFSN",
+    "PPTD1",
+    "SAD",
+    "LPD",
+    "LFERTI",
+    "PPGF1",
+    "SCOR1",
+    "ALSC1",
+    "MTFN",
+    "ALAI1",
+    "IEAT"
+  ]
+}

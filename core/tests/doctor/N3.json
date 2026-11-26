@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE N3: a result that depends on the time step"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "20"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "2"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "10",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Tau",
+  "kind": "constant",
+  "equation": "4",
+  "units": "Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Decay",
+  "kind": "flow",
+  "equation": "S / Tau",
+  "units": "widget/Day",
+  "doc": "test",
+  "from": "S"
+ }
+]

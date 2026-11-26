@@ -1,0 +1,1 @@
+- 2026-11-20: refrozen c70eb5ef5fe9 -> 55ad36eab544: added loop-to-parameter mapping to the config before any score was computed

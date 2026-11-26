@@ -1,0 +1,7 @@
+entry,finding,reproduced,evidence
+0,"growth then decline of POP, IO, F, PPOLX with the decline in the 21st century",True,"POP: peak 2027, end/peak 0.56; IO: peak 2016, end/peak 0.02; F: peak 2018, end/peak 0.28; PPOLX: peak 2034, end/peak 0.06"
+9,PPOLX stays below 12 over the standard run,True,maximum 11.00
+4,capital begins to decline when roughly half to 60 percent of the resources are used (accept 40 to 70 percent),True,capital peaks in 2024 with 67% of the resources used
+16,dominant eigenvalue of the 1970 linearisation near +0.027 (within 30 percent),True,largest real part 0.0274 (29 eigenvalues; Jacobian includes hidden delay states)
+10,job sector can be ignored: CUF fixed at 1 changes the standard run by under 5 percent,True,CUF ranges 0.913 to 1.000 in the standard run; largest NRMSE of a goal output 0.003
+37,with the policy neither IO nor POP declines before 2100 (end value at least 90 percent of the maximum),True,"IO end 1.74e+12 (max 1.81e+12); POP end 5.71e+09 (max 5.73e+09); the paper: IO about 1.5e12, POP slightly below 6e9. Standard run: POP end/peak 0.56"

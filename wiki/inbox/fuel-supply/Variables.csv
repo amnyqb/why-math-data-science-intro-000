@@ -1,0 +1,29 @@
+Name,Equation,Units,Description,Per,Combine,Module
+Target stock,Max fill * Capacity,MB,The stock to reach by the target day.,Tank,,Inputs & limits
+Days left,"MAX(1, Target day - TIME + 1)",Day,"Days until the target day, counting today (at least 1).",Tank,,Plans / Optimal plan / Target & gap
+Gap per day,(Target stock - Stock optimal plan) / Days left,MB/Day,"An even share of what is missing, per day left.",Tank,,Plans / Optimal plan / Target & gap
+Required MB,"MAX(0, Consumption forecast + Gap per day)",MB/Day,"What must arrive today: the burn plus the gap share, never below zero.",Tank,,Plans / Optimal plan / Target & gap
+Trucks needed,CEILING(Required MB * 1000 / Barrels per truck - 0.0000005),Truck/Day,Whole trucks for the required MB.,Tank,,Plans / Optimal plan / Trucks & skids
+Trucks planned,"Ready * MIN(Trucks needed, Max trucks per day)",Truck/Day,Trucks of the optimal plan: limited by what the skids can unload.,Tank,,Plans / Optimal plan / Trucks & skids
+Closing stock optimal,Stock optimal plan + Delivery optimal plan - Burn optimal plan,MB,"Stock at the end of the day, optimal plan.",Tank,,Plans / Optimal plan / Tank balance
+Closing stock current,Stock current plan + Delivery current plan - Burn current plan,MB,"Stock at the end of the day, current plan.",Tank,,Plans / Current plan
+Closing fill optimal,"ZIDZ(Closing stock optimal, Capacity)",Fraction,"Fill level at the end of the day, optimal plan.",Tank,Average,Plans / Optimal plan / Tank balance
+Closing fill current,"ZIDZ(Closing stock current, Capacity)",Fraction,"Fill level at the end of the day, current plan.",Tank,Average,Plans / Current plan
+Shortage vs target,"Ready * MAX(0, Target stock - Closing stock current)",MB,How far the current plan leaves the tank below target.,Tank,,Plans / Current plan
+Below minimum,Ready * (Closing fill current < Min fill),Yes/No,1 when the current plan leaves the tank below its minimum level.,Tank,,Plans / Current plan
+Region stock optimal,TOTAL(Stock optimal plan),MB,"Stock of the region's tanks, optimal plan.",Region,,Totals / Region totals
+Region stock current,TOTAL(Stock current plan),MB,"Stock of the region's tanks, current plan.",Region,,Totals / Region totals
+Region capacity,TOTAL(Capacity),MB,Capacity of the region's tanks.,Region,,Totals / Region totals
+Region trucks optimal,TOTAL(Trucks planned),Truck/Day,"Trucks per day the region's tanks need, optimal plan.",Region,,Totals / Region totals
+Region trucks current,TOTAL(Current plan trucks),Truck/Day,Trucks per day in the current plan for the region.,Region,,Totals / Region totals
+Region shortage,TOTAL(Shortage vs target),MB,"Shortage against target in the region, current plan.",Region,,Totals / Region totals
+Region fill optimal,"ZIDZ(Region stock optimal, Region capacity)",Fraction,"Region fill level, optimal plan.",Region,Average,Totals / Region totals
+Region fill current,"ZIDZ(Region stock current, Region capacity)",Fraction,"Region fill level, current plan.",Region,Average,Totals / Region totals
+Network stock optimal,TOTAL(Stock optimal plan),MB,"All tanks together, optimal plan.",,,Totals / Network totals
+Network stock current,TOTAL(Stock current plan),MB,"All tanks together, current plan.",,,Totals / Network totals
+Network capacity,TOTAL(Capacity),MB,All tank capacity.,,,Totals / Network totals
+Network trucks optimal,TOTAL(Trucks planned),Truck/Day,"Trucks per day, all tanks, optimal plan.",,,Totals / Network totals
+Network trucks current,TOTAL(Current plan trucks),Truck/Day,"Trucks per day, all tanks, current plan.",,,Totals / Network totals
+Network shortage,TOTAL(Shortage vs target),MB,"Shortage against target, all tanks, current plan.",,,Totals / Network totals
+Network fill optimal,"ZIDZ(Network stock optimal, Network capacity)",Fraction,"Fill level of the whole network, optimal plan.",,,Totals / Network totals
+Network fill current,"ZIDZ(Network stock current, Network capacity)",Fraction,"Fill level of the whole network, current plan.",,,Totals / Network totals

@@ -1,0 +1,528 @@
+[
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "120"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.125"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Month"
+ },
+ {
+  "op": "set_setting",
+  "key": "method",
+  "value": "euler"
+ },
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "Market growth and capital investment"
+ },
+ {
+  "op": "add_var",
+  "name": "Sales Force",
+  "kind": "stock",
+  "units": "Person",
+  "equation": "Initial Sales Force",
+  "doc": "Salesmen"
+ },
+ {
+  "op": "add_var",
+  "name": "Order Backlog",
+  "kind": "stock",
+  "units": "units",
+  "equation": "Target Delivery Delay * Initial Capacity",
+  "doc": "Orders taken and not yet shipped"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity",
+  "kind": "stock",
+  "units": "units/Month",
+  "equation": "Initial Capacity",
+  "doc": "Units per month the plant can ship"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity on Order",
+  "kind": "stock",
+  "units": "units/Month",
+  "equation": "0",
+  "doc": "Capacity ordered and not yet working"
+ },
+ {
+  "op": "add_var",
+  "name": "Initial Capacity",
+  "kind": "constant",
+  "units": "units/Month",
+  "equation": "100",
+  "doc": "Production capacity at the start (equals orders at the start)"
+ },
+ {
+  "op": "add_var",
+  "name": "Target Delivery Delay",
+  "kind": "constant",
+  "units": "Month",
+  "equation": "3",
+  "doc": "Delivery delay the firm and its customers regard as normal"
+ },
+ {
+  "op": "add_var",
+  "name": "Minimum Delivery Time",
+  "kind": "constant",
+  "units": "Month",
+  "equation": "1",
+  "doc": "Shortest time from order to shipment when capacity is ample"
+ },
+ {
+  "op": "add_var",
+  "name": "Initial Sales Force",
+  "kind": "constant",
+  "units": "Person",
+  "equation": "20",
+  "doc": "Salesmen at the start"
+ },
+ {
+  "op": "add_var",
+  "name": "Orders per Salesman",
+  "kind": "constant",
+  "units": "units/Month/Person",
+  "equation": "5",
+  "doc": "Orders one salesman brings in when the delivery delay is normal"
+ },
+ {
+  "op": "add_var",
+  "name": "Price",
+  "kind": "constant",
+  "units": "kUSD/units",
+  "equation": "10",
+  "doc": "Revenue per unit shipped"
+ },
+ {
+  "op": "add_var",
+  "name": "Salary Cost",
+  "kind": "constant",
+  "units": "kUSD/Month/Person",
+  "equation": "2.5",
+  "doc": "Cost of one salesman"
+ },
+ {
+  "op": "add_var",
+  "name": "Budget Fraction",
+  "kind": "constant",
+  "units": "1",
+  "equation": "0.07",
+  "doc": "Share of revenue spent on the sales force (0.05 keeps the start in balance)"
+ },
+ {
+  "op": "add_var",
+  "name": "Hiring Time",
+  "kind": "constant",
+  "units": "Month",
+  "equation": "6",
+  "doc": "Time to bring the sales force to its budget"
+ },
+ {
+  "op": "add_var",
+  "name": "Delay Perception Time",
+  "kind": "constant",
+  "units": "Month",
+  "equation": "3",
+  "doc": "Time customers and the firm take to notice a change in delivery delay"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity Acquisition Time",
+  "kind": "constant",
+  "units": "Month",
+  "equation": "18",
+  "doc": "Time from ordering new capacity until it works"
+ },
+ {
+  "op": "add_var",
+  "name": "Delay Effect Switch",
+  "kind": "constant",
+  "units": "1",
+  "equation": "1",
+  "doc": "1 = a long delivery delay discourages orders; 0 = orders ignore the delay"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity Switch",
+  "kind": "constant",
+  "units": "1",
+  "equation": "1",
+  "doc": "1 = the firm orders capacity when delivery delay is long; 0 = capacity stays as it is"
+ },
+ {
+  "op": "add_var",
+  "name": "Sales Budget Switch",
+  "kind": "constant",
+  "units": "1",
+  "equation": "1",
+  "doc": "1 = the sales force follows revenue; 0 = the sales force stays at its starting size"
+ },
+ {
+  "op": "add_var",
+  "name": "Delay Effect on Orders",
+  "kind": "lookup",
+  "units": "1",
+  "doc": "Multiplier on orders as a function of the delay ratio"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity Order Fraction",
+  "kind": "lookup",
+  "units": "1/Month",
+  "doc": "Fraction of capacity ordered per month, as a function of the delay ratio"
+ },
+ {
+  "op": "add_var",
+  "name": "Order Rate",
+  "kind": "flow",
+  "units": "units/Month",
+  "equation": "Sales Force * Orders per Salesman * Delay Effect Multiplier",
+  "to": "Order Backlog",
+  "doc": "New orders"
+ },
+ {
+  "op": "add_var",
+  "name": "Shipments",
+  "kind": "aux",
+  "units": "units/Month",
+  "equation": "MIN(Capacity, Order Backlog / Minimum Delivery Time)",
+  "doc": "Shipments: capacity, unless the backlog is nearly empty"
+ },
+ {
+  "op": "add_var",
+  "name": "Shipping",
+  "kind": "flow",
+  "units": "units/Month",
+  "equation": "Shipments",
+  "from": "Order Backlog",
+  "doc": "Orders leaving the backlog as shipments"
+ },
+ {
+  "op": "add_var",
+  "name": "Delivery Delay",
+  "kind": "aux",
+  "units": "Month",
+  "equation": "Order Backlog / Shipments",
+  "doc": "Time an order waits: backlog over shipment rate"
+ },
+ {
+  "op": "add_var",
+  "name": "Perceived Delay",
+  "kind": "aux",
+  "units": "Month",
+  "equation": "SMOOTH(Delivery Delay, Delay Perception Time)",
+  "doc": "Delivery delay as customers and the firm see it"
+ },
+ {
+  "op": "add_var",
+  "name": "Delay Ratio",
+  "kind": "aux",
+  "units": "1",
+  "equation": "Perceived Delay / Target Delivery Delay"
+ },
+ {
+  "op": "add_var",
+  "name": "Delay Effect Multiplier",
+  "kind": "aux",
+  "units": "1",
+  "equation": "1 + Delay Effect Switch * (Delay Effect on Orders(Delay Ratio) - 1)",
+  "doc": "Effect of delivery delay on orders, after the switch"
+ },
+ {
+  "op": "add_var",
+  "name": "Revenue",
+  "kind": "aux",
+  "units": "kUSD/Month",
+  "equation": "Shipments * Price"
+ },
+ {
+  "op": "add_var",
+  "name": "Target Sales Force",
+  "kind": "aux",
+  "units": "Person",
+  "equation": "IF THEN ELSE(Sales Budget Switch = 1, Budget Fraction * Revenue / Salary Cost, Initial Sales Force)",
+  "doc": "Sales force the budget pays for"
+ },
+ {
+  "op": "add_var",
+  "name": "Sales Force Change",
+  "kind": "flow",
+  "units": "Person/Month",
+  "equation": "(Target Sales Force - Sales Force) / Hiring Time",
+  "to": "Sales Force",
+  "doc": "Net hiring (negative = leaving)"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity Orders",
+  "kind": "flow",
+  "units": "units/Month/Month",
+  "equation": "Capacity Switch * Capacity * Capacity Order Fraction(Delay Ratio)",
+  "to": "Capacity on Order",
+  "doc": "New capacity ordered"
+ },
+ {
+  "op": "add_var",
+  "name": "Capacity Completions",
+  "kind": "flow",
+  "units": "units/Month/Month",
+  "equation": "Capacity on Order / Capacity Acquisition Time",
+  "from": "Capacity on Order",
+  "to": "Capacity",
+  "doc": "New capacity coming into use"
+ },
+ {
+  "op": "add_var",
+  "name": "Order to Capacity Ratio",
+  "kind": "aux",
+  "units": "1",
+  "equation": "Order Rate / Capacity",
+  "doc": "Above 1 the backlog is growing"
+ },
+ {
+  "op": "set_table",
+  "name": "Delay Effect on Orders",
+  "points": [
+   [
+    0,
+    1.2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1.5,
+    0.85
+   ],
+   [
+    2,
+    0.65
+   ],
+   [
+    3,
+    0.4
+   ],
+   [
+    4,
+    0.25
+   ],
+   [
+    6,
+    0.12
+   ]
+  ]
+ },
+ {
+  "op": "set_table",
+  "name": "Capacity Order Fraction",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1.5,
+    0.05
+   ],
+   [
+    2,
+    0.1
+   ],
+   [
+    3,
+    0.15
+   ],
+   [
+    5,
+    0.2
+   ]
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Sales force",
+  "vars": [
+   "Sales Force",
+   "Sales Force Change",
+   "Target Sales Force",
+   "Budget Fraction",
+   "Salary Cost",
+   "Hiring Time",
+   "Sales Budget Switch",
+   "Initial Sales Force"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Orders and backlog",
+  "vars": [
+   "Order Rate",
+   "Order Backlog",
+   "Shipping",
+   "Orders per Salesman"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Delivery delay",
+  "vars": [
+   "Delivery Delay",
+   "Perceived Delay",
+   "Delay Ratio",
+   "Delay Perception Time",
+   "Target Delivery Delay",
+   "Minimum Delivery Time"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Delay effect on orders",
+  "vars": [
+   "Delay Effect on Orders",
+   "Delay Effect Multiplier",
+   "Delay Effect Switch"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Production capacity",
+  "vars": [
+   "Capacity",
+   "Capacity on Order",
+   "Capacity Orders",
+   "Capacity Completions",
+   "Capacity Order Fraction",
+   "Capacity Acquisition Time",
+   "Capacity Switch",
+   "Initial Capacity"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Money and shipments",
+  "vars": [
+   "Shipments",
+   "Revenue",
+   "Price",
+   "Order to Capacity Ratio"
+  ]
+ },
+ {
+  "op": "set_lever",
+  "var": "Budget Fraction",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Budget Fraction",
+  "min": 0.04,
+  "max": 0.08
+ },
+ {
+  "op": "set_lever",
+  "var": "Capacity Acquisition Time",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Capacity Acquisition Time",
+  "min": 3,
+  "max": 24
+ },
+ {
+  "op": "set_lever",
+  "var": "Delay Perception Time",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Delay Perception Time",
+  "min": 1,
+  "max": 12
+ },
+ {
+  "op": "set_lever",
+  "var": "Hiring Time",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Hiring Time",
+  "min": 2,
+  "max": 18
+ },
+ {
+  "op": "set_lever",
+  "var": "Capacity Switch",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Capacity Switch",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "set_lever",
+  "var": "Delay Effect Switch",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Delay Effect Switch",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "set_lever",
+  "var": "Sales Budget Switch",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Sales Budget Switch",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "set_purpose",
+  "problem": "Does a growing firm stall because it cannot deliver fast enough, and does adding capacity in response to long delivery delays restore growth or only add swings?",
+  "kind": "understand behaviour",
+  "out_of_scope": "price changes, competitors, product quality, finance beyond a sales budget"
+ },
+ {
+  "op": "add_objective",
+  "title": "Keep delivery near normal",
+  "kind": "stay within a band",
+  "test": "Delivery delay stays within 1.5 times the target of 3 months for the 120 months.",
+  "var": "Delivery Delay"
+ },
+ {
+  "op": "add_objective",
+  "title": "Keep growing",
+  "kind": "grow",
+  "test": "Capacity at month 120 is at least double the starting 100 units per month.",
+  "var": "Capacity"
+ }
+]

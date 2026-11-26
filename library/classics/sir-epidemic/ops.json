@@ -1,0 +1,228 @@
+[
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "300"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.01"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "set_setting",
+  "key": "method",
+  "value": "euler"
+ },
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "SIR epidemic: one outbreak in a closed town"
+ },
+ {
+  "op": "add_var",
+  "name": "Susceptible",
+  "kind": "stock",
+  "equation": "Population - Initial Infectious",
+  "units": "person"
+ },
+ {
+  "op": "add_var",
+  "name": "Infectious",
+  "kind": "stock",
+  "equation": "Initial Infectious",
+  "units": "person"
+ },
+ {
+  "op": "add_var",
+  "name": "Recovered",
+  "kind": "stock",
+  "equation": "0",
+  "units": "person"
+ },
+ {
+  "op": "add_var",
+  "name": "Infection",
+  "kind": "flow",
+  "equation": "Contact Rate * Infection Chance * Susceptible * Infectious / Population",
+  "units": "person/Day",
+  "from": "Susceptible",
+  "to": "Infectious"
+ },
+ {
+  "op": "add_var",
+  "name": "Recovery",
+  "kind": "flow",
+  "equation": "Infectious / Infectious Period",
+  "units": "person/Day",
+  "from": "Infectious",
+  "to": "Recovered"
+ },
+ {
+  "op": "add_var",
+  "name": "Population",
+  "kind": "constant",
+  "equation": "1000000",
+  "units": "person"
+ },
+ {
+  "op": "add_var",
+  "name": "Initial Infectious",
+  "kind": "constant",
+  "equation": "10",
+  "units": "person"
+ },
+ {
+  "op": "add_var",
+  "name": "Contact Rate",
+  "kind": "constant",
+  "equation": "10",
+  "units": "1/Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Infection Chance",
+  "kind": "constant",
+  "equation": "0.05",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Infectious Period",
+  "kind": "constant",
+  "equation": "5",
+  "units": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Transmission Rate",
+  "kind": "aux",
+  "equation": "Contact Rate * Infection Chance",
+  "units": "1/Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Basic Reproduction Number",
+  "kind": "aux",
+  "equation": "Transmission Rate * Infectious Period",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Effective Reproduction Number",
+  "kind": "aux",
+  "equation": "Basic Reproduction Number * Susceptible / Population",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Herd Immunity Threshold",
+  "kind": "aux",
+  "equation": "MAX(0, 1 - 1 / Basic Reproduction Number)",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Immune Fraction",
+  "kind": "aux",
+  "equation": "Recovered / Population",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Total People",
+  "kind": "aux",
+  "equation": "Susceptible + Infectious + Recovered",
+  "units": "person"
+ },
+ {
+  "op": "add_group",
+  "name": "Disease states",
+  "vars": [
+   "Susceptible",
+   "Infectious",
+   "Recovered"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Transitions",
+  "vars": [
+   "Infection",
+   "Recovery"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Contact lever",
+  "vars": [
+   "Contact Rate",
+   "Infection Chance",
+   "Transmission Rate"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Herd immunity check",
+  "vars": [
+   "Basic Reproduction Number",
+   "Effective Reproduction Number",
+   "Herd Immunity Threshold",
+   "Immune Fraction"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Town",
+  "vars": [
+   "Population",
+   "Initial Infectious",
+   "Total People"
+  ]
+ },
+ {
+  "op": "set_lever",
+  "var": "Contact Rate",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Contact Rate",
+  "min": 1,
+  "max": 20
+ },
+ {
+  "op": "set_lever",
+  "var": "Infection Chance",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Infection Chance",
+  "min": 0.01,
+  "max": 0.1
+ },
+ {
+  "op": "set_purpose",
+  "problem": "How big does one outbreak get, when does it peak, and how far must contacts fall to stop it?",
+  "kind": "understand behaviour",
+  "out_of_scope": "births, deaths, waning immunity, vaccination, spatial spread"
+ },
+ {
+  "op": "add_objective",
+  "title": "Keep the peak small",
+  "kind": "stay within a band",
+  "test": "Infectious stays below 50000 people at every day.",
+  "var": "Infectious"
+ }
+]

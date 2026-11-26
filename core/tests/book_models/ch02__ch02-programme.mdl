@@ -1,0 +1,69 @@
+{UTF-8}
+{ Chapter 2: a contractor serving a one-off programme of 600 projects; crews grow by reinvesting margin while the pool lasts. }
+New Projects=
+	0
+	~	projects/month
+	~	Projects entering the regional pool each month (0: a one-off programme).
+	|
+Project Pool= INTEG(
+	New Projects - Projects Done,
+	600)
+	~	projects
+	~	Projects open for tender in the region.
+	|
+Productivity=
+	2
+	~	projects/crew/month
+	~	Projects a crew completes per month when work is plentiful.
+	|
+Half Pool=
+	100
+	~	projects
+	~	Pool size at which crews find work half the time.
+	|
+Availability=
+	Project Pool / (Project Pool + Half Pool)
+	~	dmnl
+	~	Share of a crew's time that finds a project.
+	|
+Projects Done=
+	Crews * Productivity * Availability
+	~	projects/month
+	~	|
+Perception Delay=
+	0.5
+	~	month
+	~	Time for management to see that work is getting scarce.
+	|
+Perceived Availability=
+	SMOOTH3(Availability, Perception Delay)
+	~	dmnl
+	~	|
+Crews per Project=
+	0.06
+	~	crew/project
+	~	New crews funded by the margin on each project completed.
+	|
+Crew Additions=
+	Crews * Productivity * Perceived Availability * Crews per Project
+	~	crew/month
+	~	Crews hired from reinvested margin, at the availability management believes.
+	|
+Crew Life=
+	24
+	~	month
+	~	Average time a crew stays.
+	|
+Crew Departures=
+	Crews / Crew Life
+	~	crew/month
+	~	|
+Crews= INTEG(
+	Crew Additions - Crew Departures,
+	5)
+	~	crew
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 120 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

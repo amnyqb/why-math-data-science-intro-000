@@ -1,0 +1,358 @@
+{
+ "title": "Service desk",
+ "vars": [
+  {
+   "id": 1,
+   "name": "Backlog",
+   "kind": "Stock",
+   "equation": "200",
+   "units": "Ticket",
+   "comment": "Tickets waiting or in progress",
+   "pos": [
+    340,
+    150
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    660.0,
+    100.0
+   ],
+   "to_pt": [
+    820.0,
+    100.0
+   ],
+   "view": 7,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 2,
+   "name": "Arrivals",
+   "kind": "Flow",
+   "equation": "Base Arrivals + STEP(Arrival Increase, 5)",
+   "units": "Ticket/Week",
+   "comment": "",
+   "pos": [
+    190,
+    150
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 1,
+   "from_pt": [
+    80,
+    150
+   ],
+   "to_pt": [
+    620.0,
+    100.0
+   ],
+   "view": 7,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 3,
+   "name": "Base Arrivals",
+   "kind": "Constant",
+   "equation": "400",
+   "units": "Ticket/Week",
+   "comment": "",
+   "pos": [
+    120,
+    60
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    60.0,
+    100.0
+   ],
+   "to_pt": [
+    220.0,
+    100.0
+   ],
+   "view": 7,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 5,
+   "name": "Arrival Increase",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "Ticket/Week",
+   "comment": "",
+   "pos": [
+    260,
+    60
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    60.0,
+    190.0
+   ],
+   "to_pt": [
+    220.0,
+    190.0
+   ],
+   "view": 7,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 8,
+   "name": "Staff",
+   "kind": "Constant",
+   "equation": "20",
+   "units": "Person",
+   "comment": "",
+   "pos": [
+    660,
+    400
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    60.0,
+    280.0
+   ],
+   "to_pt": [
+    220.0,
+    280.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 9,
+   "name": "Productivity",
+   "kind": "Constant",
+   "equation": "4",
+   "units": "Ticket/Person/Day",
+   "comment": "",
+   "pos": [
+    470,
+    250
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    60.0,
+    370.0
+   ],
+   "to_pt": [
+    220.0,
+    370.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 10,
+   "name": "Resolutions",
+   "kind": "Flow",
+   "equation": "Staff * Productivity",
+   "units": "Ticket/Week",
+   "comment": "",
+   "pos": [
+    520,
+    150
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 1,
+   "to": null,
+   "from_pt": [
+    460.0,
+    190.0
+   ],
+   "to_pt": [
+    640,
+    150
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  }
+ ],
+ "links": [
+  {
+   "id": 4,
+   "from": 3,
+   "to": 2,
+   "bend": 13.7,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 6,
+   "from": 5,
+   "to": 2,
+   "bend": 13.7,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 11,
+   "from": 8,
+   "to": 10,
+   "bend": -25,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 12,
+   "from": 9,
+   "to": 10,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  }
+ ],
+ "notes": [],
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 40.0,
+  "time_step": 0.125,
+  "time_units": "Week",
+  "method": "Euler"
+ },
+ "next_id": 12,
+ "sheets": [
+  {
+   "id": 7,
+   "name": "Model",
+   "kind": "Diagram",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "cld": {
+    "nodes": [],
+    "links": [],
+    "loops": []
+   },
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "caption": "",
+   "source": ""
+  }
+ ],
+ "groups": [],
+ "modules": [],
+ "scenarios": [],
+ "trend_style": {
+  "title": "",
+  "subtitle": "",
+  "x_label": "",
+  "y_label": "",
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "legend": "TopRight",
+  "grid": true,
+  "line_width": 1.0,
+  "markers": false,
+  "time_marker": true,
+  "compare": true,
+  "colors": []
+ },
+ "sets": [],
+ "arrow_shape": "Curved",
+ "arrow_head": "Filled",
+ "diagram_style": "Cards",
+ "module_style": "Detailed",
+ "functions": [],
+ "checks": [],
+ "defs": [],
+ "instances": [],
+ "manifest": {
+  "title": "",
+  "description": "",
+  "levers": [],
+  "outputs": [],
+  "scenarios": [],
+  "bindings": [],
+  "validity": [],
+  "tests": [],
+  "goals": [],
+  "reduced_from": ""
+ }
+}

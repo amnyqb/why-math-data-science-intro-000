@@ -1,0 +1,1239 @@
+{
+  "findings": [
+    {
+      "code": "magic-number",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "doc": "Was written as 99 in the equation of Runway",
+              "equation": "99",
+              "from": null,
+              "kind": "constant",
+              "layer": null,
+              "name": "Runway constant",
+              "non_negative": false,
+              "op": "add_var",
+              "to": null,
+              "units": ""
+            },
+            {
+              "equation": "IF THEN ELSE(Burn Rate > 0, Cash / MAX(Burn Rate, 1), Runway constant)",
+              "name": "Runway",
+              "op": "set_equation"
+            }
+          ],
+          "title": "Make the constant “Runway constant” = 99 and use it in Runway"
+        }
+      ],
+      "id": 1,
+      "message": "“Runway” has the number 99 written into its equation (“IF THEN ELSE(Burn Rate > 0, Cash / MAX(Burn Rate, 1), 99)”): give it a name, a unit and a place to be changed",
+      "rule": "F4",
+      "severity": "error",
+      "source": "Modelling practice: no unnamed constants in equations (Sterman 2000, ch. 21)",
+      "var": "Runway"
+    },
+    {
+      "code": "magic-number",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "doc": "Was written as 99 in the equation of CAC Payback",
+              "equation": "99",
+              "from": null,
+              "kind": "constant",
+              "layer": null,
+              "name": "CAC Payback constant",
+              "non_negative": false,
+              "op": "add_var",
+              "to": null,
+              "units": ""
+            },
+            {
+              "equation": "XIDZ(Cost to Win a Customer, Contribution per Customer, CAC Payback constant)",
+              "name": "CAC Payback",
+              "op": "set_equation"
+            }
+          ],
+          "title": "Make the constant “CAC Payback constant” = 99 and use it in CAC Payback"
+        }
+      ],
+      "id": 2,
+      "message": "“CAC Payback” has the number 99 written into its equation (“XIDZ(Cost to Win a Customer, Contribution per Customer, 99)”): give it a name, a unit and a place to be changed",
+      "rule": "F4",
+      "severity": "error",
+      "source": "Modelling practice: no unnamed constants in equations (Sterman 2000, ch. 21)",
+      "var": "CAC Payback"
+    },
+    {
+      "code": "dt-too-large",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": false,
+          "ops": [
+            {
+              "key": "time_step",
+              "op": "set_setting",
+              "value": "0.0625"
+            }
+          ],
+          "title": "Set the time step to 0.0625"
+        }
+      ],
+      "id": 3,
+      "message": "The time step 0.125 is more than a third of the smallest time constant of the model (0.25 in stock / time of “Completions”): the integration will be inaccurate or unstable",
+      "rule": "N2",
+      "severity": "error",
+      "source": "Sterman (2000), Business Dynamics, §A.2: the time step should be at most a quarter to a half of the smallest time constant",
+      "var": "Completions"
+    },
+    {
+      "code": "lookup-outside",
+      "confirmed": true,
+      "fixes": [],
+      "id": 4,
+      "message": "The input of Customer Data table in “Customer Data” ((time / Data Time Unit)) runs from 0 to 36, outside the table’s range 0 to 12: the curve is held flat beyond its ends",
+      "rule": "F8",
+      "severity": "error",
+      "source": "Sterman (2000), §14.3: a table must cover the whole range its input can take",
+      "var": "Customer Data"
+    },
+    {
+      "code": "lookup-outside",
+      "confirmed": true,
+      "fixes": [],
+      "id": 5,
+      "message": "The input of Cancellation Data table in “Cancellation Data” ((time / Data Time Unit)) runs from 0 to 36, outside the table’s range 0 to 12: the curve is held flat beyond its ends",
+      "rule": "F8",
+      "severity": "error",
+      "source": "Sterman (2000), §14.3: a table must cover the whole range its input can take",
+      "var": "Cancellation Data"
+    },
+    {
+      "code": "dt-sensitivity",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": false,
+          "ops": [
+            {
+              "key": "time_step",
+              "op": "set_setting",
+              "value": "0.0078125"
+            }
+          ],
+          "title": "Set the time step to 0.0078125"
+        }
+      ],
+      "id": 6,
+      "message": "Halving the time step changes “Recruits in Pipeline” by 1074.1% (more than 1%): the answer depends on the step",
+      "rule": "N3",
+      "severity": "error",
+      "source": "Numerical practice: results should not change with DT (Sterman 2000, §A.2)",
+      "var": "Recruits in Pipeline"
+    },
+    {
+      "code": "N2",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": false,
+          "ops": [
+            {
+              "key": "time_step",
+              "op": "set_setting",
+              "value": "0.0625"
+            }
+          ],
+          "title": "Set the time step to 0.0625"
+        }
+      ],
+      "id": 7,
+      "message": "The time step 0.125 is more than a quarter of the fastest time constant 0.25 of the model",
+      "rule": "N2",
+      "severity": "error",
+      "source": "Sterman (2000), §A.2: choose the step at most a quarter to a half of the smallest time constant",
+      "var": null
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 8,
+      "message": "With Base Marketing at 0 times (0), “Cash” goes below zero (-3447.6) at time 28.5: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Base Marketing"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 9,
+      "message": "With Campaign Length at 0 times (0), “Marketing Spend” is not a number or is infinite at time 0: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Campaign Length"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 10,
+      "message": "With Acquisition Cost at 0 times (0), “Marketing Acquisition” is not a number or is infinite at time 0: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Acquisition Cost"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 11,
+      "message": "With Churn Fraction at 10 times (0.4), “Cash” goes below zero (-2924.4) at time 24.5: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Churn Fraction"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 12,
+      "message": "With Base Price at 0 times (0), “Cash” goes below zero (-8467.2) at time 5.75: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Base Price"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 13,
+      "message": "With Unit Service Cost at 10 times (200.0), “Cash” goes below zero (-10160) at time 5.375: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Unit Service Cost"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 14,
+      "message": "With Salary at 10 times (50000), “Cash” goes below zero (-5915.1) at time 1.75: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Salary"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 15,
+      "message": "With Perception Time at 0 times (0), “Perceived Customers” is not a number or is infinite at time 0.125: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Perception Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 16,
+      "message": "With Hiring Delay at 0 times (0), “Pressure Staff” is not a number or is infinite at time 0.125: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Hiring Delay"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 17,
+      "message": "With Mentoring Load at 10 times (1), “Cash” goes below zero (-2915.1) at time 27.5: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Mentoring Load"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 18,
+      "message": "With Minimum Staff at 10 times (40), “Cash” goes below zero (-14404) at time 2.625: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Minimum Staff"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 19,
+      "message": "With Overhead at 10 times (300000), “Cash” goes below zero (-4437.8) at time 1.25: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Overhead"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 20,
+      "message": "With Requests per Customer at 10 times (10), “Cash” goes below zero (-9844.3) at time 12.875: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Requests per Customer"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 21,
+      "message": "With Normal Time per Request at 0 times (0), “Normal Capacity” is not a number or is infinite at time 0: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Normal Time per Request"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 22,
+      "message": "With Minimum Service Time at 0 times (0), “Word of Mouth Acquisition” is not a number or is infinite at time 0.375: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Minimum Service Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 23,
+      "message": "With Quality Perception Time at 0 times (0), “Perceived Work Quality” is not a number or is infinite at time 0.125: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Quality Perception Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 24,
+      "message": "With Quality Sensitivity at 10 times (20), “Cash” goes below zero (-3549.3) at time 34.75: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Quality Sensitivity"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 25,
+      "message": "With Founder Capital at 0 times (0), “Cash” goes below zero (-6250.0) at time 0.125: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Founder Capital"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 26,
+      "message": "With Round Width at 0 times (0), “Equity Raised” is not a number or is infinite at time 0: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Round Width"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 27,
+      "message": "With Seed Amount at 0 times (0), “Cash” goes below zero (-522.5) at time 6.875: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Seed Amount"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 28,
+      "message": "With Seed Time at 10 times (60), “Cash” goes below zero (-522.5) at time 6.875: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Seed Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "name": "Cash",
+              "on": true,
+              "op": "set_non_negative"
+            }
+          ],
+          "title": "Hold “Cash” at zero (never negative)"
+        }
+      ],
+      "id": 29,
+      "message": "With Collection Time at 10 times (10), “Cash” goes below zero (-2051.2) at time 27.25: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Collection Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 30,
+      "message": "With Founder Shares at 0 times (0), “Seed Share Price” leaves the range 0 to 1: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Founder Shares"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 31,
+      "message": "With Seed Pre Money at 0 times (0), “Seed Shares” is not a number or is infinite at time 0: the model does not hold in this extreme condition",
+      "rule": "X1",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4.2: extreme condition tests",
+      "var": "Seed Pre Money"
+    },
+    {
+      "code": "X6",
+      "confirmed": true,
+      "fixes": [],
+      "id": 32,
+      "message": "With Campaign Length at 0 times (0): Check “Balance sheet balances”: Balance Gap should be between -0.01 and 0.01, but is – at month 0.125",
+      "rule": "X6",
+      "severity": "error",
+      "source": "Sterman (2000), §21.4: the modeller's reality checks",
+      "var": null
+    },
+    {
+      "code": "F3",
+      "confirmed": false,
+      "fixes": [
+        {
+          "keeps_numbers": false,
+          "ops": [
+            {
+              "equation": "XIDZ((Normal Capacity * Normal Time per Request), Standard Time per Request, 0)",
+              "name": "Capacity",
+              "op": "set_equation"
+            }
+          ],
+          "title": "Use XIDZ so that Capacity is 0 when the divisor is 0"
+        }
+      ],
+      "id": 33,
+      "message": "“Capacity” divides by Standard Time per Request, which can be zero (it ranges over -∞ to ∞)",
+      "rule": "F3",
+      "severity": "info",
+      "source": "Vensim and Stella manuals: ZIDZ and XIDZ for divisions that can meet zero",
+      "var": "Capacity"
+    },
+    {
+      "code": "F3",
+      "confirmed": false,
+      "fixes": [
+        {
+          "keeps_numbers": false,
+          "ops": [
+            {
+              "equation": "XIDZ(Founder Shares, Shares Outstanding, 0)",
+              "name": "Founder Ownership",
+              "op": "set_equation"
+            }
+          ],
+          "title": "Use XIDZ so that Founder Ownership is 0 when the divisor is 0"
+        }
+      ],
+      "id": 34,
+      "message": "“Founder Ownership” divides by Shares Outstanding, which can be zero (it ranges over -∞ to ∞)",
+      "rule": "F3",
+      "severity": "info",
+      "source": "Vensim and Stella manuals: ZIDZ and XIDZ for divisions that can meet zero",
+      "var": "Founder Ownership"
+    },
+    {
+      "code": "F8",
+      "confirmed": false,
+      "fixes": [],
+      "id": 35,
+      "message": "The input of Customer Data table in “Customer Data” ranges over 0 to 36 but the table covers 0 to 12: beyond its ends the curve is held flat",
+      "rule": "F8",
+      "severity": "info",
+      "source": "Sterman (2000), §14.3: a table must cover the whole range its input can take",
+      "var": "Customer Data"
+    },
+    {
+      "code": "F8",
+      "confirmed": false,
+      "fixes": [],
+      "id": 36,
+      "message": "The input of Cancellation Data table in “Cancellation Data” ranges over 0 to 36 but the table covers 0 to 12: beyond its ends the curve is held flat",
+      "rule": "F8",
+      "severity": "info",
+      "source": "Sterman (2000), §14.3: a table must cover the whole range its input can take",
+      "var": "Cancellation Data"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 37,
+      "message": "“Reference Price” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Reference Price"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 38,
+      "message": "“Market Size” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Market Size"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 39,
+      "message": "“Customers per Staff” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Customers per Staff"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 40,
+      "message": "“Staff Adjustment Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Staff Adjustment Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 41,
+      "message": "“Tenure” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Tenure"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 42,
+      "message": "“Rookie Quit Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Rookie Quit Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 43,
+      "message": "“Training Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Training Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 44,
+      "message": "“Target Service Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Target Service Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 45,
+      "message": "“Recovery Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Recovery Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 46,
+      "message": "“Erosion Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Erosion Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 47,
+      "message": "“Collection Time” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Collection Time"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 48,
+      "message": "“Series A Pre Money” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Series A Pre Money"
+    },
+    {
+      "code": "X1",
+      "confirmed": true,
+      "fixes": [],
+      "id": 49,
+      "message": "“Data Time Unit” is only used as a divisor, so the case of 0 times its value was not run",
+      "rule": "X1",
+      "severity": "info",
+      "source": "",
+      "var": "Data Time Unit"
+    },
+    {
+      "code": "R1",
+      "confirmed": true,
+      "fixes": [
+        {
+          "keeps_numbers": true,
+          "ops": [
+            {
+              "doc": "TODO: what is Campaign Time and where does its number come from?",
+              "name": "Campaign Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Campaign Length and where does its number come from?",
+              "name": "Campaign Length",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Marketing Spend and where does its number come from?",
+              "name": "Marketing Spend",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Relative Price and where does its number come from?",
+              "name": "Relative Price",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Effect of Price on Acquisition and where does its number come from?",
+              "name": "Effect of Price on Acquisition",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Effect of Price on Churn and where does its number come from?",
+              "name": "Effect of Price on Churn",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Marketing Acquisition and where does its number come from?",
+              "name": "Marketing Acquisition",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Word of Mouth Acquisition and where does its number come from?",
+              "name": "Word of Mouth Acquisition",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Acquisition and where does its number come from?",
+              "name": "Acquisition",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Churn and where does its number come from?",
+              "name": "Churn",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Base Price and where does its number come from?",
+              "name": "Base Price",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Price Change Time and where does its number come from?",
+              "name": "Price Change Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Service Cost and where does its number come from?",
+              "name": "Service Cost",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Perception Time and where does its number come from?",
+              "name": "Perception Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Perceived Customers and where does its number come from?",
+              "name": "Perceived Customers",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Customer Trend and where does its number come from?",
+              "name": "Customer Trend",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Planned Customers and where does its number come from?",
+              "name": "Planned Customers",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Hiring Delay and where does its number come from?",
+              "name": "Hiring Delay",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Staff Adjustment Time and where does its number come from?",
+              "name": "Staff Adjustment Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Rookie Quit Time and where does its number come from?",
+              "name": "Rookie Quit Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Minimum Staff and where does its number come from?",
+              "name": "Minimum Staff",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Perceived Service Time and where does its number come from?",
+              "name": "Perceived Service Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Plan Staff and where does its number come from?",
+              "name": "Plan Staff",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Desired Staff and where does its number come from?",
+              "name": "Desired Staff",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Staff and where does its number come from?",
+              "name": "Staff",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Promotion and where does its number come from?",
+              "name": "Promotion",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Rookie Quits and where does its number come from?",
+              "name": "Rookie Quits",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Veteran Attrition and where does its number come from?",
+              "name": "Veteran Attrition",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Hiring Starts and where does its number come from?",
+              "name": "Hiring Starts",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Hires and where does its number come from?",
+              "name": "Hires",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Recruits in Pipeline and where does its number come from?",
+              "name": "Recruits in Pipeline",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Rookies and where does its number come from?",
+              "name": "Rookies",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Veterans and where does its number come from?",
+              "name": "Veterans",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Payroll and where does its number come from?",
+              "name": "Payroll",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Request Arrivals and where does its number come from?",
+              "name": "Request Arrivals",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Hours per Person and where does its number come from?",
+              "name": "Hours per Person",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Pressure Time per Request and where does its number come from?",
+              "name": "Pressure Time per Request",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Indicated Time per Request and where does its number come from?",
+              "name": "Indicated Time per Request",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Normal Capacity and where does its number come from?",
+              "name": "Normal Capacity",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Minimum Service Time and where does its number come from?",
+              "name": "Minimum Service Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Completions and where does its number come from?",
+              "name": "Completions",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Relative Service Time and where does its number come from?",
+              "name": "Relative Service Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Perceived Work Quality and where does its number come from?",
+              "name": "Perceived Work Quality",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Quality Shortfall and where does its number come from?",
+              "name": "Quality Shortfall",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Quality Effect on Churn and where does its number come from?",
+              "name": "Quality Effect on Churn",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Quality Effect on Referrals and where does its number come from?",
+              "name": "Quality Effect on Referrals",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Hiring Allowed and where does its number come from?",
+              "name": "Hiring Allowed",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Seed Amount and where does its number come from?",
+              "name": "Seed Amount",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Seed Time and where does its number come from?",
+              "name": "Seed Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Series A Amount and where does its number come from?",
+              "name": "Series A Amount",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Series A Time and where does its number come from?",
+              "name": "Series A Time",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Equity Raised and where does its number come from?",
+              "name": "Equity Raised",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Cash Collected and where does its number come from?",
+              "name": "Cash Collected",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Cash and where does its number come from?",
+              "name": "Cash",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Total Assets and where does its number come from?",
+              "name": "Total Assets",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Net Income and where does its number come from?",
+              "name": "Net Income",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Burn Rate and where does its number come from?",
+              "name": "Burn Rate",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Contribution per Customer and where does its number come from?",
+              "name": "Contribution per Customer",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Effective Churn and where does its number come from?",
+              "name": "Effective Churn",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Lifetime Value and where does its number come from?",
+              "name": "Lifetime Value",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Cost to Win a Customer and where does its number come from?",
+              "name": "Cost to Win a Customer",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is LTV to CAC and where does its number come from?",
+              "name": "LTV to CAC",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is CAC Payback and where does its number come from?",
+              "name": "CAC Payback",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Discount Factor and where does its number come from?",
+              "name": "Discount Factor",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Discounted Cash Flow and where does its number come from?",
+              "name": "Discounted Cash Flow",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Founder Shares and where does its number come from?",
+              "name": "Founder Shares",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Seed Pre Money and where does its number come from?",
+              "name": "Seed Pre Money",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Series A Pre Money and where does its number come from?",
+              "name": "Series A Pre Money",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Shares Before Seed and where does its number come from?",
+              "name": "Shares Before Seed",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Series A Shares and where does its number come from?",
+              "name": "Series A Shares",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Shares Issued and where does its number come from?",
+              "name": "Shares Issued",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Founder Ownership and where does its number come from?",
+              "name": "Founder Ownership",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Seed Share Price and where does its number come from?",
+              "name": "Seed Share Price",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Customer Data and where does its number come from?",
+              "name": "Customer Data",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Cancellation Data and where does its number come from?",
+              "name": "Cancellation Data",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Data Time Unit and where does its number come from?",
+              "name": "Data Time Unit",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is In Fit Window and where does its number come from?",
+              "name": "In Fit Window",
+              "op": "set_doc"
+            },
+            {
+              "doc": "TODO: what is Squared Error Rate and where does its number come from?",
+              "name": "Squared Error Rate",
+              "op": "set_doc"
+            }
+          ],
+          "title": "Add a prompt to describe the 78 undocumented variables"
+        }
+      ],
+      "id": 50,
+      "message": "78 of 152 variables have no description, starting with “Campaign Time”",
+      "rule": "R1",
+      "severity": "info",
+      "source": "SDM-Doc (Martinez-Moyano 2012): every variable is documented",
+      "var": "Campaign Time"
+    }
+  ],
+  "gate": "Draft",
+  "model": {
+    "auxiliaries": 58,
+    "constants": 56,
+    "documentation_coverage_pct": 48.68421052631579,
+    "flows": 21,
+    "lookups": 4,
+    "loops": 31,
+    "stocks": 13,
+    "units_coverage_pct": 100.0
+  },
+  "summary": "32 errors, 0 warnings, 22 fixes available, 0 fixes applied"
+}

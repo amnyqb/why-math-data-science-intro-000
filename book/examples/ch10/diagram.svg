@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="110.45mm" viewBox="0 0 395.75 336.25">
+<title>Model</title>
+<polyline points="94.72,112.81 98.78,111.25 102.84,109.69 106.91,108.13 110.97,106.56 115.03,105 119.09,103.44 123.16,101.88 127.22,100.31 131.28,98.75 135.34,97.19 139.41,95.63 143.47,94.06 147.53,92.5 151.59,90.94 155.66,89.38 159.72,87.81 163.78,86.25 167.84,84.69 171.91,83.13 175.97,81.56 180.03,80 184.09,78.44 188.16,76.88 192.22,75.31 196.28,73.75 200.34,72.19 204.41,70.63 208.47,69.06 212.53,67.5 216.59,65.94 220.66,64.38 224.72,62.81 228.78,61.25 232.84,59.69 236.91,58.13 240.97,56.56 245.03,55 241.18,56.48" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="249.09,53.44 240.57,60.8 241.38,56.41" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="249.09,53.44 241.38,56.41 237.83,53.68" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="94.72,126.56 98.78,126.25 102.84,125.94 106.91,125.63 110.97,125.31 115.03,125 119.09,124.69 123.16,124.38 127.22,124.06 131.28,123.75 135.34,123.44 139.41,123.13 143.47,122.81 147.53,122.5 151.59,122.19 155.66,121.88 159.72,121.56 163.78,121.25 167.84,120.94 171.91,120.63 175.97,120.31 180.03,120 184.09,119.69 188.16,119.38 192.22,119.06 196.28,118.75 200.34,118.44 204.41,118.13 208.47,117.81 212.53,117.5 216.59,117.19 220.66,116.88 224.72,116.56 228.78,116.25 232.84,115.94 236.91,115.63 232.52,115.96" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="240.97,115.31 230.69,119.93 232.73,115.95" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="240.97,115.31 232.73,115.95 230.11,112.32" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="94.72,140.31 98.78,141.25 102.84,142.19 106.91,143.13 110.97,144.06 115.03,145 119.09,145.94 123.16,146.88 127.22,147.81 131.28,148.75 135.34,149.69 139.41,150.63 143.47,151.56 147.53,152.5 151.59,153.44 155.66,154.38 159.72,155.31 163.78,156.25 167.84,157.19 171.91,158.13 175.97,159.06 180.03,160 184.09,160.94 188.16,161.88 192.22,162.81 196.28,163.75 200.34,164.69 204.41,165.63 208.47,166.56 212.53,167.5 216.59,168.44 220.66,169.38 224.72,170.31 228.78,171.25 232.84,172.19 236.91,173.13 232.71,172.16" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="240.97,174.06 229.78,175.4 232.91,172.2" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="240.97,174.06 232.91,172.2 231.5,167.96" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="94.72,154.06 98.78,156.25 102.84,158.44 106.91,160.63 110.97,162.81 115.03,165 119.09,167.19 123.16,169.38 127.22,171.56 131.28,173.75 135.34,175.94 139.41,178.13 143.47,180.31 147.53,182.5 151.59,184.69 155.66,186.88 159.72,189.06 163.78,191.25 167.84,193.44 171.91,195.63 175.97,197.81 180.03,200 184.09,202.19 188.16,204.38 192.22,206.56 196.28,208.75 200.34,210.94 204.41,213.13 208.47,215.31 212.53,217.5 216.59,219.69 220.66,221.88 224.72,224.06 228.78,226.25 232.84,228.44 236.91,230.63 240.97,232.81 245.03,235 249.09,237.19 253.16,239.38 257.22,241.56 261.28,243.75 257.88,241.92" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="265.34,245.94 254.2,244.27 258.06,242.02" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="265.34,245.94 258.06,242.02 257.82,237.55" fill="#5c6370" stroke-linejoin="round"/>
+<rect x="10" y="110" width="80.06" height="40" rx="10" fill="#ffffff"/>
+<rect x="10.6" y="110.6" width="78.86" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="25" cy="130" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="25" cy="130" r="2.8" fill="#b5651d"/>
+<text x="36 46 50.5 58.5 65.5 70.5" y="128" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Orders</text>
+<text x="36 42 48 54 60" y="141" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">160.0</text>
+<rect x="248" y="10" width="124.06" height="40" rx="10" fill="#ffffff"/>
+<rect x="248.6" y="10.6" width="122.86" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="263" cy="30" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="263" cy="30" r="2.8" fill="#b5651d"/>
+<text x="274 280.5 292 299.5 307 312 319.5 322.5 329 334 338.5 341.5 348 354.5" y="28" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Smooth arrival</text>
+<text x="274 280 286 292 298" y="41" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">159.6</text>
+<rect x="245.22" y="90" width="129.63" height="40" rx="10" fill="#ffffff"/>
+<rect x="245.82" y="90.6" width="128.42" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="260.22" cy="110" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="260.22" cy="110" r="2.8" fill="#b5651d"/>
+<text x="271.22 279.22 286.72 294.22 300.22 307.22 314.72 322.22 325.22 331.72 336.72 341.22 344.72 350.72 357.22" y="108" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Bunched arrival</text>
+<text x="271.22 277.22 283.22 289.22 295.22" y="121" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">160.0</text>
+<rect x="247.55" y="170" width="124.97" height="40" rx="10" fill="#ffffff"/>
+<rect x="248.15" y="170.6" width="123.77" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="262.55" cy="190" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="262.55" cy="190" r="2.8" fill="#b5651d"/>
+<text x="273.55 281.05 284.05 291.55 299.05 302.05 305.05 312.55 319.55 322.55 329.55 334.05 339.05 342.05 348.55 355.05" y="188" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Pipeline arrival</text>
+<text x="273.55 279.55 285.55 291.55 297.55" y="201" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">160.0</text>
+<rect x="234.33" y="250" width="151.41" height="40" rx="10" fill="#ffffff"/>
+<rect x="234.93" y="250.6" width="150.2" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="249.33" cy="270" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="249.33" cy="270" r="2.8" fill="#b5651d"/>
+<text x="260.33 268.33 275.33 278.83 281.83 288.83 293.83 296.83 303.33 310.83 318.83 325.83 330.83 333.83 341.33 346.33 353.83 361.33 365.83" y="268" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Belief about orders</text>
+<text x="260.33 266.33 272.33 278.33 284.33" y="281" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">159.6</text>
+<text x="10 16.5 19.5 27 34.5 39.5 46.5 49.5 57 64 67.5 74.5 77.5 80.5 90.5 98 105 108 115.5 120.5 128 135 140 143 148.5 153.5 158.5 165.5 172.5 183.5 186.5 189.5 194.5 202 209.5 214.5 217.5 227.5 234 240 245.5 248.5 253.5 261.5 264.5 275.5 283 290.5 298 301 304 309 316.5 323.5 326.5 334 341.5 344.5 351 357" y="308" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Figure 10.1  One order stream, four ways to model the delay.</text>
+<text x="10 15.5 22 28 32.5 37.5 43.5 46 48.5 55.5 61.5 67 73.5 78 84 88 90.5 96.5 103 105.5 111.5 117 122.5 132 138.5 141 147 149.5 159 165.5 172 178" y="324" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="12.33" fill="#6e768c" xml:space="preserve">Source: Chapter 10 example model</text>
+</svg>

@@ -1,0 +1,134 @@
+model,pysd,detail
+samples__Query_file__Query_file,runs,"143 variables, 572 times"
+samples__Roessler_Chaos__roessler_chaos,runs,"13 variables, 3201 times"
+sdeverywhere__allocate__allocate,runs,"35 variables, 97 times"
+sdeverywhere__allocate_by_priority__allocate_by_priority,runs,"18 variables, 13 times"
+sdeverywhere__allocate_price__allocate_price,fails,NotImplementedError: Not implemented function 'find_market_price'
+sdeverywhere__allocate_ptype__allocate_ptype,fails,NotImplementedError: fixed_quantity priority profile is not implemented.
+sdeverywhere__arrays__arrays,fails,InvalidInput: cannot parse: 253:81
+sdeverywhere__comments__comments,fails,"IncompleteParseError: Rule 'expr_type' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ', {transportation se' (line 1, column 2)."
+sdeverywhere__delay__delay,runs,"49 variables, 11 times"
+sdeverywhere__delayfixed__delayfixed,runs,"19 variables, 51 times"
+sdeverywhere__depreciate__depreciate,fails,NotImplementedError: Not implemented function 'depreciate_straightline'
+sdeverywhere__directconst__directconst,fails,FileNotFoundError: _ext_constant_a
+sdeverywhere__directconst_invalidcell__directconst_invalidcell,fails,FileNotFoundError: _ext_constant_c
+sdeverywhere__directdata__directdata,fails,FileNotFoundError: _ext_data_a
+sdeverywhere__directdata_endofdata__directdata_endofdata,fails,FileNotFoundError: _ext_data_x_from_csv
+sdeverywhere__directdata_invalidcell__directdata_invalidcell,fails,FileNotFoundError: _ext_data_x_from_csv
+sdeverywhere__directlookups__directlookups,fails,FileNotFoundError: _ext_lookup_a
+sdeverywhere__directlookups_endofdata__directlookups_endofdata,fails,FileNotFoundError: _ext_lookup_x_from_csv
+sdeverywhere__directlookups_invalidcell__directlookups_invalidcell,fails,FileNotFoundError: _ext_lookup_x_from_csv
+sdeverywhere__directsubs__directsubs,fails,FileNotFoundError: Hardcoded external subscript
+sdeverywhere__except2__except2,fails,"ValueError: cannot reshape array of size 2 into shape (5,)"
+sdeverywhere__except__except,fails,"ValueError: cannot reshape array of size 2 into shape (5,)"
+sdeverywhere__extdata__extdata,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 9)."
+sdeverywhere__gamma_ln__gamma_ln,fails,NotImplementedError: Not implemented function 'gamma_ln'
+sdeverywhere__getdata__getdata,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 13)."
+sdeverywhere__invertmatrix__invertmatrix,runs,"16 variables, 101 times"
+sdeverywhere__invertmatrixio__invertmatrixio,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ', {Agriculture, fore' (line 1, column 22)."
+sdeverywhere__lookup__lookup,fails,TypeError: g() missing 1 required positional argument: 'x'
+sdeverywhere__mapping__mapping,fails,"ValueError: cannot reshape array of size 2 into shape (5,)"
+sdeverywhere__multimap__multimap,fails,"ValueError: cannot reshape array of size 3 into shape (6,)"
+sdeverywhere__npv__npv,fails,NotImplementedError: Not implemented function 'npv'
+sdeverywhere__prune__prune,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 9)."
+sdeverywhere__quantum__quantum,runs,"12 variables, 2 times"
+sdeverywhere__ref__ref,fails,RecursionError: maximum recursion depth exceeded
+sdeverywhere__same_family_179__same_family_179,fails,InvalidInput: cannot parse: 136:165
+sdeverywhere__sample__sample,runs,"11 variables, 11 times"
+sdeverywhere__smooth__smooth,runs,"80 variables, 41 times"
+sdeverywhere__subalias__subalias,runs,"10 variables, 2 times"
+sdeverywhere__subscript__subscript,runs,"90 variables, 2 times"
+sdeverywhere__sum__sum,runs,"120 variables, 2 times"
+sdeverywhere__sumif__sumif,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 15)."
+sdeverywhere__vector__vector,fails,NotImplementedError: Not implemented function 'vector_elm_map'
+tests__allocate_available__test_allocate_available,runs,"358 variables, 26 times"
+tests__allocate_by_priority__test_allocate_by_priority,runs,"255 variables, 141 times"
+tests__arguments__test_arguments,runs,"10 variables, 11 times"
+tests__array_with_line_break__test_array_with_line_break,runs,"164 variables, 2 times"
+tests__conditional_subscripts__test_conditional_subscripts,runs,"228 variables, 2 times"
+tests__control_vars__test_control_vars,runs,"5 variables, 25 times"
+tests__data_from_other_model__model_to_generate_data,fails,"ValueError: could not broadcast input array from shape (3,2,1) into shape (3,2)"
+tests__data_from_other_model__test_data_from_other_model,fails,ValueError: var_0dim
+tests__delay_fixed__test_delay_fixed,runs,"13 variables, 51 times"
+tests__delay_numeric_error__test_delay_numeric_error,runs,"7 variables, 801 times"
+tests__delay_pipeline__test_pipeline_delays,runs,"18 variables, 201 times"
+tests__delays__test_delays,runs,"13 variables, 101 times"
+tests__dynamic_final_time__test_dynamic_final_time,runs,"7 variables, 29 times"
+tests__elm_count__test_elm_count,runs,"9 variables, 6 times"
+tests__except_multiple__test_except_multiple,runs,"124 variables, 11 times"
+tests__except_subranges__test_except_subranges,runs,"148 variables, 2 times"
+tests__forecast__test_forecast,runs,"27 variables, 121 times"
+tests__fully_invalid_names__test_fully_invalid_names,runs,"7 variables, 11 times"
+tests__get_constants_incomplete_subscript__test_get_constants_incomplete_subscript,fails,FileNotFoundError: _ext_constant_adimensional_const
+tests__get_constants_subranges__test_get_constants_subranges,fails,FileNotFoundError: _ext_constant_constant
+tests__get_data_args_3d_xls__test_get_data_args_3d_xls,fails,FileNotFoundError: _ext_data_data_backward
+tests__get_lookups_data_3d_xls__test_get_lookups_data_3d_xls,fails,FileNotFoundError: _ext_data_data_function_table
+tests__get_lookups_subscripted_args__test_get_lookups_subscripted_args,fails,FileNotFoundError: _ext_lookup_lookup_1d
+tests__get_lookups_subset__test_get_lookups_subset,fails,FileNotFoundError: _ext_lookup_lookup_function
+tests__get_mixed_definitions__test_get_mixed_definitions,fails,FileNotFoundError: _ext_constant_const_var_1
+tests__get_subscript_3d_arrays_xls__test_get_subscript_3d_arrays_xls,fails,FileNotFoundError: Hardcoded external subscript
+tests__get_time_value__test_get_time_value,fails,NotImplementedError: 'relativeto=1' not implemented...
+tests__get_time_value__test_get_time_value_simple,runs,"105 variables, 241 times"
+tests__get_values_order__test_get_values_order,fails,FileNotFoundError: _ext_constant_var1
+tests__get_with_missing_values_xlsx__test_get_with_missing_values_xlsx,fails,FileNotFoundError: _ext_data_data_hb1
+tests__get_xls_cellrange__test_get_xls_cellrange,fails,FileNotFoundError: _ext_constant_value1
+tests__invert_matrix__test_invert_matrix,runs,"64 variables, 2 times"
+tests__lookups_inline_spaces__test_lookups_inline_spaces,runs,"5 variables, 21 times"
+tests__macro_stock__test_macro_stock,runs,"7 variables, 11 times"
+tests__multiple_lines_def__test_multiple_lines_def,runs,"10 variables, 2 times"
+tests__na__test_na,runs,"5 variables, 11 times"
+tests__odd_number_quotes__teacup_3quotes,runs,"8 variables, 241 times"
+tests__partial_range_definitions__test_partial_range_definitions,fails,FileNotFoundError: _ext_constant_partial_constants
+tests__power__power,runs,"41 variables, 6 times"
+tests__reality_checks__test_reality_checks,runs,"20 variables, 4 times"
+tests__repeated_subscript__test_repeated_subscript,runs,"12 variables, 2 times"
+tests__rounding__test_rounding,runs,"7 variables, 201 times"
+tests__sample_if_true__test_sample_if_true,runs,"42 variables, 21 times"
+tests__smaller_range__test_smaller_range,runs,"16 variables, 11 times"
+tests__smooth__test_smooth,runs,"13 variables, 81 times"
+tests__special_characters__test_special_variable_names,runs,"14 variables, 101 times"
+tests__subrange_merge__test_subrange_merge,runs,"22 variables, 2 times"
+tests__subscript_1d_arrays__test_subscript_1d_arrays,runs,"13 variables, 101 times"
+tests__subscript_2d_arrays__test_subscript_2d_arrays,runs,"28 variables, 101 times"
+tests__subscript_3d_arrays__test_subscript_3d_arrays,runs,"52 variables, 101 times"
+tests__subscript_3d_arrays_lengthwise__test_subscript_3d_arrays_lengthwise,runs,"28 variables, 2 times"
+tests__subscript_3d_arrays_widthwise__test_subscript_3d_arrays_widthwise,runs,"28 variables, 2 times"
+tests__subscript_aggregation__test_subscript_aggregation,runs,"116 variables, 21 times"
+tests__subscript_constant_call__test_subscript_constant_call,runs,"11 variables, 4 times"
+tests__subscript_copy__test_subscript_copy,runs,"59 variables, 10 times"
+tests__subscript_copy__test_subscript_copy2,runs,"59 variables, 10 times"
+tests__subscript_definition__test_subscript_definition,runs,"142 variables, 2 times"
+tests__subscript_docs__subscript_docs,runs,"16 variables, 2 times"
+tests__subscript_element_name__test_subscript_element_name,runs,"19 variables, 2 times"
+tests__subscript_individually_defined_1_of_2d_arrays__subscript_individually_defined_1_of_2d_arrays,runs,"28 variables, 101 times"
+tests__subscript_individually_defined_1_of_2d_arrays_from_floats__subscript_individually_defined_1_of_2d_arrays_from_floats,runs,"28 variables, 2 times"
+tests__subscript_individually_defined_stocks__test_subscript_individually_defined_stocks,runs,"52 variables, 101 times"
+tests__subscript_logicals__test_subscript_logicals,runs,"73 variables, 11 times"
+tests__subscript_mapping_simple__test_subscript_mapping_simple,runs,"89 variables, 10 times"
+tests__subscript_mapping_vensim__test_subscript_mapping_vensim,runs,"26 variables, 101 times"
+tests__subscript_mixed_assembly__test_subscript_mixed_assembly,runs,"13 variables, 4 times"
+tests__subscript_multiples__test_multiple_subscripts,runs,"25 variables, 101 times"
+tests__subscript_numeric_range__test_subscript_numeric_range,runs,"154 variables, 10 times"
+tests__subscript_selection__subscript_selection,runs,"13 variables, 2 times"
+tests__subscript_subranges__test_subscript_subrange,runs,"15 variables, 101 times"
+tests__subscript_subranges_equal__test_subscript_subrange_equal,runs,"16 variables, 101 times"
+tests__subscript_switching__subscript_switching,runs,"51 variables, 101 times"
+tests__subscript_transposition__test_subscript_transposition,runs,"44 variables, 2 times"
+tests__subscript_updimensioning__test_subscript_updimensioning,runs,"13 variables, 3 times"
+tests__subscripted_delays__test_subscripted_delays,runs,"308 variables, 81 times"
+tests__subscripted_flows__test_subscripted_flows,runs,"16 variables, 101 times"
+tests__subscripted_if_then_else__test_subscripted_if_then_else,runs,"59 variables, 2 times"
+tests__subscripted_logicals__test_subscripted_logicals,runs,"163 variables, 11 times"
+tests__subscripted_ramp_step__test_subscripted_ramp_step,runs,"129 variables, 41 times"
+tests__subscripted_round__test_subscripted_round,runs,"70 variables, 101 times"
+tests__subscripted_smooth__test_subscripted_smooth,runs,"132 variables, 81 times"
+tests__subscripted_trig__test_subscripted_trig,runs,"147 variables, 11 times"
+tests__subscripted_xidz__test_subscripted_xidz,runs,"78 variables, 2 times"
+tests__subset_duplicated_coord__test_subset_duplicated_coord,runs,"19 variables, 2 times"
+tests__tabbed_arrays__tabbed_arrays,runs,"80 variables, 5 times"
+tests__trend__test_trend,runs,"8 variables, 101 times"
+tests__unchangeable_constant__test_unchangeable_constant,runs,"6 variables, 11 times"
+tests__unicode_characters__unicode_test_model,runs,"7 variables, 2 times"
+tests__vector_order__test_vector_order,fails,FileNotFoundError: _ext_data_revenue
+tests__vector_select__test_vector_select,runs,"520 variables, 5 times"
+tests__with_lookup__test_with_lookup,fails,FileNotFoundError: _ext_constant_var1

@@ -1,0 +1,73 @@
+goal,param,mu,mu_star,sigma,class,n,converged
+Population peak,initial nonrenewable resources,1101822828.303978,1101822836.6316009,1659265400.759691,NonlinearOrInteracting,200,true
+Population peak,industrial capital output ratio 1,313355206.72539496,3742036908.033308,5510960704.116334,NonlinearOrInteracting,200,true
+Population peak,average life of industrial capital 1,1654554911.6327543,3055921704.5872755,5057656518.599577,NonlinearOrInteracting,200,true
+Population peak,desired completed family size normal,7348482723.135471,7465483169.104995,4607648558.681076,NonlinearOrInteracting,200,true
+Population peak,persistent pollution transmission delay,293603358.93458366,315272495.709893,717133681.6087712,Negligible,200,true
+Population peak,social adjustment delay,1047257231.7206845,1047616570.4899293,771514945.3582722,NonlinearOrInteracting,200,true
+Population peak,lifetime perception delay,627887718.683956,632139999.6944468,523163218.3371423,Negligible,200,true
+Population peak,health services impact delay,222934479.57843724,337428375.12451994,357648365.69903916,Negligible,200,true
+Population peak,technology development delay,0,0,0,Negligible,200,true
+Population peak,initial land fertility,-119439023.7081003,227587502.32993698,321127532.172183,Negligible,200,true
+Population peak,desired food ratio,0,0,0,Negligible,200,true
+Population peak,persistent pollution generation factor 1,-93286516.24793673,168622205.6700108,421305210.7086037,Negligible,200,true
+Population peak,service capital output ratio 1,-214709667.1541788,1310379775.9166653,2404093231.20405,NonlinearOrInteracting,200,true
+Population peak,average life of service capital 1,700804251.1307266,1092987673.5724587,2333254698.287037,NonlinearOrInteracting,200,true
+Population peak,average life of land normal,708710480.4774628,714466088.0401814,1241630437.2295175,Negligible,200,true
+Population peak,maximum total fertility normal,639417431.1210295,756983428.5019115,913237056.0712142,NonlinearOrInteracting,200,true
+Population peak,average life of agricultural inputs 1,-61734254.759106286,214249206.9631168,452142674.8382081,Negligible,200,true
+Population peak,income expectation averaging time,1494939282.657461,1501435310.49718,1213168907.005904,NonlinearOrInteracting,200,true
+Industrial output per capita peak,initial nonrenewable resources,1934.0571805927557,1934.0571805927557,3156.940310609809,NonlinearOrInteracting,200,true
+Industrial output per capita peak,industrial capital output ratio 1,-3282.4400228615054,3290.5173529307767,3930.7252304697286,NonlinearOrInteracting,200,true
+Industrial output per capita peak,average life of industrial capital 1,1623.7515526993789,1704.2890949945922,2418.1511352178836,NonlinearOrInteracting,200,true
+Industrial output per capita peak,desired completed family size normal,-3605.9552076813516,3605.9552076813516,3974.4955150126953,NonlinearOrInteracting,200,true
+Industrial output per capita peak,persistent pollution transmission delay,58.452572526301644,106.47991764662682,248.45022877296498,Negligible,200,true
+Industrial output per capita peak,social adjustment delay,-656.3967777468794,661.658702284692,1164.5724053717367,NonlinearOrInteracting,200,true
+Industrial output per capita peak,lifetime perception delay,-282.43212636267776,287.7896867319169,477.7748885291258,Negligible,200,true
+Industrial output per capita peak,health services impact delay,-146.50709779824433,169.71718610386142,317.17709583940416,Negligible,200,true
+Industrial output per capita peak,technology development delay,0,0,0,Negligible,200,true
+Industrial output per capita peak,initial land fertility,136.67209111944848,142.43447937460917,315.1729573529782,Negligible,200,true
+Industrial output per capita peak,desired food ratio,0,0,0,Negligible,200,true
+Industrial output per capita peak,persistent pollution generation factor 1,-29.445153185483996,67.82639765232541,200.50975325702234,Negligible,200,true
+Industrial output per capita peak,service capital output ratio 1,-1109.6546147853655,1160.1027364604236,1840.8259110869449,NonlinearOrInteracting,200,true
+Industrial output per capita peak,average life of service capital 1,354.45266459873096,400.227820536285,926.9510313812406,NonlinearOrInteracting,200,true
+Industrial output per capita peak,average life of land normal,211.14441560487873,250.0116467487738,473.6960573805396,Negligible,200,true
+Industrial output per capita peak,maximum total fertility normal,-207.41917602874418,220.23769013191034,335.57046069541326,Negligible,200,true
+Industrial output per capita peak,average life of agricultural inputs 1,-22.093192162622174,125.1917594383136,415.7864813089653,Negligible,200,true
+Industrial output per capita peak,income expectation averaging time,-937.9657758986375,938.3543647282564,1503.15042090315,NonlinearOrInteracting,200,true
+Food per capita lowest,initial nonrenewable resources,-46.27704650636182,61.809192430404394,81.67674607989461,NonlinearOrInteracting,200,true
+Food per capita lowest,industrial capital output ratio 1,47.37825426443458,85.38603994343573,106.89737001350419,NonlinearOrInteracting,200,true
+Food per capita lowest,average life of industrial capital 1,-47.79299639632199,64.67567210952811,84.28827287870455,NonlinearOrInteracting,200,true
+Food per capita lowest,desired completed family size normal,-122.0182132353707,125.2701305795039,101.99033550909037,NonlinearOrInteracting,200,true
+Food per capita lowest,persistent pollution transmission delay,-19.1613126660094,27.750737110015145,42.11628101166108,NonlinearOrInteracting,200,true
+Food per capita lowest,social adjustment delay,-12.993901212524358,16.095516454296813,41.8957713722602,NonlinearOrInteracting,200,true
+Food per capita lowest,lifetime perception delay,-4.468677793644637,6.639943205243506,15.309856431367422,Negligible,200,true
+Food per capita lowest,health services impact delay,-3.534469373797775,6.951100988802118,17.17670243671281,Negligible,200,true
+Food per capita lowest,technology development delay,0,0,0,Negligible,200,true
+Food per capita lowest,initial land fertility,37.38628631499901,41.30311514104246,54.08740096292218,NonlinearOrInteracting,200,true
+Food per capita lowest,desired food ratio,0,0,0,Negligible,200,true
+Food per capita lowest,persistent pollution generation factor 1,3.175400220982792,19.00561114158268,37.843241885394285,NonlinearOrInteracting,200,true
+Food per capita lowest,service capital output ratio 1,17.26123858843566,35.62083803543692,61.85977276339792,NonlinearOrInteracting,200,true
+Food per capita lowest,average life of service capital 1,-20.47614613206564,26.609652692672793,49.19929796793759,NonlinearOrInteracting,200,true
+Food per capita lowest,average life of land normal,47.86466758412296,50.22898099808634,86.8593295625816,NonlinearOrInteracting,200,true
+Food per capita lowest,maximum total fertility normal,-6.164640583586801,12.334776869420686,18.418390931090645,Negligible,200,true
+Food per capita lowest,average life of agricultural inputs 1,-2.616813001776314,9.911142106405855,18.06670351969585,Negligible,200,true
+Food per capita lowest,income expectation averaging time,-9.014230460261437,20.32798082764806,47.59896754256182,NonlinearOrInteracting,200,true
+Persistent pollution index peak,initial nonrenewable resources,109.96004333275916,109.96004333275916,319.53207402127936,NonlinearOrInteracting,200,true
+Persistent pollution index peak,industrial capital output ratio 1,-165.75288162627797,166.60509680755231,342.3652009484032,NonlinearOrInteracting,200,true
+Persistent pollution index peak,average life of industrial capital 1,78.09207628246634,87.20238504872616,273.9346113250715,NonlinearOrInteracting,200,true
+Persistent pollution index peak,desired completed family size normal,-21.31759647509547,72.52286977165322,222.85993268730195,NonlinearOrInteracting,200,true
+Persistent pollution index peak,persistent pollution transmission delay,-28.870404490202922,30.157423061340932,69.69040993614784,NonlinearOrInteracting,200,true
+Persistent pollution index peak,social adjustment delay,7.943081098866111,31.777139456066035,115.64379015733033,NonlinearOrInteracting,200,true
+Persistent pollution index peak,lifetime perception delay,-1.3535413888452041,12.015181565406772,42.2050006349364,Negligible,200,true
+Persistent pollution index peak,health services impact delay,1.554032260341813,4.936396012177538,17.56171327282698,Negligible,200,true
+Persistent pollution index peak,technology development delay,0,0,0,Negligible,200,true
+Persistent pollution index peak,initial land fertility,-0.266779067209278,10.15746802968315,46.52362443181638,Negligible,200,true
+Persistent pollution index peak,desired food ratio,0,0,0,Negligible,200,true
+Persistent pollution index peak,persistent pollution generation factor 1,64.70639451172829,65.65811520208236,185.29984822032077,NonlinearOrInteracting,200,true
+Persistent pollution index peak,service capital output ratio 1,-56.92499333565144,59.38290630065268,213.0999300029459,NonlinearOrInteracting,200,true
+Persistent pollution index peak,average life of service capital 1,19.7050382711128,21.594007835862488,78.86316770277755,NonlinearOrInteracting,200,true
+Persistent pollution index peak,average life of land normal,-8.715380666529471,22.6809493778819,76.64104015615509,NonlinearOrInteracting,200,true
+Persistent pollution index peak,maximum total fertility normal,-1.8691702064600697,11.159110115326282,48.46647929219079,Negligible,200,true
+Persistent pollution index peak,average life of agricultural inputs 1,-2.0262479415442773,9.289665532932721,29.710754015495855,Negligible,200,true
+Persistent pollution index peak,income expectation averaging time,7.741188319501869,33.266981245939,120.39173065019632,NonlinearOrInteracting,200,true

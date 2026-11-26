@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE F3: a division by something that can be zero"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Level",
+  "kind": "stock",
+  "equation": "5",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Fill",
+  "kind": "flow",
+  "equation": "1",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "Level"
+ },
+ {
+  "op": "add_var",
+  "name": "Rate",
+  "kind": "aux",
+  "equation": "10 / Level",
+  "units": "widget/Day",
+  "doc": "x"
+ }
+]

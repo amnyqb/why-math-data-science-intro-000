@@ -1,0 +1,103 @@
+{UTF-8}
+{ Chapter 8: a distributor whose customers start ordering more. Orders reach the factory and come back after a third-order delay. The ordering rule counts the supply line with weight Supply Line Weight (0: ignored, 1: fully counted). }
+Base Demand=
+	100
+	~	cases/week
+	~	Customer orders before the rise.
+	|
+Demand Rise=
+	50
+	~	cases/week
+	~	Lasting rise in customer orders.
+	|
+Rise Time=
+	5
+	~	week
+	~	When customer orders rise.
+	|
+Customer Orders=
+	Base Demand + STEP(Demand Rise, Rise Time)
+	~	cases/week
+	~	What customers ask for each week.
+	|
+Minimum Shipping Time=
+	0.5
+	~	week
+	~	Fastest the warehouse can empty its shelves.
+	|
+Shipments=
+	MIN(Customer Orders, Inventory / Minimum Shipping Time)
+	~	cases/week
+	~	What is shipped: orders, unless the shelves run short.
+	|
+Inventory= INTEG(
+	Arrivals - Shipments,
+	Desired Inventory)
+	~	cases
+	~	Cases on the shelves.
+	|
+Forecast Time=
+	4
+	~	week
+	~	Time over which the planner averages demand.
+	|
+Expected Demand=
+	SMOOTH(Customer Orders, Forecast Time)
+	~	cases/week
+	~	The planner's belief about demand.
+	|
+Coverage=
+	2
+	~	week
+	~	Weeks of expected demand the planner wants on the shelves.
+	|
+Desired Inventory=
+	Coverage * Expected Demand
+	~	cases
+	~	Target stock.
+	|
+Lead Time=
+	6
+	~	week
+	~	Average time from order to arrival.
+	|
+Desired Supply Line=
+	Lead Time * Expected Demand
+	~	cases
+	~	Cases that should be on order to sustain expected demand.
+	|
+Adjustment Time=
+	2
+	~	week
+	~	Time over which gaps are corrected.
+	|
+Supply Line Weight=
+	0
+	~	dmnl
+	~	Share of the supply line gap the planner counts (0 to 1).
+	|
+Orders=
+	MAX(0, Expected Demand + (Desired Inventory - Inventory) / Adjustment Time + Supply Line Weight * (Desired Supply Line - Supply Line) / Adjustment Time)
+	~	cases/week
+	~	Orders placed with the factory.
+	|
+Arrivals=
+	DELAY3(Orders, Lead Time)
+	~	cases/week
+	~	Cases arriving from the factory.
+	|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	Desired Supply Line)
+	~	cases
+	~	Cases ordered but not yet received.
+	|
+Unfilled Orders=
+	Customer Orders - Shipments
+	~	cases/week
+	~	Customer orders the shelves could not fill.
+	|
+FINAL TIME = 80 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |

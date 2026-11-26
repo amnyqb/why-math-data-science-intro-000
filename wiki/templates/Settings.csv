@@ -1,0 +1,7 @@
+Setting,Value
+Title,Spread of an Illness
+Initial time,0
+Final time,60
+Time step,0.125
+Time units,Day
+Method,Euler

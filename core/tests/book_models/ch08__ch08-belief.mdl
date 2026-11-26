@@ -1,0 +1,61 @@
+{UTF-8}
+{ Chapter 8: beliefs about demand. Demand grows for 25 weeks and then levels off; three planners form expectations in different ways. }
+Base Demand=
+	100
+	~	cases/week
+	~	Demand before growth starts.
+	|
+Growth=
+	2
+	~	cases/week/week
+	~	Weekly increase in demand while the market grows.
+	|
+Growth Start=
+	5
+	~	week
+	~	When demand starts to grow.
+	|
+Growth End=
+	30
+	~	week
+	~	When demand stops growing.
+	|
+Demand=
+	Base Demand + RAMP(Growth, Growth Start, Growth End)
+	~	cases/week
+	~	Customer demand.
+	|
+Averaging Time=
+	4
+	~	week
+	~	Time over which planners average demand.
+	|
+Forecast Horizon=
+	4
+	~	week
+	~	How far ahead the trend-following planner projects.
+	|
+Adaptive Belief=
+	SMOOTH(Demand, Averaging Time)
+	~	cases/week
+	~	Exponential smoothing: adaptive expectations.
+	|
+Adaptive Belief 3=
+	SMOOTH3(Demand, Averaging Time)
+	~	cases/week
+	~	Third-order smoothing with the same average delay.
+	|
+Perceived Trend=
+	TREND(Demand, Averaging Time, 0)
+	~	1/week
+	~	Fractional growth the planner believes in.
+	|
+Extrapolative Belief=
+	FORECAST(Demand, Averaging Time, Forecast Horizon)
+	~	cases/week
+	~	Demand now projected ahead at the perceived trend.
+	|
+FINAL TIME = 60 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |

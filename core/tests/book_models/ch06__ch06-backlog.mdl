@@ -1,0 +1,47 @@
+{UTF-8}
+{ Chapter 6: a backlog worked off at a fixed fraction per week; exact answer 1000 exp(-t/4). }
+Completion Time=
+	4
+	~	week
+	~	Average time to complete a job.
+	|
+
+Completions=
+	Backlog / Completion Time
+	~	jobs/week
+	~	Jobs completed per week.
+	|
+
+Backlog= INTEG(
+	- Completions,
+	1000)
+	~	jobs
+	~	Jobs waiting.
+	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 20
+	~	week
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	week
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	week [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	week [0,?]
+	~	The time step for the simulation.
+	|

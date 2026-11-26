@@ -1,0 +1,1734 @@
+{
+ "title": "Imported model",
+ "vars": [
+  {
+   "id": 1,
+   "name": "Machines",
+   "kind": "Constant",
+   "equation": "100",
+   "units": "machine",
+   "comment": "Machines in the plant.",
+   "pos": [
+    260.0,
+    20.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 2,
+   "name": "Healthy Machines",
+   "kind": "Aux",
+   "equation": "Machines - Defective Machines - Failed Machines",
+   "units": "machine",
+   "comment": "Machines running without a hidden defect.",
+   "pos": [
+    100.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 3,
+   "name": "Defect Rate",
+   "kind": "Constant",
+   "equation": "0.1",
+   "units": "1/week",
+   "comment": "Fraction of healthy machines that develop a hidden defect each week at normal load.",
+   "pos": [
+    0.0,
+    200.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 4,
+   "name": "Wear Increase",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "dmnl",
+   "comment": "Extra wear during a production push (0.8 means 80% more defects).",
+   "pos": [
+    50.0,
+    520.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 5,
+   "name": "Push Start",
+   "kind": "Constant",
+   "equation": "20",
+   "units": "week",
+   "comment": "",
+   "pos": [
+    10.0,
+    730.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 6,
+   "name": "Push Duration",
+   "kind": "Constant",
+   "equation": "12",
+   "units": "week",
+   "comment": "",
+   "pos": [
+    110.0,
+    730.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 7,
+   "name": "Push",
+   "kind": "Aux",
+   "equation": "PULSE(Push Start, Push Duration)",
+   "units": "dmnl",
+   "comment": "1 during the production push, 0 otherwise.",
+   "pos": [
+    10.0,
+    640.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 8,
+   "name": "Wear Multiplier",
+   "kind": "Aux",
+   "equation": "1 + Wear Increase * Push",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    10.0,
+    400.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 9,
+   "name": "Defect Creation",
+   "kind": "Flow",
+   "equation": "Healthy Machines * Defect Rate * Wear Multiplier",
+   "units": "machine/week",
+   "comment": "",
+   "pos": [
+    80.0,
+    300.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 10,
+   "from_pt": [
+    5.0,
+    300.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 10,
+   "name": "Defective Machines",
+   "kind": "Stock",
+   "equation": "14.18",
+   "units": "machine",
+   "comment": "Machines running with a hidden defect not yet found.",
+   "pos": [
+    240.0,
+    300.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 11,
+   "name": "Time to Failure",
+   "kind": "Constant",
+   "equation": "10",
+   "units": "week",
+   "comment": "Average time before a latent defect breaks the machine.",
+   "pos": [
+    330.0,
+    230.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 12,
+   "name": "Breakdowns",
+   "kind": "Flow",
+   "equation": "Defective Machines / Time to Failure",
+   "units": "machine/week",
+   "comment": "",
+   "pos": [
+    370.0,
+    300.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 10,
+   "to": 13,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 13,
+   "name": "Failed Machines",
+   "kind": "Stock",
+   "equation": "0.709",
+   "units": "machine",
+   "comment": "Machines down and waiting for repair.",
+   "pos": [
+    500.0,
+    300.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 14,
+   "name": "Repair Time",
+   "kind": "Constant",
+   "equation": "0.5",
+   "units": "week",
+   "comment": "Minimum time to repair a failed machine when crew hours are available.",
+   "pos": [
+    690.0,
+    220.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 15,
+   "name": "Base Maintenance Hours",
+   "kind": "Constant",
+   "equation": "120",
+   "units": "hour/week",
+   "comment": "Crew hours per week.",
+   "pos": [
+    480.0,
+    740.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 16,
+   "name": "Diversion",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "dmnl",
+   "comment": "Share of crew hours diverted to production during the push.",
+   "pos": [
+    680.0,
+    740.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 17,
+   "name": "Maintenance Hours",
+   "kind": "Aux",
+   "equation": "Base Maintenance Hours * (1 - Diversion * Push)",
+   "units": "hour/week",
+   "comment": "",
+   "pos": [
+    678.0,
+    640.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 18,
+   "name": "Hours per Breakdown",
+   "kind": "Constant",
+   "equation": "30",
+   "units": "hour/machine",
+   "comment": "Crew hours to repair a machine after it fails.",
+   "pos": [
+    568.0,
+    440.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 19,
+   "name": "Hours per Planned Repair",
+   "kind": "Constant",
+   "equation": "4",
+   "units": "hour/machine",
+   "comment": "Crew hours to find and fix a latent defect before it fails.",
+   "pos": [
+    230.0,
+    628.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 20,
+   "name": "Find Time",
+   "kind": "Constant",
+   "equation": "2",
+   "units": "week",
+   "comment": "Time planned maintenance needs to find a hidden defect when hours are sufficient.",
+   "pos": [
+    150.0,
+    560.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 21,
+   "name": "Planned Repair Need",
+   "kind": "Aux",
+   "equation": "Defective Machines / Find Time",
+   "units": "machine/week",
+   "comment": "Planned repairs per week if crew hours were unlimited.",
+   "pos": [
+    100.0,
+    478.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 22,
+   "name": "Reserved Planned Hours",
+   "kind": "Aux",
+   "equation": "Reserve Level * STEP(1, Policy Start)",
+   "units": "hour/week",
+   "comment": "Hours held back from breakdown work for planned maintenance (0: breakdowns always come first).",
+   "pos": [
+    560.0,
+    170.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 23,
+   "name": "Reserve Level",
+   "kind": "Constant",
+   "equation": "0",
+   "units": "hour/week",
+   "comment": "",
+   "pos": [
+    560.0,
+    80.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 24,
+   "name": "Policy Start",
+   "kind": "Constant",
+   "equation": "60",
+   "units": "week",
+   "comment": "",
+   "pos": [
+    680.0,
+    110.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 25,
+   "name": "Breakdown Repairs",
+   "kind": "Flow",
+   "equation": "MIN(Failed Machines / Repair Time, (Maintenance Hours - Reserved Planned Hours) / Hours per Breakdown)",
+   "units": "machine/week",
+   "comment": "",
+   "pos": [
+    665.0,
+    300.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 13,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    746.0,
+    300.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 26,
+   "name": "Reactive Hours",
+   "kind": "Aux",
+   "equation": "Breakdown Repairs * Hours per Breakdown",
+   "units": "hour/week",
+   "comment": "",
+   "pos": [
+    425.0,
+    505.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 27,
+   "name": "Hours Left for Planned Work",
+   "kind": "Aux",
+   "equation": "MAX(0, Maintenance Hours - Reactive Hours)",
+   "units": "hour/week",
+   "comment": "",
+   "pos": [
+    400.0,
+    578.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 28,
+   "name": "Planned Repair Capacity",
+   "kind": "Aux",
+   "equation": "Hours Left for Planned Work / Hours per Planned Repair",
+   "units": "machine/week",
+   "comment": "",
+   "pos": [
+    335.0,
+    460.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 29,
+   "name": "Planned Repairs",
+   "kind": "Flow",
+   "equation": "MIN(Planned Repair Need, Planned Repair Capacity)",
+   "units": "machine/week",
+   "comment": "",
+   "pos": [
+    240.0,
+    420.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 10,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    240.0,
+    500.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 30,
+   "name": "Uptime",
+   "kind": "Aux",
+   "equation": "(Machines - Failed Machines) / Machines",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    440.0,
+    110.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 65,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  }
+ ],
+ "links": [
+  {
+   "id": 31,
+   "from": 1,
+   "to": 2,
+   "bend": 18.9,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 32,
+   "from": 10,
+   "to": 2,
+   "bend": 22.8,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 33,
+   "from": 13,
+   "to": 2,
+   "bend": 67.3,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 34,
+   "from": 5,
+   "to": 7,
+   "bend": 9.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 35,
+   "from": 6,
+   "to": 7,
+   "bend": 13.5,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 36,
+   "from": 4,
+   "to": 8,
+   "bend": -8.2,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 37,
+   "from": 7,
+   "to": 8,
+   "bend": -25.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 38,
+   "from": 2,
+   "to": 9,
+   "bend": 18.1,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 39,
+   "from": 3,
+   "to": 9,
+   "bend": 12.8,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 40,
+   "from": 8,
+   "to": 9,
+   "bend": 12.2,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 41,
+   "from": 10,
+   "to": 12,
+   "bend": 13.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 42,
+   "from": 11,
+   "to": 12,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 43,
+   "from": 15,
+   "to": 17,
+   "bend": 22.2,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 44,
+   "from": 16,
+   "to": 17,
+   "bend": 10.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 45,
+   "from": 7,
+   "to": 17,
+   "bend": 61.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 46,
+   "from": 10,
+   "to": 21,
+   "bend": 22.6,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 47,
+   "from": 20,
+   "to": 21,
+   "bend": 9.6,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 48,
+   "from": 23,
+   "to": 22,
+   "bend": 9.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 49,
+   "from": 24,
+   "to": 22,
+   "bend": 13.4,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 50,
+   "from": 13,
+   "to": 25,
+   "bend": 16.5,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 51,
+   "from": 14,
+   "to": 25,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 52,
+   "from": 17,
+   "to": 25,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 53,
+   "from": 22,
+   "to": 25,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 54,
+   "from": 18,
+   "to": 25,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 55,
+   "from": 25,
+   "to": 26,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 56,
+   "from": 18,
+   "to": 26,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 57,
+   "from": 17,
+   "to": 27,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 58,
+   "from": 26,
+   "to": 27,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 59,
+   "from": 27,
+   "to": 28,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 60,
+   "from": 19,
+   "to": 28,
+   "bend": 19.8,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 61,
+   "from": 21,
+   "to": 29,
+   "bend": 15.2,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 62,
+   "from": 28,
+   "to": 29,
+   "bend": 10.3,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 63,
+   "from": 1,
+   "to": 30,
+   "bend": 20.1,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 64,
+   "from": 13,
+   "to": 30,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  }
+ ],
+ "notes": [],
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 156.0,
+  "time_step": 0.0625,
+  "time_units": "week",
+  "method": "Euler"
+ },
+ "next_id": 641,
+ "sheets": [
+  {
+   "id": 65,
+   "name": "Model",
+   "kind": "Diagram",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "cld": {
+    "nodes": [],
+    "links": [],
+    "loops": []
+   },
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "caption": "",
+   "source": ""
+  },
+  {
+   "name": "Causal loops",
+   "kind": "CausalLoop",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "id": 640,
+   "cld": {
+    "nodes": [
+     {
+      "id": 618,
+      "text": "Defective Machines",
+      "pos": [
+       190.0,
+       255.0
+      ]
+     },
+     {
+      "id": 619,
+      "text": "Breakdowns",
+      "pos": [
+       254.0,
+       132.1
+      ]
+     },
+     {
+      "id": 620,
+      "text": "Failed Machines",
+      "pos": [
+       426.0,
+       132.1
+      ]
+     },
+     {
+      "id": 621,
+      "text": "Breakdown Repairs",
+      "pos": [
+       490.0,
+       255.0
+      ]
+     },
+     {
+      "id": 622,
+      "text": "Hours for Planned Work",
+      "pos": [
+       426.0,
+       377.9
+      ]
+     },
+     {
+      "id": 623,
+      "text": "Planned Repairs",
+      "pos": [
+       254.0,
+       377.9
+      ]
+     },
+     {
+      "id": 624,
+      "text": "Maintenance Hours",
+      "pos": [
+       620,
+       395
+      ]
+     },
+     {
+      "id": 625,
+      "text": "Defect Creation",
+      "pos": [
+       95,
+       110
+      ]
+     }
+    ],
+    "links": [
+     {
+      "id": 626,
+      "from": 618,
+      "to": 619,
+      "bend": -17.0,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 627,
+      "from": 619,
+      "to": 620,
+      "bend": -27.1,
+      "polarity": "+",
+      "delay": true
+     },
+     {
+      "id": 628,
+      "from": 620,
+      "to": 621,
+      "bend": -16.9,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 629,
+      "from": 621,
+      "to": 622,
+      "bend": -16.9,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 630,
+      "from": 622,
+      "to": 623,
+      "bend": -27.1,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 631,
+      "from": 623,
+      "to": 618,
+      "bend": -16.9,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 632,
+      "from": 621,
+      "to": 620,
+      "bend": 97.0,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 633,
+      "from": 618,
+      "to": 623,
+      "bend": 109.4,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 634,
+      "from": 624,
+      "to": 621,
+      "bend": 34.4,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 635,
+      "from": 624,
+      "to": 622,
+      "bend": -35.1,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 636,
+      "from": 625,
+      "to": 618,
+      "bend": 31.2,
+      "polarity": "+",
+      "delay": false
+     }
+    ],
+    "loops": [
+     {
+      "id": 637,
+      "pos": [
+       340,
+       255
+      ],
+      "reinforcing": true,
+      "label": "R1 Capability trap",
+      "clockwise": true
+     },
+     {
+      "id": 638,
+      "pos": [
+       507.8,
+       165.8
+      ],
+      "reinforcing": false,
+      "label": "B1 Firefighting",
+      "clockwise": false
+     },
+     {
+      "id": 639,
+      "pos": [
+       160.1,
+       327.7
+      ],
+      "reinforcing": false,
+      "label": "B2 Planned work",
+      "clockwise": false
+     }
+    ]
+   },
+   "caption": "",
+   "source": ""
+  }
+ ],
+ "groups": [],
+ "modules": [],
+ "scenarios": [],
+ "trend_style": {
+  "title": "",
+  "subtitle": "",
+  "x_label": "",
+  "y_label": "",
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "legend": "TopRight",
+  "grid": true,
+  "line_width": 1.0,
+  "markers": false,
+  "time_marker": true,
+  "compare": true,
+  "colors": []
+ },
+ "sets": [],
+ "arrow_shape": "Curved",
+ "arrow_head": "Filled",
+ "diagram_style": "Classic",
+ "module_style": "Detailed",
+ "functions": [],
+ "checks": [],
+ "defs": [],
+ "instances": [],
+ "manifest": {
+  "title": "",
+  "description": "",
+  "levers": [],
+  "outputs": [],
+  "scenarios": [],
+  "bindings": [],
+  "validity": [],
+  "tests": [],
+  "goals": [],
+  "reduced_from": ""
+ },
+ "figure_style": {
+  "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+  "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+  "text_scale": 0.9,
+  "line_scale": 1.15,
+  "width_mm": 130.0,
+  "background": "#ffffff",
+  "colors": {
+   "accent": "#000000",
+   "accent_soft": "#ffffff",
+   "aux": "#000000",
+   "border": "#000000",
+   "constant": "#000000",
+   "error": "#000000",
+   "flow": "#000000",
+   "grid": "#ffffff",
+   "link": "#000000",
+   "lookup": "#000000",
+   "muted": "#000000",
+   "ok": "#000000",
+   "panel": "#ffffff",
+   "stock": "#000000",
+   "stock_fill": "#ffffff",
+   "surface": "#ffffff",
+   "text": "#000000"
+  },
+  "arrow_shape": "curved",
+  "arrow_head": "filled",
+  "arrow_weight": 1,
+  "diagram_style": "classic",
+  "caption_size": 13.0
+ }
+}

@@ -1,0 +1,62 @@
+{UTF-8}
+{ Chapter 2: a contractor whose crews grow by reinvesting margin, in a region with a steady flow of projects. }
+Regional Demand=
+	50
+	~	projects/month
+	~	Projects the region offers each month.
+	|
+Productivity=
+	2
+	~	projects/crew/month
+	~	Projects a crew completes per month when work is plentiful.
+	|
+Crew Capacity=
+	Crews * Productivity
+	~	projects/month
+	~	|
+Utilisation=
+	1 / (1 + (Crew Capacity / Regional Demand)^4)
+	~	dmnl
+	~	Share of crew time that finds work: near 1 while capacity is well below demand, one half when capacity equals demand, falling steeply beyond.
+	|
+Projects Done=
+	Crew Capacity * Utilisation
+	~	projects/month
+	~	|
+Perception Delay=
+	0.25
+	~	month
+	~	Time for management to see that work is getting scarce.
+	|
+Perceived Utilisation=
+	SMOOTH3(Utilisation, Perception Delay)
+	~	dmnl
+	~	|
+Crews per Project=
+	0.08
+	~	crew/project
+	~	New crews funded by the margin on each project completed.
+	|
+Crew Additions=
+	Crew Capacity * Perceived Utilisation * Crews per Project
+	~	crew/month
+	~	Crews hired from reinvested margin, judged at the utilisation management believes.
+	|
+Crew Life=
+	24
+	~	month
+	~	Average time a crew stays.
+	|
+Crew Departures=
+	Crews / Crew Life
+	~	crew/month
+	~	|
+Crews= INTEG(
+	Crew Additions - Crew Departures,
+	2)
+	~	crew
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 120 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

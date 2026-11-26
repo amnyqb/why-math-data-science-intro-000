@@ -1,0 +1,4 @@
+Name,Value,Units,Min,Max,Description
+Contact Rate,6,1/Day,0,15,
+Infectivity,0.25,Dmnl,0,1,
+Illness Duration,5,Day,1,20,

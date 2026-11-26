@@ -1,0 +1,70 @@
+{UTF-8}
+{ Chapter 6: orders step up by 50%; deliveries follow a third-order delay of 3 weeks and demand is perceived through a 1-week smooth. }
+Normal Orders=
+	100
+	~	units/week
+	~	Orders before the step.
+	|
+
+Order Increase=
+	50
+	~	units/week
+	~	Step in orders at week 1.
+	|
+
+Orders=
+	Normal Orders + STEP(Order Increase, 1)
+	~	units/week
+	~	Orders placed with the supplier.
+	|
+
+Delivery Delay=
+	3
+	~	week
+	~	Average time from order to delivery.
+	|
+
+Deliveries=
+	DELAY3(Orders, Delivery Delay)
+	~	units/week
+	~	Deliveries, a third-order delay of orders.
+	|
+
+Smoothing Time=
+	1
+	~	week
+	~	Time to perceive a change in orders.
+	|
+
+Perceived Orders=
+	SMOOTH(Orders, Smoothing Time)
+	~	units/week
+	~	Orders as management perceives them.
+	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 12
+	~	week
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	week
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	week [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	week [0,?]
+	~	The time step for the simulation.
+	|

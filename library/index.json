@@ -1,0 +1,141 @@
+{
+  "about": "Dynamist model library: one model per lesson. Every file is our own work; see each entry's source and licence.",
+  "models": [
+    {
+      "slug": "01-bathtub",
+      "title": "The bathtub",
+      "level": "beginner",
+      "concepts": [
+        "stock",
+        "flow",
+        "net flow",
+        "accumulation"
+      ],
+      "prerequisites": [],
+      "question": "If the tap runs faster than the drain, what happens to the water in the tub?",
+      "source": "Written for Dynamist from a textbook structure; no third-party file or text.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/01-bathtub.sdm",
+      "tutorial": "wiki/tutorial/01-bathtub.md"
+    },
+    {
+      "slug": "02-population-loops",
+      "title": "Births and deaths",
+      "level": "beginner",
+      "concepts": [
+        "feedback",
+        "reinforcing loop",
+        "balancing loop",
+        "loop polarity"
+      ],
+      "prerequisites": [
+        "01-bathtub"
+      ],
+      "question": "Why does a population grow when births exceed deaths, and what does each loop do on its own?",
+      "source": "Written for Dynamist from a textbook structure; no third-party file or text.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/02-population-loops.sdm",
+      "tutorial": "wiki/tutorial/02-population-loops.md"
+    },
+    {
+      "slug": "03-delays",
+      "title": "A shipment delay",
+      "level": "beginner",
+      "concepts": [
+        "delay",
+        "first-order delay",
+        "fixed (pipeline) delay",
+        "material in transit"
+      ],
+      "prerequisites": [
+        "01-bathtub"
+      ],
+      "question": "Orders step up. When do the goods arrive, and how does the kind of delay change the answer?",
+      "source": "Written for Dynamist from a textbook structure; no third-party file or text.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/03-delays.sdm",
+      "tutorial": "wiki/tutorial/03-delays.md"
+    },
+    {
+      "slug": "04-workforce-oscillation",
+      "title": "Hiring and stock: oscillation",
+      "level": "intermediate",
+      "concepts": [
+        "oscillation",
+        "overshoot",
+        "delays in a balancing loop",
+        "damping"
+      ],
+      "prerequisites": [
+        "02-population-loops",
+        "03-delays"
+      ],
+      "question": "Demand steps up. Why do the workforce and inventory swing before they settle?",
+      "source": "Structure after Hayward and Roach (2023, Fig. 5): three balancing loops. The diagram is theirs; the formulas, names and numbers are the standard ones for this structure, written by us. No text, table or file of the paper is included.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/04-workforce-oscillation.sdm",
+      "tutorial": "wiki/tutorial/04-workforce-oscillation.md"
+    },
+    {
+      "slug": "05-limits-to-growth",
+      "title": "Growth runs into a limit",
+      "level": "intermediate",
+      "concepts": [
+        "S-shaped growth",
+        "carrying capacity",
+        "shifting loop dominance",
+        "nonlinearity"
+      ],
+      "prerequisites": [
+        "02-population-loops"
+      ],
+      "question": "Why does growth that starts exponential slow down and level off?",
+      "source": "Written for Dynamist from a textbook structure; no third-party file or text.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/05-limits-to-growth.sdm",
+      "tutorial": "wiki/tutorial/05-limits-to-growth.md"
+    },
+    {
+      "slug": "06-fishery-policy",
+      "title": "A fishery: testing a policy",
+      "level": "intermediate",
+      "concepts": [
+        "policy",
+        "lever",
+        "scenario",
+        "trade-off",
+        "sweep",
+        "policy landscape"
+      ],
+      "prerequisites": [
+        "05-limits-to-growth"
+      ],
+      "question": "How hard should boats fish to bring home the most fish over fifty years?",
+      "source": "Written for Dynamist from a textbook structure; no third-party file or text.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/06-fishery-policy.sdm",
+      "tutorial": "wiki/tutorial/06-fishery-policy.md"
+    },
+    {
+      "slug": "07-workforce-what-matters",
+      "title": "Which lever matters?",
+      "level": "advanced",
+      "concepts": [
+        "screening",
+        "sensitivity",
+        "Sobol indices",
+        "loop dominance",
+        "which levers to study"
+      ],
+      "prerequisites": [
+        "04-workforce-oscillation",
+        "06-fishery-policy"
+      ],
+      "question": "Six numbers could be changed. Which ones decide the outcome, and which can be left alone?",
+      "source": "Structure after Hayward and Roach (2023, Fig. 5); see lesson 4. Three stocks: expected demand follows demand. Lever ranges are ours.",
+      "licence": "Same licence as the Dynamist project (own work); free to use, copy and teach with.",
+      "file": "lessons/07-workforce-what-matters.sdm",
+      "tutorial": "wiki/tutorial/07-workforce-what-matters.md"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# B2-1 Workforce-Inventory core (two stocks; Expected Demand exogenous, as in Hayward and Roach 2023 p. 4).
+# FROZEN before any score is computed (see results/b2-1/CONFIG.sha256).
+model: models/b2-1-workforce-inventory-core.sdm
+steps:
+  screen:                     # F1
+    trajectories: 50
+    levels: 4
+    seed: 1
+    tau: 0.1
+    linear_cut: 0.1
+    converge_tau: 0.9
+    csv: results/b2-1/screen.csv
+  importance:                 # F2
+    samples: 2048
+    seed: 1
+    bootstrap: 100
+    ensemble: 40
+    eigen_at: 20
+  dominance:                  # loop dominance, base run
+    csv: results/b2-1/dominance.csv
+  run:
+    series: "Inventory,Workforce"
+    csv: results/b2-1/base_run.csv
+scoring:
+  # fixed before looking at scores
+  turning_window: 0.5         # months either side of a Workforce extremum where B2 is expected to dominate
+  slowing_start: max_rate     # B1 expected from the time of the fastest change in a half cycle until the turning window
+  min_switches: 3             # dominance must alternate between B1 and B2 at least this often after the step
+  damping_ratio: 0.05         # |d Re lambda / d ln ICT| below this share of |... Hiring Time| counts as "B1 only"
+loops:                        # how the scoring identifies the paper's loops in our model
+  B1: {contains: ["Net Hiring"], excludes: ["Inventory"], parameter: "Hiring Time"}
+  B2: {contains: ["Inventory Shortfall"], parameter: "Inventory Correction Time"}

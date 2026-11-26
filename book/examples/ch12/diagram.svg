@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="93.95mm" viewBox="0 0 423.75 306.25">
+<title>Model</title>
+<polyline points="102.66,40 107.03,40 111.41,40 115.78,40 120.16,40 124.53,40 128.91,40 133.28,40 137.66,40 142.03,40 146.41,40 150.78,40 155.16,40 159.53,40 163.91,40 168.28,40 172.66,40 177.03,40 181.41,40 185.78,40 190.16,40 194.53,40 198.91,40 203.28,40 207.66,40 212.03,40 216.41,40 220.78,40 225.16,40 229.53,40 233.91,40 238.28,40 242.66,40 247.03,40 251.41,40 255.78,40 260.16,40 264.53,40 268.91,40 273.28,40 269.18,40" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="277.66,40 267.05,43.82 269.39,40" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="277.66,40 269.39,40 267.05,36.18" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="89.53,215 93.91,211.88 98.28,208.75 102.66,205.63 107.03,202.5 111.41,199.38 115.78,196.25 120.16,193.13 124.53,190 128.91,186.88 133.28,183.75 137.66,180.63 142.03,177.5 146.41,174.38 150.78,171.25 155.16,168.13 159.53,165 163.91,161.88 168.28,158.75 172.66,155.63 177.03,152.5 181.41,149.38 185.78,146.25 190.16,143.13 194.53,140 198.91,136.88 203.28,133.75 207.66,130.63 212.03,127.5 216.41,124.38 220.78,121.25 225.16,118.13 229.53,115 233.91,111.88 238.28,108.75 242.66,105.63 247.03,102.5 251.41,99.38 255.78,96.25 260.16,93.13 264.53,90 268.91,86.88 273.28,83.75 277.66,80.63 282.03,77.5 286.41,74.38 290.78,71.25 295.16,68.13 292.63,69.93" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="299.53,65 293.13,74.27 292.8,69.8" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="299.53,65 292.8,69.8 288.69,68.05" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="102.66,57.19 107.03,58.75 111.41,60.31 115.78,61.88 120.16,63.44 124.53,65 128.91,66.56 133.28,68.13 137.66,69.69 142.03,71.25 146.41,72.81 150.78,74.38 155.16,75.94 159.53,77.5 163.91,79.06 168.28,80.63 172.66,82.19 177.03,83.75 181.41,85.31 185.78,86.88 190.16,88.44 194.53,90 198.91,91.56 203.28,93.13 207.66,94.69 212.03,96.25 216.41,97.81 220.78,99.38 225.16,100.94 229.53,102.5 233.91,104.06 238.28,105.63 242.66,107.19 247.03,108.75 251.41,110.31 255.78,111.88 260.16,113.44 264.53,115 268.91,116.56 273.28,118.13 269.67,116.84" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="277.66,119.69 266.39,119.71 269.87,116.91" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="277.66,119.69 269.87,116.91 268.96,112.53" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="98.28,224.38 102.66,222.81 107.03,221.25 111.41,219.69 115.78,218.13 120.16,216.56 124.53,215 128.91,213.44 133.28,211.88 137.66,210.31 142.03,208.75 146.41,207.19 150.78,205.63 155.16,204.06 159.53,202.5 163.91,200.94 168.28,199.38 172.66,197.81 177.03,196.25 181.41,194.69 185.78,193.13 190.16,191.56 194.53,190 198.91,188.44 203.28,186.88 207.66,185.31 212.03,183.75 216.41,182.19 220.78,180.63 225.16,179.06 229.53,177.5 233.91,175.94 238.28,174.38 242.66,172.81 247.03,171.25 251.41,169.69 255.78,168.13 260.16,166.56 264.53,165 268.91,163.44 273.28,161.88 269.67,163.16" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="277.66,160.31 268.96,167.47 269.87,163.09" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="277.66,160.31 269.87,163.09 266.39,160.29" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="102.66,140 107.03,140 111.41,140 115.78,140 120.16,140 124.53,140 128.91,140 133.28,140 137.66,140 142.03,140 146.41,140 150.78,140 155.16,140 159.53,140 163.91,140 168.28,140 172.66,140 177.03,140 181.41,140 185.78,140 190.16,140 194.53,140 198.91,140 203.28,140 207.66,140 212.03,140 216.41,140 220.78,140 225.16,140 229.53,140 233.91,140 238.28,140 242.66,140 247.03,140 251.41,140 255.78,140 260.16,140 264.53,140 268.91,140 273.28,140 269.18,140" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="277.66,140 267.05,143.82 269.39,140" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="277.66,140 269.39,140 267.05,136.18" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="89.53,65 93.91,68.13 98.28,71.25 102.66,74.38 107.03,77.5 111.41,80.63 115.78,83.75 120.16,86.88 124.53,90 128.91,93.13 133.28,96.25 137.66,99.38 142.03,102.5 146.41,105.63 150.78,108.75 155.16,111.88 159.53,115 163.91,118.13 168.28,121.25 172.66,124.38 177.03,127.5 181.41,130.63 185.78,133.75 190.16,136.88 194.53,140 198.91,143.13 203.28,146.25 207.66,149.38 212.03,152.5 216.41,155.63 220.78,158.75 225.16,161.88 229.53,165 233.91,168.13 238.28,171.25 242.66,174.38 247.03,177.5 251.41,180.63 255.78,183.75 260.16,186.88 264.53,190 268.91,193.13 273.28,196.25 277.66,199.38 282.03,202.5 286.41,205.63 290.78,208.75 295.16,211.88 292.63,210.07" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="299.53,215 288.69,211.95 292.8,210.2" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="299.53,215 292.8,210.2 293.13,205.73" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="98.28,240 102.66,240 107.03,240 111.41,240 115.78,240 120.16,240 124.53,240 128.91,240 133.28,240 137.66,240 142.03,240 146.41,240 150.78,240 155.16,240 159.53,240 163.91,240 168.28,240 172.66,240 177.03,240 181.41,240 185.78,240 190.16,240 194.53,240 198.91,240 203.28,240 207.66,240 212.03,240 216.41,240 220.78,240 225.16,240 229.53,240 233.91,240 238.28,240 242.66,240 247.03,240 251.41,240 255.78,240 251.68,240" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="260.16,240 249.55,243.82 251.89,240" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="260.16,240 251.89,240 249.55,236.18" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="102.66,157.19 107.03,158.75 111.41,160.31 115.78,161.88 120.16,163.44 124.53,165 128.91,166.56 133.28,168.13 137.66,169.69 142.03,171.25 146.41,172.81 150.78,174.38 155.16,175.94 159.53,177.5 163.91,179.06 168.28,180.63 172.66,182.19 177.03,183.75 181.41,185.31 185.78,186.88 190.16,188.44 194.53,190 198.91,191.56 203.28,193.13 207.66,194.69 212.03,196.25 216.41,197.81 220.78,199.38 225.16,200.94 229.53,202.5 233.91,204.06 238.28,205.63 242.66,207.19 247.03,208.75 251.41,210.31 255.78,211.88 260.16,213.44 264.53,215 260.92,213.71" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="268.91,216.56 257.64,216.59 261.12,213.78" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="268.91,216.56 261.12,213.78 260.21,209.4" fill="#5c6370" stroke-linejoin="round"/>
+<rect x="20" y="10" width="89.06" height="40" rx="10" fill="#ffffff"/>
+<rect x="20.5" y="10.5" width="88.06" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="15" y="15" width="89.06" height="40" rx="10" fill="#ffffff"/>
+<rect x="15.5" y="15.5" width="88.06" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="10" y="20" width="89.06" height="40" rx="10" fill="#ffffff"/>
+<rect x="10.6" y="20.6" width="87.86" height="38.8" rx="9.4" fill="none" stroke="#16a249" stroke-width="1.38" stroke-opacity="0.45"/>
+<polygon points="25,35 30,40 25,45 20,40" fill="#16a34a" stroke-linejoin="round"/>
+<text x="36 45 52 63.5 70 77.5" y="38" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Demand</text>
+<rect x="48.78" y="13" width="48.28" height="14" rx="6" fill="#ffffff"/>
+<rect x="49.28" y="13.5" width="47.28" height="13" rx="5.5" fill="none" stroke="#4e46e4" stroke-width="1.15" stroke-opacity="0.7"/>
+<text x="52.78 56.28 61.28 66.78 69.28 74.78 79.78 82.28 87.28" y="23.5" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="10.64" fill="#4f46e5" xml:space="preserve">region ×3</text>
+<text x="36 42 48 54 60 66 72" y="51" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#16a34a" xml:space="preserve">Σ 100.0</text>
+<rect x="23.36" y="110" width="82.34" height="40" rx="10" fill="#ffffff"/>
+<rect x="23.86" y="110.5" width="81.34" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="18.36" y="115" width="82.34" height="40" rx="10" fill="#ffffff"/>
+<rect x="18.86" y="115.5" width="81.34" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="13.36" y="120" width="82.34" height="40" rx="10" fill="#ffffff"/>
+<rect x="13.96" y="120.6" width="81.14" height="38.8" rx="9.4" fill="none" stroke="#16a249" stroke-width="1.38" stroke-opacity="0.45"/>
+<polygon points="28.36,135 33.36,140 28.36,145 23.36,140" fill="#16a34a" stroke-linejoin="round"/>
+<text x="39.36 46.86 51.86 54.86 62.36 67.36 70.36 75.36" y="138" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Priority</text>
+<rect x="45.42" y="113" width="48.28" height="14" rx="6" fill="#ffffff"/>
+<rect x="45.92" y="113.5" width="47.28" height="13" rx="5.5" fill="none" stroke="#4e46e4" stroke-width="1.15" stroke-opacity="0.7"/>
+<text x="49.42 52.92 57.92 63.42 65.92 71.42 76.42 78.92 83.92" y="123.5" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="10.64" fill="#4f46e5" xml:space="preserve">region ×3</text>
+<text x="39.36 45.36 51.36" y="151" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#16a34a" xml:space="preserve">Σ 6</text>
+<rect x="15.16" y="220" width="78.75" height="40" rx="10" fill="#ffffff"/>
+<rect x="15.76" y="220.6" width="77.55" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="30.16" cy="240" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="30.16" cy="240" r="2.8" fill="#b5651d"/>
+<text x="41.16 47.66 55.16 62.66 70.16 73.66" y="238" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Supply</text>
+<text x="41.16 47.16" y="251" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">80</text>
+<rect x="291.2" y="10" width="106.66" height="40" rx="10" fill="#ffffff"/>
+<rect x="291.7" y="10.5" width="105.66" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="286.2" y="15" width="106.66" height="40" rx="10" fill="#ffffff"/>
+<rect x="286.7" y="15.5" width="105.66" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="281.2" y="20" width="106.66" height="40" rx="10" fill="#ffffff"/>
+<rect x="281.8" y="20.6" width="105.45" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="296.2" cy="40" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="296.2" cy="40" r="2.8" fill="#b5651d"/>
+<text x="307.2 314.2 321.7 329.2 335.7 339.2 342.2 347.7 355.2 361.7 366.7" y="38" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Equal share</text>
+<rect x="337.58" y="13" width="48.28" height="14" rx="6" fill="#ffffff"/>
+<rect x="338.08" y="13.5" width="47.28" height="13" rx="5.5" fill="none" stroke="#4e46e4" stroke-width="1.15" stroke-opacity="0.7"/>
+<text x="341.58 345.08 350.08 355.58 358.08 363.58 368.58 371.08 376.08" y="23.5" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="10.64" fill="#4f46e5" xml:space="preserve">region ×3</text>
+<text x="307.2 313.2 319.2 325.2" y="51" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">Σ 80</text>
+<rect x="294.77" y="110" width="99.53" height="40" rx="10" fill="#ffffff"/>
+<rect x="295.27" y="110.5" width="98.53" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="289.77" y="115" width="99.53" height="40" rx="10" fill="#ffffff"/>
+<rect x="290.27" y="115.5" width="98.53" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="284.77" y="120" width="99.53" height="40" rx="10" fill="#ffffff"/>
+<rect x="285.37" y="120.6" width="98.33" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="299.77" cy="140" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="299.77" cy="140" r="2.8" fill="#b5651d"/>
+<text x="310.77 318.77 324.77 327.77 335.27 340.27 343.27 350.77 355.77 358.77 363.77" y="138" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">By priority</text>
+<rect x="334.02" y="113" width="48.28" height="14" rx="6" fill="#ffffff"/>
+<rect x="334.52" y="113.5" width="47.28" height="13" rx="5.5" fill="none" stroke="#4e46e4" stroke-width="1.15" stroke-opacity="0.7"/>
+<text x="338.02 341.52 346.52 352.02 354.52 360.02 365.02 367.52 372.52" y="123.5" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="10.64" fill="#4f46e5" xml:space="preserve">region ×3</text>
+<text x="310.77 316.77 322.77 328.77" y="151" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">Σ 80</text>
+<rect x="275.22" y="210" width="138.63" height="40" rx="10" fill="#ffffff"/>
+<rect x="275.72" y="210.5" width="137.63" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="270.22" y="215" width="138.63" height="40" rx="10" fill="#ffffff"/>
+<rect x="270.72" y="215.5" width="137.63" height="39" rx="9.5" fill="none" stroke="#6f768c" stroke-width="1.15" stroke-opacity="0.55"/>
+<rect x="265.22" y="220" width="138.63" height="40" rx="10" fill="#ffffff"/>
+<rect x="265.82" y="220.6" width="137.42" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="280.22" cy="240" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="280.22" cy="240" r="2.8" fill="#b5651d"/>
+<text x="291.22 297.72 305.22 310.22 315.22 322.22 329.72 336.72 344.22 347.22 355.22 359.72 362.72 370.72 375.22 378.22 383.72" y="238" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Softened priority</text>
+<rect x="353.56" y="213" width="48.28" height="14" rx="6" fill="#ffffff"/>
+<rect x="354.06" y="213.5" width="47.28" height="13" rx="5.5" fill="none" stroke="#4e46e4" stroke-width="1.15" stroke-opacity="0.7"/>
+<text x="357.56 361.06 366.06 371.56 374.06 379.56 384.56 387.06 392.06" y="223.5" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="10.64" fill="#4f46e5" xml:space="preserve">region ×3</text>
+<text x="291.22 297.22 303.22 309.22" y="251" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">Σ 80</text>
+<text x="10 16.5 19.5 27 34.5 39.5 46.5 49.5 57 64 67.5 74.5 77.5 80.5 87.5 95 100 107 114 117 127 134 140 145.5 148.5 153.5 161 164 169.5 177 183.5 188.5 195.5 198.5 203.5 211 218 221 231 238 243 250 254.5" y="278" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Figure 12.1  Three ways to share the water.</text>
+<text x="10 15.5 22 28 32.5 37.5 43.5 46 48.5 55.5 61.5 67 73.5 78 84 88 90.5 96.5 103 105.5 111.5 117 122.5 132 138.5 141 147 149.5 159 165.5 172 178" y="294" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="12.33" fill="#6e768c" xml:space="preserve">Source: Chapter 12 example model</text>
+</svg>

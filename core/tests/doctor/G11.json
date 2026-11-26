@@ -1,0 +1,87 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE G11: a total that is a stock"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Cash A",
+  "kind": "stock",
+  "equation": "50",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Cash B",
+  "kind": "stock",
+  "equation": "30",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Total Cash",
+  "kind": "stock",
+  "equation": "80",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Rate A",
+  "kind": "flow",
+  "equation": "1",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "Cash A"
+ },
+ {
+  "op": "add_var",
+  "name": "Rate B",
+  "kind": "flow",
+  "equation": "1",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "Cash B"
+ },
+ {
+  "op": "add_var",
+  "name": "Rate T",
+  "kind": "flow",
+  "equation": "2",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "Total Cash"
+ },
+ {
+  "op": "add_var",
+  "name": "Spend",
+  "kind": "flow",
+  "equation": "Total Cash / 100",
+  "units": "widget/Day",
+  "doc": "test",
+  "from": "Cash A"
+ }
+]

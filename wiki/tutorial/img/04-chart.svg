@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="63.55mm" viewBox="0 0 1120 547.5">
+<title>Inventory</title>
+<defs>
+<clipPath id="c1"><rect x="10" y="7.75" width="1100" height="539.75"/></clipPath>
+<clipPath id="c2"><rect x="58.75" y="31.75" width="1051.25" height="476.25"/></clipPath>
+</defs>
+<g clip-path="url(#c1)">
+<text x="10 13.5 22.5 30 38.5 47 53 62 68.5 75.5 79.5 88.5 92 101 107.5 111.5 115 124 131.5 140 145.5 152.5 161 170 179 185 192 195.5 199 207 216 225 228.5 235 243.5 249.5 255.5 259.5 268" y="22.25" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="17.37" fill="#1a1a1a" xml:space="preserve">Inventory dips, overshoots, and settles</text>
+</g>
+<g clip-path="url(#c2)">
+<rect x="59.25" y="32.25" width="1050.25" height="475.25" rx="1.5" fill="none" stroke="#e4e7f0" stroke-width="1.15"/>
+</g>
+<g clip-path="url(#c1)">
+<text x="102.86" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">0</text>
+<text x="258.48 265.48" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">10</text>
+<text x="417.77 424.77" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">20</text>
+<text x="577.05 584.05" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">30</text>
+<text x="736.33 743.33" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">40</text>
+<text x="895.61 902.61" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">50</text>
+<text x="1054.89 1061.89" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">60</text>
+<text x="545.36 552.36 555.36 566.36 573.86 576.86 580.86 591.86 599.36 606.86 611.86 619.36" y="535" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">Time (Month)</text>
+<text x="40.09 47.09" y="426.79" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">80</text>
+<text x="40.09 47.09" y="292.4" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">90</text>
+<text x="32.75 39.75 47.25" y="158.01" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">100</text>
+<g transform="translate(6.25 282.05) rotate(-90)">
+<text x="0 8.5 16 19" y="12" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">Unit</text>
+</g>
+</g>
+<g clip-path="url(#c2)">
+<line x1="58.75" y1="502.92" x2="1110" y2="502.92" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="489.48" x2="1110" y2="489.48" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="476.04" x2="1110" y2="476.04" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="462.6" x2="1110" y2="462.6" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="449.16" x2="1110" y2="449.16" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="435.72" x2="1110" y2="435.72" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="408.84" x2="1110" y2="408.84" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="395.41" x2="1110" y2="395.41" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="381.97" x2="1110" y2="381.97" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="368.53" x2="1110" y2="368.53" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="355.09" x2="1110" y2="355.09" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="341.65" x2="1110" y2="341.65" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="328.21" x2="1110" y2="328.21" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="314.77" x2="1110" y2="314.77" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="301.34" x2="1110" y2="301.34" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="274.46" x2="1110" y2="274.46" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="261.02" x2="1110" y2="261.02" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="247.58" x2="1110" y2="247.58" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="234.14" x2="1110" y2="234.14" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="220.7" x2="1110" y2="220.7" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="207.27" x2="1110" y2="207.27" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="193.82" x2="1110" y2="193.82" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="180.39" x2="1110" y2="180.39" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="166.95" x2="1110" y2="166.95" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="140.07" x2="1110" y2="140.07" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="126.63" x2="1110" y2="126.63" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="113.2" x2="1110" y2="113.2" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="99.75" x2="1110" y2="99.75" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="86.32" x2="1110" y2="86.32" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="72.88" x2="1110" y2="72.88" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="59.44" x2="1110" y2="59.44" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="46" x2="1110" y2="46" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="32.56" x2="1110" y2="32.56" stroke="#505050" stroke-width="1.15" stroke-opacity="0.14"/>
+<line x1="58.75" y1="31.75" x2="58.75" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="74.68" y1="31.75" x2="74.68" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="90.61" y1="31.75" x2="90.61" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="122.46" y1="31.75" x2="122.46" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="138.39" y1="31.75" x2="138.39" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="154.32" y1="31.75" x2="154.32" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="170.25" y1="31.75" x2="170.25" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="186.18" y1="31.75" x2="186.18" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="202.1" y1="31.75" x2="202.1" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="218.03" y1="31.75" x2="218.03" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="233.96" y1="31.75" x2="233.96" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="249.89" y1="31.75" x2="249.89" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="281.74" y1="31.75" x2="281.74" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="297.67" y1="31.75" x2="297.67" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="313.6" y1="31.75" x2="313.6" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="329.53" y1="31.75" x2="329.53" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="345.45" y1="31.75" x2="345.45" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="361.38" y1="31.75" x2="361.38" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="377.31" y1="31.75" x2="377.31" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="393.24" y1="31.75" x2="393.24" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="409.17" y1="31.75" x2="409.17" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="441.02" y1="31.75" x2="441.02" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="456.95" y1="31.75" x2="456.95" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="472.88" y1="31.75" x2="472.88" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="488.81" y1="31.75" x2="488.81" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="504.73" y1="31.75" x2="504.73" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="520.66" y1="31.75" x2="520.66" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="536.59" y1="31.75" x2="536.59" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="552.52" y1="31.75" x2="552.52" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="568.45" y1="31.75" x2="568.45" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="600.3" y1="31.75" x2="600.3" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="616.23" y1="31.75" x2="616.23" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="632.16" y1="31.75" x2="632.16" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="648.09" y1="31.75" x2="648.09" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="664.02" y1="31.75" x2="664.02" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="679.94" y1="31.75" x2="679.94" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="695.87" y1="31.75" x2="695.87" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="711.8" y1="31.75" x2="711.8" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="727.73" y1="31.75" x2="727.73" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="759.58" y1="31.75" x2="759.58" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="775.51" y1="31.75" x2="775.51" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="791.44" y1="31.75" x2="791.44" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="807.37" y1="31.75" x2="807.37" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="823.3" y1="31.75" x2="823.3" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="839.22" y1="31.75" x2="839.22" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="855.15" y1="31.75" x2="855.15" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="871.08" y1="31.75" x2="871.08" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="887.01" y1="31.75" x2="887.01" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="918.86" y1="31.75" x2="918.86" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="934.79" y1="31.75" x2="934.79" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="950.72" y1="31.75" x2="950.72" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="966.65" y1="31.75" x2="966.65" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="982.57" y1="31.75" x2="982.57" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="998.5" y1="31.75" x2="998.5" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1014.43" y1="31.75" x2="1014.43" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1030.36" y1="31.75" x2="1030.36" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1046.29" y1="31.75" x2="1046.29" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1078.14" y1="31.75" x2="1078.14" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1094.07" y1="31.75" x2="1094.07" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1110" y1="31.75" x2="1110" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="58.75" y1="422.29" x2="1110" y2="422.29" stroke="#505050" stroke-width="1.15" stroke-opacity="0.66"/>
+<line x1="58.75" y1="287.9" x2="1110" y2="287.9" stroke="#505050" stroke-width="1.15" stroke-opacity="0.66"/>
+<line x1="265.81" y1="31.75" x2="265.81" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="425.09" y1="31.75" x2="425.09" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="584.38" y1="31.75" x2="584.38" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="743.66" y1="31.75" x2="743.66" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="902.94" y1="31.75" x2="902.94" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="1062.21" y1="31.75" x2="1062.21" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="106.54" y1="31.75" x2="106.54" y2="508" stroke="#505050" stroke-width="1.15"/>
+<line x1="58.75" y1="153.51" x2="1110" y2="153.51" stroke="#505050" stroke-width="1.15"/>
+</g>
+<g clip-path="url(#c1)">
+<rect x="1015.22" y="36.25" width="90.28" height="24" rx="9.5" fill="none" stroke="#e4e7f0" stroke-width="1.15" stroke-opacity="0.75"/>
+<circle cx="1089.5" cy="48.25" r="5.25" fill="#f4f5fa" stroke="#e4e7f0" stroke-width="1.15"/>
+<circle cx="1089.5" cy="48.25" r="3.75" fill="#4f46e5"/>
+<text x="1023.72 1026.72 1034.22 1040.22 1047.72 1054.72 1059.72 1067.72 1072.72" y="52.75" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#3c3c3c" xml:space="preserve">Inventory</text>
+</g>
+</svg>

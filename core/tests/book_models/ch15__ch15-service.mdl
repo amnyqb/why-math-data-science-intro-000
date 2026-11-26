@@ -1,0 +1,116 @@
+{UTF-8}
+{ Chapter 15: eroding goals in a service centre, after Oliva and Sterman (2001). Under pressure, staff spend less time per order; the internal standard drifts towards what is done; errors come back as rework. }
+Base Arrivals=
+	1000
+	~	order/week
+	~	|
+Surge=
+	0.2
+	~	dmnl
+	~	Extra demand during the surge.
+	|
+Surge Start=
+	10
+	~	week
+	~	|
+Surge Duration=
+	30
+	~	week
+	~	|
+New Orders=
+	Base Arrivals * (1 + Surge * PULSE(Surge Start, Surge Duration))
+	~	order/week
+	~	|
+Rework Orders=
+	DELAY3(Errors, Rework Delay)
+	~	order/week
+	~	Orders that come back because they were handled with errors.
+	|
+Rework Delay=
+	4
+	~	week
+	~	|
+Backlog= INTEG(
+	New Orders + Rework Orders - Completions,
+	1052.6)
+	~	order
+	~	|
+Target Delivery Time=
+	1
+	~	week
+	~	|
+Desired Completions=
+	Backlog / Target Delivery Time
+	~	order/week
+	~	|
+Service Hours=
+	2200
+	~	hour/week
+	~	Staff hours available for service (fixed headcount).
+	|
+Indicated Time per Order=
+	Service Hours / Desired Completions
+	~	hour/order
+	~	Time per order that would let the centre meet the desired completion rate.
+	|
+Time Adjustment=
+	2
+	~	week
+	~	Time for working practice to adjust.
+	|
+Time per Order=
+	SMOOTH(MIN(Standard Time per Order, Indicated Time per Order), Time Adjustment)
+	~	hour/order
+	~	Time actually spent on each order: staff cut corners under pressure, but do not work slower than the standard.
+	|
+Completions=
+	MIN(Service Hours / Time per Order, Desired Completions)
+	~	order/week
+	~	|
+External Standard=
+	2
+	~	hour/order
+	~	Time per order the service design requires (an external benchmark).
+	|
+Anchor Weight=
+	0
+	~	dmnl
+	~	Weight of the external standard in the goal (0: the goal follows practice only).
+	|
+Goal Target=
+	Anchor Weight * External Standard + (1 - Anchor Weight) * Time per Order
+	~	hour/order
+	~	|
+Erosion Time=
+	20
+	~	week
+	~	Time for the internal standard to adjust towards the target.
+	|
+Standard Adjustment=
+	(Goal Target - Standard Time per Order) / Erosion Time
+	~	hour/order/week
+	~	Drift of the internal standard towards the goal target.
+	|
+Standard Time per Order= INTEG(
+	Standard Adjustment,
+	2)
+	~	hour/order
+	~	The internal standard staff and managers believe in.
+	|
+Base Error Fraction=
+	0.05
+	~	dmnl
+	~	Share of orders with errors at the external standard.
+	|
+Error Fraction=
+	MIN(1, Base Error Fraction * (External Standard / Time per Order) ^ 2)
+	~	dmnl
+	~	|
+Errors=
+	Completions * Error Fraction
+	~	order/week
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 156 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = 0.0625 ~ week ~ |

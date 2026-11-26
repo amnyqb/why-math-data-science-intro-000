@@ -1,0 +1,67 @@
+{
+  "checks_failed": 0,
+  "goals": [
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.0,
+      "ensemble_nrmse_mean": 0.0,
+      "failed_runs": 0,
+      "goal": "Backlog peak",
+      "goal_value_tau": 1.0,
+      "mode_agreement": 1.0,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.0,
+      "ensemble_nrmse_mean": 0.0,
+      "failed_runs": 0,
+      "goal": "Backlog at the end",
+      "goal_value_tau": 1.0,
+      "mode_agreement": 1.0,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    },
+    {
+      "base": {
+        "nrmse": 0.0,
+        "uc": 0.0,
+        "um": 0.0,
+        "us": 0.0
+      },
+      "ensemble_nrmse_max": 0.0,
+      "ensemble_nrmse_mean": 0.0,
+      "failed_runs": 0,
+      "goal": "Delivery delay (company) peak",
+      "goal_value_tau": 1.0,
+      "mode_agreement": 1.0,
+      "pass_error": true,
+      "pass_modes": true,
+      "pass_tau": true
+    }
+  ],
+  "pass": true,
+  "policies": [],
+  "runs": 51,
+  "shared_parameters": [
+    "Salesman Constant SCT",
+    "Delivery Rate Adjustment Time DRAT",
+    "Time for Delivery Delay Recognition by Company TDDRC",
+    "Time for Delivery Delay Recognition by Market TDDRM",
+    "Sales Effectiveness Maximum SEM",
+    "Production Capacity Initial PCI"
+  ]
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE F2: an outflow that can drain a stock below zero"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Tank",
+  "kind": "stock",
+  "equation": "10",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Drain",
+  "kind": "flow",
+  "equation": "20",
+  "units": "widget/Day",
+  "doc": "test",
+  "from": "Tank"
+ }
+]

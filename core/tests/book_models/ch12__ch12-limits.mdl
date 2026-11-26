@@ -1,0 +1,103 @@
+{UTF-8}
+{ Chapter 12: underachievement (limits to success). A sales force grows from the margin on shipments; orders outrun a fixed plant, delivery delay rises, and customers order less. }
+Sales Reps= INTEG(
+	Rep Hiring - Rep Departures,
+	10)
+	~	rep
+	~	People selling the product.
+	|
+Reps per Unit Shipped=
+	0.008
+	~	rep/unit
+	~	New reps funded by the margin on each unit shipped.
+	|
+Rep Hiring=
+	Shipments * Reps per Unit Shipped
+	~	rep/month
+	~	|
+Rep Tenure=
+	24
+	~	month
+	~	Average time a rep stays.
+	|
+Rep Departures=
+	Sales Reps / Rep Tenure
+	~	rep/month
+	~	|
+Normal Orders per Rep=
+	10
+	~	unit/rep/month
+	~	Orders a rep wins each month when delivery is normal.
+	|
+Delivery Elasticity=
+	2
+	~	dmnl
+	~	How strongly customers react to a longer delivery delay than normal.
+	|
+Effect of Delivery Delay=
+	(Normal Delivery Delay / Perceived Delivery Delay) ^ Delivery Elasticity
+	~	dmnl
+	~	1 at the normal delay, below 1 when delivery is slow.
+	|
+Order Rate=
+	Sales Reps * Normal Orders per Rep * Effect of Delivery Delay
+	~	unit/month
+	~	|
+Backlog= INTEG(
+	Order Rate - Shipments,
+	200)
+	~	unit
+	~	Orders accepted and not yet shipped.
+	|
+Normal Delivery Delay=
+	2
+	~	month
+	~	Time to ship an order when the plant is not constrained.
+	|
+Shipments=
+	MIN(Backlog / Normal Delivery Delay, Capacity)
+	~	unit/month
+	~	|
+Delivery Delay=
+	XIDZ(Backlog, Shipments, Normal Delivery Delay)
+	~	month
+	~	Months of backlog at the current shipment rate.
+	|
+Perception Time=
+	3
+	~	month
+	~	Time for the market to notice a change in delivery delay.
+	|
+Perceived Delivery Delay=
+	SMOOTH3(Delivery Delay, Perception Time)
+	~	month
+	~	|
+Capacity= INTEG(
+	Capacity Additions,
+	400)
+	~	unit/month
+	~	Plant capacity.
+	|
+Expansion Switch=
+	0
+	~	dmnl
+	~	0: capacity is fixed (the problem). 1: capacity follows orders (the solution).
+	|
+Capacity Lead Time=
+	6
+	~	month
+	~	Time to build capacity.
+	|
+Capacity Additions=
+	Expansion Switch * MAX(0, Order Rate * Capacity Margin - Capacity) / Capacity Lead Time
+	~	unit/month/month
+	~	|
+Capacity Margin=
+	1.2
+	~	dmnl
+	~	Capacity planned above orders so that the plant is rarely the bottleneck.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 60 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

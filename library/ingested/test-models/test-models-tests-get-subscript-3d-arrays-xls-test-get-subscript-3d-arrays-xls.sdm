@@ -1,0 +1,242 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 4,
+      "name": "Three Dimensional Variable[GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry'),Column1,GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')]",
+      "kind": "Aux",
+      "equation": "\"Three Dimensional Constant[GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry'),Column1,GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')]\"",
+      "units": "",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Three Dimensional Variable[GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry'),Column2,GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')]",
+      "kind": "Aux",
+      "equation": "\"Three Dimensional Constant[GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry'),Column2,GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')]\"",
+      "units": "",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Three Dimensional Constant[GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry'),Column1,GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS('input.xls','Sheet1','C4')]",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Three Dimensional Constant[GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry'),Column2,GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS('input.xls','Sheet1','E4')]",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 8,
+      "from": 6,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 7,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 1.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 9,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "Third Dimension Subscript",
+      "items": [
+        "GET DIRECT SUBSCRIPT('input.xls','Sheet1','C3','D3','Depth')"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "Second Dimension Subscript",
+      "items": [
+        "Column1",
+        "Column2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "One Dimensional Subscript",
+      "items": [
+        "GET DIRECT SUBSCRIPT('input.xls','Sheet1','B4','B6','Entry')"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

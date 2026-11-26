@@ -1,0 +1,40 @@
+{UTF-8}
+{ Chapter 17: curves and effects. How strongly does price change demand? One curve, read five ways. }
+Effect of price on demand( (0.5,1.6), (1,1), (1.5,0.6), (2,0.4) )
+	~	dmnl
+	~	Demand relative to normal, at a price relative to normal. Higher price, lower demand.
+	|
+Relative price=
+	1.2
+	~	dmnl
+	~	Price now, compared with the normal price.
+	|
+Demand effect=
+	LOOK(Effect of price on demand, Relative price)
+	~	dmnl
+	~	Read the curve normally: with a price of 1.2 demand is 0.84 of normal.
+	|
+Price for a target=
+	LOOK(Effect of price on demand, 0.7, mode=inverse)
+	~	dmnl
+	~	Read the curve the other way: the price at which demand falls to 0.7 of normal, 1.375.
+	|
+Steepness=
+	LOOK(Effect of price on demand, Relative price, mode=slope)
+	~	dmnl
+	~	How fast demand falls as price rises, at the price now.
+	|
+Steps=
+	LOOK(Effect of price on demand, Relative price, mode=forward)
+	~	dmnl
+	~	The curve read as steps (the next point), like a price list.
+	|
+Beyond the data=
+	LOOK(Effect of price on demand, 2.5, mode=extrapolate)
+	~	dmnl
+	~	What the curve says beyond its last point if its last slope continues: 0.2, still falling. A warning that the data stop at a price of 2.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 1 ~ week ~ |
+TIME STEP = 1 ~ week ~ |
+SAVEPER = 1 ~ week ~ |

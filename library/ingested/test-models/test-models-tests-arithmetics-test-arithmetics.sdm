@@ -1,0 +1,761 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "add substract",
+      "kind": "Aux",
+      "equation": "cons3-time2+time3-cons2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        458.0,
+        288.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subs",
+      "by_item": [
+        {
+          "item": "sub2",
+          "equation": "-cons3-time2+time3-cons2",
+          "table": []
+        },
+        {
+          "item": "sub3",
+          "equation": "-(cons3-time2+time3-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub4",
+          "equation": "-(-cons3-time2+time3-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub5",
+          "equation": "-(cons3-time2)+(time3-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub6",
+          "equation": "-(cons3-time2)-(time3-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub7",
+          "equation": "-(cons3-time2)+(time3-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub8",
+          "equation": "(cons3-time2)-(time3-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub9",
+          "equation": "(cons3-time2)+(time3-cons2)",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "combined",
+      "kind": "Aux",
+      "equation": "(cons3/time2)+(time3/cons2)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subs",
+      "by_item": [
+        {
+          "item": "sub2",
+          "equation": "-(cons3/time2+time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub3",
+          "equation": "-cons3/(time2^(2+cons2)-time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub4",
+          "equation": "1/(-cons3+3/time2*time3/(cons2-Time))",
+          "table": []
+        },
+        {
+          "item": "sub5",
+          "equation": "-(cons3/time2)*(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub6",
+          "equation": "-(cons3/time2)+(cons3/time2)/(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub7",
+          "equation": "((cons3+cons2-Time)/time2)/(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub8",
+          "equation": "(cons3+cons2-Time/time2)/(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub9",
+          "equation": "(cons3/time2-cons3)*(time3/(cons2-cons3))",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "cons2",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        188.0,
+        142.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "cons3",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        184.0,
+        230.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "cons4",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        171.0,
+        348.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "expo",
+      "kind": "Aux",
+      "equation": "cons2^cons3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        420.0,
+        151.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subs",
+      "by_item": [
+        {
+          "item": "sub2",
+          "equation": "cons4^cons3^cons2",
+          "table": []
+        },
+        {
+          "item": "sub3",
+          "equation": "cons4^(cons3^cons2)",
+          "table": []
+        },
+        {
+          "item": "sub4",
+          "equation": "(cons4^cons3)^cons2",
+          "table": []
+        },
+        {
+          "item": "sub5",
+          "equation": "-Time^cons2",
+          "table": []
+        },
+        {
+          "item": "sub6",
+          "equation": "cons2^-cons2^-cons3",
+          "table": []
+        },
+        {
+          "item": "sub7",
+          "equation": "(-Time)^cons2",
+          "table": []
+        },
+        {
+          "item": "sub8",
+          "equation": "Time^(-cons2)",
+          "table": []
+        },
+        {
+          "item": "sub9",
+          "equation": "Time^-cons2",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "product",
+      "kind": "Aux",
+      "equation": "cons3/time2*time3/cons2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        456.0,
+        419.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subs",
+      "by_item": [
+        {
+          "item": "sub2",
+          "equation": "-cons3/time2*time3/cons2",
+          "table": []
+        },
+        {
+          "item": "sub3",
+          "equation": "-(cons3/time2*time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub4",
+          "equation": "1/(-cons3/time2*time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub5",
+          "equation": "-(cons3/time2)*(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub6",
+          "equation": "-(cons3/time2)/(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub7",
+          "equation": "-(cons3/time2)*(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub8",
+          "equation": "(cons3/time2)/(time3/cons2)",
+          "table": []
+        },
+        {
+          "item": "sub9",
+          "equation": "(cons3/time2)*(time3/cons2)",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "time1",
+      "kind": "Aux",
+      "equation": "-Time",
+      "units": "",
+      "comment": "",
+      "pos": [
+        162.0,
+        437.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "time2",
+      "kind": "Aux",
+      "equation": "2*Time",
+      "units": "",
+      "comment": "",
+      "pos": [
+        154.0,
+        542.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "time3",
+      "kind": "Aux",
+      "equation": "3*Time",
+      "units": "",
+      "comment": "",
+      "pos": [
+        153.0,
+        610.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 12,
+      "from": 4,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 4,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 4,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 5,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 5,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 5,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 6,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 10,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 10,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 21,
+      "from": 11,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 11,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 23,
+      "from": 5,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 24,
+      "from": 10,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 25,
+      "from": 11,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 26,
+      "from": 4,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 1.0,
+    "final_time": 10.0,
+    "time_step": 0.1,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 26,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "subs",
+      "items": [
+        "sub1",
+        "sub2",
+        "sub3",
+        "sub4",
+        "sub5",
+        "sub6",
+        "sub7",
+        "sub8",
+        "sub9"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

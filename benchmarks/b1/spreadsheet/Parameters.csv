@@ -1,0 +1,41 @@
+Name,Value,Units,Min,Max,Description,Per,Combine,Module,Lever
+Initial inventory,12,Case,0,24.0,Cases on hand at every stage at the start (classic game: 12).,,,Demand and settings,
+Initial demand,4,Case/Week,0,8.0,Weekly demand the chain starts in equilibrium with.,,,Demand and settings,
+Base demand,4,Case/Week,0,8.0,Customer demand before the step (regime 0).,,,Demand and settings,
+Step demand,8,Case/Week,0,16.0,Customer demand after the step (regime 0).,,,Demand and settings,yes
+Step week,5,Week,0,10.0,Week of the step in demand (regime 0).,,,Demand and settings,
+Demand regime,0,Dmnl,0,1,"0 step, 1 i.i.d. normal, 2 data series.",,,Demand and settings,yes
+Demand mean,4,Case/Week,0,8.0,Mean of the i.i.d. regime and of the base-stock formula.,,,Demand and settings,
+Demand sd,2,Case/Week,0,4.0,Standard deviation of the i.i.d. regime and of the base-stock formula.,,,Demand and settings,
+Demand seed,1,Dmnl,0,2.0,Seed of the i.i.d. regime.,,,Demand and settings,
+Service z,1.28,Dmnl,0,2.56,Safety factor of the base-stock formula (about 90% service).,,,Demand and settings,
+Holding cost,0.5,Currency/Case/Week,0,1,Per case on hand per week (classic game: 0.5; backlog is twice that).,,,Results and tests,
+Backlog cost,1,Currency/Case/Week,0,2.0,Per case in backlog per week.,,,Results and tests,
+Test start,0,Week,0,1,Costs and statistics are counted from this week on.,,,Demand and settings,
+Use equilibrium S prime,1,Dmnl,0,2.0,"1: desired stock is the equilibrium-consistent one (tests T2, T3); 0: the S prime constants below.",,,Demand and settings,yes
+Fixed order weeks,4,Week,0,8.0,Orders are held at the initial demand for weeks 1 to this one (board game: 4).,,,Demand and settings,
+Round orders,1,Dmnl,0,2.0,"1: orders are whole cases, rounded half up (board game); 0: continuous.",,,Demand and settings,
+Retailer policy,0,Dmnl,0,1,"0 anchoring and adjustment (P0, P2), 1 base-stock (P1).",,,Retailer,yes
+Retailer theta,0.36,1/Week,0,1,Smoothing of expected demand (PLACEHOLDER).,,,Retailer,
+Retailer alpha,0.26,1/Week,0,1,Fraction of the stock gap closed per week (PLACEHOLDER).,,,Retailer,
+Retailer beta,0.34,Dmnl,0,1,Weight on the supply line; below 1 means it is underweighted (PLACEHOLDER).,,,Retailer,yes
+Retailer S prime,17,Case,0,34.0,Desired stock when not using the equilibrium value (PLACEHOLDER).,,,Retailer,
+Retailer base stock level,25.7,Case,0,51.4,Order-up-to level of the base-stock policy; the starting value is the formula mean*(L+1) + z*sd*sqrt(L+1).,,,Retailer,
+Wholesaler policy,0,Dmnl,0,1,"0 anchoring and adjustment (P0, P2), 1 base-stock (P1).",,,Wholesaler,
+Wholesaler theta,0.36,1/Week,0,1,Smoothing of expected demand (PLACEHOLDER).,,,Wholesaler,
+Wholesaler alpha,0.26,1/Week,0,1,Fraction of the stock gap closed per week (PLACEHOLDER).,,,Wholesaler,
+Wholesaler beta,0.34,Dmnl,0,1,Weight on the supply line; below 1 means it is underweighted (PLACEHOLDER).,,,Wholesaler,yes
+Wholesaler S prime,17,Case,0,34.0,Desired stock when not using the equilibrium value (PLACEHOLDER).,,,Wholesaler,
+Wholesaler base stock level,25.7,Case,0,51.4,Order-up-to level of the base-stock policy; the starting value is the formula mean*(L+1) + z*sd*sqrt(L+1).,,,Wholesaler,
+Distributor policy,0,Dmnl,0,1,"0 anchoring and adjustment (P0, P2), 1 base-stock (P1).",,,Distributor,
+Distributor theta,0.36,1/Week,0,1,Smoothing of expected demand (PLACEHOLDER).,,,Distributor,
+Distributor alpha,0.26,1/Week,0,1,Fraction of the stock gap closed per week (PLACEHOLDER).,,,Distributor,
+Distributor beta,0.34,Dmnl,0,1,Weight on the supply line; below 1 means it is underweighted (PLACEHOLDER).,,,Distributor,yes
+Distributor S prime,17,Case,0,34.0,Desired stock when not using the equilibrium value (PLACEHOLDER).,,,Distributor,
+Distributor base stock level,25.7,Case,0,51.4,Order-up-to level of the base-stock policy; the starting value is the formula mean*(L+1) + z*sd*sqrt(L+1).,,,Distributor,
+Factory policy,0,Dmnl,0,1,"0 anchoring and adjustment (P0, P2), 1 base-stock (P1).",,,Factory,yes
+Factory theta,0.36,1/Week,0,1,Smoothing of expected demand (PLACEHOLDER).,,,Factory,
+Factory alpha,0.26,1/Week,0,1,Fraction of the stock gap closed per week (PLACEHOLDER).,,,Factory,
+Factory beta,0.34,Dmnl,0,1,Weight on the supply line; below 1 means it is underweighted (PLACEHOLDER).,,,Factory,yes
+Factory S prime,17,Case,0,34.0,Desired stock when not using the equilibrium value (PLACEHOLDER).,,,Factory,
+Factory base stock level,16.4,Case,0,32.8,Order-up-to level of the base-stock policy; the starting value is the formula mean*(L+1) + z*sd*sqrt(L+1).,,,Factory,

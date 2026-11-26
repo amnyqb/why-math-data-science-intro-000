@@ -1,0 +1,173 @@
+[
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "20"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.0009765625"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Year"
+ },
+ {
+  "op": "set_setting",
+  "key": "method",
+  "value": "euler"
+ },
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "Bass diffusion: how a new product spreads"
+ },
+ {
+  "op": "add_var",
+  "name": "Potential Adopters",
+  "kind": "stock",
+  "equation": "Market Size",
+  "units": "household"
+ },
+ {
+  "op": "add_var",
+  "name": "Adopters",
+  "kind": "stock",
+  "equation": "0",
+  "units": "household"
+ },
+ {
+  "op": "add_var",
+  "name": "Adoption",
+  "kind": "flow",
+  "equation": "Innovator Adoption + Imitator Adoption",
+  "units": "household/Year",
+  "from": "Potential Adopters",
+  "to": "Adopters"
+ },
+ {
+  "op": "add_var",
+  "name": "Innovator Adoption",
+  "kind": "aux",
+  "equation": "Advertising Effect * Potential Adopters",
+  "units": "household/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Imitator Adoption",
+  "kind": "aux",
+  "equation": "Word of Mouth Effect * Adopters * Potential Adopters / Market Size",
+  "units": "household/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Advertising Effect",
+  "kind": "constant",
+  "equation": "0.02",
+  "units": "1/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Word of Mouth Effect",
+  "kind": "constant",
+  "equation": "0.45",
+  "units": "1/Year"
+ },
+ {
+  "op": "add_var",
+  "name": "Market Size",
+  "kind": "constant",
+  "equation": "500000",
+  "units": "household"
+ },
+ {
+  "op": "add_var",
+  "name": "Adoption Fraction",
+  "kind": "aux",
+  "equation": "Adopters / Market Size",
+  "units": "1"
+ },
+ {
+  "op": "add_var",
+  "name": "Imitation Share",
+  "kind": "aux",
+  "equation": "Imitator Adoption / MAX(Adoption, 0.000001)",
+  "units": "1"
+ },
+ {
+  "op": "add_group",
+  "name": "Adoption engine",
+  "vars": [
+   "Potential Adopters",
+   "Adopters",
+   "Adoption"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Two sources of adoption",
+  "vars": [
+   "Innovator Adoption",
+   "Imitator Adoption",
+   "Imitation Share"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Behaviour parameters",
+  "vars": [
+   "Advertising Effect",
+   "Word of Mouth Effect"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Market",
+  "vars": [
+   "Market Size",
+   "Adoption Fraction"
+  ]
+ },
+ {
+  "op": "set_lever",
+  "var": "Advertising Effect",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Advertising Effect",
+  "min": 0,
+  "max": 0.1
+ },
+ {
+  "op": "set_lever",
+  "var": "Word of Mouth Effect",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Word of Mouth Effect",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "set_purpose",
+  "problem": "How fast does a new household product reach its market, and what shapes the S-curve?",
+  "kind": "understand behaviour",
+  "out_of_scope": "price, competitors, repeat purchase, supply limits"
+ },
+ {
+  "op": "add_objective",
+  "title": "Reach the market",
+  "kind": "grow to a plateau",
+  "test": "Adopters follow an S-curve and level off at Market Size (500000 households) within 20 years.",
+  "var": "Adopters"
+ }
+]

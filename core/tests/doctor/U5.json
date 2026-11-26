@@ -1,0 +1,68 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE U5: real and nominal money added"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Real Cost",
+  "kind": "constant",
+  "equation": "5",
+  "units": "USD_2024",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Nominal Cost",
+  "kind": "constant",
+  "equation": "3",
+  "units": "USD",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Total",
+  "kind": "aux",
+  "equation": "Real Cost + Nominal Cost",
+  "units": "USD_2024",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "USD_2024",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "F",
+  "kind": "flow",
+  "equation": "Total",
+  "units": "USD_2024/Day",
+  "doc": "test",
+  "to": "S"
+ }
+]

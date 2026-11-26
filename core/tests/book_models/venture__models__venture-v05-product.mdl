@@ -1,0 +1,440 @@
+{UTF-8}
+Base Marketing=
+	20000
+	~	USD/month
+	~	Monthly marketing budget once launched.
+	|
+Launch Time=
+	1
+	~	month
+	~	Month the marketing starts.
+	|
+Campaign Size=
+	0
+	~	USD
+	~	Extra one-off campaign budget (test input).
+	|
+Campaign Time=
+	12
+	~	month
+	~	
+	|
+Campaign Length=
+	1
+	~	month
+	~	
+	|
+Marketing Spend=
+	Base Marketing * STEP(1, Launch Time) + Campaign Size / Campaign Length * PULSE(Campaign Time, Campaign Length)
+	~	USD/month
+	~	
+	|
+Acquisition Cost=
+	400
+	~	USD/customer
+	~	Marketing spend needed to win one customer (CAC).
+	|
+Marketing Acquisition=
+	Marketing Spend / Acquisition Cost
+	~	customer/month
+	~	
+	|
+Referral Rate=
+	0.03
+	~	1/month
+	~	New customers won each month per existing customer, while the market is untouched.
+	|
+Market Size=
+	20000
+	~	customer
+	~	Customers the offer could reach in this city.
+	|
+Word of Mouth Acquisition=
+	Customers * Referral Rate * MAX(0, 1 - Customers / Market Size)
+	~	customer/month
+	~	
+	|
+Acquisition=
+	Marketing Acquisition + Word of Mouth Acquisition
+	~	customer/month
+	~	
+	|
+Churn Fraction=
+	0.04
+	~	1/month
+	~	Share of customers who cancel each month when service is normal.
+	|
+Churn=
+	Customers * Churn Fraction
+	~	customer/month
+	~	
+	|
+Customers= INTEG(
+	Acquisition - Churn,
+	0)
+	~	customer
+	~	Paying subscribers.
+	|
+Base Price=
+	120
+	~	USD/customer/month
+	~	
+	|
+Price Change=
+	0
+	~	dmnl
+	~	Fractional price change (test input).
+	|
+Price Change Time=
+	18
+	~	month
+	~	
+	|
+Price=
+	Base Price * (1 + Price Change * STEP(1, Price Change Time))
+	~	USD/customer/month
+	~	Monthly subscription price.
+	|
+Revenue=
+	Customers * Price
+	~	USD/month
+	~	Subscription revenue earned each month.
+	|
+Unit Service Cost=
+	20
+	~	USD/customer/month
+	~	Materials and third-party cost of serving one customer for a month.
+	|
+Service Cost=
+	Customers * Unit Service Cost
+	~	USD/month
+	~	
+	|
+Salary=
+	5000
+	~	USD/person/month
+	~	Salary and on-costs of one person.
+	|
+Customers per Staff=
+	100
+	~	customer/person
+	~	Customers one person can serve well.
+	|
+Perception Time=
+	2
+	~	month
+	~	Time to notice a lasting change in the customer base.
+	|
+Perceived Customers=
+	SMOOTH(Customers, Perception Time)
+	~	customer
+	~	
+	|
+Hiring Delay=
+	2
+	~	month
+	~	Average time from opening a post to a new person starting.
+	|
+Staff Adjustment Time=
+	2
+	~	month
+	~	
+	|
+Tenure=
+	24
+	~	month
+	~	
+	|
+Minimum Staff=
+	4
+	~	person
+	~	Founding team.
+	|
+Desired Staff=
+	MAX(Minimum Staff, Perceived Customers / Customers per Staff)
+	~	person
+	~	
+	|
+Attrition=
+	Staff / Tenure
+	~	person/month
+	~	
+	|
+Hiring Starts=
+	MAX(0, Attrition + (Desired Staff - Staff - Recruits in Pipeline) / Staff Adjustment Time)
+	~	person/month
+	~	
+	|
+Hires=
+	DELAY3(Hiring Starts, Hiring Delay)
+	~	person/month
+	~	
+	|
+Recruits in Pipeline= INTEG(
+	Hiring Starts - Hires,
+	0)
+	~	person
+	~	Posts opened, people not yet started.
+	|
+Staff= INTEG(
+	Hires - Attrition,
+	4)
+	~	person
+	~	
+	|
+Payroll=
+	Staff * Salary
+	~	USD/month
+	~	
+	|
+Overhead=
+	30000
+	~	USD/month
+	~	Product team, rent, software and other fixed costs.
+	|
+Device Cost=
+	300
+	~	USD/device
+	~	
+	|
+Supplier Lead Time=
+	3
+	~	month
+	~	
+	|
+Devices per Customer=
+	1
+	~	device/customer
+	~	
+	|
+Device Demand=
+	Acquisition * Devices per Customer
+	~	device/month
+	~	
+	|
+Expected Device Demand=
+	SMOOTH(Device Demand, 2)
+	~	device/month
+	~	
+	|
+Device Cover=
+	1
+	~	month
+	~	Months of expected demand to hold in stock.
+	|
+Supply Line Weight=
+	0.5
+	~	dmnl
+	~	
+	|
+Device Adjustment Time=
+	1
+	~	month
+	~	
+	|
+Minimum Install Time=
+	0.25
+	~	month
+	~	
+	|
+Device Orders=
+	MAX(0, Expected Device Demand + (Expected Device Demand * Device Cover - Devices in Stock) / Device Adjustment Time + Supply Line Weight * (Expected Device Demand * Supplier Lead Time - Devices on Order) / Device Adjustment Time)
+	~	device/month
+	~	
+	|
+Device Arrivals=
+	DELAY3(Device Orders, Supplier Lead Time)
+	~	device/month
+	~	
+	|
+Devices on Order= INTEG(
+	Device Orders - Device Arrivals,
+	0)
+	~	device
+	~	
+	|
+Devices Installed=
+	MIN(Device Demand, Devices in Stock / Minimum Install Time)
+	~	device/month
+	~	
+	|
+Devices in Stock= INTEG(
+	Device Arrivals - Devices Installed,
+	100)
+	~	device
+	~	
+	|
+Operating Expenses=
+	Service Cost + Payroll + Overhead + Marketing Spend
+	~	USD/month
+	~	Cash expenses recognised each month.
+	|
+Founder Capital=
+	400000
+	~	USD
+	~	Cash the founders and friends put in at the start.
+	|
+Round Width=
+	1
+	~	month
+	~	Funds of a round arrive over one month.
+	|
+Seed Amount=
+	1000000
+	~	USD
+	~	
+	|
+Seed Time=
+	6
+	~	month
+	~	
+	|
+Series A Amount=
+	0
+	~	USD
+	~	
+	|
+Series A Time=
+	24
+	~	month
+	~	
+	|
+Equity Raised=
+	Seed Amount / Round Width * PULSE(Seed Time, Round Width) + Series A Amount / Round Width * PULSE(Series A Time, Round Width)
+	~	USD/month
+	~	
+	|
+Collection Time=
+	1
+	~	month
+	~	Average time customers take to pay an invoice.
+	|
+Billings=
+	Revenue
+	~	USD/month
+	~	T(AR+): invoices sent.
+	|
+Revenue Earned=
+	Revenue
+	~	USD/month
+	~	T(RE+): revenue recognised.
+	|
+Collections=
+	Accounts Receivable / Collection Time
+	~	USD/month
+	~	T(Cash+) and T(AR-): invoices paid.
+	|
+Cash Collected=
+	Collections
+	~	USD/month
+	~	
+	|
+Accounts Receivable= INTEG(
+	Billings - Collections,
+	0)
+	~	USD
+	~	Invoices not yet paid.
+	|
+Cash Expenses=
+	Operating Expenses
+	~	USD/month
+	~	T(Cash-)
+	|
+Expenses Recognised=
+	Operating Expenses
+	~	USD/month
+	~	T(RE-)
+	|
+Cash from Investors=
+	Equity Raised
+	~	USD/month
+	~	T(Cash+)
+	|
+Capital Issued=
+	Equity Raised
+	~	USD/month
+	~	T(Paid-in Capital+)
+	|
+Device Purchases=
+	Device Arrivals * Device Cost
+	~	USD/month
+	~	T(Cash-): devices paid on arrival.
+	|
+Device Stock Added=
+	Device Arrivals * Device Cost
+	~	USD/month
+	~	T(Inventory+)
+	|
+Device Cost Recognised=
+	Devices Installed * Device Cost
+	~	USD/month
+	~	T(RE-): cost of devices installed.
+	|
+Device Stock Used=
+	Devices Installed * Device Cost
+	~	USD/month
+	~	T(Inventory-)
+	|
+Device Inventory Value= INTEG(
+	Device Stock Added - Device Stock Used,
+	Devices in Stock * Device Cost)
+	~	USD
+	~	Inventory at cost (an asset).
+	|
+Cash= INTEG(
+	Cash Collected + Cash from Investors - Cash Expenses - Device Purchases,
+	Founder Capital)
+	~	USD
+	~	
+	|
+Paid in Capital= INTEG(
+	Capital Issued,
+	Founder Capital + Devices in Stock * Device Cost)
+	~	USD
+	~	Equity put in by founders and investors.
+	|
+Retained Earnings= INTEG(
+	Revenue Earned - Expenses Recognised - Device Cost Recognised,
+	0)
+	~	USD
+	~	Accumulated profit or loss.
+	|
+Total Assets=
+	Cash + Accounts Receivable + Device Inventory Value
+	~	USD
+	~	
+	|
+Total Liabilities and Equity=
+	Paid in Capital + Retained Earnings
+	~	USD
+	~	The start-up has no debt in this model.
+	|
+Balance Gap=
+	Total Assets - Total Liabilities and Equity
+	~	USD
+	~	Must be zero at every step: the balance sheet balances.
+	|
+Net Income=
+	Revenue Earned - Expenses Recognised - Device Cost Recognised
+	~	USD/month
+	~	
+	|
+Net Cash Flow=
+	Cash Collected - Cash Expenses - Device Purchases
+	~	USD/month
+	~	Operating cash flow, before funding.
+	|
+Burn Rate=
+	MAX(0, -Net Cash Flow)
+	~	USD/month
+	~	
+	|
+Runway=
+	IF THEN ELSE(Burn Rate > 0, Cash / MAX(Burn Rate, 1), 99)
+	~	month
+	~	Months of cash left at the current burn.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 36 ~ month ~ |
+TIME STEP = 0.125 ~ month ~ |
+SAVEPER = 0.125 ~ month ~ |

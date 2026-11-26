@@ -1,0 +1,114 @@
+{UTF-8}
+{ Chapter 9: a terminal shares scarce fuel among three depots. Depots that expect to be short order more than they need. }
+Depot:
+	North, South, East
+	~	
+	~	|
+Demand[Depot]=
+	300, 300, 300
+	~	kL/day
+	~	What each depot really needs to supply its stations.
+	|
+Normal Supply=
+	960
+	~	kL/day
+	~	What the terminal can load per day.
+	|
+Outage Cut=
+	240
+	~	kL/day
+	~	Loss of supply while a refinery unit is down.
+	|
+Outage Start=
+	10
+	~	day
+	~	|
+Outage End=
+	40
+	~	day
+	~	|
+Supply=
+	Normal Supply - STEP(Outage Cut, Outage Start) + STEP(Outage Cut, Outage End)
+	~	kL/day
+	~	|
+Gaming[Depot]=
+	1, 1, 0
+	~	dmnl
+	~	1: the depot inflates its orders when it expects to be short. 0: it orders what it needs.
+	|
+Maximum Inflation=
+	4
+	~	dmnl
+	~	Largest multiple of real need that a depot will order.
+	|
+Orders[Depot]=
+	Demand[Depot] * MIN(Maximum Inflation, (1 / Perceived Fill Rate[Depot]) ^ Gaming[Depot])
+	~	kL/day
+	~	|
+Total Orders=
+	SUM(Orders[Depot!])
+	~	kL/day
+	~	The demand the terminal sees.
+	|
+Policy=
+	1
+	~	dmnl
+	~	1: in proportion to orders. 2: by priority. 3: in proportion to past deliveries (turn and earn).
+	|
+Priority[Depot]=
+	1, 1, 2
+	~	dmnl
+	~	Higher is served first (policy 2). East supplies the airport.
+	|
+Proportional Share[Depot]=
+	Orders[Depot] * MIN(1, Supply / Total Orders)
+	~	kL/day
+	~	|
+Priority Share[Depot]=
+	ALLOCATE BY PRIORITY(Orders[Depot], Priority[Depot], ELMCOUNT(Depot), 0.5, Supply)
+	~	kL/day
+	~	|
+History Time=
+	30
+	~	day
+	~	Period over which past deliveries are averaged (policy 3).
+	|
+Past Deliveries[Depot]=
+	SMOOTHI(Delivered[Depot], History Time, Demand[Depot])
+	~	kL/day
+	~	|
+Total Past Deliveries=
+	SUM(Past Deliveries[Depot!])
+	~	kL/day
+	~	|
+Earned Share[Depot]=
+	MIN(Orders[Depot], Supply * Past Deliveries[Depot] / Total Past Deliveries)
+	~	kL/day
+	~	|
+Delivered[Depot]=
+	IF THEN ELSE(Policy = 1, Proportional Share[Depot], IF THEN ELSE(Policy = 2, Priority Share[Depot], Earned Share[Depot]))
+	~	kL/day
+	~	|
+Fill Rate[Depot]=
+	XIDZ(Delivered[Depot], Orders[Depot], 1)
+	~	dmnl
+	~	Share of the order that was loaded.
+	|
+Perception Time=
+	5
+	~	day
+	~	Time for a depot to revise what fill rate it expects.
+	|
+Perceived Fill Rate[Depot]=
+	SMOOTHI(Fill Rate[Depot], Perception Time, 1)
+	~	dmnl
+	~	|
+Coverage[Depot]=
+	Delivered[Depot] / Demand[Depot]
+	~	dmnl
+	~	Deliveries as a share of real need (above 1: the depot is stocking up).
+	|
+INITIAL TIME = 0 ~ day ~ |
+FINAL TIME = 70 ~ day ~ |
+TIME STEP = 0.0625 ~ day ~ |
+SAVEPER = 0.0625 ~ day ~ |

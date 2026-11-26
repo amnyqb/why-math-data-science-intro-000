@@ -1,0 +1,36 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE S4: an equation that cannot be read"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "raw": {
+   "name": "Bad",
+   "kind": "aux",
+   "equation": "1 + * 2",
+   "units": "",
+   "comment": "test"
+  }
+ }
+]

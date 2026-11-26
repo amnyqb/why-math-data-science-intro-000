@@ -1,0 +1,3 @@
+Name,Equation,From stock,To stock,Units,Description
+Infection Rate,Contact Rate * Infectivity * Susceptible * Fraction Infected * Effect of Awareness(Fraction Infected),Susceptible,Infected,People/Day,
+Recovery Rate,Infected / Illness Duration,Infected,Recovered,People/Day,

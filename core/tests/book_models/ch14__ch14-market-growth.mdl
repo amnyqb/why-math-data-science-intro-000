@@ -1,0 +1,204 @@
+{UTF-8}
+{ Chapter 14: a simplified reconstruction of the structure of Forrester (1968) market growth model. Sales force grows from revenue; orders fall as the delivery delay known to customers lengthens; capacity is ordered when the delivery delay seen by management exceeds an operating goal that can drift towards performance. }
+Salespeople= INTEG(
+	Sales Hiring,
+	10)
+	~	person
+	~	Sales force.
+	|
+Sales Hiring=
+	(Indicated Salespeople - Salespeople) / Hiring Time
+	~	person/month
+	~	Hiring (or release) towards the sales force the budget supports.
+	|
+Hiring Time=
+	20
+	~	month
+	~	Time to adjust the sales force to the budget (Forrester 1968 uses 20 months).
+	|
+Indicated Salespeople=
+	Sales Budget / Salesperson Salary
+	~	person
+	~	Sales force the budget can pay.
+	|
+Salesperson Salary=
+	2000
+	~	dollar/person/month
+	~	Monthly cost of one salesperson.
+	|
+Sales Budget=
+	Revenue * Budget Fraction
+	~	dollar/month
+	~	Revenue allocated to selling.
+	|
+Budget Fraction=
+	0.1
+	~	dmnl
+	~	Share of revenue spent on the sales force.
+	|
+Revenue=
+	Orders * Price
+	~	dollar/month
+	~	Revenue booked with orders.
+	|
+Price=
+	100
+	~	dollar/unit
+	~	Revenue per unit ordered.
+	|
+Orders=
+	Salespeople * Sales Effectiveness
+	~	unit/month
+	~	Orders booked.
+	|
+Sales Effectiveness=
+	Normal Effectiveness * Delay Effect
+	~	unit/person/month
+	~	Orders per salesperson per month.
+	|
+Normal Effectiveness=
+	400
+	~	unit/person/month
+	~	Orders per salesperson when delivery is immediate.
+	|
+Delay Effect=
+	1 / (1 + (Market Delivery Delay / Half Effect Delay) ^ 3)
+	~	dmnl
+	~	Share of normal effectiveness kept at the delivery delay customers expect.
+	|
+Half Effect Delay=
+	4
+	~	month
+	~	Delivery delay at which salespeople book half their normal orders.
+	|
+Market Delivery Delay=
+	SMOOTH(Delivery Delay, Market Learning Time)
+	~	month
+	~	Delivery delay as customers know it.
+	|
+Market Learning Time=
+	6
+	~	month
+	~	Time for customers to learn the firm's delivery delay.
+	|
+Backlog= INTEG(
+	Orders - Shipments,
+	7111)
+	~	unit
+	~	Orders received but not yet shipped.
+	|
+Shipments=
+	MIN(Capacity, Backlog / Minimum Delay)
+	~	unit/month
+	~	Shipments, limited by capacity or by the minimum processing time.
+	|
+Minimum Delay=
+	1
+	~	month
+	~	Shortest possible time from order to shipment.
+	|
+Delivery Delay=
+	Backlog / Shipments
+	~	month
+	~	Current delivery delay.
+	|
+Perceived Delivery Delay=
+	SMOOTH(Delivery Delay, Reporting Time)
+	~	month
+	~	Delivery delay as management sees it in its reports.
+	|
+Reporting Time=
+	3
+	~	month
+	~	Reporting and averaging time for the delivery delay.
+	|
+Traditional Goal=
+	2
+	~	month
+	~	Delivery delay the company set as its standard.
+	|
+Weight on Tradition=
+	0
+	~	dmnl
+	~	Weight of the traditional goal in the operating goal (0: goal follows performance; 1: firm goal).
+	|
+Goal Change=
+	(Weight on Tradition * Traditional Goal + (1 - Weight on Tradition) * Perceived Delivery Delay - Delivery Delay Goal) / Goal Adjustment Time
+	~	dmnl
+	~	Drift of the operating goal towards a weighted mix of the traditional goal and the delivery delay management sees (months per month).
+	|
+Goal Adjustment Time=
+	12
+	~	month
+	~	Time for the operating goal to drift towards experience.
+	|
+Delivery Delay Goal= INTEG(
+	Goal Change,
+	2)
+	~	month
+	~	Operating goal used to judge whether capacity is short.
+	|
+Delivery Condition=
+	Perceived Delivery Delay / Delivery Delay Goal
+	~	dmnl
+	~	Above 1: deliveries are slower than the goal.
+	|
+Expansion Sensitivity=
+	0.1
+	~	1/month
+	~	Capacity ordered per month, as a fraction of capacity, per unit of excess delivery condition.
+	|
+Expansion Fraction=
+	MAX(0, Expansion Sensitivity * (Delivery Condition - 1))
+	~	1/month
+	~	Capacity ordered per month as a fraction of capacity in place.
+	|
+Capacity Orders=
+	Capacity * Expansion Fraction
+	~	unit/month/month
+	~	New capacity ordered each month.
+	|
+Capacity on Order= INTEG(
+	Capacity Orders - Capacity Arrivals,
+	0)
+	~	unit/month
+	~	Capacity ordered but not yet producing.
+	|
+Lead Time=
+	12
+	~	month
+	~	Average time to build and commission capacity.
+	|
+Capacity Arrivals=
+	Capacity on Order / Lead Time
+	~	unit/month/month
+	~	Capacity coming on line.
+	|
+Capacity= INTEG(
+	Capacity Arrivals,
+	3556)
+	~	unit/month
+	~	Units the plant can ship per month.
+	|
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+FINAL TIME  = 120
+	~	month
+	~	The final time for the simulation.
+	|
+INITIAL TIME  = 0
+	~	month
+	~	The initial time for the simulation.
+	|
+SAVEPER  = 
+        TIME STEP
+	~	month [0,?]
+	~	The frequency with which output is stored.
+	|
+TIME STEP  = 0.125
+	~	month [0,?]
+	~	The time step for the simulation.
+	|

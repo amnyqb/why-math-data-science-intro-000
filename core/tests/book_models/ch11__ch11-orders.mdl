@@ -1,0 +1,126 @@
+{UTF-8}
+{ Chapter 11: orders respond to price and to delivery delay through two normalised effects. A price cut at week 10 pushes orders above capacity; the backlog and the delivery delay rise until the delay effect brings orders back to capacity. }
+Normal Orders=
+	100
+	~	units/week
+	~	Orders per week at the reference price and the normal delivery delay.
+	|
+Reference Price=
+	50
+	~	dollars/unit
+	~	The price customers compare against.
+	|
+Price Change=
+	0
+	~	dmnl
+	~	Fractional change in price at week 10 (-0.2 is a 20% cut).
+	|
+Price Change Time=
+	10
+	~	week
+	~	|
+Price=
+	Reference Price * (1 + STEP(Price Change, Price Change Time))
+	~	dollars/unit
+	~	|
+Relative Price=
+	Price / Reference Price
+	~	dmnl
+	~	|
+Effect of Price on Orders table(
+	[(0,0)-(3,2)],(0,2),(0.5,1.8),(0.75,1.4),(1,1),(1.25,0.65),(1.5,0.4),(2,0.15),(3,0.05))
+	~	dmnl
+	~	Normalised: 1 at the reference price; slope -1.6 below and -1.4 above, so the elasticity at the normal point is about -1.5.
+	|
+Effect of Price on Orders=
+	Effect of Price on Orders table(Relative Price)
+	~	dmnl
+	~	|
+Normal Delivery Delay=
+	4
+	~	week
+	~	The delivery delay customers expect.
+	|
+Perception Time=
+	4
+	~	week
+	~	Time customers take to notice a change in delivery delay.
+	|
+Perceived Delivery Delay=
+	SMOOTH(Delivery Delay, Perception Time)
+	~	week
+	~	|
+Relative Delivery Delay=
+	Perceived Delivery Delay / Normal Delivery Delay
+	~	dmnl
+	~	|
+Effect of Delay on Orders table(
+	[(0,0)-(4,2)],(0,1.05),(0.5,1.03),(1,1),(1.5,0.9),(2,0.75),(3,0.5),(4,0.35))
+	~	dmnl
+	~	Normalised: 1 at the normal delay; flat near the normal point, falling as delays lengthen.
+	|
+Effect of Delay on Orders=
+	Effect of Delay on Orders table(Relative Delivery Delay)
+	~	dmnl
+	~	|
+Additive Combination=
+	0
+	~	dmnl
+	~	1: combine the effects by adding their deviations; 0: multiply them.
+	|
+Combined Effect=
+	IF THEN ELSE(Additive Combination = 1, 1 + (Effect of Price on Orders - 1) + (Effect of Delay on Orders - 1), Effect of Price on Orders * Effect of Delay on Orders)
+	~	dmnl
+	~	|
+Orders=
+	Normal Orders * Combined Effect
+	~	units/week
+	~	|
+Normal Capacity=
+	120
+	~	units/week
+	~	|
+Capacity Change=
+	0
+	~	dmnl
+	~	Fractional change in capacity (-0.6 is a 60% loss).
+	|
+Capacity Change Time=
+	10
+	~	week
+	~	|
+Capacity=
+	Normal Capacity * (1 + STEP(Capacity Change, Capacity Change Time))
+	~	units/week
+	~	|
+Target Delivery Delay=
+	4
+	~	week
+	~	The delay the firm plans to ship within; equal to what customers expect.
+	|
+Desired Shipments=
+	Backlog / Target Delivery Delay
+	~	units/week
+	~	|
+Shipments=
+	MIN(Desired Shipments, Capacity)
+	~	units/week
+	~	|
+Delivery Delay=
+	ZIDZ(Backlog, Shipments)
+	~	week
+	~	|
+Initial Backlog=
+	400
+	~	units
+	~	Set to Normal Orders * Normal Delivery Delay for a start in balance.
+	|
+Backlog= INTEG(
+	Orders - Shipments,
+	Initial Backlog)
+	~	units
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 100 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = 0.0625 ~ week ~ |

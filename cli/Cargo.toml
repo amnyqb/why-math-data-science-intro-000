@@ -1,0 +1,15 @@
+[package]
+name = "dynamist-cli"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "dyn"
+path = "src/main.rs"
+
+[dependencies]
+dynamist-core = { path = "../core" }
+# the headless drawing code (egui without a window; no eframe, winit or dialogs)
+dynamist = { path = "..", default-features = false }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"

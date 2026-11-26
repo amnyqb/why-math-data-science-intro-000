@@ -1,0 +1,32 @@
+{UTF-8}
+{ Chapter 10: a shipment pipeline. Orders leave a factory and arrive at a shop later.
+  The same orders are delayed three ways: smooth, bunched (order 3) and an exact pipeline. }
+Orders=
+	100 + STEP(60, 10)
+	~	cases/week
+	~	Orders the factory ships each week. A step up at week 10.
+	|
+Smooth arrival=
+	DELAY(Orders, 6)
+	~	cases/week
+	~	Material in transit for about 6 weeks, spread out.
+	|
+Bunched arrival=
+	DELAY(Orders, 6, order=3)
+	~	cases/week
+	~	The same, but most of it arrives close to week 6.
+	|
+Pipeline arrival=
+	DELAY(Orders, 6, exact=True)
+	~	cases/week
+	~	A pipeline: everything arrives exactly 6 weeks after it left.
+	|
+Belief about orders=
+	DELAY(Orders, 6, kind=information)
+	~	cases/week
+	~	What a manager believes the orders are: a perception that catches up with the fact. Nothing is conserved.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 40 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |
