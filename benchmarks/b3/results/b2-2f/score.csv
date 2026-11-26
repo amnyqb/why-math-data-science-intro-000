@@ -1,0 +1,5 @@
+finding,reproduced,evidence
+M1 half-cycle durations of Backlog within 15% of the paper,True,"ours [37.5, 14.0, 32.0, 13.5] vs paper [35.3, 14.0, 31.2, 12.0]; largest relative difference 12.5%"
+"M5 the sales growth loop (reinforcing, Salesmen and Orders Booked) has the largest share",True,"sales growth loop id 2 share 68.5%; strongest loop id 2 (68.5%, R)"
+M6 delivery delay loop and capacity expansion loop both carry at least 1% of the mean loop score,True,"delivery delay 0.032, capacity expansion 0.088"
+M7 fixing the capacity utilisation variable (Production Capacity Fraction) at its initial value leaves the run virtually identical,False,largest base-run NRMSE over the goals 0.853 (utilisation moves from 0.333 to 0.815)

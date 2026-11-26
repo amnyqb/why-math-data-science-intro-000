@@ -1,0 +1,2373 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Base Demand",
+      "kind": "Constant",
+      "equation": "100",
+      "units": "cases/week",
+      "comment": "Customer demand before the step.",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Step Height",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "cases/week",
+      "comment": "Permanent rise in customer demand.",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Step Time",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "week",
+      "comment": "Week the rise happens.",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Noise Amplitude",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "cases/week",
+      "comment": "Size of random week-to-week variation in customer demand.",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Noise Seed",
+      "kind": "Constant",
+      "equation": "7",
+      "units": "dmnl",
+      "comment": "Seed for the random sequence.",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "White Noise",
+      "kind": "Aux",
+      "equation": "RANDOM NORMAL(-4, 4, 0, 1, Noise Seed)",
+      "units": "dmnl",
+      "comment": "Independent standard normal draw each time step.",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Noise Correlation Time",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "week",
+      "comment": "Smoothing that turns white noise into week-to-week variation.",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Demand Noise",
+      "kind": "Aux",
+      "equation": "SMOOTH(White Noise, Noise Correlation Time)",
+      "units": "dmnl",
+      "comment": "Autocorrelated noise.",
+      "pos": [
+        500.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Customer Demand",
+      "kind": "Flow",
+      "equation": "MAX(0, Base Demand + STEP(Step Height, Step Time) + Noise Amplitude * Demand Noise)",
+      "units": "cases/week",
+      "comment": "Consumer purchases at the retailer.",
+      "pos": [
+        430.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 17,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        530.0,
+        510.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Desired Inventory",
+      "kind": "Constant",
+      "equation": "400",
+      "units": "cases",
+      "comment": "Net inventory each echelon aims to hold.",
+      "pos": [
+        880.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Supply Delay",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "Average time from placing an order to receiving the goods.",
+      "pos": [
+        120.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Adjustment Time",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "Time over which inventory and supply line gaps are corrected.",
+      "pos": [
+        310.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Supply Line Weight",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "dmnl",
+      "comment": "Fraction of the supply line gap counted in orders (beta).",
+      "pos": [
+        500.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Expectation Time",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "Smoothing time for expected demand.",
+      "pos": [
+        690.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "POS Sharing",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "dmnl",
+      "comment": "1: every echelon forecasts from customer demand; 0: from its own incoming orders.",
+      "pos": [
+        880.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Retailer Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Customer Demand, Expectation Time)",
+      "units": "cases/week",
+      "comment": "Demand the retailer expects.",
+      "pos": [
+        120.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Retailer Net Inventory",
+      "kind": "Stock",
+      "equation": "Desired Inventory",
+      "units": "cases",
+      "comment": "Inventory minus backlog; shipments equal incoming orders.",
+      "pos": [
+        310.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Retailer Arrivals",
+      "kind": "Flow",
+      "equation": "DELAY3(Retailer Orders, Supply Delay)",
+      "units": "cases/week",
+      "comment": "Goods received.",
+      "pos": [
+        500.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 19,
+      "to": 17,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Retailer Supply Line",
+      "kind": "Stock",
+      "equation": "Supply Delay * Base Demand",
+      "units": "cases",
+      "comment": "Goods ordered but not yet received.",
+      "pos": [
+        690.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Retailer Desired Supply Line",
+      "kind": "Aux",
+      "equation": "Supply Delay * Retailer Expected Demand",
+      "units": "cases",
+      "comment": "Supply line needed to receive expected demand.",
+      "pos": [
+        880.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Retailer Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Retailer Expected Demand + (Desired Inventory - Retailer Net Inventory + Supply Line Weight * (Retailer Desired Supply Line - Retailer Supply Line)) / Adjustment Time)",
+      "units": "cases/week",
+      "comment": "Anchoring and adjustment ordering rule.",
+      "pos": [
+        595.0,
+        575.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 23,
+      "to": 19,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Wholesaler Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Retailer Orders, Expectation Time)",
+      "units": "cases/week",
+      "comment": "Demand the wholesaler expects.",
+      "pos": [
+        310.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Wholesaler Net Inventory",
+      "kind": "Stock",
+      "equation": "Desired Inventory",
+      "units": "cases",
+      "comment": "Inventory minus backlog; shipments equal incoming orders.",
+      "pos": [
+        500.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Wholesaler Arrivals",
+      "kind": "Flow",
+      "equation": "DELAY3(Wholesaler Orders, Supply Delay)",
+      "units": "cases/week",
+      "comment": "Goods received.",
+      "pos": [
+        690.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 25,
+      "to": 23,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Wholesaler Supply Line",
+      "kind": "Stock",
+      "equation": "Supply Delay * Base Demand",
+      "units": "cases",
+      "comment": "Goods ordered but not yet received.",
+      "pos": [
+        880.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Wholesaler Desired Supply Line",
+      "kind": "Aux",
+      "equation": "Supply Delay * Wholesaler Expected Demand",
+      "units": "cases",
+      "comment": "Supply line needed to receive expected demand.",
+      "pos": [
+        120.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Wholesaler Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Wholesaler Expected Demand + (Desired Inventory - Wholesaler Net Inventory + Supply Line Weight * (Wholesaler Desired Supply Line - Wholesaler Supply Line)) / Adjustment Time)",
+      "units": "cases/week",
+      "comment": "Anchoring and adjustment ordering rule.",
+      "pos": [
+        785.0,
+        705.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 29,
+      "to": 25,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "Distributor Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Wholesaler Orders, Expectation Time)",
+      "units": "cases/week",
+      "comment": "Demand the distributor expects.",
+      "pos": [
+        500.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "Distributor Net Inventory",
+      "kind": "Stock",
+      "equation": "Desired Inventory",
+      "units": "cases",
+      "comment": "Inventory minus backlog; shipments equal incoming orders.",
+      "pos": [
+        690.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "Distributor Arrivals",
+      "kind": "Flow",
+      "equation": "DELAY3(Distributor Orders, Supply Delay)",
+      "units": "cases/week",
+      "comment": "Goods received.",
+      "pos": [
+        405.0,
+        835.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 31,
+      "to": 29,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Distributor Supply Line",
+      "kind": "Stock",
+      "equation": "Supply Delay * Base Demand",
+      "units": "cases",
+      "comment": "Goods ordered but not yet received.",
+      "pos": [
+        120.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "Distributor Desired Supply Line",
+      "kind": "Aux",
+      "equation": "Supply Delay * Distributor Expected Demand",
+      "units": "cases",
+      "comment": "Supply line needed to receive expected demand.",
+      "pos": [
+        310.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "Distributor Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Distributor Expected Demand + (Desired Inventory - Distributor Net Inventory + Supply Line Weight * (Distributor Desired Supply Line - Distributor Supply Line)) / Adjustment Time)",
+      "units": "cases/week",
+      "comment": "Anchoring and adjustment ordering rule.",
+      "pos": [
+        500.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 35,
+      "to": 31,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "Factory Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Distributor Orders, Expectation Time)",
+      "units": "cases/week",
+      "comment": "Demand the factory expects.",
+      "pos": [
+        690.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "Factory Net Inventory",
+      "kind": "Stock",
+      "equation": "Desired Inventory",
+      "units": "cases",
+      "comment": "Inventory minus backlog; shipments equal incoming orders.",
+      "pos": [
+        880.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "Factory Arrivals",
+      "kind": "Flow",
+      "equation": "DELAY3(Factory Orders, Supply Delay)",
+      "units": "cases/week",
+      "comment": "Goods received.",
+      "pos": [
+        595.0,
+        965.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 37,
+      "to": 35,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 37,
+      "name": "Factory Supply Line",
+      "kind": "Stock",
+      "equation": "Supply Delay * Base Demand",
+      "units": "cases",
+      "comment": "Goods ordered but not yet received.",
+      "pos": [
+        310.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "Factory Desired Supply Line",
+      "kind": "Aux",
+      "equation": "Supply Delay * Factory Expected Demand",
+      "units": "cases",
+      "comment": "Supply line needed to receive expected demand.",
+      "pos": [
+        500.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 39,
+      "name": "Factory Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Factory Expected Demand + (Desired Inventory - Factory Net Inventory + Supply Line Weight * (Factory Desired Supply Line - Factory Supply Line)) / Adjustment Time)",
+      "units": "cases/week",
+      "comment": "Anchoring and adjustment ordering rule.",
+      "pos": [
+        190.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 37,
+      "from_pt": [
+        90.0,
+        1030.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 40,
+      "from": 5,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 41,
+      "from": 6,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 42,
+      "from": 7,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 43,
+      "from": 1,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 44,
+      "from": 2,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 45,
+      "from": 3,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 46,
+      "from": 4,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 47,
+      "from": 8,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 48,
+      "from": 15,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 49,
+      "from": 9,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 50,
+      "from": 14,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 51,
+      "from": 10,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 52,
+      "from": 21,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 53,
+      "from": 11,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 54,
+      "from": 11,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 55,
+      "from": 1,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 56,
+      "from": 11,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 57,
+      "from": 16,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 58,
+      "from": 16,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 59,
+      "from": 10,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 60,
+      "from": 17,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 61,
+      "from": 13,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 62,
+      "from": 20,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 63,
+      "from": 19,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 64,
+      "from": 12,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 65,
+      "from": 15,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 66,
+      "from": 9,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 67,
+      "from": 21,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 68,
+      "from": 14,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 69,
+      "from": 10,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 70,
+      "from": 27,
+      "to": 24,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 71,
+      "from": 11,
+      "to": 24,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 72,
+      "from": 11,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 73,
+      "from": 1,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 74,
+      "from": 11,
+      "to": 26,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 75,
+      "from": 22,
+      "to": 26,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 76,
+      "from": 22,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 77,
+      "from": 10,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 78,
+      "from": 23,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 79,
+      "from": 13,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 80,
+      "from": 26,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 81,
+      "from": 25,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 82,
+      "from": 12,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 83,
+      "from": 15,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 84,
+      "from": 9,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 85,
+      "from": 27,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 86,
+      "from": 14,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 87,
+      "from": 10,
+      "to": 29,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 88,
+      "from": 33,
+      "to": 30,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 89,
+      "from": 11,
+      "to": 30,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 90,
+      "from": 11,
+      "to": 31,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 91,
+      "from": 1,
+      "to": 31,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 92,
+      "from": 11,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 93,
+      "from": 28,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 94,
+      "from": 28,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 95,
+      "from": 10,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 96,
+      "from": 29,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 97,
+      "from": 13,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 98,
+      "from": 32,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 99,
+      "from": 31,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 100,
+      "from": 12,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 101,
+      "from": 15,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 102,
+      "from": 9,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 103,
+      "from": 33,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 104,
+      "from": 14,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 105,
+      "from": 10,
+      "to": 35,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 106,
+      "from": 39,
+      "to": 36,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 107,
+      "from": 11,
+      "to": 36,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 108,
+      "from": 11,
+      "to": 37,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 109,
+      "from": 1,
+      "to": 37,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 110,
+      "from": 11,
+      "to": 38,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 111,
+      "from": 34,
+      "to": 38,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 112,
+      "from": 34,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 113,
+      "from": 10,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 114,
+      "from": 35,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 115,
+      "from": 13,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 116,
+      "from": 38,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 117,
+      "from": 37,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 118,
+      "from": 12,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 200.0,
+    "time_step": 0.125,
+    "time_units": "week",
+    "method": "Euler"
+  },
+  "next_id": 118,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

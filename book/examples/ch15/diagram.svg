@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="89.88mm" viewBox="0 0 428.5 296.25">
+<title>Model</title>
+<polyline points="103.28,111.25 107.34,109.69 111.41,108.13 115.47,106.56 119.53,105 123.59,103.44 127.66,101.88 131.72,100.31 135.78,98.75 139.84,97.19 143.91,95.63 147.97,94.06 152.03,92.5 156.09,90.94 160.16,89.38 164.22,87.81 168.28,86.25 172.34,84.69 176.41,83.13 180.47,81.56 184.53,80 188.59,78.44 192.66,76.88 196.72,75.31 200.78,73.75 204.84,72.19 208.91,70.63 212.97,69.06 217.03,67.5 221.09,65.94 225.16,64.38 229.22,62.81 233.28,61.25 237.34,59.69 241.41,58.13 245.47,56.56 249.53,55 245.68,56.48" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="253.59,53.44 245.07,60.8 245.88,56.41" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="253.59,53.44 245.88,56.41 242.33,53.68" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="103.28,130 107.34,130 111.41,130 115.47,130 119.53,130 123.59,130 127.66,130 131.72,130 135.78,130 139.84,130 143.91,130 147.97,130 152.03,130 156.09,130 160.16,130 164.22,130 168.28,130 172.34,130 176.41,130 180.47,130 184.53,130 188.59,130 192.66,130 196.72,130 200.78,130 204.84,130 208.91,130 212.97,130 217.03,130 221.09,130 225.16,130 229.22,130 233.28,130 237.34,130 241.41,130 236.99,130" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="245.47,130 234.87,133.82 237.2,130" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="245.47,130 237.2,130 234.87,126.18" fill="#5c6370" stroke-linejoin="round"/>
+<polyline points="103.28,148.75 107.34,150.31 111.41,151.88 115.47,153.44 119.53,155 123.59,156.56 127.66,158.13 131.72,159.69 135.78,161.25 139.84,162.81 143.91,164.38 147.97,165.94 152.03,167.5 156.09,169.06 160.16,170.63 164.22,172.19 168.28,173.75 172.34,175.31 176.41,176.88 180.47,178.44 184.53,180 188.59,181.56 192.66,183.13 196.72,184.69 200.78,186.25 204.84,187.81 208.91,189.38 212.97,190.94 217.03,192.5 221.09,194.06 225.16,195.63 229.22,197.19 233.28,198.75 237.34,200.31 241.41,201.88 245.47,203.44 249.53,205 245.68,203.52" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="253.59,206.56 242.33,206.32 245.88,203.59" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="253.59,206.56 245.88,203.59 245.07,199.2" fill="#5c6370" stroke-linejoin="round"/>
+<rect x="10" y="110" width="89.06" height="40" rx="10" fill="#ffffff"/>
+<rect x="10.6" y="110.6" width="87.86" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="25" cy="130" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="25" cy="130" r="2.8" fill="#b5651d"/>
+<text x="36 45 52 63.5 70 77.5" y="128" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Demand</text>
+<text x="36 42 48 54 60" y="141" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">160.0</text>
+<rect x="241.02" y="10" width="147.03" height="40" rx="10" fill="#ffffff"/>
+<rect x="241.62" y="10.6" width="145.83" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="256.02" cy="30" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="256.02" cy="30" r="2.8" fill="#b5651d"/>
+<text x="267.02 274.02 281.52 286.02 292.02 299.52 302.52 308.52 316.02 323.52 326.52 334.02 341.02 352.02 359.02 366.02" y="28" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Perceived demand</text>
+<text x="267.02 273.02 279.02 285.02 291.02" y="41" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">159.6</text>
+<rect x="248.78" y="110" width="131.5" height="40" rx="10" fill="#ffffff"/>
+<rect x="249.38" y="110.6" width="130.3" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="263.78" cy="130" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="263.78" cy="130" r="2.8" fill="#b5651d"/>
+<text x="274.78 281.78 289.28 293.78 299.78 307.28 310.28 316.28 323.78 331.28 334.28 339.28 343.78 351.28 358.28" y="128" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Perceived trend</text>
+<text x="274.78 280.78 286.78 292.78 298.78 304.78 310.78 316.78" y="141" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">4.137e-4</text>
+<rect x="210.66" y="210" width="207.75" height="40" rx="10" fill="#ffffff"/>
+<rect x="211.26" y="210.6" width="206.55" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="225.66" cy="230" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="225.66" cy="230" r="2.8" fill="#b5651d"/>
+<text x="236.66 243.66 250.16 257.66 265.16 271.16 276.16 283.16 290.66 293.66 301.16 308.16 319.66 326.16 333.66 341.16 344.16 347.16 354.66 357.66 365.16 367.66 378.16 385.16 392.16 398.66" y="228" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Expected demand in 8 weeks</text>
+<text x="236.66 242.66 248.66 254.66 260.66" y="241" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">160.5</text>
+<text x="10 16.5 19.5 27 34.5 39.5 46.5 49.5 57 64 67.5 74.5 77.5 80.5 92.5 100 106.5 111.5 114.5 121 124 135.5 142 149.5 156 163.5 170.5 175.5 178.5 186 193 196.5 199.5 206.5 213 220 225.5 228.5 235 242.5 250.5 257.5 262.5 265.5 273 280.5 291.5 298 305.5 313" y="268" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Figure 15.1  What a manager believes about demand.</text>
+<text x="10 15.5 22 28 32.5 37.5 43.5 46 48.5 55.5 61.5 67 73.5 78 84 88 90.5 96.5 103 105.5 111.5 117 122.5 132 138.5 141 147 149.5 159 165.5 172 178" y="284" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="12.33" fill="#6e768c" xml:space="preserve">Source: Chapter 15 example model</text>
+</svg>

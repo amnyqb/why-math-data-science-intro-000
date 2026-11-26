@@ -1,0 +1,1906 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 4,
+      "name": "conflict var[A,D]",
+      "kind": "Aux",
+      "equation": "\"var 2dim[A,D]\"*2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "conflict var[A,E]",
+      "kind": "Aux",
+      "equation": "\"var 2dim[A,E]\"*2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "conflict var[B,D]",
+      "kind": "Aux",
+      "equation": "\"var 2dim[B,D]\"*2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "conflict var[B,E]",
+      "kind": "Aux",
+      "equation": "\"var 2dim[B,E]\"*2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "conflict var[C,D]",
+      "kind": "Aux",
+      "equation": "\"var 2dim[C,D]\"*2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "conflict var[C,E]",
+      "kind": "Aux",
+      "equation": "\"var 2dim[C,E]\"*2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "input[A,D]",
+      "kind": "Aux",
+      "equation": "Time",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "input[A,E]",
+      "kind": "Aux",
+      "equation": "COS(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "input[B,D]",
+      "kind": "Aux",
+      "equation": "Time+1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "input[B,E]",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "input[C,D]",
+      "kind": "Aux",
+      "equation": "SIN(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "input[C,E]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "var 0dim",
+      "kind": "Aux",
+      "equation": "Time*2+1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        507.0,
+        152.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "var 1dim",
+      "kind": "Aux",
+      "equation": "Time - SIN(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        494.0,
+        210.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim1",
+      "by_item": [
+        {
+          "item": "B",
+          "equation": "Time*2",
+          "table": []
+        },
+        {
+          "item": "C",
+          "equation": "-Time",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "var 2dim[A,D]",
+      "kind": "Stock",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "var 2dim[A,E]",
+      "kind": "Stock",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "var 2dim[B,D]",
+      "kind": "Stock",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "var 2dim[B,E]",
+      "kind": "Stock",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "var 2dim[C,D]",
+      "kind": "Stock",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "var 2dim[C,E]",
+      "kind": "Stock",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "var 3dim[A,D,A]",
+      "kind": "Stock",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "var 3dim[A,D,B]",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "var 3dim[A,E,A]",
+      "kind": "Stock",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "var 3dim[A,E,B]",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "var 3dim[B,D,A]",
+      "kind": "Stock",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "var 3dim[B,D,B]",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "var 3dim[B,E,A]",
+      "kind": "Stock",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "var 3dim[B,E,B]",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "var 3dim[C,D,A]",
+      "kind": "Stock",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "var 3dim[C,D,B]",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "var 3dim[C,E,A]",
+      "kind": "Stock",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "var 3dim[C,E,B]",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "var 2dim[A,D] net flow",
+      "kind": "Flow",
+      "equation": "\"input[A,D]\"*0.5-1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        380.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 18,
+      "from_pt": [
+        280.0,
+        380.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 37,
+      "name": "var 2dim[A,E] net flow",
+      "kind": "Flow",
+      "equation": "\"input[A,E]\"*0.5-1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 19,
+      "from_pt": [
+        470.0,
+        380.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "var 2dim[B,D] net flow",
+      "kind": "Flow",
+      "equation": "\"input[B,D]\"*0.5-1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        760.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 20,
+      "from_pt": [
+        660.0,
+        380.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 39,
+      "name": "var 2dim[B,E] net flow",
+      "kind": "Flow",
+      "equation": "\"input[B,E]\"*0.5-1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        0.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 21,
+      "from_pt": [
+        -100.0,
+        510.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 40,
+      "name": "var 2dim[C,D] net flow",
+      "kind": "Flow",
+      "equation": "\"input[C,D]\"*0.5-1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 22,
+      "from_pt": [
+        90.0,
+        510.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 41,
+      "name": "var 2dim[C,E] net flow",
+      "kind": "Flow",
+      "equation": "\"input[C,E]\"*0.5-1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        380.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 23,
+      "from_pt": [
+        280.0,
+        510.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 42,
+      "name": "var 3dim[A,D,A] net flow",
+      "kind": "Flow",
+      "equation": "Time-2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 24,
+      "from_pt": [
+        470.0,
+        510.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 43,
+      "name": "var 3dim[A,D,B] net flow",
+      "kind": "Flow",
+      "equation": "-\"input[A,D]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        760.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 25,
+      "from_pt": [
+        660.0,
+        510.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 44,
+      "name": "var 3dim[A,E,A] net flow",
+      "kind": "Flow",
+      "equation": "Time-2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        0.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 26,
+      "from_pt": [
+        -100.0,
+        640.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 45,
+      "name": "var 3dim[A,E,B] net flow",
+      "kind": "Flow",
+      "equation": "-\"input[A,E]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 27,
+      "from_pt": [
+        90.0,
+        640.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 46,
+      "name": "var 3dim[B,D,A] net flow",
+      "kind": "Flow",
+      "equation": "Time-2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        380.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 28,
+      "from_pt": [
+        280.0,
+        640.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 47,
+      "name": "var 3dim[B,D,B] net flow",
+      "kind": "Flow",
+      "equation": "-\"input[B,D]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 29,
+      "from_pt": [
+        470.0,
+        640.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 48,
+      "name": "var 3dim[B,E,A] net flow",
+      "kind": "Flow",
+      "equation": "Time-2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        760.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 30,
+      "from_pt": [
+        660.0,
+        640.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 49,
+      "name": "var 3dim[B,E,B] net flow",
+      "kind": "Flow",
+      "equation": "-\"input[B,E]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        0.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 31,
+      "from_pt": [
+        -100.0,
+        770.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 50,
+      "name": "var 3dim[C,D,A] net flow",
+      "kind": "Flow",
+      "equation": "Time-2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 32,
+      "from_pt": [
+        90.0,
+        770.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 51,
+      "name": "var 3dim[C,D,B] net flow",
+      "kind": "Flow",
+      "equation": "-\"input[C,D]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        380.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 33,
+      "from_pt": [
+        280.0,
+        770.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 52,
+      "name": "var 3dim[C,E,A] net flow",
+      "kind": "Flow",
+      "equation": "Time-2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 34,
+      "from_pt": [
+        470.0,
+        770.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 53,
+      "name": "var 3dim[C,E,B] net flow",
+      "kind": "Flow",
+      "equation": "-\"input[C,E]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        760.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 35,
+      "from_pt": [
+        660.0,
+        770.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 54,
+      "from": 18,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 55,
+      "from": 19,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 56,
+      "from": 20,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 57,
+      "from": 21,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 58,
+      "from": 22,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 59,
+      "from": 23,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 60,
+      "from": 10,
+      "to": 36,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 61,
+      "from": 11,
+      "to": 37,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 62,
+      "from": 12,
+      "to": 38,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 63,
+      "from": 13,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 64,
+      "from": 14,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 65,
+      "from": 15,
+      "to": 41,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 66,
+      "from": 10,
+      "to": 43,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 67,
+      "from": 11,
+      "to": 45,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 68,
+      "from": 12,
+      "to": 47,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 69,
+      "from": 13,
+      "to": 49,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 70,
+      "from": 14,
+      "to": 51,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 71,
+      "from": 15,
+      "to": 53,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 50.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 71,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "dim1",
+      "items": [
+        "A",
+        "B",
+        "C"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "dim2",
+      "items": [
+        "D",
+        "E"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "dim3",
+      "items": [
+        "A",
+        "B"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

@@ -1,0 +1,897 @@
+{
+  "goals": [
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1959732422.3206866,
+          "mu_star": 4035204780.0373774,
+          "n": 200,
+          "param": "FIOAC1",
+          "sigma": 7439235155.848378
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -3087955756.0692196,
+          "mu_star": 3229225436.0405717,
+          "n": 200,
+          "param": "FIOAC2",
+          "sigma": 6883369326.192964
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -957793164.950578,
+          "mu_star": 3883013655.9045134,
+          "n": 200,
+          "param": "ICOR1",
+          "sigma": 6786381477.415773
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1851816352.5571606,
+          "mu_star": 2889134137.4517365,
+          "n": 200,
+          "param": "ALIC1",
+          "sigma": 5488827748.797549
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -452472023.69988286,
+          "mu_star": 805540388.1224103,
+          "n": 200,
+          "param": "SCOR1",
+          "sigma": 2073404869.9060698
+        },
+        {
+          "class": "negligible",
+          "mu": 235573515.83401653,
+          "mu_star": 509593976.6220575,
+          "n": 200,
+          "param": "ALSC1",
+          "sigma": 1357340132.9031715
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 4852639404.473259,
+          "mu_star": 5079216626.382761,
+          "n": 200,
+          "param": "DCFSN",
+          "sigma": 5422086673.321825
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 4351658420.998527,
+          "mu_star": 4616206722.572481,
+          "n": 200,
+          "param": "LEN",
+          "sigma": 5010585053.392052
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -6770546816.333619,
+          "mu_star": 6898040922.633374,
+          "n": 200,
+          "param": "RLT",
+          "sigma": 6970211116.721259
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 539146090.117575,
+          "mu_star": 715311665.0801538,
+          "n": 200,
+          "param": "LYF1",
+          "sigma": 1404012847.371054
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1768522041.0524676,
+          "mu_star": 1776831443.9634314,
+          "n": 200,
+          "param": "ILF",
+          "sigma": 3113051336.143347
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1706558822.8293316,
+          "mu_star": 1745366905.841073,
+          "n": 200,
+          "param": "LFH",
+          "sigma": 3573707355.9707255
+        },
+        {
+          "class": "negligible",
+          "mu": -19074035.010855168,
+          "mu_star": 56684756.52463827,
+          "n": 200,
+          "param": "ALAI1",
+          "sigma": 151513891.4568258
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 705115848.3206778,
+          "mu_star": 705115848.3206778,
+          "n": 200,
+          "param": "NRI",
+          "sigma": 1155244995.759274
+        },
+        {
+          "class": "negligible",
+          "mu": -81675348.70264143,
+          "mu_star": 82202071.81223641,
+          "n": 200,
+          "param": "PPGF1",
+          "sigma": 297170056.4222054
+        },
+        {
+          "class": "negligible",
+          "mu": 26044232.2688685,
+          "mu_star": 42701333.86769708,
+          "n": 200,
+          "param": "PPTD1",
+          "sigma": 152932861.13447815
+        },
+        {
+          "class": "negligible",
+          "mu": -377870723.06895727,
+          "mu_star": 377934359.94226587,
+          "n": 200,
+          "param": "AHL70",
+          "sigma": 1094264333.6597922
+        },
+        {
+          "class": "negligible",
+          "mu": 30287988.22848691,
+          "mu_star": 153278810.97703996,
+          "n": 200,
+          "param": "LFERTI",
+          "sigma": 309606910.7664932
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1299141403.6572661,
+          "mu_star": 1687939033.1293716,
+          "n": 200,
+          "param": "MTFN",
+          "sigma": 2428732250.8974786
+        },
+        {
+          "class": "negligible",
+          "mu": 247241190.84157196,
+          "mu_star": 251010602.8738842,
+          "n": 200,
+          "param": "SAD",
+          "sigma": 232996547.6867338
+        },
+        {
+          "class": "negligible",
+          "mu": 50294766.63864722,
+          "mu_star": 101660772.0420554,
+          "n": 200,
+          "param": "HSID",
+          "sigma": 159158113.40763742
+        },
+        {
+          "class": "negligible",
+          "mu": 194326763.2229369,
+          "mu_star": 203189515.6570471,
+          "n": 200,
+          "param": "LPD",
+          "sigma": 206208070.1034559
+        },
+        {
+          "class": "negligible",
+          "mu": 3455128.2211923464,
+          "mu_star": 4136082.2232981045,
+          "n": 200,
+          "param": "FSPD",
+          "sigma": 9432395.140083773
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Population peak",
+      "kendall_r_vs_2r": 0.9758453875231043,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2.08299371562635,
+          "mu_star": 2.1498365118088127,
+          "n": 200,
+          "param": "FIOAC1",
+          "sigma": 1.7679302633141873
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.9453725677636129,
+          "mu_star": 0.9453725677636129,
+          "n": 200,
+          "param": "FIOAC2",
+          "sigma": 1.2174348015664376
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1.6694743096356228,
+          "mu_star": 1.731611843814399,
+          "n": 200,
+          "param": "ICOR1",
+          "sigma": 1.5864492895970912
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1.3820705950502754,
+          "mu_star": 1.4251754217883503,
+          "n": 200,
+          "param": "ALIC1",
+          "sigma": 1.7842801553829166
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.3246397363963955,
+          "mu_star": 0.365743968700249,
+          "n": 200,
+          "param": "SCOR1",
+          "sigma": 0.7256647890294035
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.24721583899788707,
+          "mu_star": 0.27759068191538616,
+          "n": 200,
+          "param": "ALSC1",
+          "sigma": 0.8026171720813983
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.9901317967689666,
+          "mu_star": 1.196343386257737,
+          "n": 200,
+          "param": "DCFSN",
+          "sigma": 1.1674655288533573
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1.2098943768556192,
+          "mu_star": 1.4386990470575005,
+          "n": 200,
+          "param": "LEN",
+          "sigma": 1.3223386981137346
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1.5015636368498235,
+          "mu_star": 1.7601455945407871,
+          "n": 200,
+          "param": "RLT",
+          "sigma": 1.3973856463959957
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.2658414586798666,
+          "mu_star": 0.32824366867810023,
+          "n": 200,
+          "param": "LYF1",
+          "sigma": 0.5995090926427289
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.29176175303369595,
+          "mu_star": 0.320446819714345,
+          "n": 200,
+          "param": "ILF",
+          "sigma": 0.5765123113277119
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.3070093880964087,
+          "mu_star": 0.40205727989840023,
+          "n": 200,
+          "param": "LFH",
+          "sigma": 0.7848431013698232
+        },
+        {
+          "class": "negligible",
+          "mu": 0.031131012425403944,
+          "mu_star": 0.04447485822811752,
+          "n": 200,
+          "param": "ALAI1",
+          "sigma": 0.37678534701353966
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.3266266373415081,
+          "mu_star": 0.3266266373415081,
+          "n": 200,
+          "param": "NRI",
+          "sigma": 0.3710882946404747
+        },
+        {
+          "class": "negligible",
+          "mu": -0.009283603972337063,
+          "mu_star": 0.010607056504926804,
+          "n": 200,
+          "param": "PPGF1",
+          "sigma": 0.014941661999367608
+        },
+        {
+          "class": "negligible",
+          "mu": 0.006174865387501058,
+          "mu_star": 0.007554835851975794,
+          "n": 200,
+          "param": "PPTD1",
+          "sigma": 0.012234521289672678
+        },
+        {
+          "class": "negligible",
+          "mu": -0.012257053042470772,
+          "mu_star": 0.01384474300657723,
+          "n": 200,
+          "param": "AHL70",
+          "sigma": 0.017462812379842867
+        },
+        {
+          "class": "negligible",
+          "mu": 0.02664722120885104,
+          "mu_star": 0.04382886368376756,
+          "n": 200,
+          "param": "LFERTI",
+          "sigma": 0.08334003923198961
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.4290255491057346,
+          "mu_star": 0.5283511021040488,
+          "n": 200,
+          "param": "MTFN",
+          "sigma": 0.7552280536325358
+        },
+        {
+          "class": "negligible",
+          "mu": -0.07165432215956376,
+          "mu_star": 0.07173691389999286,
+          "n": 200,
+          "param": "SAD",
+          "sigma": 0.07076968831281692
+        },
+        {
+          "class": "negligible",
+          "mu": -4.8662824579301376e-6,
+          "mu_star": 0.027359710385417846,
+          "n": 200,
+          "param": "HSID",
+          "sigma": 0.040802318404938025
+        },
+        {
+          "class": "negligible",
+          "mu": -0.04799441852767311,
+          "mu_star": 0.04846588979883206,
+          "n": 200,
+          "param": "LPD",
+          "sigma": 0.04936127919008164
+        },
+        {
+          "class": "negligible",
+          "mu": -0.000029863922900784656,
+          "mu_star": 0.00039445195520956377,
+          "n": 200,
+          "param": "FSPD",
+          "sigma": 0.0007403126954567541
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Industrial output per capita peak",
+      "kendall_r_vs_2r": 0.9699655241017935,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 31.498397248262687,
+          "mu_star": 54.17062852855638,
+          "n": 200,
+          "param": "FIOAC1",
+          "sigma": 97.30456966141604
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 31.59188274336571,
+          "mu_star": 33.385793042411095,
+          "n": 200,
+          "param": "FIOAC2",
+          "sigma": 58.12261005807957
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 15.080542803539386,
+          "mu_star": 49.93669579796281,
+          "n": 200,
+          "param": "ICOR1",
+          "sigma": 77.07347107694353
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -21.58956996370533,
+          "mu_star": 34.74491244094399,
+          "n": 200,
+          "param": "ALIC1",
+          "sigma": 60.436972847985984
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 7.711368012273229,
+          "mu_star": 14.469424258494385,
+          "n": 200,
+          "param": "SCOR1",
+          "sigma": 35.372261207057065
+        },
+        {
+          "class": "negligible",
+          "mu": -1.652420645167017,
+          "mu_star": 5.15024384453702,
+          "n": 200,
+          "param": "ALSC1",
+          "sigma": 12.007636128798707
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -66.96836774512724,
+          "mu_star": 69.59916456955236,
+          "n": 200,
+          "param": "DCFSN",
+          "sigma": 85.04779324143215
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -68.02461486418218,
+          "mu_star": 70.68293762492695,
+          "n": 200,
+          "param": "LEN",
+          "sigma": 85.10744330034926
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 86.05052851105235,
+          "mu_star": 86.38813740738735,
+          "n": 200,
+          "param": "RLT",
+          "sigma": 92.39332052224273
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 36.39053530634961,
+          "mu_star": 58.42112462449073,
+          "n": 200,
+          "param": "LYF1",
+          "sigma": 72.04833731172715
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 28.40088821362555,
+          "mu_star": 34.61708657258539,
+          "n": 200,
+          "param": "ILF",
+          "sigma": 46.80335390722536
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 76.5740789393284,
+          "mu_star": 84.23751635796549,
+          "n": 200,
+          "param": "LFH",
+          "sigma": 64.14152310083642
+        },
+        {
+          "class": "negligible",
+          "mu": -0.5989026079470776,
+          "mu_star": 2.6271756055381656,
+          "n": 200,
+          "param": "ALAI1",
+          "sigma": 4.970724206121071
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -21.723902212104907,
+          "mu_star": 27.80547433135108,
+          "n": 200,
+          "param": "NRI",
+          "sigma": 55.600174547559774
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -7.194964905689583,
+          "mu_star": 13.541955508268174,
+          "n": 200,
+          "param": "PPGF1",
+          "sigma": 40.88613888392587
+        },
+        {
+          "class": "negligible",
+          "mu": -6.43287574898955,
+          "mu_star": 7.3272314041515525,
+          "n": 200,
+          "param": "PPTD1",
+          "sigma": 23.97987591589785
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -24.975296381963744,
+          "mu_star": 27.391425669615966,
+          "n": 200,
+          "param": "AHL70",
+          "sigma": 47.21485374327649
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 53.56095238385638,
+          "mu_star": 54.52367220830528,
+          "n": 200,
+          "param": "LFERTI",
+          "sigma": 59.51326143829685
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -20.371808990809292,
+          "mu_star": 26.636438045999636,
+          "n": 200,
+          "param": "MTFN",
+          "sigma": 49.03384324901374
+        },
+        {
+          "class": "negligible",
+          "mu": -2.126291878621767,
+          "mu_star": 3.339022621506329,
+          "n": 200,
+          "param": "SAD",
+          "sigma": 9.138476156275933
+        },
+        {
+          "class": "negligible",
+          "mu": -1.246933448145485,
+          "mu_star": 1.9254341296489021,
+          "n": 200,
+          "param": "HSID",
+          "sigma": 4.65998294823232
+        },
+        {
+          "class": "negligible",
+          "mu": -2.922276244459429,
+          "mu_star": 3.4671599170165655,
+          "n": 200,
+          "param": "LPD",
+          "sigma": 10.178220995850426
+        },
+        {
+          "class": "negligible",
+          "mu": 1.1964175163063675,
+          "mu_star": 1.37391151108628,
+          "n": 200,
+          "param": "FSPD",
+          "sigma": 3.695780242796778
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Food per capita lowest",
+      "kendall_r_vs_2r": 0.9618989484422431,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2.4547418280935442,
+          "mu_star": 2.5181361184860935,
+          "n": 200,
+          "param": "FIOAC1",
+          "sigma": 2.1918043364968356
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1.5350971646395235,
+          "mu_star": 1.5353761651669706,
+          "n": 200,
+          "param": "FIOAC2",
+          "sigma": 2.0172444493827886
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1.8859927498657485,
+          "mu_star": 1.9958841824530649,
+          "n": 200,
+          "param": "ICOR1",
+          "sigma": 1.9833336604712806
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1.7197150238305068,
+          "mu_star": 1.761351895550976,
+          "n": 200,
+          "param": "ALIC1",
+          "sigma": 1.9716018399819086
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.449667312779832,
+          "mu_star": 0.4689142952218182,
+          "n": 200,
+          "param": "SCOR1",
+          "sigma": 0.8873508048149049
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.2850527157361796,
+          "mu_star": 0.2985664838044871,
+          "n": 200,
+          "param": "ALSC1",
+          "sigma": 0.7214216853932532
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.11544310367898544,
+          "mu_star": 0.5840039610985159,
+          "n": 200,
+          "param": "DCFSN",
+          "sigma": 1.0563239015946952
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.04213124896557147,
+          "mu_star": 0.8608076700343876,
+          "n": 200,
+          "param": "LEN",
+          "sigma": 1.466529735182041
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.0912779651211464,
+          "mu_star": 0.9057444521992986,
+          "n": 200,
+          "param": "RLT",
+          "sigma": 1.5179050527542586
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.22128490806897297,
+          "mu_star": 0.3602534664921732,
+          "n": 200,
+          "param": "LYF1",
+          "sigma": 0.6285414068617917
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.2482873595948164,
+          "mu_star": 0.4463212134190403,
+          "n": 200,
+          "param": "ILF",
+          "sigma": 0.8006194511865761
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.2989589323233411,
+          "mu_star": 0.5207780290680953,
+          "n": 200,
+          "param": "LFH",
+          "sigma": 1.0527800243570313
+        },
+        {
+          "class": "negligible",
+          "mu": 0.041751841828329084,
+          "mu_star": 0.05666448716338342,
+          "n": 200,
+          "param": "ALAI1",
+          "sigma": 0.38246728513173595
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.6265026689253858,
+          "mu_star": 0.6265026689253858,
+          "n": 200,
+          "param": "NRI",
+          "sigma": 0.6289802038409049
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.3179753720556089,
+          "mu_star": 0.3259500695360756,
+          "n": 200,
+          "param": "PPGF1",
+          "sigma": 0.41251452236818353
+        },
+        {
+          "class": "negligible",
+          "mu": 0.01297136067897364,
+          "mu_star": 0.11688945509573205,
+          "n": 200,
+          "param": "PPTD1",
+          "sigma": 0.21046493402773794
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 0.7529634163338408,
+          "mu_star": 0.7529634163338408,
+          "n": 200,
+          "param": "AHL70",
+          "sigma": 0.29086169485928176
+        },
+        {
+          "class": "negligible",
+          "mu": 0.03984401872517196,
+          "mu_star": 0.054353867789139206,
+          "n": 200,
+          "param": "LFERTI",
+          "sigma": 0.11971543313801987
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -0.054289210379946204,
+          "mu_star": 0.4009631389656073,
+          "n": 200,
+          "param": "MTFN",
+          "sigma": 0.8704760787250061
+        },
+        {
+          "class": "negligible",
+          "mu": 0.014870304400310985,
+          "mu_star": 0.03653737387926999,
+          "n": 200,
+          "param": "SAD",
+          "sigma": 0.07959537719192741
+        },
+        {
+          "class": "negligible",
+          "mu": 0.001755121808643106,
+          "mu_star": 0.015268702198413435,
+          "n": 200,
+          "param": "HSID",
+          "sigma": 0.034273003746576734
+        },
+        {
+          "class": "negligible",
+          "mu": 0.013132868853027049,
+          "mu_star": 0.026248796477662185,
+          "n": 200,
+          "param": "LPD",
+          "sigma": 0.05370599340474685
+        },
+        {
+          "class": "negligible",
+          "mu": -0.0006814608623132146,
+          "mu_star": 0.0011255758723325516,
+          "n": 200,
+          "param": "FSPD",
+          "sigma": 0.0019951901246542765
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Persistent pollution index peak",
+      "kendall_r_vs_2r": 0.971857597965664,
+      "top_overlap": 1.0
+    }
+  ],
+  "levels": 4,
+  "params": [
+    {
+      "max": 0.559,
+      "min": 0.301,
+      "name": "FIOAC1"
+    },
+    {
+      "max": 0.559,
+      "min": 0.301,
+      "name": "FIOAC2"
+    },
+    {
+      "max": 3.9,
+      "min": 2.0999999999999996,
+      "name": "ICOR1"
+    },
+    {
+      "max": 18.2,
+      "min": 9.8,
+      "name": "ALIC1"
+    },
+    {
+      "max": 1.3,
+      "min": 0.7,
+      "name": "SCOR1"
+    },
+    {
+      "max": 26.0,
+      "min": 14.0,
+      "name": "ALSC1"
+    },
+    {
+      "max": 5.2,
+      "min": 2.8,
+      "name": "DCFSN"
+    },
+    {
+      "max": 36.4,
+      "min": 19.6,
+      "name": "LEN"
+    },
+    {
+      "max": 39.0,
+      "min": 21.0,
+      "name": "RLT"
+    },
+    {
+      "max": 1.3,
+      "min": 0.7,
+      "name": "LYF1"
+    },
+    {
+      "max": 780.0,
+      "min": 420.0,
+      "name": "ILF"
+    },
+    {
+      "max": 0.91,
+      "min": 0.48999999999999994,
+      "name": "LFH"
+    },
+    {
+      "max": 2.6,
+      "min": 1.4,
+      "name": "ALAI1"
+    },
+    {
+      "max": 1300000000000.0,
+      "min": 700000000000.0,
+      "name": "NRI"
+    },
+    {
+      "max": 1.3,
+      "min": 0.7,
+      "name": "PPGF1"
+    },
+    {
+      "max": 26.0,
+      "min": 14.0,
+      "name": "PPTD1"
+    },
+    {
+      "max": 1.95,
+      "min": 1.0499999999999998,
+      "name": "AHL70"
+    },
+    {
+      "max": 780.0,
+      "min": 420.0,
+      "name": "LFERTI"
+    },
+    {
+      "max": 15.6,
+      "min": 8.399999999999999,
+      "name": "MTFN"
+    },
+    {
+      "max": 26.0,
+      "min": 14.0,
+      "name": "SAD"
+    },
+    {
+      "max": 26.0,
+      "min": 14.0,
+      "name": "HSID"
+    },
+    {
+      "max": 26.0,
+      "min": 14.0,
+      "name": "LPD"
+    },
+    {
+      "max": 2.6,
+      "min": 1.4,
+      "name": "FSPD"
+    }
+  ],
+  "runs": 4800,
+  "seed": 1,
+  "trajectories": 100
+}

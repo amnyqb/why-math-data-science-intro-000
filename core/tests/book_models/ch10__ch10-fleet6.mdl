@@ -1,0 +1,108 @@
+{UTF-8}
+{ Chapter 10: the truck fleet as a six-stage ageing chain (two years per class). With more classes, retirements bunch near the average life of 12 years, and the echo of the first purchase lasts longer. }
+Class Time=
+	2
+	~	year
+	~	Average years in each age class.
+	|
+Trucks Class 1= INTEG(
+	Purchases - Ageing 1,
+	300)
+	~	truck
+	~	Trucks of about 0 to 2 years.
+	|
+Ageing 1=
+	Trucks Class 1 / Class Time
+	~	truck/year
+	~	|
+Cost Class 1=
+	1
+	~	kUSD/truck/year
+	~	|
+Trucks Class 2= INTEG(
+	Ageing 1 - Ageing 2,
+	0)
+	~	truck
+	~	Trucks of about 2 to 4 years.
+	|
+Ageing 2=
+	Trucks Class 2 / Class Time
+	~	truck/year
+	~	|
+Cost Class 2=
+	3
+	~	kUSD/truck/year
+	~	|
+Trucks Class 3= INTEG(
+	Ageing 2 - Ageing 3,
+	0)
+	~	truck
+	~	Trucks of about 4 to 6 years.
+	|
+Ageing 3=
+	Trucks Class 3 / Class Time
+	~	truck/year
+	~	|
+Cost Class 3=
+	5
+	~	kUSD/truck/year
+	~	|
+Trucks Class 4= INTEG(
+	Ageing 3 - Ageing 4,
+	0)
+	~	truck
+	~	Trucks of about 6 to 8 years.
+	|
+Ageing 4=
+	Trucks Class 4 / Class Time
+	~	truck/year
+	~	|
+Cost Class 4=
+	8
+	~	kUSD/truck/year
+	~	|
+Trucks Class 5= INTEG(
+	Ageing 4 - Ageing 5,
+	0)
+	~	truck
+	~	Trucks of about 8 to 10 years.
+	|
+Ageing 5=
+	Trucks Class 5 / Class Time
+	~	truck/year
+	~	|
+Cost Class 5=
+	12
+	~	kUSD/truck/year
+	~	|
+Trucks Class 6= INTEG(
+	Ageing 5 - Retirements,
+	0)
+	~	truck
+	~	Trucks of about 10 to 12 years.
+	|
+Retirements=
+	Trucks Class 6 / Class Time
+	~	truck/year
+	~	|
+Cost Class 6=
+	16
+	~	kUSD/truck/year
+	~	|
+Purchases=
+	Retirements
+	~	truck/year
+	~	Every retired truck is replaced at once.
+	|
+Maintenance Cost=
+	Cost Class 1 * Trucks Class 1 + Cost Class 2 * Trucks Class 2 + Cost Class 3 * Trucks Class 3 + Cost Class 4 * Trucks Class 4 + Cost Class 5 * Trucks Class 5 + Cost Class 6 * Trucks Class 6
+	~	kUSD/year
+	~	|
+Fleet=
+	Trucks Class 1 + Trucks Class 2 + Trucks Class 3 + Trucks Class 4 + Trucks Class 5 + Trucks Class 6
+	~	truck
+	~	|
+INITIAL TIME = 0 ~ year ~ |
+FINAL TIME = 60 ~ year ~ |
+TIME STEP = 0.0625 ~ year ~ |
+SAVEPER = 0.0625 ~ year ~ |

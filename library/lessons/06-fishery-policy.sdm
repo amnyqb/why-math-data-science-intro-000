@@ -1,0 +1,544 @@
+{
+  "title": "",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Fish",
+      "kind": "Stock",
+      "equation": "800",
+      "units": "Tonne",
+      "comment": "The fish stock in the sea.",
+      "pos": [
+        160.0,
+        320.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Catch to date",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Tonne",
+      "comment": "Everything brought ashore so far.",
+      "pos": [
+        540.0,
+        320.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        190.0
+      ],
+      "to_pt": [
+        820.0,
+        190.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Regrowth rate",
+      "kind": "Constant",
+      "equation": "0.4",
+      "units": "1/Year",
+      "comment": "Growth per tonne a year when there is room.",
+      "pos": [
+        140.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Sea capacity",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "Tonne",
+      "comment": "Most fish the sea can carry.",
+      "pos": [
+        370.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Boats",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "Boat",
+      "comment": "Fishing effort (the policy lever).",
+      "pos": [
+        600.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        280.0
+      ],
+      "to_pt": [
+        220.0,
+        280.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Catchability",
+      "kind": "Constant",
+      "equation": "0.01",
+      "units": "1/Boat/Year",
+      "comment": "Share of the stock one boat takes in a year.",
+      "pos": [
+        830.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        370.0
+      ],
+      "to_pt": [
+        220.0,
+        370.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Regrowth",
+      "kind": "Flow",
+      "equation": "Fish * Regrowth rate * (1 - Fish / Sea capacity)",
+      "units": "Tonne/Year",
+      "comment": "Fish are born, slowed by crowding.",
+      "pos": [
+        30.0,
+        255.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 1,
+      "from_pt": [
+        -100.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Harvest",
+      "kind": "Flow",
+      "equation": "Boats * Catchability * Fish",
+      "units": "Tonne/Year",
+      "comment": "Fish taken: boats times catchability times the stock.",
+      "pos": [
+        290.0,
+        385.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 1,
+      "to": null,
+      "from_pt": [
+        460.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        450.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Landings",
+      "kind": "Flow",
+      "equation": "Harvest",
+      "units": "Tonne/Year",
+      "comment": "What is brought ashore.",
+      "pos": [
+        410.0,
+        255.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 2,
+      "from_pt": [
+        280.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        280.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 8,
+      "from": 1,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 3,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 4,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 5,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 6,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 1,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 11,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 50.0,
+    "time_step": 0.125,
+    "time_units": "Year",
+    "method": "Euler"
+  },
+  "next_id": 17,
+  "sheets": [
+    {
+      "id": 17,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "A fishery",
+    "description": "Effort is the lever; the goal is the total catch over fifty years, while keeping a stock in the sea.",
+    "levers": [
+      {
+        "name": "Boats",
+        "units": "Boat",
+        "min": 0.0,
+        "max": 60.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      },
+      {
+        "name": "Catchability",
+        "units": "1/Boat/Year",
+        "min": 0.005,
+        "max": 0.02,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      },
+      {
+        "name": "Regrowth rate",
+        "units": "1/Year",
+        "min": 0.2,
+        "max": 0.8,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      },
+      {
+        "name": "Sea capacity",
+        "units": "Tonne",
+        "min": 500.0,
+        "max": 2000.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      }
+    ],
+    "outputs": [
+      {
+        "variable": "Fish",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      },
+      {
+        "variable": "Catch to date",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      }
+    ],
+    "scenarios": [
+      {
+        "name": "Few boats",
+        "values": {
+          "Boats": 5.0
+        }
+      },
+      {
+        "name": "Many boats",
+        "values": {
+          "Boats": 40.0
+        }
+      }
+    ],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [
+      {
+        "name": "Total catch",
+        "output": "Catch to date",
+        "measure": "final",
+        "direction": "max",
+        "policies": [],
+        "protected_ranking": false,
+        "transform": ""
+      },
+      {
+        "name": "Fish left",
+        "output": "Fish",
+        "measure": "final",
+        "direction": "max",
+        "policies": [],
+        "protected_ranking": false,
+        "transform": ""
+      }
+    ],
+    "reduced_from": ""
+  }
+}

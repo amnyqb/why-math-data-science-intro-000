@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE G3: a flow attached to no stock"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Loose",
+  "kind": "flow",
+  "equation": "5",
+  "units": "widget/Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Feed",
+  "kind": "flow",
+  "equation": "Loose",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "S"
+ }
+]

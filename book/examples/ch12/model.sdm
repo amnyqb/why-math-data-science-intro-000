@@ -1,0 +1,438 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "Demand",
+      "kind": "Constant",
+      "equation": "40",
+      "units": "megalitres/week",
+      "comment": "What each region asks for.",
+      "pos": [
+        100.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": "region",
+      "by_item": [
+        {
+          "item": "Valley",
+          "equation": "25",
+          "table": []
+        },
+        {
+          "item": "Coast",
+          "equation": "35",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Priority",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "dmnl",
+      "comment": "Higher is served first (the Valley has the hospital and the farms).",
+      "pos": [
+        100.0,
+        160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": "region",
+      "by_item": [
+        {
+          "item": "Valley",
+          "equation": "3",
+          "table": []
+        },
+        {
+          "item": "Coast",
+          "equation": "2",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Supply",
+      "kind": "Aux",
+      "equation": "50 + STEP(30, 8)",
+      "units": "megalitres/week",
+      "comment": "Water available: 50 at first, 80 from week 8.",
+      "pos": [
+        100.0,
+        260.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Equal share",
+      "kind": "Aux",
+      "equation": "ALLOCATE(Demand, Supply)",
+      "units": "megalitres/week",
+      "comment": "In proportion to what each asks.",
+      "pos": [
+        380.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": "region",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "By priority",
+      "kind": "Aux",
+      "equation": "ALLOCATE(Demand, Supply, by=Priority)",
+      "units": "megalitres/week",
+      "comment": "The highest priority is served in full first.",
+      "pos": [
+        380.0,
+        160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": "region",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Softened priority",
+      "kind": "Aux",
+      "equation": "ALLOCATE(Demand, Supply, by=Priority, curve=normal, spread=1)",
+      "units": "megalitres/week",
+      "comment": "A priority that is not absolute: the lower priorities get a little before the higher ones are full.",
+      "pos": [
+        380.0,
+        260.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": "region",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 8,
+      "from": 2,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 4,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 2,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 4,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 3,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 2,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 4,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 3,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 16.0,
+    "time_step": 1.0,
+    "time_units": "week",
+    "method": "Euler"
+  },
+  "next_id": 16,
+  "sheets": [
+    {
+      "id": 16,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "Figure 12.1  Three ways to share the water.",
+      "source": "Chapter 12 example model"
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "region",
+      "items": [
+        "North",
+        "Valley",
+        "Coast"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Source Serif 4",
+    "mono_font": "Source Code Pro",
+    "text_scale": 1.0,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "colors": {
+      "aux": "#b5651d",
+      "flow": "#2b7a78",
+      "link": "#5c6370",
+      "stock": "#1f3a5f",
+      "stock_fill": "#eef3fa",
+      "text": "#1a1a1a"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "cards",
+    "caption_size": 13.0
+  }
+}

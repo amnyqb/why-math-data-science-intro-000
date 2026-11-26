@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="63.56mm" viewBox="0 0 1119.75 547.5">
+<title>Water in tub, Tap, Drain</title>
+<defs>
+<clipPath id="c1"><rect x="9.75" y="7.75" width="1100" height="539.75"/></clipPath>
+<clipPath id="c2"><rect x="32.41" y="31.75" width="1077.34" height="476.25"/></clipPath>
+</defs>
+<g clip-path="url(#c1)">
+<text x="9.75 18.25 26.75 35.25 38.75 44.75 53.75 62.75 66.25 72.07 75.75 79.75 83.75 90.25 93.75 105.75 114.75 118.25 122.25 130.75 134.25 140.25 149.25 157.75 161.25 167.25 175.25 184.25 187.75 196.75 205.25 213.25 219.25 225.75 229.25 235.25 244.25 252.75 256.25 265.25 270.75 278.75 282.25" y="22.25" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="17.37" fill="#1a1a1a" xml:space="preserve">The tub fills while the tap beats the drain</text>
+</g>
+<g clip-path="url(#c2)">
+<rect x="32.91" y="32.25" width="1076.34" height="475.25" rx="1.5" fill="none" stroke="#e4e7f0" stroke-width="1.15"/>
+</g>
+<g clip-path="url(#c1)">
+<text x="77.7" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">0</text>
+<text x="563.75 570.75" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">10</text>
+<text x="1053.45 1060.45" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">20</text>
+<text x="530.77 537.77 540.77 551.77 559.27 562.27 566.27 577.27 580.27 587.77 595.27 600.27 607.27" y="535" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">Time (Minute)</text>
+<text x="21.06" y="503.59" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">0</text>
+<text x="13.75 20.75" y="439.92" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">10</text>
+<text x="13.75 20.75" y="376.25" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">20</text>
+<text x="13.75 20.75" y="312.58" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">30</text>
+<text x="13.75 20.75" y="248.91" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">40</text>
+<text x="13.75 20.75" y="185.24" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">50</text>
+<text x="13.75 20.75" y="121.57" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">60</text>
+<text x="13.75 20.75" y="57.9" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">70</text>
+</g>
+<g clip-path="url(#c2)">
+<line x1="32.41" y1="31.75" x2="32.41" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="130.35" y1="31.75" x2="130.35" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="179.32" y1="31.75" x2="179.32" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="228.29" y1="31.75" x2="228.29" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="277.26" y1="31.75" x2="277.26" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="326.23" y1="31.75" x2="326.23" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="375.2" y1="31.75" x2="375.2" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="424.17" y1="31.75" x2="424.17" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="473.14" y1="31.75" x2="473.14" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="522.11" y1="31.75" x2="522.11" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="620.05" y1="31.75" x2="620.05" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="669.02" y1="31.75" x2="669.02" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="717.99" y1="31.75" x2="717.99" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="766.96" y1="31.75" x2="766.96" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="815.93" y1="31.75" x2="815.93" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="864.9" y1="31.75" x2="864.9" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="913.87" y1="31.75" x2="913.87" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="962.84" y1="31.75" x2="962.84" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="1011.81" y1="31.75" x2="1011.81" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="1109.75" y1="31.75" x2="1109.75" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.38"/>
+<line x1="32.41" y1="435.42" x2="1109.75" y2="435.42" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="32.41" y1="371.75" x2="1109.75" y2="371.75" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="32.41" y1="308.08" x2="1109.75" y2="308.08" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="32.41" y1="244.41" x2="1109.75" y2="244.41" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="32.41" y1="180.74" x2="1109.75" y2="180.74" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="32.41" y1="117.07" x2="1109.75" y2="117.07" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="32.41" y1="53.4" x2="1109.75" y2="53.4" stroke="#505050" stroke-width="1.15" stroke-opacity="0.44"/>
+<line x1="81.38" y1="31.75" x2="81.38" y2="508" stroke="#505050" stroke-width="1.15"/>
+<line x1="571.08" y1="31.75" x2="571.08" y2="508" stroke="#505050" stroke-width="1.15"/>
+<line x1="1060.78" y1="31.75" x2="1060.78" y2="508" stroke="#505050" stroke-width="1.15"/>
+<line x1="32.41" y1="499.09" x2="1109.75" y2="499.09" stroke="#505050" stroke-width="1.15"/>
+<polyline points="81.38,180.74 93.62,177.55 105.86,174.37 118.11,171.19 130.35,168 142.59,164.82 154.83,161.64 167.07,158.45 179.32,155.27 191.56,152.09 203.8,148.9 216.04,145.72 228.29,142.54 240.53,139.35 252.77,136.17 265.02,132.98 277.26,129.8 289.5,126.62 301.74,123.43 313.98,120.25 326.23,117.07 338.47,113.88 350.71,110.7 362.95,107.52 375.2,104.33 387.44,101.15 399.68,97.96 411.93,94.78 424.17,91.6 436.41,88.42 448.65,85.23 460.89,82.05 473.14,78.87 485.38,75.68 497.62,72.5 509.87,69.32 522.11,66.13 534.35,62.95 546.59,59.77 558.84,56.58 571.08,53.4 583.32,56.58 595.56,59.77 607.8,62.95 620.05,66.13 632.29,69.32 644.54,72.5 656.78,75.68 669.02,78.87 681.26,82.05 693.5,85.23 705.75,88.42 717.99,91.6 730.23,94.78 742.47,97.96 754.71,101.15 766.96,104.33 779.2,107.52 791.45,110.7 803.69,113.88 815.93,117.07 828.17,120.25 840.41,123.43 852.66,126.62 864.9,129.8 877.14,132.98 889.38,136.17 901.63,139.35 913.87,142.54 926.11,145.72 938.36,148.9 950.6,152.09 962.84,155.27 975.08,158.45 987.32,161.64 999.57,164.82 1011.81,168 1024.05,171.19 1036.29,174.37 1048.54,177.55 1060.78,180.74" fill="none" stroke="#4f46e5" stroke-width="2.76" stroke-linejoin="round"/>
+<polyline points="81.38,460.88 93.62,460.88 105.86,460.88 118.11,460.88 130.35,460.88 142.59,460.88 154.83,460.88 167.07,460.88 179.32,460.88 191.56,460.88 203.8,460.88 216.04,460.88 228.29,460.88 240.53,460.88 252.77,460.88 265.02,460.88 277.26,460.88 289.5,460.88 301.74,460.88 313.98,460.88 326.23,460.88 338.47,460.88 350.71,460.88 362.95,460.88 375.2,460.88 387.44,460.88 399.68,460.88 411.93,460.88 424.17,460.88 436.41,460.88 448.65,460.88 460.89,460.88 473.14,460.88 485.38,460.88 497.62,460.88 509.87,460.88 522.11,460.88 534.35,460.88 546.59,460.88 558.84,460.88 571.08,486.35 583.32,486.35 595.56,486.35 607.8,486.35 620.05,486.35 632.29,486.35 644.54,486.35 656.78,486.35 669.02,486.35 681.26,486.35 693.5,486.35 705.75,486.35 717.99,486.35 730.23,486.35 742.47,486.35 754.71,486.35 766.96,486.35 779.2,486.35 791.45,486.35 803.69,486.35 815.93,486.35 828.17,486.35 840.41,486.35 852.66,486.35 864.9,486.35 877.14,486.35 889.38,486.35 901.63,486.35 913.87,486.35 926.11,486.35 938.36,486.35 950.6,486.35 962.84,486.35 975.08,486.35 987.32,486.35 999.57,486.35 1011.81,486.35 1024.05,486.35 1036.29,486.35 1048.54,486.35 1060.78,486.35" fill="none" stroke="#0d9488" stroke-width="2.76" stroke-linejoin="round"/>
+<polyline points="81.38,473.62 93.62,473.62 105.86,473.62 118.11,473.62 130.35,473.62 142.59,473.62 154.83,473.62 167.07,473.62 179.32,473.62 191.56,473.62 203.8,473.62 216.04,473.62 228.29,473.62 240.53,473.62 252.77,473.62 265.02,473.62 277.26,473.62 289.5,473.62 301.74,473.62 313.98,473.62 326.23,473.62 338.47,473.62 350.71,473.62 362.95,473.62 375.2,473.62 387.44,473.62 399.68,473.62 411.93,473.62 424.17,473.62 436.41,473.62 448.65,473.62 460.89,473.62 473.14,473.62 485.38,473.62 497.62,473.62 509.87,473.62 522.11,473.62 534.35,473.62 546.59,473.62 558.84,473.62 571.08,473.62 583.32,473.62 595.56,473.62 607.8,473.62 620.05,473.62 632.29,473.62 644.54,473.62 656.78,473.62 669.02,473.62 681.26,473.62 693.5,473.62 705.75,473.62 717.99,473.62 730.23,473.62 742.47,473.62 754.71,473.62 766.96,473.62 779.2,473.62 791.45,473.62 803.69,473.62 815.93,473.62 828.17,473.62 840.41,473.62 852.66,473.62 864.9,473.62 877.14,473.62 889.38,473.62 901.63,473.62 913.87,473.62 926.11,473.62 938.36,473.62 950.6,473.62 962.84,473.62 975.08,473.62 987.32,473.62 999.57,473.62 1011.81,473.62 1024.05,473.62 1036.29,473.62 1048.54,473.62 1060.78,473.62" fill="none" stroke="#ea580c" stroke-width="2.76" stroke-linejoin="round"/>
+</g>
+<g clip-path="url(#c1)">
+<rect x="998.47" y="36.25" width="106.78" height="66" rx="9.5" fill="none" stroke="#e4e7f0" stroke-width="1.15" stroke-opacity="0.75"/>
+<circle cx="1089.25" cy="48.25" r="5.25" fill="#f4f5fa" stroke="#e4e7f0" stroke-width="1.15"/>
+<circle cx="1089.25" cy="48.25" r="3.75" fill="#ea580c"/>
+<text x="1047.66 1056.66 1061.66 1068.16 1071.16" y="52.75" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#3c3c3c" xml:space="preserve">Drain</text>
+<circle cx="1089.25" cy="69.25" r="5.25" fill="#f4f5fa" stroke="#e4e7f0" stroke-width="1.15"/>
+<circle cx="1089.25" cy="69.25" r="3.75" fill="#0d9488"/>
+<text x="1057.88 1064.38 1070.88" y="73.75" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#3c3c3c" xml:space="preserve">Tap</text>
+<circle cx="1089.25" cy="90.25" r="5.25" fill="#f4f5fa" stroke="#e4e7f0" stroke-width="1.15"/>
+<circle cx="1089.25" cy="90.25" r="3.75" fill="#4f46e5"/>
+<text x="1006.97 1018.47 1024.97 1029.97 1037.47 1041.97 1044.97 1047.97 1055.47 1058.47 1063.47 1070.97" y="94.75" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#3c3c3c" xml:space="preserve">Water in tub</text>
+</g>
+</svg>

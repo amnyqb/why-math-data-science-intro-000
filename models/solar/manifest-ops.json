@@ -1,0 +1,72 @@
+[
+ {
+  "op": "set_manifest",
+  "manifest": {
+   "levers": [
+    {
+     "name": "Capex",
+     "units": "EUR/kWp",
+     "min": 400,
+     "max": 1500,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "OM",
+     "units": "EUR/(kWp*Year)",
+     "min": 5,
+     "max": 30,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "Yield",
+     "units": "kWh/(kWp*Year)",
+     "min": 800,
+     "max": 1800,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "Degradation",
+     "units": "dmnl",
+     "min": 0,
+     "max": 0.01,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "Debt Share",
+     "units": "dmnl",
+     "min": 0,
+     "max": 0.9,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "Cost of Debt",
+     "units": "dmnl",
+     "min": 0.02,
+     "max": 0.1,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "Cost of Equity",
+     "units": "dmnl",
+     "min": 0.04,
+     "max": 0.15,
+     "explanation": "An input of the levelised cost"
+    },
+    {
+     "name": "Inflation",
+     "units": "dmnl",
+     "min": 0,
+     "max": 0.05,
+     "explanation": "An input of the levelised cost"
+    }
+   ],
+   "outputs": [
+    {
+     "variable": "LCOE",
+     "chart": "line",
+     "units": "EUR/MWh"
+    }
+   ]
+  }
+ }
+]

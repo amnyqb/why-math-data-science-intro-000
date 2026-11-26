@@ -1,0 +1,103 @@
+{UTF-8}
+{ Chapter 12: out of control (fixes that fail). When output falls short of demand, maintenance hours are moved to production; the maintenance backlog grows and machines break down more. }
+Base Demand=
+	360
+	~	unit/week
+	~	|
+Demand Increase=
+	36
+	~	unit/week
+	~	Extra demand from week 10 (10%).
+	|
+Demand=
+	Base Demand + STEP(Demand Increase, 10)
+	~	unit/week
+	~	|
+Hours Available=
+	500
+	~	hour/week
+	~	Machine hours the plant has each week.
+	|
+Normal Maintenance Hours=
+	50
+	~	hour/week
+	~	Hours planned for preventive maintenance.
+	|
+Fix Sensitivity=
+	5
+	~	dmnl
+	~	Share of maintenance hours moved to production per unit of perceived shortfall fraction (0: no fix).
+	|
+Maintenance Hours=
+	Normal Maintenance Hours * MAX(0, 1 - Fix Sensitivity * Perceived Shortfall)
+	~	hour/week
+	~	The fix: fewer maintenance hours when output falls short.
+	|
+Normal Breakdowns=
+	0.2
+	~	dmnl
+	~	Share of scheduled production hours lost to breakdowns at the normal maintenance backlog.
+	|
+Normal Backlog=
+	72
+	~	hour
+	~	Maintenance backlog when maintenance keeps pace with wear.
+	|
+Breakdown Fraction=
+	MIN(0.9, Normal Breakdowns * Maintenance Backlog / Normal Backlog)
+	~	dmnl
+	~	|
+Production Hours=
+	(Hours Available - Maintenance Hours) * (1 - Breakdown Fraction)
+	~	hour/week
+	~	|
+Units per Hour=
+	1
+	~	unit/hour
+	~	|
+Output=
+	Production Hours * Units per Hour
+	~	unit/week
+	~	|
+Shortfall=
+	MAX(0, Demand - Output) / Demand
+	~	dmnl
+	~	Fraction of demand not met.
+	|
+Perception Time=
+	2
+	~	week
+	~	Time for management to see the shortfall.
+	|
+Perceived Shortfall=
+	SMOOTHI(Shortfall, Perception Time, 0)
+	~	dmnl
+	~	|
+Wear per Production Hour=
+	0.1
+	~	hour/hour
+	~	Maintenance work created by each production hour.
+	|
+Wear Added=
+	Production Hours * Wear per Production Hour
+	~	hour/week
+	~	|
+Minimum Maintenance Time=
+	2
+	~	week
+	~	Fastest time to clear the maintenance backlog with enough hours.
+	|
+Maintenance Done=
+	MIN(Maintenance Hours, Maintenance Backlog / Minimum Maintenance Time)
+	~	hour/week
+	~	|
+Maintenance Backlog= INTEG(
+	Wear Added - Maintenance Done,
+	72)
+	~	hour
+	~	Maintenance work needed and not yet done.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 104 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = 0.0625 ~ week ~ |

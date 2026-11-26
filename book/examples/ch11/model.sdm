@@ -1,0 +1,505 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Arrivals",
+      "kind": "Aux",
+      "equation": "8 + STEP(4, 6) - STEP(4, 18)",
+      "units": "patients/hour",
+      "comment": "Arrivals: 8 an hour, 12 an hour between hour 6 and hour 18 (a flu outbreak).",
+      "pos": [
+        100.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Treatment capacity",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "patients/hour",
+      "comment": "What the team can treat each hour.",
+      "pos": [
+        100.0,
+        230.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Treated",
+      "kind": "Aux",
+      "equation": "MIN(Treatment capacity, Waiting / TIME STEP + Arrivals)",
+      "units": "patients/hour",
+      "comment": "Treatment: full capacity, unless there is nobody left to treat.",
+      "pos": [
+        330.0,
+        170.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Waiting",
+      "kind": "Aux",
+      "equation": "QUEUE(Arrivals, Treated, init=0)",
+      "units": "patients",
+      "comment": "The waiting room: people leave oldest first.",
+      "pos": [
+        560.0,
+        170.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Average wait",
+      "kind": "Aux",
+      "equation": "WAIT(Waiting)",
+      "units": "hours",
+      "comment": "How long the people in the waiting room have waited, on average.",
+      "pos": [
+        800.0,
+        70.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Longest wait",
+      "kind": "Aux",
+      "equation": "WAIT(Waiting, measure=oldest)",
+      "units": "hours",
+      "comment": "How long the person who has waited longest has waited.",
+      "pos": [
+        800.0,
+        150.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Waiting over 2 hours",
+      "kind": "Aux",
+      "equation": "WAIT(Waiting, measure=count, older_than=2)",
+      "units": "patients",
+      "comment": "How many have waited more than 2 hours: the number a hospital reports.",
+      "pos": [
+        800.0,
+        230.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 8,
+      "from": 2,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 4,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "+",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 1,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 3,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "-",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 4,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 4,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 4,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 48.0,
+    "time_step": 0.25,
+    "time_units": "hour",
+    "method": "Euler"
+  },
+  "next_id": 22,
+  "sheets": [
+    {
+      "id": 16,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "Figure 11.1  The emergency room: arrivals, treatment and the waiting line.",
+      "source": "Chapter 11 example model"
+    },
+    {
+      "id": 22,
+      "name": "Causal loops",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 17,
+            "text": "Treated",
+            "pos": [
+              169.75,
+              60.0
+            ]
+          },
+          {
+            "id": 18,
+            "text": "Waiting",
+            "pos": [
+              169.75,
+              320.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 19,
+            "from": 17,
+            "to": 18,
+            "bend": -130.0,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 20,
+            "from": 18,
+            "to": 17,
+            "bend": -130.0,
+            "polarity": "+",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 21,
+            "pos": [
+              169.75,
+              190.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Queue clears",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "Figure 11.2  The line balances itself: the longer it is, the more is treated.",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Source Serif 4",
+    "mono_font": "Source Code Pro",
+    "text_scale": 1.0,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "colors": {
+      "aux": "#b5651d",
+      "flow": "#2b7a78",
+      "link": "#5c6370",
+      "stock": "#1f3a5f",
+      "stock_fill": "#eef3fa",
+      "text": "#1a1a1a"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "cards",
+    "caption_size": 13.0
+  }
+}

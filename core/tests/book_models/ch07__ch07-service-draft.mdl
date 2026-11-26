@@ -1,0 +1,115 @@
+{UTF-8}
+{ Chapter 7: a claims service centre. Cases arrive, wait in a backlog and are closed by trained staff; staff are hired through a training pipeline. First draft, before validation: completions are set by staff alone, and work pressure divides by capacity. }
+Base Arrivals=
+	500
+	~	cases/week
+	~	Cases arriving each week before the change.
+	|
+Arrival Change=
+	0.2
+	~	dmnl
+	~	Fractional change in arrivals from week 10 (0.2 = 20% more; -1 = no arrivals).
+	|
+Case Arrivals=
+	Base Arrivals * (1 + STEP(Arrival Change, 10))
+	~	cases/week
+	~	|
+Backlog= INTEG(
+	Case Arrivals - Completions,
+	1000)
+	~	cases
+	~	Open cases waiting or in progress.
+	|
+Closed Cases= INTEG(
+	Completions,
+	0)
+	~	cases
+	~	Cumulative cases closed since week 0.
+	|
+Target Service Time=
+	2
+	~	week
+	~	Time the centre aims to take to close a case.
+	|
+Desired Completions=
+	Backlog / Target Service Time
+	~	cases/week
+	~	|
+Standard Productivity=
+	25
+	~	cases/person/week
+	~	Cases a trained person closes per week at normal pace.
+	|
+Standard Capacity=
+	Staff * Standard Productivity
+	~	cases/week
+	~	|
+Work Pressure=
+	Desired Completions / Standard Capacity
+	~	dmnl
+	~	Desired completions relative to normal capacity.
+	|
+Pressure Sensitivity=
+	0.5
+	~	dmnl
+	~	How strongly staff speed up (or slow down) under pressure; 0 switches the loop off.
+	|
+Productivity Effect=
+	MIN(1.25, MAX(0.75, 1 + Pressure Sensitivity * (Work Pressure - 1)))
+	~	dmnl
+	~	Overtime and shortcuts: up to 25% faster under pressure, up to 25% slower when work is short.
+	|
+Capacity=
+	Standard Capacity * Productivity Effect
+	~	cases/week
+	~	|
+Completions=
+	Capacity
+	~	cases/week
+	~	Set by staff capacity.
+	|
+Desired Staff=
+	Desired Completions / Standard Productivity
+	~	person
+	~	|
+Hiring Time=
+	6
+	~	week
+	~	Time to decide, advertise and recruit.
+	|
+Average Tenure=
+	100
+	~	week
+	~	|
+Quits=
+	Staff / Average Tenure
+	~	person/week
+	~	|
+Hiring=
+	MAX(0, (Desired Staff - Staff) / Hiring Time + Quits)
+	~	person/week
+	~	Replaces quits and closes the staff gap; ignores people already in training.
+	|
+Training Time=
+	4
+	~	week
+	~	|
+Trainees= INTEG(
+	Hiring - Graduations,
+	0.8)
+	~	person
+	~	|
+Graduations=
+	Trainees / Training Time
+	~	person/week
+	~	|
+Staff= INTEG(
+	Graduations - Quits,
+	20)
+	~	person
+	~	Trained staff.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 60 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = 0.0625 ~ week ~ |

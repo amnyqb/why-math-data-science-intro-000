@@ -1,0 +1,3 @@
+policy,Chain window cost,Distributor average backlog,Distributor bullwhip,Factory average backlog,Factory bullwhip,Fill rate,Retailer average backlog,Retailer bullwhip,Wholesaler average backlog,Wholesaler bullwhip
+P0 human-like (placeholder parameters),2694.0,12.666666666666666,55.91162109375,8.277777777777779,82.56005859375,1.0,4.222222222222222,5.511718749999994,9.833333333333334,25.791015625
+P1 base-stock (formula levels),1749.0,9.0,2.318359374999997,5.333333333333333,3.8496093750000018,0.9044117647058824,16.333333333333332,1.037109374999998,12.666666666666666,1.7265624999999982

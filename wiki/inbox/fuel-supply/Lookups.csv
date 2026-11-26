@@ -1,0 +1,3 @@
+Name,Input,Points,Units,Description,Per,Combine,Module
+Consumption forecast,Time,,MB/Day,"Daily burn per tank: actual up to the as-of date, forecast after (ItemSeries).",Tank,,Inputs & limits
+Current plan trucks,Time,,Truck/Day,"Trucks per day in the plan query, per tank (ItemSeries).",Tank,,Inputs & limits

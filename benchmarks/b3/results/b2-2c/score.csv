@@ -1,0 +1,5 @@
+finding,reproduced,evidence
+M1 half-cycle durations of Backlog within 15% of the paper,True,"ours [16.5, 17.5, 17.5, 17.0, 17.5] vs paper [16.9, 17.7, 17.6, 17.1, 17.4]; largest relative difference 2.4%"
+M2 the third-order delivery delay loop has the largest share among loops with three or more stocks,True,"delivery delay loop: id 9, share 24.0%; strongest of 16 higher-order loops: id 9 (24.0%)"
+M3 first-order loops are dominant at least 50% of the time,True,"9 first-order loops, combined share 66.5%"
+M7 fixing the capacity utilisation variable (Production Capacity Fraction) at its initial value leaves the run virtually identical,False,largest base-run NRMSE over the goals 2.266 (utilisation moves from 0.333 to 0.961)

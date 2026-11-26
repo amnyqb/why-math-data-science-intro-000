@@ -1,0 +1,414 @@
+{
+  "goals": [
+    {
+      "converged": false,
+      "effects": [
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 100,
+          "param": "Salesman Constant SCT",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -4221735.241398459,
+          "mu_star": 4248937.104969328,
+          "n": 100,
+          "param": "Salesman Adjustment Time SAT",
+          "sigma": 19859131.371352047
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -6460554.883738713,
+          "mu_star": 6460554.883738713,
+          "n": 100,
+          "param": "Salesman Salary SS",
+          "sigma": 31343186.174569637
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 5626535.453004073,
+          "mu_star": 5632792.328030541,
+          "n": 100,
+          "param": "Revenue to Sales RS",
+          "sigma": 30226746.990566775
+        },
+        {
+          "class": "negligible",
+          "mu": -257471.73499730005,
+          "mu_star": 283230.98339743237,
+          "n": 100,
+          "param": "Delivery Rate Adjustment Time DRAT",
+          "sigma": 1642038.2758396636
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2285576.052003936,
+          "mu_star": 2292314.808213061,
+          "n": 100,
+          "param": "Production Capacity Receiving Delay PCRD",
+          "sigma": 10013946.916462798
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2424260.520930951,
+          "mu_star": 2430356.475818989,
+          "n": 100,
+          "param": "Delivery Delay Bias DDB",
+          "sigma": 13069773.739462495
+        },
+        {
+          "class": "negligible",
+          "mu": -421354.20661908406,
+          "mu_star": 736257.6894545623,
+          "n": 100,
+          "param": "Time for Delivery Delay Recognition by Company TDDRC",
+          "sigma": 3324864.433505521
+        },
+        {
+          "class": "negligible",
+          "mu": -64875.84847168399,
+          "mu_star": 218646.45143013474,
+          "n": 100,
+          "param": "Time for Delivery Delay Recognition by Market TDDRM",
+          "sigma": 784171.4627502451
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 100,
+          "param": "Time for Delivery Delay Traditional TDDT",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -9382082.205341082,
+          "mu_star": 9386597.180135543,
+          "n": 100,
+          "param": "Delivery Delay Management Goal DDMG",
+          "sigma": 41474781.2855696
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 4752850.205270743,
+          "mu_star": 4752850.205270743,
+          "n": 100,
+          "param": "Sales Effectiveness Maximum SEM",
+          "sigma": 23081939.974536926
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 2011237.3444004923,
+          "mu_star": 2014950.499697913,
+          "n": 100,
+          "param": "Production Capacity Initial PCI",
+          "sigma": 11652245.859518042
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Backlog peak",
+      "kendall_r_vs_2r": 0.8181818181818182,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": false,
+      "effects": [
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 100,
+          "param": "Salesman Constant SCT",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -4117447.0277897976,
+          "mu_star": 4256891.634992246,
+          "n": 100,
+          "param": "Salesman Adjustment Time SAT",
+          "sigma": 20037568.579699304
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -6107661.888386727,
+          "mu_star": 6116734.457459929,
+          "n": 100,
+          "param": "Salesman Salary SS",
+          "sigma": 31359821.995799236
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 5484103.635329923,
+          "mu_star": 5608647.462502663,
+          "n": 100,
+          "param": "Revenue to Sales RS",
+          "sigma": 30254853.61077423
+        },
+        {
+          "class": "negligible",
+          "mu": -243618.27550752778,
+          "mu_star": 287185.64544773276,
+          "n": 100,
+          "param": "Delivery Rate Adjustment Time DRAT",
+          "sigma": 1645655.5067108318
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2126601.5366803315,
+          "mu_star": 2232081.422442715,
+          "n": 100,
+          "param": "Production Capacity Receiving Delay PCRD",
+          "sigma": 10031063.645060334
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2371908.635784224,
+          "mu_star": 2394662.5658075274,
+          "n": 100,
+          "param": "Delivery Delay Bias DDB",
+          "sigma": 13078425.883484067
+        },
+        {
+          "class": "negligible",
+          "mu": -538131.1544703029,
+          "mu_star": 864627.7217194698,
+          "n": 100,
+          "param": "Time for Delivery Delay Recognition by Company TDDRC",
+          "sigma": 3472526.7625706494
+        },
+        {
+          "class": "negligible",
+          "mu": -107941.38482140444,
+          "mu_star": 259310.07678455755,
+          "n": 100,
+          "param": "Time for Delivery Delay Recognition by Market TDDRM",
+          "sigma": 1050208.213445129
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 100,
+          "param": "Time for Delivery Delay Traditional TDDT",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -9255022.282511102,
+          "mu_star": 9263084.24211841,
+          "n": 100,
+          "param": "Delivery Delay Management Goal DDMG",
+          "sigma": 41490702.690700665
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 4706497.479108086,
+          "mu_star": 4713419.945028896,
+          "n": 100,
+          "param": "Sales Effectiveness Maximum SEM",
+          "sigma": 23087523.817894112
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1912561.3482396358,
+          "mu_star": 1930525.510817038,
+          "n": 100,
+          "param": "Production Capacity Initial PCI",
+          "sigma": 11654004.616789203
+        }
+      ],
+      "failed_runs": 0,
+      "goal": "Backlog at the end",
+      "kendall_r_vs_2r": 0.8181818181818182,
+      "top_overlap": 1.0
+    },
+    {
+      "converged": true,
+      "effects": [
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 95,
+          "param": "Salesman Constant SCT",
+          "sigma": 0.0
+        },
+        {
+          "class": "negligible",
+          "mu": -1.0275911068866523e+48,
+          "mu_star": 2.418876503636268e+48,
+          "n": 93,
+          "param": "Salesman Adjustment Time SAT",
+          "sigma": 1.371667980705334e+49
+        },
+        {
+          "class": "negligible",
+          "mu": -6.198356334624123e+49,
+          "mu_star": 6.198356455886773e+49,
+          "n": 93,
+          "param": "Salesman Salary SS",
+          "sigma": 3.974862618361322e+50
+        },
+        {
+          "class": "negligible",
+          "mu": 8.033446061642955e+48,
+          "mu_star": 8.033447332254034e+48,
+          "n": 94,
+          "param": "Revenue to Sales RS",
+          "sigma": 5.534337965561113e+49
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -3.048234060196094e+50,
+          "mu_star": 3.048234060196094e+50,
+          "n": 93,
+          "param": "Delivery Rate Adjustment Time DRAT",
+          "sigma": 2.2334569651964678e+51
+        },
+        {
+          "class": "negligible",
+          "mu": 1.2650985104137365e+49,
+          "mu_star": 1.2650985104137365e+49,
+          "n": 91,
+          "param": "Production Capacity Receiving Delay PCRD",
+          "sigma": 7.708997203477242e+49
+        },
+        {
+          "class": "negligible",
+          "mu": 2.349737644557692e+49,
+          "mu_star": 2.349737644557692e+49,
+          "n": 91,
+          "param": "Delivery Delay Bias DDB",
+          "sigma": 1.0482922298102559e+50
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -2.1063713235628504e+50,
+          "mu_star": 2.1063713235628504e+50,
+          "n": 94,
+          "param": "Time for Delivery Delay Recognition by Company TDDRC",
+          "sigma": 1.4226637421011198e+51
+        },
+        {
+          "class": "negligible",
+          "mu": 7.998479257082153e+48,
+          "mu_star": 7.998479257082214e+48,
+          "n": 94,
+          "param": "Time for Delivery Delay Recognition by Market TDDRM",
+          "sigma": 4.578305913707785e+49
+        },
+        {
+          "class": "negligible",
+          "mu": 0.0,
+          "mu_star": 0.0,
+          "n": 95,
+          "param": "Time for Delivery Delay Traditional TDDT",
+          "sigma": 0.0
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": 1.4281990273472497e+51,
+          "mu_star": 1.4281990273472497e+51,
+          "n": 90,
+          "param": "Delivery Delay Management Goal DDMG",
+          "sigma": 9.554653020292254e+51
+        },
+        {
+          "class": "negligible",
+          "mu": 8.83923553220332e+49,
+          "mu_star": 8.839235551541076e+49,
+          "n": 94,
+          "param": "Sales Effectiveness Maximum SEM",
+          "sigma": 7.074320772233182e+50
+        },
+        {
+          "class": "nonlinear_or_interacting",
+          "mu": -1.3673402054557312e+50,
+          "mu_star": 1.4893676591682244e+50,
+          "n": 93,
+          "param": "Production Capacity Initial PCI",
+          "sigma": 1.347508395402085e+51
+        }
+      ],
+      "failed_runs": 79,
+      "goal": "Delivery delay (company) peak",
+      "kendall_r_vs_2r": 0.948051948051948,
+      "top_overlap": 1.0
+    }
+  ],
+  "levels": 4,
+  "params": [
+    {
+      "max": 120.0,
+      "min": 30.0,
+      "name": "Salesman Constant SCT"
+    },
+    {
+      "max": 40.0,
+      "min": 10.0,
+      "name": "Salesman Adjustment Time SAT"
+    },
+    {
+      "max": 4000.0,
+      "min": 1000.0,
+      "name": "Salesman Salary SS"
+    },
+    {
+      "max": 16.0,
+      "min": 8.0,
+      "name": "Revenue to Sales RS"
+    },
+    {
+      "max": 2.0,
+      "min": 0.5,
+      "name": "Delivery Rate Adjustment Time DRAT"
+    },
+    {
+      "max": 24.0,
+      "min": 6.0,
+      "name": "Production Capacity Receiving Delay PCRD"
+    },
+    {
+      "max": 0.6,
+      "min": 0.0,
+      "name": "Delivery Delay Bias DDB"
+    },
+    {
+      "max": 8.0,
+      "min": 2.0,
+      "name": "Time for Delivery Delay Recognition by Company TDDRC"
+    },
+    {
+      "max": 12.0,
+      "min": 3.0,
+      "name": "Time for Delivery Delay Recognition by Market TDDRM"
+    },
+    {
+      "max": 24.0,
+      "min": 6.0,
+      "name": "Time for Delivery Delay Traditional TDDT"
+    },
+    {
+      "max": 4.0,
+      "min": 1.0,
+      "name": "Delivery Delay Management Goal DDMG"
+    },
+    {
+      "max": 600.0,
+      "min": 200.0,
+      "name": "Sales Effectiveness Maximum SEM"
+    },
+    {
+      "max": 24000.0,
+      "min": 6000.0,
+      "name": "Production Capacity Initial PCI"
+    }
+  ],
+  "runs": 1400,
+  "seed": 1,
+  "trajectories": 50
+}

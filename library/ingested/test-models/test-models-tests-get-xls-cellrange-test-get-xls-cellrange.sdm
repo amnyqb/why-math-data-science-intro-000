@@ -1,0 +1,626 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "data1",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT DATA('inputs.xlsx', 'Global' , 'Time1' , 'value1' )]",
+      "pos": [
+        461.0,
+        155.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "datav",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT DATA('inputs.xlsx', 'Global' , 'Timev' , 'valuev' )]",
+      "pos": [
+        466.0,
+        349.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "lookupv",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT LOOKUPS('inputs.xlsx', 'Global' , 'Timev' , 'valuev' )]",
+      "pos": [
+        592.0,
+        369.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "finalv",
+      "kind": "Aux",
+      "equation": "valuev+10*datav-100*lookupv(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        771.0,
+        305.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "valuev",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS('inputs.xlsx', 'Global' , 'valuev*' )] Vertically defined variable",
+      "pos": [
+        356.0,
+        316.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "data2",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT DATA('inputs.xlsx', 'Local' , 'Time2' , 'value2' )]",
+      "pos": [
+        473.0,
+        243.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "final1",
+      "kind": "Aux",
+      "equation": "value1+10*data1-100*lookup1(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        766.0,
+        187.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "final2",
+      "kind": "Aux",
+      "equation": "value2+10*data2-100*lookup2(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        772.0,
+        239.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "lookup1",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT LOOKUPS('inputs.xlsx', 'Global' , 'Time1' , 'value1' )]",
+      "pos": [
+        602.0,
+        188.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "lookup2",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT LOOKUPS('inputs.xlsx', 'Local' , 'Time2' , 'value2' )]",
+      "pos": [
+        606.0,
+        261.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "value1",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS('inputs.xlsx', 'Global' , 'value1' )] Globally defined variablr",
+      "pos": [
+        342.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "value2",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS('inputs.xlsx', 'Local' , 'value2' )] Locally defined variable",
+      "pos": [
+        350.0,
+        215.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 14,
+      "from": 2,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 3,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 4,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 6,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 7,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 10,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 11,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 21,
+      "from": 12,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 13,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 5.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 22,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "dim",
+      "items": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

@@ -1,0 +1,1000 @@
+{
+  "title": "Fishery commons: open access versus a managed fleet",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Fish",
+      "kind": "Stock",
+      "equation": "900",
+      "units": "tonne",
+      "comment": "",
+      "pos": [
+        740.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Boats",
+      "kind": "Stock",
+      "equation": "20",
+      "units": "boats",
+      "comment": "",
+      "pos": [
+        740.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        190.0
+      ],
+      "to_pt": [
+        820.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Fish Growth",
+      "kind": "Flow",
+      "equation": "Growth Rate * Fish * (1 - Fish / Carrying Capacity)",
+      "units": "tonne/Year",
+      "comment": "",
+      "pos": [
+        540.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 1,
+      "from_pt": [
+        460.0,
+        100.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Catch",
+      "kind": "Flow",
+      "equation": "MIN(Catchability * Boats * Fish, Quota)",
+      "units": "tonne/Year",
+      "comment": "",
+      "pos": [
+        540.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 1,
+      "to": null,
+      "from_pt": [
+        460.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Revenue",
+      "kind": "Aux",
+      "equation": "Price * Catch",
+      "units": "kUSD/Year",
+      "comment": "",
+      "pos": [
+        340.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Fleet Cost",
+      "kind": "Aux",
+      "equation": "Cost Per Boat * Boats",
+      "units": "kUSD/Year",
+      "comment": "",
+      "pos": [
+        340.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Profit",
+      "kind": "Aux",
+      "equation": "Revenue - Fleet Cost",
+      "units": "kUSD/Year",
+      "comment": "",
+      "pos": [
+        340.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        280.0
+      ],
+      "to_pt": [
+        420.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Boat Purchases",
+      "kind": "Flow",
+      "equation": "MIN(MAX(Profit, 0) * Fleet Response, MAX(Fleet Limit - Boats, 0) / TIME STEP)",
+      "units": "boats/Year",
+      "comment": "",
+      "pos": [
+        540.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 2,
+      "from_pt": [
+        460.0,
+        280.0
+      ],
+      "to_pt": [
+        620.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Boat Retirements",
+      "kind": "Flow",
+      "equation": "MIN(MAX(-Profit, 0) * Fleet Response, Boats / TIME STEP)",
+      "units": "boats/Year",
+      "comment": "",
+      "pos": [
+        540.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 2,
+      "to": null,
+      "from_pt": [
+        460.0,
+        370.0
+      ],
+      "to_pt": [
+        620.0,
+        370.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Growth Rate",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "1/Year",
+      "comment": "",
+      "pos": [
+        140.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Carrying Capacity",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "tonne",
+      "comment": "",
+      "pos": [
+        140.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Catchability",
+      "kind": "Constant",
+      "equation": "0.001",
+      "units": "1/boats/Year",
+      "comment": "",
+      "pos": [
+        140.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        280.0
+      ],
+      "to_pt": [
+        220.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Price",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "kUSD/tonne",
+      "comment": "",
+      "pos": [
+        140.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        370.0
+      ],
+      "to_pt": [
+        220.0,
+        370.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "Cost Per Boat",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "kUSD/boats/Year",
+      "comment": "",
+      "pos": [
+        140.0,
+        460.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        460.0
+      ],
+      "to_pt": [
+        220.0,
+        460.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Fleet Response",
+      "kind": "Constant",
+      "equation": "0.05",
+      "units": "boats/kUSD",
+      "comment": "",
+      "pos": [
+        140.0,
+        550.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        550.0
+      ],
+      "to_pt": [
+        220.0,
+        550.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "Quota",
+      "kind": "Constant",
+      "equation": "100000",
+      "units": "tonne/Year",
+      "comment": "",
+      "pos": [
+        140.0,
+        640.0
+      ],
+      "table": [],
+      "slider": [
+        0.0,
+        300.0
+      ],
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        640.0
+      ],
+      "to_pt": [
+        220.0,
+        640.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": true,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "Fleet Limit",
+      "kind": "Constant",
+      "equation": "100000",
+      "units": "boats",
+      "comment": "",
+      "pos": [
+        140.0,
+        730.0
+      ],
+      "table": [],
+      "slider": [
+        0.0,
+        600.0
+      ],
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        730.0
+      ],
+      "to_pt": [
+        220.0,
+        730.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": true,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "Max Sustainable Yield",
+      "kind": "Aux",
+      "equation": "Growth Rate * Carrying Capacity / 4",
+      "units": "tonne/Year",
+      "comment": "",
+      "pos": [
+        340.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        370.0
+      ],
+      "to_pt": [
+        420.0,
+        370.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 4,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 6,
+      "from": 2,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 7,
+      "from": 1,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 5,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 2,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 8,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 10,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 12,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 2,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 12,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 2,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 21,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 24,
+      "from": 23,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 26,
+      "from": 25,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 28,
+      "from": 27,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 30,
+      "from": 29,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 32,
+      "from": 31,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 33,
+      "from": 31,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 35,
+      "from": 34,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 36,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 39,
+      "from": 21,
+      "to": 38,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 40,
+      "from": 23,
+      "to": 38,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 100.0,
+    "time_step": 0.02,
+    "time_units": "Year",
+    "method": "Euler"
+  },
+  "next_id": 44,
+  "sheets": [],
+  "groups": [
+    {
+      "id": 41,
+      "name": "Fish stock",
+      "members": [
+        1,
+        3,
+        5,
+        21,
+        23,
+        25,
+        38
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 42,
+      "name": "Fleet",
+      "members": [
+        2,
+        15,
+        18,
+        31
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 43,
+      "name": "Money",
+      "members": [
+        8,
+        10,
+        12,
+        27,
+        29
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 44,
+      "name": "Policy levers",
+      "members": [
+        34,
+        36
+      ],
+      "view": 0,
+      "color": null
+    }
+  ],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "purpose": {
+    "problem": "Why does a fishery open to everyone end up with a small stock and a big idle fleet, and which rule keeps both the fish and the profit?",
+    "kind": "design a policy",
+    "out_of_scope": "several species, fish age classes, price changes, fuel and crew markets",
+    "objectives": [
+      {
+        "title": "Keep the stock healthy",
+        "kind": "stay within a band",
+        "test": "Fish stays above half of Carrying Capacity (500 tonne) at the end of the 100 years.",
+        "var": "Fish"
+      },
+      {
+        "title": "Keep the fleet profitable",
+        "kind": "grow to a plateau",
+        "test": "Profit settles at a positive level instead of falling to zero.",
+        "var": "Profit"
+      }
+    ]
+  }
+}

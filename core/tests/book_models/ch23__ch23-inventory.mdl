@@ -1,0 +1,42 @@
+{UTF-8}
+{ Chapter 23: a depot's inventory as the model runs in operation. Each week the stock is restarted from the estimate made from that week's count. }
+Initial Inventory=
+	500
+	~	units
+	~	Inventory at the start of the run: in operation, the estimate from the latest count.
+	|
+Inventory= INTEG(
+	Production - Shipments,
+	Initial Inventory)
+	~	units
+	~	Units on hand at the depot.
+	|
+Forecast Demand=
+	100
+	~	units/week
+	~	Shipments the plan expects each week.
+	|
+Shipments=
+	Forecast Demand
+	~	units/week
+	~	Units shipped; in the model, equal to the forecast.
+	|
+Target Inventory=
+	500
+	~	units
+	~	Inventory the depot plans to hold.
+	|
+Adjustment Time=
+	2
+	~	week
+	~	Time over which a gap between target and estimated inventory is planned away.
+	|
+Production=
+	MAX(0, Forecast Demand + (Target Inventory - Initial Inventory) / Adjustment Time)
+	~	units/week
+	~	Production planned for the week from the estimated inventory at its start.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 1 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |

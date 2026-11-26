@@ -1,0 +1,44 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE U6: an ambiguous unit symbol"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Tank",
+  "kind": "stock",
+  "equation": "100",
+  "units": "MB",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Fill",
+  "kind": "flow",
+  "equation": "5",
+  "units": "MB/Day",
+  "doc": "test",
+  "to": "Tank"
+ }
+]

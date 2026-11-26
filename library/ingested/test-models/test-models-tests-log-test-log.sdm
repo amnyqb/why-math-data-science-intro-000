@@ -1,0 +1,237 @@
+{
+  "title": "Imported XMILE model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "log test",
+      "kind": "Aux",
+      "equation": "LN(X) / LN(base)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        490.0,
+        183.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 5,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "base",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        385.0,
+        234.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 5,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "X",
+      "kind": "Constant",
+      "equation": "71",
+      "units": "",
+      "comment": "",
+      "pos": [
+        384.0,
+        146.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 5,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "SAVEPER",
+      "kind": "Aux",
+      "equation": "DT",
+      "units": "Month",
+      "comment": "The frequency with which output is stored.",
+      "pos": [
+        100.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 5,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 6,
+      "from": 3,
+      "to": 1,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 7,
+      "from": 2,
+      "to": 1,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 1.0,
+    "time_step": 1.0,
+    "time_units": "Months",
+    "method": "Euler"
+  },
+  "next_id": 7,
+  "sheets": [
+    {
+      "id": 5,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

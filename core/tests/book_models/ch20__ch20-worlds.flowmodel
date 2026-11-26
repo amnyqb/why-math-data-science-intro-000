@@ -1,0 +1,2487 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Base Demand",
+      "kind": "Constant",
+      "equation": "100",
+      "units": "case/week",
+      "comment": "Customer orders per week before the jump.",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Demand Jump",
+      "kind": "Constant",
+      "equation": "0.2",
+      "units": "dmnl",
+      "comment": "Fractional rise in demand at week 10 (uncertain).",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Demand Pattern",
+      "kind": "Flow",
+      "equation": "Base Demand * (1 + STEP(Demand Jump, 10) - Volatile Demand * STEP(Demand Reversal, 30) + Volatile Demand * Season Amplitude * SIN(6.28319 * Time / Season Period))",
+      "units": "case/week",
+      "comment": "Orders customers would place if delivery were normal: a step, or (volatile world) a surge, a reversal and a season.",
+      "pos": [
+        190.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 12,
+      "from_pt": [
+        90.0,
+        380.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Volatile Demand",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "dmnl",
+      "comment": "World switch: 1 adds the reversal, the season and impatient customers.",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Demand Reversal",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "dmnl",
+      "comment": "Fall in demand at week 30 in the volatile world.",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Season Amplitude",
+      "kind": "Constant",
+      "equation": "0.15",
+      "units": "dmnl",
+      "comment": "Seasonal swing in the volatile world.",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Season Period",
+      "kind": "Constant",
+      "equation": "26",
+      "units": "week",
+      "comment": "Length of the seasonal cycle.",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Customer Impatience",
+      "kind": "Constant",
+      "equation": "1.5",
+      "units": "dmnl",
+      "comment": "How strongly customers go elsewhere when delivery is slow (volatile world only).",
+      "pos": [
+        500.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Perceived Delivery Delay",
+      "kind": "Aux",
+      "equation": "SMOOTHI(Backlog / MAX(Shipments, 1), 1, Target Delivery Time)",
+      "units": "week",
+      "comment": "Delivery delay as customers experience it.",
+      "pos": [
+        690.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Effect of Delay on Demand",
+      "kind": "Aux",
+      "equation": "EXP(-Volatile Demand * Customer Impatience * MAX(0, Perceived Delivery Delay / Target Delivery Time - 1))",
+      "units": "dmnl",
+      "comment": "Share of would-be orders that stay when delivery is slower than normal.",
+      "pos": [
+        880.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Customer Demand",
+      "kind": "Flow",
+      "equation": "Demand Pattern * Effect of Delay on Demand",
+      "units": "case/week",
+      "comment": "Orders arriving from customers.",
+      "pos": [
+        405.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 12,
+      "to": 13,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Lost Orders",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "case",
+      "comment": "Orders customers took elsewhere because delivery was slow.",
+      "pos": [
+        310.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Backlog",
+      "kind": "Stock",
+      "equation": "Normal Backlog",
+      "units": "case",
+      "comment": "Customer orders received but not yet shipped.",
+      "pos": [
+        500.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Target Delivery Time",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "week",
+      "comment": "Normal time from customer order to shipment.",
+      "pos": [
+        690.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Desired Shipments",
+      "kind": "Aux",
+      "equation": "Backlog / Target Delivery Time",
+      "units": "case/week",
+      "comment": "Shipments needed to keep the normal delivery time.",
+      "pos": [
+        880.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Minimum Shipping Time",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "week",
+      "comment": "Fastest the warehouse can ship its whole inventory.",
+      "pos": [
+        120.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Shipments",
+      "kind": "Flow",
+      "equation": "MIN(Desired Shipments, Inventory / Minimum Shipping Time)",
+      "units": "case/week",
+      "comment": "Limited by what is in stock.",
+      "pos": [
+        810.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 19,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        910.0,
+        510.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Orders Filled",
+      "kind": "Flow",
+      "equation": "Shipments",
+      "units": "case/week",
+      "comment": "Customer orders leave the backlog as their goods are shipped.",
+      "pos": [
+        620.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 13,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        720.0,
+        380.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Inventory",
+      "kind": "Stock",
+      "equation": "Target Inventory",
+      "units": "case",
+      "comment": "Cases in the warehouse.",
+      "pos": [
+        690.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Inventory Coverage",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "week",
+      "comment": "Weeks of expected demand the distributor wants on hand.",
+      "pos": [
+        880.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Forecast Time",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "Averaging time for expected demand (uncertain).",
+      "pos": [
+        120.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(Customer Demand, Forecast Time)",
+      "units": "case/week",
+      "comment": "Smoothed customer demand used for ordering.",
+      "pos": [
+        310.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Target Inventory",
+      "kind": "Aux",
+      "equation": "Expected Demand * Inventory Coverage",
+      "units": "case",
+      "comment": "Inventory the distributor aims for.",
+      "pos": [
+        500.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Supply Delay",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "Actual average time from order to arrival (uncertain).",
+      "pos": [
+        690.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Quoted Lead Time",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "week",
+      "comment": "The lead time the supplier quotes.",
+      "pos": [
+        880.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Lead Time Measured",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "dmnl",
+      "comment": "Policy switch: 1 uses the measured actual delay, 0 uses the quoted lead time.",
+      "pos": [
+        120.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Believed Supply Delay",
+      "kind": "Aux",
+      "equation": "Lead Time Measured * MIN(Measured Supply Delay, Delay Cap) + (1 - Lead Time Measured) * Quoted Lead Time",
+      "units": "week",
+      "comment": "The delay the ordering policy uses for the desired supply line.",
+      "pos": [
+        310.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "Desired Supply Line",
+      "kind": "Aux",
+      "equation": "Expected Demand * Believed Supply Delay",
+      "units": "case",
+      "comment": "Orders that should be on the way, using the believed delay.",
+      "pos": [
+        500.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "Delay Cap",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "week",
+      "comment": "Policy: the longest lead time the planner will plan for when counting the supply line (1000 means no cap).",
+      "pos": [
+        690.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "Adjustment Time",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "week",
+      "comment": "Time over which inventory and supply line gaps are corrected (uncertain).",
+      "pos": [
+        880.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Supply Line Weight",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "dmnl",
+      "comment": "Policy: 0 ignores orders on the way, 1 counts them fully.",
+      "pos": [
+        120.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Expected Demand + (Target Inventory - Inventory) / Adjustment Time + Supply Line Weight * (Desired Supply Line - Supply Line) / Adjustment Time)",
+      "units": "case/week",
+      "comment": "Orders placed with the supplier.",
+      "pos": [
+        380.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 33,
+      "from_pt": [
+        280.0,
+        900.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "Supply Line",
+      "kind": "Stock",
+      "equation": "Expected Demand * Supply Delay",
+      "units": "case",
+      "comment": "Cases ordered but not yet received.",
+      "pos": [
+        500.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "Arrivals",
+      "kind": "Flow",
+      "equation": "MIN(Supply Line / Supply Delay, Supplier Capacity)",
+      "units": "case/week",
+      "comment": "Deliveries from the supplier, limited by its capacity in the fragile-supply world.",
+      "pos": [
+        595.0,
+        705.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 33,
+      "to": 19,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "Fragile Supply",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "dmnl",
+      "comment": "World switch: 1 gives the supplier a capacity limit and an outage.",
+      "pos": [
+        880.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "Normal Supplier Capacity",
+      "kind": "Constant",
+      "equation": "150",
+      "units": "case/week",
+      "comment": "What the supplier can ship to this distributor in the fragile world.",
+      "pos": [
+        120.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 37,
+      "name": "Outage Depth",
+      "kind": "Constant",
+      "equation": "0.6",
+      "units": "dmnl",
+      "comment": "Share of supplier capacity lost during the outage.",
+      "pos": [
+        310.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "Outage Start",
+      "kind": "Constant",
+      "equation": "20",
+      "units": "week",
+      "comment": "When the outage begins.",
+      "pos": [
+        500.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 39,
+      "name": "Outage Duration",
+      "kind": "Constant",
+      "equation": "6",
+      "units": "week",
+      "comment": "How long the outage lasts.",
+      "pos": [
+        690.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 40,
+      "name": "Supplier Capacity",
+      "kind": "Aux",
+      "equation": "Fragile Supply * Normal Supplier Capacity * (1 - Outage Depth * PULSE(Outage Start, Outage Duration)) + (1 - Fragile Supply) * Unlimited Capacity",
+      "units": "case/week",
+      "comment": "Shipping capacity of the supplier (effectively unlimited when supply is dependable).",
+      "pos": [
+        880.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 41,
+      "name": "Unlimited Capacity",
+      "kind": "Constant",
+      "equation": "1e+06",
+      "units": "case/week",
+      "comment": "Stands for no capacity limit.",
+      "pos": [
+        120.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 42,
+      "name": "Measured Supply Delay",
+      "kind": "Aux",
+      "equation": "SMOOTHI(Supply Line / MAX(Arrivals, 0.001), 2, Supply Delay)",
+      "units": "week",
+      "comment": "Lead time the planner measures: cases on order divided by cases arriving, averaged over two weeks.",
+      "pos": [
+        310.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 43,
+      "name": "Holding Cost Rate",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "dollar/case/week",
+      "comment": "Cost of keeping a case in stock for a week.",
+      "pos": [
+        500.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 44,
+      "name": "Backlog Cost Rate",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "dollar/case/week",
+      "comment": "Cost of a customer order waiting one week beyond normal.",
+      "pos": [
+        690.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 45,
+      "name": "Normal Backlog",
+      "kind": "Aux",
+      "equation": "Customer Demand * Target Delivery Time",
+      "units": "case",
+      "comment": "Backlog that corresponds to the normal delivery time.",
+      "pos": [
+        880.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 46,
+      "name": "Excess Backlog",
+      "kind": "Aux",
+      "equation": "MAX(0, Backlog - Normal Backlog)",
+      "units": "case",
+      "comment": "Orders waiting beyond the normal delivery time.",
+      "pos": [
+        120.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 47,
+      "name": "Lost Margin",
+      "kind": "Constant",
+      "equation": "20",
+      "units": "dollar/case",
+      "comment": "Margin lost on each order a customer takes elsewhere.",
+      "pos": [
+        310.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 48,
+      "name": "Cost Rate",
+      "kind": "Flow",
+      "equation": "Holding Cost Rate * Inventory + Backlog Cost Rate * Excess Backlog + Lost Margin * (Demand Pattern - Customer Demand)",
+      "units": "dollar/week",
+      "comment": "Weekly cost of stock and of late orders.",
+      "pos": [
+        570.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 49,
+      "from_pt": [
+        470.0,
+        1290.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 49,
+      "name": "Total Cost",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "dollar",
+      "comment": "Cost accumulated over the horizon.",
+      "pos": [
+        690.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 50,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 51,
+      "from": 2,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 52,
+      "from": 4,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 53,
+      "from": 5,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 54,
+      "from": 6,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 55,
+      "from": 7,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 56,
+      "from": 13,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 57,
+      "from": 17,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 58,
+      "from": 14,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 59,
+      "from": 4,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 60,
+      "from": 8,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 61,
+      "from": 9,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 62,
+      "from": 14,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 63,
+      "from": 3,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 64,
+      "from": 10,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 65,
+      "from": 45,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 66,
+      "from": 13,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 67,
+      "from": 14,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 68,
+      "from": 15,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 69,
+      "from": 19,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 70,
+      "from": 16,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 71,
+      "from": 17,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 72,
+      "from": 23,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 73,
+      "from": 11,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 74,
+      "from": 21,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 75,
+      "from": 22,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 76,
+      "from": 20,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 77,
+      "from": 26,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 78,
+      "from": 42,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 79,
+      "from": 29,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 80,
+      "from": 25,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 81,
+      "from": 22,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 82,
+      "from": 27,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 83,
+      "from": 22,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 84,
+      "from": 23,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 85,
+      "from": 19,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 86,
+      "from": 30,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 87,
+      "from": 31,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 88,
+      "from": 28,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 89,
+      "from": 33,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 90,
+      "from": 22,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 91,
+      "from": 24,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 92,
+      "from": 33,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 93,
+      "from": 24,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 94,
+      "from": 40,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 95,
+      "from": 35,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 96,
+      "from": 36,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 97,
+      "from": 37,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 98,
+      "from": 38,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 99,
+      "from": 39,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 100,
+      "from": 41,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 101,
+      "from": 33,
+      "to": 42,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 102,
+      "from": 34,
+      "to": 42,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 103,
+      "from": 24,
+      "to": 42,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 104,
+      "from": 11,
+      "to": 45,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 105,
+      "from": 14,
+      "to": 45,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 106,
+      "from": 13,
+      "to": 46,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 107,
+      "from": 45,
+      "to": 46,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 108,
+      "from": 43,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 109,
+      "from": 19,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 110,
+      "from": 44,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 111,
+      "from": 46,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 112,
+      "from": 47,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 113,
+      "from": 3,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 114,
+      "from": 11,
+      "to": 48,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 60.0,
+    "time_step": 0.0625,
+    "time_units": "week",
+    "method": "Euler"
+  },
+  "next_id": 114,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

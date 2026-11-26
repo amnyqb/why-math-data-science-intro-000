@@ -1,0 +1,46 @@
+# B2-1 Workforce-Inventory. Every entry comes from Hayward and Roach (2023), read in full (papers/hayward2023_P1092.pdf).
+# Page numbers are the paper's own. No numbers are stated by the paper for these findings, so all are qualitative.
+- case: B2-1
+  finding: The oscillation of Workforce and Inventory is damped; there are no reinforcing loops, only balancing loops B1, B2, B3
+  type: behaviour
+  qualitative: true
+  source: Hayward and Roach 2023, p. 4 (Workforce-Inventory Model)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6
+- case: B2-1
+  finding: Expected Demand has only demand as input and does not feed back to Workforce or Inventory through any loop, so the model splits into the two-stock Workforce-Inventory subsystem and an Expected Demand subsystem
+  type: core_structure
+  qualitative: true
+  source: Hayward and Roach 2023, p. 4 (Workforce-Inventory Model)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6
+- case: B2-1
+  finding: B2 (inventory adjustment, a second-order loop) dominates the change of Workforce from growth to decline and from decline to growth (the turning points of the oscillation)
+  type: dominant_loop
+  phase: turning points of Workforce after the step at month 5
+  qualitative: true
+  source: Hayward and Roach 2023, p. 6 (Dominance Analysis, Loop Impact, Fig. 8 W1)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6
+- case: B2-1
+  finding: B1 (workforce adjustment, a first-order loop) dominates the slowing-down phases of Workforce between its maxima and minima
+  type: dominant_loop
+  phase: between the maxima and minima of Workforce
+  qualitative: true
+  source: Hayward and Roach 2023, p. 6 (Dominance Analysis, Loop Impact, Fig. 8 W1)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6
+- case: B2-1
+  finding: In Loops That Matter dominance alternates between B1 and B2 over the oscillation (the pattern equals that of the pathway participation metric apart from the exogenous effect of E1)
+  type: dominant_loop
+  qualitative: true
+  source: Hayward and Roach 2023, p. 7 (Measures, Fig. 9d)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6
+- case: B2-1
+  finding: The damping (the exponential envelope) of the oscillation is explained by B1 only
+  type: leverage_parameter
+  qualitative: true
+  source: Hayward and Roach 2023, p. 10 (Eigenvalue Elasticity Analysis, Fig. 14)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6
+- case: B2-1
+  finding: The frequency of the oscillation is affected by both B1 and B2, most by B2, in this lightly damped parameterisation
+  type: leverage_parameter
+  qualitative: true
+  source: Hayward and Roach 2023, p. 10 (Eigenvalue Elasticity Analysis, Fig. 14)
+  version: Workforce-Inventory model of Hayward and Roach 2023, Fig. 5 with the parameters of Fig. 6

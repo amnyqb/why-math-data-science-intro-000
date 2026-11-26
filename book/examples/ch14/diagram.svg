@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="32.29mm" viewBox="0 0 387.5 96.25">
+<title>Model</title>
+<polyline points="110.97,30 115.03,30 119.09,30 123.16,30 127.22,30 131.28,30 135.34,30 139.41,30 143.47,30 147.53,30 151.59,30 155.66,30 159.72,30 163.78,30 167.84,30 171.91,30 175.97,30 180.03,30 184.09,30 188.16,30 192.22,30 196.28,30 200.34,30 204.41,30 208.47,30 212.53,30 216.59,30 220.66,30 224.72,30 228.78,30 232.84,30 236.91,30 240.97,30 245.03,30 249.09,30 244.68,30" fill="none" stroke="#5c6370" stroke-width="1.49" stroke-linejoin="round"/>
+<polygon points="253.16,30 242.55,33.82 244.89,30" fill="#5c6370" stroke-linejoin="round"/>
+<polygon points="253.16,30 244.89,30 242.55,26.18" fill="#5c6370" stroke-linejoin="round"/>
+<rect x="10" y="10" width="96.31" height="40" rx="10" fill="#ffffff"/>
+<rect x="10.6" y="10.6" width="95.11" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="25" cy="30" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="25" cy="30" r="2.8" fill="#b5651d"/>
+<text x="36 43.5 50.5 56 63.5 66.5 71.39 74.5 82" y="28" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Cash flow</text>
+<text x="36 42" y="41" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">12</text>
+<rect x="258.92" y="10" width="118.47" height="40" rx="10" fill="#ffffff"/>
+<rect x="259.52" y="10.6" width="117.27" height="38.8" rx="9.4" fill="none" stroke="#b4641d" stroke-width="1.38" stroke-opacity="0.45"/>
+<circle cx="273.92" cy="30" r="5" fill="#b3641c" fill-opacity="0.25"/>
+<circle cx="273.92" cy="30" r="2.8" fill="#b5651d"/>
+<text x="284.92 292.42 297.42 304.42 309.92 316.92 324.42 329.42 332.42 338.92 345.42 348.42 355.92" y="28" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Present value</text>
+<text x="284.92 290.92 296.92 302.92 308.92 314.92" y="41" font-family="Source Code Pro, Hack, Menlo, Consolas, monospace" font-size="11.64" fill="#b5651d" xml:space="preserve">81.219</text>
+<text x="10 16.5 19.5 27 34.5 39.5 46.5 49.5 57 64 67.5 74.5 77.5 80.5 88.5 95 100.5 108 111 115.89 119 127 137 140 146.5 154 161.5 164.5 172 177 184 189.5 196.5 204 209 212 218.5 225 228 235.5 242.5" y="68" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#1a1a1a" xml:space="preserve">Figure 14.1  Cash flow and present value.</text>
+<text x="10 15.5 22 28 32.5 37.5 43.5 46 48.5 55.5 61.5 67 73.5 78 84 88 90.5 96.5 103 105.5 111.5 117 122.5 132 138.5 141 147 149.5 159 165.5 172 178" y="84" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="12.33" fill="#6e768c" xml:space="preserve">Source: Chapter 14 example model</text>
+</svg>

@@ -1,0 +1,2401 @@
+scenario,position,policy,seed,Chain window cost,Fill rate
+S1 others base-stock (tuned),Retailer,P1 tuned,1,515.7849477631373,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,2,398.177598175409,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,3,536.3603523436452,1.0269178964756054
+S1 others base-stock (tuned),Retailer,P1 tuned,4,426.5387619293159,0.9775065332015446
+S1 others base-stock (tuned),Retailer,P1 tuned,5,374.0552472625066,1.009176800228934
+S1 others base-stock (tuned),Retailer,P1 tuned,6,487.60101714646476,1.0554925047059516
+S1 others base-stock (tuned),Retailer,P1 tuned,7,560.2956395057943,0.9863598614489144
+S1 others base-stock (tuned),Retailer,P1 tuned,8,677.3699901674856,1.0253363565597153
+S1 others base-stock (tuned),Retailer,P1 tuned,9,641.9079711955103,0.9894437413737985
+S1 others base-stock (tuned),Retailer,P1 tuned,10,383.0166125689046,0.9939785311939149
+S1 others base-stock (tuned),Retailer,P1 tuned,11,528.9390469406251,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,12,392.8375467062184,0.9864228529105611
+S1 others base-stock (tuned),Retailer,P1 tuned,13,353.2949985101662,0.986799760435405
+S1 others base-stock (tuned),Retailer,P1 tuned,14,356.02190811669345,1.0015785162823516
+S1 others base-stock (tuned),Retailer,P1 tuned,15,504.63107193177757,1.0075851846309944
+S1 others base-stock (tuned),Retailer,P1 tuned,16,518.6492377708638,0.9947131589336812
+S1 others base-stock (tuned),Retailer,P1 tuned,17,391.49165158570753,1.0211914071159687
+S1 others base-stock (tuned),Retailer,P1 tuned,18,986.8535525954401,1.0257485357006095
+S1 others base-stock (tuned),Retailer,P1 tuned,19,495.0486924863136,0.9869369641990403
+S1 others base-stock (tuned),Retailer,P1 tuned,20,452.8783083422906,1.0198459790947103
+S1 others base-stock (tuned),Retailer,P1 tuned,21,458.54325826586137,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,22,351.82660442082727,0.9971618229855206
+S1 others base-stock (tuned),Retailer,P1 tuned,23,540.2180598300395,1.0171435262631334
+S1 others base-stock (tuned),Retailer,P1 tuned,24,449.57955832833835,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,25,369.1093031659459,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P1 tuned,26,325.9101189911396,0.978635358747085
+S1 others base-stock (tuned),Retailer,P1 tuned,27,715.2275330507695,0.9991448343836906
+S1 others base-stock (tuned),Retailer,P1 tuned,28,347.9897494961946,0.997961837524968
+S1 others base-stock (tuned),Retailer,P1 tuned,29,368.8397334362975,0.9935933014345677
+S1 others base-stock (tuned),Retailer,P1 tuned,30,556.1529124728559,0.9594773154114574
+S1 others base-stock (tuned),Retailer,P1 tuned,31,496.6544552121933,0.9751538306211044
+S1 others base-stock (tuned),Retailer,P1 tuned,32,455.5613994413687,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,33,327.4969590454808,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,34,620.7353157729915,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,35,329.8391854483532,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,36,476.46076309189823,0.9988944584913033
+S1 others base-stock (tuned),Retailer,P1 tuned,37,471.6919320019583,1.0012967393730792
+S1 others base-stock (tuned),Retailer,P1 tuned,38,736.2456209055134,1.0125651245573166
+S1 others base-stock (tuned),Retailer,P1 tuned,39,516.7872285282203,1.026490469401809
+S1 others base-stock (tuned),Retailer,P1 tuned,40,498.06194502168796,1.0034501110752758
+S1 others base-stock (tuned),Retailer,P1 tuned,41,527.7880903113204,1.0221237882303187
+S1 others base-stock (tuned),Retailer,P1 tuned,42,538.266075571726,0.9772144828301491
+S1 others base-stock (tuned),Retailer,P1 tuned,43,464.6058390028672,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P1 tuned,44,502.59666681250945,1.059478215113704
+S1 others base-stock (tuned),Retailer,P1 tuned,45,429.1928103037437,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,46,523.331957355483,1.0074280032100809
+S1 others base-stock (tuned),Retailer,P1 tuned,47,775.5004426388289,1.0266057577929997
+S1 others base-stock (tuned),Retailer,P1 tuned,48,483.94664776870195,0.9872344431759801
+S1 others base-stock (tuned),Retailer,P1 tuned,49,420.7286289406901,1.042678942457249
+S1 others base-stock (tuned),Retailer,P1 tuned,50,416.6891106581512,1.0076732975654479
+S1 others base-stock (tuned),Retailer,P1 tuned,51,736.3011726063735,0.997845083241346
+S1 others base-stock (tuned),Retailer,P1 tuned,52,379.97102577113,1.0314863953158842
+S1 others base-stock (tuned),Retailer,P1 tuned,53,399.1104375615647,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,54,415.62125200687814,1.005397604264759
+S1 others base-stock (tuned),Retailer,P1 tuned,55,406.80703108589574,1.014433918989864
+S1 others base-stock (tuned),Retailer,P1 tuned,56,518.3653186707876,0.9818494527610957
+S1 others base-stock (tuned),Retailer,P1 tuned,57,397.6171090632209,1.000934024678409
+S1 others base-stock (tuned),Retailer,P1 tuned,58,322.7123189941542,1.0000000000000004
+S1 others base-stock (tuned),Retailer,P1 tuned,59,599.2747973583284,1.0203105475294791
+S1 others base-stock (tuned),Retailer,P1 tuned,60,420.2025959714838,0.9953240618070706
+S1 others base-stock (tuned),Retailer,P1 tuned,61,454.6683039275955,1.0053458431653048
+S1 others base-stock (tuned),Retailer,P1 tuned,62,478.52606121291234,1.00420683092536
+S1 others base-stock (tuned),Retailer,P1 tuned,63,804.4024047433436,1.0085317040101047
+S1 others base-stock (tuned),Retailer,P1 tuned,64,621.8433436579619,0.9919313070058532
+S1 others base-stock (tuned),Retailer,P1 tuned,65,672.5865122939941,0.9855982001793411
+S1 others base-stock (tuned),Retailer,P1 tuned,66,546.1688636060763,1.051044365432876
+S1 others base-stock (tuned),Retailer,P1 tuned,67,860.6259115500727,1.0131948724016557
+S1 others base-stock (tuned),Retailer,P1 tuned,68,614.7488101985319,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,69,565.3777914308877,0.9969281404527818
+S1 others base-stock (tuned),Retailer,P1 tuned,70,388.3063127520083,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,71,442.4086571805716,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,72,342.07571219114243,1.0123620910167694
+S1 others base-stock (tuned),Retailer,P1 tuned,73,581.4835255139752,1.0720350046817964
+S1 others base-stock (tuned),Retailer,P1 tuned,74,579.1563630183265,0.9900733683908668
+S1 others base-stock (tuned),Retailer,P1 tuned,75,461.55906633189545,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P1 tuned,76,434.00169445373695,1.0185714901901632
+S1 others base-stock (tuned),Retailer,P1 tuned,77,887.0864466660978,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P1 tuned,78,323.6297623833916,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,79,1093.1605218791265,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,80,417.8459590739563,1.0119691583106776
+S1 others base-stock (tuned),Retailer,P1 tuned,81,355.35794526870586,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,82,459.08934615020394,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,83,365.35962219006944,0.9911909176558686
+S1 others base-stock (tuned),Retailer,P1 tuned,84,444.1756674387801,1.0312586787945843
+S1 others base-stock (tuned),Retailer,P1 tuned,85,743.9378027886798,0.9208197457196762
+S1 others base-stock (tuned),Retailer,P1 tuned,86,522.1466681660777,0.9777463584976815
+S1 others base-stock (tuned),Retailer,P1 tuned,87,529.6403135179578,1.044442052625736
+S1 others base-stock (tuned),Retailer,P1 tuned,88,606.5395572544094,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P1 tuned,89,525.1593994991317,1.0317019855073708
+S1 others base-stock (tuned),Retailer,P1 tuned,90,653.4242545502111,1.0252073303237101
+S1 others base-stock (tuned),Retailer,P1 tuned,91,380.07458641358926,0.987347763591548
+S1 others base-stock (tuned),Retailer,P1 tuned,92,520.4742253845367,1.034204618767616
+S1 others base-stock (tuned),Retailer,P1 tuned,93,362.09068877342156,1.0269045515582589
+S1 others base-stock (tuned),Retailer,P1 tuned,94,611.425889058731,0.9876567548794412
+S1 others base-stock (tuned),Retailer,P1 tuned,95,500.48327788028814,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P1 tuned,96,438.1427699323066,1.0
+S1 others base-stock (tuned),Retailer,P1 tuned,97,324.0860083335303,0.9865364765489405
+S1 others base-stock (tuned),Retailer,P1 tuned,98,443.6765433066348,1.024464984189327
+S1 others base-stock (tuned),Retailer,P1 tuned,99,482.37455217325225,0.9754011971497142
+S1 others base-stock (tuned),Retailer,P1 tuned,100,370.6710228244662,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,1,381.4365752763695,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,2,235.41110350431188,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,3,415.1265210638244,1.0166279511854683
+S1 others base-stock (tuned),Retailer,P2 tuned,4,346.0731370793021,0.9728424616564612
+S1 others base-stock (tuned),Retailer,P2 tuned,5,250.3259701829594,1.0043857181016407
+S1 others base-stock (tuned),Retailer,P2 tuned,6,488.6441987394115,1.0507193639022954
+S1 others base-stock (tuned),Retailer,P2 tuned,7,489.5674222309326,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P2 tuned,8,439.2826984503979,1.0207406915232113
+S1 others base-stock (tuned),Retailer,P2 tuned,9,487.5708329673131,0.9981490558450051
+S1 others base-stock (tuned),Retailer,P2 tuned,10,355.96536748133076,0.9939785311939149
+S1 others base-stock (tuned),Retailer,P2 tuned,11,389.40232515732055,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,12,350.63612668016304,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,13,257.7098023893078,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,14,253.8340414869964,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,15,359.23699449933434,0.9890121858359531
+S1 others base-stock (tuned),Retailer,P2 tuned,16,436.57076077136986,0.9850230556693744
+S1 others base-stock (tuned),Retailer,P2 tuned,17,273.40991648499363,1.0151049443580942
+S1 others base-stock (tuned),Retailer,P2 tuned,18,845.8535525954402,1.0173911915045315
+S1 others base-stock (tuned),Retailer,P2 tuned,19,338.0965372146208,0.9915735545164498
+S1 others base-stock (tuned),Retailer,P2 tuned,20,343.50884439411175,1.0093506597036344
+S1 others base-stock (tuned),Retailer,P2 tuned,21,372.6492886098241,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,22,333.9531967799463,0.9971618229855206
+S1 others base-stock (tuned),Retailer,P2 tuned,23,365.2949415797434,1.012603410562943
+S1 others base-stock (tuned),Retailer,P2 tuned,24,462.35830669791164,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,25,202.13134477108036,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,26,230.0043413194767,0.9879370405945503
+S1 others base-stock (tuned),Retailer,P2 tuned,27,502.7312530001204,1.0000000000000004
+S1 others base-stock (tuned),Retailer,P2 tuned,28,298.3296221100011,0.992972028337343
+S1 others base-stock (tuned),Retailer,P2 tuned,29,294.04002834646707,0.9935933014345677
+S1 others base-stock (tuned),Retailer,P2 tuned,30,390.45547374405044,0.968378089466531
+S1 others base-stock (tuned),Retailer,P2 tuned,31,447.43716593812917,0.9800053422162343
+S1 others base-stock (tuned),Retailer,P2 tuned,32,388.44984580770745,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,33,280.3434659801296,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,34,467.994703765349,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,35,275.4134866164052,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,36,285.5510772081009,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P2 tuned,37,267.886423991184,0.995188802685642
+S1 others base-stock (tuned),Retailer,P2 tuned,38,558.347668116406,1.0080234983824772
+S1 others base-stock (tuned),Retailer,P2 tuned,39,421.6976118093749,1.04475019110479
+S1 others base-stock (tuned),Retailer,P2 tuned,40,337.9680358816504,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P2 tuned,41,407.0556365652718,1.0221237882303187
+S1 others base-stock (tuned),Retailer,P2 tuned,42,480.97240904632395,0.9772144828301491
+S1 others base-stock (tuned),Retailer,P2 tuned,43,379.0751810070783,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,44,500.52182084337784,1.059478215113704
+S1 others base-stock (tuned),Retailer,P2 tuned,45,367.7628873226915,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,46,358.95289117890445,1.0156872618057144
+S1 others base-stock (tuned),Retailer,P2 tuned,47,679.2697027726779,1.021978985286282
+S1 others base-stock (tuned),Retailer,P2 tuned,48,333.23586589065826,0.98250481597513
+S1 others base-stock (tuned),Retailer,P2 tuned,49,400.938177280405,1.0374870244564862
+S1 others base-stock (tuned),Retailer,P2 tuned,50,326.15738749254115,0.9999999999999994
+S1 others base-stock (tuned),Retailer,P2 tuned,51,530.6124014080042,0.9926207634337996
+S1 others base-stock (tuned),Retailer,P2 tuned,52,343.7599611257204,1.0261653907275772
+S1 others base-stock (tuned),Retailer,P2 tuned,53,283.03452514377113,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,54,253.30172070363335,1.005397604264759
+S1 others base-stock (tuned),Retailer,P2 tuned,55,314.10228875830217,1.004824350093407
+S1 others base-stock (tuned),Retailer,P2 tuned,56,356.1409776133688,0.9955955874024228
+S1 others base-stock (tuned),Retailer,P2 tuned,57,258.0658456053844,1.000934024678409
+S1 others base-stock (tuned),Retailer,P2 tuned,58,306.1763202101445,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,59,427.32522182719754,1.0109907655113777
+S1 others base-stock (tuned),Retailer,P2 tuned,60,356.1829527603193,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,61,340.74336433237727,1.0105067874538374
+S1 others base-stock (tuned),Retailer,P2 tuned,62,313.6052865217986,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,63,608.7807472220992,1.0127164828649184
+S1 others base-stock (tuned),Retailer,P2 tuned,64,380.45969465363225,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,65,416.25115162196045,0.9855982001793409
+S1 others base-stock (tuned),Retailer,P2 tuned,66,463.6554594050565,1.0623818850530007
+S1 others base-stock (tuned),Retailer,P2 tuned,67,771.1677786575543,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P2 tuned,68,504.4682564509339,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,69,456.53593921055324,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,70,291.2605610589038,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,71,324.3053696249235,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P2 tuned,72,248.389050703686,1.0076839496867787
+S1 others base-stock (tuned),Retailer,P2 tuned,73,513.7445465506946,1.0825717580208156
+S1 others base-stock (tuned),Retailer,P2 tuned,74,389.9404516017895,0.9900733683908668
+S1 others base-stock (tuned),Retailer,P2 tuned,75,397.65094899323856,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,76,341.92204550683886,1.00836551925796
+S1 others base-stock (tuned),Retailer,P2 tuned,77,800.1524215058708,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,78,280.55915465670057,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,79,1030.2512625607749,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,80,374.04775614925006,1.0119691583106776
+S1 others base-stock (tuned),Retailer,P2 tuned,81,373.9093356930351,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,82,306.54154309017093,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P2 tuned,83,305.0888988012188,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,84,433.7687484588556,1.0261847042025938
+S1 others base-stock (tuned),Retailer,P2 tuned,85,583.5374266124493,0.9167192923468005
+S1 others base-stock (tuned),Retailer,P2 tuned,86,415.66647870211136,0.982236155537279
+S1 others base-stock (tuned),Retailer,P2 tuned,87,498.61047871265384,1.0393964388449353
+S1 others base-stock (tuned),Retailer,P2 tuned,88,444.90616889406925,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P2 tuned,89,378.1626917876787,1.0282178282436878
+S1 others base-stock (tuned),Retailer,P2 tuned,90,441.2015507511492,1.0207304424183665
+S1 others base-stock (tuned),Retailer,P2 tuned,91,359.538856708215,0.9817104923811424
+S1 others base-stock (tuned),Retailer,P2 tuned,92,429.1140811579428,1.0392751668801787
+S1 others base-stock (tuned),Retailer,P2 tuned,93,263.8399035622661,1.0220581839367477
+S1 others base-stock (tuned),Retailer,P2 tuned,94,443.1693590080388,0.9894631516455302
+S1 others base-stock (tuned),Retailer,P2 tuned,95,323.64703738180805,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P2 tuned,96,450.7732599778447,1.0
+S1 others base-stock (tuned),Retailer,P2 tuned,97,187.66336987579382,0.9909803345514131
+S1 others base-stock (tuned),Retailer,P2 tuned,98,400.81372359611737,1.0288282547896241
+S1 others base-stock (tuned),Retailer,P2 tuned,99,481.0535025702962,0.9803572288769893
+S1 others base-stock (tuned),Retailer,P2 tuned,100,336.2330331408018,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P0 placeholder,1,854.409510293757,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,2,702.3708026223574,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,3,881.7291963643379,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,4,830.9911916646242,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,5,735.6967027495984,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,6,771.4294170075129,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,7,1148.9376879986219,1.0000000000000002
+S1 others base-stock (tuned),Retailer,P0 placeholder,8,1236.0528713390822,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,9,1089.5662758552046,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,10,871.5796772275069,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,11,1030.8421174128516,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,12,665.0587185763388,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,13,716.8733670295999,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,14,673.0936976273572,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,15,1041.5780690447998,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,16,927.3785469934394,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,17,975.1397284131602,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,18,1490.062940466365,1.0132125194064925
+S1 others base-stock (tuned),Retailer,P0 placeholder,19,940.0366090558368,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,20,926.9972580205882,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,21,935.0208896915717,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,22,746.8497053991646,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,23,906.8906842235469,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,24,841.2090321032854,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,25,694.7099844025203,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,26,670.4580407806169,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,27,931.3183768700251,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,28,695.12754438816,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,29,765.1245960802976,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,30,882.9500157937724,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,31,902.5361012725816,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,32,700.7552801287937,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,33,636.590842216222,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,34,1008.5546908864859,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,35,658.9612635349349,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,36,1007.4974972940911,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,37,806.0052915189159,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,38,1335.3286401356856,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,39,1129.4277243161164,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,40,1038.7930049928102,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,41,1079.2530420839632,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,42,859.6272768404451,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P0 placeholder,43,858.3748999099408,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,44,997.6748951547199,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,45,838.0977835891632,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,46,907.1167665465701,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,47,1366.5657061802679,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,48,764.9366192103263,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,49,757.8128400014706,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,50,696.2489576981482,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,51,1353.2558167548254,0.9873444455794438
+S1 others base-stock (tuned),Retailer,P0 placeholder,52,765.2136376994574,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,53,685.5673337875361,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,54,895.6202149419312,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,55,952.0225147263906,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,56,1092.6409927468737,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,57,867.8068152251408,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,58,578.7932120458347,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,59,1347.9262466690263,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,60,900.7504952938249,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,61,1069.8116915637022,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,62,941.8470012456784,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,63,1308.6465978118708,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,64,1181.0940504032694,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,65,1123.4623102546147,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,66,1195.0559203549078,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,67,1507.7113323789004,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,68,1254.518081416843,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,69,1057.0526660360376,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,70,882.8101575501104,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,71,852.432017694877,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,72,669.3736841280249,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,73,1162.1678370217048,1.024619614656208
+S1 others base-stock (tuned),Retailer,P0 placeholder,74,1127.5279501803484,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P0 placeholder,75,900.6696460084588,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,76,866.5032281883787,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,77,1869.0121756241435,0.9999999999999998
+S1 others base-stock (tuned),Retailer,P0 placeholder,78,596.5824704462218,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,79,1619.109778600392,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,80,736.1904623591762,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,81,666.3648679695953,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,82,751.5245052217701,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,83,728.3673455817961,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,84,971.7595996510081,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,85,1089.9871934138519,0.9700251861941845
+S1 others base-stock (tuned),Retailer,P0 placeholder,86,983.9033349160635,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,87,1110.2442885595124,1.0213582102404362
+S1 others base-stock (tuned),Retailer,P0 placeholder,88,1034.33617352235,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,89,1405.5192830882233,1.0043358378384246
+S1 others base-stock (tuned),Retailer,P0 placeholder,90,1317.8886964107633,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,91,701.3870011151159,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,92,1124.6615157393844,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,93,810.2728089259188,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,94,1018.1676325293523,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,95,1154.3599356669897,0.9999999999999999
+S1 others base-stock (tuned),Retailer,P0 placeholder,96,684.7732599778444,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,97,660.3396718861502,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,98,732.4496172083063,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,99,856.9713273799402,1.0
+S1 others base-stock (tuned),Retailer,P0 placeholder,100,736.2533903356998,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,1,519.4475835490279,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,2,426.0952325116872,0.9967518350110495
+S1 others base-stock (tuned),Wholesaler,P1 tuned,3,537.6368300868319,1.0320628691206741
+S1 others base-stock (tuned),Wholesaler,P1 tuned,4,426.9529767442523,0.9728424616564613
+S1 others base-stock (tuned),Wholesaler,P1 tuned,5,383.6661046479936,1.0139678823562275
+S1 others base-stock (tuned),Wholesaler,P1 tuned,6,502.5539302004245,1.0602656455096078
+S1 others base-stock (tuned),Wholesaler,P1 tuned,7,571.5294933367775,0.9817235771379547
+S1 others base-stock (tuned),Wholesaler,P1 tuned,8,700.5813233792314,1.0299320215962193
+S1 others base-stock (tuned),Wholesaler,P1 tuned,9,667.6738527482787,0.9850910841381952
+S1 others base-stock (tuned),Wholesaler,P1 tuned,10,384.8650370894213,0.9892456625717424
+S1 others base-stock (tuned),Wholesaler,P1 tuned,11,546.8819418136069,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P1 tuned,12,383.0199054520018,0.9812802318966992
+S1 others base-stock (tuned),Wholesaler,P1 tuned,13,355.6796761098679,0.9850458283265454
+S1 others base-stock (tuned),Wholesaler,P1 tuned,14,361.0042243342364,1.0064043253061907
+S1 others base-stock (tuned),Wholesaler,P1 tuned,15,520.5189062180104,1.0075851846309944
+S1 others base-stock (tuned),Wholesaler,P1 tuned,16,522.551731228746,0.9898681073015277
+S1 others base-stock (tuned),Wholesaler,P1 tuned,17,395.0133143629056,1.021191407115969
+S1 others base-stock (tuned),Wholesaler,P1 tuned,18,1026.8501894828419,1.0299272077986488
+S1 others base-stock (tuned),Wholesaler,P1 tuned,19,506.7016994406094,0.9823003738816307
+S1 others base-stock (tuned),Wholesaler,P1 tuned,20,446.09163081855013,1.0250936387902483
+S1 others base-stock (tuned),Wholesaler,P1 tuned,21,451.7048535996317,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,22,343.55266672928957,0.9921561444040736
+S1 others base-stock (tuned),Wholesaler,P1 tuned,23,564.9559854585776,1.0216836419633235
+S1 others base-stock (tuned),Wholesaler,P1 tuned,24,430.4492550726069,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,25,384.56336814344064,1.0021602370791742
+S1 others base-stock (tuned),Wholesaler,P1 tuned,26,327.7859655727995,0.9739845178233523
+S1 others base-stock (tuned),Wholesaler,P1 tuned,27,757.2367988819689,0.9980120694798249
+S1 others base-stock (tuned),Wholesaler,P1 tuned,28,345.1976177622724,0.997961837524968
+S1 others base-stock (tuned),Wholesaler,P1 tuned,29,373.395189422552,0.9887912167823059
+S1 others base-stock (tuned),Wholesaler,P1 tuned,30,579.958458863596,0.9550269283839207
+S1 others base-stock (tuned),Wholesaler,P1 tuned,31,499.3621266055095,0.9751538306211044
+S1 others base-stock (tuned),Wholesaler,P1 tuned,32,452.2533485831541,1.0030791791121307
+S1 others base-stock (tuned),Wholesaler,P1 tuned,33,325.7821786266412,0.9955492604303946
+S1 others base-stock (tuned),Wholesaler,P1 tuned,34,621.5476739331075,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,35,325.82141755459037,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,36,508.34479532551865,0.9944570098417783
+S1 others base-stock (tuned),Wholesaler,P1 tuned,37,493.3482870261384,1.0012967393730792
+S1 others base-stock (tuned),Wholesaler,P1 tuned,38,769.4825778384576,1.0171067507321563
+S1 others base-stock (tuned),Wholesaler,P1 tuned,39,541.7872285282202,1.0310553998275545
+S1 others base-stock (tuned),Wholesaler,P1 tuned,40,516.1141863762649,1.0055788895073625
+S1 others base-stock (tuned),Wholesaler,P1 tuned,41,538.5466209002208,1.0269354671966087
+S1 others base-stock (tuned),Wholesaler,P1 tuned,42,540.9145584550054,0.9722058555520832
+S1 others base-stock (tuned),Wholesaler,P1 tuned,43,462.4574722253568,0.9999999999999996
+S1 others base-stock (tuned),Wholesaler,P1 tuned,44,513.3512576987839,1.0643684969081388
+S1 others base-stock (tuned),Wholesaler,P1 tuned,45,417.6744902170249,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P1 tuned,46,551.0053244139428,1.0074280032100809
+S1 others base-stock (tuned),Wholesaler,P1 tuned,47,789.6336923557362,1.031232530299718
+S1 others base-stock (tuned),Wholesaler,P1 tuned,48,494.8590393732568,0.9825048159751301
+S1 others base-stock (tuned),Wholesaler,P1 tuned,49,416.9661850832664,1.0478708604580118
+S1 others base-stock (tuned),Wholesaler,P1 tuned,50,413.30716258342613,1.0128320099872186
+S1 others base-stock (tuned),Wholesaler,P1 tuned,51,744.3282678593805,0.997845083241346
+S1 others base-stock (tuned),Wholesaler,P1 tuned,52,366.91609921448696,1.0368073999041911
+S1 others base-stock (tuned),Wholesaler,P1 tuned,53,402.3593227701708,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,54,436.776338154992,1.005397604264759
+S1 others base-stock (tuned),Wholesaler,P1 tuned,55,407.77407829191134,1.0186143030244386
+S1 others base-stock (tuned),Wholesaler,P1 tuned,56,545.7527239224554,0.9778170947702371
+S1 others base-stock (tuned),Wholesaler,P1 tuned,57,406.29229001018786,1.0028137327641014
+S1 others base-stock (tuned),Wholesaler,P1 tuned,58,309.5541074332697,0.999549804694731
+S1 others base-stock (tuned),Wholesaler,P1 tuned,59,619.6469187786336,1.02497043853853
+S1 others base-stock (tuned),Wholesaler,P1 tuned,60,419.4819350416474,0.9903005394918617
+S1 others base-stock (tuned),Wholesaler,P1 tuned,61,451.0549043545118,1.0105067874538372
+S1 others base-stock (tuned),Wholesaler,P1 tuned,62,497.40491927423693,1.008902415097717
+S1 others base-stock (tuned),Wholesaler,P1 tuned,63,847.4865917046604,1.0085317040101047
+S1 others base-stock (tuned),Wholesaler,P1 tuned,64,646.7509942868539,0.987468800296345
+S1 others base-stock (tuned),Wholesaler,P1 tuned,65,695.2621363536035,0.9811172532589009
+S1 others base-stock (tuned),Wholesaler,P1 tuned,66,541.5199190644739,1.0567131252429383
+S1 others base-stock (tuned),Wholesaler,P1 tuned,67,886.2425393415508,1.0175875266930132
+S1 others base-stock (tuned),Wholesaler,P1 tuned,68,623.5212233559038,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,69,584.2393451681322,0.9923817130193766
+S1 others base-stock (tuned),Wholesaler,P1 tuned,70,398.3079499796496,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,71,447.71370666367125,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P1 tuned,72,349.34817092296953,1.0151566686079996
+S1 others base-stock (tuned),Wholesaler,P1 tuned,73,590.6472038145033,1.077303381351306
+S1 others base-stock (tuned),Wholesaler,P1 tuned,74,608.4161548863478,0.9900733683908668
+S1 others base-stock (tuned),Wholesaler,P1 tuned,75,453.10477316109996,0.9999999999999997
+S1 others base-stock (tuned),Wholesaler,P1 tuned,76,433.67320073644294,1.0236744756562652
+S1 others base-stock (tuned),Wholesaler,P1 tuned,77,892.3936856592074,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P1 tuned,78,320.8257327956564,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P1 tuned,79,1120.4599989176543,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P1 tuned,80,421.76231612013027,1.016798034224598
+S1 others base-stock (tuned),Wholesaler,P1 tuned,81,335.65233988471346,1.0047900346113163
+S1 others base-stock (tuned),Wholesaler,P1 tuned,82,464.1405283200655,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P1 tuned,83,363.22831370280556,0.9863108221175712
+S1 others base-stock (tuned),Wholesaler,P1 tuned,84,439.7483722134814,1.0312586787945843
+S1 others base-stock (tuned),Wholesaler,P1 tuned,85,764.8167693210195,0.9167192923468006
+S1 others base-stock (tuned),Wholesaler,P1 tuned,86,540.8699827804644,0.9742859575926562
+S1 others base-stock (tuned),Wholesaler,P1 tuned,87,531.3092905783533,1.044442052625736
+S1 others base-stock (tuned),Wholesaler,P1 tuned,88,629.5354518588426,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P1 tuned,89,537.2731111647522,1.0317019855073708
+S1 others base-stock (tuned),Wholesaler,P1 tuned,90,688.9242545502111,1.0252073303237101
+S1 others base-stock (tuned),Wholesaler,P1 tuned,91,377.23590284492104,0.987347763591548
+S1 others base-stock (tuned),Wholesaler,P1 tuned,92,526.6761444684514,1.0392751668801787
+S1 others base-stock (tuned),Wholesaler,P1 tuned,93,363.8358671997038,1.03175091917977
+S1 others base-stock (tuned),Wholesaler,P1 tuned,94,634.7977811808016,0.9876567548794413
+S1 others base-stock (tuned),Wholesaler,P1 tuned,95,513.5620584549886,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,96,414.65414360402247,1.0
+S1 others base-stock (tuned),Wholesaler,P1 tuned,97,341.22397724205246,0.9865364765489402
+S1 others base-stock (tuned),Wholesaler,P1 tuned,98,473.2907578614388,1.0253685910697812
+S1 others base-stock (tuned),Wholesaler,P1 tuned,99,480.3940601184033,0.9704451654224392
+S1 others base-stock (tuned),Wholesaler,P1 tuned,100,362.48970030849705,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,1,392.4156625793199,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,2,274.59466044259057,0.9923759129907488
+S1 others base-stock (tuned),Wholesaler,P2 tuned,3,475.97082947556925,1.0269178964756054
+S1 others base-stock (tuned),Wholesaler,P2 tuned,4,412.78517966625174,0.9728424616564613
+S1 others base-stock (tuned),Wholesaler,P2 tuned,5,295.8354237702971,1.0139678823562275
+S1 others base-stock (tuned),Wholesaler,P2 tuned,6,579.8376236037682,1.0459462230986387
+S1 others base-stock (tuned),Wholesaler,P2 tuned,7,544.3912089289933,0.9817235771379548
+S1 others base-stock (tuned),Wholesaler,P2 tuned,8,488.4223348669588,1.0299320215962193
+S1 others base-stock (tuned),Wholesaler,P2 tuned,9,736.3056672072348,0.9850910841381953
+S1 others base-stock (tuned),Wholesaler,P2 tuned,10,371.04108597139805,0.9892456625717424
+S1 others base-stock (tuned),Wholesaler,P2 tuned,11,445.27081702442024,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,12,477.4009657663933,0.9812802318966992
+S1 others base-stock (tuned),Wholesaler,P2 tuned,13,271.2565022094638,0.9850458283265454
+S1 others base-stock (tuned),Wholesaler,P2 tuned,14,301.3915053610059,1.006404325306191
+S1 others base-stock (tuned),Wholesaler,P2 tuned,15,394.6105056960108,0.9982986852334738
+S1 others base-stock (tuned),Wholesaler,P2 tuned,16,531.051731228746,0.9704879007729142
+S1 others base-stock (tuned),Wholesaler,P2 tuned,17,286.79078760003785,1.0113248234723362
+S1 others base-stock (tuned),Wholesaler,P2 tuned,18,950.1261279995664,1.0132125194064925
+S1 others base-stock (tuned),Wholesaler,P2 tuned,19,348.8964349534146,0.9823003738816307
+S1 others base-stock (tuned),Wholesaler,P2 tuned,20,364.2530483556931,1.0250936387902487
+S1 others base-stock (tuned),Wholesaler,P2 tuned,21,364.516498899701,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,22,375.4401344576137,0.9921561444040736
+S1 others base-stock (tuned),Wholesaler,P2 tuned,23,484.9654176857264,1.0216836419633235
+S1 others base-stock (tuned),Wholesaler,P2 tuned,24,510.61193207254206,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,25,245.4111124949927,1.002160237079174
+S1 others base-stock (tuned),Wholesaler,P2 tuned,26,269.1916022183975,0.9739845178233522
+S1 others base-stock (tuned),Wholesaler,P2 tuned,27,459.74064842848185,1.0031876336653114
+S1 others base-stock (tuned),Wholesaler,P2 tuned,28,315.9671023984234,0.997961837524968
+S1 others base-stock (tuned),Wholesaler,P2 tuned,29,297.4838989409217,0.9839891321300441
+S1 others base-stock (tuned),Wholesaler,P2 tuned,30,408.8672523731304,0.9550269283839207
+S1 others base-stock (tuned),Wholesaler,P2 tuned,31,503.599316014447,0.9800053422162343
+S1 others base-stock (tuned),Wholesaler,P2 tuned,32,400.7585550896512,1.0030791791121307
+S1 others base-stock (tuned),Wholesaler,P2 tuned,33,351.8981243815025,0.9955492604303944
+S1 others base-stock (tuned),Wholesaler,P2 tuned,34,457.9411250248014,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,35,262.89192737536746,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,36,363.90810614238535,0.9944570098417783
+S1 others base-stock (tuned),Wholesaler,P2 tuned,37,412.60307920719265,0.9875174264459267
+S1 others base-stock (tuned),Wholesaler,P2 tuned,38,660.8121111704885,1.0034818722076377
+S1 others base-stock (tuned),Wholesaler,P2 tuned,39,592.5736335672336,1.0493151215305352
+S1 others base-stock (tuned),Wholesaler,P2 tuned,40,378.65973369270534,0.9960019477025306
+S1 others base-stock (tuned),Wholesaler,P2 tuned,41,527.2653264751732,1.031747146162899
+S1 others base-stock (tuned),Wholesaler,P2 tuned,42,609.9327510312071,0.9621886009959513
+S1 others base-stock (tuned),Wholesaler,P2 tuned,43,362.105612967975,0.9999999999999994
+S1 others base-stock (tuned),Wholesaler,P2 tuned,44,626.948146817547,1.0496976515248357
+S1 others base-stock (tuned),Wholesaler,P2 tuned,45,431.6398026006176,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P2 tuned,46,603.962244574587,0.9940550651143716
+S1 others base-stock (tuned),Wholesaler,P2 tuned,47,850.2488402374114,1.0266057577930001
+S1 others base-stock (tuned),Wholesaler,P2 tuned,48,334.6692162549417,0.9837624577768134
+S1 others base-stock (tuned),Wholesaler,P2 tuned,49,388.67151425526845,1.0219112704541986
+S1 others base-stock (tuned),Wholesaler,P2 tuned,50,401.62022984095245,1.0128320099872186
+S1 others base-stock (tuned),Wholesaler,P2 tuned,51,535.8038479011492,1.0082937228564386
+S1 others base-stock (tuned),Wholesaler,P2 tuned,52,354.91609921448696,1.0208443861392702
+S1 others base-stock (tuned),Wholesaler,P2 tuned,53,338.56590503742126,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,54,402.8722357495506,0.9965002803332125
+S1 others base-stock (tuned),Wholesaler,P2 tuned,55,350.1772881817173,1.0186143030244383
+S1 others base-stock (tuned),Wholesaler,P2 tuned,56,378.846706472027,1.0000402105604698
+S1 others base-stock (tuned),Wholesaler,P2 tuned,57,282.5653121518484,0.9972796450913614
+S1 others base-stock (tuned),Wholesaler,P2 tuned,58,384.1967240368466,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,59,428.2629489182965,1.02497043853853
+S1 others base-stock (tuned),Wholesaler,P2 tuned,60,417.60097298292436,0.9903005394918617
+S1 others base-stock (tuned),Wholesaler,P2 tuned,61,327.5381616983551,1.0001848988767728
+S1 others base-stock (tuned),Wholesaler,P2 tuned,62,337.50078949958174,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P2 tuned,63,599.4931016276664,0.9917925885908498
+S1 others base-stock (tuned),Wholesaler,P2 tuned,64,370.24591997298614,0.987468800296345
+S1 others base-stock (tuned),Wholesaler,P2 tuned,65,637.8077141736668,0.9811172532589011
+S1 others base-stock (tuned),Wholesaler,P2 tuned,66,516.1691880897588,1.0680506448630624
+S1 others base-stock (tuned),Wholesaler,P2 tuned,67,1004.8136845774206,1.0175875266930132
+S1 others base-stock (tuned),Wholesaler,P2 tuned,68,480.03553688293266,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,69,505.1380400217147,0.9999999999999998
+S1 others base-stock (tuned),Wholesaler,P2 tuned,70,463.10886121876035,0.9943259618409006
+S1 others base-stock (tuned),Wholesaler,P2 tuned,71,357.379991476472,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P2 tuned,72,257.8175434568363,0.9917659619580456
+S1 others base-stock (tuned),Wholesaler,P2 tuned,73,642.6431111996416,1.087840134690326
+S1 others base-stock (tuned),Wholesaler,P2 tuned,74,529.5960114106961,0.9812334276016627
+S1 others base-stock (tuned),Wholesaler,P2 tuned,75,452.9811180571582,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P2 tuned,76,338.28442703217456,1.023674475656265
+S1 others base-stock (tuned),Wholesaler,P2 tuned,77,860.1584626438571,0.9999999999999998
+S1 others base-stock (tuned),Wholesaler,P2 tuned,78,311.0364498502316,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,79,1462.4863385785975,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,80,497.4330758042964,1.016798034224598
+S1 others base-stock (tuned),Wholesaler,P2 tuned,81,393.65233988471346,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,82,339.18702233099987,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P2 tuned,83,305.6810066172069,0.9863108221175713
+S1 others base-stock (tuned),Wholesaler,P2 tuned,84,463.1085271691681,1.0259971549231832
+S1 others base-stock (tuned),Wholesaler,P2 tuned,85,681.5575332607029,0.9044179322281736
+S1 others base-stock (tuned),Wholesaler,P2 tuned,86,492.91508584566657,0.9742859575926565
+S1 others base-stock (tuned),Wholesaler,P2 tuned,87,524.2103678999831,1.0343508250641347
+S1 others base-stock (tuned),Wholesaler,P2 tuned,88,398.59308494477807,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,89,290.89471292859855,0.9887144027778971
+S1 others base-stock (tuned),Wholesaler,P2 tuned,90,609.6679453509656,1.0072997787023352
+S1 others base-stock (tuned),Wholesaler,P2 tuned,91,414.9878935076266,0.99241108545612
+S1 others base-stock (tuned),Wholesaler,P2 tuned,92,417.75782525552245,1.0392751668801787
+S1 others base-stock (tuned),Wholesaler,P2 tuned,93,239.356322177446,1.0172118163152364
+S1 others base-stock (tuned),Wholesaler,P2 tuned,94,566.5566213135781,0.9804020804998476
+S1 others base-stock (tuned),Wholesaler,P2 tuned,95,329.23373483944584,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P2 tuned,96,452.15414360402247,1.0
+S1 others base-stock (tuned),Wholesaler,P2 tuned,97,349.3046789968736,0.9776487605439951
+S1 others base-stock (tuned),Wholesaler,P2 tuned,98,381.41542046627393,1.0070119017881394
+S1 others base-stock (tuned),Wholesaler,P2 tuned,99,554.8940601184033,0.9654891336951641
+S1 others base-stock (tuned),Wholesaler,P2 tuned,100,370.1418295347674,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,1,804.9412959808167,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,2,633.3474602713693,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,3,902.2940439937063,1.0166279511854686
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,4,738.9483313492799,0.9914987478367943
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,5,689.1524438311252,1.0139678823562275
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,6,755.2597757365622,1.0077610966693882
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,7,870.3356835798706,0.9817235771379549
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,8,963.6222521906814,1.0299320215962193
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,9,816.126553147687,0.9850910841381952
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,10,720.9431014374937,0.9892456625717424
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,11,804.2748890956827,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,12,677.4009657663933,0.9812802318966992
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,13,705.307758713404,0.9850458283265454
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,14,649.3915053610059,1.0064043253061907
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,15,829.308102617667,1.0122284343297547
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,16,812.7272463700948,0.989868107301528
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,17,795.4627338869471,1.001458239828704
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,18,940.4253573940452,1.0173911915045313
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,19,927.3618952444583,0.9823003738816307
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,20,809.7530483556932,1.0250936387902487
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,21,781.3793994994462,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,22,678.4401344576137,0.9921561444040736
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,23,846.2586633916278,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,24,726.611932072542,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,25,667.3954972523345,1.0035108515104778
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,26,656.6916022183975,0.9739845178233522
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,27,862.7511852242877,1.0031876336653114
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,28,666.9671023984233,0.997961837524968
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,29,722.9659899838687,0.9887912167823059
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,30,833.7571591976296,0.9861796375766781
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,31,833.4700967227992,0.9605992958357148
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,32,710.7585550896513,1.0030791791121307
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,33,615.3981243815025,0.9955492604303944
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,34,879.8932419285245,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,35,635.3919273753675,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,36,835.5697937688196,0.9944570098417786
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,37,752.3680482984375,1.0152941453055386
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,38,949.9253504154156,1.0034818722076377
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,39,773.939336911053,1.021925538976064
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,40,804.3462457172343,1.0055788895073625
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,41,838.7017472768978,1.0076887513314483
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,42,732.6088701837639,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,43,796.4580689249756,0.9999999999999996
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,44,832.0076762705535,1.0000000000000007
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,45,748.6398026006176,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,46,765.7680232591807,1.0074280032100809
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,47,1027.5210864583391,1.0219789852862817
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,48,724.720034864563,0.98250481597513
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,49,651.4754525042267,1.0219112704541986
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,50,673.6202298409524,1.0128320099872186
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,51,1018.0579185752018,1.013518042663985
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,52,685.4331215706305,1.0208443861392702
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,53,673.9034508147595,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,54,689.9045530773203,1.005397604264759
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,55,706.3565098626872,1.0186143030244383
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,56,861.0252748077471,0.9911509642443768
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,57,713.8715017429747,0.9972796450913612
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,58,586.1967240368466,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,59,957.3828880979304,1.02497043853853
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,60,784.3775194042671,0.9903005394918617
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,61,897.0381616983551,1.0001848988767728
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,62,750.4851616235514,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,63,897.4696493937283,1.0085983735520225
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,64,1009.3296935650785,0.9874688002963451
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,65,977.1945437660523,0.9811172532589009
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,66,874.5768584829403,1.0283693261926277
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,67,971.9234809187392,1.0175875266930134
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,68,872.050484895654,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,69,953.1908117226026,0.9999999999999998
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,70,734.4208951549241,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,71,797.5732112735566,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,72,641.5410239061894,1.0011222446180272
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,73,872.458789097001,1.0509614980037572
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,74,792.6552185901572,0.9768134572070606
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,75,786.9811180571583,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,76,788.6421781431844,1.023674475656265
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,77,1279.8187524937225,0.9999999999999998
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,78,601.0364498502315,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,79,1062.4465184730902,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,80,723.7358147299285,1.016798034224598
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,81,654.1523398847135,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,82,749.578820766339,1.0000000000000002
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,83,657.3337654795155,0.9863108221175713
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,84,847.7849951679485,0.9945509268491886
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,85,895.0916397874778,0.9700251861941847
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,86,805.0612400108964,0.9732565614580844
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,87,794.3408655799352,1.029305211283334
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,88,916.42696596546,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,89,965.4033162830442,0.9934908008589497
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,90,1058.38681219404,0.9941530023715357
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,91,649.9878935076266,0.99241108545612
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,92,853.5756265820133,1.0392751668801787
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,93,810.4936732643073,1.002672713450703
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,94,826.627861147034,0.9804020804998475
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,95,892.0148029383408,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,96,663.6541436040225,1.0
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,97,599.5039711346102,0.9865364765489404
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,98,631.3450793688412,0.9999999999999999
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,99,748.3285419463753,0.9902692923315396
+S1 others base-stock (tuned),Wholesaler,P0 placeholder,100,702.6418295347673,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P1 tuned,1,520.3553563338396,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,2,392.0952325116872,0.9967518350110495
+S1 others base-stock (tuned),Distributor,P1 tuned,3,521.6368300868319,1.0269178964756056
+S1 others base-stock (tuned),Distributor,P1 tuned,4,431.4529767442523,0.9728424616564613
+S1 others base-stock (tuned),Distributor,P1 tuned,5,365.27985125229793,1.0139678823562275
+S1 others base-stock (tuned),Distributor,P1 tuned,6,467.8017515546368,1.0554925047059514
+S1 others base-stock (tuned),Distributor,P1 tuned,7,549.2161237812962,0.9817235771379548
+S1 others base-stock (tuned),Distributor,P1 tuned,8,657.5813233792314,1.0299320215962193
+S1 others base-stock (tuned),Distributor,P1 tuned,9,620.6392003004878,0.9850910841381952
+S1 others base-stock (tuned),Distributor,P1 tuned,10,387.3650370894213,0.9892456625717424
+S1 others base-stock (tuned),Distributor,P1 tuned,11,508.07762907531185,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P1 tuned,12,402.0199054520018,0.9812802318966992
+S1 others base-stock (tuned),Distributor,P1 tuned,13,362.92371134005606,0.9850458283265454
+S1 others base-stock (tuned),Distributor,P1 tuned,14,361.5042243342364,1.0064043253061907
+S1 others base-stock (tuned),Distributor,P1 tuned,15,493.01890621801044,1.0075851846309944
+S1 others base-stock (tuned),Distributor,P1 tuned,16,521.2844158555945,0.9898681073015277
+S1 others base-stock (tuned),Distributor,P1 tuned,17,397.63958770845096,1.0162581152941526
+S1 others base-stock (tuned),Distributor,P1 tuned,18,938.8501894828416,1.0257485357006098
+S1 others base-stock (tuned),Distributor,P1 tuned,19,490.70169944060945,0.9823003738816305
+S1 others base-stock (tuned),Distributor,P1 tuned,20,454.59163081855013,1.0250936387902483
+S1 others base-stock (tuned),Distributor,P1 tuned,21,455.6266832203552,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,22,359.55266672928957,0.9921561444040736
+S1 others base-stock (tuned),Distributor,P1 tuned,23,515.715847035519,1.0171435262631334
+S1 others base-stock (tuned),Distributor,P1 tuned,24,453.4492550726069,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,25,376.1209918181912,1.003510851510478
+S1 others base-stock (tuned),Distributor,P1 tuned,26,336.2859655727995,0.9739845178233523
+S1 others base-stock (tuned),Distributor,P1 tuned,27,691.0131328549566,1.0023324680490018
+S1 others base-stock (tuned),Distributor,P1 tuned,28,362.1976177622724,0.997961837524968
+S1 others base-stock (tuned),Distributor,P1 tuned,29,378.2249790984017,0.9887912167823059
+S1 others base-stock (tuned),Distributor,P1 tuned,30,550.958458863596,0.9594773154114574
+S1 others base-stock (tuned),Distributor,P1 tuned,31,493.559461935184,0.9751538306211044
+S1 others base-stock (tuned),Distributor,P1 tuned,32,462.7533485831541,1.003079179112131
+S1 others base-stock (tuned),Distributor,P1 tuned,33,334.2821786266412,0.9955492604303946
+S1 others base-stock (tuned),Distributor,P1 tuned,34,618.0476739331075,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,35,338.82141755459037,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,36,472.1852668132296,0.9944570098417786
+S1 others base-stock (tuned),Distributor,P1 tuned,37,467.9168290970948,1.00588984368213
+S1 others base-stock (tuned),Distributor,P1 tuned,38,700.4495667423282,1.0125651245573168
+S1 others base-stock (tuned),Distributor,P1 tuned,39,491.2872285282202,1.026490469401809
+S1 others base-stock (tuned),Distributor,P1 tuned,40,498.6141863762649,1.0055788895073625
+S1 others base-stock (tuned),Distributor,P1 tuned,41,510.0579193570366,1.0269354671966087
+S1 others base-stock (tuned),Distributor,P1 tuned,42,545.4145584550054,0.9772144828301491
+S1 others base-stock (tuned),Distributor,P1 tuned,43,460.928020224275,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P1 tuned,44,484.5713193945354,1.0594782151137045
+S1 others base-stock (tuned),Distributor,P1 tuned,45,431.1744902170249,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P1 tuned,46,509.36342721711685,1.0074280032100809
+S1 others base-stock (tuned),Distributor,P1 tuned,47,757.6336923557362,1.026605757793
+S1 others base-stock (tuned),Distributor,P1 tuned,48,497.8590393732568,0.9825048159751301
+S1 others base-stock (tuned),Distributor,P1 tuned,49,415.52697250085157,1.0426789424572491
+S1 others base-stock (tuned),Distributor,P1 tuned,50,421.30716258342613,1.0128320099872186
+S1 others base-stock (tuned),Distributor,P1 tuned,51,720.336611498558,1.0030694030488922
+S1 others base-stock (tuned),Distributor,P1 tuned,52,377.91609921448696,1.0368073999041911
+S1 others base-stock (tuned),Distributor,P1 tuned,53,404.19686854750904,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,54,402.76999331373617,1.005397604264759
+S1 others base-stock (tuned),Distributor,P1 tuned,55,396.27407829191134,1.0186143030244383
+S1 others base-stock (tuned),Distributor,P1 tuned,56,508.40007354813804,0.977817094770237
+S1 others base-stock (tuned),Distributor,P1 tuned,57,399.17936030300507,1.0028137327641014
+S1 others base-stock (tuned),Distributor,P1 tuned,58,330.0541074332697,0.9995498046947309
+S1 others base-stock (tuned),Distributor,P1 tuned,59,572.9144833003506,1.02497043853853
+S1 others base-stock (tuned),Distributor,P1 tuned,60,427.4819350416474,0.9903005394918617
+S1 others base-stock (tuned),Distributor,P1 tuned,61,458.0549043545118,1.0053458431653048
+S1 others base-stock (tuned),Distributor,P1 tuned,62,460.1765354159042,1.008902415097717
+S1 others base-stock (tuned),Distributor,P1 tuned,63,775.9865917046604,1.0085317040101047
+S1 others base-stock (tuned),Distributor,P1 tuned,64,612.2509942868539,0.987468800296345
+S1 others base-stock (tuned),Distributor,P1 tuned,65,668.0865122939941,0.9811172532589009
+S1 others base-stock (tuned),Distributor,P1 tuned,66,538.3774517755097,1.051044365432876
+S1 others base-stock (tuned),Distributor,P1 tuned,67,830.2295910329528,1.0175875266930132
+S1 others base-stock (tuned),Distributor,P1 tuned,68,598.6442962874627,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,69,551.7393451681321,0.9923817130193766
+S1 others base-stock (tuned),Distributor,P1 tuned,70,391.3079499796496,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,71,441.7563304613121,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P1 tuned,72,338.84817092296953,1.0104785272780088
+S1 others base-stock (tuned),Distributor,P1 tuned,73,569.9032605925327,1.0720350046817964
+S1 others base-stock (tuned),Distributor,P1 tuned,74,557.8512814189489,0.9900733683908668
+S1 others base-stock (tuned),Distributor,P1 tuned,75,466.10477316109996,0.9999999999999997
+S1 others base-stock (tuned),Distributor,P1 tuned,76,434.2492559814652,1.0236744756562652
+S1 others base-stock (tuned),Distributor,P1 tuned,77,878.3936856592074,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P1 tuned,78,331.3257327956564,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P1 tuned,79,1044.8213256948102,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P1 tuned,80,404.8396327344857,1.016798034224598
+S1 others base-stock (tuned),Distributor,P1 tuned,81,360.65233988471346,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,82,464.1405283200655,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P1 tuned,83,372.13157899509497,0.9863108221175712
+S1 others base-stock (tuned),Distributor,P1 tuned,84,440.7483722134814,1.0259971549231832
+S1 others base-stock (tuned),Distributor,P1 tuned,85,736.4961812144819,0.9208197457196763
+S1 others base-stock (tuned),Distributor,P1 tuned,86,517.8699827804644,0.973256561458084
+S1 others base-stock (tuned),Distributor,P1 tuned,87,523.8092905783533,1.0393964388449353
+S1 others base-stock (tuned),Distributor,P1 tuned,88,598.5432507134169,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P1 tuned,89,510.2731111647522,1.0269255874263181
+S1 others base-stock (tuned),Distributor,P1 tuned,90,639.4242545502111,1.0207304424183663
+S1 others base-stock (tuned),Distributor,P1 tuned,91,388.73590284492104,0.99241108545612
+S1 others base-stock (tuned),Distributor,P1 tuned,92,513.6761444684514,1.0392751668801787
+S1 others base-stock (tuned),Distributor,P1 tuned,93,362.8358671997038,1.0269045515582589
+S1 others base-stock (tuned),Distributor,P1 tuned,94,607.7977811808016,0.9831262193065998
+S1 others base-stock (tuned),Distributor,P1 tuned,95,490.5620584549886,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P1 tuned,96,438.65414360402247,1.0
+S1 others base-stock (tuned),Distributor,P1 tuned,97,331.5008491884575,0.9865364765489402
+S1 others base-stock (tuned),Distributor,P1 tuned,98,430.03974022026864,1.021005320469484
+S1 others base-stock (tuned),Distributor,P1 tuned,99,476.3940601184033,0.9754011971497143
+S1 others base-stock (tuned),Distributor,P1 tuned,100,376.26950504721054,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,1,481.91566257931987,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,2,371.0952325116872,0.9967518350110495
+S1 others base-stock (tuned),Distributor,P2 tuned,3,506.1018534525317,1.0269178964756056
+S1 others base-stock (tuned),Distributor,P2 tuned,4,393.56398262060634,0.9728424616564613
+S1 others base-stock (tuned),Distributor,P2 tuned,5,340.77985125229793,1.0139678823562275
+S1 others base-stock (tuned),Distributor,P2 tuned,6,528.3726822053015,1.0554925047059516
+S1 others base-stock (tuned),Distributor,P2 tuned,7,606.4169999929297,0.9817235771379547
+S1 others base-stock (tuned),Distributor,P2 tuned,8,640.3380626445726,1.0299320215962193
+S1 others base-stock (tuned),Distributor,P2 tuned,9,669.5348435616798,0.9850910841381952
+S1 others base-stock (tuned),Distributor,P2 tuned,10,397.8650370894213,0.9892456625717424
+S1 others base-stock (tuned),Distributor,P2 tuned,11,527.8819418136069,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,12,376.0199054520018,0.9812802318966992
+S1 others base-stock (tuned),Distributor,P2 tuned,13,319.92371134005606,0.9850458283265454
+S1 others base-stock (tuned),Distributor,P2 tuned,14,330.0042243342364,1.0064043253061907
+S1 others base-stock (tuned),Distributor,P2 tuned,15,494.01890621801044,1.0029419349322342
+S1 others base-stock (tuned),Distributor,P2 tuned,16,518.051731228746,0.9753329524050677
+S1 others base-stock (tuned),Distributor,P2 tuned,17,388.20560808622275,1.0162581152941526
+S1 others base-stock (tuned),Distributor,P2 tuned,18,1059.8501894828419,1.0299272077986488
+S1 others base-stock (tuned),Distributor,P2 tuned,19,450.49188116540336,0.9823003738816307
+S1 others base-stock (tuned),Distributor,P2 tuned,20,405.8112498277945,1.0250936387902483
+S1 others base-stock (tuned),Distributor,P2 tuned,21,420.90982294625803,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,22,333.05266672928957,0.9921561444040736
+S1 others base-stock (tuned),Distributor,P2 tuned,23,507.7753087215259,1.0216836419633235
+S1 others base-stock (tuned),Distributor,P2 tuned,24,432.9492550726069,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,25,312.91173327178376,1.003510851510478
+S1 others base-stock (tuned),Distributor,P2 tuned,26,287.2859655727995,0.9739845178233523
+S1 others base-stock (tuned),Distributor,P2 tuned,27,636.8276481674341,1.0031876336653114
+S1 others base-stock (tuned),Distributor,P2 tuned,28,337.6976177622724,0.997961837524968
+S1 others base-stock (tuned),Distributor,P2 tuned,29,340.60706505588644,0.9887912167823059
+S1 others base-stock (tuned),Distributor,P2 tuned,30,524.958458863596,0.9639277024389943
+S1 others base-stock (tuned),Distributor,P2 tuned,31,502.17472923796254,0.9751538306211044
+S1 others base-stock (tuned),Distributor,P2 tuned,32,416.2533485831541,1.003079179112131
+S1 others base-stock (tuned),Distributor,P2 tuned,33,306.2821786266412,0.9955492604303946
+S1 others base-stock (tuned),Distributor,P2 tuned,34,600.0476739331075,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,35,318.82141755459037,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,36,427.7987331702259,0.9944570098417783
+S1 others base-stock (tuned),Distributor,P2 tuned,37,421.41381279490236,1.00588984368213
+S1 others base-stock (tuned),Distributor,P2 tuned,38,730.6652092372437,1.0125651245573168
+S1 others base-stock (tuned),Distributor,P2 tuned,39,520.2099168104653,1.0493151215305352
+S1 others base-stock (tuned),Distributor,P2 tuned,40,465.6141863762649,1.0055788895073625
+S1 others base-stock (tuned),Distributor,P2 tuned,41,569.5466209002208,1.0269354671966087
+S1 others base-stock (tuned),Distributor,P2 tuned,42,540.4145584550054,0.9671972282740172
+S1 others base-stock (tuned),Distributor,P2 tuned,43,443.50266331076756,0.9999999999999996
+S1 others base-stock (tuned),Distributor,P2 tuned,44,540.3512576987839,1.0692587787025731
+S1 others base-stock (tuned),Distributor,P2 tuned,45,396.1744902170249,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P2 tuned,46,526.5438957734887,1.0074280032100806
+S1 others base-stock (tuned),Distributor,P2 tuned,47,813.1336923557361,1.031232530299718
+S1 others base-stock (tuned),Distributor,P2 tuned,48,432.3590393732568,0.9825048159751301
+S1 others base-stock (tuned),Distributor,P2 tuned,49,439.4661850832664,1.0530627784587743
+S1 others base-stock (tuned),Distributor,P2 tuned,50,384.30716258342613,1.0128320099872186
+S1 others base-stock (tuned),Distributor,P2 tuned,51,683.836611498558,1.0030694030488922
+S1 others base-stock (tuned),Distributor,P2 tuned,52,353.41609921448696,1.0368073999041911
+S1 others base-stock (tuned),Distributor,P2 tuned,53,357.3593227701708,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,54,393.87223574955067,1.005397604264759
+S1 others base-stock (tuned),Distributor,P2 tuned,55,388.27407829191134,1.0186143030244386
+S1 others base-stock (tuned),Distributor,P2 tuned,56,462.1452968311734,0.9867063410863303
+S1 others base-stock (tuned),Distributor,P2 tuned,57,345.67936030300507,1.0028137327641014
+S1 others base-stock (tuned),Distributor,P2 tuned,58,311.0541074332697,0.9995498046947309
+S1 others base-stock (tuned),Distributor,P2 tuned,59,576.9144833003506,1.02497043853853
+S1 others base-stock (tuned),Distributor,P2 tuned,60,399.4819350416474,0.9903005394918617
+S1 others base-stock (tuned),Distributor,P2 tuned,61,418.53789659590143,1.0259896203194339
+S1 others base-stock (tuned),Distributor,P2 tuned,62,495.2698583367595,1.008902415097717
+S1 others base-stock (tuned),Distributor,P2 tuned,63,763.2997478380232,1.004346925155291
+S1 others base-stock (tuned),Distributor,P2 tuned,64,553.7509942868539,0.987468800296345
+S1 others base-stock (tuned),Distributor,P2 tuned,65,611.8249716184316,0.9811172532589009
+S1 others base-stock (tuned),Distributor,P2 tuned,66,568.1015049257583,1.0680506448630627
+S1 others base-stock (tuned),Distributor,P2 tuned,67,973.8476190464394,1.0175875266930132
+S1 others base-stock (tuned),Distributor,P2 tuned,68,655.5355368829327,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,69,595.1515367481709,0.9923817130193765
+S1 others base-stock (tuned),Distributor,P2 tuned,70,378.2541095182929,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,71,408.21370666367125,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P2 tuned,72,323.66848393849875,1.0104785272780088
+S1 others base-stock (tuned),Distributor,P2 tuned,73,622.9621269504295,1.0931085113598353
+S1 others base-stock (tuned),Distributor,P2 tuned,74,538.2291247663488,0.994493338785469
+S1 others base-stock (tuned),Distributor,P2 tuned,75,428.60477316109996,0.9999999999999997
+S1 others base-stock (tuned),Distributor,P2 tuned,76,410.2492559814652,1.0236744756562652
+S1 others base-stock (tuned),Distributor,P2 tuned,77,986.3759360620263,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P2 tuned,78,301.3257327956564,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,79,1272.9599989176545,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,80,410.78317492599854,1.016798034224598
+S1 others base-stock (tuned),Distributor,P2 tuned,81,342.65233988471346,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,82,388.09385349319194,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,83,347.63157899509497,0.9863108221175712
+S1 others base-stock (tuned),Distributor,P2 tuned,84,457.7483722134814,1.0259971549231832
+S1 others base-stock (tuned),Distributor,P2 tuned,85,754.3167693210195,0.9126188389739249
+S1 others base-stock (tuned),Distributor,P2 tuned,86,523.0973594627326,0.973256561458084
+S1 others base-stock (tuned),Distributor,P2 tuned,87,567.556710287897,1.044442052625736
+S1 others base-stock (tuned),Distributor,P2 tuned,88,597.0354518588426,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P2 tuned,89,522.6049905973086,1.017372791264213
+S1 others base-stock (tuned),Distributor,P2 tuned,90,617.9242545502111,1.0252073303237101
+S1 others base-stock (tuned),Distributor,P2 tuned,91,368.73590284492104,0.99241108545612
+S1 others base-stock (tuned),Distributor,P2 tuned,92,516.1761444684514,1.0392751668801787
+S1 others base-stock (tuned),Distributor,P2 tuned,93,326.8358671997038,1.03175091917977
+S1 others base-stock (tuned),Distributor,P2 tuned,94,635.0285068163134,0.9804020804998476
+S1 others base-stock (tuned),Distributor,P2 tuned,95,469.30338682511933,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P2 tuned,96,420.15414360402247,1.0
+S1 others base-stock (tuned),Distributor,P2 tuned,97,280.84438015846047,0.9865364765489404
+S1 others base-stock (tuned),Distributor,P2 tuned,98,487.5312885579641,1.029731861670078
+S1 others base-stock (tuned),Distributor,P2 tuned,99,514.8940601184033,0.9704451654224392
+S1 others base-stock (tuned),Distributor,P2 tuned,100,356.26950504721054,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P0 placeholder,1,745.8553563338396,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,2,607.9779841908648,0.9967518350110495
+S1 others base-stock (tuned),Distributor,P0 placeholder,3,786.6368300868319,1.0166279511854686
+S1 others base-stock (tuned),Distributor,P0 placeholder,4,677.5589887386759,0.9728424616564613
+S1 others base-stock (tuned),Distributor,P0 placeholder,5,615.7798512522979,1.0139678823562275
+S1 others base-stock (tuned),Distributor,P0 placeholder,6,704.2221250320983,1.0125342374730446
+S1 others base-stock (tuned),Distributor,P0 placeholder,7,738.7447684450913,0.9817235771379549
+S1 others base-stock (tuned),Distributor,P0 placeholder,8,789.802905114674,1.0299320215962193
+S1 others base-stock (tuned),Distributor,P0 placeholder,9,748.9922918336781,0.9850910841381952
+S1 others base-stock (tuned),Distributor,P0 placeholder,10,614.7439777778094,0.9892456625717424
+S1 others base-stock (tuned),Distributor,P0 placeholder,11,688.5877854803986,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,12,647.5199054520018,0.9812802318966992
+S1 others base-stock (tuned),Distributor,P0 placeholder,13,629.4237113400561,0.9850458283265454
+S1 others base-stock (tuned),Distributor,P0 placeholder,14,612.5042243342364,1.0064043253061907
+S1 others base-stock (tuned),Distributor,P0 placeholder,15,681.5270466519771,1.0075851846309944
+S1 others base-stock (tuned),Distributor,P0 placeholder,16,728.2272463700948,0.989868107301528
+S1 others base-stock (tuned),Distributor,P0 placeholder,17,669.840283979265,1.0113248234723364
+S1 others base-stock (tuned),Distributor,P0 placeholder,18,875.4948137062092,1.0132125194064923
+S1 others base-stock (tuned),Distributor,P0 placeholder,19,777.6846176899412,0.9823003738816305
+S1 others base-stock (tuned),Distributor,P0 placeholder,20,717.8112498277944,1.0250936387902487
+S1 others base-stock (tuned),Distributor,P0 placeholder,21,722.3642240397444,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,22,633.0526667292895,0.9921561444040736
+S1 others base-stock (tuned),Distributor,P0 placeholder,23,735.7880142396061,1.0171435262631334
+S1 others base-stock (tuned),Distributor,P0 placeholder,24,688.9492550726069,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,25,609.9117332717838,1.003510851510478
+S1 others base-stock (tuned),Distributor,P0 placeholder,26,606.2859655727996,0.9739845178233523
+S1 others base-stock (tuned),Distributor,P0 placeholder,27,855.369536744557,1.0031876336653114
+S1 others base-stock (tuned),Distributor,P0 placeholder,28,632.1976177622723,0.997961837524968
+S1 others base-stock (tuned),Distributor,P0 placeholder,29,672.6070650558864,0.9887912167823059
+S1 others base-stock (tuned),Distributor,P0 placeholder,30,789.0955090175029,0.9728284764940678
+S1 others base-stock (tuned),Distributor,P0 placeholder,31,741.1645613067631,0.9751538306211044
+S1 others base-stock (tuned),Distributor,P0 placeholder,32,700.2533485831541,1.003079179112131
+S1 others base-stock (tuned),Distributor,P0 placeholder,33,574.2821786266412,0.9955492604303946
+S1 others base-stock (tuned),Distributor,P0 placeholder,34,811.8532082797512,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,35,597.8214175545904,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,36,703.1787261971859,0.9944570098417783
+S1 others base-stock (tuned),Distributor,P0 placeholder,37,685.1844801710839,1.0104829479911808
+S1 others base-stock (tuned),Distributor,P0 placeholder,38,825.3272061254958,1.0080234983824772
+S1 others base-stock (tuned),Distributor,P0 placeholder,39,667.8684321266434,1.021925538976064
+S1 others base-stock (tuned),Distributor,P0 placeholder,40,701.0402599963253,1.0055788895073627
+S1 others base-stock (tuned),Distributor,P0 placeholder,41,711.735705767137,1.0269354671966089
+S1 others base-stock (tuned),Distributor,P0 placeholder,42,705.9145584550054,0.9872317373862811
+S1 others base-stock (tuned),Distributor,P0 placeholder,43,707.105612967975,0.9999999999999994
+S1 others base-stock (tuned),Distributor,P0 placeholder,44,719.6498177906576,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P0 placeholder,45,689.1744902170249,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P0 placeholder,46,677.7084336360582,1.0074280032100809
+S1 others base-stock (tuned),Distributor,P0 placeholder,47,859.2717865350224,1.0219789852862817
+S1 others base-stock (tuned),Distributor,P0 placeholder,48,726.3590393732568,0.9825048159751301
+S1 others base-stock (tuned),Distributor,P0 placeholder,49,631.3311230313718,1.0219112704541986
+S1 others base-stock (tuned),Distributor,P0 placeholder,50,658.3071625834261,1.0128320099872186
+S1 others base-stock (tuned),Distributor,P0 placeholder,51,878.5906821726106,1.0239666822790776
+S1 others base-stock (tuned),Distributor,P0 placeholder,52,636.4160992144868,1.0368073999041911
+S1 others base-stock (tuned),Distributor,P0 placeholder,53,664.696868547509,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,54,607.1320968028703,1.005397604264759
+S1 others base-stock (tuned),Distributor,P0 placeholder,55,608.7740782919113,1.0186143030244386
+S1 others base-stock (tuned),Distributor,P0 placeholder,56,734.8189585702856,0.977817094770237
+S1 others base-stock (tuned),Distributor,P0 placeholder,57,659.6793603030051,1.0028137327641014
+S1 others base-stock (tuned),Distributor,P0 placeholder,58,577.5541074332697,0.9995498046947309
+S1 others base-stock (tuned),Distributor,P0 placeholder,59,758.7876382103841,1.02497043853853
+S1 others base-stock (tuned),Distributor,P0 placeholder,60,693.4819350416474,0.9903005394918617
+S1 others base-stock (tuned),Distributor,P0 placeholder,61,751.5549043545118,1.0001848988767728
+S1 others base-stock (tuned),Distributor,P0 placeholder,62,657.1682916566488,1.008902415097717
+S1 others base-stock (tuned),Distributor,P0 placeholder,63,804.1523855565752,1.0085317040101047
+S1 others base-stock (tuned),Distributor,P0 placeholder,64,859.2653318620282,0.9874688002963451
+S1 others base-stock (tuned),Distributor,P0 placeholder,65,834.0705525221039,0.9811172532589009
+S1 others base-stock (tuned),Distributor,P0 placeholder,66,772.3774517755098,1.0283693261926277
+S1 others base-stock (tuned),Distributor,P0 placeholder,67,840.42680285186,1.0175875266930134
+S1 others base-stock (tuned),Distributor,P0 placeholder,68,719.6442962874628,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,69,771.3019660576069,0.9923817130193766
+S1 others base-stock (tuned),Distributor,P0 placeholder,70,659.1928355558921,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,71,672.7688833943835,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P0 placeholder,72,589.6984705719473,1.0011222446180272
+S1 others base-stock (tuned),Distributor,P0 placeholder,73,731.411873819869,1.0509614980037572
+S1 others base-stock (tuned),Distributor,P0 placeholder,74,700.5193802277822,0.9900733683908668
+S1 others base-stock (tuned),Distributor,P0 placeholder,75,731.1047731611,0.9999999999999997
+S1 others base-stock (tuned),Distributor,P0 placeholder,76,698.1070070924751,1.0236744756562652
+S1 others base-stock (tuned),Distributor,P0 placeholder,77,933.3187524937226,0.9999999999999998
+S1 others base-stock (tuned),Distributor,P0 placeholder,78,578.8257327956564,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P0 placeholder,79,911.5542361144129,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P0 placeholder,80,603.4313360350825,1.016798034224598
+S1 others base-stock (tuned),Distributor,P0 placeholder,81,625.1523398847135,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,82,723.593853493192,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P0 placeholder,83,625.131578995095,0.9863108221175712
+S1 others base-stock (tuned),Distributor,P0 placeholder,84,704.9248402122619,1.0102125833089806
+S1 others base-stock (tuned),Distributor,P0 placeholder,85,795.4961812144819,0.9618242794484332
+S1 others base-stock (tuned),Distributor,P0 placeholder,86,735.9601599346156,0.973256561458084
+S1 others base-stock (tuned),Distributor,P0 placeholder,87,702.0128330788344,1.029305211283334
+S1 others base-stock (tuned),Distributor,P0 placeholder,88,820.6971401039948,1.0000000000000002
+S1 others base-stock (tuned),Distributor,P0 placeholder,89,743.2870942805994,1.0173727912642128
+S1 others base-stock (tuned),Distributor,P0 placeholder,90,808.568200236808,1.0028228907969914
+S1 others base-stock (tuned),Distributor,P0 placeholder,91,631.235902844921,0.99241108545612
+S1 others base-stock (tuned),Distributor,P0 placeholder,92,742.6206739629869,1.0392751668801787
+S1 others base-stock (tuned),Distributor,P0 placeholder,93,672.2717182687722,1.007519081072214
+S1 others base-stock (tuned),Distributor,P0 placeholder,94,795.4876981847694,0.9804020804998476
+S1 others base-stock (tuned),Distributor,P0 placeholder,95,674.8665560185689,0.9999999999999999
+S1 others base-stock (tuned),Distributor,P0 placeholder,96,665.6541436040225,1.0
+S1 others base-stock (tuned),Distributor,P0 placeholder,97,580.8443801584605,0.9865364765489402
+S1 others base-stock (tuned),Distributor,P0 placeholder,98,650.2353597042809,0.9965403362801568
+S1 others base-stock (tuned),Distributor,P0 placeholder,99,674.3940601184033,0.9902692923315396
+S1 others base-stock (tuned),Distributor,P0 placeholder,100,632.2695050472105,1.0000000000000002
+S1 others base-stock (tuned),Factory,P1 tuned,1,519.4475835490279,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,2,426.0952325116872,0.9967518350110495
+S1 others base-stock (tuned),Factory,P1 tuned,3,537.6368300868319,1.0320628691206741
+S1 others base-stock (tuned),Factory,P1 tuned,4,426.9529767442523,0.9728424616564613
+S1 others base-stock (tuned),Factory,P1 tuned,5,383.6661046479936,1.0139678823562275
+S1 others base-stock (tuned),Factory,P1 tuned,6,502.5539302004245,1.0602656455096078
+S1 others base-stock (tuned),Factory,P1 tuned,7,571.5294933367775,0.9817235771379547
+S1 others base-stock (tuned),Factory,P1 tuned,8,700.5813233792314,1.0299320215962193
+S1 others base-stock (tuned),Factory,P1 tuned,9,667.6738527482787,0.9850910841381952
+S1 others base-stock (tuned),Factory,P1 tuned,10,384.8650370894213,0.9892456625717424
+S1 others base-stock (tuned),Factory,P1 tuned,11,546.8819418136069,1.0000000000000002
+S1 others base-stock (tuned),Factory,P1 tuned,12,383.0199054520018,0.9812802318966992
+S1 others base-stock (tuned),Factory,P1 tuned,13,355.6796761098679,0.9850458283265454
+S1 others base-stock (tuned),Factory,P1 tuned,14,361.0042243342364,1.0064043253061907
+S1 others base-stock (tuned),Factory,P1 tuned,15,520.5189062180104,1.0075851846309944
+S1 others base-stock (tuned),Factory,P1 tuned,16,522.551731228746,0.9898681073015277
+S1 others base-stock (tuned),Factory,P1 tuned,17,395.0133143629056,1.021191407115969
+S1 others base-stock (tuned),Factory,P1 tuned,18,1026.8501894828419,1.0299272077986488
+S1 others base-stock (tuned),Factory,P1 tuned,19,506.7016994406094,0.9823003738816307
+S1 others base-stock (tuned),Factory,P1 tuned,20,446.09163081855013,1.0250936387902483
+S1 others base-stock (tuned),Factory,P1 tuned,21,451.7048535996317,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,22,343.55266672928957,0.9921561444040736
+S1 others base-stock (tuned),Factory,P1 tuned,23,564.9559854585776,1.0216836419633235
+S1 others base-stock (tuned),Factory,P1 tuned,24,430.4492550726069,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,25,384.56336814344064,1.0021602370791742
+S1 others base-stock (tuned),Factory,P1 tuned,26,327.7859655727995,0.9739845178233523
+S1 others base-stock (tuned),Factory,P1 tuned,27,757.2367988819689,0.9980120694798249
+S1 others base-stock (tuned),Factory,P1 tuned,28,345.1976177622724,0.997961837524968
+S1 others base-stock (tuned),Factory,P1 tuned,29,373.395189422552,0.9887912167823059
+S1 others base-stock (tuned),Factory,P1 tuned,30,579.958458863596,0.9550269283839207
+S1 others base-stock (tuned),Factory,P1 tuned,31,499.3621266055095,0.9751538306211044
+S1 others base-stock (tuned),Factory,P1 tuned,32,452.2533485831541,1.0030791791121307
+S1 others base-stock (tuned),Factory,P1 tuned,33,325.7821786266412,0.9955492604303946
+S1 others base-stock (tuned),Factory,P1 tuned,34,621.5476739331075,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,35,325.82141755459037,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,36,508.34479532551865,0.9944570098417783
+S1 others base-stock (tuned),Factory,P1 tuned,37,493.3482870261384,1.0012967393730792
+S1 others base-stock (tuned),Factory,P1 tuned,38,769.4825778384576,1.0171067507321563
+S1 others base-stock (tuned),Factory,P1 tuned,39,541.7872285282202,1.0310553998275545
+S1 others base-stock (tuned),Factory,P1 tuned,40,516.1141863762649,1.0055788895073625
+S1 others base-stock (tuned),Factory,P1 tuned,41,538.5466209002208,1.0269354671966087
+S1 others base-stock (tuned),Factory,P1 tuned,42,540.9145584550054,0.9722058555520832
+S1 others base-stock (tuned),Factory,P1 tuned,43,462.4574722253568,0.9999999999999996
+S1 others base-stock (tuned),Factory,P1 tuned,44,513.3512576987839,1.0643684969081388
+S1 others base-stock (tuned),Factory,P1 tuned,45,417.6744902170249,0.9999999999999999
+S1 others base-stock (tuned),Factory,P1 tuned,46,551.0053244139428,1.0074280032100809
+S1 others base-stock (tuned),Factory,P1 tuned,47,789.6336923557362,1.031232530299718
+S1 others base-stock (tuned),Factory,P1 tuned,48,494.8590393732568,0.9825048159751301
+S1 others base-stock (tuned),Factory,P1 tuned,49,416.9661850832664,1.0478708604580118
+S1 others base-stock (tuned),Factory,P1 tuned,50,413.30716258342613,1.0128320099872186
+S1 others base-stock (tuned),Factory,P1 tuned,51,744.3282678593805,0.997845083241346
+S1 others base-stock (tuned),Factory,P1 tuned,52,366.91609921448696,1.0368073999041911
+S1 others base-stock (tuned),Factory,P1 tuned,53,402.3593227701708,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,54,436.776338154992,1.005397604264759
+S1 others base-stock (tuned),Factory,P1 tuned,55,407.77407829191134,1.0186143030244386
+S1 others base-stock (tuned),Factory,P1 tuned,56,545.7527239224554,0.9778170947702371
+S1 others base-stock (tuned),Factory,P1 tuned,57,406.29229001018786,1.0028137327641014
+S1 others base-stock (tuned),Factory,P1 tuned,58,309.5541074332697,0.999549804694731
+S1 others base-stock (tuned),Factory,P1 tuned,59,619.6469187786336,1.02497043853853
+S1 others base-stock (tuned),Factory,P1 tuned,60,419.4819350416474,0.9903005394918617
+S1 others base-stock (tuned),Factory,P1 tuned,61,451.0549043545118,1.0105067874538372
+S1 others base-stock (tuned),Factory,P1 tuned,62,497.40491927423693,1.008902415097717
+S1 others base-stock (tuned),Factory,P1 tuned,63,847.4865917046604,1.0085317040101047
+S1 others base-stock (tuned),Factory,P1 tuned,64,646.7509942868539,0.987468800296345
+S1 others base-stock (tuned),Factory,P1 tuned,65,695.2621363536035,0.9811172532589009
+S1 others base-stock (tuned),Factory,P1 tuned,66,541.5199190644739,1.0567131252429383
+S1 others base-stock (tuned),Factory,P1 tuned,67,886.2425393415508,1.0175875266930132
+S1 others base-stock (tuned),Factory,P1 tuned,68,623.5212233559038,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,69,584.2393451681322,0.9923817130193766
+S1 others base-stock (tuned),Factory,P1 tuned,70,398.3079499796496,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,71,447.71370666367125,0.9999999999999999
+S1 others base-stock (tuned),Factory,P1 tuned,72,349.34817092296953,1.0151566686079996
+S1 others base-stock (tuned),Factory,P1 tuned,73,590.6472038145033,1.077303381351306
+S1 others base-stock (tuned),Factory,P1 tuned,74,608.4161548863478,0.9900733683908668
+S1 others base-stock (tuned),Factory,P1 tuned,75,453.10477316109996,0.9999999999999997
+S1 others base-stock (tuned),Factory,P1 tuned,76,433.67320073644294,1.0236744756562652
+S1 others base-stock (tuned),Factory,P1 tuned,77,892.3936856592074,0.9999999999999999
+S1 others base-stock (tuned),Factory,P1 tuned,78,320.8257327956564,1.0000000000000002
+S1 others base-stock (tuned),Factory,P1 tuned,79,1120.4599989176543,1.0000000000000002
+S1 others base-stock (tuned),Factory,P1 tuned,80,421.76231612013027,1.016798034224598
+S1 others base-stock (tuned),Factory,P1 tuned,81,335.65233988471346,1.0047900346113163
+S1 others base-stock (tuned),Factory,P1 tuned,82,464.1405283200655,1.0000000000000002
+S1 others base-stock (tuned),Factory,P1 tuned,83,363.22831370280556,0.9863108221175712
+S1 others base-stock (tuned),Factory,P1 tuned,84,439.7483722134814,1.0312586787945843
+S1 others base-stock (tuned),Factory,P1 tuned,85,764.8167693210195,0.9167192923468006
+S1 others base-stock (tuned),Factory,P1 tuned,86,540.8699827804644,0.9742859575926562
+S1 others base-stock (tuned),Factory,P1 tuned,87,531.3092905783533,1.044442052625736
+S1 others base-stock (tuned),Factory,P1 tuned,88,629.5354518588426,1.0000000000000002
+S1 others base-stock (tuned),Factory,P1 tuned,89,537.2731111647522,1.0317019855073708
+S1 others base-stock (tuned),Factory,P1 tuned,90,688.9242545502111,1.0252073303237101
+S1 others base-stock (tuned),Factory,P1 tuned,91,377.23590284492104,0.987347763591548
+S1 others base-stock (tuned),Factory,P1 tuned,92,526.6761444684514,1.0392751668801787
+S1 others base-stock (tuned),Factory,P1 tuned,93,363.8358671997038,1.03175091917977
+S1 others base-stock (tuned),Factory,P1 tuned,94,634.7977811808016,0.9876567548794413
+S1 others base-stock (tuned),Factory,P1 tuned,95,513.5620584549886,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,96,414.65414360402247,1.0
+S1 others base-stock (tuned),Factory,P1 tuned,97,341.22397724205246,0.9865364765489402
+S1 others base-stock (tuned),Factory,P1 tuned,98,473.2907578614388,1.0253685910697812
+S1 others base-stock (tuned),Factory,P1 tuned,99,480.3940601184033,0.9704451654224392
+S1 others base-stock (tuned),Factory,P1 tuned,100,362.48970030849705,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,1,515.4156625793198,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,2,405.5952325116872,0.9967518350110495
+S1 others base-stock (tuned),Factory,P2 tuned,3,536.1368300868319,1.0320628691206741
+S1 others base-stock (tuned),Factory,P2 tuned,4,427.1121372265601,0.9728424616564613
+S1 others base-stock (tuned),Factory,P2 tuned,5,376.27985125229793,1.0139678823562275
+S1 others base-stock (tuned),Factory,P2 tuned,6,491.5539302004245,1.0554925047059514
+S1 others base-stock (tuned),Factory,P2 tuned,7,554.7161237812963,0.9817235771379547
+S1 others base-stock (tuned),Factory,P2 tuned,8,675.0813233792314,1.0299320215962193
+S1 others base-stock (tuned),Factory,P2 tuned,9,640.6392003004878,0.9850910841381952
+S1 others base-stock (tuned),Factory,P2 tuned,10,390.8650370894213,0.9892456625717424
+S1 others base-stock (tuned),Factory,P2 tuned,11,529.0776290753118,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,12,389.5199054520018,0.9812802318966992
+S1 others base-stock (tuned),Factory,P2 tuned,13,357.6796761098679,0.9850458283265454
+S1 others base-stock (tuned),Factory,P2 tuned,14,358.0042243342364,1.0064043253061907
+S1 others base-stock (tuned),Factory,P2 tuned,15,512.5189062180104,1.0075851846309944
+S1 others base-stock (tuned),Factory,P2 tuned,16,528.051731228746,0.9898681073015277
+S1 others base-stock (tuned),Factory,P2 tuned,17,388.13958770845096,1.0162581152941526
+S1 others base-stock (tuned),Factory,P2 tuned,18,975.6582785613547,1.0257485357006098
+S1 others base-stock (tuned),Factory,P2 tuned,19,501.7016994406094,0.9823003738816307
+S1 others base-stock (tuned),Factory,P2 tuned,20,450.59163081855013,1.0250936387902483
+S1 others base-stock (tuned),Factory,P2 tuned,21,454.29011906701953,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,22,348.55266672928957,0.9921561444040736
+S1 others base-stock (tuned),Factory,P2 tuned,23,546.9559854585776,1.0171435262631332
+S1 others base-stock (tuned),Factory,P2 tuned,24,443.4492550726069,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,25,379.06336814344064,1.0021602370791742
+S1 others base-stock (tuned),Factory,P2 tuned,26,331.7859655727995,0.9739845178233523
+S1 others base-stock (tuned),Factory,P2 tuned,27,728.5550384232463,1.0023324680490018
+S1 others base-stock (tuned),Factory,P2 tuned,28,350.6976177622724,0.997961837524968
+S1 others base-stock (tuned),Factory,P2 tuned,29,373.895189422552,0.9887912167823059
+S1 others base-stock (tuned),Factory,P2 tuned,30,557.958458863596,0.9594773154114574
+S1 others base-stock (tuned),Factory,P2 tuned,31,495.1565966980025,0.9751538306211044
+S1 others base-stock (tuned),Factory,P2 tuned,32,451.2533485831541,1.003079179112131
+S1 others base-stock (tuned),Factory,P2 tuned,33,324.2821786266412,0.9955492604303946
+S1 others base-stock (tuned),Factory,P2 tuned,34,626.0476739331075,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,35,333.82141755459037,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,36,487.84479532551865,0.9944570098417784
+S1 others base-stock (tuned),Factory,P2 tuned,37,484.41381279490236,1.0012967393730792
+S1 others base-stock (tuned),Factory,P2 tuned,38,733.9495667423282,1.0171067507321563
+S1 others base-stock (tuned),Factory,P2 tuned,39,521.2872285282202,1.026490469401809
+S1 others base-stock (tuned),Factory,P2 tuned,40,515.1141863762649,1.0055788895073625
+S1 others base-stock (tuned),Factory,P2 tuned,41,528.6382856682319,1.0269354671966087
+S1 others base-stock (tuned),Factory,P2 tuned,42,542.4145584550054,0.9722058555520832
+S1 others base-stock (tuned),Factory,P2 tuned,43,462.928020224275,0.9999999999999999
+S1 others base-stock (tuned),Factory,P2 tuned,44,500.3512576987839,1.0594782151137045
+S1 others base-stock (tuned),Factory,P2 tuned,45,424.6744902170249,0.9999999999999999
+S1 others base-stock (tuned),Factory,P2 tuned,46,527.1553549237656,1.0074280032100809
+S1 others base-stock (tuned),Factory,P2 tuned,47,768.6336923557362,1.026605757793
+S1 others base-stock (tuned),Factory,P2 tuned,48,494.3590393732568,0.9825048159751301
+S1 others base-stock (tuned),Factory,P2 tuned,49,409.9661850832664,1.0478708604580118
+S1 others base-stock (tuned),Factory,P2 tuned,50,415.30716258342613,1.0128320099872186
+S1 others base-stock (tuned),Factory,P2 tuned,51,735.3282678593805,1.0030694030488922
+S1 others base-stock (tuned),Factory,P2 tuned,52,375.41609921448696,1.0368073999041911
+S1 others base-stock (tuned),Factory,P2 tuned,53,402.69686854750904,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,54,421.2699933137362,1.005397604264759
+S1 others base-stock (tuned),Factory,P2 tuned,55,409.27407829191134,1.0186143030244383
+S1 others base-stock (tuned),Factory,P2 tuned,56,535.5075006394201,0.977817094770237
+S1 others base-stock (tuned),Factory,P2 tuned,57,401.29229001018786,1.0028137327641014
+S1 others base-stock (tuned),Factory,P2 tuned,58,320.0541074332697,0.999549804694731
+S1 others base-stock (tuned),Factory,P2 tuned,59,604.1469187786334,1.02497043853853
+S1 others base-stock (tuned),Factory,P2 tuned,60,422.9819350416474,0.9903005394918617
+S1 others base-stock (tuned),Factory,P2 tuned,61,455.5549043545118,1.0053458431653048
+S1 others base-stock (tuned),Factory,P2 tuned,62,479.404919274237,1.008902415097717
+S1 others base-stock (tuned),Factory,P2 tuned,63,815.9865917046604,1.0085317040101047
+S1 others base-stock (tuned),Factory,P2 tuned,64,634.7509942868539,0.987468800296345
+S1 others base-stock (tuned),Factory,P2 tuned,65,668.7621363536035,0.9811172532589009
+S1 others base-stock (tuned),Factory,P2 tuned,66,535.0199190644739,1.0567131252429383
+S1 others base-stock (tuned),Factory,P2 tuned,67,858.2295910329528,1.0175875266930132
+S1 others base-stock (tuned),Factory,P2 tuned,68,607.6442962874627,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,69,571.7393451681321,0.9923817130193766
+S1 others base-stock (tuned),Factory,P2 tuned,70,392.3079499796496,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,71,439.7563304613121,0.9999999999999999
+S1 others base-stock (tuned),Factory,P2 tuned,72,342.34817092296953,1.0151566686079996
+S1 others base-stock (tuned),Factory,P2 tuned,73,572.5883374566065,1.0720350046817964
+S1 others base-stock (tuned),Factory,P2 tuned,74,585.4033538406502,0.9900733683908668
+S1 others base-stock (tuned),Factory,P2 tuned,75,461.10477316109996,0.9999999999999997
+S1 others base-stock (tuned),Factory,P2 tuned,76,439.17320073644294,1.0236744756562652
+S1 others base-stock (tuned),Factory,P2 tuned,77,890.8936856592074,0.9999999999999999
+S1 others base-stock (tuned),Factory,P2 tuned,78,326.3257327956564,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,79,1081.194095180848,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,80,416.76231612013027,1.016798034224598
+S1 others base-stock (tuned),Factory,P2 tuned,81,350.15233988471346,1.0047900346113163
+S1 others base-stock (tuned),Factory,P2 tuned,82,462.6405283200655,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,83,366.72831370280556,0.9863108221175712
+S1 others base-stock (tuned),Factory,P2 tuned,84,438.7483722134814,1.0312586787945843
+S1 others base-stock (tuned),Factory,P2 tuned,85,750.8167693210195,0.9208197457196763
+S1 others base-stock (tuned),Factory,P2 tuned,86,537.8699827804644,0.973256561458084
+S1 others base-stock (tuned),Factory,P2 tuned,87,522.3092905783532,1.044442052625736
+S1 others base-stock (tuned),Factory,P2 tuned,88,612.0432507134169,1.0000000000000002
+S1 others base-stock (tuned),Factory,P2 tuned,89,519.2731111647522,1.0317019855073708
+S1 others base-stock (tuned),Factory,P2 tuned,90,655.9242545502111,1.0252073303237101
+S1 others base-stock (tuned),Factory,P2 tuned,91,384.73590284492104,0.987347763591548
+S1 others base-stock (tuned),Factory,P2 tuned,92,516.6761444684514,1.0392751668801787
+S1 others base-stock (tuned),Factory,P2 tuned,93,366.3358671997038,1.0269045515582589
+S1 others base-stock (tuned),Factory,P2 tuned,94,626.2977811808016,0.9876567548794413
+S1 others base-stock (tuned),Factory,P2 tuned,95,501.5620584549886,0.9999999999999999
+S1 others base-stock (tuned),Factory,P2 tuned,96,426.65414360402247,1.0
+S1 others base-stock (tuned),Factory,P2 tuned,97,336.72397724205246,0.9865364765489402
+S1 others base-stock (tuned),Factory,P2 tuned,98,449.38418156099794,1.025368591069781
+S1 others base-stock (tuned),Factory,P2 tuned,99,484.8940601184033,0.9704451654224392
+S1 others base-stock (tuned),Factory,P2 tuned,100,370.48970030849705,1.0000000000000002
+S1 others base-stock (tuned),Factory,P0 placeholder,1,772.9156625793199,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,2,674.0952325116872,0.9967518350110495
+S1 others base-stock (tuned),Factory,P0 placeholder,3,793.6368300868319,1.0320628691206741
+S1 others base-stock (tuned),Factory,P0 placeholder,4,705.5589887386759,0.9728424616564613
+S1 others base-stock (tuned),Factory,P0 placeholder,5,651.7798512522979,1.0139678823562275
+S1 others base-stock (tuned),Factory,P0 placeholder,6,747.3726822053015,1.0268536598840134
+S1 others base-stock (tuned),Factory,P0 placeholder,7,801.3961375626373,0.9817235771379548
+S1 others base-stock (tuned),Factory,P0 placeholder,8,854.7351281027094,1.0299320215962193
+S1 others base-stock (tuned),Factory,P0 placeholder,9,843.9922918336781,0.9850910841381952
+S1 others base-stock (tuned),Factory,P0 placeholder,10,674.8650370894213,0.9892456625717424
+S1 others base-stock (tuned),Factory,P0 placeholder,11,774.1978622802537,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,12,680.5199054520018,0.9812802318966992
+S1 others base-stock (tuned),Factory,P0 placeholder,13,645.9237113400561,0.9850458283265454
+S1 others base-stock (tuned),Factory,P0 placeholder,14,644.5042243342364,1.0064043253061907
+S1 others base-stock (tuned),Factory,P0 placeholder,15,735.6490276421969,1.0075851846309944
+S1 others base-stock (tuned),Factory,P0 placeholder,16,778.051731228746,0.9898681073015277
+S1 others base-stock (tuned),Factory,P0 placeholder,17,671.139587708451,1.0113248234723364
+S1 others base-stock (tuned),Factory,P0 placeholder,18,1059.1350104968683,1.0132125194064925
+S1 others base-stock (tuned),Factory,P0 placeholder,19,758.4918811654034,0.9823003738816307
+S1 others base-stock (tuned),Factory,P0 placeholder,20,725.5916308185501,1.0250936387902483
+S1 others base-stock (tuned),Factory,P0 placeholder,21,743.0037919194704,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,22,662.0526667292895,0.9921561444040736
+S1 others base-stock (tuned),Factory,P0 placeholder,23,767.9877145095331,1.0171435262631332
+S1 others base-stock (tuned),Factory,P0 placeholder,24,731.9492550726069,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,25,655.852432176705,1.0021602370791742
+S1 others base-stock (tuned),Factory,P0 placeholder,26,622.7859655727996,0.9739845178233523
+S1 others base-stock (tuned),Factory,P0 placeholder,27,892.0708825816238,1.0031876336653114
+S1 others base-stock (tuned),Factory,P0 placeholder,28,654.1976177622723,0.997961837524968
+S1 others base-stock (tuned),Factory,P0 placeholder,29,669.7249790984017,0.9887912167823059
+S1 others base-stock (tuned),Factory,P0 placeholder,30,787.7056021930038,0.968378089466531
+S1 others base-stock (tuned),Factory,P0 placeholder,31,772.1565966980024,0.9751538306211044
+S1 others base-stock (tuned),Factory,P0 placeholder,32,751.2533485831541,1.003079179112131
+S1 others base-stock (tuned),Factory,P0 placeholder,33,620.7821786266412,0.9955492604303946
+S1 others base-stock (tuned),Factory,P0 placeholder,34,845.9411250248014,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,35,640.8214175545904,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,36,728.7738858023376,0.9944570098417783
+S1 others base-stock (tuned),Factory,P0 placeholder,37,741.4138127949024,1.0012967393730792
+S1 others base-stock (tuned),Factory,P0 placeholder,38,909.4938693933423,1.0125651245573168
+S1 others base-stock (tuned),Factory,P0 placeholder,39,750.953714925349,1.021925538976064
+S1 others base-stock (tuned),Factory,P0 placeholder,40,755.6344369041458,1.0055788895073625
+S1 others base-stock (tuned),Factory,P0 placeholder,41,756.7245143387147,1.0269354671966087
+S1 others base-stock (tuned),Factory,P0 placeholder,42,793.9145584550054,0.9722058555520832
+S1 others base-stock (tuned),Factory,P0 placeholder,43,734.428020224275,0.9999999999999999
+S1 others base-stock (tuned),Factory,P0 placeholder,44,752.5610641984276,1.0448073697304014
+S1 others base-stock (tuned),Factory,P0 placeholder,45,710.6744902170249,0.9999999999999999
+S1 others base-stock (tuned),Factory,P0 placeholder,46,760.4934250825311,1.0074280032100809
+S1 others base-stock (tuned),Factory,P0 placeholder,47,914.2717865350224,1.0219789852862817
+S1 others base-stock (tuned),Factory,P0 placeholder,48,753.8590393732568,0.9825048159751301
+S1 others base-stock (tuned),Factory,P0 placeholder,49,704.9661850832664,1.0219112704541986
+S1 others base-stock (tuned),Factory,P0 placeholder,50,697.3071625834261,1.0128320099872186
+S1 others base-stock (tuned),Factory,P0 placeholder,51,911.3282678593805,1.0187423624715313
+S1 others base-stock (tuned),Factory,P0 placeholder,52,662.4160992144868,1.0368073999041911
+S1 others base-stock (tuned),Factory,P0 placeholder,53,675.696868547509,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,54,670.1320968028703,1.005397604264759
+S1 others base-stock (tuned),Factory,P0 placeholder,55,673.2740782919113,1.0186143030244383
+S1 others base-stock (tuned),Factory,P0 placeholder,56,769.3940978429739,0.977817094770237
+S1 others base-stock (tuned),Factory,P0 placeholder,57,677.7922900101878,1.0028137327641014
+S1 others base-stock (tuned),Factory,P0 placeholder,58,628.5541074332697,0.999549804694731
+S1 others base-stock (tuned),Factory,P0 placeholder,59,804.6469187786334,1.02497043853853
+S1 others base-stock (tuned),Factory,P0 placeholder,60,703.9819350416474,0.9903005394918617
+S1 others base-stock (tuned),Factory,P0 placeholder,61,749.5549043545118,1.0001848988767728
+S1 others base-stock (tuned),Factory,P0 placeholder,62,720.404919274237,1.008902415097717
+S1 others base-stock (tuned),Factory,P0 placeholder,63,938.7655687260385,1.0127164828649184
+S1 others base-stock (tuned),Factory,P0 placeholder,64,847.0578785840063,0.987468800296345
+S1 others base-stock (tuned),Factory,P0 placeholder,65,880.0838920030626,0.9811172532589009
+S1 others base-stock (tuned),Factory,P0 placeholder,66,811.5199190644739,1.0567131252429383
+S1 others base-stock (tuned),Factory,P0 placeholder,67,978.4298930661021,1.0175875266930132
+S1 others base-stock (tuned),Factory,P0 placeholder,68,815.6442962874628,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,69,788.2393451681321,0.9923817130193766
+S1 others base-stock (tuned),Factory,P0 placeholder,70,663.8079499796496,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,71,711.756330461312,0.9999999999999999
+S1 others base-stock (tuned),Factory,P0 placeholder,72,629.1984705719473,1.0151566686079996
+S1 others base-stock (tuned),Factory,P0 placeholder,73,807.987236281432,1.0720350046817964
+S1 others base-stock (tuned),Factory,P0 placeholder,74,795.3973455820283,0.9900733683908668
+S1 others base-stock (tuned),Factory,P0 placeholder,75,737.1047731611,0.9999999999999997
+S1 others base-stock (tuned),Factory,P0 placeholder,76,726.2492559814652,1.0236744756562652
+S1 others base-stock (tuned),Factory,P0 placeholder,77,1024.5904479609108,0.9999999999999998
+S1 others base-stock (tuned),Factory,P0 placeholder,78,616.8257327956564,1.0000000000000002
+S1 others base-stock (tuned),Factory,P0 placeholder,79,1103.3213256948102,1.0000000000000002
+S1 others base-stock (tuned),Factory,P0 placeholder,80,676.9589703732237,1.016798034224598
+S1 others base-stock (tuned),Factory,P0 placeholder,81,660.1523398847135,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,82,742.1405283200655,1.0000000000000002
+S1 others base-stock (tuned),Factory,P0 placeholder,83,665.7283137028055,0.9863108221175712
+S1 others base-stock (tuned),Factory,P0 placeholder,84,703.7483722134814,1.0312586787945843
+S1 others base-stock (tuned),Factory,P0 placeholder,85,909.8167693210195,0.9413220125840548
+S1 others base-stock (tuned),Factory,P0 placeholder,86,780.8445656238579,0.973256561458084
+S1 others base-stock (tuned),Factory,P0 placeholder,87,772.5776645446529,1.029305211283334
+S1 others base-stock (tuned),Factory,P0 placeholder,88,820.0367692428925,1.0000000000000002
+S1 others base-stock (tuned),Factory,P0 placeholder,89,752.4713393638928,1.0317019855073708
+S1 others base-stock (tuned),Factory,P0 placeholder,90,854.6538555858724,1.0252073303237101
+S1 others base-stock (tuned),Factory,P0 placeholder,91,677.735902844921,0.987347763591548
+S1 others base-stock (tuned),Factory,P0 placeholder,92,762.615017223096,1.0392751668801787
+S1 others base-stock (tuned),Factory,P0 placeholder,93,660.3358671997038,1.0220581839367477
+S1 others base-stock (tuned),Factory,P0 placeholder,94,851.998261335363,0.9804020804998476
+S1 others base-stock (tuned),Factory,P0 placeholder,95,730.0620584549886,0.9999999999999999
+S1 others base-stock (tuned),Factory,P0 placeholder,96,711.1541436040225,1.0
+S1 others base-stock (tuned),Factory,P0 placeholder,97,627.7239772420525,0.9865364765489402
+S1 others base-stock (tuned),Factory,P0 placeholder,98,685.1757958922549,1.025368591069781
+S1 others base-stock (tuned),Factory,P0 placeholder,99,724.8940601184033,0.9902692923315396
+S1 others base-stock (tuned),Factory,P0 placeholder,100,661.489700308497,1.0000000000000002
+S2 others human-like,Retailer,P1 tuned,1,1341.7633218932117,0.9999999999999999
+S2 others human-like,Retailer,P1 tuned,2,1112.96168625683,0.992375912990749
+S2 others human-like,Retailer,P1 tuned,3,1423.5774113784705,1.0187045837235575
+S2 others human-like,Retailer,P1 tuned,4,1239.7853261266293,0.9821706047466278
+S2 others human-like,Retailer,P1 tuned,5,1184.3831276878732,1.0187589644835209
+S2 others human-like,Retailer,P1 tuned,6,1352.5196087703334,1.01190585037514
+S2 others human-like,Retailer,P1 tuned,7,1291.5957036399896,0.9770872928269954
+S2 others human-like,Retailer,P1 tuned,8,1453.8747232628743,1.0345276866327233
+S2 others human-like,Retailer,P1 tuned,9,1238.5374456055797,0.9807384269025919
+S2 others human-like,Retailer,P1 tuned,10,1160.006892429508,0.9845127939495699
+S2 others human-like,Retailer,P1 tuned,11,1172.3625327883017,1.002151951351707
+S2 others human-like,Retailer,P1 tuned,12,1194.333698008567,0.977097992633775
+S2 others human-like,Retailer,P1 tuned,13,1192.0917671337054,0.9850458283265454
+S2 others human-like,Retailer,P1 tuned,14,1206.5067066486379,1.0112301343300298
+S2 others human-like,Retailer,P1 tuned,15,1143.7023489215949,1.0075851846309944
+S2 others human-like,Retailer,P1 tuned,16,1240.9722964494508,0.9801780040372212
+S2 others human-like,Retailer,P1 tuned,17,1298.6797597888144,1.00639153165052
+S2 others human-like,Retailer,P1 tuned,18,1345.4984447468216,1.0132125194064925
+S2 others human-like,Retailer,P1 tuned,19,1385.1939321242721,0.9736839666560207
+S2 others human-like,Retailer,P1 tuned,20,1351.9097499780619,1.030341298485787
+S2 others human-like,Retailer,P1 tuned,21,1396.8138192783176,1.00220797301812
+S2 others human-like,Retailer,P1 tuned,22,1285.9984235006373,0.9871504658226266
+S2 others human-like,Retailer,P1 tuned,23,1315.5695605795036,1.0
+S2 others human-like,Retailer,P1 tuned,24,1223.3878793260099,1.0
+S2 others human-like,Retailer,P1 tuned,25,1189.981989510734,1.0127049821258833
+S2 others human-like,Retailer,P1 tuned,26,1173.2740558790797,0.9693336768996195
+S2 others human-like,Retailer,P1 tuned,27,1427.3846253874876,1.0118284308036647
+S2 others human-like,Retailer,P1 tuned,28,1195.771614235227,1.0029516467125927
+S2 others human-like,Retailer,P1 tuned,29,1216.6745625724616,0.9839891321300442
+S2 others human-like,Retailer,P1 tuned,30,1398.3420428374884,0.9772788635216045
+S2 others human-like,Retailer,P1 tuned,31,1367.6583661311374,0.9654508074308444
+S2 others human-like,Retailer,P1 tuned,32,1246.0609193375751,1.0085459605041351
+S2 others human-like,Retailer,P1 tuned,33,1084.9940942849885,0.9994882875986854
+S2 others human-like,Retailer,P1 tuned,34,1401.5824298430312,1.0000000000000002
+S2 others human-like,Retailer,P1 tuned,35,1137.1825485194522,1.0
+S2 others human-like,Retailer,P1 tuned,36,1243.0806704312656,0.9855821125427285
+S2 others human-like,Retailer,P1 tuned,37,1225.6959838945359,1.0196691566092824
+S2 others human-like,Retailer,P1 tuned,38,1379.4137114715995,1.0080234983824772
+S2 others human-like,Retailer,P1 tuned,39,1227.6223862579031,1.0310553998275545
+S2 others human-like,Retailer,P1 tuned,40,1177.0429294331589,1.0055788895073627
+S2 others human-like,Retailer,P1 tuned,41,1274.1565851377477,1.017312109264029
+S2 others human-like,Retailer,P1 tuned,42,1130.032569511792,0.997248991942413
+S2 others human-like,Retailer,P1 tuned,43,1224.5022948764647,1.0
+S2 others human-like,Retailer,P1 tuned,44,1366.5944718877881,1.0000000000000004
+S2 others human-like,Retailer,P1 tuned,45,1194.4765252674795,0.9999999999999997
+S2 others human-like,Retailer,P1 tuned,46,1221.7349810793548,1.0118856492419839
+S2 others human-like,Retailer,P1 tuned,47,1545.6028352447586,1.0312325302997178
+S2 others human-like,Retailer,P1 tuned,48,1228.2686058852194,0.9790328305759634
+S2 others human-like,Retailer,P1 tuned,49,1195.6650998815721,1.0271031884549613
+S2 others human-like,Retailer,P1 tuned,50,1195.836696934263,1.0231494348307602
+S2 others human-like,Retailer,P1 tuned,51,1424.047906232159,1.0366222366996336
+S2 others human-like,Retailer,P1 tuned,52,1204.4547191943548,1.0261653907275772
+S2 others human-like,Retailer,P1 tuned,53,1280.1714648945583,1.0000000000000002
+S2 others human-like,Retailer,P1 tuned,54,1180.7394478858105,1.005397604264759
+S2 others human-like,Retailer,P1 tuned,55,1181.406340073992,1.0186143030244386
+S2 others human-like,Retailer,P1 tuned,56,1268.3029091835622,0.9911509642443768
+S2 others human-like,Retailer,P1 tuned,57,1216.731493746878,0.9936136067754399
+S2 others human-like,Retailer,P1 tuned,58,1119.0119123592112,0.9995498046947308
+S2 others human-like,Retailer,P1 tuned,59,1367.1951536024108,1.0342902205566316
+S2 others human-like,Retailer,P1 tuned,60,1299.261645969042,0.9852770171766527
+S2 others human-like,Retailer,P1 tuned,61,1421.5873829051582,1.0053458431653048
+S2 others human-like,Retailer,P1 tuned,62,1154.6873848647358,0.9999999999999999
+S2 others human-like,Retailer,P1 tuned,63,1287.9331674247458,1.01696793126165
+S2 others human-like,Retailer,P1 tuned,64,1460.3296935650785,0.983006293586837
+S2 others human-like,Retailer,P1 tuned,65,1450.6900869324954,0.9721553594180209
+S2 others human-like,Retailer,P1 tuned,66,1371.776688181652,1.0340380860026896
+S2 others human-like,Retailer,P1 tuned,67,1262.4296302395219,1.0219801809843707
+S2 others human-like,Retailer,P1 tuned,68,1184.6151739963589,0.9998479197668737
+S2 others human-like,Retailer,P1 tuned,69,1268.1181251898608,0.996928140452782
+S2 others human-like,Retailer,P1 tuned,70,1260.3945658258704,1.0
+S2 others human-like,Retailer,P1 tuned,71,1238.9314367976224,1.0
+S2 others human-like,Retailer,P1 tuned,72,1171.1671635904222,1.005800385948018
+S2 others human-like,Retailer,P1 tuned,73,1236.458789097001,1.0614982513427766
+S2 others human-like,Retailer,P1 tuned,74,1172.1703203084571,0.9768134572070606
+S2 others human-like,Retailer,P1 tuned,75,1358.4867157781773,1.0052442030016993
+S2 others human-like,Retailer,P1 tuned,76,1284.9436694864062,1.0287774611223672
+S2 others human-like,Retailer,P1 tuned,77,1426.3454488433736,0.9982548211098409
+S2 others human-like,Retailer,P1 tuned,78,1147.3119752279385,0.999369967284451
+S2 others human-like,Retailer,P1 tuned,79,1373.0273490739173,1.0000000000000002
+S2 others human-like,Retailer,P1 tuned,80,1183.2426089014878,1.021626910138518
+S2 others human-like,Retailer,P1 tuned,81,1314.3120195206725,1.0047900346113163
+S2 others human-like,Retailer,P1 tuned,82,1293.3374548396007,1.0000000000000002
+S2 others human-like,Retailer,P1 tuned,83,1191.7852215973232,0.9814307265792738
+S2 others human-like,Retailer,P1 tuned,84,1342.011211900925,0.9840278791063866
+S2 others human-like,Retailer,P1 tuned,85,1160.5441776285188,0.9782260929399359
+S2 others human-like,Retailer,P1 tuned,86,1398.7757700523352,0.9697961605530591
+S2 others human-like,Retailer,P1 tuned,87,1301.6517854465706,1.0293052112833339
+S2 others human-like,Retailer,P1 tuned,88,1387.8383381693743,1.0000000000000002
+S2 others human-like,Retailer,P1 tuned,89,1427.8917334626126,0.9934908008589497
+S2 others human-like,Retailer,P1 tuned,90,1317.8722920016858,0.9896761144661921
+S2 others human-like,Retailer,P1 tuned,91,1173.3137639316874,0.9924110854561201
+S2 others human-like,Retailer,P1 tuned,92,1320.6819487307855,1.0443457149927413
+S2 others human-like,Retailer,P1 tuned,93,1245.7290214798618,1.007519081072214
+S2 others human-like,Retailer,P1 tuned,94,1313.4259286308609,0.9758715449270059
+S2 others human-like,Retailer,P1 tuned,95,1204.0980623446078,1.0034053007834505
+S2 others human-like,Retailer,P1 tuned,96,1183.9202707272366,1.0
+S2 others human-like,Retailer,P1 tuned,97,1152.8141531178037,0.9820926185464678
+S2 others human-like,Retailer,P1 tuned,98,1233.3881961986258,1.002648631187842
+S2 others human-like,Retailer,P1 tuned,99,1161.4136294054206,0.9853132606042645
+S2 others human-like,Retailer,P1 tuned,100,1170.0433655667343,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,1,1274.8287310655903,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,2,1093.5931998218193,1.0
+S2 others human-like,Retailer,P2 tuned,3,1376.4310492664756,1.0166279511854686
+S2 others human-like,Retailer,P2 tuned,4,1214.056721428597,0.9914987478367943
+S2 others human-like,Retailer,P2 tuned,5,1162.8818336014756,1.0139678823562277
+S2 others human-like,Retailer,P2 tuned,6,1289.1379893397643,1.002987955865732
+S2 others human-like,Retailer,P2 tuned,7,1247.9270513436377,0.9863598614489146
+S2 others human-like,Retailer,P2 tuned,8,1335.0924187502715,1.0253363565597153
+S2 others human-like,Retailer,P2 tuned,9,1208.655208807705,0.9850910841381952
+S2 others human-like,Retailer,P2 tuned,10,1136.4216423658022,0.9939785311939149
+S2 others human-like,Retailer,P2 tuned,11,1157.2074248077206,1.0000000000000004
+S2 others human-like,Retailer,P2 tuned,12,1188.5783498619753,0.9812802318966992
+S2 others human-like,Retailer,P2 tuned,13,1157.5989138572133,0.9916048620369974
+S2 others human-like,Retailer,P2 tuned,14,1160.1421148654435,1.0064043253061912
+S2 others human-like,Retailer,P2 tuned,15,1130.108786117201,0.9982986852334738
+S2 others human-like,Retailer,P2 tuned,16,1217.9461674835427,0.989868107301528
+S2 others human-like,Retailer,P2 tuned,17,1250.4432610444478,1.0113248234723364
+S2 others human-like,Retailer,P2 tuned,18,1310.6620933080906,1.000676503112375
+S2 others human-like,Retailer,P2 tuned,19,1298.7521609239266,0.9776637835642208
+S2 others human-like,Retailer,P2 tuned,20,1292.4610422955902,1.0303412984857867
+S2 others human-like,Retailer,P2 tuned,21,1309.5941484011369,1.00220797301812
+S2 others human-like,Retailer,P2 tuned,22,1205.1561703054745,0.9971618229855206
+S2 others human-like,Retailer,P2 tuned,23,1225.6596176436024,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,24,1235.7267393490283,1.0
+S2 others human-like,Retailer,P2 tuned,25,1153.1903541083677,1.0127049821258833
+S2 others human-like,Retailer,P2 tuned,26,1146.7335571163462,0.9739845178233522
+S2 others human-like,Retailer,P2 tuned,27,1268.8902781807606,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,28,1179.7304384196723,1.019514633343279
+S2 others human-like,Retailer,P2 tuned,29,1215.5973217809587,0.9887912167823061
+S2 others human-like,Retailer,P2 tuned,30,1285.6859774005889,0.9861796375766781
+S2 others human-like,Retailer,P2 tuned,31,1308.194465943792,0.9592072917740342
+S2 others human-like,Retailer,P2 tuned,32,1216.9007055870206,1.0030791791121307
+S2 others human-like,Retailer,P2 tuned,33,1083.5618118339153,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,34,1289.1374236255347,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,35,1159.0875955164554,1.0
+S2 others human-like,Retailer,P2 tuned,36,1165.4219931414646,0.9988944584913033
+S2 others human-like,Retailer,P2 tuned,37,1152.7639468939456,1.0104829479911808
+S2 others human-like,Retailer,P2 tuned,38,1283.4983040387297,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,39,1187.3454886379081,1.0356203302532996
+S2 others human-like,Retailer,P2 tuned,40,1154.0573660459459,1.0082385819776918
+S2 others human-like,Retailer,P2 tuned,41,1229.6777240762276,1.0076887513314485
+S2 others human-like,Retailer,P2 tuned,42,1104.304585226469,1.0
+S2 others human-like,Retailer,P2 tuned,43,1211.8837922919329,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,44,1316.3643182610078,1.0000000000000004
+S2 others human-like,Retailer,P2 tuned,45,1190.2751727322732,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,46,1185.627960360727,1.0074280032100809
+S2 others human-like,Retailer,P2 tuned,47,1390.849376058298,1.0219789852862815
+S2 others human-like,Retailer,P2 tuned,48,1233.110239514021,0.9919640703768302
+S2 others human-like,Retailer,P2 tuned,49,1188.4993640138023,1.0063355164519106
+S2 others human-like,Retailer,P2 tuned,50,1182.7454456465637,1.0179907224089897
+S2 others human-like,Retailer,P2 tuned,51,1254.9870322890345,1.0366222366996334
+S2 others human-like,Retailer,P2 tuned,52,1202.4331215706306,1.015523381550963
+S2 others human-like,Retailer,P2 tuned,53,1212.9203444994387,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,54,1125.1829317525937,1.018743590162079
+S2 others human-like,Retailer,P2 tuned,55,1143.3361624270185,1.0186143030244383
+S2 others human-like,Retailer,P2 tuned,56,1166.4441069625348,0.9911509642443767
+S2 others human-like,Retailer,P2 tuned,57,1161.7642546485877,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,58,1132.595566547563,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,59,1248.0898903615653,1.02497043853853
+S2 others human-like,Retailer,P2 tuned,60,1214.0467121733818,0.9953240618070706
+S2 others human-like,Retailer,P2 tuned,61,1358.194937463083,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,62,1148.2436752542433,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,63,1177.1947273381334,1.0085983735520225
+S2 others human-like,Retailer,P2 tuned,64,1353.5935794596571,0.983006293586837
+S2 others human-like,Retailer,P2 tuned,65,1264.4028579362034,0.9811172532589009
+S2 others human-like,Retailer,P2 tuned,66,1372.9241181986663,1.0340380860026899
+S2 others human-like,Retailer,P2 tuned,67,1221.0870443722085,1.013194872401656
+S2 others human-like,Retailer,P2 tuned,68,1142.479457719136,1.0
+S2 others human-like,Retailer,P2 tuned,69,1212.6587355329357,0.9969281404527818
+S2 others human-like,Retailer,P2 tuned,70,1164.3653689378327,1.0
+S2 others human-like,Retailer,P2 tuned,71,1168.868120899119,1.0
+S2 others human-like,Retailer,P2 tuned,72,1140.1158936282077,1.0123620910167694
+S2 others human-like,Retailer,P2 tuned,73,1205.0402117643016,1.0509614980037572
+S2 others human-like,Retailer,P2 tuned,74,1139.3873184257354,0.9900733683908668
+S2 others human-like,Retailer,P2 tuned,75,1306.6079712514288,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,76,1253.607007092475,1.0287774611223668
+S2 others human-like,Retailer,P2 tuned,77,1387.625573391057,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,78,1165.5396474801842,1.0
+S2 others human-like,Retailer,P2 tuned,79,1264.3049556425678,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,80,1156.4552051982923,1.016798034224598
+S2 others human-like,Retailer,P2 tuned,81,1331.8712987450456,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,82,1276.429280545799,1.0000000000000002
+S2 others human-like,Retailer,P2 tuned,83,1210.6806618160026,0.9906593942744075
+S2 others human-like,Retailer,P2 tuned,84,1313.9159510424631,0.9998124507205894
+S2 others human-like,Retailer,P2 tuned,85,1096.9621140746967,0.9823265463128116
+S2 others human-like,Retailer,P2 tuned,86,1325.6872225969928,0.982236155537279
+S2 others human-like,Retailer,P2 tuned,87,1302.3693321775002,1.0393964388449353
+S2 others human-like,Retailer,P2 tuned,88,1246.154348490748,1.0
+S2 others human-like,Retailer,P2 tuned,89,1345.352504375669,1.0030435970210552
+S2 others human-like,Retailer,P2 tuned,90,1253.943880699072,0.9941530023715357
+S2 others human-like,Retailer,P2 tuned,91,1151.9527840834319,0.9924110854561201
+S2 others human-like,Retailer,P2 tuned,92,1249.324799390939,1.034204618767616
+S2 others human-like,Retailer,P2 tuned,93,1255.377000668714,1.007519081072214
+S2 others human-like,Retailer,P2 tuned,94,1235.267471419771,0.9849326160726889
+S2 others human-like,Retailer,P2 tuned,95,1173.2782568624734,1.0
+S2 others human-like,Retailer,P2 tuned,96,1201.4235990667482,0.9999999999999999
+S2 others human-like,Retailer,P2 tuned,97,1120.0025718011289,0.9820926185464678
+S2 others human-like,Retailer,P2 tuned,98,1186.9582401094267,0.9999999999999998
+S2 others human-like,Retailer,P2 tuned,99,1145.569015033182,0.9902692923315395
+S2 others human-like,Retailer,P2 tuned,100,1140.1770553779645,1.0000000000000002
+S2 others human-like,Retailer,P0 placeholder,1,2093.909510293757,1.0
+S2 others human-like,Retailer,P0 placeholder,2,1446.8708026223571,1.0
+S2 others human-like,Retailer,P0 placeholder,3,1995.2291963643377,1.0
+S2 others human-like,Retailer,P0 placeholder,4,1842.4911916646242,1.0
+S2 others human-like,Retailer,P0 placeholder,5,1555.6967027495984,1.0
+S2 others human-like,Retailer,P0 placeholder,6,1875.4294170075127,1.0
+S2 others human-like,Retailer,P0 placeholder,7,1692.6794054671109,1.0
+S2 others human-like,Retailer,P0 placeholder,8,2287.6494614128933,1.0
+S2 others human-like,Retailer,P0 placeholder,9,1599.0662758552046,1.0
+S2 others human-like,Retailer,P0 placeholder,10,1574.0796772275069,1.0
+S2 others human-like,Retailer,P0 placeholder,11,1453.2902700081622,1.0
+S2 others human-like,Retailer,P0 placeholder,12,1587.5587185763386,1.0
+S2 others human-like,Retailer,P0 placeholder,13,1552.8733670295999,1.0
+S2 others human-like,Retailer,P0 placeholder,14,1504.093697627357,1.0
+S2 others human-like,Retailer,P0 placeholder,15,1580.5780690448,1.0
+S2 others human-like,Retailer,P0 placeholder,16,1637.3785469934392,1.0
+S2 others human-like,Retailer,P0 placeholder,17,2063.63972841316,1.0
+S2 others human-like,Retailer,P0 placeholder,18,1970.5870553056563,1.0
+S2 others human-like,Retailer,P0 placeholder,19,2059.036609055837,1.0
+S2 others human-like,Retailer,P0 placeholder,20,1877.4972580205883,1.0
+S2 others human-like,Retailer,P0 placeholder,21,2052.5834079643873,1.0
+S2 others human-like,Retailer,P0 placeholder,22,1678.8497053991646,1.0
+S2 others human-like,Retailer,P0 placeholder,23,2003.8906842235474,1.0
+S2 others human-like,Retailer,P0 placeholder,24,1790.2090321032856,1.0
+S2 others human-like,Retailer,P0 placeholder,25,1429.20998440252,1.0
+S2 others human-like,Retailer,P0 placeholder,26,1621.9580407806168,1.0
+S2 others human-like,Retailer,P0 placeholder,27,1936.8183768700248,1.0
+S2 others human-like,Retailer,P0 placeholder,28,1594.62754438816,1.0
+S2 others human-like,Retailer,P0 placeholder,29,1705.1245960802976,1.0
+S2 others human-like,Retailer,P0 placeholder,30,1911.9500157937725,1.0
+S2 others human-like,Retailer,P0 placeholder,31,2161.5361012725816,1.0
+S2 others human-like,Retailer,P0 placeholder,32,1559.2552801287939,1.0
+S2 others human-like,Retailer,P0 placeholder,33,1447.590842216222,1.0
+S2 others human-like,Retailer,P0 placeholder,34,2251.5211995966883,1.0
+S2 others human-like,Retailer,P0 placeholder,35,1489.961263534935,1.0
+S2 others human-like,Retailer,P0 placeholder,36,1652.2234166313588,1.0
+S2 others human-like,Retailer,P0 placeholder,37,1634.5052915189158,1.0
+S2 others human-like,Retailer,P0 placeholder,38,1856.4709313266728,1.0
+S2 others human-like,Retailer,P0 placeholder,39,1611.0803340229725,1.0
+S2 others human-like,Retailer,P0 placeholder,40,1619.2930049928102,1.0
+S2 others human-like,Retailer,P0 placeholder,41,1676.7530420839635,1.0
+S2 others human-like,Retailer,P0 placeholder,42,1420.5517927200071,1.0
+S2 others human-like,Retailer,P0 placeholder,43,1744.874899909941,1.0
+S2 others human-like,Retailer,P0 placeholder,44,1826.6748951547197,1.0
+S2 others human-like,Retailer,P0 placeholder,45,1676.597783589163,1.0
+S2 others human-like,Retailer,P0 placeholder,46,1715.61676654657,1.0
+S2 others human-like,Retailer,P0 placeholder,47,2712.630297850573,1.0
+S2 others human-like,Retailer,P0 placeholder,48,1643.4366192103262,1.0
+S2 others human-like,Retailer,P0 placeholder,49,1528.3128400014702,1.0
+S2 others human-like,Retailer,P0 placeholder,50,1716.7489576981484,1.0
+S2 others human-like,Retailer,P0 placeholder,51,2352.1142020424613,0.9999999999999999
+S2 others human-like,Retailer,P0 placeholder,52,1976.7136376994576,1.0
+S2 others human-like,Retailer,P0 placeholder,53,1726.567333787536,1.0
+S2 others human-like,Retailer,P0 placeholder,54,1568.6202149419312,1.0
+S2 others human-like,Retailer,P0 placeholder,55,1638.5225147263905,1.0
+S2 others human-like,Retailer,P0 placeholder,56,1971.4494408015048,1.0
+S2 others human-like,Retailer,P0 placeholder,57,1758.8068152251408,1.0
+S2 others human-like,Retailer,P0 placeholder,58,1430.7932120458347,1.0
+S2 others human-like,Retailer,P0 placeholder,59,2092.88597649441,1.0
+S2 others human-like,Retailer,P0 placeholder,60,1916.2504952938248,1.0
+S2 others human-like,Retailer,P0 placeholder,61,2209.684488838779,1.0
+S2 others human-like,Retailer,P0 placeholder,62,1477.8470012456783,1.0
+S2 others human-like,Retailer,P0 placeholder,63,1782.1799460758634,1.0
+S2 others human-like,Retailer,P0 placeholder,64,2113.3312651140864,1.0000000000000002
+S2 others human-like,Retailer,P0 placeholder,65,2135.4623102546147,1.0
+S2 others human-like,Retailer,P0 placeholder,66,2188.5559203549083,1.0
+S2 others human-like,Retailer,P0 placeholder,67,1590.9827046997032,1.0
+S2 others human-like,Retailer,P0 placeholder,68,1800.7421105353535,1.0
+S2 others human-like,Retailer,P0 placeholder,69,1976.5526660360374,1.0
+S2 others human-like,Retailer,P0 placeholder,70,1857.810157550111,1.0
+S2 others human-like,Retailer,P0 placeholder,71,1974.432017694877,1.0
+S2 others human-like,Retailer,P0 placeholder,72,1455.373684128025,1.0
+S2 others human-like,Retailer,P0 placeholder,73,1557.7365568503585,1.0
+S2 others human-like,Retailer,P0 placeholder,74,1693.6529922283494,1.0
+S2 others human-like,Retailer,P0 placeholder,75,2077.6696460084586,1.0
+S2 others human-like,Retailer,P0 placeholder,76,1787.0032281883787,1.0
+S2 others human-like,Retailer,P0 placeholder,77,2382.288817473136,1.0
+S2 others human-like,Retailer,P0 placeholder,78,1512.0824704462218,1.0
+S2 others human-like,Retailer,P0 placeholder,79,2499.887602349433,1.0
+S2 others human-like,Retailer,P0 placeholder,80,1804.1904623591759,1.0
+S2 others human-like,Retailer,P0 placeholder,81,1881.3648679695953,1.0
+S2 others human-like,Retailer,P0 placeholder,82,1597.0245052217701,1.0
+S2 others human-like,Retailer,P0 placeholder,83,2044.3673455817964,1.0
+S2 others human-like,Retailer,P0 placeholder,84,2015.2595996510079,1.0
+S2 others human-like,Retailer,P0 placeholder,85,1511.6185218478147,1.0
+S2 others human-like,Retailer,P0 placeholder,86,2250.903334916063,1.0
+S2 others human-like,Retailer,P0 placeholder,87,1746.6670331342284,1.0
+S2 others human-like,Retailer,P0 placeholder,88,2202.33617352235,1.0
+S2 others human-like,Retailer,P0 placeholder,89,2223.405083408988,1.0
+S2 others human-like,Retailer,P0 placeholder,90,1969.6854974198432,1.0
+S2 others human-like,Retailer,P0 placeholder,91,1512.887001115116,1.0
+S2 others human-like,Retailer,P0 placeholder,92,1777.7355586223466,1.0
+S2 others human-like,Retailer,P0 placeholder,93,1783.2728089259188,1.0
+S2 others human-like,Retailer,P0 placeholder,94,1820.1676325293527,1.0
+S2 others human-like,Retailer,P0 placeholder,95,1717.2791909118132,1.0
+S2 others human-like,Retailer,P0 placeholder,96,1582.2732599778442,1.0
+S2 others human-like,Retailer,P0 placeholder,97,1446.8396718861502,1.0
+S2 others human-like,Retailer,P0 placeholder,98,1671.9496172083063,1.0
+S2 others human-like,Retailer,P0 placeholder,99,1540.5266238989284,1.0
+S2 others human-like,Retailer,P0 placeholder,100,1617.7533903356998,1.0
+S2 others human-like,Wholesaler,P1 tuned,1,1391.909510293757,1.0
+S2 others human-like,Wholesaler,P1 tuned,2,1080.8708026223571,1.0
+S2 others human-like,Wholesaler,P1 tuned,3,1465.729196364338,1.0
+S2 others human-like,Wholesaler,P1 tuned,4,1288.4911916646242,1.0
+S2 others human-like,Wholesaler,P1 tuned,5,1171.6967027495984,1.0
+S2 others human-like,Wholesaler,P1 tuned,6,1385.4294170075127,1.0
+S2 others human-like,Wholesaler,P1 tuned,7,1321.1794054671109,1.0
+S2 others human-like,Wholesaler,P1 tuned,8,1655.8088413491027,1.0
+S2 others human-like,Wholesaler,P1 tuned,9,1244.0662758552046,1.0
+S2 others human-like,Wholesaler,P1 tuned,10,1207.0796772275066,1.0
+S2 others human-like,Wholesaler,P1 tuned,11,1180.2902700081625,1.0
+S2 others human-like,Wholesaler,P1 tuned,12,1215.5587185763386,1.0
+S2 others human-like,Wholesaler,P1 tuned,13,1192.8733670295999,1.0
+S2 others human-like,Wholesaler,P1 tuned,14,1162.0936976273572,1.0
+S2 others human-like,Wholesaler,P1 tuned,15,1210.5780690448,1.0
+S2 others human-like,Wholesaler,P1 tuned,16,1273.8785469934394,1.0
+S2 others human-like,Wholesaler,P1 tuned,17,1362.1397284131604,1.0
+S2 others human-like,Wholesaler,P1 tuned,18,1306.0870553056561,1.0
+S2 others human-like,Wholesaler,P1 tuned,19,1441.5366090558368,1.0
+S2 others human-like,Wholesaler,P1 tuned,20,1424.4972580205883,1.0
+S2 others human-like,Wholesaler,P1 tuned,21,1486.520889691572,1.0
+S2 others human-like,Wholesaler,P1 tuned,22,1308.3497053991646,1.0
+S2 others human-like,Wholesaler,P1 tuned,23,1324.3906842235474,1.0
+S2 others human-like,Wholesaler,P1 tuned,24,1352.2090321032856,1.0
+S2 others human-like,Wholesaler,P1 tuned,25,1135.20998440252,1.0
+S2 others human-like,Wholesaler,P1 tuned,26,1167.458040780617,1.0
+S2 others human-like,Wholesaler,P1 tuned,27,1399.3183768700246,1.0
+S2 others human-like,Wholesaler,P1 tuned,28,1237.62754438816,1.0
+S2 others human-like,Wholesaler,P1 tuned,29,1306.1245960802976,1.0
+S2 others human-like,Wholesaler,P1 tuned,30,1423.9500157937725,1.0
+S2 others human-like,Wholesaler,P1 tuned,31,1434.0361012725816,1.0
+S2 others human-like,Wholesaler,P1 tuned,32,1240.2552801287936,1.0
+S2 others human-like,Wholesaler,P1 tuned,33,1103.590842216222,1.0
+S2 others human-like,Wholesaler,P1 tuned,34,1535.0211995966881,1.0
+S2 others human-like,Wholesaler,P1 tuned,35,1171.961263534935,1.0
+S2 others human-like,Wholesaler,P1 tuned,36,1269.2234166313588,1.0
+S2 others human-like,Wholesaler,P1 tuned,37,1232.0052915189158,1.0
+S2 others human-like,Wholesaler,P1 tuned,38,1371.9709313266728,1.0
+S2 others human-like,Wholesaler,P1 tuned,39,1217.0803340229725,1.0
+S2 others human-like,Wholesaler,P1 tuned,40,1193.2930049928102,1.0
+S2 others human-like,Wholesaler,P1 tuned,41,1290.2530420839632,1.0
+S2 others human-like,Wholesaler,P1 tuned,42,1202.0517927200071,1.0
+S2 others human-like,Wholesaler,P1 tuned,43,1282.8748999099412,1.0
+S2 others human-like,Wholesaler,P1 tuned,44,1419.1748951547197,1.0
+S2 others human-like,Wholesaler,P1 tuned,45,1247.097783589163,1.0
+S2 others human-like,Wholesaler,P1 tuned,46,1210.11676654657,1.0
+S2 others human-like,Wholesaler,P1 tuned,47,1738.1896599137594,1.0
+S2 others human-like,Wholesaler,P1 tuned,48,1227.4366192103264,1.0
+S2 others human-like,Wholesaler,P1 tuned,49,1221.3128400014705,1.0
+S2 others human-like,Wholesaler,P1 tuned,50,1268.2489576981482,1.0
+S2 others human-like,Wholesaler,P1 tuned,51,1655.614202042461,0.9999999999999997
+S2 others human-like,Wholesaler,P1 tuned,52,1374.7136376994576,1.0
+S2 others human-like,Wholesaler,P1 tuned,53,1244.567333787536,1.0
+S2 others human-like,Wholesaler,P1 tuned,54,1179.1202149419314,1.0
+S2 others human-like,Wholesaler,P1 tuned,55,1181.5225147263905,1.0
+S2 others human-like,Wholesaler,P1 tuned,56,1424.4494408015048,1.0
+S2 others human-like,Wholesaler,P1 tuned,57,1224.806815225141,1.0
+S2 others human-like,Wholesaler,P1 tuned,58,1168.2932120458347,1.0
+S2 others human-like,Wholesaler,P1 tuned,59,1482.88597649441,1.0
+S2 others human-like,Wholesaler,P1 tuned,60,1361.7504952938248,1.0
+S2 others human-like,Wholesaler,P1 tuned,61,1620.184488838779,1.0
+S2 others human-like,Wholesaler,P1 tuned,62,1159.3470012456783,1.0
+S2 others human-like,Wholesaler,P1 tuned,63,1228.1799460758639,1.0
+S2 others human-like,Wholesaler,P1 tuned,64,1520.3590562486802,1.0
+S2 others human-like,Wholesaler,P1 tuned,65,1516.503831960412,1.0
+S2 others human-like,Wholesaler,P1 tuned,66,1476.5559203549078,1.0
+S2 others human-like,Wholesaler,P1 tuned,67,1316.4827046997032,1.0
+S2 others human-like,Wholesaler,P1 tuned,68,1276.215150877499,1.0
+S2 others human-like,Wholesaler,P1 tuned,69,1373.0526660360374,1.0
+S2 others human-like,Wholesaler,P1 tuned,70,1251.3101575501105,1.0
+S2 others human-like,Wholesaler,P1 tuned,71,1221.932017694877,1.0
+S2 others human-like,Wholesaler,P1 tuned,72,1149.373684128025,1.0
+S2 others human-like,Wholesaler,P1 tuned,73,1299.2365568503585,1.0
+S2 others human-like,Wholesaler,P1 tuned,74,1127.1529922283494,1.0
+S2 others human-like,Wholesaler,P1 tuned,75,1423.6696460084586,1.0
+S2 others human-like,Wholesaler,P1 tuned,76,1339.0032281883787,1.0
+S2 others human-like,Wholesaler,P1 tuned,77,1695.2677073014179,1.0
+S2 others human-like,Wholesaler,P1 tuned,78,1151.0824704462218,1.0
+S2 others human-like,Wholesaler,P1 tuned,79,1399.3491279387608,1.0
+S2 others human-like,Wholesaler,P1 tuned,80,1292.1904623591763,1.0
+S2 others human-like,Wholesaler,P1 tuned,81,1443.3648679695955,1.0
+S2 others human-like,Wholesaler,P1 tuned,82,1296.0245052217701,1.0
+S2 others human-like,Wholesaler,P1 tuned,83,1301.3673455817961,1.0
+S2 others human-like,Wholesaler,P1 tuned,84,1436.259599651008,1.0
+S2 others human-like,Wholesaler,P1 tuned,85,1161.2063445582612,1.0
+S2 others human-like,Wholesaler,P1 tuned,86,1425.4033349160632,1.0
+S2 others human-like,Wholesaler,P1 tuned,87,1358.1670331342284,1.0
+S2 others human-like,Wholesaler,P1 tuned,88,1589.1171477239197,1.0
+S2 others human-like,Wholesaler,P1 tuned,89,1515.4050834089885,1.0
+S2 others human-like,Wholesaler,P1 tuned,90,1472.8734535055376,1.0
+S2 others human-like,Wholesaler,P1 tuned,91,1192.8870011151157,1.0
+S2 others human-like,Wholesaler,P1 tuned,92,1361.2355586223466,1.0
+S2 others human-like,Wholesaler,P1 tuned,93,1334.7728089259188,1.0
+S2 others human-like,Wholesaler,P1 tuned,94,1323.1676325293527,1.0
+S2 others human-like,Wholesaler,P1 tuned,95,1281.279190911813,1.0
+S2 others human-like,Wholesaler,P1 tuned,96,1268.7732599778444,1.0
+S2 others human-like,Wholesaler,P1 tuned,97,1126.3396718861502,1.0
+S2 others human-like,Wholesaler,P1 tuned,98,1218.4496172083063,1.0
+S2 others human-like,Wholesaler,P1 tuned,99,1201.5266238989284,1.0
+S2 others human-like,Wholesaler,P1 tuned,100,1211.2533903356998,1.0
+S2 others human-like,Wholesaler,P2 tuned,1,1316.409510293757,1.0
+S2 others human-like,Wholesaler,P2 tuned,2,1089.3708026223571,1.0
+S2 others human-like,Wholesaler,P2 tuned,3,1394.2291963643381,1.0
+S2 others human-like,Wholesaler,P2 tuned,4,1248.4911916646242,1.0
+S2 others human-like,Wholesaler,P2 tuned,5,1146.1967027495984,1.0
+S2 others human-like,Wholesaler,P2 tuned,6,1306.9294170075125,1.0
+S2 others human-like,Wholesaler,P2 tuned,7,1305.1794054671109,1.0
+S2 others human-like,Wholesaler,P2 tuned,8,1391.3088413491027,1.0
+S2 others human-like,Wholesaler,P2 tuned,9,1262.0662758552046,1.0
+S2 others human-like,Wholesaler,P2 tuned,10,1176.5796772275069,1.0
+S2 others human-like,Wholesaler,P2 tuned,11,1175.7902700081622,1.0
+S2 others human-like,Wholesaler,P2 tuned,12,1176.5587185763386,1.0
+S2 others human-like,Wholesaler,P2 tuned,13,1171.3733670296,1.0
+S2 others human-like,Wholesaler,P2 tuned,14,1155.0936976273572,1.0
+S2 others human-like,Wholesaler,P2 tuned,15,1204.5780690448,1.0
+S2 others human-like,Wholesaler,P2 tuned,16,1274.8785469934394,1.0
+S2 others human-like,Wholesaler,P2 tuned,17,1299.63972841316,1.0
+S2 others human-like,Wholesaler,P2 tuned,18,1305.5870553056563,1.0
+S2 others human-like,Wholesaler,P2 tuned,19,1365.0366090558368,1.0
+S2 others human-like,Wholesaler,P2 tuned,20,1308.4972580205886,1.0
+S2 others human-like,Wholesaler,P2 tuned,21,1372.520889691572,1.0
+S2 others human-like,Wholesaler,P2 tuned,22,1233.3497053991648,1.0
+S2 others human-like,Wholesaler,P2 tuned,23,1254.3906842235472,1.0
+S2 others human-like,Wholesaler,P2 tuned,24,1306.2090321032856,1.0
+S2 others human-like,Wholesaler,P2 tuned,25,1121.2099844025197,1.0
+S2 others human-like,Wholesaler,P2 tuned,26,1154.458040780617,1.0
+S2 others human-like,Wholesaler,P2 tuned,27,1327.3183768700246,1.0
+S2 others human-like,Wholesaler,P2 tuned,28,1208.12754438816,1.0
+S2 others human-like,Wholesaler,P2 tuned,29,1237.6245960802976,1.0
+S2 others human-like,Wholesaler,P2 tuned,30,1329.4500157937725,1.0
+S2 others human-like,Wholesaler,P2 tuned,31,1332.0361012725816,1.0
+S2 others human-like,Wholesaler,P2 tuned,32,1243.2552801287939,1.0
+S2 others human-like,Wholesaler,P2 tuned,33,1081.090842216222,1.0
+S2 others human-like,Wholesaler,P2 tuned,34,1417.973648893587,1.0
+S2 others human-like,Wholesaler,P2 tuned,35,1155.961263534935,1.0
+S2 others human-like,Wholesaler,P2 tuned,36,1196.2234166313588,1.0
+S2 others human-like,Wholesaler,P2 tuned,37,1167.0052915189158,1.0
+S2 others human-like,Wholesaler,P2 tuned,38,1332.4709313266728,1.0
+S2 others human-like,Wholesaler,P2 tuned,39,1211.5803340229722,1.0
+S2 others human-like,Wholesaler,P2 tuned,40,1176.2930049928102,1.0
+S2 others human-like,Wholesaler,P2 tuned,41,1284.7530420839635,1.0
+S2 others human-like,Wholesaler,P2 tuned,42,1139.0517927200071,1.0
+S2 others human-like,Wholesaler,P2 tuned,43,1259.374899909941,1.0
+S2 others human-like,Wholesaler,P2 tuned,44,1383.6748951547197,1.0
+S2 others human-like,Wholesaler,P2 tuned,45,1210.597783589163,1.0
+S2 others human-like,Wholesaler,P2 tuned,46,1206.11676654657,1.0
+S2 others human-like,Wholesaler,P2 tuned,47,1549.154624949996,1.0
+S2 others human-like,Wholesaler,P2 tuned,48,1199.9366192103262,1.0
+S2 others human-like,Wholesaler,P2 tuned,49,1234.3128400014707,1.0
+S2 others human-like,Wholesaler,P2 tuned,50,1190.2489576981482,1.0
+S2 others human-like,Wholesaler,P2 tuned,51,1454.1142020424613,0.9999999999999999
+S2 others human-like,Wholesaler,P2 tuned,52,1254.7136376994576,1.0
+S2 others human-like,Wholesaler,P2 tuned,53,1195.567333787536,1.0
+S2 others human-like,Wholesaler,P2 tuned,54,1120.1202149419312,1.0
+S2 others human-like,Wholesaler,P2 tuned,55,1199.5225147263907,1.0
+S2 others human-like,Wholesaler,P2 tuned,56,1326.9494408015048,1.0
+S2 others human-like,Wholesaler,P2 tuned,57,1173.306815225141,1.0
+S2 others human-like,Wholesaler,P2 tuned,58,1143.7932120458347,1.0
+S2 others human-like,Wholesaler,P2 tuned,59,1356.88597649441,1.0
+S2 others human-like,Wholesaler,P2 tuned,60,1286.7504952938248,1.0
+S2 others human-like,Wholesaler,P2 tuned,61,1507.184488838779,1.0
+S2 others human-like,Wholesaler,P2 tuned,62,1160.8470012456785,1.0
+S2 others human-like,Wholesaler,P2 tuned,63,1149.3354938411733,1.0000000000000002
+S2 others human-like,Wholesaler,P2 tuned,64,1409.3590562486802,1.0
+S2 others human-like,Wholesaler,P2 tuned,65,1364.9623102546147,1.0
+S2 others human-like,Wholesaler,P2 tuned,66,1401.0559203549078,1.0
+S2 others human-like,Wholesaler,P2 tuned,67,1287.4827046997034,1.0
+S2 others human-like,Wholesaler,P2 tuned,68,1206.0926242691742,1.0
+S2 others human-like,Wholesaler,P2 tuned,69,1310.5526660360374,1.0
+S2 others human-like,Wholesaler,P2 tuned,70,1199.3101575501105,1.0
+S2 others human-like,Wholesaler,P2 tuned,71,1178.932017694877,1.0
+S2 others human-like,Wholesaler,P2 tuned,72,1143.873684128025,1.0
+S2 others human-like,Wholesaler,P2 tuned,73,1312.2365568503585,1.0
+S2 others human-like,Wholesaler,P2 tuned,74,1089.1529922283494,1.0
+S2 others human-like,Wholesaler,P2 tuned,75,1312.6696460084586,1.0
+S2 others human-like,Wholesaler,P2 tuned,76,1273.0032281883787,1.0
+S2 others human-like,Wholesaler,P2 tuned,77,1607.7677073014179,1.0
+S2 others human-like,Wholesaler,P2 tuned,78,1134.5824704462218,1.0
+S2 others human-like,Wholesaler,P2 tuned,79,1320.5071059353056,1.0
+S2 others human-like,Wholesaler,P2 tuned,80,1229.690462359176,1.0
+S2 others human-like,Wholesaler,P2 tuned,81,1330.3648679695953,1.0
+S2 others human-like,Wholesaler,P2 tuned,82,1264.0245052217701,1.0
+S2 others human-like,Wholesaler,P2 tuned,83,1220.3673455817964,1.0
+S2 others human-like,Wholesaler,P2 tuned,84,1364.759599651008,1.0
+S2 others human-like,Wholesaler,P2 tuned,85,1119.5634114329653,0.9999999999999999
+S2 others human-like,Wholesaler,P2 tuned,86,1284.9033349160632,1.0
+S2 others human-like,Wholesaler,P2 tuned,87,1313.1670331342284,1.0
+S2 others human-like,Wholesaler,P2 tuned,88,1400.1375075441365,1.0
+S2 others human-like,Wholesaler,P2 tuned,89,1414.9050834089885,1.0
+S2 others human-like,Wholesaler,P2 tuned,90,1419.650350391103,1.0000000000000002
+S2 others human-like,Wholesaler,P2 tuned,91,1161.3870011151157,1.0
+S2 others human-like,Wholesaler,P2 tuned,92,1313.7355586223466,1.0
+S2 others human-like,Wholesaler,P2 tuned,93,1295.7728089259188,1.0
+S2 others human-like,Wholesaler,P2 tuned,94,1288.6676325293527,1.0
+S2 others human-like,Wholesaler,P2 tuned,95,1244.2791909118132,1.0
+S2 others human-like,Wholesaler,P2 tuned,96,1222.7732599778444,1.0
+S2 others human-like,Wholesaler,P2 tuned,97,1122.8396718861502,1.0
+S2 others human-like,Wholesaler,P2 tuned,98,1171.4496172083063,1.0
+S2 others human-like,Wholesaler,P2 tuned,99,1178.47132737994,1.0
+S2 others human-like,Wholesaler,P2 tuned,100,1151.2533903356998,1.0
+S2 others human-like,Wholesaler,P0 placeholder,1,2093.909510293757,1.0
+S2 others human-like,Wholesaler,P0 placeholder,2,1446.8708026223571,1.0
+S2 others human-like,Wholesaler,P0 placeholder,3,1995.2291963643377,1.0
+S2 others human-like,Wholesaler,P0 placeholder,4,1842.4911916646242,1.0
+S2 others human-like,Wholesaler,P0 placeholder,5,1555.6967027495984,1.0
+S2 others human-like,Wholesaler,P0 placeholder,6,1875.4294170075127,1.0
+S2 others human-like,Wholesaler,P0 placeholder,7,1692.6794054671109,1.0
+S2 others human-like,Wholesaler,P0 placeholder,8,2287.6494614128933,1.0
+S2 others human-like,Wholesaler,P0 placeholder,9,1599.0662758552046,1.0
+S2 others human-like,Wholesaler,P0 placeholder,10,1574.0796772275069,1.0
+S2 others human-like,Wholesaler,P0 placeholder,11,1453.2902700081622,1.0
+S2 others human-like,Wholesaler,P0 placeholder,12,1587.5587185763386,1.0
+S2 others human-like,Wholesaler,P0 placeholder,13,1552.8733670295999,1.0
+S2 others human-like,Wholesaler,P0 placeholder,14,1504.093697627357,1.0
+S2 others human-like,Wholesaler,P0 placeholder,15,1580.5780690448,1.0
+S2 others human-like,Wholesaler,P0 placeholder,16,1637.3785469934392,1.0
+S2 others human-like,Wholesaler,P0 placeholder,17,2063.63972841316,1.0
+S2 others human-like,Wholesaler,P0 placeholder,18,1970.5870553056563,1.0
+S2 others human-like,Wholesaler,P0 placeholder,19,2059.036609055837,1.0
+S2 others human-like,Wholesaler,P0 placeholder,20,1877.4972580205883,1.0
+S2 others human-like,Wholesaler,P0 placeholder,21,2052.5834079643873,1.0
+S2 others human-like,Wholesaler,P0 placeholder,22,1678.8497053991646,1.0
+S2 others human-like,Wholesaler,P0 placeholder,23,2003.8906842235474,1.0
+S2 others human-like,Wholesaler,P0 placeholder,24,1790.2090321032856,1.0
+S2 others human-like,Wholesaler,P0 placeholder,25,1429.20998440252,1.0
+S2 others human-like,Wholesaler,P0 placeholder,26,1621.9580407806168,1.0
+S2 others human-like,Wholesaler,P0 placeholder,27,1936.8183768700248,1.0
+S2 others human-like,Wholesaler,P0 placeholder,28,1594.62754438816,1.0
+S2 others human-like,Wholesaler,P0 placeholder,29,1705.1245960802976,1.0
+S2 others human-like,Wholesaler,P0 placeholder,30,1911.9500157937725,1.0
+S2 others human-like,Wholesaler,P0 placeholder,31,2161.5361012725816,1.0
+S2 others human-like,Wholesaler,P0 placeholder,32,1559.2552801287939,1.0
+S2 others human-like,Wholesaler,P0 placeholder,33,1447.590842216222,1.0
+S2 others human-like,Wholesaler,P0 placeholder,34,2251.5211995966883,1.0
+S2 others human-like,Wholesaler,P0 placeholder,35,1489.961263534935,1.0
+S2 others human-like,Wholesaler,P0 placeholder,36,1652.2234166313588,1.0
+S2 others human-like,Wholesaler,P0 placeholder,37,1634.5052915189158,1.0
+S2 others human-like,Wholesaler,P0 placeholder,38,1856.4709313266728,1.0
+S2 others human-like,Wholesaler,P0 placeholder,39,1611.0803340229725,1.0
+S2 others human-like,Wholesaler,P0 placeholder,40,1619.2930049928102,1.0
+S2 others human-like,Wholesaler,P0 placeholder,41,1676.7530420839635,1.0
+S2 others human-like,Wholesaler,P0 placeholder,42,1420.5517927200071,1.0
+S2 others human-like,Wholesaler,P0 placeholder,43,1744.874899909941,1.0
+S2 others human-like,Wholesaler,P0 placeholder,44,1826.6748951547197,1.0
+S2 others human-like,Wholesaler,P0 placeholder,45,1676.597783589163,1.0
+S2 others human-like,Wholesaler,P0 placeholder,46,1715.61676654657,1.0
+S2 others human-like,Wholesaler,P0 placeholder,47,2712.630297850573,1.0
+S2 others human-like,Wholesaler,P0 placeholder,48,1643.4366192103262,1.0
+S2 others human-like,Wholesaler,P0 placeholder,49,1528.3128400014702,1.0
+S2 others human-like,Wholesaler,P0 placeholder,50,1716.7489576981484,1.0
+S2 others human-like,Wholesaler,P0 placeholder,51,2352.1142020424613,0.9999999999999999
+S2 others human-like,Wholesaler,P0 placeholder,52,1976.7136376994576,1.0
+S2 others human-like,Wholesaler,P0 placeholder,53,1726.567333787536,1.0
+S2 others human-like,Wholesaler,P0 placeholder,54,1568.6202149419312,1.0
+S2 others human-like,Wholesaler,P0 placeholder,55,1638.5225147263905,1.0
+S2 others human-like,Wholesaler,P0 placeholder,56,1971.4494408015048,1.0
+S2 others human-like,Wholesaler,P0 placeholder,57,1758.8068152251408,1.0
+S2 others human-like,Wholesaler,P0 placeholder,58,1430.7932120458347,1.0
+S2 others human-like,Wholesaler,P0 placeholder,59,2092.88597649441,1.0
+S2 others human-like,Wholesaler,P0 placeholder,60,1916.2504952938248,1.0
+S2 others human-like,Wholesaler,P0 placeholder,61,2209.684488838779,1.0
+S2 others human-like,Wholesaler,P0 placeholder,62,1477.8470012456783,1.0
+S2 others human-like,Wholesaler,P0 placeholder,63,1782.1799460758634,1.0
+S2 others human-like,Wholesaler,P0 placeholder,64,2113.3312651140864,1.0000000000000002
+S2 others human-like,Wholesaler,P0 placeholder,65,2135.4623102546147,1.0
+S2 others human-like,Wholesaler,P0 placeholder,66,2188.5559203549083,1.0
+S2 others human-like,Wholesaler,P0 placeholder,67,1590.9827046997032,1.0
+S2 others human-like,Wholesaler,P0 placeholder,68,1800.7421105353535,1.0
+S2 others human-like,Wholesaler,P0 placeholder,69,1976.5526660360374,1.0
+S2 others human-like,Wholesaler,P0 placeholder,70,1857.810157550111,1.0
+S2 others human-like,Wholesaler,P0 placeholder,71,1974.432017694877,1.0
+S2 others human-like,Wholesaler,P0 placeholder,72,1455.373684128025,1.0
+S2 others human-like,Wholesaler,P0 placeholder,73,1557.7365568503585,1.0
+S2 others human-like,Wholesaler,P0 placeholder,74,1693.6529922283494,1.0
+S2 others human-like,Wholesaler,P0 placeholder,75,2077.6696460084586,1.0
+S2 others human-like,Wholesaler,P0 placeholder,76,1787.0032281883787,1.0
+S2 others human-like,Wholesaler,P0 placeholder,77,2382.288817473136,1.0
+S2 others human-like,Wholesaler,P0 placeholder,78,1512.0824704462218,1.0
+S2 others human-like,Wholesaler,P0 placeholder,79,2499.887602349433,1.0
+S2 others human-like,Wholesaler,P0 placeholder,80,1804.1904623591759,1.0
+S2 others human-like,Wholesaler,P0 placeholder,81,1881.3648679695953,1.0
+S2 others human-like,Wholesaler,P0 placeholder,82,1597.0245052217701,1.0
+S2 others human-like,Wholesaler,P0 placeholder,83,2044.3673455817964,1.0
+S2 others human-like,Wholesaler,P0 placeholder,84,2015.2595996510079,1.0
+S2 others human-like,Wholesaler,P0 placeholder,85,1511.6185218478147,1.0
+S2 others human-like,Wholesaler,P0 placeholder,86,2250.903334916063,1.0
+S2 others human-like,Wholesaler,P0 placeholder,87,1746.6670331342284,1.0
+S2 others human-like,Wholesaler,P0 placeholder,88,2202.33617352235,1.0
+S2 others human-like,Wholesaler,P0 placeholder,89,2223.405083408988,1.0
+S2 others human-like,Wholesaler,P0 placeholder,90,1969.6854974198432,1.0
+S2 others human-like,Wholesaler,P0 placeholder,91,1512.887001115116,1.0
+S2 others human-like,Wholesaler,P0 placeholder,92,1777.7355586223466,1.0
+S2 others human-like,Wholesaler,P0 placeholder,93,1783.2728089259188,1.0
+S2 others human-like,Wholesaler,P0 placeholder,94,1820.1676325293527,1.0
+S2 others human-like,Wholesaler,P0 placeholder,95,1717.2791909118132,1.0
+S2 others human-like,Wholesaler,P0 placeholder,96,1582.2732599778442,1.0
+S2 others human-like,Wholesaler,P0 placeholder,97,1446.8396718861502,1.0
+S2 others human-like,Wholesaler,P0 placeholder,98,1671.9496172083063,1.0
+S2 others human-like,Wholesaler,P0 placeholder,99,1540.5266238989284,1.0
+S2 others human-like,Wholesaler,P0 placeholder,100,1617.7533903356998,1.0
+S2 others human-like,Distributor,P1 tuned,1,1555.409510293757,1.0
+S2 others human-like,Distributor,P1 tuned,2,1149.8708026223571,1.0
+S2 others human-like,Distributor,P1 tuned,3,1608.229196364338,1.0
+S2 others human-like,Distributor,P1 tuned,4,1427.4911916646242,1.0
+S2 others human-like,Distributor,P1 tuned,5,1209.6967027495984,1.0
+S2 others human-like,Distributor,P1 tuned,6,1442.9294170075127,1.0
+S2 others human-like,Distributor,P1 tuned,7,1402.6794054671109,1.0
+S2 others human-like,Distributor,P1 tuned,8,1824.6494614128933,1.0
+S2 others human-like,Distributor,P1 tuned,9,1338.0662758552046,1.0
+S2 others human-like,Distributor,P1 tuned,10,1269.579677227507,1.0
+S2 others human-like,Distributor,P1 tuned,11,1277.7902700081622,1.0
+S2 others human-like,Distributor,P1 tuned,12,1272.5587185763386,1.0
+S2 others human-like,Distributor,P1 tuned,13,1305.3733670295999,1.0
+S2 others human-like,Distributor,P1 tuned,14,1242.093697627357,1.0
+S2 others human-like,Distributor,P1 tuned,15,1441.5780690448,1.0
+S2 others human-like,Distributor,P1 tuned,16,1372.8785469934392,1.0
+S2 others human-like,Distributor,P1 tuned,17,1515.63972841316,1.0
+S2 others human-like,Distributor,P1 tuned,18,1534.0870553056561,1.0
+S2 others human-like,Distributor,P1 tuned,19,1605.5366090558368,1.0
+S2 others human-like,Distributor,P1 tuned,20,1529.9972580205883,1.0
+S2 others human-like,Distributor,P1 tuned,21,1631.0834079643873,1.0
+S2 others human-like,Distributor,P1 tuned,22,1357.3497053991646,1.0
+S2 others human-like,Distributor,P1 tuned,23,1524.3906842235474,1.0
+S2 others human-like,Distributor,P1 tuned,24,1405.2090321032856,1.0
+S2 others human-like,Distributor,P1 tuned,25,1181.20998440252,1.0
+S2 others human-like,Distributor,P1 tuned,26,1273.9580407806168,1.0
+S2 others human-like,Distributor,P1 tuned,27,1641.3183768700248,1.0
+S2 others human-like,Distributor,P1 tuned,28,1294.62754438816,1.0
+S2 others human-like,Distributor,P1 tuned,29,1359.1245960802976,1.0
+S2 others human-like,Distributor,P1 tuned,30,1568.4500157937725,1.0
+S2 others human-like,Distributor,P1 tuned,31,1554.0361012725816,1.0
+S2 others human-like,Distributor,P1 tuned,32,1323.2552801287939,1.0
+S2 others human-like,Distributor,P1 tuned,33,1157.590842216222,1.0
+S2 others human-like,Distributor,P1 tuned,34,1636.5211995966883,1.0
+S2 others human-like,Distributor,P1 tuned,35,1225.961263534935,1.0
+S2 others human-like,Distributor,P1 tuned,36,1427.723416631359,1.0
+S2 others human-like,Distributor,P1 tuned,37,1342.5052915189158,1.0
+S2 others human-like,Distributor,P1 tuned,38,1461.9709313266728,1.0
+S2 others human-like,Distributor,P1 tuned,39,1305.0803340229725,1.0
+S2 others human-like,Distributor,P1 tuned,40,1304.2930049928102,1.0
+S2 others human-like,Distributor,P1 tuned,41,1376.2530420839635,1.0
+S2 others human-like,Distributor,P1 tuned,42,1267.5517927200071,1.0
+S2 others human-like,Distributor,P1 tuned,43,1438.374899909941,1.0
+S2 others human-like,Distributor,P1 tuned,44,1461.1748951547197,1.0
+S2 others human-like,Distributor,P1 tuned,45,1313.097783589163,1.0
+S2 others human-like,Distributor,P1 tuned,46,1349.61676654657,1.0
+S2 others human-like,Distributor,P1 tuned,47,2223.989609226671,1.0
+S2 others human-like,Distributor,P1 tuned,48,1325.4366192103262,1.0
+S2 others human-like,Distributor,P1 tuned,49,1244.8128400014702,1.0
+S2 others human-like,Distributor,P1 tuned,50,1325.7489576981484,1.0
+S2 others human-like,Distributor,P1 tuned,51,1902.114202042461,0.9999999999999997
+S2 others human-like,Distributor,P1 tuned,52,1535.7136376994576,1.0
+S2 others human-like,Distributor,P1 tuned,53,1372.0673337875362,1.0
+S2 others human-like,Distributor,P1 tuned,54,1282.6202149419314,1.0
+S2 others human-like,Distributor,P1 tuned,55,1280.5225147263905,1.0
+S2 others human-like,Distributor,P1 tuned,56,1584.4494408015048,1.0
+S2 others human-like,Distributor,P1 tuned,57,1386.3068152251408,1.0
+S2 others human-like,Distributor,P1 tuned,58,1180.7932120458347,1.0
+S2 others human-like,Distributor,P1 tuned,59,1734.88597649441,1.0
+S2 others human-like,Distributor,P1 tuned,60,1537.7504952938248,1.0
+S2 others human-like,Distributor,P1 tuned,61,1707.184488838779,1.0
+S2 others human-like,Distributor,P1 tuned,62,1255.8470012456783,1.0
+S2 others human-like,Distributor,P1 tuned,63,1373.1799460758634,1.0
+S2 others human-like,Distributor,P1 tuned,64,1742.9807593520375,1.0000000000000002
+S2 others human-like,Distributor,P1 tuned,65,1672.9623102546147,1.0
+S2 others human-like,Distributor,P1 tuned,66,1674.0559203549078,1.0
+S2 others human-like,Distributor,P1 tuned,67,1340.9827046997032,1.0
+S2 others human-like,Distributor,P1 tuned,68,1585.7421105353535,1.0
+S2 others human-like,Distributor,P1 tuned,69,1611.5526660360374,1.0
+S2 others human-like,Distributor,P1 tuned,70,1481.810157550111,1.0
+S2 others human-like,Distributor,P1 tuned,71,1410.432017694877,1.0
+S2 others human-like,Distributor,P1 tuned,72,1180.373684128025,1.0
+S2 others human-like,Distributor,P1 tuned,73,1371.2365568503585,1.0
+S2 others human-like,Distributor,P1 tuned,74,1280.6529922283494,1.0
+S2 others human-like,Distributor,P1 tuned,75,1566.1696460084588,1.0
+S2 others human-like,Distributor,P1 tuned,76,1411.0032281883787,1.0
+S2 others human-like,Distributor,P1 tuned,77,2296.2677073014174,0.9999999999999999
+S2 others human-like,Distributor,P1 tuned,78,1215.0824704462218,1.0
+S2 others human-like,Distributor,P1 tuned,79,1929.883769658685,1.0
+S2 others human-like,Distributor,P1 tuned,80,1340.190462359176,1.0
+S2 others human-like,Distributor,P1 tuned,81,1396.3648679695957,1.0
+S2 others human-like,Distributor,P1 tuned,82,1310.5245052217701,1.0
+S2 others human-like,Distributor,P1 tuned,83,1417.3673455817964,1.0
+S2 others human-like,Distributor,P1 tuned,84,1583.2595996510079,1.0
+S2 others human-like,Distributor,P1 tuned,85,1268.1185218478147,1.0
+S2 others human-like,Distributor,P1 tuned,86,1573.4033349160632,1.0
+S2 others human-like,Distributor,P1 tuned,87,1452.1670331342284,1.0
+S2 others human-like,Distributor,P1 tuned,88,1803.3361735223498,1.0
+S2 others human-like,Distributor,P1 tuned,89,1924.905083408988,1.0
+S2 others human-like,Distributor,P1 tuned,90,1752.6854974198432,1.0
+S2 others human-like,Distributor,P1 tuned,91,1245.387001115116,1.0
+S2 others human-like,Distributor,P1 tuned,92,1498.7355586223466,1.0
+S2 others human-like,Distributor,P1 tuned,93,1437.7728089259185,1.0
+S2 others human-like,Distributor,P1 tuned,94,1412.6676325293527,1.0
+S2 others human-like,Distributor,P1 tuned,95,1434.2791909118132,1.0
+S2 others human-like,Distributor,P1 tuned,96,1292.7732599778442,1.0
+S2 others human-like,Distributor,P1 tuned,97,1208.3396718861502,1.0
+S2 others human-like,Distributor,P1 tuned,98,1367.4496172083063,1.0
+S2 others human-like,Distributor,P1 tuned,99,1288.5266238989284,1.0
+S2 others human-like,Distributor,P1 tuned,100,1259.7533903356998,1.0
+S2 others human-like,Distributor,P2 tuned,1,1452.909510293757,1.0
+S2 others human-like,Distributor,P2 tuned,2,1119.3708026223571,1.0
+S2 others human-like,Distributor,P2 tuned,3,1494.2291963643377,1.0
+S2 others human-like,Distributor,P2 tuned,4,1337.4911916646242,1.0
+S2 others human-like,Distributor,P2 tuned,5,1188.6967027495984,1.0
+S2 others human-like,Distributor,P2 tuned,6,1382.9294170075127,1.0
+S2 others human-like,Distributor,P2 tuned,7,1364.6794054671109,1.0
+S2 others human-like,Distributor,P2 tuned,8,1629.1494614128933,1.0
+S2 others human-like,Distributor,P2 tuned,9,1303.5662758552046,1.0
+S2 others human-like,Distributor,P2 tuned,10,1230.0796772275069,1.0
+S2 others human-like,Distributor,P2 tuned,11,1259.7902700081622,1.0
+S2 others human-like,Distributor,P2 tuned,12,1238.0587185763386,1.0
+S2 others human-like,Distributor,P2 tuned,13,1231.8733670295999,1.0
+S2 others human-like,Distributor,P2 tuned,14,1188.093697627357,1.0
+S2 others human-like,Distributor,P2 tuned,15,1292.0780690448,1.0
+S2 others human-like,Distributor,P2 tuned,16,1322.8785469934392,1.0
+S2 others human-like,Distributor,P2 tuned,17,1446.13972841316,1.0
+S2 others human-like,Distributor,P2 tuned,18,1393.0870553056561,1.0
+S2 others human-like,Distributor,P2 tuned,19,1458.0366090558368,1.0
+S2 others human-like,Distributor,P2 tuned,20,1421.9972580205883,1.0
+S2 others human-like,Distributor,P2 tuned,21,1500.0834079643873,1.0
+S2 others human-like,Distributor,P2 tuned,22,1303.3497053991646,1.0
+S2 others human-like,Distributor,P2 tuned,23,1389.3906842235474,1.0
+S2 others human-like,Distributor,P2 tuned,24,1357.7090321032856,1.0
+S2 others human-like,Distributor,P2 tuned,25,1160.70998440252,1.0
+S2 others human-like,Distributor,P2 tuned,26,1199.9580407806168,1.0
+S2 others human-like,Distributor,P2 tuned,27,1432.8183768700248,1.0
+S2 others human-like,Distributor,P2 tuned,28,1250.62754438816,1.0
+S2 others human-like,Distributor,P2 tuned,29,1291.6245960802976,1.0
+S2 others human-like,Distributor,P2 tuned,30,1394.4500157937728,1.0
+S2 others human-like,Distributor,P2 tuned,31,1450.0361012725816,1.0
+S2 others human-like,Distributor,P2 tuned,32,1295.2552801287939,1.0
+S2 others human-like,Distributor,P2 tuned,33,1140.590842216222,1.0
+S2 others human-like,Distributor,P2 tuned,34,1510.5211995966883,1.0
+S2 others human-like,Distributor,P2 tuned,35,1206.961263534935,1.0
+S2 others human-like,Distributor,P2 tuned,36,1347.223416631359,1.0
+S2 others human-like,Distributor,P2 tuned,37,1237.5052915189158,1.0
+S2 others human-like,Distributor,P2 tuned,38,1371.4709313266728,1.0
+S2 others human-like,Distributor,P2 tuned,39,1258.5803340229725,1.0
+S2 others human-like,Distributor,P2 tuned,40,1288.2930049928102,1.0
+S2 others human-like,Distributor,P2 tuned,41,1351.7530420839635,1.0
+S2 others human-like,Distributor,P2 tuned,42,1202.0517927200071,1.0
+S2 others human-like,Distributor,P2 tuned,43,1330.874899909941,1.0
+S2 others human-like,Distributor,P2 tuned,44,1412.1748951547197,1.0
+S2 others human-like,Distributor,P2 tuned,45,1282.097783589163,1.0
+S2 others human-like,Distributor,P2 tuned,46,1273.61676654657,1.0
+S2 others human-like,Distributor,P2 tuned,47,1889.1302978505728,1.0
+S2 others human-like,Distributor,P2 tuned,48,1266.9366192103262,1.0
+S2 others human-like,Distributor,P2 tuned,49,1246.3128400014702,1.0
+S2 others human-like,Distributor,P2 tuned,50,1269.7489576981484,1.0
+S2 others human-like,Distributor,P2 tuned,51,1730.614202042461,0.9999999999999997
+S2 others human-like,Distributor,P2 tuned,52,1363.7136376994576,1.0
+S2 others human-like,Distributor,P2 tuned,53,1285.067333787536,1.0
+S2 others human-like,Distributor,P2 tuned,54,1215.1202149419312,1.0
+S2 others human-like,Distributor,P2 tuned,55,1243.5225147263905,1.0
+S2 others human-like,Distributor,P2 tuned,56,1437.9494408015048,1.0
+S2 others human-like,Distributor,P2 tuned,57,1290.3068152251408,1.0
+S2 others human-like,Distributor,P2 tuned,58,1186.2932120458347,1.0
+S2 others human-like,Distributor,P2 tuned,59,1511.88597649441,1.0
+S2 others human-like,Distributor,P2 tuned,60,1415.2504952938248,1.0
+S2 others human-like,Distributor,P2 tuned,61,1572.184488838779,1.0
+S2 others human-like,Distributor,P2 tuned,62,1231.3470012456783,1.0
+S2 others human-like,Distributor,P2 tuned,63,1299.1799460758634,1.0
+S2 others human-like,Distributor,P2 tuned,64,1564.4807593520377,1.0000000000000002
+S2 others human-like,Distributor,P2 tuned,65,1562.9623102546147,1.0
+S2 others human-like,Distributor,P2 tuned,66,1514.555920354908,1.0
+S2 others human-like,Distributor,P2 tuned,67,1320.4827046997032,1.0
+S2 others human-like,Distributor,P2 tuned,68,1347.2421105353535,1.0
+S2 others human-like,Distributor,P2 tuned,69,1462.5526660360374,1.0
+S2 others human-like,Distributor,P2 tuned,70,1339.310157550111,1.0
+S2 others human-like,Distributor,P2 tuned,71,1327.432017694877,1.0
+S2 others human-like,Distributor,P2 tuned,72,1168.873684128025,1.0
+S2 others human-like,Distributor,P2 tuned,73,1325.2365568503585,1.0
+S2 others human-like,Distributor,P2 tuned,74,1214.1529922283494,1.0
+S2 others human-like,Distributor,P2 tuned,75,1444.6696460084588,1.0
+S2 others human-like,Distributor,P2 tuned,76,1350.5032281883787,1.0
+S2 others human-like,Distributor,P2 tuned,77,1958.4918264652276,0.9999999999999999
+S2 others human-like,Distributor,P2 tuned,78,1167.5824704462218,1.0
+S2 others human-like,Distributor,P2 tuned,79,1662.8876023494329,1.0
+S2 others human-like,Distributor,P2 tuned,80,1253.1904623591759,1.0
+S2 others human-like,Distributor,P2 tuned,81,1340.3648679695953,1.0
+S2 others human-like,Distributor,P2 tuned,82,1304.5245052217701,1.0
+S2 others human-like,Distributor,P2 tuned,83,1296.8673455817961,1.0
+S2 others human-like,Distributor,P2 tuned,84,1478.7595996510079,1.0
+S2 others human-like,Distributor,P2 tuned,85,1188.1185218478147,1.0
+S2 others human-like,Distributor,P2 tuned,86,1460.9033349160632,1.0
+S2 others human-like,Distributor,P2 tuned,87,1386.1670331342284,1.0
+S2 others human-like,Distributor,P2 tuned,88,1579.3361735223498,1.0
+S2 others human-like,Distributor,P2 tuned,89,1657.905083408988,1.0
+S2 others human-like,Distributor,P2 tuned,90,1586.6854974198432,1.0
+S2 others human-like,Distributor,P2 tuned,91,1218.887001115116,1.0
+S2 others human-like,Distributor,P2 tuned,92,1399.2355586223466,1.0
+S2 others human-like,Distributor,P2 tuned,93,1379.7728089259185,1.0
+S2 others human-like,Distributor,P2 tuned,94,1365.6676325293527,1.0
+S2 others human-like,Distributor,P2 tuned,95,1364.2791909118132,1.0
+S2 others human-like,Distributor,P2 tuned,96,1285.7732599778442,1.0
+S2 others human-like,Distributor,P2 tuned,97,1166.8396718861502,1.0
+S2 others human-like,Distributor,P2 tuned,98,1268.4496172083063,1.0
+S2 others human-like,Distributor,P2 tuned,99,1225.0266238989284,1.0
+S2 others human-like,Distributor,P2 tuned,100,1224.7533903356998,1.0
+S2 others human-like,Distributor,P0 placeholder,1,2093.909510293757,1.0
+S2 others human-like,Distributor,P0 placeholder,2,1446.8708026223571,1.0
+S2 others human-like,Distributor,P0 placeholder,3,1995.2291963643377,1.0
+S2 others human-like,Distributor,P0 placeholder,4,1842.4911916646242,1.0
+S2 others human-like,Distributor,P0 placeholder,5,1555.6967027495984,1.0
+S2 others human-like,Distributor,P0 placeholder,6,1875.4294170075127,1.0
+S2 others human-like,Distributor,P0 placeholder,7,1692.6794054671109,1.0
+S2 others human-like,Distributor,P0 placeholder,8,2287.6494614128933,1.0
+S2 others human-like,Distributor,P0 placeholder,9,1599.0662758552046,1.0
+S2 others human-like,Distributor,P0 placeholder,10,1574.0796772275069,1.0
+S2 others human-like,Distributor,P0 placeholder,11,1453.2902700081622,1.0
+S2 others human-like,Distributor,P0 placeholder,12,1587.5587185763386,1.0
+S2 others human-like,Distributor,P0 placeholder,13,1552.8733670295999,1.0
+S2 others human-like,Distributor,P0 placeholder,14,1504.093697627357,1.0
+S2 others human-like,Distributor,P0 placeholder,15,1580.5780690448,1.0
+S2 others human-like,Distributor,P0 placeholder,16,1637.3785469934392,1.0
+S2 others human-like,Distributor,P0 placeholder,17,2063.63972841316,1.0
+S2 others human-like,Distributor,P0 placeholder,18,1970.5870553056563,1.0
+S2 others human-like,Distributor,P0 placeholder,19,2059.036609055837,1.0
+S2 others human-like,Distributor,P0 placeholder,20,1877.4972580205883,1.0
+S2 others human-like,Distributor,P0 placeholder,21,2052.5834079643873,1.0
+S2 others human-like,Distributor,P0 placeholder,22,1678.8497053991646,1.0
+S2 others human-like,Distributor,P0 placeholder,23,2003.8906842235474,1.0
+S2 others human-like,Distributor,P0 placeholder,24,1790.2090321032856,1.0
+S2 others human-like,Distributor,P0 placeholder,25,1429.20998440252,1.0
+S2 others human-like,Distributor,P0 placeholder,26,1621.9580407806168,1.0
+S2 others human-like,Distributor,P0 placeholder,27,1936.8183768700248,1.0
+S2 others human-like,Distributor,P0 placeholder,28,1594.62754438816,1.0
+S2 others human-like,Distributor,P0 placeholder,29,1705.1245960802976,1.0
+S2 others human-like,Distributor,P0 placeholder,30,1911.9500157937725,1.0
+S2 others human-like,Distributor,P0 placeholder,31,2161.5361012725816,1.0
+S2 others human-like,Distributor,P0 placeholder,32,1559.2552801287939,1.0
+S2 others human-like,Distributor,P0 placeholder,33,1447.590842216222,1.0
+S2 others human-like,Distributor,P0 placeholder,34,2251.5211995966883,1.0
+S2 others human-like,Distributor,P0 placeholder,35,1489.961263534935,1.0
+S2 others human-like,Distributor,P0 placeholder,36,1652.2234166313588,1.0
+S2 others human-like,Distributor,P0 placeholder,37,1634.5052915189158,1.0
+S2 others human-like,Distributor,P0 placeholder,38,1856.4709313266728,1.0
+S2 others human-like,Distributor,P0 placeholder,39,1611.0803340229725,1.0
+S2 others human-like,Distributor,P0 placeholder,40,1619.2930049928102,1.0
+S2 others human-like,Distributor,P0 placeholder,41,1676.7530420839635,1.0
+S2 others human-like,Distributor,P0 placeholder,42,1420.5517927200071,1.0
+S2 others human-like,Distributor,P0 placeholder,43,1744.874899909941,1.0
+S2 others human-like,Distributor,P0 placeholder,44,1826.6748951547197,1.0
+S2 others human-like,Distributor,P0 placeholder,45,1676.597783589163,1.0
+S2 others human-like,Distributor,P0 placeholder,46,1715.61676654657,1.0
+S2 others human-like,Distributor,P0 placeholder,47,2712.630297850573,1.0
+S2 others human-like,Distributor,P0 placeholder,48,1643.4366192103262,1.0
+S2 others human-like,Distributor,P0 placeholder,49,1528.3128400014702,1.0
+S2 others human-like,Distributor,P0 placeholder,50,1716.7489576981484,1.0
+S2 others human-like,Distributor,P0 placeholder,51,2352.1142020424613,0.9999999999999999
+S2 others human-like,Distributor,P0 placeholder,52,1976.7136376994576,1.0
+S2 others human-like,Distributor,P0 placeholder,53,1726.567333787536,1.0
+S2 others human-like,Distributor,P0 placeholder,54,1568.6202149419312,1.0
+S2 others human-like,Distributor,P0 placeholder,55,1638.5225147263905,1.0
+S2 others human-like,Distributor,P0 placeholder,56,1971.4494408015048,1.0
+S2 others human-like,Distributor,P0 placeholder,57,1758.8068152251408,1.0
+S2 others human-like,Distributor,P0 placeholder,58,1430.7932120458347,1.0
+S2 others human-like,Distributor,P0 placeholder,59,2092.88597649441,1.0
+S2 others human-like,Distributor,P0 placeholder,60,1916.2504952938248,1.0
+S2 others human-like,Distributor,P0 placeholder,61,2209.684488838779,1.0
+S2 others human-like,Distributor,P0 placeholder,62,1477.8470012456783,1.0
+S2 others human-like,Distributor,P0 placeholder,63,1782.1799460758634,1.0
+S2 others human-like,Distributor,P0 placeholder,64,2113.3312651140864,1.0000000000000002
+S2 others human-like,Distributor,P0 placeholder,65,2135.4623102546147,1.0
+S2 others human-like,Distributor,P0 placeholder,66,2188.5559203549083,1.0
+S2 others human-like,Distributor,P0 placeholder,67,1590.9827046997032,1.0
+S2 others human-like,Distributor,P0 placeholder,68,1800.7421105353535,1.0
+S2 others human-like,Distributor,P0 placeholder,69,1976.5526660360374,1.0
+S2 others human-like,Distributor,P0 placeholder,70,1857.810157550111,1.0
+S2 others human-like,Distributor,P0 placeholder,71,1974.432017694877,1.0
+S2 others human-like,Distributor,P0 placeholder,72,1455.373684128025,1.0
+S2 others human-like,Distributor,P0 placeholder,73,1557.7365568503585,1.0
+S2 others human-like,Distributor,P0 placeholder,74,1693.6529922283494,1.0
+S2 others human-like,Distributor,P0 placeholder,75,2077.6696460084586,1.0
+S2 others human-like,Distributor,P0 placeholder,76,1787.0032281883787,1.0
+S2 others human-like,Distributor,P0 placeholder,77,2382.288817473136,1.0
+S2 others human-like,Distributor,P0 placeholder,78,1512.0824704462218,1.0
+S2 others human-like,Distributor,P0 placeholder,79,2499.887602349433,1.0
+S2 others human-like,Distributor,P0 placeholder,80,1804.1904623591759,1.0
+S2 others human-like,Distributor,P0 placeholder,81,1881.3648679695953,1.0
+S2 others human-like,Distributor,P0 placeholder,82,1597.0245052217701,1.0
+S2 others human-like,Distributor,P0 placeholder,83,2044.3673455817964,1.0
+S2 others human-like,Distributor,P0 placeholder,84,2015.2595996510079,1.0
+S2 others human-like,Distributor,P0 placeholder,85,1511.6185218478147,1.0
+S2 others human-like,Distributor,P0 placeholder,86,2250.903334916063,1.0
+S2 others human-like,Distributor,P0 placeholder,87,1746.6670331342284,1.0
+S2 others human-like,Distributor,P0 placeholder,88,2202.33617352235,1.0
+S2 others human-like,Distributor,P0 placeholder,89,2223.405083408988,1.0
+S2 others human-like,Distributor,P0 placeholder,90,1969.6854974198432,1.0
+S2 others human-like,Distributor,P0 placeholder,91,1512.887001115116,1.0
+S2 others human-like,Distributor,P0 placeholder,92,1777.7355586223466,1.0
+S2 others human-like,Distributor,P0 placeholder,93,1783.2728089259188,1.0
+S2 others human-like,Distributor,P0 placeholder,94,1820.1676325293527,1.0
+S2 others human-like,Distributor,P0 placeholder,95,1717.2791909118132,1.0
+S2 others human-like,Distributor,P0 placeholder,96,1582.2732599778442,1.0
+S2 others human-like,Distributor,P0 placeholder,97,1446.8396718861502,1.0
+S2 others human-like,Distributor,P0 placeholder,98,1671.9496172083063,1.0
+S2 others human-like,Distributor,P0 placeholder,99,1540.5266238989284,1.0
+S2 others human-like,Distributor,P0 placeholder,100,1617.7533903356998,1.0
+S2 others human-like,Factory,P1 tuned,1,1773.409510293757,1.0
+S2 others human-like,Factory,P1 tuned,2,1192.8708026223571,1.0
+S2 others human-like,Factory,P1 tuned,3,1664.7291963643377,1.0
+S2 others human-like,Factory,P1 tuned,4,1573.9911916646242,1.0
+S2 others human-like,Factory,P1 tuned,5,1284.6967027495984,1.0
+S2 others human-like,Factory,P1 tuned,6,1581.9294170075127,1.0
+S2 others human-like,Factory,P1 tuned,7,1451.6794054671109,1.0
+S2 others human-like,Factory,P1 tuned,8,1957.6494614128933,1.0
+S2 others human-like,Factory,P1 tuned,9,1343.0662758552046,1.0
+S2 others human-like,Factory,P1 tuned,10,1311.0796772275069,1.0
+S2 others human-like,Factory,P1 tuned,11,1237.2902700081622,1.0
+S2 others human-like,Factory,P1 tuned,12,1365.0587185763386,1.0
+S2 others human-like,Factory,P1 tuned,13,1343.3733670295999,1.0
+S2 others human-like,Factory,P1 tuned,14,1279.593697627357,1.0
+S2 others human-like,Factory,P1 tuned,15,1410.5780690448,1.0
+S2 others human-like,Factory,P1 tuned,16,1447.3785469934392,1.0
+S2 others human-like,Factory,P1 tuned,17,1770.13972841316,1.0
+S2 others human-like,Factory,P1 tuned,18,1706.0870553056563,1.0
+S2 others human-like,Factory,P1 tuned,19,1788.0366090558368,1.0
+S2 others human-like,Factory,P1 tuned,20,1621.9972580205883,1.0
+S2 others human-like,Factory,P1 tuned,21,1726.0834079643873,1.0
+S2 others human-like,Factory,P1 tuned,22,1440.8497053991646,1.0
+S2 others human-like,Factory,P1 tuned,23,1685.8906842235474,1.0
+S2 others human-like,Factory,P1 tuned,24,1513.2090321032856,1.0
+S2 others human-like,Factory,P1 tuned,25,1221.70998440252,1.0
+S2 others human-like,Factory,P1 tuned,26,1368.9580407806168,1.0
+S2 others human-like,Factory,P1 tuned,27,1645.3183768700248,1.0
+S2 others human-like,Factory,P1 tuned,28,1363.12754438816,1.0
+S2 others human-like,Factory,P1 tuned,29,1420.6245960802976,1.0
+S2 others human-like,Factory,P1 tuned,30,1643.4500157937725,1.0
+S2 others human-like,Factory,P1 tuned,31,1783.5361012725816,1.0
+S2 others human-like,Factory,P1 tuned,32,1351.7552801287939,1.0
+S2 others human-like,Factory,P1 tuned,33,1195.090842216222,1.0
+S2 others human-like,Factory,P1 tuned,34,1843.0211995966883,1.0
+S2 others human-like,Factory,P1 tuned,35,1281.961263534935,1.0
+S2 others human-like,Factory,P1 tuned,36,1464.2234166313588,1.0
+S2 others human-like,Factory,P1 tuned,37,1369.0052915189158,1.0
+S2 others human-like,Factory,P1 tuned,38,1577.4709313266728,1.0
+S2 others human-like,Factory,P1 tuned,39,1388.5803340229725,1.0
+S2 others human-like,Factory,P1 tuned,40,1465.2930049928102,1.0
+S2 others human-like,Factory,P1 tuned,41,1444.7530420839635,1.0
+S2 others human-like,Factory,P1 tuned,42,1275.0517927200071,1.0
+S2 others human-like,Factory,P1 tuned,43,1506.874899909941,1.0
+S2 others human-like,Factory,P1 tuned,44,1518.1748951547197,1.0
+S2 others human-like,Factory,P1 tuned,45,1423.597783589163,1.0
+S2 others human-like,Factory,P1 tuned,46,1458.61676654657,1.0
+S2 others human-like,Factory,P1 tuned,47,2300.130297850573,1.0
+S2 others human-like,Factory,P1 tuned,48,1399.9366192103262,1.0
+S2 others human-like,Factory,P1 tuned,49,1313.3128400014702,1.0
+S2 others human-like,Factory,P1 tuned,50,1393.7489576981484,1.0
+S2 others human-like,Factory,P1 tuned,51,2041.6142020424613,0.9999999999999999
+S2 others human-like,Factory,P1 tuned,52,1680.7136376994576,1.0
+S2 others human-like,Factory,P1 tuned,53,1462.067333787536,1.0
+S2 others human-like,Factory,P1 tuned,54,1317.1202149419312,1.0
+S2 others human-like,Factory,P1 tuned,55,1407.0225147263905,1.0
+S2 others human-like,Factory,P1 tuned,56,1710.9494408015048,1.0
+S2 others human-like,Factory,P1 tuned,57,1478.3068152251408,1.0
+S2 others human-like,Factory,P1 tuned,58,1221.2932120458347,1.0
+S2 others human-like,Factory,P1 tuned,59,1802.38597649441,1.0
+S2 others human-like,Factory,P1 tuned,60,1641.7504952938248,1.0
+S2 others human-like,Factory,P1 tuned,61,1840.184488838779,1.0
+S2 others human-like,Factory,P1 tuned,62,1310.8470012456783,1.0
+S2 others human-like,Factory,P1 tuned,63,1609.6799460758634,1.0
+S2 others human-like,Factory,P1 tuned,64,1844.3312651140864,1.0000000000000002
+S2 others human-like,Factory,P1 tuned,65,2004.9623102546147,1.0
+S2 others human-like,Factory,P1 tuned,66,1786.055920354908,1.0
+S2 others human-like,Factory,P1 tuned,67,1368.4827046997032,1.0
+S2 others human-like,Factory,P1 tuned,68,1572.7421105353535,1.0
+S2 others human-like,Factory,P1 tuned,69,1636.5526660360374,1.0
+S2 others human-like,Factory,P1 tuned,70,1610.810157550111,1.0
+S2 others human-like,Factory,P1 tuned,71,1659.432017694877,1.0
+S2 others human-like,Factory,P1 tuned,72,1238.873684128025,1.0
+S2 others human-like,Factory,P1 tuned,73,1364.7365568503585,1.0
+S2 others human-like,Factory,P1 tuned,74,1417.1529922283494,1.0
+S2 others human-like,Factory,P1 tuned,75,1763.1696460084588,1.0
+S2 others human-like,Factory,P1 tuned,76,1513.5032281883787,1.0
+S2 others human-like,Factory,P1 tuned,77,2483.7888174731356,1.0
+S2 others human-like,Factory,P1 tuned,78,1232.5824704462218,1.0
+S2 others human-like,Factory,P1 tuned,79,2291.387602349433,1.0
+S2 others human-like,Factory,P1 tuned,80,1482.6904623591759,1.0
+S2 others human-like,Factory,P1 tuned,81,1547.3648679695953,1.0
+S2 others human-like,Factory,P1 tuned,82,1407.0245052217701,1.0
+S2 others human-like,Factory,P1 tuned,83,1613.3673455817964,1.0
+S2 others human-like,Factory,P1 tuned,84,1755.2595996510079,1.0
+S2 others human-like,Factory,P1 tuned,85,1333.6185218478147,1.0
+S2 others human-like,Factory,P1 tuned,86,1829.4033349160632,1.0
+S2 others human-like,Factory,P1 tuned,87,1492.6670331342284,1.0
+S2 others human-like,Factory,P1 tuned,88,1899.3361735223498,1.0
+S2 others human-like,Factory,P1 tuned,89,1951.405083408988,1.0
+S2 others human-like,Factory,P1 tuned,90,1876.6854974198432,1.0
+S2 others human-like,Factory,P1 tuned,91,1288.887001115116,1.0
+S2 others human-like,Factory,P1 tuned,92,1575.2355586223466,1.0
+S2 others human-like,Factory,P1 tuned,93,1500.2728089259188,1.0
+S2 others human-like,Factory,P1 tuned,94,1542.1676325293527,1.0
+S2 others human-like,Factory,P1 tuned,95,1466.2791909118132,1.0
+S2 others human-like,Factory,P1 tuned,96,1377.2732599778442,1.0
+S2 others human-like,Factory,P1 tuned,97,1229.8396718861502,1.0
+S2 others human-like,Factory,P1 tuned,98,1458.4496172083063,1.0
+S2 others human-like,Factory,P1 tuned,99,1293.0266238989284,1.0
+S2 others human-like,Factory,P1 tuned,100,1363.2533903356998,1.0
+S2 others human-like,Factory,P2 tuned,1,1711.409510293757,1.0
+S2 others human-like,Factory,P2 tuned,2,1162.3708026223571,1.0
+S2 others human-like,Factory,P2 tuned,3,1642.7291963643377,1.0
+S2 others human-like,Factory,P2 tuned,4,1533.4911916646242,1.0
+S2 others human-like,Factory,P2 tuned,5,1253.1967027495984,1.0
+S2 others human-like,Factory,P2 tuned,6,1542.9294170075127,1.0
+S2 others human-like,Factory,P2 tuned,7,1394.1794054671109,1.0
+S2 others human-like,Factory,P2 tuned,8,1879.6494614128933,1.0
+S2 others human-like,Factory,P2 tuned,9,1306.0662758552046,1.0
+S2 others human-like,Factory,P2 tuned,10,1268.0796772275069,1.0
+S2 others human-like,Factory,P2 tuned,11,1204.7902700081622,1.0
+S2 others human-like,Factory,P2 tuned,12,1317.0587185763386,1.0
+S2 others human-like,Factory,P2 tuned,13,1308.3733670295999,1.0
+S2 others human-like,Factory,P2 tuned,14,1248.593697627357,1.0
+S2 others human-like,Factory,P2 tuned,15,1324.5780690448,1.0
+S2 others human-like,Factory,P2 tuned,16,1408.3785469934392,1.0
+S2 others human-like,Factory,P2 tuned,17,1696.6397284131601,1.0
+S2 others human-like,Factory,P2 tuned,18,1554.0870553056563,1.0
+S2 others human-like,Factory,P2 tuned,19,1731.5366090558368,1.0
+S2 others human-like,Factory,P2 tuned,20,1583.9972580205883,1.0
+S2 others human-like,Factory,P2 tuned,21,1690.0834079643873,1.0
+S2 others human-like,Factory,P2 tuned,22,1409.8497053991646,1.0
+S2 others human-like,Factory,P2 tuned,23,1639.3906842235474,1.0
+S2 others human-like,Factory,P2 tuned,24,1472.2090321032856,1.0
+S2 others human-like,Factory,P2 tuned,25,1204.20998440252,1.0
+S2 others human-like,Factory,P2 tuned,26,1327.4580407806168,1.0
+S2 others human-like,Factory,P2 tuned,27,1602.8183768700248,1.0
+S2 others human-like,Factory,P2 tuned,28,1334.12754438816,1.0
+S2 others human-like,Factory,P2 tuned,29,1385.1245960802976,1.0
+S2 others human-like,Factory,P2 tuned,30,1612.4500157937725,1.0
+S2 others human-like,Factory,P2 tuned,31,1709.5361012725816,1.0
+S2 others human-like,Factory,P2 tuned,32,1321.2552801287939,1.0
+S2 others human-like,Factory,P2 tuned,33,1182.590842216222,1.0
+S2 others human-like,Factory,P2 tuned,34,1835.5211995966883,1.0
+S2 others human-like,Factory,P2 tuned,35,1242.961263534935,1.0
+S2 others human-like,Factory,P2 tuned,36,1417.2234166313588,1.0
+S2 others human-like,Factory,P2 tuned,37,1336.0052915189158,1.0
+S2 others human-like,Factory,P2 tuned,38,1530.4709313266728,1.0
+S2 others human-like,Factory,P2 tuned,39,1309.0803340229725,1.0
+S2 others human-like,Factory,P2 tuned,40,1379.7930049928102,1.0
+S2 others human-like,Factory,P2 tuned,41,1408.7530420839635,1.0
+S2 others human-like,Factory,P2 tuned,42,1233.0517927200071,1.0
+S2 others human-like,Factory,P2 tuned,43,1462.374899909941,1.0
+S2 others human-like,Factory,P2 tuned,44,1493.1748951547197,1.0
+S2 others human-like,Factory,P2 tuned,45,1373.097783589163,1.0
+S2 others human-like,Factory,P2 tuned,46,1425.11676654657,1.0
+S2 others human-like,Factory,P2 tuned,47,2170.630297850573,1.0
+S2 others human-like,Factory,P2 tuned,48,1365.4366192103262,1.0
+S2 others human-like,Factory,P2 tuned,49,1278.3128400014702,1.0
+S2 others human-like,Factory,P2 tuned,50,1351.7489576981484,1.0
+S2 others human-like,Factory,P2 tuned,51,1964.1142020424613,0.9999999999999999
+S2 others human-like,Factory,P2 tuned,52,1620.2136376994576,1.0
+S2 others human-like,Factory,P2 tuned,53,1434.567333787536,1.0
+S2 others human-like,Factory,P2 tuned,54,1283.1202149419312,1.0
+S2 others human-like,Factory,P2 tuned,55,1356.5225147263905,1.0
+S2 others human-like,Factory,P2 tuned,56,1570.9494408015048,1.0
+S2 others human-like,Factory,P2 tuned,57,1443.3068152251408,1.0
+S2 others human-like,Factory,P2 tuned,58,1197.7932120458347,1.0
+S2 others human-like,Factory,P2 tuned,59,1762.88597649441,1.0
+S2 others human-like,Factory,P2 tuned,60,1604.7504952938248,1.0
+S2 others human-like,Factory,P2 tuned,61,1797.684488838779,1.0
+S2 others human-like,Factory,P2 tuned,62,1273.8470012456783,1.0
+S2 others human-like,Factory,P2 tuned,63,1515.6799460758634,1.0
+S2 others human-like,Factory,P2 tuned,64,1802.3312651140864,1.0000000000000002
+S2 others human-like,Factory,P2 tuned,65,1900.4623102546147,1.0
+S2 others human-like,Factory,P2 tuned,66,1732.055920354908,1.0
+S2 others human-like,Factory,P2 tuned,67,1314.4827046997032,1.0
+S2 others human-like,Factory,P2 tuned,68,1490.2421105353535,1.0
+S2 others human-like,Factory,P2 tuned,69,1585.0526660360374,1.0
+S2 others human-like,Factory,P2 tuned,70,1573.810157550111,1.0
+S2 others human-like,Factory,P2 tuned,71,1562.932017694877,1.0
+S2 others human-like,Factory,P2 tuned,72,1215.873684128025,1.0
+S2 others human-like,Factory,P2 tuned,73,1321.2365568503585,1.0
+S2 others human-like,Factory,P2 tuned,74,1348.1529922283494,1.0
+S2 others human-like,Factory,P2 tuned,75,1697.1696460084588,1.0
+S2 others human-like,Factory,P2 tuned,76,1511.0032281883787,1.0
+S2 others human-like,Factory,P2 tuned,77,2288.566119201927,1.0
+S2 others human-like,Factory,P2 tuned,78,1207.5824704462218,1.0
+S2 others human-like,Factory,P2 tuned,79,2102.887602349433,1.0
+S2 others human-like,Factory,P2 tuned,80,1415.6904623591759,1.0
+S2 others human-like,Factory,P2 tuned,81,1509.3648679695953,1.0
+S2 others human-like,Factory,P2 tuned,82,1372.0245052217701,1.0
+S2 others human-like,Factory,P2 tuned,83,1561.8673455817961,1.0
+S2 others human-like,Factory,P2 tuned,84,1715.2595996510079,1.0
+S2 others human-like,Factory,P2 tuned,85,1294.6185218478147,1.0
+S2 others human-like,Factory,P2 tuned,86,1733.9033349160632,1.0
+S2 others human-like,Factory,P2 tuned,87,1448.6670331342284,1.0
+S2 others human-like,Factory,P2 tuned,88,1839.8361735223498,1.0
+S2 others human-like,Factory,P2 tuned,89,1848.405083408988,1.0
+S2 others human-like,Factory,P2 tuned,90,1744.6854974198432,1.0
+S2 others human-like,Factory,P2 tuned,91,1246.387001115116,1.0
+S2 others human-like,Factory,P2 tuned,92,1512.7355586223466,1.0
+S2 others human-like,Factory,P2 tuned,93,1480.2728089259188,1.0
+S2 others human-like,Factory,P2 tuned,94,1512.6676325293527,1.0
+S2 others human-like,Factory,P2 tuned,95,1416.2791909118132,1.0
+S2 others human-like,Factory,P2 tuned,96,1345.7732599778442,1.0
+S2 others human-like,Factory,P2 tuned,97,1187.3396718861502,1.0
+S2 others human-like,Factory,P2 tuned,98,1391.4496172083063,1.0
+S2 others human-like,Factory,P2 tuned,99,1232.0266238989284,1.0
+S2 others human-like,Factory,P2 tuned,100,1327.2533903356998,1.0
+S2 others human-like,Factory,P0 placeholder,1,2093.909510293757,1.0
+S2 others human-like,Factory,P0 placeholder,2,1446.8708026223571,1.0
+S2 others human-like,Factory,P0 placeholder,3,1995.2291963643377,1.0
+S2 others human-like,Factory,P0 placeholder,4,1842.4911916646242,1.0
+S2 others human-like,Factory,P0 placeholder,5,1555.6967027495984,1.0
+S2 others human-like,Factory,P0 placeholder,6,1875.4294170075127,1.0
+S2 others human-like,Factory,P0 placeholder,7,1692.6794054671109,1.0
+S2 others human-like,Factory,P0 placeholder,8,2287.6494614128933,1.0
+S2 others human-like,Factory,P0 placeholder,9,1599.0662758552046,1.0
+S2 others human-like,Factory,P0 placeholder,10,1574.0796772275069,1.0
+S2 others human-like,Factory,P0 placeholder,11,1453.2902700081622,1.0
+S2 others human-like,Factory,P0 placeholder,12,1587.5587185763386,1.0
+S2 others human-like,Factory,P0 placeholder,13,1552.8733670295999,1.0
+S2 others human-like,Factory,P0 placeholder,14,1504.093697627357,1.0
+S2 others human-like,Factory,P0 placeholder,15,1580.5780690448,1.0
+S2 others human-like,Factory,P0 placeholder,16,1637.3785469934392,1.0
+S2 others human-like,Factory,P0 placeholder,17,2063.63972841316,1.0
+S2 others human-like,Factory,P0 placeholder,18,1970.5870553056563,1.0
+S2 others human-like,Factory,P0 placeholder,19,2059.036609055837,1.0
+S2 others human-like,Factory,P0 placeholder,20,1877.4972580205883,1.0
+S2 others human-like,Factory,P0 placeholder,21,2052.5834079643873,1.0
+S2 others human-like,Factory,P0 placeholder,22,1678.8497053991646,1.0
+S2 others human-like,Factory,P0 placeholder,23,2003.8906842235474,1.0
+S2 others human-like,Factory,P0 placeholder,24,1790.2090321032856,1.0
+S2 others human-like,Factory,P0 placeholder,25,1429.20998440252,1.0
+S2 others human-like,Factory,P0 placeholder,26,1621.9580407806168,1.0
+S2 others human-like,Factory,P0 placeholder,27,1936.8183768700248,1.0
+S2 others human-like,Factory,P0 placeholder,28,1594.62754438816,1.0
+S2 others human-like,Factory,P0 placeholder,29,1705.1245960802976,1.0
+S2 others human-like,Factory,P0 placeholder,30,1911.9500157937725,1.0
+S2 others human-like,Factory,P0 placeholder,31,2161.5361012725816,1.0
+S2 others human-like,Factory,P0 placeholder,32,1559.2552801287939,1.0
+S2 others human-like,Factory,P0 placeholder,33,1447.590842216222,1.0
+S2 others human-like,Factory,P0 placeholder,34,2251.5211995966883,1.0
+S2 others human-like,Factory,P0 placeholder,35,1489.961263534935,1.0
+S2 others human-like,Factory,P0 placeholder,36,1652.2234166313588,1.0
+S2 others human-like,Factory,P0 placeholder,37,1634.5052915189158,1.0
+S2 others human-like,Factory,P0 placeholder,38,1856.4709313266728,1.0
+S2 others human-like,Factory,P0 placeholder,39,1611.0803340229725,1.0
+S2 others human-like,Factory,P0 placeholder,40,1619.2930049928102,1.0
+S2 others human-like,Factory,P0 placeholder,41,1676.7530420839635,1.0
+S2 others human-like,Factory,P0 placeholder,42,1420.5517927200071,1.0
+S2 others human-like,Factory,P0 placeholder,43,1744.874899909941,1.0
+S2 others human-like,Factory,P0 placeholder,44,1826.6748951547197,1.0
+S2 others human-like,Factory,P0 placeholder,45,1676.597783589163,1.0
+S2 others human-like,Factory,P0 placeholder,46,1715.61676654657,1.0
+S2 others human-like,Factory,P0 placeholder,47,2712.630297850573,1.0
+S2 others human-like,Factory,P0 placeholder,48,1643.4366192103262,1.0
+S2 others human-like,Factory,P0 placeholder,49,1528.3128400014702,1.0
+S2 others human-like,Factory,P0 placeholder,50,1716.7489576981484,1.0
+S2 others human-like,Factory,P0 placeholder,51,2352.1142020424613,0.9999999999999999
+S2 others human-like,Factory,P0 placeholder,52,1976.7136376994576,1.0
+S2 others human-like,Factory,P0 placeholder,53,1726.567333787536,1.0
+S2 others human-like,Factory,P0 placeholder,54,1568.6202149419312,1.0
+S2 others human-like,Factory,P0 placeholder,55,1638.5225147263905,1.0
+S2 others human-like,Factory,P0 placeholder,56,1971.4494408015048,1.0
+S2 others human-like,Factory,P0 placeholder,57,1758.8068152251408,1.0
+S2 others human-like,Factory,P0 placeholder,58,1430.7932120458347,1.0
+S2 others human-like,Factory,P0 placeholder,59,2092.88597649441,1.0
+S2 others human-like,Factory,P0 placeholder,60,1916.2504952938248,1.0
+S2 others human-like,Factory,P0 placeholder,61,2209.684488838779,1.0
+S2 others human-like,Factory,P0 placeholder,62,1477.8470012456783,1.0
+S2 others human-like,Factory,P0 placeholder,63,1782.1799460758634,1.0
+S2 others human-like,Factory,P0 placeholder,64,2113.3312651140864,1.0000000000000002
+S2 others human-like,Factory,P0 placeholder,65,2135.4623102546147,1.0
+S2 others human-like,Factory,P0 placeholder,66,2188.5559203549083,1.0
+S2 others human-like,Factory,P0 placeholder,67,1590.9827046997032,1.0
+S2 others human-like,Factory,P0 placeholder,68,1800.7421105353535,1.0
+S2 others human-like,Factory,P0 placeholder,69,1976.5526660360374,1.0
+S2 others human-like,Factory,P0 placeholder,70,1857.810157550111,1.0
+S2 others human-like,Factory,P0 placeholder,71,1974.432017694877,1.0
+S2 others human-like,Factory,P0 placeholder,72,1455.373684128025,1.0
+S2 others human-like,Factory,P0 placeholder,73,1557.7365568503585,1.0
+S2 others human-like,Factory,P0 placeholder,74,1693.6529922283494,1.0
+S2 others human-like,Factory,P0 placeholder,75,2077.6696460084586,1.0
+S2 others human-like,Factory,P0 placeholder,76,1787.0032281883787,1.0
+S2 others human-like,Factory,P0 placeholder,77,2382.288817473136,1.0
+S2 others human-like,Factory,P0 placeholder,78,1512.0824704462218,1.0
+S2 others human-like,Factory,P0 placeholder,79,2499.887602349433,1.0
+S2 others human-like,Factory,P0 placeholder,80,1804.1904623591759,1.0
+S2 others human-like,Factory,P0 placeholder,81,1881.3648679695953,1.0
+S2 others human-like,Factory,P0 placeholder,82,1597.0245052217701,1.0
+S2 others human-like,Factory,P0 placeholder,83,2044.3673455817964,1.0
+S2 others human-like,Factory,P0 placeholder,84,2015.2595996510079,1.0
+S2 others human-like,Factory,P0 placeholder,85,1511.6185218478147,1.0
+S2 others human-like,Factory,P0 placeholder,86,2250.903334916063,1.0
+S2 others human-like,Factory,P0 placeholder,87,1746.6670331342284,1.0
+S2 others human-like,Factory,P0 placeholder,88,2202.33617352235,1.0
+S2 others human-like,Factory,P0 placeholder,89,2223.405083408988,1.0
+S2 others human-like,Factory,P0 placeholder,90,1969.6854974198432,1.0
+S2 others human-like,Factory,P0 placeholder,91,1512.887001115116,1.0
+S2 others human-like,Factory,P0 placeholder,92,1777.7355586223466,1.0
+S2 others human-like,Factory,P0 placeholder,93,1783.2728089259188,1.0
+S2 others human-like,Factory,P0 placeholder,94,1820.1676325293527,1.0
+S2 others human-like,Factory,P0 placeholder,95,1717.2791909118132,1.0
+S2 others human-like,Factory,P0 placeholder,96,1582.2732599778442,1.0
+S2 others human-like,Factory,P0 placeholder,97,1446.8396718861502,1.0
+S2 others human-like,Factory,P0 placeholder,98,1671.9496172083063,1.0
+S2 others human-like,Factory,P0 placeholder,99,1540.5266238989284,1.0
+S2 others human-like,Factory,P0 placeholder,100,1617.7533903356998,1.0

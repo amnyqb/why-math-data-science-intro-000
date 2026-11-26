@@ -1,0 +1,2457 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 4,
+      "name": "Stock A[Entry 1,Column 1,Depth 1]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 1,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Stock A[Entry 1,Column 1,Depth 2]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 1,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Stock A[Entry 1,Column 2,Depth 1]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 1,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Stock A[Entry 1,Column 2,Depth 2]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 1,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Stock A[Entry 2,Column 1,Depth 1]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 2,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Stock A[Entry 2,Column 1,Depth 2]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 2,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Stock A[Entry 2,Column 2,Depth 1]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 2,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Stock A[Entry 2,Column 2,Depth 2]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 2,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Stock A[Entry 3,Column 1,Depth 1]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 3,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Stock A[Entry 3,Column 1,Depth 2]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 3,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Stock A[Entry 3,Column 2,Depth 1]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 3,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Stock A[Entry 3,Column 2,Depth 2]",
+      "kind": "Stock",
+      "equation": "\"Initial Values[Entry 3,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Inflow A[Entry 1,Column 1,Depth 1]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 1,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Inflow A[Entry 1,Column 1,Depth 2]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 1,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Inflow A[Entry 1,Column 2,Depth 1]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 1,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Inflow A[Entry 1,Column 2,Depth 2]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 1,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Inflow A[Entry 2,Column 1,Depth 1]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 2,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Inflow A[Entry 2,Column 1,Depth 2]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 2,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Inflow A[Entry 2,Column 2,Depth 1]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 2,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Inflow A[Entry 2,Column 2,Depth 2]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 2,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Inflow A[Entry 3,Column 1,Depth 1]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 3,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Inflow A[Entry 3,Column 1,Depth 2]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 3,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Inflow A[Entry 3,Column 2,Depth 1]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 3,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Inflow A[Entry 3,Column 2,Depth 2]",
+      "kind": "Aux",
+      "equation": "\"Rate A[Entry 3,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "Initial Values[Entry 1,Column 1,Depth 1]",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "Initial Values[Entry 1,Column 1,Depth 2]",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "Initial Values[Entry 1,Column 2,Depth 1]",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Initial Values[Entry 1,Column 2,Depth 2]",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "Initial Values[Entry 2,Column 1,Depth 1]",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "Initial Values[Entry 2,Column 1,Depth 2]",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "Initial Values[Entry 2,Column 2,Depth 1]",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "Initial Values[Entry 2,Column 2,Depth 2]",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "Initial Values[Entry 3,Column 1,Depth 1]",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 37,
+      "name": "Initial Values[Entry 3,Column 1,Depth 2]",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "Initial Values[Entry 3,Column 2,Depth 1]",
+      "kind": "Constant",
+      "equation": "6",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 39,
+      "name": "Initial Values[Entry 3,Column 2,Depth 2]",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 40,
+      "name": "Rate A[Entry 1,Column 1,Depth 1]",
+      "kind": "Constant",
+      "equation": "0.01",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 41,
+      "name": "Rate A[Entry 1,Column 1,Depth 2]",
+      "kind": "Constant",
+      "equation": "0.02",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 42,
+      "name": "Rate A[Entry 1,Column 2,Depth 1]",
+      "kind": "Constant",
+      "equation": "0.02",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 43,
+      "name": "Rate A[Entry 1,Column 2,Depth 2]",
+      "kind": "Constant",
+      "equation": "0.05",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        1030.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 44,
+      "name": "Rate A[Entry 2,Column 1,Depth 1]",
+      "kind": "Constant",
+      "equation": "0.03",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 45,
+      "name": "Rate A[Entry 2,Column 1,Depth 2]",
+      "kind": "Constant",
+      "equation": "0.02",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 46,
+      "name": "Rate A[Entry 2,Column 2,Depth 1]",
+      "kind": "Constant",
+      "equation": "0.04",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 47,
+      "name": "Rate A[Entry 2,Column 2,Depth 2]",
+      "kind": "Constant",
+      "equation": "0.04",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 48,
+      "name": "Rate A[Entry 3,Column 1,Depth 1]",
+      "kind": "Constant",
+      "equation": "0.05",
+      "units": "",
+      "comment": "",
+      "pos": [
+        880.0,
+        1160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 49,
+      "name": "Rate A[Entry 3,Column 1,Depth 2]",
+      "kind": "Constant",
+      "equation": "0.05",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 50,
+      "name": "Rate A[Entry 3,Column 2,Depth 1]",
+      "kind": "Constant",
+      "equation": "0.06",
+      "units": "",
+      "comment": "",
+      "pos": [
+        310.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 51,
+      "name": "Rate A[Entry 3,Column 2,Depth 2]",
+      "kind": "Constant",
+      "equation": "0.06",
+      "units": "",
+      "comment": "",
+      "pos": [
+        500.0,
+        1290.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 52,
+      "name": "Stock A[Entry 1,Column 1,Depth 1] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 1,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        0.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 4,
+      "from_pt": [
+        -100.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 53,
+      "name": "Stock A[Entry 1,Column 1,Depth 2] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 1,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 5,
+      "from_pt": [
+        90.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 54,
+      "name": "Stock A[Entry 1,Column 2,Depth 1] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 1,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        380.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 6,
+      "from_pt": [
+        280.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 55,
+      "name": "Stock A[Entry 1,Column 2,Depth 2] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 1,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 7,
+      "from_pt": [
+        470.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 56,
+      "name": "Stock A[Entry 2,Column 1,Depth 1] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 2,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        760.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 8,
+      "from_pt": [
+        660.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 57,
+      "name": "Stock A[Entry 2,Column 1,Depth 2] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 2,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        0.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 9,
+      "from_pt": [
+        -100.0,
+        250.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 58,
+      "name": "Stock A[Entry 2,Column 2,Depth 1] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 2,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 10,
+      "from_pt": [
+        90.0,
+        250.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 59,
+      "name": "Stock A[Entry 2,Column 2,Depth 2] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 2,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        380.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 11,
+      "from_pt": [
+        280.0,
+        250.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 60,
+      "name": "Stock A[Entry 3,Column 1,Depth 1] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 3,Column 1,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 12,
+      "from_pt": [
+        470.0,
+        250.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 61,
+      "name": "Stock A[Entry 3,Column 1,Depth 2] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 3,Column 1,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        760.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 13,
+      "from_pt": [
+        660.0,
+        250.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 62,
+      "name": "Stock A[Entry 3,Column 2,Depth 1] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 3,Column 2,Depth 1]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        0.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 14,
+      "from_pt": [
+        -100.0,
+        380.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 63,
+      "name": "Stock A[Entry 3,Column 2,Depth 2] net flow",
+      "kind": "Flow",
+      "equation": "\"Inflow A[Entry 3,Column 2,Depth 2]\"",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 15,
+      "from_pt": [
+        90.0,
+        380.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 64,
+      "from": 28,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 65,
+      "from": 29,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 66,
+      "from": 30,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 67,
+      "from": 31,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 68,
+      "from": 32,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 69,
+      "from": 33,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 70,
+      "from": 34,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 71,
+      "from": 35,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 72,
+      "from": 36,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 73,
+      "from": 37,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 74,
+      "from": 38,
+      "to": 14,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 75,
+      "from": 39,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 76,
+      "from": 40,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 77,
+      "from": 41,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 78,
+      "from": 42,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 79,
+      "from": 43,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 80,
+      "from": 44,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 81,
+      "from": 45,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 82,
+      "from": 46,
+      "to": 22,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 83,
+      "from": 47,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 84,
+      "from": 48,
+      "to": 24,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 85,
+      "from": 49,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 86,
+      "from": 50,
+      "to": 26,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 87,
+      "from": 51,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 88,
+      "from": 16,
+      "to": 52,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 89,
+      "from": 17,
+      "to": 53,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 90,
+      "from": 18,
+      "to": 54,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 91,
+      "from": 19,
+      "to": 55,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 92,
+      "from": 20,
+      "to": 56,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 93,
+      "from": 21,
+      "to": 57,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 94,
+      "from": 22,
+      "to": 58,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 95,
+      "from": 23,
+      "to": 59,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 96,
+      "from": 24,
+      "to": 60,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 97,
+      "from": 25,
+      "to": 61,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 98,
+      "from": 26,
+      "to": 62,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 99,
+      "from": 27,
+      "to": 63,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 100.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 99,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "Third Dimension Subscript",
+      "items": [
+        "Depth 1",
+        "Depth 2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "Second Dimension Subscript",
+      "items": [
+        "Column 1",
+        "Column 2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "One Dimensional Subscript",
+      "items": [
+        "Entry 1",
+        "Entry 2",
+        "Entry 3"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

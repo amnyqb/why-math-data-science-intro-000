@@ -1,0 +1,1180 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 7,
+      "name": "ndim",
+      "kind": "Aux",
+      "equation": "38",
+      "units": "",
+      "comment": "",
+      "pos": [
+        263.0,
+        176.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "dim values",
+      "kind": "Aux",
+      "equation": "1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        257.0,
+        128.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [
+        {
+          "item": "ab1",
+          "equation": "2",
+          "table": []
+        },
+        {
+          "item": "ab2",
+          "equation": "3",
+          "table": []
+        },
+        {
+          "item": "ab3",
+          "equation": "4",
+          "table": []
+        },
+        {
+          "item": "ab4",
+          "equation": "5",
+          "table": []
+        },
+        {
+          "item": "ab5",
+          "equation": "6",
+          "table": []
+        },
+        {
+          "item": "ab6",
+          "equation": "7",
+          "table": []
+        },
+        {
+          "item": "ab7",
+          "equation": "8",
+          "table": []
+        },
+        {
+          "item": "ab8",
+          "equation": "9",
+          "table": []
+        },
+        {
+          "item": "ab9",
+          "equation": "10",
+          "table": []
+        },
+        {
+          "item": "ab10",
+          "equation": "11",
+          "table": []
+        },
+        {
+          "item": "ab11",
+          "equation": "12",
+          "table": []
+        },
+        {
+          "item": "ab12",
+          "equation": "13",
+          "table": []
+        },
+        {
+          "item": "ab13",
+          "equation": "14",
+          "table": []
+        },
+        {
+          "item": "ab14",
+          "equation": "15",
+          "table": []
+        },
+        {
+          "item": "ab15",
+          "equation": "16",
+          "table": []
+        },
+        {
+          "item": "ab16",
+          "equation": "17",
+          "table": []
+        },
+        {
+          "item": "ab17",
+          "equation": "18",
+          "table": []
+        },
+        {
+          "item": "ab18",
+          "equation": "19",
+          "table": []
+        },
+        {
+          "item": "ab19",
+          "equation": "20",
+          "table": []
+        },
+        {
+          "item": "ab20",
+          "equation": "21",
+          "table": []
+        },
+        {
+          "item": "B",
+          "equation": "22",
+          "table": []
+        },
+        {
+          "item": "(bc1-bc5)",
+          "equation": "23",
+          "table": []
+        },
+        {
+          "item": "abc6",
+          "equation": "24",
+          "table": []
+        },
+        {
+          "item": "abc7",
+          "equation": "25",
+          "table": []
+        },
+        {
+          "item": "abc8",
+          "equation": "26",
+          "table": []
+        },
+        {
+          "item": "abc9",
+          "equation": "27",
+          "table": []
+        },
+        {
+          "item": "abc10",
+          "equation": "28",
+          "table": []
+        },
+        {
+          "item": "abc11",
+          "equation": "29",
+          "table": []
+        },
+        {
+          "item": "abc12",
+          "equation": "30",
+          "table": []
+        },
+        {
+          "item": "abc13",
+          "equation": "31",
+          "table": []
+        },
+        {
+          "item": "abc14",
+          "equation": "32",
+          "table": []
+        },
+        {
+          "item": "abc15",
+          "equation": "33",
+          "table": []
+        },
+        {
+          "item": "abc16",
+          "equation": "34",
+          "table": []
+        },
+        {
+          "item": "abc17",
+          "equation": "35",
+          "table": []
+        },
+        {
+          "item": "bc17",
+          "equation": "36",
+          "table": []
+        },
+        {
+          "item": "bc18",
+          "equation": "37",
+          "table": []
+        },
+        {
+          "item": "C",
+          "equation": "38",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "nsubdim1",
+      "kind": "Aux",
+      "equation": "20",
+      "units": "",
+      "comment": "",
+      "pos": [
+        406.0,
+        176.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "subdim1 values",
+      "kind": "Aux",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        397.0,
+        134.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subdim1",
+      "by_item": [
+        {
+          "item": "ab2",
+          "equation": "3",
+          "table": []
+        },
+        {
+          "item": "ab3",
+          "equation": "4",
+          "table": []
+        },
+        {
+          "item": "ab4",
+          "equation": "5",
+          "table": []
+        },
+        {
+          "item": "ab5",
+          "equation": "6",
+          "table": []
+        },
+        {
+          "item": "ab6",
+          "equation": "7",
+          "table": []
+        },
+        {
+          "item": "ab7",
+          "equation": "8",
+          "table": []
+        },
+        {
+          "item": "ab8",
+          "equation": "9",
+          "table": []
+        },
+        {
+          "item": "ab9",
+          "equation": "10",
+          "table": []
+        },
+        {
+          "item": "ab10",
+          "equation": "11",
+          "table": []
+        },
+        {
+          "item": "ab11",
+          "equation": "12",
+          "table": []
+        },
+        {
+          "item": "ab12",
+          "equation": "13",
+          "table": []
+        },
+        {
+          "item": "ab13",
+          "equation": "14",
+          "table": []
+        },
+        {
+          "item": "ab14",
+          "equation": "15",
+          "table": []
+        },
+        {
+          "item": "ab15",
+          "equation": "16",
+          "table": []
+        },
+        {
+          "item": "ab16",
+          "equation": "17",
+          "table": []
+        },
+        {
+          "item": "ab17",
+          "equation": "18",
+          "table": []
+        },
+        {
+          "item": "ab18",
+          "equation": "19",
+          "table": []
+        },
+        {
+          "item": "ab19",
+          "equation": "20",
+          "table": []
+        },
+        {
+          "item": "ab20",
+          "equation": "21",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "nsubdim1 copy",
+      "kind": "Aux",
+      "equation": "20",
+      "units": "",
+      "comment": "",
+      "pos": [
+        695.0,
+        187.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "subdim1 copy values",
+      "kind": "Aux",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        706.0,
+        140.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subdim1",
+      "by_item": [
+        {
+          "item": "ab2",
+          "equation": "3",
+          "table": []
+        },
+        {
+          "item": "ab3",
+          "equation": "4",
+          "table": []
+        },
+        {
+          "item": "ab4",
+          "equation": "5",
+          "table": []
+        },
+        {
+          "item": "ab5",
+          "equation": "6",
+          "table": []
+        },
+        {
+          "item": "ab6",
+          "equation": "7",
+          "table": []
+        },
+        {
+          "item": "ab7",
+          "equation": "8",
+          "table": []
+        },
+        {
+          "item": "ab8",
+          "equation": "9",
+          "table": []
+        },
+        {
+          "item": "ab9",
+          "equation": "10",
+          "table": []
+        },
+        {
+          "item": "ab10",
+          "equation": "11",
+          "table": []
+        },
+        {
+          "item": "ab11",
+          "equation": "12",
+          "table": []
+        },
+        {
+          "item": "ab12",
+          "equation": "13",
+          "table": []
+        },
+        {
+          "item": "ab13",
+          "equation": "14",
+          "table": []
+        },
+        {
+          "item": "ab14",
+          "equation": "15",
+          "table": []
+        },
+        {
+          "item": "ab15",
+          "equation": "16",
+          "table": []
+        },
+        {
+          "item": "ab16",
+          "equation": "17",
+          "table": []
+        },
+        {
+          "item": "ab17",
+          "equation": "18",
+          "table": []
+        },
+        {
+          "item": "ab18",
+          "equation": "19",
+          "table": []
+        },
+        {
+          "item": "ab19",
+          "equation": "20",
+          "table": []
+        },
+        {
+          "item": "ab20",
+          "equation": "21",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "nsubdim2",
+      "kind": "Aux",
+      "equation": "15",
+      "units": "",
+      "comment": "",
+      "pos": [
+        553.0,
+        175.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "subdim2 values",
+      "kind": "Aux",
+      "equation": "23",
+      "units": "",
+      "comment": "",
+      "pos": [
+        559.0,
+        141.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subdim2",
+      "by_item": [
+        {
+          "item": "abc6",
+          "equation": "24",
+          "table": []
+        },
+        {
+          "item": "abc7",
+          "equation": "25",
+          "table": []
+        },
+        {
+          "item": "abc8",
+          "equation": "26",
+          "table": []
+        },
+        {
+          "item": "abc9",
+          "equation": "27",
+          "table": []
+        },
+        {
+          "item": "abc10",
+          "equation": "28",
+          "table": []
+        },
+        {
+          "item": "abc11",
+          "equation": "29",
+          "table": []
+        },
+        {
+          "item": "abc12",
+          "equation": "30",
+          "table": []
+        },
+        {
+          "item": "abc13",
+          "equation": "31",
+          "table": []
+        },
+        {
+          "item": "abc14",
+          "equation": "32",
+          "table": []
+        },
+        {
+          "item": "abc15",
+          "equation": "33",
+          "table": []
+        },
+        {
+          "item": "abc16",
+          "equation": "34",
+          "table": []
+        },
+        {
+          "item": "abc17",
+          "equation": "35",
+          "table": []
+        },
+        {
+          "item": "bc17",
+          "equation": "36",
+          "table": []
+        },
+        {
+          "item": "bc18",
+          "equation": "37",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "nsubdim2 copy",
+      "kind": "Aux",
+      "equation": "15",
+      "units": "",
+      "comment": "",
+      "pos": [
+        841.0,
+        193.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "subdim2 copy values",
+      "kind": "Aux",
+      "equation": "23",
+      "units": "",
+      "comment": "",
+      "pos": [
+        847.0,
+        137.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subdim2 copy",
+      "by_item": [
+        {
+          "item": "abc6",
+          "equation": "24",
+          "table": []
+        },
+        {
+          "item": "abc7",
+          "equation": "25",
+          "table": []
+        },
+        {
+          "item": "abc8",
+          "equation": "26",
+          "table": []
+        },
+        {
+          "item": "abc9",
+          "equation": "27",
+          "table": []
+        },
+        {
+          "item": "abc10",
+          "equation": "28",
+          "table": []
+        },
+        {
+          "item": "abc11",
+          "equation": "29",
+          "table": []
+        },
+        {
+          "item": "abc12",
+          "equation": "30",
+          "table": []
+        },
+        {
+          "item": "abc13",
+          "equation": "31",
+          "table": []
+        },
+        {
+          "item": "abc14",
+          "equation": "32",
+          "table": []
+        },
+        {
+          "item": "abc15",
+          "equation": "33",
+          "table": []
+        },
+        {
+          "item": "abc16",
+          "equation": "34",
+          "table": []
+        },
+        {
+          "item": "abc17",
+          "equation": "35",
+          "table": []
+        },
+        {
+          "item": "bc17",
+          "equation": "36",
+          "table": []
+        },
+        {
+          "item": "bc18",
+          "equation": "37",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "nsubsubdim",
+      "kind": "Aux",
+      "equation": "12",
+      "units": "",
+      "comment": "",
+      "pos": [
+        1006.0,
+        193.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "subsubdim values",
+      "kind": "Aux",
+      "equation": "24",
+      "units": "",
+      "comment": "",
+      "pos": [
+        1009.0,
+        140.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "subsubdim",
+      "by_item": [
+        {
+          "item": "abc7",
+          "equation": "25",
+          "table": []
+        },
+        {
+          "item": "abc8",
+          "equation": "26",
+          "table": []
+        },
+        {
+          "item": "abc9",
+          "equation": "27",
+          "table": []
+        },
+        {
+          "item": "abc10",
+          "equation": "28",
+          "table": []
+        },
+        {
+          "item": "abc11",
+          "equation": "29",
+          "table": []
+        },
+        {
+          "item": "abc12",
+          "equation": "30",
+          "table": []
+        },
+        {
+          "item": "abc13",
+          "equation": "31",
+          "table": []
+        },
+        {
+          "item": "abc14",
+          "equation": "32",
+          "table": []
+        },
+        {
+          "item": "abc15",
+          "equation": "33",
+          "table": []
+        },
+        {
+          "item": "abc16",
+          "equation": "34",
+          "table": []
+        },
+        {
+          "item": "abc17",
+          "equation": "35",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 1.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 18,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "dim",
+      "items": [
+        "A",
+        "ab1",
+        "ab2",
+        "ab3",
+        "ab4",
+        "ab5",
+        "ab6",
+        "ab7",
+        "ab8",
+        "ab9",
+        "ab10",
+        "ab11",
+        "ab12",
+        "ab13",
+        "ab14",
+        "ab15",
+        "ab16",
+        "ab17",
+        "ab18",
+        "ab19",
+        "ab20",
+        "B",
+        "(bc1-bc5)",
+        "abc6",
+        "abc7",
+        "abc8",
+        "abc9",
+        "abc10",
+        "abc11",
+        "abc12",
+        "abc13",
+        "abc14",
+        "abc15",
+        "abc16",
+        "abc17",
+        "bc17",
+        "bc18",
+        "C"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "subdim1",
+      "items": [
+        "ab1",
+        "ab2",
+        "ab3",
+        "ab4",
+        "ab5",
+        "ab6",
+        "ab7",
+        "ab8",
+        "ab9",
+        "ab10",
+        "ab11",
+        "ab12",
+        "ab13",
+        "ab14",
+        "ab15",
+        "ab16",
+        "ab17",
+        "ab18",
+        "ab19",
+        "ab20"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "subdim2",
+      "items": [
+        "(bc1-bc5)",
+        "abc6",
+        "abc7",
+        "abc8",
+        "abc9",
+        "abc10",
+        "abc11",
+        "abc12",
+        "abc13",
+        "abc14",
+        "abc15",
+        "abc16",
+        "abc17",
+        "bc17",
+        "bc18"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 4,
+      "name": "subsubdim",
+      "items": [
+        "abc6",
+        "abc7",
+        "abc8",
+        "abc9",
+        "abc10",
+        "abc11",
+        "abc12",
+        "abc13",
+        "abc14",
+        "abc15",
+        "abc16",
+        "abc17"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 5,
+      "name": "subdim1 copy",
+      "items": [
+        "ab1",
+        "ab2",
+        "ab3",
+        "ab4",
+        "ab5",
+        "ab6",
+        "ab7",
+        "ab8",
+        "ab9",
+        "ab10",
+        "ab11",
+        "ab12",
+        "ab13",
+        "ab14",
+        "ab15",
+        "ab16",
+        "ab17",
+        "ab18",
+        "ab19",
+        "ab20"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 6,
+      "name": "subdim2 copy",
+      "items": [
+        "(bc1-bc5)",
+        "abc6",
+        "abc7",
+        "abc8",
+        "abc9",
+        "abc10",
+        "abc11",
+        "abc12",
+        "abc13",
+        "abc14",
+        "abc15",
+        "abc16",
+        "abc17",
+        "bc17",
+        "bc18"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

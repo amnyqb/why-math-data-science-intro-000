@@ -1,0 +1,273 @@
+# Addendum key, case B3-3b (World3, 1974 version). Does not replace or change answer_key.yaml.
+# Source: Thissen, W.A.H. (1978), "Investigations into the Club of Rome's World3 model: lessons for
+# understanding complicated models", PhD thesis, Technische Hogeschool Eindhoven, defended 5 May 1978,
+# DOI 10.6100/IR79372. This is the THESIS (140 PDF pages), not the 10-page IEEE SMC-8(3) paper it draws on.
+# Page numbers below are the printed thesis page numbers (equal to the PDF page labels).
+# Printed pages 116-121 (end of Sec. 3.3.4-4 on equilibrium/phase portraits, and the techniques of detailed
+# analysis, decomposition and simplification, Sec. 3.3.4-2 to 3.3.4-5) are ABSENT from the supplied PDF
+# (page 115 is followed directly by page 122). Unreadable/absent pages: 116, 117, 118, 119, 120, 121.
+# No entry is written from those pages. Only Table 3.2 (p. 110) names the simplification techniques.
+# Every number below is stated in the text (digitised: false); nothing is read off a plot.
+# Thissen's own model: Algol on Burroughs B7700, first-order Euler, DT = 0.5 yr (p. 10).
+# "SFPC" is stated as 230 on pp. 33 and 51 and as 220 on p. 61 (inconsistency inside the thesis).
+
+- case: B3-3b
+  finding: "Under standard-run conditions World3 is a three-level hierarchy: capital and resources (including the nonrenewable-resource stock) behave autonomously and dominate; agriculture is intermediate (driven mainly by IO, weakly by POP); population and persistent pollution are the third level, driven by IO, SO and F. Feedback from POP and FIOAA to the capital sector is weak."
+  type: core_structure
+  phase: "standard run, whole run to 2100"
+  qualitative: true
+  source: "Thissen 1978, p. 68, Sec. 2.3.1; p. 91-92, Sec. 2.5.1"
+  version: &ver "World3 as in Meadows et al. 1974 (Dynamics of Growth in a Finite World, ref. 16), re-implemented by Thissen in Algol (Euler, DT 0.5 yr, 29 state variables); standard run; population sector with 4 age groups unless the entry says otherwise"
+
+- case: B3-3b
+  finding: "Freezing tests confirm the hierarchy: freezing IO and SO from 1970 makes agriculture, population and pollution come to rest (no growth and decline); freezing POP or PPOLX from 1970 hardly changes the growth-and-decline mode of the capital and agricultural variables; freezing F in 1970 changes population substantially but leaves capital and pollution virtually unchanged."
+  type: core_structure
+  phase: "freezes applied from 1970 in the standard run"
+  qualitative: true
+  source: "Thissen 1978, p. 69, Sec. 2.3.1 and Fig. 2.25 (text); p. 113, Sec. 3.3.4"
+  version: *ver
+
+- case: B3-3b
+  finding: "The standard-run decline is caused by nonrenewable-resource scarcity acting through the capital sector: industrial output falls sharply once more than about 60 percent of the initial resource stock is used (the text elsewhere says capital decline starts when roughly half of NRI is used, p. 88, and that FCAOR starts to rise after more than about 40 percent is used, p. 19). The decline is then passed on to food production and population."
+  type: dominant_loop
+  phase: "decline phase, first half of the 21st century onward (growth turns to decline around 2025, p. 22)"
+  value: "about 60 percent of initial resources used (p. 11, p. 28); about 40 percent for FCAOR to start rising (p. 19); roughly half of NRI (p. 88)"
+  qualitative: false
+  source: "Thissen 1978, p. 11, Sec. 2.2.1; p. 19; p. 22; p. 28, Sec. 2.2.2-5; p. 88, Sec. 2.4.3"
+  version: *ver
+
+- case: B3-3b
+  finding: "Growth phase (NRFR above 0.5, FCAOR = 0.05, FIOAA = 0.12): the industrial/service capital subsystem is a positive-eigenvalue system. Linearised eigenvalues are +0.032 per year (eigenvector IC:SC = 1:0.47, about 2:3) and -0.23 per year (eigenvector 1:-1.69). IC and SC grow exponentially at about 3.2 percent per year, matching the standard run while NRFR is at least 0.5."
+  type: dominant_loop
+  phase: "growth phase, NRFR >= 0.5 (to about 2025)"
+  value: "lambda1 = +0.032 per yr with eigenvector (1, 0.47); lambda2 = -0.23 per yr with eigenvector (1, -1.69); growth about 3.2 percent per yr"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 23, Eq. 2.18-2.19 (a64 = -0.20, b64 = 0.30, a61 = 1.67)"
+  version: *ver
+
+- case: B3-3b
+  finding: "While NRFR is above 0.5 (FCAOR = 0.05 constant) the resource stock NR has no influence at all on capital growth; the only external input to IC and SC is FIOAA. No capital growth is possible once FCAOR exceeds 0.5. For 0 <= FIOAA <= 0.4 and 0.05 <= FCAOR <= 1 the IC-SC matrix has either two negative eigenvalues or one positive and one negative eigenvalue."
+  type: core_structure
+  phase: "growth-to-decline transition (around 2025)"
+  value: "FCAOR threshold 0.5 (NRFR = 0.5); table approximation FCAOR = 0.05 for NRFR > 0.5, FCAOR = 1 - 1.90*NRFR for NRFR < 0.5"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 22, Eq. 2.16-2.17 and Fig. 2.5 (values stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Decline phase (NRFR below 0.5, FIOAI about 0.32 after 2000): the relative growth rate of industrial capital is fully set by the fraction of resources remaining, and the relative depletion rate of NR is set only by IC. Capital rises while NRFR exceeds q/p in magnitude and declines below it; NRFR can only fall."
+  type: dominant_loop
+  phase: "after about 2000, NRFR < 0.5"
+  value: "IC_dot/IC = 0.20*NRFR - 0.071 per yr (p = 0.20, q = -1/ALIC = -0.071); NR_dot/NR = -0.034*IC/NRI (r = -0.034)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 24, Eq. 2.23-2.30 (FIOAI = 0.32, ICOR = 3, ALIC = 14)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Law of total industrial output: because resource use is proportional to industrial output (IOPC below about 600) and the resource stock is finite, the area under the IO curve cannot exceed NR(1900)/a132. Anything that speeds early capital growth gives an earlier and sharper drop; moderating growth prolongs it and makes decline gradual. IC tends to zero even before all resources are exhausted."
+  type: core_structure
+  phase: "whole run"
+  value: "integral of IO dt <= NR(1900)/a132, with a132 = 0.0053 and NRI = 1e12 (Table 2.2, p. 20)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 21, Eq. 2.9; p. 20, Table 2.2; p. 26"
+  version: *ver
+
+- case: B3-3b
+  finding: "Capital-and-resource submodel reduces to three states (IC, SC, NR). Population has no direct influence in standard-run conditions because PCRUM and ISOPC are nearly proportional to IOPC for IOPC below 400; holding POP constant at 2e9 or 4e9 leaves behaviour almost unchanged. Resource-usage and service-allocation effects of POP appear only at IOPC below about 50 or above about 800."
+  type: reduction_size
+  phase: "standard run (IOPC 0-400)"
+  value: "3 state equations (Table 2.2); POP held at 2e9 and 4e9: almost the same behaviour; POP matters for IOPC < 50 or > 800 (a132 -> 0 above IOPC 1400)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 18-19, Sec. 2.2.2-2; p. 20, Table 2.2; p. 27-29, Sec. 2.2.2-4 and 2.2.2-5"
+  version: *ver
+
+- case: B3-3b
+  finding: "The job subsector can be removed for standard-run behaviour: CUF departs from 1 only slightly in the first two years after 1900 and in 2070-2100, and setting CUF = 1 throughout leaves behaviour virtually unaffected. It becomes active only with labour shortage (IC/POP above about 4500, i.e. IOPC about 1400 or more), where CUF is a very sensitive parameter for capital growth. The urban-industrial land submodel is also dormant."
+  type: reduction_size
+  phase: "standard run; active only at high IOPC or high AIPH"
+  value: "CUF set to 1 for the whole run: behaviour virtually unaffected; CUF < 1 when industrial capital/population ratio > about 4500 (IOPC >= about 1400)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 18, Sec. 2.2.2-2; p. 27; p. 71, Sec. 2.3.2-1; p. 96, Sec. 3.1"
+  version: *ver
+
+- case: B3-3b
+  finding: "Parameter sensitivity of the capital-and-resource submodel: behaviour is most sensitive to the parameter groups acting directly on industrial output (CUF, ICOR), on the allocation of output to reinvestment (FIOAC) and on industrial capital depreciation (ALIC). Variations in other parameters, including resource usage and resource availability, have less effect and act only after resources are more than 40 percent used (FCAOR rising). Freezing FIOAA at 0.12 (range 0.10-0.16) changes little; 0.16 gives faster early growth and an earlier turning point."
+  type: leverage_parameter
+  phase: "standard run, capital growth phase"
+  qualitative: true
+  source: "Thissen 1978, p. 19, Sec. 2.2.2-2; p. 20, Sec. 2.2.2-2"
+  version: *ver
+
+- case: B3-3b
+  finding: "Agricultural submodel, standard-run freezes and omissions that change F and FIOAA little: PPOLX frozen at any value below 10; FALM frozen at 0.06 (it varies 4-7 percent); FIALD frozen at 0.19 (varies 0.003-0.26); LER = LRUI = 0 (their total effect is about 10 percent of AL in 2100); LFERT frozen at 570 (changes mainly in 2020-2070); LYMAP is 1 while IO stays below ten times its 1970 value. Freezing POP from 1970 leaves F largely unaffected but changes FIOAA; freezing IO from 1970 hardly changes FIOAA but changes F."
+  type: reduction_size
+  phase: "standard run, freezes from 1900 or 1970"
+  value: "PPOLX < 10; FALM = 0.06; FIALD = 0.19; LER = LRUI = 0 (about 10 percent of AL in 2100); LFERT = 570; LYMAP = 1 for IO < 10 x 1970 value"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 34-35, Sec. 2.2.3-2 and Fig. 2.10 (values stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Under standard-run conditions the agricultural submodel acts algebraically except for the integration of the land development rate into AL (and PAL). Land-fertility lag (below 5 yr) and the 2-yr lags (CAI to AI, FR to PFR) can be dropped: removing them, or replacing LFERT by its steady state, gives results virtually identical to the original standard run; new equilibria after input steps are reached within 5 years. F depends mainly on IO and AL, FIOAA mainly on POP (IO and AL effects nearly cancel)."
+  type: reduction_size
+  phase: "standard run (input changes over 20 years or more)"
+  value: "lags removed: land fertility < 5 yr, CAI-AI and FR-PFR 2 yr; equilibrium reached within 5 yr; only one dynamic element left (integral of LDR)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 38-40, Sec. 2.2.3-3; p. 45-46, Sec. 2.2.3-6"
+  version: *ver
+
+- case: B3-3b
+  finding: "Outside standard-run conditions the agricultural submodel changes character once PPOLX exceeds 10: the loop LFERT to F to FPC to FR to FALM to LFERT can have gain above +1 with a 2-yr lag, giving two coexisting equilibria, rapid jumps in food production, large inertia or self-started growth or decline. Steady-state F falls when POP exceeds about 4e9 and is very sensitive to PPOLX between 10 and 20; for PPOLX above 15, FPC is either above 2.5 times SFPC or below SFPC. Land-fertility degradation saturates at PPOLX = 30. These dormant parts must be kept when the model leaves the standard run."
+  type: dominant_loop
+  phase: "non-standard conditions, PPOLX > 10"
+  value: "threshold PPOLX = 10 (regime change); PPOLX = 15 (bistable FPC); PPOLX = 30 (LFDR constant above); POP above about 4e9; loop lag 2 years"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 41-43, Sec. 2.2.3-4 and Fig. 2.13 (values stated in text); p. 44-45, Sec. 2.2.3-5"
+  version: *ver
+
+- case: B3-3b
+  finding: "Persistent-pollution submodel: in the standard run PPOLX stays below 12, so its lag time is under 5 yr and the stock equation can be replaced by the algebraic steady-state relation without changing behaviour; PPOLX then simply follows pollution generation, which is proportional to IO (PPGIO to IO, PPGAO to AI*(1-FALM)). Each source supplies about half of 1970 generation. Lag time grows with PPOLX (over 50 yr at PPOLX = 100). A 20-yr third-order delay lies between generation and appearance."
+  type: reduction_size
+  phase: "standard run (PPOLX < 12)"
+  value: "lag time TPPOL < 5 yr for PPOLX < 12; > 50 yr at PPOLX = 100; delay 20 yr (3 x 20/3); each of PPGIO and PPGAO about half of 1970 generation"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 46-47, Sec. 2.2.4-1; p. 49-50, Sec. 2.2.4-2 and 2.2.4-3, Eq. 2.58-2.60"
+  version: *ver
+
+- case: B3-3b
+  finding: "Pollution assimilation is capped, so pollution grows without bound when appearance rate relative to 1970 reaches 11.9 or more, and rises disproportionately below that because average lifetime increases with pollution (a145 = 0.084, b145 = 2.016). This nonlinear stock is why high-IO runs show sudden pollution outbreaks."
+  type: behaviour
+  phase: "high pollution (PPOLX above about 12), non-standard conditions"
+  value: "maximum assimilation 11.9 times the 1970 pollution stock per year; unbounded growth for ppapr >= 11.9"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 48, Sec. 2.2.4-2, Eq. 2.57-2.59 and Fig. 2.15 (value stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Population submodel in the standard run is determined by food and services acting on the death rate and by family income expectation acting on the birth rate; pollution has virtually no influence (LMP within 2 percent of unity because PPOLX stays below 12). MTF, CMPLE, SFSN, FCE and LMC are weak and can be simplified; FIE, the SOPC and FPC effects on LE, and the lags (the 3-yr AIOPC lag most) are not negligible; omitting all linear lags is significant. Combined effect of all lags is to raise RGP by about 0.4 percent per percent growth of per capita variables, giving RGP about 0.7 times RGPst."
+  type: reduction_size
+  phase: "standard run"
+  value: "LMP deviates < 2 percent from 1; lags raise RGP by 0.4 percent per percent per-capita growth (AIOPC lag alone 0.2); RGP about 0.7*RGPst"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 56, Sec. 2.2.5-2; p. 58; p. 63-64, Eq. 2.72-2.73"
+  version: *ver
+
+- case: B3-3b
+  finding: "Population decline is not generated inside the population sector: freezing IO, SO, F and PPOLX from 1970 removes the decline entirely, and the standard-run decline is imposed by IO, SO and F. Growth before the turning point is possible mainly because food production rises quickly between 1900 and 2000. The turning point of population comes about 15 years after that of capital."
+  type: dominant_loop
+  phase: "decline phase, after about 2025"
+  value: "population turning point about 15 years after the capital turning point"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 55-56, Sec. 2.2.5-2 and Fig. 2.19 (text); p. 64, Sec. 2.2.5-3; p. 67, Sec. 2.2.5-6"
+  version: *ver
+
+- case: B3-3b
+  finding: "Population feedback: with ample food and high income the net feedback of POP on its own growth is positive (instability, exponential growth); as food becomes scarce it turns negative and POP tends to a size set by food. The sign coefficient b_m is positive for FPC above about 500 (m = F/SO = 4) down to about 250 (m = 0.25), and positive for any combination with SOPC above 1000 and FPC above 500."
+  type: dominant_loop
+  phase: "growth phase (food ample) versus decline phase (food scarce)"
+  value: "b_m > 0 for FPC > about 500 (m = 4) to about 250 (m = 0.25); b > 0 for SOPC > 1000 and FPC > 500"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 62-64, Sec. 2.2.5-3, Eq. 2.66-2.71"
+  version: *ver
+
+- case: B3-3b
+  finding: "Population equilibrium depends primarily on food production F, about F divided by the subsistence level. Equilibrium growth is negative at any SOPC for FPC below about 180 and positive for FPC above about 400, so natural equilibrium without age structure occurs only near subsistence (starvation) or at high pollution. SO and IO matter little; PPOLX matters only above about 40. If inputs were stabilised before 2020, POP would grow to about twice its value at stabilisation, and after 2060 POPE falls below POP."
+  type: behaviour
+  phase: "decline phase and long-run equilibrium"
+  value: "POPE about F/220 (text p. 61; SFPC = 230 on pp. 33 and 51); RGPst = 0 for FPC between about 180 and 400; PPOLX > about 40 needed to matter; about twice the 1970s-2020 stabilisation level; POPE < POP after 2060"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 59-61, Sec. 2.2.5-3 and Fig. 2.21-2.22 (values stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Age structure and initial values: with four age groups RGP4 is up to 0.5 percent per year lower than RGP when TF < 2.5, the response to TF is delayed by an extra lag of about 25 years, and a second equilibrium at high per capita values (FPC > 1000, IOPC > 1400) exists, stabilised by crowding. Quadrupling or even 8-fold raising of the 1900 population has no effect after about 1940, while lowering it keeps POP lower throughout; doubling initial IC gives earlier resource depletion and decline throughout the run."
+  type: behaviour
+  phase: "standard run and equilibrium analysis"
+  value: "RGP4 lower by up to 0.5 percent per yr for TF < 2.5; extra lag about 25 yr; second equilibrium FPC > 1000, IOPC > 1400; POPI x8 vanishes after 1940"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 56-58, Sec. 2.2.5-2; p. 66, Sec. 2.2.5-4; p. 112-113, Sec. 3.3.4"
+  version: *ver
+
+- case: B3-3b
+  finding: "Total linearisation procedure applied to the 1970 standard-run state: state vector reduced from 29 to 21 by replacing each third-order lag by an equivalent first-order lag (does not affect standard-run behaviour); Jacobian by 5 percent perturbations; influence matrix B_ij = A_ij * (change of x_j over 1970-2000); binary link matrix with a link kept when |B_ij| is at least 0.2 times the largest element of row i; reordered to block-triangular form to give the hierarchy. The reduced linear model reproduces the original for about 30 years. Result: the capital variables IC, SC and AI dominate and their growth drives the rest; AI and IC interact strongly."
+  type: reduction_size
+  phase: "1970-2000 growth phase"
+  value: "29 -> 21 state variables; perturbation 5 percent; link threshold 0.2 x row max; delta t 30 yr (1970-2000)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 76-77, Sec. 2.3.3 and Fig. 2.27 (parameters stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Eigenvalues of the 1970 linearised World3 (21 states): one dominant positive eigenvalue, two non-negative very small ones, and the rest with negative real parts. The IC-SC-AI submatrix carries an eigenvalue very close to the dominant one (capital leads growth); the population submatrix has one very small positive eigenvalue (slightly positive population feedback around 1970)."
+  type: dominant_loop
+  phase: "1970 state, growth phase"
+  value: "dominant +0.027 per yr; two small non-negative ones of order 1e-3 and 1e-4; negative real parts between -0.05 and -0.98"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 78-79, Sec. 2.3.3"
+  version: *ver
+
+- case: B3-3b
+  finding: "Cautions on the linearisation method: smaller perturbations than 5 percent give no significant change, larger ones give a different linear model (lower population growth, larger AL); no general rule exists for the binary-link criterion (comparison with row maximum worked best at 1970, row sum may be better when large terms offset each other); linearisation can mask nonlinearities (example F = x*y at the origin) and its results must be tested against the nonlinear model."
+  type: behaviour
+  phase: "method note, 1970 state"
+  qualitative: true
+  source: "Thissen 1978, p. 77-80, Sec. 2.3.3"
+  version: *ver
+
+- case: B3-3b
+  finding: "Overall equilibrium analysis with IO and SO frozen (agriculture, pollution and population submodels; AL = 3e9 ha, PAL = 0.1e9 ha, no age distribution): for IO below 1e12 equilibrium population rises with F near subsistence FPC; above 1e12 pollution cuts land fertility; food and equilibrium population fall sharply above IO = 1.7e12; FIOAA exceeds 0.20 for IO between 2e12 and 3e12 (capital would stabilise automatically); equilibrium PPOLX rises from 15 to about 50 as IO goes from 2e12 to 3e12. No equilibrium exists for IO = 3.0e12, 3.1e12 and 3.4e12: sustained oscillations of period about 130 years arise from the land-fertility/food loop."
+  type: behaviour
+  phase: "long-run equilibria with IO held constant (1970 IO = 7.8e11)"
+  value: "IO = 1e12 and 1.7e12 breakpoints; FIOAA > 0.20 for IO 2e12-3e12; PPOLX 15 to about 50 over that range; no equilibrium at IO = 3.0e12, 3.1e12, 3.4e12; oscillation period about 130 yr"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 81-83, Sec. 2.3.4 and Fig. 2.28 (values stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Carrying capacity: the maximum equilibrium population with no resource scarcity is about 12,000 million (about 1/7 of the roughly 80,000 million implied by maximum arable land times maximum land yield), because high agricultural investment raises pollution and cuts land fertility. Once industrial and service output decline to zero the maximum sustainable population is about 3,000 million (land erosion ignored); the only sustainable steady state of the capital-resource submodel is zero capital."
+  type: behaviour
+  phase: "long-run equilibrium"
+  value: "12,000 million with no resource scarcity (p. 83, 92-93); about 80,000 million theoretical maximum (p. 84); 3,000 million when IO and SO are zero (p. 92); zero capital the only sustainable steady state (p. 80)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 80; p. 83-84, Sec. 2.3.4; p. 92-93, Sec. 2.5.1"
+  version: *ver
+
+- case: B3-3b
+  finding: "Non-standard run with infinite cheap resources (FCAOR = 0.5 held): after exponential capital growth PPOLX peaks near 110 around 2050 and land fertility falls to about one sixth of its initial value; population falls from about 9e9 in 2050; a second pollution peak of about 250 follows; capital growth stops around 2170 by labour shortage; with four age groups population settles near 1.2e9 at FPC above 2000; without age groups the first pollution outbreak drives POP so low that labour scarcity makes capital almost zero and POP settles near 2.5e9 at low FPC."
+  type: behaviour
+  phase: "after 2050, FCAOR = 0.5 scenario run to 2400"
+  value: "PPOLX peak about 110 (2050) and about 250 (second peak); LFERT about 1/6 of initial; POP about 9e9 in 2050; settle 1.2e9 (age groups) or 2.5e9 (no age groups)"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 73-75, Sec. 2.3.2-6 and Fig. 2.26 (values stated in text)"
+  version: *ver
+
+- case: B3-3b
+  finding: "Policy found from understanding the hierarchy: reallocating part of industrial output to resource conservation (FIOARC rising to 0.11 by 2000, resource use reduced as NR_reduced = NR_original * exp(-E * FIOARC), E = 10 in the run; E of at least 8.6 needed for a 30 percent target at FIOARC = 0.14), together with a lower desired family size normal (DCFSN from 4.0 to 3.3 over 1975-2000, a 17.5 percent cut; about 3.2 suffices for equilibria), postpones decline beyond 2100: IO growth stops near 1.5e12 and POP stays slightly below 6,000 million, using the full model with four age groups and the full agricultural sector. Delaying the population policy beyond 2000 makes a slight POP decline unavoidable unless IO is held above 3.0e12 and PPOLX below 10."
+  type: policy
+  phase: "policy introduced gradually 1975-2000"
+  value: "FIOARC = 0.044*(t-1975) to 0.11 from 2000; E = 10 (E >= 8.6 needed at FIOARC = 0.14); DCFSN 4.0 to 3.3; IO about 1.5e12; POP just under 6e9"
+  qualitative: false
+  digitised: false
+  source: "Thissen 1978, p. 84, Sec. 2.3.4; p. 88-91, Sec. 2.4.3 and Fig. 2.31, Eq. 2.85-2.88"
+  version: *ver

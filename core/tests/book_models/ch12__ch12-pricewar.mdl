@@ -1,0 +1,67 @@
+{UTF-8}
+{ Chapter 12: relative control (escalation). Two firms each set their price a little below the rival's. }
+Price A= INTEG(
+	Price Change A,
+	100)
+	~	USD/unit
+	~	|
+Price B= INTEG(
+	Price Change B,
+	100)
+	~	USD/unit
+	~	|
+Undercut A=
+	0.05
+	~	dmnl
+	~	Fraction by which firm A aims below B's price (0: it only matches).
+	|
+Undercut B=
+	0.05
+	~	dmnl
+	~	|
+Unit Cost=
+	60
+	~	USD/unit
+	~	Neither firm prices below cost.
+	|
+Perception Time=
+	1
+	~	month
+	~	Time to observe the rival's price.
+	|
+Perceived Price of B=
+	SMOOTH(Price B, Perception Time)
+	~	USD/unit
+	~	|
+Perceived Price of A=
+	SMOOTH(Price A, Perception Time)
+	~	USD/unit
+	~	|
+Target Price A=
+	MAX(Unit Cost, Perceived Price of B * (1 - Undercut A))
+	~	USD/unit
+	~	|
+Target Price B=
+	MAX(Unit Cost, Perceived Price of A * (1 - Undercut B))
+	~	USD/unit
+	~	|
+Price Adjustment Time=
+	2
+	~	month
+	~	|
+Price Change A=
+	(Target Price A - Price A) / Price Adjustment Time
+	~	USD/unit/month
+	~	|
+Price Change B=
+	(Target Price B - Price B) / Price Adjustment Time
+	~	USD/unit/month
+	~	|
+Margin A=
+	(Price A - Unit Cost) / Price A
+	~	dmnl
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 36 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

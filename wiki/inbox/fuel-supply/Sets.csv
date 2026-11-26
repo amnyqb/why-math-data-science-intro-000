@@ -1,0 +1,62 @@
+Set,Item,Belongs to
+Region,COA,
+Region,EOA,
+Region,SOA,
+Region,WOA,
+Tank,Hail 2 - Crude,COA
+Tank,Hail 2 - Diesel,COA
+Tank,Layla PP - Crude,COA
+Tank,Layla PP - Diesel,COA
+Tank,Qassim - Diesel,COA
+Tank,Qassim 2 - Diesel,COA
+Tank,The Ninth - Diesel,COA
+Tank,The Tenth - Diesel,COA
+Tank,Wadi Adawasir - Crude,COA
+Tank,Wadi Adawasir - Diesel,COA
+Tank,AL-Quorayyat - Crude,EOA
+Tank,AL-Quorayyat - Diesel,EOA
+Tank,Al-Jouf - Crude,EOA
+Tank,Al-Jouf - Diesel,EOA
+Tank,Arar - Crude,EOA
+Tank,Arar - Diesel,EOA
+Tank,QURAYYAH CC - Diesel,EOA
+Tank,Rafhaa - Crude,EOA
+Tank,Rafhaa - Diesel,EOA
+Tank,Asir - Diesel,SOA
+Tank,Jazan - Crude,SOA
+Tank,Jazan - Diesel,SOA
+Tank,Najran - Crude,SOA
+Tank,Sharorah - Crude,SOA
+Tank,Sharorah - Diesel,SOA
+Tank,TIHAMA - Crude,SOA
+Tank,TIHAMA - Diesel,SOA
+Tank,Al-Wajh - Crude,WOA
+Tank,Jeddah South - Diesel,WOA
+Tank,Rabigh Gas - Diesel,WOA
+Tank,Shoaiba - Diesel,WOA
+Tank,Shoaiba C.C. - Diesel,WOA
+Tank,Tabuk PP2 - Crude,WOA
+Tank,Tabuk PP2 - Diesel,WOA
+Tank,PP11 - ASL,COA
+Tank,PP12 - ASL,COA
+Tank,PP14 - ASL,COA
+Tank,PP8 - Crude,COA
+Tank,PP8 - Diesel,COA
+Tank,PPQC3 - Diesel,COA
+Tank,Marifq IWPP - Diesel,EOA
+Tank,QIPP 1 - Diesel,EOA
+Tank,Wad Al Shamal - ASL,EOA
+Tank,Asir - Crude,SOA
+Tank,Bisha - Diesel,SOA
+Tank,Najran - Diesel,SOA
+Tank,Shuqaiq - Diesel,SOA
+Tank,Al-Wajh - Diesel,WOA
+Tank,Duba - Diesel,WOA
+Tank,Duba Green - ASL,WOA
+Tank,Madinah PP2 - Diesel,WOA
+Tank,Makkah - Diesel,WOA
+Tank,Rabigh 2 - Diesel,WOA
+Tank,Rabigh CC + Steam - Diesel,WOA
+Tank,Rabigh IPP II - ASL,WOA
+Tank,Rabigh Steam - Diesel,WOA
+Tank,Taiba 1 - Diesel,WOA

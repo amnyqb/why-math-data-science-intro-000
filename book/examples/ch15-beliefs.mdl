@@ -1,0 +1,26 @@
+{UTF-8}
+{ Chapter 15: what people believe. Demand grows steadily from week 10. The manager sees it late, and, extrapolating the trend, may overshoot. }
+Demand=
+	100 + RAMP(2, 10, 40)
+	~	units/week
+	~	What customers really buy: flat at 100, then growing by 2 each week from week 10 to week 40.
+	|
+Perceived demand=
+	EXPECT(Demand, 6)
+	~	units/week
+	~	What the manager believes demand is: the fact, noticed with a lag of about 6 weeks.
+	|
+Perceived trend=
+	EXPECT(Demand, 6, measure=trend)
+	~	1/week
+	~	The growth the manager thinks they see, as a fraction of demand per week.
+	|
+Expected demand in 8 weeks=
+	EXPECT(Demand, 6, ahead=8)
+	~	units/week
+	~	Where the manager expects demand to be in 8 weeks, extrapolating the trend.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 60 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |

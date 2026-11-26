@@ -1,0 +1,2 @@
+Name,Input,Points,Units,Description,Per,Combine,Module
+Demand data,Time,"(0,4) (1000,4)",Case/Week,Demand series by week (regime 2); a flat placeholder until a data file is bound.,,,Demand and settings

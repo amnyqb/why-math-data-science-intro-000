@@ -1,0 +1,114 @@
+{UTF-8}
+Marketing Spend=
+	20000
+	~	USD/month
+	~	
+	|
+Acquisition Cost=
+	400
+	~	USD/customer
+	~	
+	|
+Churn Fraction=
+	0.04
+	~	1/month
+	~	
+	|
+Acquisition=
+	Marketing Spend / Acquisition Cost
+	~	customer/month
+	~	
+	|
+Churn=
+	Customers * Churn Fraction
+	~	customer/month
+	~	
+	|
+Customers= INTEG(
+	Acquisition - Churn,
+	0)
+	~	customer
+	~	
+	|
+Price=
+	120
+	~	USD/customer/month
+	~	
+	|
+Revenue=
+	Customers * Price
+	~	USD/month
+	~	
+	|
+Fixed Costs=
+	50000
+	~	USD/month
+	~	
+	|
+Operating Expenses=
+	Marketing Spend + Fixed Costs
+	~	USD/month
+	~	
+	|
+Seed Round=
+	1000000 * PULSE(6, 1)
+	~	USD/month
+	~	
+	|
+Founder Capital=
+	400000
+	~	USD
+	~	
+	|
+Cash Sales=
+	Revenue
+	~	USD/month
+	~	
+	|
+Cash Expenses=
+	Operating Expenses
+	~	USD/month
+	~	
+	|
+Cash from Investors=
+	Seed Round
+	~	USD/month
+	~	
+	|
+Revenue Earned=
+	Revenue
+	~	USD/month
+	~	
+	|
+Expenses Recognised=
+	Operating Expenses
+	~	USD/month
+	~	
+	|
+Capital Issued=
+	Seed Round
+	~	USD/month
+	~	
+	|
+Cash= INTEG(
+	Cash Sales + Cash from Investors - Cash Expenses,
+	Founder Capital)
+	~	USD
+	~	
+	|
+Retained Earnings= INTEG(
+	Revenue Earned - Expenses Recognised,
+	0)
+	~	USD
+	~	
+	|
+Paid in Capital= INTEG(
+	Capital Issued,
+	Founder Capital)
+	~	USD
+	~	
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 36 ~ month ~ |
+TIME STEP = 0.125 ~ month ~ |
+SAVEPER = 0.125 ~ month ~ |

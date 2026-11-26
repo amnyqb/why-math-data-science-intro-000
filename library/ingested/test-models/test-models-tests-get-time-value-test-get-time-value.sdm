@@ -1,0 +1,1048 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "get time 0 dim 0",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 0)]",
+      "pos": [
+        209.0,
+        85.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "get time 1 dim 0",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 0)]",
+      "pos": [
+        406.0,
+        89.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "get time 0 dim 1",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 1)]",
+      "pos": [
+        211.0,
+        117.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "get time 1 dim 1",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 1)]",
+      "pos": [
+        404.0,
+        114.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "get time 0 dim 2",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 2)]",
+      "pos": [
+        212.0,
+        146.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "get time 1 dim 2",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 2)]",
+      "pos": [
+        404.0,
+        133.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "get time 0 dim 3",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 3)]",
+      "pos": [
+        214.0,
+        176.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "get time 1 dim 3",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 3)]",
+      "pos": [
+        404.0,
+        157.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "get time 0 dim 4",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 4)]",
+      "pos": [
+        214.0,
+        206.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "get time 1 dim 4",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 4)]",
+      "pos": [
+        400.0,
+        188.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "get time 0 dim 5",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 5)]",
+      "pos": [
+        213.0,
+        233.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "get time 1 dim 5",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 5)]",
+      "pos": [
+        401.0,
+        219.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "get time 0 dim 6",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 6)]",
+      "pos": [
+        211.0,
+        263.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "get time 1 dim 6",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 6)]",
+      "pos": [
+        398.0,
+        251.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "get time 0 dim 7",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 7)]",
+      "pos": [
+        210.0,
+        295.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "get time 1 dim 7",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 7)]",
+      "pos": [
+        396.0,
+        276.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "get time 0 dim 8",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 8)]",
+      "pos": [
+        208.0,
+        333.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "get time 1 dim 8",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 8)]",
+      "pos": [
+        395.0,
+        307.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "get time 0 dim 9",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 9)]",
+      "pos": [
+        209.0,
+        368.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "get time 1 dim 9",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 9)]",
+      "pos": [
+        395.0,
+        346.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "get time 0 dim 10",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(0, dim-20, 10)]",
+      "pos": [
+        208.0,
+        402.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "get time 1 dim 10",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET TIME VALUE(1, dim-20, 10)]",
+      "pos": [
+        403.0,
+        385.0
+      ],
+      "table": [
+        [
+          50.0,
+          0.0
+        ],
+        [
+          51.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "dim",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [],
+  "notes": [],
+  "settings": {
+    "initial_time": 50.0,
+    "final_time": 100.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 23,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "dim",
+      "items": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36",
+        "A37",
+        "A38",
+        "A39",
+        "A40",
+        "A41",
+        "A42",
+        "A43",
+        "A44",
+        "A45",
+        "A46",
+        "A47",
+        "A48",
+        "A49",
+        "A50",
+        "A51",
+        "A52",
+        "A53",
+        "A54",
+        "A55",
+        "A56",
+        "A57",
+        "A58",
+        "A59",
+        "A60",
+        "A61",
+        "A62",
+        "A63",
+        "A64",
+        "A65",
+        "A66",
+        "A67",
+        "A68",
+        "A69",
+        "A70",
+        "A71",
+        "A72",
+        "A73",
+        "A74",
+        "A75",
+        "A76",
+        "A77",
+        "A78",
+        "A79",
+        "A80",
+        "A81",
+        "A82",
+        "A83",
+        "A84",
+        "A85",
+        "A86",
+        "A87",
+        "A88",
+        "A89",
+        "A90",
+        "A91",
+        "A92",
+        "A93",
+        "A94",
+        "A95",
+        "A96",
+        "A97",
+        "A98",
+        "A99",
+        "A100"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

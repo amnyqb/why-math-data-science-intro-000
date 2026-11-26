@@ -1,0 +1,480 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Truck Load",
+      "kind": "Constant",
+      "equation": "100",
+      "units": "units",
+      "comment": "Units on the truck.",
+      "pos": [
+        110.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Receipts",
+      "kind": "Flow",
+      "equation": "Truck Load * PULSE(5, 1) / Unloading Time",
+      "units": "units/week",
+      "comment": "Units received while the truck unloads.",
+      "pos": [
+        190.0,
+        230.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 7,
+      "from_pt": [
+        50.0,
+        230.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Unloading Time",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "week",
+      "comment": "Time over which the truck is unloaded.",
+      "pos": [
+        270.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Demand",
+      "kind": "Constant",
+      "equation": "30",
+      "units": "units/week",
+      "comment": "Customer demand.",
+      "pos": [
+        470.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Minimum Shipping Time",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "week",
+      "comment": "Shortest time in which the stock on hand can be shipped.",
+      "pos": [
+        640.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Shipments",
+      "kind": "Flow",
+      "equation": "MIN(Demand, Inventory / Minimum Shipping Time)",
+      "units": "units/week",
+      "comment": "Shipments, limited by what is on hand.",
+      "pos": [
+        530.0,
+        230.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 7,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        670.0,
+        230.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Inventory",
+      "kind": "Stock",
+      "equation": "50",
+      "units": "units",
+      "comment": "Units on hand.",
+      "pos": [
+        360.0,
+        230.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Total Received",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "units",
+      "comment": "Units received since the start.",
+      "pos": [
+        360.0,
+        390.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Receipts Counted",
+      "kind": "Flow",
+      "equation": "Receipts",
+      "units": "",
+      "comment": "",
+      "pos": [
+        190.0,
+        390.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 8,
+      "from_pt": [
+        50.0,
+        390.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 16,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 10,
+      "from": 1,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 3,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 4,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 7,
+      "to": 6,
+      "bend": 45.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 5,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 2,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 12.0,
+    "time_step": 0.0625,
+    "time_units": "week",
+    "method": "Euler"
+  },
+  "next_id": 16,
+  "sheets": [
+    {
+      "id": 16,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

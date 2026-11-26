@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="63.55mm" viewBox="0 0 1120 547.5">
+<title>Workforce</title>
+<defs>
+<clipPath id="c1"><rect x="10" y="7.75" width="1100" height="539.75"/></clipPath>
+<clipPath id="c2"><rect x="51.41" y="31.75" width="1058.59" height="476.25"/></clipPath>
+</defs>
+<g clip-path="url(#c1)">
+<text x="10 24 33 38.5 46.5 52 61.5 67 74 82.5 86 95 102.5 111 117 123.5 132.5 141.5 150.5 156.5 163 166.5 170.5 176.5 183 186.5 195.5 204 216 219.5 223.5 232 239 247.5" y="22.25" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="17.37" fill="#1a1a1a" xml:space="preserve">Workforce overshoots its new level</text>
+</g>
+<g clip-path="url(#c2)">
+<rect x="51.91" y="32.25" width="1057.59" height="475.25" rx="1.5" fill="none" stroke="#e4e7f0" stroke-width="1.15"/>
+</g>
+<g clip-path="url(#c1)">
+<text x="95.85" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">0</text>
+<text x="252.59 259.59" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">10</text>
+<text x="412.98 419.98" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">20</text>
+<text x="573.38 580.38" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">30</text>
+<text x="733.77 740.77" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">40</text>
+<text x="894.16 901.16" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">50</text>
+<text x="1054.55 1061.55" y="520" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">60</text>
+<text x="541.69 548.69 551.69 562.69 570.19 573.19 577.19 588.19 595.69 603.19 608.19 615.69" y="535" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">Time (Month)</text>
+<text x="32.75 39.75" y="490.85" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">50</text>
+<text x="32.75 39.75" y="434.79" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">51</text>
+<text x="32.75 39.75" y="378.71" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">52</text>
+<text x="32.75 39.75" y="322.65" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">53</text>
+<text x="32.75 39.75" y="266.58" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">54</text>
+<text x="32.75 39.75" y="210.51" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">55</text>
+<text x="32.75 39.75" y="154.45" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">56</text>
+<text x="32.75 39.75" y="98.38" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">57</text>
+<text x="32.75 39.75" y="42.31" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">58</text>
+<g transform="translate(6.25 289.84) rotate(-90)">
+<text x="0 7 14.5 19 25 32.5" y="12" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#505050" xml:space="preserve">Person</text>
+</g>
+</g>
+<g clip-path="url(#c2)">
+<line x1="51.41" y1="31.75" x2="51.41" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="67.45" y1="31.75" x2="67.45" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="83.48" y1="31.75" x2="83.48" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="115.56" y1="31.75" x2="115.56" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="131.6" y1="31.75" x2="131.6" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="147.64" y1="31.75" x2="147.64" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="163.68" y1="31.75" x2="163.68" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="179.72" y1="31.75" x2="179.72" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="195.76" y1="31.75" x2="195.76" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="211.8" y1="31.75" x2="211.8" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="227.84" y1="31.75" x2="227.84" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="243.88" y1="31.75" x2="243.88" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="275.96" y1="31.75" x2="275.96" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="292" y1="31.75" x2="292" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="308.04" y1="31.75" x2="308.04" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="324.07" y1="31.75" x2="324.07" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="340.11" y1="31.75" x2="340.11" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="356.15" y1="31.75" x2="356.15" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="372.19" y1="31.75" x2="372.19" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="388.23" y1="31.75" x2="388.23" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="404.27" y1="31.75" x2="404.27" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="436.35" y1="31.75" x2="436.35" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="452.39" y1="31.75" x2="452.39" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="468.43" y1="31.75" x2="468.43" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="484.47" y1="31.75" x2="484.47" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="500.51" y1="31.75" x2="500.51" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="516.55" y1="31.75" x2="516.55" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="532.59" y1="31.75" x2="532.59" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="548.63" y1="31.75" x2="548.63" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="564.66" y1="31.75" x2="564.66" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="596.74" y1="31.75" x2="596.74" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="612.78" y1="31.75" x2="612.78" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="628.82" y1="31.75" x2="628.82" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="644.86" y1="31.75" x2="644.86" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="660.9" y1="31.75" x2="660.9" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="676.94" y1="31.75" x2="676.94" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="692.98" y1="31.75" x2="692.98" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="709.02" y1="31.75" x2="709.02" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="725.06" y1="31.75" x2="725.06" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="757.14" y1="31.75" x2="757.14" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="773.18" y1="31.75" x2="773.18" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="789.21" y1="31.75" x2="789.21" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="805.25" y1="31.75" x2="805.25" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="821.29" y1="31.75" x2="821.29" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="837.33" y1="31.75" x2="837.33" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="853.37" y1="31.75" x2="853.37" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="869.41" y1="31.75" x2="869.41" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="885.45" y1="31.75" x2="885.45" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="917.53" y1="31.75" x2="917.53" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="933.57" y1="31.75" x2="933.57" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="949.61" y1="31.75" x2="949.61" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="965.64" y1="31.75" x2="965.64" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="981.69" y1="31.75" x2="981.69" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="997.73" y1="31.75" x2="997.73" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1013.77" y1="31.75" x2="1013.77" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1029.8" y1="31.75" x2="1029.8" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1045.84" y1="31.75" x2="1045.84" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1077.92" y1="31.75" x2="1077.92" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1093.96" y1="31.75" x2="1093.96" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="1110" y1="31.75" x2="1110" y2="508" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.16"/>
+<line x1="51.41" y1="430.29" x2="1110" y2="430.29" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="374.21" x2="1110" y2="374.21" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="318.15" x2="1110" y2="318.15" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="262.08" x2="1110" y2="262.08" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="206.01" x2="1110" y2="206.01" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="149.95" x2="1110" y2="149.95" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="93.88" x2="1110" y2="93.88" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="51.41" y1="37.81" x2="1110" y2="37.81" stroke="#4f4f4f" stroke-width="1.15" stroke-opacity="0.4"/>
+<line x1="259.92" y1="31.75" x2="259.92" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="420.31" y1="31.75" x2="420.31" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="580.7" y1="31.75" x2="580.7" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="741.1" y1="31.75" x2="741.1" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="901.49" y1="31.75" x2="901.49" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="1061.88" y1="31.75" x2="1061.88" y2="508" stroke="#505050" stroke-width="1.15" stroke-opacity="0.72"/>
+<line x1="99.52" y1="31.75" x2="99.52" y2="508" stroke="#505050" stroke-width="1.15"/>
+<line x1="51.41" y1="486.35" x2="1110" y2="486.35" stroke="#505050" stroke-width="1.15"/>
+</g>
+<g clip-path="url(#c1)">
+<rect x="1009.38" y="36.25" width="96.13" height="24" rx="9.5" fill="none" stroke="#e4e7f0" stroke-width="1.15" stroke-opacity="0.75"/>
+<circle cx="1089.5" cy="48.25" r="5.25" fill="#f4f5fa" stroke="#e4e7f0" stroke-width="1.15"/>
+<circle cx="1089.5" cy="48.25" r="3.75" fill="#4f46e5"/>
+<text x="1017.88 1029.38 1036.88 1041.88 1048.38 1053.38 1060.88 1065.88 1071.88" y="52.75" font-family="Source Serif 4, Ubuntu Light, Ubuntu, Helvetica, Arial, sans-serif" font-size="14.58" fill="#3c3c3c" xml:space="preserve">Workforce</text>
+</g>
+</svg>

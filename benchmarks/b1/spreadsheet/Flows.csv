@@ -1,0 +1,66 @@
+Name,Equation,From stock,To stock,Units,Description,Per,Combine,Module
+Retailer orders received,Customer demand,,Retailer backlog,Case/Week,Customer demand.,,,Retailer
+Retailer shipments out,"MIN(Retailer available, Retailer backlog + Retailer orders received * TIME STEP) / TIME STEP",Retailer on hand,,Case/Week,Cases shipped this week (step 2).,,,Retailer
+Retailer backlog clearing,Retailer shipments out,Retailer backlog,,Case/Week,Backlog cleared by shipping.,,,Retailer
+Retailer orders placed,"IF THEN ELSE(Week <= Fixed order weeks, Initial demand, IF THEN ELSE(Round orders = 1, INTEGER(Retailer rule order * TIME STEP + 0.5) / TIME STEP, Retailer rule order))",,Retailer order pipe 1,Case/Week,"Orders this stage places (step 5): held at the initial demand in the first weeks, whole cases when rounding is on.",,,Retailer
+Retailer shipment transfer 1,Retailer shipment pipe 1 / TIME STEP,Retailer shipment pipe 1,Retailer shipment pipe 2,Case/Week,One stage along the pipe.,,,Retailer
+Retailer receipts,Retailer shipment pipe 2 / TIME STEP,Retailer shipment pipe 2,Retailer on hand,Case/Week,Cases arriving on hand.,,,Retailer
+Retailer order transfer 1,Retailer order pipe 1 / TIME STEP,Retailer order pipe 1,Retailer order pipe 2,Case/Week,One stage along the order pipe.,,,Retailer
+Retailer expected demand change,(Retailer updated expectation - Retailer expected demand) / TIME STEP,,Retailer expected demand,Case/Week^2,Smoothing step.,,,Retailer
+Retailer cost accrual,Retailer cost rate,,Retailer cost,Currency/Week,,,,Results and tests
+Retailer window cost accrual,In window * Retailer cost rate,,Retailer window cost,Currency/Week,,,,Results and tests
+Retailer order sum accrual,In window * Retailer orders placed,,Retailer order sum,Case/Week,,,,Results and tests
+Retailer order sumsq accrual,In window * Retailer orders placed ^ 2,,Retailer order sumsq,Case^2/Week^2,,,,Results and tests
+Retailer window backlog accrual,In window * Retailer end backlog,,Retailer window backlog,Case,,,,Results and tests
+Retailer peak order change,"MAX(0, Retailer orders placed - Retailer peak order) / TIME STEP",,Retailer peak order,Case/Week^2,,,,Results and tests
+Retailer peak time change,"IF THEN ELSE(Retailer orders placed > Retailer peak order, (TIME - Retailer peak time) / TIME STEP, 0)",,Retailer peak time,Dmnl,,,,Results and tests
+Wholesaler orders received,Retailer order pipe 2 / TIME STEP,Retailer order pipe 2,Wholesaler backlog,Case/Week,Orders arriving from the stage below.,,,Wholesaler
+Wholesaler shipments out,"MIN(Wholesaler available, Wholesaler backlog + Wholesaler orders received * TIME STEP) / TIME STEP",Wholesaler on hand,Retailer shipment pipe 1,Case/Week,Cases shipped this week (step 2).,,,Wholesaler
+Wholesaler backlog clearing,Wholesaler shipments out,Wholesaler backlog,,Case/Week,Backlog cleared by shipping.,,,Wholesaler
+Wholesaler orders placed,"IF THEN ELSE(Week <= Fixed order weeks, Initial demand, IF THEN ELSE(Round orders = 1, INTEGER(Wholesaler rule order * TIME STEP + 0.5) / TIME STEP, Wholesaler rule order))",,Wholesaler order pipe 1,Case/Week,"Orders this stage places (step 5): held at the initial demand in the first weeks, whole cases when rounding is on.",,,Wholesaler
+Wholesaler shipment transfer 1,Wholesaler shipment pipe 1 / TIME STEP,Wholesaler shipment pipe 1,Wholesaler shipment pipe 2,Case/Week,One stage along the pipe.,,,Wholesaler
+Wholesaler receipts,Wholesaler shipment pipe 2 / TIME STEP,Wholesaler shipment pipe 2,Wholesaler on hand,Case/Week,Cases arriving on hand.,,,Wholesaler
+Wholesaler order transfer 1,Wholesaler order pipe 1 / TIME STEP,Wholesaler order pipe 1,Wholesaler order pipe 2,Case/Week,One stage along the order pipe.,,,Wholesaler
+Wholesaler expected demand change,(Wholesaler updated expectation - Wholesaler expected demand) / TIME STEP,,Wholesaler expected demand,Case/Week^2,Smoothing step.,,,Wholesaler
+Wholesaler cost accrual,Wholesaler cost rate,,Wholesaler cost,Currency/Week,,,,Results and tests
+Wholesaler window cost accrual,In window * Wholesaler cost rate,,Wholesaler window cost,Currency/Week,,,,Results and tests
+Wholesaler order sum accrual,In window * Wholesaler orders placed,,Wholesaler order sum,Case/Week,,,,Results and tests
+Wholesaler order sumsq accrual,In window * Wholesaler orders placed ^ 2,,Wholesaler order sumsq,Case^2/Week^2,,,,Results and tests
+Wholesaler window backlog accrual,In window * Wholesaler end backlog,,Wholesaler window backlog,Case,,,,Results and tests
+Wholesaler peak order change,"MAX(0, Wholesaler orders placed - Wholesaler peak order) / TIME STEP",,Wholesaler peak order,Case/Week^2,,,,Results and tests
+Wholesaler peak time change,"IF THEN ELSE(Wholesaler orders placed > Wholesaler peak order, (TIME - Wholesaler peak time) / TIME STEP, 0)",,Wholesaler peak time,Dmnl,,,,Results and tests
+Distributor orders received,Wholesaler order pipe 2 / TIME STEP,Wholesaler order pipe 2,Distributor backlog,Case/Week,Orders arriving from the stage below.,,,Distributor
+Distributor shipments out,"MIN(Distributor available, Distributor backlog + Distributor orders received * TIME STEP) / TIME STEP",Distributor on hand,Wholesaler shipment pipe 1,Case/Week,Cases shipped this week (step 2).,,,Distributor
+Distributor backlog clearing,Distributor shipments out,Distributor backlog,,Case/Week,Backlog cleared by shipping.,,,Distributor
+Distributor orders placed,"IF THEN ELSE(Week <= Fixed order weeks, Initial demand, IF THEN ELSE(Round orders = 1, INTEGER(Distributor rule order * TIME STEP + 0.5) / TIME STEP, Distributor rule order))",,Distributor order pipe 1,Case/Week,"Orders this stage places (step 5): held at the initial demand in the first weeks, whole cases when rounding is on.",,,Distributor
+Distributor shipment transfer 1,Distributor shipment pipe 1 / TIME STEP,Distributor shipment pipe 1,Distributor shipment pipe 2,Case/Week,One stage along the pipe.,,,Distributor
+Distributor receipts,Distributor shipment pipe 2 / TIME STEP,Distributor shipment pipe 2,Distributor on hand,Case/Week,Cases arriving on hand.,,,Distributor
+Distributor order transfer 1,Distributor order pipe 1 / TIME STEP,Distributor order pipe 1,Distributor order pipe 2,Case/Week,One stage along the order pipe.,,,Distributor
+Distributor expected demand change,(Distributor updated expectation - Distributor expected demand) / TIME STEP,,Distributor expected demand,Case/Week^2,Smoothing step.,,,Distributor
+Distributor cost accrual,Distributor cost rate,,Distributor cost,Currency/Week,,,,Results and tests
+Distributor window cost accrual,In window * Distributor cost rate,,Distributor window cost,Currency/Week,,,,Results and tests
+Distributor order sum accrual,In window * Distributor orders placed,,Distributor order sum,Case/Week,,,,Results and tests
+Distributor order sumsq accrual,In window * Distributor orders placed ^ 2,,Distributor order sumsq,Case^2/Week^2,,,,Results and tests
+Distributor window backlog accrual,In window * Distributor end backlog,,Distributor window backlog,Case,,,,Results and tests
+Distributor peak order change,"MAX(0, Distributor orders placed - Distributor peak order) / TIME STEP",,Distributor peak order,Case/Week^2,,,,Results and tests
+Distributor peak time change,"IF THEN ELSE(Distributor orders placed > Distributor peak order, (TIME - Distributor peak time) / TIME STEP, 0)",,Distributor peak time,Dmnl,,,,Results and tests
+Factory orders received,Distributor order pipe 2 / TIME STEP,Distributor order pipe 2,Factory backlog,Case/Week,Orders arriving from the stage below.,,,Factory
+Factory shipments out,"MIN(Factory available, Factory backlog + Factory orders received * TIME STEP) / TIME STEP",Factory on hand,Distributor shipment pipe 1,Case/Week,Cases shipped this week (step 2).,,,Factory
+Factory backlog clearing,Factory shipments out,Factory backlog,,Case/Week,Backlog cleared by shipping.,,,Factory
+Factory orders placed,"IF THEN ELSE(Week <= Fixed order weeks, Initial demand, IF THEN ELSE(Round orders = 1, INTEGER(Factory rule order * TIME STEP + 0.5) / TIME STEP, Factory rule order))",,Factory production pipe 1,Case/Week,"Orders this stage places (step 5): held at the initial demand in the first weeks, whole cases when rounding is on.",,,Factory
+Factory production transfer 1,Factory production pipe 1 / TIME STEP,Factory production pipe 1,Factory production pipe 2,Case/Week,One stage along the pipe.,,,Factory
+Factory production transfer 2,Factory production pipe 2 / TIME STEP,Factory production pipe 2,Factory production pipe 3,Case/Week,One stage along the pipe.,,,Factory
+Factory receipts,Factory production pipe 3 / TIME STEP,Factory production pipe 3,Factory on hand,Case/Week,Cases arriving on hand.,,,Factory
+Factory expected demand change,(Factory updated expectation - Factory expected demand) / TIME STEP,,Factory expected demand,Case/Week^2,Smoothing step.,,,Factory
+Factory cost accrual,Factory cost rate,,Factory cost,Currency/Week,,,,Results and tests
+Factory window cost accrual,In window * Factory cost rate,,Factory window cost,Currency/Week,,,,Results and tests
+Factory order sum accrual,In window * Factory orders placed,,Factory order sum,Case/Week,,,,Results and tests
+Factory order sumsq accrual,In window * Factory orders placed ^ 2,,Factory order sumsq,Case^2/Week^2,,,,Results and tests
+Factory window backlog accrual,In window * Factory end backlog,,Factory window backlog,Case,,,,Results and tests
+Factory peak order change,"MAX(0, Factory orders placed - Factory peak order) / TIME STEP",,Factory peak order,Case/Week^2,,,,Results and tests
+Factory peak time change,"IF THEN ELSE(Factory orders placed > Factory peak order, (TIME - Factory peak time) / TIME STEP, 0)",,Factory peak time,Dmnl,,,,Results and tests
+Window weeks accrual,In window,,Window weeks,Dmnl,,,,Results and tests
+Demand sum accrual,In window * Customer demand,,Demand sum,Case/Week,,,,Results and tests
+Demand sumsq accrual,In window * Customer demand ^ 2,,Demand sumsq,Case^2/Week^2,,,,Results and tests
+Retailer window shipped accrual,In window * Retailer shipments out,,Retailer window shipped,Case/Week,,,,Results and tests
+Retailer window demand accrual,In window * Customer demand,,Retailer window demand,Case/Week,,,,Results and tests

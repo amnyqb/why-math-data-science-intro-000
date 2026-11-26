@@ -1,0 +1,951 @@
+{
+  "title": "SIR epidemic: one outbreak in a closed town",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Susceptible",
+      "kind": "Stock",
+      "equation": "Population - Initial Infectious",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        740.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Infectious",
+      "kind": "Stock",
+      "equation": "Initial Infectious",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        740.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        190.0
+      ],
+      "to_pt": [
+        820.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Recovered",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        740.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        280.0
+      ],
+      "to_pt": [
+        820.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Infection",
+      "kind": "Flow",
+      "equation": "Contact Rate * Infection Chance * Susceptible * Infectious / Population",
+      "units": "person/Day",
+      "comment": "",
+      "pos": [
+        540.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 1,
+      "to": 2,
+      "from_pt": [
+        460.0,
+        100.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Recovery",
+      "kind": "Flow",
+      "equation": "Infectious / Infectious Period",
+      "units": "person/Day",
+      "comment": "",
+      "pos": [
+        540.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 2,
+      "to": 3,
+      "from_pt": [
+        460.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Population",
+      "kind": "Constant",
+      "equation": "1000000",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        140.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Initial Infectious",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        140.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Contact Rate",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "1/Day",
+      "comment": "",
+      "pos": [
+        140.0,
+        280.0
+      ],
+      "table": [],
+      "slider": [
+        1.0,
+        20.0
+      ],
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        280.0
+      ],
+      "to_pt": [
+        220.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": true,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Infection Chance",
+      "kind": "Constant",
+      "equation": "0.05",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        140.0,
+        370.0
+      ],
+      "table": [],
+      "slider": [
+        0.01,
+        0.1
+      ],
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        370.0
+      ],
+      "to_pt": [
+        220.0,
+        370.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": true,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Infectious Period",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        140.0,
+        460.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        460.0
+      ],
+      "to_pt": [
+        220.0,
+        460.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Transmission Rate",
+      "kind": "Aux",
+      "equation": "Contact Rate * Infection Chance",
+      "units": "1/Day",
+      "comment": "",
+      "pos": [
+        340.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Basic Reproduction Number",
+      "kind": "Aux",
+      "equation": "Transmission Rate * Infectious Period",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        340.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        190.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Effective Reproduction Number",
+      "kind": "Aux",
+      "equation": "Basic Reproduction Number * Susceptible / Population",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        340.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        280.0
+      ],
+      "to_pt": [
+        420.0,
+        280.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Herd Immunity Threshold",
+      "kind": "Aux",
+      "equation": "MAX(0, 1 - 1 / Basic Reproduction Number)",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        340.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        370.0
+      ],
+      "to_pt": [
+        420.0,
+        370.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "Immune Fraction",
+      "kind": "Aux",
+      "equation": "Recovered / Population",
+      "units": "1",
+      "comment": "",
+      "pos": [
+        340.0,
+        460.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        460.0
+      ],
+      "to_pt": [
+        420.0,
+        460.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "Total People",
+      "kind": "Aux",
+      "equation": "Susceptible + Infectious + Recovered",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        340.0,
+        550.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        550.0
+      ],
+      "to_pt": [
+        420.0,
+        550.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 5,
+      "from": 1,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 6,
+      "from": 2,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 8,
+      "from": 2,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 9,
+      "to": 1,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 9,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 12,
+      "to": 1,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 12,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 15,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 17,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 19,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 15,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 23,
+      "from": 17,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 25,
+      "from": 21,
+      "to": 24,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 26,
+      "from": 19,
+      "to": 24,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 28,
+      "from": 24,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 29,
+      "from": 1,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 30,
+      "from": 9,
+      "to": 27,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 32,
+      "from": 24,
+      "to": 31,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 34,
+      "from": 3,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 35,
+      "from": 9,
+      "to": 33,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 1,
+      "to": 36,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 38,
+      "from": 2,
+      "to": 36,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 39,
+      "from": 3,
+      "to": 36,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 300.0,
+    "time_step": 0.01,
+    "time_units": "Day",
+    "method": "Euler"
+  },
+  "next_id": 44,
+  "sheets": [],
+  "groups": [
+    {
+      "id": 40,
+      "name": "Disease states",
+      "members": [
+        1,
+        2,
+        3
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 41,
+      "name": "Transitions",
+      "members": [
+        4,
+        7
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 42,
+      "name": "Contact lever",
+      "members": [
+        15,
+        17,
+        21
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 43,
+      "name": "Herd immunity check",
+      "members": [
+        24,
+        27,
+        31,
+        33
+      ],
+      "view": 0,
+      "color": null
+    },
+    {
+      "id": 44,
+      "name": "Town",
+      "members": [
+        9,
+        12,
+        36
+      ],
+      "view": 0,
+      "color": null
+    }
+  ],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "purpose": {
+    "problem": "How big does one outbreak get, when does it peak, and how far must contacts fall to stop it?",
+    "kind": "understand behaviour",
+    "out_of_scope": "births, deaths, waning immunity, vaccination, spatial spread",
+    "objectives": [
+      {
+        "title": "Keep the peak small",
+        "kind": "stay within a band",
+        "test": "Infectious stays below 50000 people at every day.",
+        "var": "Infectious"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{UTF-8}
+{ Chapter 6: one truck delivers 100 units during week 5; shipments are limited by stock. }
+Truck Load=
+	100
+	~	units
+	~	Units on the truck.
+	|
+
+Receipts=
+	Truck Load * PULSE(5, 1) / Unloading Time
+	~	units/week
+	~	Units received while the truck unloads.
+	|
+
+Unloading Time=
+	1
+	~	week
+	~	Time over which the truck is unloaded.
+	|
+
+Demand=
+	30
+	~	units/week
+	~	Customer demand.
+	|
+
+Minimum Shipping Time=
+	0.5
+	~	week
+	~	Shortest time in which the stock on hand can be shipped.
+	|
+
+Shipments=
+	MIN(Demand, Inventory / Minimum Shipping Time)
+	~	units/week
+	~	Shipments, limited by what is on hand.
+	|
+
+Inventory= INTEG(
+	Receipts - Shipments,
+	50)
+	~	units
+	~	Units on hand.
+	|
+
+Total Received= INTEG(
+	Receipts,
+	0)
+	~	units
+	~	Units received since the start.
+	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 12
+	~	week
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	week
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	week [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	week [0,?]
+	~	The time step for the simulation.
+	|

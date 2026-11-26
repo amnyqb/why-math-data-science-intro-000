@@ -1,0 +1,71 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE F8: a lookup input beyond its table"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Demand",
+  "kind": "constant",
+  "equation": "5",
+  "units": "dmnl",
+  "doc": "test"
+ },
+ {
+  "op": "set_slider",
+  "var": "Demand",
+  "min": 0,
+  "max": 10
+ },
+ {
+  "op": "add_var",
+  "name": "Effect",
+  "kind": "lookup",
+  "equation": "",
+  "units": "dmnl",
+  "doc": "test"
+ },
+ {
+  "op": "set_table",
+  "name": "Effect",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    1
+   ]
+  ]
+ },
+ {
+  "op": "add_var",
+  "name": "Response",
+  "kind": "aux",
+  "equation": "Effect(Demand)",
+  "units": "dmnl",
+  "doc": "test"
+ }
+]

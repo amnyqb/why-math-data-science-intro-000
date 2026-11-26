@@ -1,0 +1,81 @@
+{UTF-8}
+{ Chapter 8: one input, six delays. Material delays (DELAY1, DELAY3, DELAY N, DELAY FIXED) and information delays (SMOOTH, SMOOTH3), all with the same average delay. }
+Base Shipments=
+	100
+	~	cases/week
+	~	Factory shipments before the test.
+	|
+Step Height=
+	0
+	~	cases/week
+	~	Lasting rise in shipments at the test time.
+	|
+Pulse Volume=
+	0
+	~	cases
+	~	A one-off extra load shipped during one week.
+	|
+Test Time=
+	4
+	~	week
+	~	When the test input starts.
+	|
+Pulse Width=
+	1
+	~	week
+	~	Duration of the extra load.
+	|
+Shipments=
+	Base Shipments + STEP(Step Height, Test Time) + Pulse Volume * PULSE(Test Time, Pulse Width) / Pulse Width
+	~	cases/week
+	~	What leaves the factory each week.
+	|
+Delay Change=
+	0
+	~	week
+	~	Reduction in the delay time from Change Time on.
+	|
+Change Time=
+	20
+	~	week
+	~	When the delay time changes.
+	|
+Transit Time=
+	6 - STEP(Delay Change, Change Time)
+	~	week
+	~	Average time in transit.
+	|
+Arrivals DELAY1=
+	DELAY1(Shipments, Transit Time)
+	~	cases/week
+	~	First-order material delay.
+	|
+Arrivals DELAY3=
+	DELAY3(Shipments, Transit Time)
+	~	cases/week
+	~	Third-order material delay.
+	|
+Arrivals DELAY12=
+	DELAY N(Shipments, Transit Time, Base Shipments, 12)
+	~	cases/week
+	~	Twelfth-order material delay.
+	|
+Arrivals Fixed=
+	DELAY FIXED(Shipments, 6, Base Shipments)
+	~	cases/week
+	~	Pipeline delay: every case takes exactly six weeks.
+	|
+Perceived SMOOTH=
+	SMOOTH(Shipments, Transit Time)
+	~	cases/week
+	~	First-order information delay.
+	|
+Perceived SMOOTH3=
+	SMOOTH3(Shipments, Transit Time)
+	~	cases/week
+	~	Third-order information delay.
+	|
+FINAL TIME = 60 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |

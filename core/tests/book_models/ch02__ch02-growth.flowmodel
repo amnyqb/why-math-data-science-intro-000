@@ -1,0 +1,874 @@
+{
+ "title": "Imported model",
+ "vars": [
+  {
+   "id": 1,
+   "name": "Regional Demand",
+   "kind": "Constant",
+   "equation": "50",
+   "units": "projects/month",
+   "comment": "Projects the region offers each month.",
+   "pos": [
+    120.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 2,
+   "name": "Productivity",
+   "kind": "Constant",
+   "equation": "2",
+   "units": "projects/crew/month",
+   "comment": "Projects a crew completes per month when work is plentiful.",
+   "pos": [
+    310.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 3,
+   "name": "Crew Capacity",
+   "kind": "Aux",
+   "equation": "Crews * Productivity",
+   "units": "projects/month",
+   "comment": "",
+   "pos": [
+    500.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 4,
+   "name": "Utilisation",
+   "kind": "Aux",
+   "equation": "1 / (1 + (Crew Capacity / Regional Demand)^4)",
+   "units": "dmnl",
+   "comment": "Share of crew time that finds work: near 1 while capacity is well below demand, one half when capacity equals demand, falling steeply beyond.",
+   "pos": [
+    690.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 5,
+   "name": "Projects Done",
+   "kind": "Aux",
+   "equation": "Crew Capacity * Utilisation",
+   "units": "projects/month",
+   "comment": "",
+   "pos": [
+    880.0,
+    120.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 6,
+   "name": "Perception Delay",
+   "kind": "Constant",
+   "equation": "0.25",
+   "units": "month",
+   "comment": "Time for management to see that work is getting scarce.",
+   "pos": [
+    120.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 7,
+   "name": "Perceived Utilisation",
+   "kind": "Aux",
+   "equation": "SMOOTH3(Utilisation, Perception Delay)",
+   "units": "dmnl",
+   "comment": "",
+   "pos": [
+    310.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 8,
+   "name": "Crews per Project",
+   "kind": "Constant",
+   "equation": "0.08",
+   "units": "crew/project",
+   "comment": "New crews funded by the margin on each project completed.",
+   "pos": [
+    500.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 9,
+   "name": "Crew Additions",
+   "kind": "Flow",
+   "equation": "Crew Capacity * Perceived Utilisation * Crews per Project",
+   "units": "crew/month",
+   "comment": "Crews hired from reinvested margin, judged at the utilisation management believes.",
+   "pos": [
+    190.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 12,
+   "from_pt": [
+    90.0,
+    380.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 10,
+   "name": "Crew Life",
+   "kind": "Constant",
+   "equation": "24",
+   "units": "month",
+   "comment": "Average time a crew stays.",
+   "pos": [
+    880.0,
+    250.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 11,
+   "name": "Crew Departures",
+   "kind": "Flow",
+   "equation": "Crews / Crew Life",
+   "units": "crew/month",
+   "comment": "",
+   "pos": [
+    430.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 12,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    530.0,
+    380.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 12,
+   "name": "Crews",
+   "kind": "Stock",
+   "equation": "2",
+   "units": "crew",
+   "comment": "",
+   "pos": [
+    310.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 49,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  }
+ ],
+ "links": [
+  {
+   "id": 13,
+   "from": 12,
+   "to": 3,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 14,
+   "from": 2,
+   "to": 3,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 15,
+   "from": 3,
+   "to": 4,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 16,
+   "from": 1,
+   "to": 4,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 17,
+   "from": 3,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 18,
+   "from": 4,
+   "to": 5,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 19,
+   "from": 4,
+   "to": 7,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 20,
+   "from": 6,
+   "to": 7,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 21,
+   "from": 3,
+   "to": 9,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 22,
+   "from": 7,
+   "to": 9,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 23,
+   "from": 8,
+   "to": 9,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 24,
+   "from": 12,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 25,
+   "from": 10,
+   "to": 11,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  }
+ ],
+ "notes": [],
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 120.0,
+  "time_step": 0.0625,
+  "time_units": "month",
+  "method": "Euler"
+ },
+ "next_id": 371,
+ "sheets": [
+  {
+   "id": 49,
+   "name": "Model",
+   "kind": "Diagram",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "cld": {
+    "nodes": [],
+    "links": [],
+    "loops": []
+   },
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "caption": "",
+   "source": ""
+  },
+  {
+   "name": "Causal loops",
+   "kind": "CausalLoop",
+   "table_mode": "Variables",
+   "columns": [],
+   "widgets": [],
+   "opt": {
+    "maximize": false,
+    "goal": "",
+    "measure": "Peak",
+    "levers": [],
+    "limits": [],
+    "effort": 2
+   },
+   "module": null,
+   "compare_vars": [],
+   "compare_measure": null,
+   "id": 370,
+   "cld": {
+    "nodes": [
+     {
+      "id": 349,
+      "text": "Crew Capacity",
+      "pos": [
+       406.0,
+       108.6
+      ]
+     },
+     {
+      "id": 350,
+      "text": "Crew Additions",
+      "pos": [
+       406.0,
+       371.4
+      ]
+     },
+     {
+      "id": 351,
+      "text": "Crews",
+      "pos": [
+       274.6,
+       240.0
+      ]
+     },
+     {
+      "id": 352,
+      "text": "Utilisation",
+      "pos": [
+       519.8,
+       174.3
+      ]
+     },
+     {
+      "id": 353,
+      "text": "Perceived Utilisation",
+      "pos": [
+       519.8,
+       305.7
+      ]
+     },
+     {
+      "id": 354,
+      "text": "Crew Departures",
+      "pos": [
+       73.2,
+       240.0
+      ]
+     },
+     {
+      "id": 355,
+      "text": "Regional Demand",
+      "pos": [
+       668.7,
+       174.3
+      ]
+     },
+     {
+      "id": 356,
+      "text": "Productivity",
+      "pos": [
+       406.0,
+       56.1
+      ]
+     }
+    ],
+    "links": [
+     {
+      "id": 357,
+      "from": 351,
+      "to": 349,
+      "bend": -38.5,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 358,
+      "from": 349,
+      "to": 350,
+      "bend": 7.0,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 359,
+      "from": 350,
+      "to": 351,
+      "bend": -38.5,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 360,
+      "from": 349,
+      "to": 352,
+      "bend": -17.6,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 361,
+      "from": 352,
+      "to": 353,
+      "bend": -17.6,
+      "polarity": "+",
+      "delay": true
+     },
+     {
+      "id": 362,
+      "from": 353,
+      "to": 350,
+      "bend": -17.6,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 363,
+      "from": 351,
+      "to": 354,
+      "bend": 100.7,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 364,
+      "from": 354,
+      "to": 351,
+      "bend": 100.7,
+      "polarity": "-",
+      "delay": false
+     },
+     {
+      "id": 365,
+      "from": 355,
+      "to": 352,
+      "bend": 17.9,
+      "polarity": "+",
+      "delay": false
+     },
+     {
+      "id": 366,
+      "from": 356,
+      "to": 349,
+      "bend": -6.3,
+      "polarity": "+",
+      "delay": false
+     }
+    ],
+    "loops": [
+     {
+      "id": 367,
+      "pos": [
+       335.9,
+       224.2
+      ],
+      "reinforcing": true,
+      "label": "R1 Reinvestment",
+      "clockwise": true
+     },
+     {
+      "id": 368,
+      "pos": [
+       469.1,
+       240.0
+      ],
+      "reinforcing": false,
+      "label": "B1 Market limit",
+      "clockwise": true
+     },
+     {
+      "id": 369,
+      "pos": [
+       173.9,
+       240.0
+      ],
+      "reinforcing": false,
+      "label": "B2 Departures",
+      "clockwise": true
+     }
+    ]
+   },
+   "caption": "",
+   "source": ""
+  }
+ ],
+ "groups": [],
+ "modules": [],
+ "scenarios": [],
+ "trend_style": {
+  "title": "",
+  "subtitle": "",
+  "x_label": "",
+  "y_label": "",
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "legend": "TopRight",
+  "grid": true,
+  "line_width": 1.0,
+  "markers": false,
+  "time_marker": true,
+  "compare": true,
+  "colors": []
+ },
+ "sets": [],
+ "arrow_shape": "Curved",
+ "arrow_head": "Filled",
+ "diagram_style": "Classic",
+ "module_style": "Detailed",
+ "functions": [],
+ "checks": [],
+ "defs": [],
+ "instances": [],
+ "manifest": {
+  "title": "",
+  "description": "",
+  "levers": [],
+  "outputs": [],
+  "scenarios": [],
+  "bindings": [],
+  "validity": [],
+  "tests": [],
+  "goals": [],
+  "reduced_from": ""
+ },
+ "figure_style": {
+  "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+  "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+  "text_scale": 0.9,
+  "line_scale": 1.15,
+  "width_mm": 130.0,
+  "background": "#ffffff",
+  "colors": {
+   "accent": "#000000",
+   "accent_soft": "#ffffff",
+   "aux": "#000000",
+   "border": "#000000",
+   "constant": "#000000",
+   "error": "#000000",
+   "flow": "#000000",
+   "grid": "#ffffff",
+   "link": "#000000",
+   "lookup": "#000000",
+   "muted": "#000000",
+   "ok": "#000000",
+   "panel": "#ffffff",
+   "stock": "#000000",
+   "stock_fill": "#ffffff",
+   "surface": "#ffffff",
+   "text": "#000000"
+  },
+  "arrow_shape": "curved",
+  "arrow_head": "filled",
+  "arrow_weight": 1,
+  "diagram_style": "classic",
+  "caption_size": 13.0
+ }
+}

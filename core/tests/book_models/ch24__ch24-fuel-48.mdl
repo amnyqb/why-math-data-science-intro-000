@@ -1,0 +1,511 @@
+{UTF-8}
+{ Chapter 24: the fuel network with 48 depots (each of the six split into eight). Illustrative data only. }
+Depot:
+	Plant1, Plant2, Plant3, Plant4, Plant5, Plant6, Plant7, Plant8, North1, North2, North3, North4, North5, North6, North7, North8, South1, South2, South3, South4, South5, South6, South7, South8, Coast1, Coast2, Coast3, Coast4, Coast5, Coast6, Coast7, Coast8, Inland1, Inland2, Inland3, Inland4, Inland5, Inland6, Inland7, Inland8, Airport1, Airport2, Airport3, Airport4, Airport5, Airport6, Airport7, Airport8
+	~	
+	~	Depots served from the terminal by truck.
+	|
+
+Base Demand[Depot]=
+	150.0, 150.0, 150.0, 150.0, 150.0, 150.0, 150.0, 150.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 87.5, 87.5, 87.5, 87.5, 87.5, 87.5, 87.5, 87.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0
+	~	m3/day
+	~	Average daily demand at each depot (illustrative).
+	|
+
+Demand Scale=
+	1
+	~	dmnl
+	~	Multiplier on all demand (uncertainty).
+	|
+
+Seasonal Amplitude=
+	0.25
+	~	dmnl
+	~	Relative swing of demand over the year.
+	|
+
+Peak Day=
+	200
+	~	day
+	~	Day of the year with the highest demand.
+	|
+
+Year Length=
+	365
+	~	day
+	~	
+	|
+
+Two Pi=
+	6.28319
+	~	dmnl
+	~	
+	|
+
+Season=
+	1 + Seasonal Amplitude * COS(Two Pi * (Time - Peak Day) / Year Length)
+	~	dmnl
+	~	Seasonal multiplier.
+	|
+
+Demand[Depot]=
+	Base Demand[Depot] * Demand Scale * Season
+	~	m3/day
+	~	Fuel customers want each day.
+	|
+
+Demand Perception Time=
+	7
+	~	day
+	~	Averaging time for expected demand.
+	|
+
+Expected Demand[Depot]=
+	SMOOTH(Demand[Depot], Demand Perception Time)
+	~	m3/day
+	~	
+	|
+
+Expected Total Demand=
+	SUM(Expected Demand[Depot!])
+	~	m3/day
+	~	
+	|
+
+Shipping Time=
+	14
+	~	day
+	~	Average time from ordering a cargo to its arrival at the terminal.
+	|
+
+Outage Start=
+	180
+	~	day
+	~	Day the port closes (illustrative).
+	|
+
+Outage Duration=
+	14
+	~	day
+	~	Days the port stays closed.
+	|
+
+Port Open=
+	1 - STEP(1, Outage Start) + STEP(1, Outage Start + Outage Duration)
+	~	dmnl
+	~	1 when cargoes can discharge, 0 during the outage.
+	|
+
+Import Pipeline= INTEG(
+	Import Orders - Imports,
+	Expected Total Demand * Shipping Time)
+	~	m3
+	~	Fuel ordered and on the water, or waiting at anchor.
+	|
+
+Terminal Capacity=
+	100000
+	~	m3
+	~	Tank capacity at the terminal (illustrative).
+	|
+
+Minimum Discharge Time=
+	1
+	~	day
+	~	Shortest time to fill the free tank space from ships.
+	|
+
+Imports=
+	MIN(Import Pipeline / Shipping Time * Port Open, MAX(0, Terminal Capacity - Terminal Stock) / Minimum Discharge Time)
+	~	m3/day
+	~	Cargo discharged into the terminal; ships wait when the port is shut or the tanks are full.
+	|
+
+Terminal Cover=
+	10
+	~	day
+	~	Days of total demand the terminal aims to hold.
+	|
+
+Desired Terminal Stock=
+	Terminal Cover * Expected Total Demand
+	~	m3
+	~	
+	|
+
+Terminal Adjustment Time=
+	10
+	~	day
+	~	
+	|
+
+Import Supply Line Weight=
+	1
+	~	dmnl
+	~	Share of the import pipeline gap that orders correct.
+	|
+
+Desired Import Pipeline=
+	Shipping Time * Expected Total Demand
+	~	m3
+	~	
+	|
+
+Import Orders=
+	MAX(0, Expected Total Demand + (Desired Terminal Stock - Terminal Stock + Import Supply Line Weight * (Desired Import Pipeline - Import Pipeline)) / Terminal Adjustment Time)
+	~	m3/day
+	~	Cargo ordered from suppliers.
+	|
+
+Terminal Stock= INTEG(
+	Imports - Total Dispatch,
+	Desired Terminal Stock)
+	~	m3
+	~	Fuel in terminal tanks.
+	|
+
+Trucks=
+	400
+	~	truck
+	~	Size of the truck fleet.
+	|
+
+Truck Size=
+	36
+	~	m3/truck
+	~	Fuel carried per load.
+	|
+
+Loading Time=
+	0.25
+	~	day
+	~	Time a waiting truck needs at the loading rack.
+	|
+
+Rack Capacity=
+	6000
+	~	m3/day
+	~	Most the loading racks can load per day.
+	|
+
+Minimum Dispatch Time=
+	0.5
+	~	day
+	~	Shortest time to load out the terminal's stock.
+	|
+
+Truck Loading Capacity=
+	Idle Trucks * Truck Size / Loading Time
+	~	m3/day
+	~	What the trucks waiting at the terminal can take.
+	|
+
+Available Dispatch=
+	MIN(MIN(Terminal Stock / Minimum Dispatch Time, Rack Capacity), Truck Loading Capacity)
+	~	m3/day
+	~	What the terminal can send today.
+	|
+
+Target Dispatch Time=
+	1
+	~	day
+	~	Normal time from a depot order to loading.
+	|
+
+Order Backlog[Depot]= INTEG(
+	Depot Orders[Depot] - Dispatch[Depot],
+	Demand[Depot] * Target Dispatch Time)
+	~	m3
+	~	Orders placed by each depot and not yet loaded: the queue at the terminal.
+	|
+
+Requested Dispatch[Depot]=
+	Order Backlog[Depot] / Target Dispatch Time
+	~	m3/day
+	~	
+	|
+
+Total Requested=
+	SUM(Requested Dispatch[Depot!])
+	~	m3/day
+	~	
+	|
+
+Fill Fraction=
+	MIN(1, ZIDZ(Available Dispatch, Total Requested))
+	~	dmnl
+	~	
+	|
+
+Priority[Depot]=
+	10, 10, 10, 10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 8, 8, 8, 8, 8, 8, 8, 8
+	~	dmnl
+	~	Larger numbers are served first under the priority rule.
+	|
+
+Priority Width=
+	1
+	~	dmnl
+	~	How sharply the priority rule separates depots.
+	|
+
+Proportional Dispatch[Depot]=
+	Requested Dispatch[Depot] * Fill Fraction
+	~	m3/day
+	~	Everyone gets the same share of what was asked.
+	|
+
+Priority Dispatch[Depot]=
+	ALLOCATE BY PRIORITY(Requested Dispatch[Depot], Priority[Depot], ELMCOUNT(Depot), Priority Width, Available Dispatch)
+	~	m3/day
+	~	Higher priority depots are served first.
+	|
+
+Allocation Rule=
+	0
+	~	dmnl
+	~	0: proportional to requests; 1: by priority.
+	|
+
+Dispatch[Depot]=
+	IF THEN ELSE(Allocation Rule > 0.5, Priority Dispatch[Depot], Proportional Dispatch[Depot])
+	~	m3/day
+	~	Fuel loaded for each depot.
+	|
+
+Total Dispatch=
+	SUM(Dispatch[Depot!])
+	~	m3/day
+	~	
+	|
+
+Terminal Wait[Depot]=
+	ZIDZ(Order Backlog[Depot], Dispatch[Depot])
+	~	day
+	~	Little's law: time an order waits to be loaded.
+	|
+
+Transit Time[Depot]=
+	0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5
+	~	day
+	~	Average road time to each depot.
+	|
+
+In Transit[Depot]= INTEG(
+	Dispatch[Depot] - Deliveries[Depot],
+	Demand[Depot] * Transit Time[Depot])
+	~	m3
+	~	Fuel on the road.
+	|
+
+Tank Days=
+	12
+	~	day
+	~	Depot tank capacity in days of base demand.
+	|
+
+Tank Capacity[Depot]=
+	Tank Days * Base Demand[Depot]
+	~	m3
+	~	
+	|
+
+Minimum Unload Time=
+	0.25
+	~	day
+	~	Shortest time to fill a depot's free tank space.
+	|
+
+Deliveries[Depot]=
+	MIN(In Transit[Depot] / Transit Time[Depot], MAX(0, Tank Capacity[Depot] - Depot Stock[Depot]) / Minimum Unload Time)
+	~	m3/day
+	~	Fuel unloaded at the depot; trucks wait when the tanks are full.
+	|
+
+Returning Trucks[Depot]= INTEG(
+	Deliveries[Depot] / Truck Size - Truck Returns[Depot],
+	Demand[Depot] * Transit Time[Depot] / Truck Size)
+	~	truck
+	~	Empty trucks driving back to the terminal.
+	|
+
+Truck Returns[Depot]=
+	Returning Trucks[Depot] / Transit Time[Depot]
+	~	truck/day
+	~	
+	|
+
+Loaded Trucks[Depot]=
+	In Transit[Depot] / Truck Size
+	~	truck
+	~	Trucks carrying fuel, including those waiting to unload (a coflow of the fuel in transit).
+	|
+
+Idle Trucks= INTEG(
+	SUM(Truck Returns[Depot!]) - Total Dispatch / Truck Size,
+	Trucks - SUM(Demand[Depot!] * Transit Time[Depot!]) * 2 / Truck Size)
+	~	truck
+	~	Empty trucks at the terminal, waiting to load.
+	|
+
+Trucks in Use=
+	SUM(Loaded Trucks[Depot!]) + SUM(Returning Trucks[Depot!])
+	~	truck
+	~	
+	|
+
+Days of Cover=
+	5
+	~	day
+	~	Target depot stock in days of expected demand.
+	|
+
+Desired Depot Stock[Depot]=
+	Days of Cover * Expected Demand[Depot]
+	~	m3
+	~	
+	|
+
+Depot Adjustment Time=
+	3
+	~	day
+	~	
+	|
+
+Depot Supply Line Weight=
+	0
+	~	dmnl
+	~	Share of the supply line gap that depot orders correct.
+	|
+
+Supply Line[Depot]=
+	Order Backlog[Depot] + In Transit[Depot]
+	~	m3
+	~	Ordered but not yet in the depot.
+	|
+
+Desired Supply Line[Depot]=
+	Expected Demand[Depot] * (Target Dispatch Time + Transit Time[Depot])
+	~	m3
+	~	
+	|
+
+Depot Orders[Depot]=
+	MAX(0, Expected Demand[Depot] + (Desired Depot Stock[Depot] - Depot Stock[Depot] + Depot Supply Line Weight * (Desired Supply Line[Depot] - Supply Line[Depot])) / Depot Adjustment Time)
+	~	m3/day
+	~	Orders a depot places on the terminal.
+	|
+
+Depot Stock[Depot]= INTEG(
+	Deliveries[Depot] - Sales[Depot],
+	Days of Cover * Demand[Depot])
+	~	m3
+	~	Fuel in the depot's tanks.
+	|
+
+Minimum Sales Time=
+	0.25
+	~	day
+	~	Shortest time in which a depot's stock can be sold.
+	|
+
+Sales[Depot]=
+	MIN(Demand[Depot], Depot Stock[Depot] / Minimum Sales Time)
+	~	m3/day
+	~	
+	|
+
+Shortage[Depot]=
+	Demand[Depot] - Sales[Depot]
+	~	m3/day
+	~	Demand that could not be served.
+	|
+
+Cumulative Shortage[Depot]= INTEG(
+	Shortage[Depot],
+	0)
+	~	m3
+	~	
+	|
+
+Cumulative Demand= INTEG(
+	SUM(Demand[Depot!]),
+	0)
+	~	m3
+	~	
+	|
+
+Total Shortage=
+	SUM(Cumulative Shortage[Depot!])
+	~	m3
+	~	
+	|
+
+Service Level=
+	1 - ZIDZ(Total Shortage, Cumulative Demand)
+	~	dmnl
+	~	Share of demand served so far.
+	|
+
+Holding Cost Rate=
+	0.33
+	~	USD/m3/day
+	~	Cost of holding one m3 for one day (illustrative).
+	|
+
+Truck Cost=
+	600
+	~	USD/truck/day
+	~	Daily cost of one truck with driver (illustrative).
+	|
+
+Shortage Penalty[Depot]=
+	3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+	~	USD/m3
+	~	Cost of one m3 not served (illustrative).
+	|
+
+Total Stock=
+	Terminal Stock + SUM(Depot Stock[Depot!])
+	~	m3
+	~	
+	|
+
+Cost Rate=
+	Holding Cost Rate * Total Stock + Truck Cost * Trucks + SUM(Shortage Penalty[Depot!] * Shortage[Depot!])
+	~	USD/day
+	~	
+	|
+
+Total Cost= INTEG(
+	Cost Rate,
+	0)
+	~	USD
+	~	Cost so far.
+	|
+
+Material in System=
+	Import Pipeline + Terminal Stock + SUM(In Transit[Depot!]) + SUM(Depot Stock[Depot!])
+	~	m3
+	~	
+	|
+
+INITIAL TIME = 0
+	~	day
+	~	
+	|
+
+FINAL TIME = 365
+	~	day
+	~	
+	|
+
+TIME STEP = 0.0625
+	~	day
+	~	
+	|
+
+SAVEPER = 1
+	~	day
+	~	
+	|

@@ -1,0 +1,111 @@
+{UTF-8}
+
+Susceptible = INTEG(births + waning - infection - natural death S, 9990)
+	~	Person
+	~	|
+
+Exposed = INTEG(infection - onset - natural death E, 10)
+	~	Person
+	~	|
+
+Infectious = INTEG(onset - recovery - disease deaths - natural death I, 0)
+	~	Person
+	~	|
+
+Recovered = INTEG(recovery - waning - natural death R, 0)
+	~	Person
+	~	|
+
+births = total population * birth rate
+	~	Person/day
+	~	|
+
+infection = contact rate * Susceptible * Infectious / total population
+	~	Person/day
+	~	|
+
+onset = Exposed / incubation time
+	~	Person/day
+	~	|
+
+recovery = Infectious / infectious time
+	~	Person/day
+	~	|
+
+disease deaths = Infectious * disease death rate
+	~	Person/day
+	~	|
+
+waning = Recovered / immunity time
+	~	Person/day
+	~	|
+
+natural death S = Susceptible * natural death rate
+	~	Person/day
+	~	|
+
+natural death E = Exposed * natural death rate
+	~	Person/day
+	~	|
+
+natural death I = Infectious * natural death rate
+	~	Person/day
+	~	|
+
+natural death R = Recovered * natural death rate
+	~	Person/day
+	~	|
+
+total population = Susceptible + Exposed + Infectious + Recovered
+	~	Person
+	~	|
+
+contact rate = 0.45
+	~	1/day
+	~	|
+
+incubation time = 4
+	~	day
+	~	|
+
+infectious time = 7
+	~	day
+	~	|
+
+immunity time = 120
+	~	day
+	~	|
+
+disease death rate = 0.002
+	~	1/day
+	~	|
+
+birth rate = 0.0004
+	~	1/day
+	~	|
+
+natural death rate = 0.0004
+	~	1/day
+	~	|
+
+FINAL TIME = 730
+	~	day
+	~	|
+
+INITIAL TIME = 0
+	~	day
+	~	|
+
+TIME STEP = 0.125
+	~	day
+	~	|
+
+SAVEPER = 1
+	~	day
+	~	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,5,0
+///---\\\

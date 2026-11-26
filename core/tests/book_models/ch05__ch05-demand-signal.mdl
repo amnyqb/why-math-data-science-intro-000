@@ -1,0 +1,52 @@
+{UTF-8}
+{ Chapter 4: a realistic demand signal built from test inputs.
+  A distributor's weekly demand: a base level, steady growth, a season,
+  one very large order and a promotion every eight weeks. }
+Base Demand=
+	1000
+	~	cases/week
+	~	Normal weekly demand before anything changes.
+	|
+Growth=
+	RAMP(10, 10, 60)
+	~	cases/week
+	~	Demand grows by 10 cases/week every week from week 10 to week 60, then levels off.
+	|
+Season=
+	SINWAVE(0.15, 52, 0)
+	~	dmnl
+	~	A yearly season, plus or minus 15%. SINWAVE has no Vensim equivalent: in Vensim write 0.15 * SIN(2 * 3.14159 * Time / 52).
+	|
+Big Order Volume=
+	3000
+	~	cases
+	~	One exceptional order.
+	|
+Big Order=
+	Big Order Volume * PULSE(12, Big Order Width) / Big Order Width
+	~	cases/week
+	~	The big order arrives during week 12. Volume / width = rate: 3000 cases over 1 week.
+	|
+Big Order Width=
+	1
+	~	week
+	~	|
+Promotion Lift=
+	400
+	~	cases/week
+	~	Extra demand during a promotion week.
+	|
+Promotion=
+	Promotion Lift * PULSE TRAIN(4, 1, 8, 200)
+	~	cases/week
+	~	A one-week promotion every 8 weeks, starting at week 4.
+	|
+Demand=
+	(Base Demand + Growth) * (1 + Season) + Big Order + Promotion
+	~	cases/week
+	~	The demand signal the warehouse must serve.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 104 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |

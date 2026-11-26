@@ -1,0 +1,274 @@
+{UTF-8}
+{ Chapter 20 worlds: the distributor with switches for two contextual uncertainties (supplier capacity and outage; volatile demand with impatient customers). With all switches at 0 it equals ch20-distributor. Base model: a distributor facing a demand jump of uncertain size, with uncertain supply and forecasting delays. Two ordering policies: ignore the supply line (weight 0) or count it (weight 1). }
+Base Demand=
+	100
+	~	case/week
+	~	Customer orders per week before the jump.
+	|
+Demand Jump=
+	0.2
+	~	dmnl
+	~	Fractional rise in demand at week 10 (uncertain).
+	|
+Demand Pattern=
+	Base Demand * (1 + STEP(Demand Jump, 10) - Volatile Demand * STEP(Demand Reversal, 30) + Volatile Demand * Season Amplitude * SIN(6.28319 * Time / Season Period))
+	~	case/week
+	~	Orders customers would place if delivery were normal: a step, or (volatile world) a surge, a reversal and a season.
+	|
+Volatile Demand=
+	0
+	~	dmnl
+	~	World switch: 1 adds the reversal, the season and impatient customers.
+	|
+Demand Reversal=
+	0.5
+	~	dmnl
+	~	Fall in demand at week 30 in the volatile world.
+	|
+Season Amplitude=
+	0.15
+	~	dmnl
+	~	Seasonal swing in the volatile world.
+	|
+Season Period=
+	26
+	~	week
+	~	Length of the seasonal cycle.
+	|
+Customer Impatience=
+	1.5
+	~	dmnl
+	~	How strongly customers go elsewhere when delivery is slow (volatile world only).
+	|
+Perceived Delivery Delay=
+	SMOOTHI(Backlog / MAX(Shipments, 1), 1, Target Delivery Time)
+	~	week
+	~	Delivery delay as customers experience it.
+	|
+Effect of Delay on Demand=
+	EXP(-Volatile Demand * Customer Impatience * MAX(0, Perceived Delivery Delay / Target Delivery Time - 1))
+	~	dmnl
+	~	Share of would-be orders that stay when delivery is slower than normal.
+	|
+Customer Demand=
+	Demand Pattern * Effect of Delay on Demand
+	~	case/week
+	~	Orders arriving from customers.
+	|
+Lost Orders= INTEG(
+	Demand Pattern - Customer Demand,
+	0)
+	~	case
+	~	Orders customers took elsewhere because delivery was slow.
+	|
+Backlog= INTEG(
+	Customer Demand - Orders Filled,
+	Normal Backlog)
+	~	case
+	~	Customer orders received but not yet shipped.
+	|
+Target Delivery Time=
+	2
+	~	week
+	~	Normal time from customer order to shipment.
+	|
+Desired Shipments=
+	Backlog / Target Delivery Time
+	~	case/week
+	~	Shipments needed to keep the normal delivery time.
+	|
+Minimum Shipping Time=
+	1
+	~	week
+	~	Fastest the warehouse can ship its whole inventory.
+	|
+Shipments=
+	MIN(Desired Shipments, Inventory / Minimum Shipping Time)
+	~	case/week
+	~	Limited by what is in stock.
+	|
+Orders Filled=
+	Shipments
+	~	case/week
+	~	Customer orders leave the backlog as their goods are shipped.
+	|
+Inventory= INTEG(
+	Arrivals - Shipments,
+	Target Inventory)
+	~	case
+	~	Cases in the warehouse.
+	|
+Inventory Coverage=
+	2
+	~	week
+	~	Weeks of expected demand the distributor wants on hand.
+	|
+Forecast Time=
+	4
+	~	week
+	~	Averaging time for expected demand (uncertain).
+	|
+Expected Demand=
+	SMOOTH(Customer Demand, Forecast Time)
+	~	case/week
+	~	Smoothed customer demand used for ordering.
+	|
+Target Inventory=
+	Expected Demand * Inventory Coverage
+	~	case
+	~	Inventory the distributor aims for.
+	|
+Supply Delay=
+	4
+	~	week
+	~	Actual average time from order to arrival (uncertain).
+	|
+Quoted Lead Time=
+	4
+	~	week
+	~	The lead time the supplier quotes.
+	|
+Lead Time Measured=
+	1
+	~	dmnl
+	~	Policy switch: 1 uses the measured actual delay, 0 uses the quoted lead time.
+	|
+Believed Supply Delay=
+	Lead Time Measured * MIN(Measured Supply Delay, Delay Cap) + (1 - Lead Time Measured) * Quoted Lead Time
+	~	week
+	~	The delay the ordering policy uses for the desired supply line.
+	|
+Desired Supply Line=
+	Expected Demand * Believed Supply Delay
+	~	case
+	~	Orders that should be on the way, using the believed delay.
+	|
+Delay Cap=
+	1000
+	~	week
+	~	Policy: the longest lead time the planner will plan for when counting the supply line (1000 means no cap).
+	|
+Adjustment Time=
+	2
+	~	week
+	~	Time over which inventory and supply line gaps are corrected (uncertain).
+	|
+Supply Line Weight=
+	0
+	~	dmnl
+	~	Policy: 0 ignores orders on the way, 1 counts them fully.
+	|
+Orders=
+	MAX(0, Expected Demand + (Target Inventory - Inventory) / Adjustment Time + Supply Line Weight * (Desired Supply Line - Supply Line) / Adjustment Time)
+	~	case/week
+	~	Orders placed with the supplier.
+	|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	Expected Demand * Supply Delay)
+	~	case
+	~	Cases ordered but not yet received.
+	|
+Arrivals=
+	MIN(Supply Line / Supply Delay, Supplier Capacity)
+	~	case/week
+	~	Deliveries from the supplier, limited by its capacity in the fragile-supply world.
+	|
+Fragile Supply=
+	0
+	~	dmnl
+	~	World switch: 1 gives the supplier a capacity limit and an outage.
+	|
+Normal Supplier Capacity=
+	150
+	~	case/week
+	~	What the supplier can ship to this distributor in the fragile world.
+	|
+Outage Depth=
+	0.6
+	~	dmnl
+	~	Share of supplier capacity lost during the outage.
+	|
+Outage Start=
+	20
+	~	week
+	~	When the outage begins.
+	|
+Outage Duration=
+	6
+	~	week
+	~	How long the outage lasts.
+	|
+Supplier Capacity=
+	Fragile Supply * Normal Supplier Capacity * (1 - Outage Depth * PULSE(Outage Start, Outage Duration)) + (1 - Fragile Supply) * Unlimited Capacity
+	~	case/week
+	~	Shipping capacity of the supplier (effectively unlimited when supply is dependable).
+	|
+Unlimited Capacity=
+	1e+06
+	~	case/week
+	~	Stands for no capacity limit.
+	|
+Measured Supply Delay=
+	SMOOTHI(Supply Line / MAX(Arrivals, 0.001), 2, Supply Delay)
+	~	week
+	~	Lead time the planner measures: cases on order divided by cases arriving, averaged over two weeks.
+	|
+Holding Cost Rate=
+	1
+	~	dollar/case/week
+	~	Cost of keeping a case in stock for a week.
+	|
+Backlog Cost Rate=
+	5
+	~	dollar/case/week
+	~	Cost of a customer order waiting one week beyond normal.
+	|
+Normal Backlog=
+	Customer Demand * Target Delivery Time
+	~	case
+	~	Backlog that corresponds to the normal delivery time.
+	|
+Excess Backlog=
+	MAX(0, Backlog - Normal Backlog)
+	~	case
+	~	Orders waiting beyond the normal delivery time.
+	|
+Lost Margin=
+	20
+	~	dollar/case
+	~	Margin lost on each order a customer takes elsewhere.
+	|
+Cost Rate=
+	Holding Cost Rate * Inventory + Backlog Cost Rate * Excess Backlog + Lost Margin * (Demand Pattern - Customer Demand)
+	~	dollar/week
+	~	Weekly cost of stock and of late orders.
+	|
+Total Cost= INTEG(
+	Cost Rate,
+	0)
+	~	dollar
+	~	Cost accumulated over the horizon.
+	|
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+FINAL TIME  = 60
+	~	week
+	~	The final time for the simulation.
+	|
+INITIAL TIME  = 0
+	~	week
+	~	The initial time for the simulation.
+	|
+SAVEPER  = 
+        TIME STEP
+	~	week [0,?]
+	~	The frequency with which output is stored.
+	|
+TIME STEP  = 0.0625
+	~	week [0,?]
+	~	The time step for the simulation.
+	|

@@ -1,0 +1,14 @@
+benchmark (theta 0, alpha 1, beta 1, S' 28/20): 204 {'Retailer': 46, 'Wholesaler': 50, 'Distributor': 54, 'Factory': 54} paper 204 {'team': 204, 'Retailer': 46, 'Wholesaler': 50, 'Distributor': 54, 'Factory': 54}
+mean of 11 teams: {'Retailer cost': 404.3, 'Wholesaler cost': 559.0, 'Distributor cost': 503.6, 'Factory cost': 322.2, 'Retailer peak order': 10.9, 'Wholesaler peak order': 12.5, 'Distributor peak order': 15.1, 'Factory peak order': 18.1, 'Retailer peak time': 13.5, 'Wholesaler peak time': 16.6, 'Distributor peak time': 18.6, 'Factory peak time': 20.3, 'team': 1789.0}
+paper table 2   : {'team': 2028, 'Retailer': 383, 'Wholesaler': 635, 'Distributor': 630, 'Factory': 380} peaks {'Retailer': 15, 'Wholesaler': 19, 'Distributor': 27, 'Factory': 32}
+team         ours     1789  paper   2028  ratio 0.88
+Retailer     ours      404  paper    383  ratio 1.06
+Wholesaler   ours      559  paper    635  ratio 0.88
+Distributor  ours      504  paper    630  ratio 0.80
+Factory      ours      322  paper    380  ratio 0.85
+
+QUALITATIVE (11 teams)  variance rises upstream in 6 teams; peak order rises upstream in 6 ; every stage goes into backlog in 8
+Retailer     order variance ours    8.0 paper  13 | min inventory ours  -23.5 paper  -25 | max inventory ours   23.0 paper  20
+Wholesaler   order variance ours   12.7 paper  23 | min inventory ours  -35.7 paper  -46 | max inventory ours   32.0 paper  41
+Distributor  order variance ours   23.4 paper  45 | min inventory ours  -29.5 paper  -45 | max inventory ours   28.9 paper  49
+Factory      order variance ours   34.4 paper  72 | min inventory ours  -10.3 paper  -23 | max inventory ours   32.5 paper  50

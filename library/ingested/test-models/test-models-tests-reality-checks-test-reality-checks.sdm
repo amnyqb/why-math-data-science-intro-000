@@ -1,0 +1,316 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 5,
+      "name": "output",
+      "kind": "Aux",
+      "equation": "workers*working_hours*productivity",
+      "units": "",
+      "comment": "",
+      "pos": [
+        727.0,
+        184.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "sectors",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "productivity",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "",
+      "comment": "",
+      "pos": [
+        694.0,
+        272.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "sectors",
+      "by_item": [
+        {
+          "item": "b",
+          "equation": "2",
+          "table": []
+        },
+        {
+          "item": "c",
+          "equation": "4.5",
+          "table": []
+        },
+        {
+          "item": "d",
+          "equation": "3",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "workers",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        474.0,
+        228.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "sectors",
+      "by_item": [
+        {
+          "item": "b",
+          "equation": "5",
+          "table": []
+        },
+        {
+          "item": "c",
+          "equation": "6",
+          "table": []
+        },
+        {
+          "item": "d",
+          "equation": "9",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "working_hours",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        544.0,
+        315.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "sectors",
+      "by_item": [
+        {
+          "item": "b",
+          "equation": "5",
+          "table": []
+        },
+        {
+          "item": "c",
+          "equation": "9",
+          "table": []
+        },
+        {
+          "item": "d",
+          "equation": "3",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 9,
+      "from": 6,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 7,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 11,
+      "from": 8,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 1.0,
+    "final_time": 4.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 11,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "no_productivity_no_output[sectors]",
+      "items": [
+        "THE CONDITION:  productivity_to_zero[sectors]:IMPLIES:output[sectors] <= RC_STEP_CHECK(0.5, output[sectors   ], 0.0001)"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "productivity_to_zero[sectors]",
+      "items": [
+        "TEST INPUT:  productivity[sectors] = RC_STEP(productivity[sectors], 0)"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "no_workers_no_output",
+      "items": [
+        "THE CONDITION:  workers[a]=0:IMPLIES:output[a]=0"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 4,
+      "name": "sectors",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

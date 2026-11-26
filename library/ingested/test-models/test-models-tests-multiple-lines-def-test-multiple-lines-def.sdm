@@ -1,0 +1,130 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "price",
+      "kind": "Constant",
+      "equation": "1.2",
+      "units": "",
+      "comment": "",
+      "pos": [
+        131.0,
+        124.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "fruits",
+      "by_item": [
+        {
+          "item": "apple",
+          "equation": "2.3",
+          "table": []
+        },
+        {
+          "item": "orange",
+          "equation": "3.2",
+          "table": []
+        },
+        {
+          "item": "cherry",
+          "equation": "2.3",
+          "table": []
+        },
+        {
+          "item": "pear",
+          "equation": "0.9",
+          "table": []
+        },
+        {
+          "item": "tomato",
+          "equation": "1.4",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 1.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 2,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "fruits",
+      "items": [
+        "banana",
+        "apple",
+        "orange",
+        "cherry",
+        "pear",
+        "tomato"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

@@ -1,0 +1,144 @@
+{UTF-8}
+{ Chapter 15: the capability trap in maintenance. A fixed maintenance crew splits its hours between repairing breakdowns (first) and planned maintenance that removes latent defects before they fail. }
+Machines=
+	100
+	~	machine
+	~	Machines in the plant.
+	|
+Healthy Machines=
+	Machines - Defective Machines - Failed Machines
+	~	machine
+	~	Machines running without a hidden defect.
+	|
+Defect Rate=
+	0.1
+	~	1/week
+	~	Fraction of healthy machines that develop a hidden defect each week at normal load.
+	|
+Wear Increase=
+	0
+	~	dmnl
+	~	Extra wear during a production push (0.8 means 80% more defects).
+	|
+Push Start=
+	20
+	~	week
+	~	|
+Push Duration=
+	12
+	~	week
+	~	|
+Push=
+	PULSE(Push Start, Push Duration)
+	~	dmnl
+	~	1 during the production push, 0 otherwise.
+	|
+Wear Multiplier=
+	1 + Wear Increase * Push
+	~	dmnl
+	~	|
+Defect Creation=
+	Healthy Machines * Defect Rate * Wear Multiplier
+	~	machine/week
+	~	|
+Defective Machines= INTEG(
+	Defect Creation - Breakdowns - Planned Repairs,
+	14.18)
+	~	machine
+	~	Machines running with a hidden defect not yet found.
+	|
+Time to Failure=
+	10
+	~	week
+	~	Average time before a latent defect breaks the machine.
+	|
+Breakdowns=
+	Defective Machines / Time to Failure
+	~	machine/week
+	~	|
+Failed Machines= INTEG(
+	Breakdowns - Breakdown Repairs,
+	0.709)
+	~	machine
+	~	Machines down and waiting for repair.
+	|
+Repair Time=
+	0.5
+	~	week
+	~	Minimum time to repair a failed machine when crew hours are available.
+	|
+Base Maintenance Hours=
+	120
+	~	hour/week
+	~	Crew hours per week.
+	|
+Diversion=
+	0
+	~	dmnl
+	~	Share of crew hours diverted to production during the push.
+	|
+Maintenance Hours=
+	Base Maintenance Hours * (1 - Diversion * Push)
+	~	hour/week
+	~	|
+Hours per Breakdown=
+	30
+	~	hour/machine
+	~	Crew hours to repair a machine after it fails.
+	|
+Hours per Planned Repair=
+	4
+	~	hour/machine
+	~	Crew hours to find and fix a latent defect before it fails.
+	|
+Find Time=
+	2
+	~	week
+	~	Time planned maintenance needs to find a hidden defect when hours are sufficient.
+	|
+Planned Repair Need=
+	Defective Machines / Find Time
+	~	machine/week
+	~	Planned repairs per week if crew hours were unlimited.
+	|
+Reserved Planned Hours=
+	Reserve Level * STEP(1, Policy Start)
+	~	hour/week
+	~	Hours held back from breakdown work for planned maintenance (0: breakdowns always come first).
+	|
+Reserve Level=
+	0
+	~	hour/week
+	~	|
+Policy Start=
+	60
+	~	week
+	~	|
+Breakdown Repairs=
+	MIN(Failed Machines / Repair Time, (Maintenance Hours - Reserved Planned Hours) / Hours per Breakdown)
+	~	machine/week
+	~	|
+Reactive Hours=
+	Breakdown Repairs * Hours per Breakdown
+	~	hour/week
+	~	|
+Hours Left for Planned Work=
+	MAX(0, Maintenance Hours - Reactive Hours)
+	~	hour/week
+	~	|
+Planned Repair Capacity=
+	Hours Left for Planned Work / Hours per Planned Repair
+	~	machine/week
+	~	|
+Planned Repairs=
+	MIN(Planned Repair Need, Planned Repair Capacity)
+	~	machine/week
+	~	|
+Uptime=
+	(Machines - Failed Machines) / Machines
+	~	dmnl
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 156 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = 0.0625 ~ week ~ |

@@ -1,0 +1,52 @@
+{UTF-8}
+{ Chapter 2: a balancing loop with a delay. Orders take four weeks to arrive; the planner corrects the inventory gap but ignores what is already on order. }
+Shipments=
+	100 + STEP(20, 5)
+	~	cases/week
+	~	Demand shipped each week; rises by 20 in week 5.
+	|
+Target Inventory=
+	400
+	~	cases
+	~	|
+Adjustment Time=
+	2
+	~	week
+	~	|
+Supply Delay=
+	4
+	~	week
+	~	Average time from order to arrival.
+	|
+Supply Line Weight=
+	0
+	~	dmnl
+	~	Share of the supply line gap the planner takes into account (0: ignores orders already placed).
+	|
+Desired Supply Line=
+	Supply Delay * Shipments
+	~	cases
+	~	|
+Orders=
+	MAX(0, Shipments + (Target Inventory - Inventory) / Adjustment Time + Supply Line Weight * (Desired Supply Line - Supply Line) / Adjustment Time)
+	~	cases/week
+	~	|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	400)
+	~	cases
+	~	Cases ordered but not yet arrived.
+	|
+Arrivals=
+	Supply Line / Supply Delay
+	~	cases/week
+	~	|
+Inventory= INTEG(
+	Arrivals - Shipments,
+	400)
+	~	cases
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 60 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = 0.0625 ~ week ~ |

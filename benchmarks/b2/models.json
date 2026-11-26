@@ -1,0 +1,8 @@
+[
+ {"name": "World3-03 (Meadows et al. 2004)", "folder": "vensim_classics", "files": ["world3_03.mdl"]},
+ {"name": "World Dynamics / World2 (Forrester 1971)", "folder": "vensim_classics", "files": ["world2.mdl"]},
+ {"name": "Urban Dynamics (Forrester 1969)", "folder": "vensim_classics", "files": ["urban.mdl"]},
+ {"name": "Market (Vensim sample MARKET; not Forrester's Market Growth)", "folder": "vensim_classics", "files": ["market.mdl"]},
+ {"name": "Epidemic (Vensim sample)", "folder": "vensim_classics", "files": ["epidemic.mdl"]},
+ {"name": "Rabbits and foxes (Vensim sample)", "folder": "vensim_classics", "files": ["rabfox.mdl"]}
+]

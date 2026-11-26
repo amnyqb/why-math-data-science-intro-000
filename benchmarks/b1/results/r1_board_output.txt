@@ -1,0 +1,18 @@
+Benchmark (Sterman's optimal parameters):
+  Retailer         46.0   Sterman 46
+  Wholesaler       50.0   Sterman 50
+  Distributor      54.0   Sterman 54
+  Factory          54.0   Sterman 54
+  team            204.0   Sterman 204
+
+The 11 teams' Table 4 parameters (mean over teams):
+  Retailer        404.3   Sterman 383
+  Wholesaler      559.0   Sterman 635
+  Distributor     503.6   Sterman 630
+  Factory         322.2   Sterman 380
+  total          1789.0   Sterman 2028
+  median team cost 1786.5
+  mean peak order Retailer      10.9
+  mean peak order Wholesaler    12.5
+  mean peak order Distributor   15.1
+  mean peak order Factory       18.1

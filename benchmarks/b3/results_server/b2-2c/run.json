@@ -1,0 +1,15 @@
+{
+  "end": 100.0,
+  "series": [
+    {
+      "first": 8000.0,
+      "last": 45266.42378095984,
+      "max": 88647.60156221106,
+      "min": 8000.0,
+      "name": "backlog bl7"
+    }
+  ],
+  "start": 0.0,
+  "steps": 201,
+  "time_units": "Months"
+}

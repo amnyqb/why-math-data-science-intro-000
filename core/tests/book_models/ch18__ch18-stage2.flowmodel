@@ -1,0 +1,910 @@
+{
+  "title": "Distributor stockouts",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Base Demand",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "cases/Week",
+      "comment": "Customer orders per week outside promotions",
+      "pos": [
+        455.0,
+        55.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Promotion Lift",
+      "kind": "Constant",
+      "equation": "400",
+      "units": "cases/Week",
+      "comment": "Extra customer orders per week during a promotion",
+      "pos": [
+        570.0,
+        55.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Customer Demand",
+      "kind": "Aux",
+      "equation": "Base Demand + Promotion Lift * PULSE TRAIN(8, 2, 8, 52)",
+      "units": "cases/Week",
+      "comment": "Cases customers order each week: two-week promotions every eight weeks from week 8",
+      "pos": [
+        520.0,
+        195.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Supply Delay",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "Week",
+      "comment": "Average time from placing an order with the manufacturer to receiving it",
+      "pos": [
+        305.0,
+        415.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        280.0
+      ],
+      "to_pt": [
+        220.0,
+        280.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Minimum Shipping Time",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Week",
+      "comment": "Fastest the warehouse can pick and ship its whole stock",
+      "pos": [
+        500.0,
+        425.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        370.0
+      ],
+      "to_pt": [
+        220.0,
+        370.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Inventory Coverage",
+      "kind": "Constant",
+      "equation": "1.5",
+      "units": "Week",
+      "comment": "Weeks of expected demand the distributor aims to hold",
+      "pos": [
+        85.0,
+        85.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        460.0
+      ],
+      "to_pt": [
+        220.0,
+        460.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Inventory",
+      "kind": "Stock",
+      "equation": "1500",
+      "units": "cases",
+      "comment": "Cases on hand at the distribution centre; starts at its target, 1.5 weeks of 1,000 cases",
+      "pos": [
+        454.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Supply Line",
+      "kind": "Stock",
+      "equation": "3000",
+      "units": "cases",
+      "comment": "Cases ordered and not yet received; starts in balance, 3 weeks of 1,000 cases",
+      "pos": [
+        228.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        190.0
+      ],
+      "to_pt": [
+        820.0,
+        190.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Expected Demand + (Desired Inventory - Inventory) / Inventory Adjustment Time)",
+      "units": "cases/Week",
+      "comment": "Cases ordered each week: the forecast plus a correction for the inventory gap (the rule as practised)",
+      "pos": [
+        115.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 10,
+      "from_pt": [
+        30.0,
+        330.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Arrivals",
+      "kind": "Flow",
+      "equation": "Supply Line / Supply Delay",
+      "units": "cases/Week",
+      "comment": "Cases received each week",
+      "pos": [
+        341.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 10,
+      "to": 9,
+      "from_pt": [
+        460.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        190.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Shipments",
+      "kind": "Flow",
+      "equation": "MIN(Customer Demand, Inventory / Minimum Shipping Time)",
+      "units": "cases/Week",
+      "comment": "Cases shipped: demand, unless stock runs short",
+      "pos": [
+        567.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 9,
+      "to": null,
+      "from_pt": [
+        460.0,
+        280.0
+      ],
+      "to_pt": [
+        655.0,
+        330.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Unfilled Orders",
+      "kind": "Aux",
+      "equation": "Customer Demand - Shipments",
+      "units": "cases/Week",
+      "comment": "Customer orders not shipped in the week (lost)",
+      "pos": [
+        410.0,
+        235.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        190.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Fill Rate",
+      "kind": "Aux",
+      "equation": "Shipments / Customer Demand",
+      "units": "dmnl",
+      "comment": "Share of customer orders shipped in the week",
+      "pos": [
+        605.0,
+        255.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        280.0
+      ],
+      "to_pt": [
+        420.0,
+        280.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Forecast Time",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "Week",
+      "comment": "Averaging time for the demand forecast",
+      "pos": [
+        345.0,
+        40.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        550.0
+      ],
+      "to_pt": [
+        220.0,
+        550.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(Customer Demand, Forecast Time)",
+      "units": "cases/Week",
+      "comment": "The planners' forecast: an exponential average of customer orders",
+      "pos": [
+        345.0,
+        125.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        370.0
+      ],
+      "to_pt": [
+        420.0,
+        370.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Desired Inventory",
+      "kind": "Aux",
+      "equation": "Expected Demand * Inventory Coverage",
+      "units": "cases",
+      "comment": "Target stock on hand",
+      "pos": [
+        85.0,
+        175.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        460.0
+      ],
+      "to_pt": [
+        420.0,
+        460.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "Inventory Adjustment Time",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Week",
+      "comment": "Time over which planners try to close an inventory gap",
+      "pos": [
+        15.0,
+        405.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        640.0
+      ],
+      "to_pt": [
+        220.0,
+        640.0
+      ],
+      "view": 26,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 4,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 5,
+      "from": 2,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 10,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "+",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 6,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 3,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 9,
+      "to": 16,
+      "bend": -25.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 7,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 21,
+      "from": 3,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 16,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 24,
+      "from": 16,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 25,
+      "from": 3,
+      "to": 23,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 29,
+      "from": 3,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 30,
+      "from": 27,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 32,
+      "from": 28,
+      "to": 31,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 33,
+      "from": 8,
+      "to": 31,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 35,
+      "from": 28,
+      "to": 11,
+      "bend": 6.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 36,
+      "from": 31,
+      "to": 11,
+      "bend": 8.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 9,
+      "to": 11,
+      "bend": -120.0,
+      "polarity": "-",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 38,
+      "from": 34,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 52.0,
+    "time_step": 0.125,
+    "time_units": "Week",
+    "method": "Euler"
+  },
+  "next_id": 38,
+  "sheets": [
+    {
+      "id": 26,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

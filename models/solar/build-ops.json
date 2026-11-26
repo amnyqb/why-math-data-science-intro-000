@@ -1,0 +1,22 @@
+[
+ {"op":"set_setting","key":"initial_time","value":"0"},
+ {"op":"set_setting","key":"final_time","value":"29"},
+ {"op":"set_setting","key":"time_step","value":"1"},
+ {"op":"set_setting","key":"time_units","value":"Year"},
+ {"op":"set_setting","key":"title","value":"Solar PV levelised cost"},
+ {"op":"add_var","name":"Capex","kind":"constant","equation":"700","units":"EUR/kWp","doc":"Fraunhofer ISE 2024, southern Germany"},
+ {"op":"add_var","name":"OM","kind":"constant","equation":"13.3","units":"EUR/(kWp*Year)"},
+ {"op":"add_var","name":"Yield","kind":"constant","equation":"1280","units":"kWh/(kWp*Year)"},
+ {"op":"add_var","name":"Degradation","kind":"constant","equation":"0.0025","units":"dmnl"},
+ {"op":"add_var","name":"Debt Share","kind":"constant","equation":"0.8","units":"dmnl"},
+ {"op":"add_var","name":"Cost of Debt","kind":"constant","equation":"0.05","units":"dmnl"},
+ {"op":"add_var","name":"Cost of Equity","kind":"constant","equation":"0.065","units":"dmnl"},
+ {"op":"add_var","name":"Inflation","kind":"constant","equation":"0.018","units":"dmnl"},
+ {"op":"add_var","name":"kWh per MWh","kind":"constant","equation":"1000","units":"kWh/MWh","doc":"Conversion from per kWh to per MWh"},
+ {"op":"add_var","name":"Year Length","kind":"constant","equation":"1","units":"Year","doc":"Conversion: one Year, the unit that an exponent measured in years is divided by"},
+ {"op":"add_to_group","name":"Conversions","vars":["kWh per MWh","Year Length"]},
+ {"op":"add_var","name":"Real WACC","kind":"aux","equation":"REAL RATE(WACC(Debt Share, Cost of Debt, Cost of Equity), Inflation)","units":"dmnl"},
+ {"op":"add_var","name":"Output","kind":"aux","equation":"Yield * (1 - Degradation)^(Time / Year Length)","units":"kWh/(kWp*Year)"},
+ {"op":"add_var","name":"LCOE","kind":"aux","equation":"LEVELISED(OM, Output, Real WACC, Capex) * kWh per MWh","units":"EUR/MWh"},
+ {"op":"add_check","name":"Fraunhofer ISE 2024 levelised cost","kind":"benchmark","var":"LCOE","min":40.5,"max":41.5,"at":29,"source":"Fraunhofer ISE 2024, southern Germany, 700 EUR/kWp"}
+]

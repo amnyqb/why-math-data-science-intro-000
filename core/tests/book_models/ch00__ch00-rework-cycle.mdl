@@ -1,0 +1,66 @@
+{UTF-8}
+{ Prologue: the rework cycle in its smallest form (after Cooper 1980).
+  A project of 1,000 tasks. A fraction of the work done is flawed; the flaws are found later and go back to be done again. }
+Project Scope=
+	1000
+	~	tasks
+	~	|
+Staff Capacity=
+	10
+	~	tasks/week
+	~	Tasks the team can complete in a week.
+	|
+Error Fraction=
+	0.3
+	~	dmnl
+	~	Share of the work done that is flawed. Scenario "No rework": 0.
+	|
+Discovery Time=
+	8
+	~	week
+	~	Average time before a flaw is found.
+	|
+Minimum Task Time=
+	1
+	~	week
+	~	|
+Progress=
+	MIN(Staff Capacity, Work To Do / Minimum Task Time)
+	~	tasks/week
+	~	|
+Correct Work=
+	Progress * (1 - Error Fraction)
+	~	tasks/week
+	~	|
+Flawed Work=
+	Progress * Error Fraction
+	~	tasks/week
+	~	|
+Rework Discovery=
+	Undiscovered Rework / Discovery Time
+	~	tasks/week
+	~	|
+Work To Do= INTEG(
+	Rework Discovery - Correct Work - Flawed Work,
+	Project Scope)
+	~	tasks
+	~	|
+Work Done= INTEG(
+	Correct Work,
+	0)
+	~	tasks
+	~	|
+Undiscovered Rework= INTEG(
+	Flawed Work - Rework Discovery,
+	0)
+	~	tasks
+	~	|
+Perceived Progress=
+	Work Done + Undiscovered Rework
+	~	tasks
+	~	What managers see: flawed work looks finished until it is found.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 250 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |

@@ -1,0 +1,5 @@
+Name,Variable,Min,Max,When
+Shortage is never negative,Network shortage,0,,always
+Optimal plan never fills past the limit,Network fill optimal,0,1,always
+Current plan never fills past the limit,Network fill current,0,1,always
+Shortage at the end stays under 1000 MB (example limit),Network shortage,,1000,end

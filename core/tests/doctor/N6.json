@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE N6: Time tested for equality with a non-binary step"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.3"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Pulse",
+  "kind": "aux",
+  "equation": "IF THEN ELSE(Time = 3, 1, 0)",
+  "units": "widget/Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "F",
+  "kind": "flow",
+  "equation": "Pulse",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "S"
+ }
+]

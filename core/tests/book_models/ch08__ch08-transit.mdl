@@ -1,0 +1,79 @@
+{UTF-8}
+{ Chapter 8: inside a third-order material delay. Three stocks in series, each emptying in a third of the transit time. Equivalent to DELAY3(Shipments, Transit Time). }
+Base Shipments=
+	100
+	~	cases/week
+	~	Factory shipments before the test.
+	|
+Step Height=
+	0
+	~	cases/week
+	~	Lasting rise in shipments at the test time.
+	|
+Pulse Volume=
+	0
+	~	cases
+	~	A one-off extra load shipped in one week.
+	|
+Test Time=
+	4
+	~	week
+	~	When the test input starts.
+	|
+Shipments=
+	Base Shipments + STEP(Step Height, Test Time) + Pulse Volume * PULSE(Test Time, 1) / 1
+	~	cases/week
+	~	What leaves the factory each week.
+	|
+Transit Time=
+	6
+	~	week
+	~	Average time in transit.
+	|
+Stage Time=
+	Transit Time / 3
+	~	week
+	~	Average time in each stage.
+	|
+Leg 1= INTEG(
+	Shipments - Handover 1,
+	200)
+	~	cases
+	~	Cases on the first leg (factory to port).
+	|
+Handover 1=
+	Leg 1 / Stage Time
+	~	cases/week
+	~	Cases passing from the first leg to the second.
+	|
+Leg 2= INTEG(
+	Handover 1 - Handover 2,
+	200)
+	~	cases
+	~	Cases on the second leg (sea).
+	|
+Handover 2=
+	Leg 2 / Stage Time
+	~	cases/week
+	~	Cases passing from the second leg to the third.
+	|
+Leg 3= INTEG(
+	Handover 2 - Arrivals,
+	200)
+	~	cases
+	~	Cases on the last leg (port to warehouse).
+	|
+Arrivals=
+	Leg 3 / Stage Time
+	~	cases/week
+	~	Cases arriving at the warehouse.
+	|
+In Transit=
+	Leg 1 + Leg 2 + Leg 3
+	~	cases
+	~	All cases on the way.
+	|
+FINAL TIME = 60 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |

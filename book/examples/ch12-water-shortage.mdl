@@ -1,0 +1,38 @@
+{UTF-8}
+{ Chapter 12: a water shortage. Three regions ask for water; the supply falls short and then recovers.
+  Compare three ways of sharing it. }
+region : North, Valley, Coast ~ ~ |
+Demand[region]=
+	40, 25, 35
+	~	megalitres/week
+	~	What each region asks for.
+	|
+Priority[region]=
+	1, 3, 2
+	~	dmnl
+	~	Higher is served first (the Valley has the hospital and the farms).
+	|
+Supply=
+	50 + STEP(30, 8)
+	~	megalitres/week
+	~	Water available: 50 at first, 80 from week 8.
+	|
+Equal share[region]=
+	ALLOCATE(Demand, Supply)
+	~	megalitres/week
+	~	In proportion to what each asks.
+	|
+By priority[region]=
+	ALLOCATE(Demand, Supply, by=Priority)
+	~	megalitres/week
+	~	The highest priority is served in full first.
+	|
+Softened priority[region]=
+	ALLOCATE(Demand, Supply, by=Priority, curve=normal, spread=1)
+	~	megalitres/week
+	~	A priority that is not absolute: the lower priorities get a little before the higher ones are full.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 16 ~ week ~ |
+TIME STEP = 1 ~ week ~ |
+SAVEPER = 1 ~ week ~ |

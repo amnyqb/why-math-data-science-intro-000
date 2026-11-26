@@ -1,0 +1,74 @@
+{UTF-8}
+{ Chapter 10: a coflow. Staff is a stock of people; Total Experience is a stock of person-months that travels with them. Average experience is the ratio. Starts in balance: 100 people with 92 months of experience on average. }
+Base Hiring=
+	1.25
+	~	person/month
+	~	Replaces leavers.
+	|
+Push Size=
+	20
+	~	person/month
+	~	|
+Push Start=
+	6
+	~	month
+	~	|
+Push Duration=
+	3
+	~	month
+	~	|
+Hiring=
+	Base Hiring + Push Size * PULSE(Push Start, Push Duration)
+	~	person/month
+	~	|
+Staff= INTEG(
+	Hiring - Quits,
+	100)
+	~	person
+	~	|
+Quit Fraction=
+	0.0125
+	~	1/month
+	~	Average tenure 80 months.
+	|
+Quits=
+	Staff * Quit Fraction
+	~	person/month
+	~	|
+Experience of Hires=
+	12
+	~	month
+	~	Average prior experience of a new hire.
+	|
+Experience Gain=
+	1
+	~	dmnl
+	~	One month of experience per month worked.
+	|
+Total Experience= INTEG(
+	Experience Hired + Experience Gained - Experience Lost,
+	9200)
+	~	person*month
+	~	Experience embodied in the staff.
+	|
+Experience Hired=
+	Hiring * Experience of Hires
+	~	person
+	~	|
+Experience Gained=
+	Staff * Experience Gain
+	~	person
+	~	|
+Experience Lost=
+	Quits * Average Experience
+	~	person
+	~	Leavers take the average with them.
+	|
+Average Experience=
+	ZIDZ(Total Experience, Staff)
+	~	month
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 60 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

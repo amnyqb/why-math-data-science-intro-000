@@ -1,0 +1,1973 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Salespeople",
+      "kind": "Stock",
+      "equation": "10",
+      "units": "person",
+      "comment": "Sales force.",
+      "pos": [
+        500.0,
+        80.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Sales Hiring",
+      "kind": "Flow",
+      "equation": "(Indicated Salespeople - Salespeople) / Hiring Time",
+      "units": "person/month",
+      "comment": "Hiring (or release) towards the sales force the budget supports.",
+      "pos": [
+        630.0,
+        80.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 1,
+      "from_pt": [
+        735.0,
+        80.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Hiring Time",
+      "kind": "Constant",
+      "equation": "20",
+      "units": "month",
+      "comment": "Time to adjust the sales force to the budget (Forrester 1968 uses 20 months).",
+      "pos": [
+        630.0,
+        15.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Indicated Salespeople",
+      "kind": "Aux",
+      "equation": "Sales Budget / Salesperson Salary",
+      "units": "person",
+      "comment": "Sales force the budget can pay.",
+      "pos": [
+        600.0,
+        175.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Salesperson Salary",
+      "kind": "Constant",
+      "equation": "2000",
+      "units": "dollar/person/month",
+      "comment": "Monthly cost of one salesperson.",
+      "pos": [
+        680.0,
+        240.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Sales Budget",
+      "kind": "Aux",
+      "equation": "Revenue * Budget Fraction",
+      "units": "dollar/month",
+      "comment": "Revenue allocated to selling.",
+      "pos": [
+        590.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Budget Fraction",
+      "kind": "Constant",
+      "equation": "0.1",
+      "units": "dmnl",
+      "comment": "Share of revenue spent on the sales force.",
+      "pos": [
+        660.0,
+        360.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Revenue",
+      "kind": "Aux",
+      "equation": "Orders * Price",
+      "units": "dollar/month",
+      "comment": "Revenue booked with orders.",
+      "pos": [
+        590.0,
+        400.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Price",
+      "kind": "Constant",
+      "equation": "100",
+      "units": "dollar/unit",
+      "comment": "Revenue per unit ordered.",
+      "pos": [
+        660.0,
+        460.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Orders",
+      "kind": "Flow",
+      "equation": "Salespeople * Sales Effectiveness",
+      "units": "unit/month",
+      "comment": "Orders booked.",
+      "pos": [
+        500.0,
+        470.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 17,
+      "from_pt": [
+        600.0,
+        470.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Sales Effectiveness",
+      "kind": "Aux",
+      "equation": "Normal Effectiveness * Delay Effect",
+      "units": "unit/person/month",
+      "comment": "Orders per salesperson per month.",
+      "pos": [
+        310.0,
+        140.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Normal Effectiveness",
+      "kind": "Constant",
+      "equation": "400",
+      "units": "unit/person/month",
+      "comment": "Orders per salesperson when delivery is immediate.",
+      "pos": [
+        310.0,
+        50.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Delay Effect",
+      "kind": "Aux",
+      "equation": "1 / (1 + (Market Delivery Delay / Half Effect Delay) ^ 3)",
+      "units": "dmnl",
+      "comment": "Share of normal effectiveness kept at the delivery delay customers expect.",
+      "pos": [
+        230.0,
+        220.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Half Effect Delay",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "month",
+      "comment": "Delivery delay at which salespeople book half their normal orders.",
+      "pos": [
+        40.0,
+        220.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Market Delivery Delay",
+      "kind": "Aux",
+      "equation": "SMOOTH(Delivery Delay, Market Learning Time)",
+      "units": "month",
+      "comment": "Delivery delay as customers know it.",
+      "pos": [
+        230.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Market Learning Time",
+      "kind": "Constant",
+      "equation": "6",
+      "units": "month",
+      "comment": "Time for customers to learn the firm's delivery delay.",
+      "pos": [
+        40.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Backlog",
+      "kind": "Stock",
+      "equation": "7111",
+      "units": "unit",
+      "comment": "Orders received but not yet shipped.",
+      "pos": [
+        350.0,
+        470.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Shipments",
+      "kind": "Flow",
+      "equation": "MIN(Capacity, Backlog / Minimum Delay)",
+      "units": "unit/month",
+      "comment": "Shipments, limited by capacity or by the minimum processing time.",
+      "pos": [
+        200.0,
+        470.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 17,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        90.0,
+        470.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Minimum Delay",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "month",
+      "comment": "Shortest possible time from order to shipment.",
+      "pos": [
+        100.0,
+        550.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Delivery Delay",
+      "kind": "Aux",
+      "equation": "Backlog / Shipments",
+      "units": "month",
+      "comment": "Current delivery delay.",
+      "pos": [
+        250.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Perceived Delivery Delay",
+      "kind": "Aux",
+      "equation": "SMOOTH(Delivery Delay, Reporting Time)",
+      "units": "month",
+      "comment": "Delivery delay as management sees it in its reports.",
+      "pos": [
+        150.0,
+        800.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Reporting Time",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "month",
+      "comment": "Reporting and averaging time for the delivery delay.",
+      "pos": [
+        20.0,
+        880.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Traditional Goal",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "month",
+      "comment": "Delivery delay the company set as its standard.",
+      "pos": [
+        120.0,
+        935.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Weight on Tradition",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "dmnl",
+      "comment": "Weight of the traditional goal in the operating goal (0: goal follows performance; 1: firm goal).",
+      "pos": [
+        180.0,
+        1010.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Goal Change",
+      "kind": "Flow",
+      "equation": "(Weight on Tradition * Traditional Goal + (1 - Weight on Tradition) * Perceived Delivery Delay - Delivery Delay Goal) / Goal Adjustment Time",
+      "units": "dmnl",
+      "comment": "Drift of the operating goal towards a weighted mix of the traditional goal and the delivery delay management sees (months per month).",
+      "pos": [
+        350.0,
+        880.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 27,
+      "from_pt": [
+        250.0,
+        880.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Goal Adjustment Time",
+      "kind": "Constant",
+      "equation": "12",
+      "units": "month",
+      "comment": "Time for the operating goal to drift towards experience.",
+      "pos": [
+        340.0,
+        1010.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Delivery Delay Goal",
+      "kind": "Stock",
+      "equation": "2",
+      "units": "month",
+      "comment": "Operating goal used to judge whether capacity is short.",
+      "pos": [
+        500.0,
+        880.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "Delivery Condition",
+      "kind": "Aux",
+      "equation": "Perceived Delivery Delay / Delivery Delay Goal",
+      "units": "dmnl",
+      "comment": "Above 1: deliveries are slower than the goal.",
+      "pos": [
+        650.0,
+        800.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "Expansion Sensitivity",
+      "kind": "Constant",
+      "equation": "0.1",
+      "units": "1/month",
+      "comment": "Capacity ordered per month, as a fraction of capacity, per unit of excess delivery condition.",
+      "pos": [
+        470.0,
+        730.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "Expansion Fraction",
+      "kind": "Aux",
+      "equation": "MAX(0, Expansion Sensitivity * (Delivery Condition - 1))",
+      "units": "1/month",
+      "comment": "Capacity ordered per month as a fraction of capacity in place.",
+      "pos": [
+        650.0,
+        730.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "Capacity Orders",
+      "kind": "Flow",
+      "equation": "Capacity * Expansion Fraction",
+      "units": "unit/month/month",
+      "comment": "New capacity ordered each month.",
+      "pos": [
+        600.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 32,
+      "from_pt": [
+        700.0,
+        640.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "Capacity on Order",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "unit/month",
+      "comment": "Capacity ordered but not yet producing.",
+      "pos": [
+        470.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "Lead Time",
+      "kind": "Constant",
+      "equation": "12",
+      "units": "month",
+      "comment": "Average time to build and commission capacity.",
+      "pos": [
+        300.0,
+        730.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "Capacity Arrivals",
+      "kind": "Flow",
+      "equation": "Capacity on Order / Lead Time",
+      "units": "unit/month/month",
+      "comment": "Capacity coming on line.",
+      "pos": [
+        340.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 32,
+      "to": 35,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "Capacity",
+      "kind": "Stock",
+      "equation": "3556",
+      "units": "unit/month",
+      "comment": "Units the plant can ship per month.",
+      "pos": [
+        210.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 102,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 36,
+      "from": 4,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 1,
+      "to": 2,
+      "bend": 45.7,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 38,
+      "from": 3,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 39,
+      "from": 6,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 40,
+      "from": 5,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 41,
+      "from": 8,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 42,
+      "from": 7,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 43,
+      "from": 10,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 44,
+      "from": 9,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 45,
+      "from": 1,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 46,
+      "from": 11,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 47,
+      "from": 12,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 48,
+      "from": 13,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 49,
+      "from": 15,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 50,
+      "from": 14,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 51,
+      "from": 20,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 52,
+      "from": 16,
+      "to": 15,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 53,
+      "from": 35,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 54,
+      "from": 17,
+      "to": 18,
+      "bend": 45.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 55,
+      "from": 19,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 56,
+      "from": 17,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 57,
+      "from": 18,
+      "to": 20,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 58,
+      "from": 20,
+      "to": 21,
+      "bend": 192.3,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 59,
+      "from": 22,
+      "to": 21,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 60,
+      "from": 24,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 61,
+      "from": 23,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 62,
+      "from": 21,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 63,
+      "from": 27,
+      "to": 25,
+      "bend": -55.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 64,
+      "from": 26,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 65,
+      "from": 21,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 66,
+      "from": 27,
+      "to": 28,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 67,
+      "from": 29,
+      "to": 30,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 68,
+      "from": 28,
+      "to": 30,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 69,
+      "from": 35,
+      "to": 31,
+      "bend": -65.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 70,
+      "from": 30,
+      "to": 31,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 71,
+      "from": 32,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 72,
+      "from": 33,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 120.0,
+    "time_step": 0.125,
+    "time_units": "month",
+    "method": "Euler"
+  },
+  "next_id": 595,
+  "sheets": [
+    {
+      "id": 102,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 594,
+      "name": "Causal loops",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 567,
+            "text": "Salespeople",
+            "pos": [
+              50.0,
+              250.0
+            ]
+          },
+          {
+            "id": 568,
+            "text": "Sales Budget",
+            "pos": [
+              150.0,
+              150.0
+            ]
+          },
+          {
+            "id": 569,
+            "text": "Orders",
+            "pos": [
+              250.0,
+              250.0
+            ]
+          },
+          {
+            "id": 570,
+            "text": "Backlog",
+            "pos": [
+              375.0,
+              125.0
+            ]
+          },
+          {
+            "id": 571,
+            "text": "Delivery Delay",
+            "pos": [
+              500.0,
+              250.0
+            ]
+          },
+          {
+            "id": 572,
+            "text": "Market Delivery Delay",
+            "pos": [
+              375.0,
+              375.0
+            ]
+          },
+          {
+            "id": 573,
+            "text": "Sales Effectiveness",
+            "pos": [
+              325.5,
+              299.5
+            ]
+          },
+          {
+            "id": 574,
+            "text": "Capacity Expansion",
+            "pos": [
+              680.0,
+              146.1
+            ]
+          },
+          {
+            "id": 575,
+            "text": "Capacity",
+            "pos": [
+              680.0,
+              353.9
+            ]
+          },
+          {
+            "id": 576,
+            "text": "Delivery Delay Goal",
+            "pos": [
+              658.0,
+              242.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 577,
+            "from": 567,
+            "to": 569,
+            "bend": 100.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 578,
+            "from": 569,
+            "to": 568,
+            "bend": 29.3,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 579,
+            "from": 568,
+            "to": 567,
+            "bend": 29.3,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 580,
+            "from": 569,
+            "to": 570,
+            "bend": -36.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 581,
+            "from": 570,
+            "to": 571,
+            "bend": -36.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 582,
+            "from": 571,
+            "to": 572,
+            "bend": -36.6,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 583,
+            "from": 572,
+            "to": 573,
+            "bend": -12.6,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 584,
+            "from": 573,
+            "to": 569,
+            "bend": -12.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 585,
+            "from": 571,
+            "to": 574,
+            "bend": -60.0,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 586,
+            "from": 574,
+            "to": 575,
+            "bend": -60.0,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 587,
+            "from": 575,
+            "to": 571,
+            "bend": -60.0,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 588,
+            "from": 571,
+            "to": 576,
+            "bend": -19.0,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 589,
+            "from": 576,
+            "to": 574,
+            "bend": 11.8,
+            "polarity": "-",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 590,
+            "pos": [
+              150.0,
+              250.0
+            ],
+            "reinforcing": true,
+            "label": "R1 Sales growth",
+            "clockwise": false
+          },
+          {
+            "id": 591,
+            "pos": [
+              375.0,
+              240.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Customers wait",
+            "clockwise": true
+          },
+          {
+            "id": 592,
+            "pos": [
+              596.7,
+              186.1
+            ],
+            "reinforcing": false,
+            "label": "B2 Capacity expansion",
+            "clockwise": true
+          },
+          {
+            "id": 593,
+            "pos": [
+              604.0,
+              309.9
+            ],
+            "reinforcing": true,
+            "label": "R2 Eroding goal",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

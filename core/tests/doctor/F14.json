@@ -1,0 +1,49 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE F14: a share that can leave 0 to 1"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Demand",
+  "kind": "constant",
+  "equation": "0.5",
+  "units": "dmnl",
+  "doc": "test"
+ },
+ {
+  "op": "set_slider",
+  "var": "Demand",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "add_var",
+  "name": "Fill Share",
+  "kind": "aux",
+  "equation": "Demand * 2",
+  "units": "dmnl",
+  "doc": "test"
+ }
+]

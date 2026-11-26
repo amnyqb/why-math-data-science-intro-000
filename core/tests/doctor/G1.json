@@ -1,0 +1,43 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE G1: variables that use each other"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "A",
+  "kind": "aux",
+  "equation": "B + 1",
+  "units": "",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "B",
+  "kind": "aux",
+  "equation": "A * 0.5",
+  "units": "",
+  "doc": "test"
+ }
+]

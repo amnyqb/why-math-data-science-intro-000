@@ -1,0 +1,227 @@
+{UTF-8}
+{ Chapter 22: a three-stage distribution chain with the stock management rule at each stage. }
+Base Demand=
+	100
+	~	units/week
+	~	Customer demand before the step.
+	|
+Demand Step=
+	20
+	~	units/week
+	~	Rise in customer demand at week 5.
+	|
+Customer Demand=
+	Base Demand + STEP(Demand Step, 5)
+	~	units/week
+	~	
+	|
+Adjustment Time=
+	4
+	~	week
+	~	Time over which each stage closes its inventory and supply line gaps.
+	|
+Supply Line Weight=
+	0.3
+	~	dmnl
+	~	Share of the supply line gap each stage takes into account.
+	|
+Forecast Time=
+	4
+	~	week
+	~	Time over which each stage averages its incoming orders.
+	|
+Coverage=
+	4
+	~	week
+	~	Weeks of expected demand each stage wants on hand.
+	|
+Transit Time=
+	3
+	~	week
+	~	Average time goods spend between stages.
+	|
+Production Time=
+	4
+	~	week
+	~	Average time from production start to completion at the factory.
+	|
+Holding Cost=
+	0.5
+	~	dollars/units/week
+	~	Cost of one unit on hand for one week.
+	|
+Backlog Cost=
+	2
+	~	dollars/units/week
+	~	Cost of one unit owed to a customer for one week.
+	|
+Reporting Delay=
+	2
+	~	week
+	~	Time to publish the network inventory report (used by no decision).
+	|
+Retailer Incoming Orders=
+	Customer Demand
+	~	units/week
+	~	Orders the retailer receives; it ships them at once (a negative net inventory is a backlog).
+	|
+Retailer Expected Demand= INTEG(
+	(Retailer Incoming Orders - Retailer Expected Demand) / Forecast Time,
+	Base Demand)
+	~	units/week
+	~	Exponentially smoothed incoming orders.
+	|
+Retailer Target Inventory=
+	Retailer Expected Demand * Coverage
+	~	units
+	~	
+	|
+Retailer Desired Supply Line=
+	Retailer Expected Demand * Transit Time
+	~	units
+	~	
+	|
+Retailer Orders=
+	MAX(0, Retailer Expected Demand + (Retailer Target Inventory - Retailer Net Inventory + Supply Line Weight * (Retailer Desired Supply Line - Retailer Supply Line)) / Adjustment Time)
+	~	units/week
+	~	Stock management rule (Sterman 1989).
+	|
+Retailer Supply Line= INTEG(
+	Retailer Orders - Retailer Arrivals,
+	Base Demand * Transit Time)
+	~	units
+	~	Goods ordered (or started) and not yet received.
+	|
+Retailer Arrivals=
+	Retailer Supply Line / Transit Time
+	~	units/week
+	~	
+	|
+Retailer Net Inventory= INTEG(
+	Retailer Arrivals - Retailer Incoming Orders,
+	Base Demand * Coverage)
+	~	units
+	~	On hand minus owed; negative means a backlog.
+	|
+Retailer Cost Rate=
+	Holding Cost * MAX(Retailer Net Inventory, 0) + Backlog Cost * MAX(-Retailer Net Inventory, 0)
+	~	dollars/week
+	~	
+	|
+Distributor Incoming Orders=
+	Retailer Orders
+	~	units/week
+	~	Orders the distributor receives; it ships them at once (a negative net inventory is a backlog).
+	|
+Distributor Expected Demand= INTEG(
+	(Distributor Incoming Orders - Distributor Expected Demand) / Forecast Time,
+	Base Demand)
+	~	units/week
+	~	Exponentially smoothed incoming orders.
+	|
+Distributor Target Inventory=
+	Distributor Expected Demand * Coverage
+	~	units
+	~	
+	|
+Distributor Desired Supply Line=
+	Distributor Expected Demand * Transit Time
+	~	units
+	~	
+	|
+Distributor Orders=
+	MAX(0, Distributor Expected Demand + (Distributor Target Inventory - Distributor Net Inventory + Supply Line Weight * (Distributor Desired Supply Line - Distributor Supply Line)) / Adjustment Time)
+	~	units/week
+	~	Stock management rule (Sterman 1989).
+	|
+Distributor Supply Line= INTEG(
+	Distributor Orders - Distributor Arrivals,
+	Base Demand * Transit Time)
+	~	units
+	~	Goods ordered (or started) and not yet received.
+	|
+Distributor Arrivals=
+	Distributor Supply Line / Transit Time
+	~	units/week
+	~	
+	|
+Distributor Net Inventory= INTEG(
+	Distributor Arrivals - Distributor Incoming Orders,
+	Base Demand * Coverage)
+	~	units
+	~	On hand minus owed; negative means a backlog.
+	|
+Distributor Cost Rate=
+	Holding Cost * MAX(Distributor Net Inventory, 0) + Backlog Cost * MAX(-Distributor Net Inventory, 0)
+	~	dollars/week
+	~	
+	|
+Factory Incoming Orders=
+	Distributor Orders
+	~	units/week
+	~	Orders the factory receives; it ships them at once (a negative net inventory is a backlog).
+	|
+Factory Expected Demand= INTEG(
+	(Factory Incoming Orders - Factory Expected Demand) / Forecast Time,
+	Base Demand)
+	~	units/week
+	~	Exponentially smoothed incoming orders.
+	|
+Factory Target Inventory=
+	Factory Expected Demand * Coverage
+	~	units
+	~	
+	|
+Factory Desired Supply Line=
+	Factory Expected Demand * Production Time
+	~	units
+	~	
+	|
+Factory Orders=
+	MAX(0, Factory Expected Demand + (Factory Target Inventory - Factory Net Inventory + Supply Line Weight * (Factory Desired Supply Line - Work in Process)) / Adjustment Time)
+	~	units/week
+	~	Stock management rule (Sterman 1989).
+	|
+Work in Process= INTEG(
+	Factory Orders - Factory Arrivals,
+	Base Demand * Production Time)
+	~	units
+	~	Goods ordered (or started) and not yet received.
+	|
+Factory Arrivals=
+	Work in Process / Production Time
+	~	units/week
+	~	
+	|
+Factory Net Inventory= INTEG(
+	Factory Arrivals - Factory Incoming Orders,
+	Base Demand * Coverage)
+	~	units
+	~	On hand minus owed; negative means a backlog.
+	|
+Factory Cost Rate=
+	Holding Cost * MAX(Factory Net Inventory, 0) + Backlog Cost * MAX(-Factory Net Inventory, 0)
+	~	dollars/week
+	~	
+	|
+Network Inventory=
+	Retailer Net Inventory + Distributor Net Inventory + Factory Net Inventory
+	~	units
+	~	
+	|
+Reported Network Inventory= INTEG(
+	(Network Inventory - Reported Network Inventory) / Reporting Delay,
+	Base Demand * Coverage * 3)
+	~	units
+	~	Published report; feeds no decision.
+	|
+Total Cost= INTEG(
+	Retailer Cost Rate + Distributor Cost Rate + Factory Cost Rate,
+	0)
+	~	dollars
+	~	Cost accumulated over the run.
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 100 ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |
+SAVEPER = 0.125 ~ week ~ |

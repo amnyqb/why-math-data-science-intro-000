@@ -1,0 +1,16 @@
+{UTF-8}
+{ Chapter 14: an investment decision. A plant costs 400 now and earns 12 a month from month 6. Is it worth it at 1% a month? }
+Cash flow=
+	-400 * PULSE(0, 1) + STEP(12, 6)
+	~	$/month
+	~	Spending at the start, income later.
+	|
+Present value=
+	VALUE(Cash flow, 0.01)
+	~	$
+	~	What the whole stream is worth at the start of the run, so far.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 60 ~ month ~ |
+TIME STEP = 1 ~ month ~ |
+SAVEPER = 1 ~ month ~ |

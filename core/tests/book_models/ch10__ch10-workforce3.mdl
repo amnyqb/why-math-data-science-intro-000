@@ -1,0 +1,135 @@
+{UTF-8}
+{ Chapter 10: a three-stage rookie chain and veterans. Same as ch10-workforce but assimilation passes through three stages, so rookies stay rookies for about the full assimilation time. Otherwise: a two-stage ageing chain of rookies and veterans. Rookies produce little and take veterans' time to mentor, so a hiring push lowers output first. Starts in balance with 100 veterans. }
+Base Hiring=
+	1.259712
+	~	person/month
+	~	Hiring that replaces leavers (1 veteran a month plus rookies who quit).
+	|
+Push Size=
+	20
+	~	person/month
+	~	Extra hiring rate during the push.
+	|
+Push Start=
+	6
+	~	month
+	~	|
+Push Duration=
+	3
+	~	month
+	~	Twenty extra a month for three months: 60 extra hires, a 60% expansion.
+	|
+Hiring=
+	Base Hiring + Push Size * PULSE(Push Start, Push Duration)
+	~	person/month
+	~	|
+Rookies 1= INTEG(
+	Hiring - Progress 1 - Quits 1,
+	2.3328)
+	~	person
+	~	Rookies in their first third of assimilation.
+	|
+Rookies 2= INTEG(
+	Progress 1 - Progress 2 - Quits 2,
+	2.1600)
+	~	person
+	~	|
+Rookies 3= INTEG(
+	Progress 2 - Assimilation - Quits 3,
+	2.0000)
+	~	person
+	~	|
+Stage Time=
+	Assimilation Time / 3
+	~	month
+	~	|
+Progress 1=
+	Rookies 1 / Stage Time
+	~	person/month
+	~	|
+Progress 2=
+	Rookies 2 / Stage Time
+	~	person/month
+	~	|
+Assimilation Time=
+	6
+	~	month
+	~	Average time for a rookie to become fully productive, in three stages.
+	|
+Assimilation=
+	Rookies 3 / Stage Time
+	~	person/month
+	~	|
+Rookie Quit Fraction=
+	0.04
+	~	1/month
+	~	Rookies leave four times as often as veterans.
+	|
+Quits 1=
+	Rookies 1 * Rookie Quit Fraction
+	~	person/month
+	~	|
+Quits 2=
+	Rookies 2 * Rookie Quit Fraction
+	~	person/month
+	~	|
+Quits 3=
+	Rookies 3 * Rookie Quit Fraction
+	~	person/month
+	~	|
+Rookies=
+	Rookies 1 + Rookies 2 + Rookies 3
+	~	person
+	~	|
+Veterans= INTEG(
+	Assimilation - Veteran Quits,
+	100)
+	~	person
+	~	Fully productive people.
+	|
+Veteran Quit Fraction=
+	0.01
+	~	1/month
+	~	Average veteran tenure 100 months.
+	|
+Veteran Quits=
+	Veterans * Veteran Quit Fraction
+	~	person/month
+	~	|
+Productivity=
+	10
+	~	tasks/person/month
+	~	Output of a veteran with no mentoring duties.
+	|
+Rookie Productivity=
+	0.2
+	~	dmnl
+	~	A rookie's output as a fraction of a veteran's.
+	|
+Mentoring Load=
+	0.3
+	~	dmnl
+	~	Veteran time spent per rookie (person per person).
+	|
+Mentoring=
+	Rookies * Mentoring Load
+	~	person
+	~	Veteran time taken up by mentoring.
+	|
+Effective Staff=
+	Veterans - Mentoring + Rookies * Rookie Productivity
+	~	person
+	~	Staff in veteran equivalents.
+	|
+Output=
+	Productivity * Effective Staff
+	~	tasks/month
+	~	|
+Total Staff=
+	Rookies + Veterans
+	~	person
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 60 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

@@ -1,0 +1,8 @@
+finding,reproduced,evidence
+"K1 damped oscillation, only balancing loops",True,"5 extrema after the step, amplitudes [2.73, 0.84, 0.28, 0.08]…; polarities ['B', 'B']"
+K2 Expected Demand outside the loops of the two-stock core,True,"three-stock model: 3 loops; the Expected Demand loop has variables ['Expected Demand', 'Change in Expected Demand'], the other 2 loops contain none of them"
+K3 B2 dominates the turning points of Workforce,True,B2 dominant in 100% of the time within ±0.5 months of the 5 extrema
+K4 B1 dominates the slowing-down phases,True,B1 dominant in 67% of the slowing-down intervals (417 steps)
+K5 dominance alternates between B1 and B2,True,12 switches after the step (need 3)
+K6 damping explained by B1 only,True,"|d Re λ / d ln p|: Hiring Time 0.1250, Inventory Correction Time 0.0000"
+"K7 frequency affected by both, most by B2",True,"|d Im λ / d ln p|: Hiring Time 0.1417, Inventory Correction Time 0.1890"

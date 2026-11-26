@@ -1,0 +1,214 @@
+{UTF-8}
+Base Marketing=
+	20000
+	~	USD/month
+	~	Monthly marketing budget once launched.
+	|
+Marketing Spend=
+	Base Marketing
+	~	USD/month
+	~	
+	|
+Acquisition Cost=
+	400
+	~	USD/customer
+	~	Marketing spend needed to win one customer (CAC).
+	|
+Marketing Acquisition=
+	Marketing Spend / Acquisition Cost
+	~	customer/month
+	~	
+	|
+Acquisition=
+	Marketing Acquisition
+	~	customer/month
+	~	
+	|
+Churn Fraction=
+	0.04
+	~	1/month
+	~	Share of customers who cancel each month when service is normal.
+	|
+Churn=
+	Customers * Churn Fraction
+	~	customer/month
+	~	
+	|
+Customers= INTEG(
+	Acquisition - Churn,
+	0)
+	~	customer
+	~	Paying subscribers.
+	|
+Price=
+	120
+	~	USD/customer/month
+	~	Monthly subscription price.
+	|
+Revenue=
+	Customers * Price
+	~	USD/month
+	~	Subscription revenue earned each month.
+	|
+Unit Service Cost=
+	20
+	~	USD/customer/month
+	~	Materials and third-party cost of serving one customer for a month.
+	|
+Service Cost=
+	Customers * Unit Service Cost
+	~	USD/month
+	~	
+	|
+Salary=
+	5000
+	~	USD/person/month
+	~	Salary and on-costs of one person.
+	|
+Staff Level=
+	4
+	~	person
+	~	Team size, fixed in the first versions.
+	|
+Staff=
+	Staff Level
+	~	person
+	~	
+	|
+Payroll=
+	Staff * Salary
+	~	USD/month
+	~	
+	|
+Overhead=
+	30000
+	~	USD/month
+	~	Product team, rent, software and other fixed costs.
+	|
+Operating Expenses=
+	Service Cost + Payroll + Overhead + Marketing Spend
+	~	USD/month
+	~	Cash expenses recognised each month.
+	|
+Founder Capital=
+	400000
+	~	USD
+	~	Cash the founders and friends put in at the start.
+	|
+Round Width=
+	1
+	~	month
+	~	Funds of a round arrive over one month.
+	|
+Seed Amount=
+	1000000
+	~	USD
+	~	
+	|
+Seed Time=
+	6
+	~	month
+	~	
+	|
+Series A Amount=
+	0
+	~	USD
+	~	
+	|
+Series A Time=
+	24
+	~	month
+	~	
+	|
+Equity Raised=
+	Seed Amount / Round Width * PULSE(Seed Time, Round Width) + Series A Amount / Round Width * PULSE(Series A Time, Round Width)
+	~	USD/month
+	~	
+	|
+Cash Sales=
+	Revenue
+	~	USD/month
+	~	T(Cash+)
+	|
+Revenue Earned=
+	Revenue
+	~	USD/month
+	~	T(RE+)
+	|
+Cash Expenses=
+	Operating Expenses
+	~	USD/month
+	~	T(Cash-)
+	|
+Expenses Recognised=
+	Operating Expenses
+	~	USD/month
+	~	T(RE-)
+	|
+Cash from Investors=
+	Equity Raised
+	~	USD/month
+	~	T(Cash+)
+	|
+Capital Issued=
+	Equity Raised
+	~	USD/month
+	~	T(Paid-in Capital+)
+	|
+Cash= INTEG(
+	Cash Sales + Cash from Investors - Cash Expenses,
+	Founder Capital)
+	~	USD
+	~	
+	|
+Paid in Capital= INTEG(
+	Capital Issued,
+	Founder Capital)
+	~	USD
+	~	Equity put in by founders and investors.
+	|
+Retained Earnings= INTEG(
+	Revenue Earned - Expenses Recognised,
+	0)
+	~	USD
+	~	Accumulated profit or loss.
+	|
+Total Assets=
+	Cash
+	~	USD
+	~	
+	|
+Total Liabilities and Equity=
+	Paid in Capital + Retained Earnings
+	~	USD
+	~	The start-up has no debt in this model.
+	|
+Balance Gap=
+	Total Assets - Total Liabilities and Equity
+	~	USD
+	~	Must be zero at every step: the balance sheet balances.
+	|
+Net Income=
+	Revenue Earned - Expenses Recognised
+	~	USD/month
+	~	
+	|
+Net Cash Flow=
+	Cash Sales - Cash Expenses
+	~	USD/month
+	~	Operating cash flow, before funding.
+	|
+Burn Rate=
+	MAX(0, -Net Cash Flow)
+	~	USD/month
+	~	
+	|
+Runway=
+	IF THEN ELSE(Burn Rate > 0, Cash / MAX(Burn Rate, 1), 99)
+	~	month
+	~	Months of cash left at the current burn.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 36 ~ month ~ |
+TIME STEP = 0.125 ~ month ~ |
+SAVEPER = 0.125 ~ month ~ |

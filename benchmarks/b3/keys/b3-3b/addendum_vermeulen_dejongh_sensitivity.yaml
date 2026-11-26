@@ -1,0 +1,115 @@
+# Addendum key, case B3-3b. Vermeulen and de Jongh, "'Dynamics of Growth in a Finite World' - A comprehensive sensitivity analysis", printed pp. 133-145.
+# Text read from papers/vermeulen_dejongh_world3_sensitivity.txt. The numerical Tables 1-4 (printed pp. 139-144) are garbled OCR scans:
+# no numeric value is recorded from them; only statements in the running text. Pages 139-145 (tables and figures) are unreadable in the text layer.
+- case: B3-3b
+  finding: "Method: normalised sensitivity functions (partial derivatives of the 29 state variables with respect to 38 parameters, initial conditions, and 37 table functions) computed by integrating the linear sensitivity differential equations alongside the model; normalised values give the approximate percentage change in a state variable for a one per cent change in the parameter."
+  type: core_structure
+  value: "29 state variables; 38 parameters; 37 table functions; 1 per cent perturbation (limiting case epsilon to 0)"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 133-134, Sections Mathematical Structure and Sensitivity Analysis, equations (1)-(8)"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO, 149 equations, rectangular integration step 0.5 year)"
+
+- case: B3-3b
+  finding: "Numerical method: the original single-precision rectangular integration (dt = 0.5 year) made the sensitivity functions diverge; results agreed with experimental sensitivity calculations only after rewriting in double precision with a fourth-order variable-step Runge-Kutta routine, whose World3 reference solution closely matches the Meadows version."
+  type: core_structure
+  value: "double precision, fourth-order variable-step Runge-Kutta (vs rectangular dt 0.5 year)"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 134, Section Sensitivity Analysis"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO, rectangular integration step 0.5 year)"
+
+- case: B3-3b
+  finding: "Initial-condition sensitivity: of all initial-condition sensitivity maxima only those in Table 1 exceeded unity; the state variable Labour Utilization Fraction Delayed (LUFD) is the most sensitive to small initial-condition perturbations."
+  type: leverage_parameter
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 134-135, Section Initial Condition Sensitivity, Table 1"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Most influential parameter: Fraction of Industrial output Allocated to Consumption (FIOAC) is the most influential parameter in the system; ICOR and ALIC, also in the Capital Sector, follow closely."
+  type: leverage_parameter
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 135, Section Parameter Sensitivity, Table 2"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "The state variable LUFD is the one most sensitive to small variations in the parameters (as for initial conditions)."
+  type: leverage_parameter
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 135, Section Parameter Sensitivity, Table 2"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Least influential parameters: the parameters in the Agriculture, Resources and Pollution Sectors are relatively uninfluential."
+  type: leverage_parameter
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 135, Section Parameter Sensitivity, Table 2"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Most influential table function: Capital Utilization Fraction (CUF) in the Capital Sector is the most influential of all table functions; the Population Sector table functions FRSN, SFSN and CMPLE are next in line; LUFD is again the state variable most sensitive to table-function changes."
+  type: leverage_parameter
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 135-136, Section Table Function Sensitivity, Table 3"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Perturbation test 1 (Fig. 1): changing in 1980 ICOR up 10%, ALIC down 10%, FIOAC up 10%, and every output of the CUF table down 10% of its 1980 value avoids the population collapse of the Reference Run, at the cost of dramatically reduced industrial output per capita; nonrenewable resources remaining are more than double the Reference Run and persistent pollution stays manageable. Opposite 10% changes give results more disastrous than the Reference Run."
+  type: leverage_parameter
+  value: "ICOR +10%, ALIC -10%, FIOAC +10%, CUF table -10% (in 1980); remaining NR more than double the Reference Run"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 135-136, Section Implications of the Sensitivity Analysis, Fig. 1"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO, rectangular integration dt 0.5 year)"
+
+- case: B3-3b
+  finding: "The population collapse can be avoided by changing only economic parameters; no manipulation tried prevented collapse without simultaneously dramatically reducing world economic growth. The changes are within the accuracy limits of the technical report (Meadows ran ICOR down and up by 33 1/3 per cent)."
+  type: policy
+  value: "ICOR varied by 33 1/3 per cent in two Meadows runs"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 135-136, Section Implications of the Sensitivity Analysis"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Perturbation test 2 (Fig. 2): 2% changes in 1900 of LEN up, RLT down, DCFSN up (Population); ICOR up, ALIC down, FIOAC up, SCOR up, CUF down (Capital); ILF down, LFH down, LYF down (Agriculture); table functions IMP up, LMHS up, IMF up, FCE down, CMPLE up, FRSN up, SFSN up avoid the population collapse, accompanied by a significant reduction in world industrial output. Opposite 2% changes give the opposing result. (Fig. 3: 5% changes give a completely unrealistic outcome.)"
+  type: leverage_parameter
+  value: "2% perturbation (Fig. 2); 5% perturbation (Fig. 3); parameters LEN, RLT, DCFSN, ICOR, ALIC, FIOAC, SCOR, CUF, ILF, LFH, LYF; tables IMP, LMHS, IMF, FCE, CMPLE, FRSN, SFSN"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 136, Section Implications, Figs. 2 and 3"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Conclusion on Meadows conclusion 2 (inevitable decline of industry and population): not supported; the same model gives qualitatively very different results if only some parameters and table functions are changed by as little as two per cent each. Small perturbations in one part produce much bigger changes in others, so the model is dynamically unstable in this sense."
+  type: behaviour
+  value: "2 per cent perturbations"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 136, Section Implications"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"
+
+- case: B3-3b
+  finding: "Equilibrium run (Meadows run 7-28), sensitivity started in 1990 because the right-hand sides are continuously differentiable only after 1990 (analysis interval 1990-2100): only the Capital Sector table function CUF together with Population Sector table functions and parameters are important; the table function Fertility Control Effectiveness (FCE) is the most influential of all."
+  type: leverage_parameter
+  phase: "1990-2100"
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 136, Section Equilibrium through Discrete Policy Changes, Table 4"
+  version: "World3 equilibrium run 7-28 of the Meadows technical report (p. 543), DYNAMO"
+
+- case: B3-3b
+  finding: "Equilibrium-run perturbation (Figs. 4 and 5): 5% (Fig. 4) and 10% (Fig. 5) changes in 1990 of Population Sector parameters RLT and DCFS (up), table functions FRSN, SFSN, CMPLE up and FCE down, and Capital Sector table function CUF up give dramatic changes in world population and pollution although industrial output per capita changes very little; Meadows conclusion 3 (overshoot and decline avoidable by major change of values) is judged even less firmly based than conclusion 2."
+  type: policy
+  value: "5% (Fig. 4) and 10% (Fig. 5) perturbations in 1990; parameters RLT, DCFS; tables FRSN, SFSN, CMPLE, FCE, CUF"
+  qualitative: false
+  digitised: false
+  source: "Vermeulen and de Jongh, p. 137, Section Equilibrium through Discrete Policy Changes, Figs. 4 and 5"
+  version: "World3 equilibrium run 7-28 of the Meadows technical report, DYNAMO"
+
+- case: B3-3b
+  finding: "Overall conclusion: the model is very sensitive to small perturbations; qualitatively different results (e.g. avoidance of population collapse) follow from a combination of small changes. If the model is a reasonable portrayal, the system can be controlled by small pressures on the right parameters."
+  type: behaviour
+  qualitative: true
+  source: "Vermeulen and de Jongh, p. 137, Section Conclusion (and Abstract, p. 133)"
+  version: "World3 Reference Run, Meadows et al. technical report (DYNAMO)"

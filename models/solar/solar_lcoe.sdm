@@ -1,0 +1,902 @@
+{
+  "title": "Solar PV levelised cost",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Capex",
+      "kind": "Constant",
+      "equation": "700",
+      "units": "EUR/kWp",
+      "comment": "Installed cost per kWp (Fraunhofer ISE 2024, southern Germany)",
+      "pos": [
+        140.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "OM",
+      "kind": "Constant",
+      "equation": "13.3",
+      "units": "EUR/(kWp*Year)",
+      "comment": "Operation and maintenance cost per kWp and year",
+      "pos": [
+        140.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        190.0
+      ],
+      "to_pt": [
+        220.0,
+        190.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Yield",
+      "kind": "Constant",
+      "equation": "1280",
+      "units": "kWh/(kWp*Year)",
+      "comment": "Energy yield per kWp and year in the first year",
+      "pos": [
+        140.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        280.0
+      ],
+      "to_pt": [
+        220.0,
+        280.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Degradation",
+      "kind": "Constant",
+      "equation": "0.0025",
+      "units": "dmnl",
+      "comment": "Fraction of output lost each year",
+      "pos": [
+        140.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        370.0
+      ],
+      "to_pt": [
+        220.0,
+        370.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Debt Share",
+      "kind": "Constant",
+      "equation": "0.8",
+      "units": "dmnl",
+      "comment": "Share of the investment financed by debt",
+      "pos": [
+        140.0,
+        460.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        460.0
+      ],
+      "to_pt": [
+        220.0,
+        460.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Cost of Debt",
+      "kind": "Constant",
+      "equation": "0.05",
+      "units": "dmnl",
+      "comment": "Nominal interest rate on debt",
+      "pos": [
+        140.0,
+        550.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        550.0
+      ],
+      "to_pt": [
+        220.0,
+        550.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Cost of Equity",
+      "kind": "Constant",
+      "equation": "0.065",
+      "units": "dmnl",
+      "comment": "Nominal return required by equity",
+      "pos": [
+        140.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        640.0
+      ],
+      "to_pt": [
+        220.0,
+        640.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Inflation",
+      "kind": "Constant",
+      "equation": "0.018",
+      "units": "dmnl",
+      "comment": "General inflation per year, to turn the nominal rate into a real one",
+      "pos": [
+        140.0,
+        730.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        730.0
+      ],
+      "to_pt": [
+        220.0,
+        730.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "kWh per MWh",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "kWh/MWh",
+      "comment": "Conversion from EUR per kWh to EUR per MWh",
+      "pos": [
+        140.0,
+        820.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        820.0
+      ],
+      "to_pt": [
+        220.0,
+        820.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Real WACC",
+      "kind": "Aux",
+      "equation": "REAL RATE(WACC(Debt Share, Cost of Debt, Cost of Equity), Inflation)",
+      "units": "dmnl",
+      "comment": "Real weighted average cost of capital: the nominal WACC deflated by inflation",
+      "pos": [
+        340.0,
+        100.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Output",
+      "kind": "Aux",
+      "equation": "Yield * (1 - Degradation)^(Time / Year Length)",
+      "units": "kWh/(kWp*Year)",
+      "comment": "Energy produced in the year, after degradation",
+      "pos": [
+        340.0,
+        190.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        190.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "LCOE",
+      "kind": "Aux",
+      "equation": "LEVELISED(OM, Output, Real WACC, Capex) * kWh per MWh",
+      "units": "EUR/MWh",
+      "comment": "Levelised cost of energy: discounted costs over discounted energy",
+      "pos": [
+        340.0,
+        280.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        280.0
+      ],
+      "to_pt": [
+        420.0,
+        280.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Year Length",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Year",
+      "comment": "Conversion: one Year, the unit that an exponent measured in years is divided by",
+      "pos": [
+        140.0,
+        910.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        910.0
+      ],
+      "to_pt": [
+        220.0,
+        910.0
+      ],
+      "view": 25,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 12,
+      "from": 5,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 6,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 7,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 8,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 3,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 4,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 2,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 21,
+      "from": 16,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 22,
+      "from": 11,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 23,
+      "from": 1,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 24,
+      "from": 9,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 27,
+      "from": 26,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 29.0,
+    "time_step": 1.0,
+    "time_units": "Year",
+    "method": "Euler",
+    "units_scale_values": true
+  },
+  "next_id": 40,
+  "sheets": [
+    {
+      "id": 25,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [
+    {
+      "id": 31,
+      "name": "Conversions",
+      "members": [
+        9,
+        26
+      ],
+      "view": 25,
+      "color": null
+    }
+  ],
+  "modules": [],
+  "scenarios": [
+    {
+      "id": 28,
+      "name": "Fraunhofer ISE 2024",
+      "color": null,
+      "enabled": true,
+      "changes": [
+        {
+          "var": "Capex",
+          "value": "700"
+        },
+        {
+          "var": "OM",
+          "value": "13.3"
+        },
+        {
+          "var": "Yield",
+          "value": "1280"
+        },
+        {
+          "var": "Degradation",
+          "value": "0.0025"
+        },
+        {
+          "var": "Debt Share",
+          "value": "0.8"
+        },
+        {
+          "var": "Cost of Debt",
+          "value": "0.05"
+        },
+        {
+          "var": "Cost of Equity",
+          "value": "0.065"
+        },
+        {
+          "var": "Inflation",
+          "value": "0.018"
+        }
+      ],
+      "notes": "The model's own inputs: southern Germany, 41.10 EUR/MWh."
+    },
+    {
+      "id": 29,
+      "name": "Programme defaults",
+      "color": null,
+      "enabled": true,
+      "changes": [
+        {
+          "var": "Capex",
+          "value": "750"
+        },
+        {
+          "var": "OM",
+          "value": "12"
+        },
+        {
+          "var": "Yield",
+          "value": "1800"
+        },
+        {
+          "var": "Degradation",
+          "value": "0.005"
+        },
+        {
+          "var": "Debt Share",
+          "value": "0.8"
+        },
+        {
+          "var": "Cost of Debt",
+          "value": "0.05"
+        },
+        {
+          "var": "Cost of Equity",
+          "value": "0.08"
+        },
+        {
+          "var": "Inflation",
+          "value": "0.02"
+        }
+      ],
+      "notes": "The default inputs of the programme text: 31.19 USD/MWh (read the currency as USD)."
+    },
+    {
+      "id": 30,
+      "name": "NREL ATB",
+      "color": null,
+      "enabled": true,
+      "changes": [
+        {
+          "var": "Capex",
+          "value": "1430"
+        },
+        {
+          "var": "OM",
+          "value": "24"
+        },
+        {
+          "var": "Yield",
+          "value": "2479.08"
+        },
+        {
+          "var": "Degradation",
+          "value": "0"
+        },
+        {
+          "var": "Debt Share",
+          "value": "0.7"
+        },
+        {
+          "var": "Cost of Debt",
+          "value": "0.051982"
+        },
+        {
+          "var": "Cost of Equity",
+          "value": "0.085"
+        },
+        {
+          "var": "Inflation",
+          "value": "0.025"
+        }
+      ],
+      "notes": "NREL: 41.4332 USD/MWh (read the currency as USD). The cost of debt folds the tax shield in: 0.07 x (1 - 0.2574) = 0.051982."
+    }
+  ],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [
+    {
+      "name": "Fraunhofer ISE 2024 levelised cost",
+      "var": "LCOE",
+      "min": 40.5,
+      "max": 41.5,
+      "when": "Always",
+      "kind": "Bounds",
+      "tolerance": null,
+      "relative": false,
+      "reference": [],
+      "stocks": [],
+      "inflows": [],
+      "outflows": [],
+      "at": 29.0,
+      "source": "Fraunhofer ISE 2024, southern Germany, 700 EUR/kWp"
+    }
+  ],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [
+      {
+        "name": "Capex",
+        "units": "EUR/kWp",
+        "min": 400.0,
+        "max": 1500.0,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "OM",
+        "units": "EUR/(kWp*Year)",
+        "min": 5.0,
+        "max": 30.0,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "Yield",
+        "units": "kWh/(kWp*Year)",
+        "min": 800.0,
+        "max": 1800.0,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "Degradation",
+        "units": "dmnl",
+        "min": 0.0,
+        "max": 0.01,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "Debt Share",
+        "units": "dmnl",
+        "min": 0.0,
+        "max": 0.9,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "Cost of Debt",
+        "units": "dmnl",
+        "min": 0.02,
+        "max": 0.1,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "Cost of Equity",
+        "units": "dmnl",
+        "min": 0.04,
+        "max": 0.15,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      },
+      {
+        "name": "Inflation",
+        "units": "dmnl",
+        "min": 0.0,
+        "max": 0.05,
+        "default": null,
+        "explanation": "An input of the levelised cost",
+        "group": ""
+      }
+    ],
+    "outputs": [
+      {
+        "variable": "LCOE",
+        "chart": "line",
+        "units": "EUR/MWh",
+        "reference_lines": []
+      }
+    ],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "purpose": {
+    "problem": "What does a kilowatt hour from solar PV cost over the life of the plant, and which inputs move it most?",
+    "kind": "explain a behaviour",
+    "out_of_scope": "Grid effects, curtailment, taxes",
+    "objectives": [
+      {
+        "title": "Reproduce the published cost",
+        "kind": "reach a target",
+        "test": "LCOE in 2024 for southern Germany lies between 40.5 and 41.5 EUR/MWh",
+        "var": "LCOE"
+      }
+    ]
+  }
+}

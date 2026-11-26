@@ -1,0 +1,3 @@
+Name,Initial value,Units,Never negative,Description,Per,Combine,Module
+Stock optimal plan,Opening stock,MB,,Tank stock if the optimal plan is followed.,Tank,,Plans / Optimal plan / Tank balance
+Stock current plan,Opening stock,MB,,Tank stock if the current plan (trucks in the plan query) is followed.,Tank,,Plans / Current plan

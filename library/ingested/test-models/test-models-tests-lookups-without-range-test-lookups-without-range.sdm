@@ -1,0 +1,335 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Lookup Linebreak Before Comma",
+      "kind": "Lookup",
+      "equation": "",
+      "units": "",
+      "comment": "This lookup has a line break before the comma.",
+      "pos": [
+        590.0,
+        372.0
+      ],
+      "table": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.25,
+          1.0
+        ],
+        [
+          1.5,
+          0.98
+        ],
+        [
+          1.75,
+          0.9
+        ],
+        [
+          2.0,
+          0.75
+        ],
+        [
+          2.25,
+          0.45
+        ],
+        [
+          2.5,
+          0.25
+        ],
+        [
+          2.75,
+          0.17
+        ],
+        [
+          3.0,
+          0.14
+        ],
+        [
+          3.25,
+          0.12
+        ],
+        [
+          3.5,
+          0.11
+        ],
+        [
+          3.75,
+          0.1
+        ],
+        [
+          4.0,
+          0.1
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "lookup function call",
+      "kind": "Aux",
+      "equation": "lookup function table(Time)",
+      "units": "",
+      "comment": "",
+      "pos": [
+        580.0,
+        206.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "rate",
+      "kind": "Flow",
+      "equation": "lookup function call",
+      "units": "",
+      "comment": "",
+      "pos": [
+        556.0,
+        270.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 4,
+      "from_pt": [
+        456.0,
+        270.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "accumulation",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "",
+      "comment": "",
+      "pos": [
+        676.0,
+        270.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "lookup function table",
+      "kind": "Lookup",
+      "equation": "",
+      "units": "",
+      "comment": "",
+      "pos": [
+        513.0,
+        142.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0
+        ],
+        [
+          15.0,
+          1.0
+        ],
+        [
+          20.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0
+        ],
+        [
+          30.0,
+          -1.0
+        ],
+        [
+          35.0,
+          -1.0
+        ],
+        [
+          40.0,
+          0.0
+        ],
+        [
+          45.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 6,
+      "from": 2,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 7,
+      "from": 5,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 45.0,
+    "time_step": 0.25,
+    "time_units": "Minute",
+    "method": "Euler"
+  },
+  "next_id": 7,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

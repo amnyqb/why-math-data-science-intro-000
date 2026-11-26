@@ -1,0 +1,1160 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 8,
+      "name": "a",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/a.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "a from named xlsx",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/a.xlsx',     'a',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "a from tagged xlsx",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     '?a',     'a',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "a from named xlsx using GET XLS",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET XLS CONSTANTS(     'data/a.xlsx',     'a',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "a from tagged xlsx using GET XLS",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET XLS CONSTANTS(     '?a',     'a',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "b",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/b.csv',     ',',     'b2*'   )] This one uses a lowercase letter in the cell reference (atypical, but valid in Vensim).   ~ :SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "DimB",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "c[B1,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "c[B1,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "c[B2,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        690.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "c[B2,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        880.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "c[B3,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "c[B3,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "d[D1,B1,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "d[D1,B1,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        690.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "d[D1,B2,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        880.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "d[D1,B2,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "d[D1,B3,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "d[D1,B3,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "e[C1,B1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2*'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        690.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "e[C1,B2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2*'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        880.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "e[C1,B3]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2*'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "e[C2,B1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2*'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "e[C2,B2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2*'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "e[C2,B3]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/c.csv',     ',',     'B2*'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        690.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "f[C1,A2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/f.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        880.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "f[C1,A3]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/f.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "f[C2,A2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/f.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "f[C2,A3]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/f.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "g[C1,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/g.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        690.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 37,
+      "name": "g[C1,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/g.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        880.0,
+        770.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "g[C2,C1]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/g.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        120.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 39,
+      "name": "g[C2,C2]",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/g.csv',     ',',     'B2'   )] ~:SUPPLEMENTARY",
+      "pos": [
+        310.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 40,
+      "name": "h",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT CONSTANTS(     'data/h.csv',     ',',     'B5'   )] This csv file has a blank line. The formula will have the correct value   only if SDEverywhere retains blank lines.  ~ :SUPPLEMENTARY",
+      "pos": [
+        500.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 1.0,
+    "time_step": 1.0,
+    "time_units": "",
+    "method": "Euler"
+  },
+  "next_id": 40,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "DimA",
+      "items": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "SubA",
+      "items": [
+        "A2",
+        "A3"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "DimB",
+      "items": [
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 4,
+      "name": "DimC",
+      "items": [
+        "C1",
+        "C2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 5,
+      "name": "From DimC",
+      "items": [
+        "C1",
+        "C2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 6,
+      "name": "To DimC",
+      "items": [
+        "C1",
+        "C2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 7,
+      "name": "DimD",
+      "items": [
+        "D1",
+        "D2"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

@@ -1,0 +1,5 @@
+benchmarks/b3/answer_keys/README.md
+benchmarks/b3/answer_key.py
+benchmarks/b3/answer_keys/b2-2-market-growth.yaml  (format example only)
+benchmarks/b3/papers/TO_FETCH.md  (listed by glob, not opened)
+benchmarks/b3/papers/thissen1978.txt  (read in the main checkout at /Users/amin/Documents/Craft Anything/vensimple/app/benchmarks/b3/papers/; absent from this worktree)

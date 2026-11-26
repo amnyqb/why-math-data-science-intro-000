@@ -1,0 +1,67 @@
+{UTF-8}
+{ Chapter 10: a truck fleet as a three-stage ageing chain (new, mid-life, old). Retired trucks are replaced. The fleet was bought all at once, so retirements and maintenance costs come in echoes. }
+Stage Time=
+	4
+	~	year
+	~	Average years a truck spends in each age class.
+	|
+New Trucks= INTEG(
+	Purchases - Ageing to Mid,
+	300)
+	~	truck
+	~	Trucks up to about 4 years old.
+	|
+Ageing to Mid=
+	New Trucks / Stage Time
+	~	truck/year
+	~	|
+Mid Trucks= INTEG(
+	Ageing to Mid - Ageing to Old,
+	0)
+	~	truck
+	~	Trucks of about 4 to 8 years.
+	|
+Ageing to Old=
+	Mid Trucks / Stage Time
+	~	truck/year
+	~	|
+Old Trucks= INTEG(
+	Ageing to Old - Retirements,
+	0)
+	~	truck
+	~	Trucks of about 8 years and over.
+	|
+Retirements=
+	Old Trucks / Stage Time
+	~	truck/year
+	~	|
+Purchases=
+	Retirements
+	~	truck/year
+	~	Every retired truck is replaced at once.
+	|
+Fleet=
+	New Trucks + Mid Trucks + Old Trucks
+	~	truck
+	~	|
+Cost New=
+	2
+	~	kUSD/truck/year
+	~	Maintenance cost of a new truck.
+	|
+Cost Mid=
+	6
+	~	kUSD/truck/year
+	~	|
+Cost Old=
+	14
+	~	kUSD/truck/year
+	~	|
+Maintenance Cost=
+	Cost New * New Trucks + Cost Mid * Mid Trucks + Cost Old * Old Trucks
+	~	kUSD/year
+	~	|
+INITIAL TIME = 0 ~ year ~ |
+FINAL TIME = 60 ~ year ~ |
+TIME STEP = 0.0625 ~ year ~ |
+SAVEPER = 0.0625 ~ year ~ |

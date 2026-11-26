@@ -1,0 +1,84 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE G8: an equation with more than three inputs"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "A",
+  "kind": "constant",
+  "equation": "1",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "B",
+  "kind": "constant",
+  "equation": "2",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "C",
+  "kind": "constant",
+  "equation": "3",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "D",
+  "kind": "constant",
+  "equation": "4",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Sum",
+  "kind": "aux",
+  "equation": "A + B + C + D",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "F",
+  "kind": "flow",
+  "equation": "Sum",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "S"
+ }
+]

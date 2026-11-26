@@ -1,0 +1,122 @@
+model,pysd,detail
+FunctionExamples__ALLOCATE_AVAILABLE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__ALLOCATE_BY_PRIORITY,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__ALLOC_P_MARKETP,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DELAY_1_3_N_P,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DELAY_BATCH,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DELAY_CONVEYOR,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DELAY_INFORMATION,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DELAY_MATERIAL,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DELAY_PROFILE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DEMAND_AT_PRICE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DEPRECIATE_BY_SCHEDULE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DEPRECIATE_STRAIGHTLINE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__DERIVN,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__ELMCOUNT,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__FACTORIAL,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__FIND_ZERO,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__FORECAST,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GAMMA_LN,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GET_DATA_AT_TIME,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GET_DATA_BETWEEN_TIMES,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GET_DATA_stats,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GET_DIRECT_SUBSCRIPT,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GET_TIME_VALUE,fails,NotImplementedError: 'relativeto=1' not implemented...
+FunctionExamples__GET_VDF_CONSTANTS_DATA_LOOKUPS,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__GET_VDF_CONSTANTS_DATA_LOOKUPS_ss_,fails,"ParseError: Rule 'excelLookup' didn't match at 'GET VDF LOOKUPS('vdf' (line 1, column 3)."
+FunctionExamples__GET_XLS_LOOKUPS_ss_,fails,FileNotFoundError: _ext_lookup_horizontal_lookup
+FunctionExamples__GET_XLS_SUBSCRIPT,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__INTERNAL_RATE_OF_RETURN,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__INVERT_MATRIX,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__LOOKUP_functions,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__MESSAGE,fails,KeyError: <class 'str'>
+FunctionExamples__MESSAGE_SAMPLE_IF_TRUE,fails,KeyError: <class 'str'>
+FunctionExamples__NET_PRESENT_VALUE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__NPV,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__NPVE,fails,NotImplementedError: Not implemented function 'npve'
+FunctionExamples__PROD,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__QUANTUM,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__QUEUE_ATTRIB_functions,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__QUEUE_functions,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__RANDOM_functions,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__REINITIAL,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__SAMPLE_IF_TRUE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__SHIFT_IF_TRUE,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__SIMULTANEOUS,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__SINTEG,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__SMOOTH_1_3_N,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__SUM,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__TABBED_ARRAY,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__TIME_BASE,fails,NotImplementedError: Not implemented function 'time_base'
+FunctionExamples__VECTOR_ELM_MAP,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__VECTOR_LOOKUP,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__VECTOR_RANK_REORDER_SORT_ORDER,fails,NotImplementedError: Not implemented function 'vector_elm_map'
+FunctionExamples__VECTOR_SELECT,fails,KeyError: 'task'
+FunctionExamples__VMAX_VMIN,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ''https://www.vensim.' (line 1, column 14)."
+FunctionExamples__XIDZ_ZIDZ,runs,"12 variables, 41 times"
+FunctionExamples__X_IF_MISSING,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 30)."
+FunctionExamples__datetimefunctions,fails,NotImplementedError: Not implemented function 'exceldateserial'
+ModelGuide__3PROJ__PROJECT,runs,"48 variables, 385 times"
+ModelGuide__7FIN__FINANC01,fails,NotImplementedError: Not implemented function 'npv'
+ModelGuide__7FIN__FINANC02,fails,NotImplementedError: Not implemented function 'npv'
+ModelGuide__8OSC__THRMST2,runs,"15 variables, 1025 times"
+ModelGuide__9discret__batch2,fails,NotImplementedError: Not implemented function 'delay_batch'
+ModelGuide__9discret__convey1,fails,ValueError: _hardcodedlookup_detailed_conveyor_profile
+ModelGuide__9discret__convey2,fails,TypeError: initial_profile() missing 1 required positional argument: 'x'
+ModelGuide__9discret__convey3,fails,TypeError: initial_profile() missing 1 required positional argument: 'x'
+ModelGuide__9discret__convey4,fails,TypeError: flat() missing 1 required positional argument: 'x'
+ModelGuide__9discret__delay1,fails,NotImplementedError: Not implemented function 'delay_information'
+ModelGuide__9discret__delay2,fails,TypeError: flat() missing 1 required positional argument: 'x'
+ModelGuide__9discret__discon,runs,"20 variables, 3201 times"
+ModelGuide__9discret__queue2,fails,RecursionError: maximum recursion depth exceeded
+ModelGuide__9discret__queue4,fails,RecursionError: maximum recursion depth exceeded
+Molecules__a8prod2,fails,NameError: name 'xr' is not defined
+Molecules__b3sched,fails,KeyError: 'workforce'
+Molecules__untitled,runs,"5 variables, 101 times"
+OptSensi__ExtendedPayoff__normal-estimate,fails,ValueError: data_point
+OptSensi__ExtendedPayoff__normal-generate,runs,"19 variables, 101 times"
+OptSensi__MCMC__normal-bivar,runs,"16 variables, 2 times"
+OptSensi__SimulatedAnnealing__rastrigin3,runs,"29 variables, 2 times"
+Sample__BPR__BPR0,runs,"11 variables, 101 times"
+Sample__BPR__BPR1,runs,"12 variables, 101 times"
+Sample__EXTRA__AGE,runs,"26 variables, 101 times"
+Sample__EXTRA__AGEMODEL,runs,"26 variables, 101 times"
+Sample__EXTRA__BALL,runs,"14 variables, 12 times"
+Sample__EXTRA__BALLMODEL,runs,"14 variables, 12 times"
+Sample__EXTRA__NEP4SIMU,fails,"IncompleteParseError: Rule 'expr_type' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' { + 9*RAMP(1/(FINAL' (line 1, column 4)."
+Sample__EXTRA__NEPHRON5,fails,RecursionError: maximum recursion depth exceeded
+Sample__EXTRA__POPPYR,fails,NotImplementedError: Not implemented function 'shift_if_true'
+Sample__EXTRA__PROJ,runs,"54 variables, 438 times"
+Sample__EXTRA__TUBS,fails,RecursionError: maximum recursion depth exceeded
+Sample__FINANCE__FINANCE,fails,NotImplementedError: Not implemented function 'npv'
+Sample__MAINT1__MAINT1,fails,KeyError: 'avg_soft_faults'
+Sample__MPROJ3__MPROJ3,fails,"IncompleteParseError: Rule 'expr_type' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with '( MAX(0,rep work rem' (line 1, column 15)."
+Sample__MPROJECT__MPROJ3,fails,"IncompleteParseError: Rule 'expr_type' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with '( MAX(0,rep work rem' (line 1, column 15)."
+Sample__Sub-Model__Market_model,fails,KeyError: 'products'
+Sample__VENAPP__change,fails,KeyError: <class 'str'>
+Sample__VENAPP__change__change,fails,KeyError: <class 'str'>
+Sample__VENAPP__flicker,runs,"4 variables, 101 times"
+Sample__VENAPP__flicker__flicker,runs,"4 variables, 101 times"
+Sample__VENAPP__mplayer,runs,"27 variables, 1001 times"
+UserGuide__CHAP04__COMPLETE__PROJECT,fails,"ParseError: Rule 'expr_type' didn't match at '' (line 1, column 1)."
+UserGuide__CHAP05__COMPLETE__CUSTOMER,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__CHAP07__Complete__price1,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__CHAP11__HOUSES,fails,"ParseError: Rule 'expr_type' didn't match at '' (line 1, column 1)."
+UserGuide__CHAP16__CFC,fails,RecursionError: maximum recursion depth exceeded
+UserGuide__CHAP17__CFC,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__CHAP17__COMPLETE__PROJ2,runs,"23 variables, 801 times"
+UserGuide__CHAP17__COMPLETE__PROJ3,runs,"37 variables, 801 times"
+UserGuide__CHAP18__COMPLETE__PROJ2,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__CHAP18__COMPLETE__PROJ3,runs,"37 variables, 801 times"
+UserGuide__CHAP18__POLICY__COMPLETE__STOCK,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 7)."
+UserGuide__CHAP18__POLICY__STOCK,fails,"ParseError: Rule 'keyword' didn't match at '' (line 1, column 7)."
+UserGuide__CHAP19__POLICY__COMPLETE__STOCK,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__CHAP19__POLICY__STOCK,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__chap20__complete__MentalSimulation02,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+UserGuide__chap20__complete__repair01,fails,"IncompleteParseError: Rule 'entry' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with ' 'https://www.vensim' (line 1, column 15)."
+VensimDemo__BPR__BPR0,runs,"11 variables, 101 times"
+VensimDemo__BPR__BPR1,runs,"12 variables, 101 times"
+VensimDemo__FINANCE__FINANCE,fails,NotImplementedError: Not implemented function 'npv'
+VensimDemo__INTRO,runs,"19 variables, 101 times"
+VensimDemo__MPROJECT__MPROJ3,fails,"IncompleteParseError: Rule 'expr_type' matched in its entirety, but it didn't consume all the text. The non-matching portion of the text begins with '( MAX(0,rep work rem' (line 1, column 15)."
+VensimDemo__WRLD3-03__WRLD3-03,runs,"260 variables, 401 times"

@@ -1,0 +1,570 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Base Sales",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "kSAR/month",
+      "comment": "",
+      "pos": [
+        30.0,
+        95.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Sales Growth",
+      "kind": "Constant",
+      "equation": "120",
+      "units": "kSAR/month/month",
+      "comment": "Sales rise by 120 kSAR a month every month from month 6 to month 30.",
+      "pos": [
+        30.0,
+        40.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Sales",
+      "kind": "Flow",
+      "equation": "Base Sales + RAMP(Sales Growth, 6, 30)",
+      "units": "kSAR/month",
+      "comment": "",
+      "pos": [
+        120.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 8,
+      "from_pt": [
+        20.0,
+        200.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Cost Ratio",
+      "kind": "Constant",
+      "equation": "0.92",
+      "units": "dmnl",
+      "comment": "Costs are 92% of sales: an 8% margin.",
+      "pos": [
+        600.0,
+        80.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Payments",
+      "kind": "Flow",
+      "equation": "Sales * Cost Ratio",
+      "units": "kSAR/month",
+      "comment": "Suppliers and staff are paid in the month the sale is made.",
+      "pos": [
+        640.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 9,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        740.0,
+        200.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Collection Time",
+      "kind": "Constant",
+      "equation": "2.5",
+      "units": "month",
+      "comment": "Average time customers take to pay (days sales outstanding of about 75 days).",
+      "pos": [
+        380.0,
+        85.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Collections",
+      "kind": "Flow",
+      "equation": "Receivables / Collection Time",
+      "units": "kSAR/month",
+      "comment": "",
+      "pos": [
+        380.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 8,
+      "to": 9,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Receivables",
+      "kind": "Stock",
+      "equation": "2500",
+      "units": "kSAR",
+      "comment": "Starts in balance: two and a half months of base sales.",
+      "pos": [
+        250.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Cash",
+      "kind": "Stock",
+      "equation": "500",
+      "units": "kSAR",
+      "comment": "",
+      "pos": [
+        510.0,
+        200.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Profit",
+      "kind": "Flow",
+      "equation": "Sales - Payments",
+      "units": "kSAR/month",
+      "comment": "Accounting profit per month.",
+      "pos": [
+        380.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 11,
+      "from_pt": [
+        250.0,
+        370.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Cumulative Profit",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "kSAR",
+      "comment": "Accounting profit: recognised when the sale is made, not when cash arrives.",
+      "pos": [
+        510.0,
+        370.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 20,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 12,
+      "from": 1,
+      "to": 3,
+      "bend": 12.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 2,
+      "to": 3,
+      "bend": -18.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 14,
+      "from": 3,
+      "to": 5,
+      "bend": -150.0,
+      "polarity": "+",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 4,
+      "to": 5,
+      "bend": -14.0,
+      "polarity": "+",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 8,
+      "to": 7,
+      "bend": 40.0,
+      "polarity": "+",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 6,
+      "to": 7,
+      "bend": 0.1,
+      "polarity": "-",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 3,
+      "to": 10,
+      "bend": 30.0,
+      "polarity": "+",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 5,
+      "to": 10,
+      "bend": -8.0,
+      "polarity": "-",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 48.0,
+    "time_step": 0.0625,
+    "time_units": "month",
+    "method": "Euler"
+  },
+  "next_id": 20,
+  "sheets": [
+    {
+      "id": 20,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "Figure 4.3  Growing broke: sales become receivables, receivables become cash after two and a half months, costs leave at once.",
+      "source": "Model ch01-cash, Flowcanvas"
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

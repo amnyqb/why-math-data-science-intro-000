@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="368.503937pt" height="226.771654pt" viewBox="0 0 368.503937 226.771654" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 226.771654 
+L 368.503937 226.771654 
+L 368.503937 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 109.0925 210.248504 
+L 358.783937 210.248504 
+L 358.783937 49.46885 
+L 109.0925 49.46885 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p775ef0686e)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAABBAAAAKeCAYAAAAcD+hiAAAQgElEQVR4nO3aoUoEYRiGUded5MVYNJnEJngv3qRNm2DxEkRWbIuwa3UxPOEPMzDntIEv/Ex8eDcfn7vjGQDAH9N2638AACfOTz8BAAAA/hMQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAAAQEAAAAIBxFggAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQpv3+p68AgFWZLrZzPwEAWBgLBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAACAgAAADAOAsEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAICAAAAMA4CwQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIE2H46GvAAAAgFWzQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAAAgIAAAAADjLBAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAACAgAAAAAOMsEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAANL09PzWVwDAqtzdXM79BABgYSwQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAAAgIAAAAwzgIBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAAACAgAAADDOAgEAAABIAgIAAACQBAQAAAAgCQgAAABAml5e3/sKAFiV+9vruZ8AACyMBQIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAICAAAAAA4ywQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEib3df3sc8AgDW5enic+wkAwMJYIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAAAAAQEAAAAYZ4EAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAAABAQAAABhngQAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAElAAAAAAJKAAAAAACQBAQAAAEgCAgAAAJAEBAAAACAJCAAAAEASEAAAAIAkIAAAAABJQAAAAACSgAAAAAAkAQEAAABIAgIAAACQBAQAAAAgCQgAAABAEhAAAACAJCAAAAAASUAAAAAAkoAAAAAAJAEBAAAASAICAAAAkAQEAAAAIAkIAAAAQBIQAAAAgCQgAAAAAGflF0bsGhDBYiabAAAAAElFTkSuQmCC" id="image30d183d9ed" transform="scale(1 -1) translate(0 -160.8)" x="109.2" y="-49.411654" width="249.6" height="160.8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #6b7280" x="171.515359" y="43.25535" transform="rotate(-0 171.515359 43.25535)">Inventory trough</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #6b7280" x="296.361078" y="43.25535" transform="rotate(-0 296.361078 43.25535)">Workforce peak</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_3">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: end; fill: #6b7280" x="105.5925" y="67.062954" transform="rotate(-0 105.5925 67.062954)">Productivity per Worker</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_4">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: end; fill: #6b7280" x="105.5925" y="93.859563" transform="rotate(-0 105.5925 93.859563)">Desired Inventory</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_5">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: end; fill: #6b7280" x="105.5925" y="120.656172" transform="rotate(-0 105.5925 120.656172)">Demand Step</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_6">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: end; fill: #6b7280" x="105.5925" y="147.452781" transform="rotate(-0 105.5925 147.452781)">Inventory Correction Time</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="text_7">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: end; fill: #6b7280" x="105.5925" y="174.24939" transform="rotate(-0 105.5925 174.24939)">Hiring Time</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="text_8">
+      <text style="font-size: 8.1px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: end; fill: #6b7280" x="105.5925" y="201.045999" transform="rotate(-0 105.5925 201.045999)">Demand Adjustment Time</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="171.515359" y="65.495904" transform="rotate(-0 171.515359 65.495904)">0.00</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="296.361078" y="65.495904" transform="rotate(-0 296.361078 65.495904)">0.98</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #ffffff" x="171.515359" y="92.292513" transform="rotate(-0 171.515359 92.292513)">0.60</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="296.361078" y="92.292513" transform="rotate(-0 296.361078 92.292513)">0.00</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="171.515359" y="119.089122" transform="rotate(-0 171.515359 119.089122)">0.35</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="296.361078" y="119.089122" transform="rotate(-0 296.361078 119.089122)">0.04</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="171.515359" y="145.885731" transform="rotate(-0 171.515359 145.885731)">0.06</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="296.361078" y="145.885731" transform="rotate(-0 296.361078 145.885731)">0.00</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="171.515359" y="172.68234" transform="rotate(-0 171.515359 172.68234)">0.06</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="296.361078" y="172.68234" transform="rotate(-0 296.361078 172.68234)">0.00</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="171.515359" y="199.478949" transform="rotate(-0 171.515359 199.478949)">0.02</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.5px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="296.361078" y="199.478949" transform="rotate(-0 296.361078 199.478949)">0.00</text>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 11.25px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: start; fill: #1a1a1a" x="3.685039" y="13.922717" transform="rotate(-0 3.685039 13.922717)">Which levers matter for which goal</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 7px; font-family: 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'DejaVu Serif', serif; text-anchor: start; fill: #6b7280" x="3.685039" y="223.292795" transform="rotate(-0 3.685039 223.292795)">Source: Library model 07-workforce-what-matters</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p775ef0686e">
+   <rect x="109.0925" y="49.46885" width="249.691437" height="160.779654"/>
+  </clipPath>
+ </defs>
+</svg>

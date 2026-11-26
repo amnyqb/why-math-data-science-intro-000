@@ -1,0 +1,101 @@
+{UTF-8}
+{ Chapter 12: relative achievement (success to the successful). Two product lines share a fixed marketing budget, allocated by recent revenue. }
+Marketing Budget=
+	100
+	~	kUSD/month
+	~	|
+Favouritism=
+	2
+	~	dmnl
+	~	How strongly the budget follows success: 0 equal split, 1 proportional to revenue, 2 more than proportional.
+	|
+Weight A=
+	Perceived Revenue A ^ Favouritism
+	~	dmnl
+	~	|
+Weight B=
+	Perceived Revenue B ^ Favouritism
+	~	dmnl
+	~	|
+Share A=
+	Weight A / (Weight A + Weight B)
+	~	dmnl
+	~	Share of the budget given to line A.
+	|
+Marketing A=
+	Marketing Budget * Share A
+	~	kUSD/month
+	~	|
+Marketing B=
+	Marketing Budget * (1 - Share A)
+	~	kUSD/month
+	~	|
+Customers per kUSD=
+	0.5
+	~	customer/kUSD
+	~	Customers won per thousand dollars of marketing.
+	|
+Customer Life=
+	24
+	~	month
+	~	|
+Acquisition A=
+	Marketing A * Customers per kUSD
+	~	customer/month
+	~	|
+Acquisition B=
+	Marketing B * Customers per kUSD
+	~	customer/month
+	~	|
+Churn A=
+	Customers A / Customer Life
+	~	customer/month
+	~	|
+Churn B=
+	Customers B / Customer Life
+	~	customer/month
+	~	|
+Customers A= INTEG(
+	Acquisition A - Churn A,
+	520)
+	~	customer
+	~	|
+Customers B= INTEG(
+	Acquisition B - Churn B,
+	480)
+	~	customer
+	~	|
+Revenue per Customer=
+	1
+	~	kUSD/customer/month
+	~	|
+Revenue A=
+	Customers A * Revenue per Customer
+	~	kUSD/month
+	~	|
+Revenue B=
+	Customers B * Revenue per Customer
+	~	kUSD/month
+	~	|
+Reporting Time=
+	3
+	~	month
+	~	Time for revenue to show in the reports used for budgeting.
+	|
+Perceived Revenue A=
+	SMOOTH(Revenue A, Reporting Time) / Revenue Unit
+	~	dmnl
+	~	|
+Perceived Revenue B=
+	SMOOTH(Revenue B, Reporting Time) / Revenue Unit
+	~	dmnl
+	~	|
+Revenue Unit=
+	1
+	~	kUSD/month
+	~	Makes perceived revenue dimensionless before it is raised to a power.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 96 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

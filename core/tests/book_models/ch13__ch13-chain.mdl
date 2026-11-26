@@ -1,0 +1,239 @@
+{UTF-8}
+Base Demand=
+	100
+	~	cases/week
+	~	Customer demand before the step.
+	|
+
+Step Height=
+	0
+	~	cases/week
+	~	Permanent rise in customer demand.
+	|
+
+Step Time=
+	5
+	~	week
+	~	Week the rise happens.
+	|
+
+Noise Amplitude=
+	0
+	~	cases/week
+	~	Size of random week-to-week variation in customer demand.
+	|
+
+Noise Seed=
+	7
+	~	dmnl
+	~	Seed for the random sequence.
+	|
+
+White Noise=
+	RANDOM NORMAL(-4, 4, 0, 1, Noise Seed)
+	~	dmnl
+	~	Independent standard normal draw each time step.
+	|
+
+Noise Correlation Time=
+	1
+	~	week
+	~	Smoothing that turns white noise into week-to-week variation.
+	|
+
+Demand Noise=
+	SMOOTH(White Noise, Noise Correlation Time)
+	~	dmnl
+	~	Autocorrelated noise.
+	|
+
+Customer Demand=
+	MAX(0, Base Demand + STEP(Step Height, Step Time) + Noise Amplitude * Demand Noise)
+	~	cases/week
+	~	Consumer purchases at the retailer.
+	|
+
+Desired Inventory=
+	400
+	~	cases
+	~	Net inventory each echelon aims to hold.
+	|
+
+Supply Delay=
+	4
+	~	week
+	~	Average time from placing an order to receiving the goods.
+	|
+
+Adjustment Time=
+	4
+	~	week
+	~	Time over which inventory and supply line gaps are corrected.
+	|
+
+Supply Line Weight=
+	0
+	~	dmnl
+	~	Fraction of the supply line gap counted in orders (beta).
+	|
+
+Expectation Time=
+	4
+	~	week
+	~	Smoothing time for expected demand.
+	|
+
+POS Sharing=
+	0
+	~	dmnl
+	~	1: every echelon forecasts from customer demand; 0: from its own incoming orders.
+	|
+
+Retailer Expected Demand=
+	SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Customer Demand, Expectation Time)
+	~	cases/week
+	~	Demand the retailer expects.
+	|
+
+Retailer Net Inventory=
+	INTEG(Retailer Arrivals - Customer Demand, Desired Inventory)
+	~	cases
+	~	Inventory minus backlog; shipments equal incoming orders.
+	|
+
+Retailer Arrivals=
+	DELAY3(Retailer Orders, Supply Delay)
+	~	cases/week
+	~	Goods received.
+	|
+
+Retailer Supply Line=
+	INTEG(Retailer Orders - Retailer Arrivals, Supply Delay * Base Demand)
+	~	cases
+	~	Goods ordered but not yet received.
+	|
+
+Retailer Desired Supply Line=
+	Supply Delay * Retailer Expected Demand
+	~	cases
+	~	Supply line needed to receive expected demand.
+	|
+
+Retailer Orders=
+	MAX(0, Retailer Expected Demand + (Desired Inventory - Retailer Net Inventory + Supply Line Weight * (Retailer Desired Supply Line - Retailer Supply Line)) / Adjustment Time)
+	~	cases/week
+	~	Anchoring and adjustment ordering rule.
+	|
+
+Wholesaler Expected Demand=
+	SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Retailer Orders, Expectation Time)
+	~	cases/week
+	~	Demand the wholesaler expects.
+	|
+
+Wholesaler Net Inventory=
+	INTEG(Wholesaler Arrivals - Retailer Orders, Desired Inventory)
+	~	cases
+	~	Inventory minus backlog; shipments equal incoming orders.
+	|
+
+Wholesaler Arrivals=
+	DELAY3(Wholesaler Orders, Supply Delay)
+	~	cases/week
+	~	Goods received.
+	|
+
+Wholesaler Supply Line=
+	INTEG(Wholesaler Orders - Wholesaler Arrivals, Supply Delay * Base Demand)
+	~	cases
+	~	Goods ordered but not yet received.
+	|
+
+Wholesaler Desired Supply Line=
+	Supply Delay * Wholesaler Expected Demand
+	~	cases
+	~	Supply line needed to receive expected demand.
+	|
+
+Wholesaler Orders=
+	MAX(0, Wholesaler Expected Demand + (Desired Inventory - Wholesaler Net Inventory + Supply Line Weight * (Wholesaler Desired Supply Line - Wholesaler Supply Line)) / Adjustment Time)
+	~	cases/week
+	~	Anchoring and adjustment ordering rule.
+	|
+
+Distributor Expected Demand=
+	SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Wholesaler Orders, Expectation Time)
+	~	cases/week
+	~	Demand the distributor expects.
+	|
+
+Distributor Net Inventory=
+	INTEG(Distributor Arrivals - Wholesaler Orders, Desired Inventory)
+	~	cases
+	~	Inventory minus backlog; shipments equal incoming orders.
+	|
+
+Distributor Arrivals=
+	DELAY3(Distributor Orders, Supply Delay)
+	~	cases/week
+	~	Goods received.
+	|
+
+Distributor Supply Line=
+	INTEG(Distributor Orders - Distributor Arrivals, Supply Delay * Base Demand)
+	~	cases
+	~	Goods ordered but not yet received.
+	|
+
+Distributor Desired Supply Line=
+	Supply Delay * Distributor Expected Demand
+	~	cases
+	~	Supply line needed to receive expected demand.
+	|
+
+Distributor Orders=
+	MAX(0, Distributor Expected Demand + (Desired Inventory - Distributor Net Inventory + Supply Line Weight * (Distributor Desired Supply Line - Distributor Supply Line)) / Adjustment Time)
+	~	cases/week
+	~	Anchoring and adjustment ordering rule.
+	|
+
+Factory Expected Demand=
+	SMOOTH(POS Sharing * Customer Demand + (1 - POS Sharing) * Distributor Orders, Expectation Time)
+	~	cases/week
+	~	Demand the factory expects.
+	|
+
+Factory Net Inventory=
+	INTEG(Factory Arrivals - Distributor Orders, Desired Inventory)
+	~	cases
+	~	Inventory minus backlog; shipments equal incoming orders.
+	|
+
+Factory Arrivals=
+	DELAY3(Factory Orders, Supply Delay)
+	~	cases/week
+	~	Goods received.
+	|
+
+Factory Supply Line=
+	INTEG(Factory Orders - Factory Arrivals, Supply Delay * Base Demand)
+	~	cases
+	~	Goods ordered but not yet received.
+	|
+
+Factory Desired Supply Line=
+	Supply Delay * Factory Expected Demand
+	~	cases
+	~	Supply line needed to receive expected demand.
+	|
+
+Factory Orders=
+	MAX(0, Factory Expected Demand + (Desired Inventory - Factory Net Inventory + Supply Line Weight * (Factory Desired Supply Line - Factory Supply Line)) / Adjustment Time)
+	~	cases/week
+	~	Anchoring and adjustment ordering rule.
+	|
+
+FINAL TIME = 200 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |

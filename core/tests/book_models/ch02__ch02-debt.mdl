@@ -1,0 +1,19 @@
+{UTF-8}
+{ Chapter 2: one reinforcing loop. An unpaid supplier balance that compounds at 2% a month. }
+Interest Rate=
+	0.02
+	~	1/month
+	~	|
+Interest=
+	Debt * Interest Rate
+	~	SAR/month
+	~	|
+Debt= INTEG(
+	Interest,
+	100000)
+	~	SAR
+	~	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 72 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

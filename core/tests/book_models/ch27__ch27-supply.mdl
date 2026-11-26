@@ -1,0 +1,90 @@
+{UTF-8}
+{ Chapter 27: a distributor with a four-week supply line, a smoothed demand forecast and a stock-limited shipping rate. Used for ensembles of runs. All stocks start in balance for any parameter values. }
+Base Demand=
+	100
+	~	cases/week
+	~	|
+Demand Step=
+	20
+	~	cases/week
+	~	Rise in demand at week 5.
+	|
+Demand=
+	Base Demand + STEP(Demand Step, 5)
+	~	cases/week
+	~	|
+Forecast Time=
+	4
+	~	week
+	~	Time to smooth demand into the forecast.
+	|
+Forecast= INTEG(
+	(Demand - Forecast) / Forecast Time,
+	Demand)
+	~	cases/week
+	~	Smoothed demand (exponential smoothing written as a stock).
+	|
+Target Cover=
+	4
+	~	week
+	~	Weeks of forecast demand to hold.
+	|
+Target Inventory=
+	Target Cover * Forecast
+	~	cases
+	~	|
+Adjustment Time=
+	2
+	~	week
+	~	|
+Supply Delay=
+	4
+	~	week
+	~	|
+Supply Line Weight=
+	0.3
+	~	dmnl
+	~	|
+Desired Supply Line=
+	Supply Delay * Forecast
+	~	cases
+	~	|
+Orders=
+	MAX(0, Forecast + (Target Inventory - Inventory) / Adjustment Time + Supply Line Weight * (Desired Supply Line - Supply Line) / Adjustment Time)
+	~	cases/week
+	~	|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	Desired Supply Line)
+	~	cases
+	~	|
+Arrivals=
+	Supply Line / Supply Delay
+	~	cases/week
+	~	|
+Stock Ratio=
+	Inventory / Target Inventory
+	~	dmnl
+	~	|
+Fulfilment Table(
+	[(0,0)-(2,1)],(0,0),(0.25,0.55),(0.5,0.85),(0.75,0.97),(1,1),(2,1))
+	~	dmnl
+	~	Share of demand shipped, given the stock against its target.
+	|
+Fulfilment=
+	Fulfilment Table(Stock Ratio)
+	~	dmnl
+	~	|
+Shipments=
+	Demand * Fulfilment
+	~	cases/week
+	~	|
+Inventory= INTEG(
+	Arrivals - Shipments,
+	Target Inventory)
+	~	cases
+	~	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 104 ~ week ~ |
+TIME STEP = 0.125 ~ week ~ |
+SAVEPER = 1 ~ week ~ |

@@ -1,0 +1,79 @@
+{
+  "after": {
+    "levers": 10,
+    "loops": 25,
+    "stocks": 7,
+    "variables": 51
+  },
+  "before": {
+    "levers": 13,
+    "loops": 25,
+    "stocks": 8,
+    "variables": 55
+  },
+  "changes": [
+    {
+      "action": "removed",
+      "reason": "no causal path to any goal output",
+      "step": "prune",
+      "target": "Production Capacity On Order PCOO26"
+    },
+    {
+      "action": "fixed at 60 and removed",
+      "reason": "total Sobol index 0.0000 (largest over goals) is below 0.01",
+      "step": "fix",
+      "target": "Salesman Constant SCT"
+    },
+    {
+      "action": "fixed at 1 and removed",
+      "reason": "total Sobol index 0.0018 (largest over goals) is below 0.01",
+      "step": "fix",
+      "target": "Delivery Rate Adjustment Time DRAT"
+    },
+    {
+      "action": "fixed at 12 and removed",
+      "reason": "total Sobol index 0.0000 (largest over goals) is below 0.01",
+      "step": "fix",
+      "target": "Time for Delivery Delay Traditional TDDT"
+    },
+    {
+      "action": "kept",
+      "reason": "never above 1.0% of the loop scores in the base run; removing a loop is a structural choice, test it with verify_reduction",
+      "step": "loops",
+      "target": "Salesmen S1 > Salesman Switch SSW2 > Orders Booked OB3 > Backlog BL7 > Delivery Delay Indicated DDI12 > increasing company delivery delay > Delivery Delay Recognized by Company DDRC13 > increasing traditional delivery delay > Delivery Delay Taditional DDT19 > Delivery Delay Operating Goal DDOG20 > Delivery Delay Condition DDC21 > Capacity Expansion Fraction > CEFSW23 > Production Capacity Ordering PCO24 > delay3 stage 1 of production capacity receiving pcr25 > delay3 stage 2 of production capacity receiving pcr25 > delay3 stage 3 of production capacity receiving pcr25 > Production Capacity Receiving PCR25 > Production Capacity PC27 > Delivery Rate DR10 > adjusting DRA > Delivery Rate Average DRA11 > Budget B4 > Indicated Salesmen IS5 > Salesmen Hired SH6"
+    },
+    {
+      "action": "kept",
+      "reason": "never above 1.0% of the loop scores in the base run; removing a loop is a structural choice, test it with verify_reduction",
+      "step": "loops",
+      "target": "Salesmen S1 > Salesman Switch SSW2 > Orders Booked OB3 > Backlog BL7 > Delivery Delay Indicated DDI12 > increasing company delivery delay > Delivery Delay Recognized by Company DDRC13 > increasing traditional delivery delay > Delivery Delay Taditional DDT19 > Delivery Delay Operating Goal DDOG20 > Delivery Delay Condition DDC21 > Capacity Expansion Fraction > CEFSW23 > Production Capacity Ordering PCO24 > delay3 stage 1 of production capacity receiving pcr25 > delay3 stage 2 of production capacity receiving pcr25 > delay3 stage 3 of production capacity receiving pcr25 > Production Capacity Receiving PCR25 > Production Capacity PC27 > Delivery Delay Minimum DDM8 > Production Capacity Fraction PCF9 > Delivery Rate DR10 > adjusting DRA > Delivery Rate Average DRA11 > Budget B4 > Indicated Salesmen IS5 > Salesmen Hired SH6"
+    },
+    {
+      "action": "kept",
+      "reason": "never above 1.0% of the loop scores in the base run; removing a loop is a structural choice, test it with verify_reduction",
+      "step": "loops",
+      "target": "Backlog BL7 > Delivery Delay Indicated DDI12 > increasing company delivery delay > Delivery Delay Recognized by Company DDRC13 > increasing traditional delivery delay > Delivery Delay Taditional DDT19 > Delivery Delay Operating Goal DDOG20 > Delivery Delay Condition DDC21 > Capacity Expansion Fraction > CEFSW23 > Production Capacity Ordering PCO24 > delay3 stage 1 of production capacity receiving pcr25 > delay3 stage 2 of production capacity receiving pcr25 > delay3 stage 3 of production capacity receiving pcr25 > Production Capacity Receiving PCR25 > Production Capacity PC27 > Delivery Rate DR10"
+    },
+    {
+      "action": "kept",
+      "reason": "never above 1.0% of the loop scores in the base run; removing a loop is a structural choice, test it with verify_reduction",
+      "step": "loops",
+      "target": "Backlog BL7 > Delivery Delay Indicated DDI12 > increasing company delivery delay > Delivery Delay Recognized by Company DDRC13 > increasing traditional delivery delay > Delivery Delay Taditional DDT19 > Delivery Delay Operating Goal DDOG20 > Delivery Delay Condition DDC21 > Capacity Expansion Fraction > CEFSW23 > Production Capacity Ordering PCO24 > delay3 stage 1 of production capacity receiving pcr25 > delay3 stage 2 of production capacity receiving pcr25 > delay3 stage 3 of production capacity receiving pcr25 > Production Capacity Receiving PCR25 > Production Capacity PC27 > Delivery Delay Minimum DDM8 > Production Capacity Fraction PCF9 > Delivery Rate DR10"
+    },
+    {
+      "action": "kept",
+      "reason": "never above 1.0% of the loop scores in the base run; removing a loop is a structural choice, test it with verify_reduction",
+      "step": "loops",
+      "target": "Delivery Rate DR10 > adjusting DRA > Delivery Rate Average DRA11 > Delivery Delay Indicated DDI12 > increasing company delivery delay > Delivery Delay Recognized by Company DDRC13 > increasing traditional delivery delay > Delivery Delay Taditional DDT19 > Delivery Delay Operating Goal DDOG20 > Delivery Delay Condition DDC21 > Capacity Expansion Fraction > CEFSW23 > Production Capacity Ordering PCO24 > delay3 stage 1 of production capacity receiving pcr25 > delay3 stage 2 of production capacity receiving pcr25 > delay3 stage 3 of production capacity receiving pcr25 > Production Capacity Receiving PCR25 > Production Capacity PC27"
+    },
+    {
+      "action": "kept",
+      "reason": "never above 1.0% of the loop scores in the base run; removing a loop is a structural choice, test it with verify_reduction",
+      "step": "loops",
+      "target": "Delivery Rate DR10 > adjusting DRA > Delivery Rate Average DRA11 > Delivery Delay Indicated DDI12 > increasing company delivery delay > Delivery Delay Recognized by Company DDRC13 > increasing traditional delivery delay > Delivery Delay Taditional DDT19 > Delivery Delay Operating Goal DDOG20 > Delivery Delay Condition DDC21 > Capacity Expansion Fraction > CEFSW23 > Production Capacity Ordering PCO24 > delay3 stage 1 of production capacity receiving pcr25 > delay3 stage 2 of production capacity receiving pcr25 > delay3 stage 3 of production capacity receiving pcr25 > Production Capacity Receiving PCR25 > Production Capacity PC27 > Delivery Delay Minimum DDM8 > Production Capacity Fraction PCF9"
+    }
+  ],
+  "ok": true,
+  "out": "build/mg_F_reduced.sdm",
+  "sobol_converged": false
+}

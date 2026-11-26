@@ -1,0 +1,77 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE X5: a balancing structure that does not settle"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "60"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.25"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Target",
+  "kind": "constant",
+  "equation": "10",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S2",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S1",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget/Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Gap",
+  "kind": "aux",
+  "equation": "Target - S2",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Push",
+  "kind": "flow",
+  "equation": "Gap * 0.5",
+  "units": "widget/Day/Day",
+  "doc": "test",
+  "to": "S1"
+ },
+ {
+  "op": "add_var",
+  "name": "Move",
+  "kind": "flow",
+  "equation": "S1",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "S2"
+ }
+]

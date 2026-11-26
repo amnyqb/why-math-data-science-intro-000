@@ -1,0 +1,44 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE U4: a flow that is not per time"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "F",
+  "kind": "flow",
+  "equation": "2",
+  "units": "widget",
+  "doc": "test",
+  "to": "S"
+ }
+]

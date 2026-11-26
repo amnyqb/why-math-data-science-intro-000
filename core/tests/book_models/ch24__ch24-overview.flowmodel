@@ -1,0 +1,1766 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Base Demand",
+      "kind": "Constant",
+      "equation": "4000",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        575.0,
+        470.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Demand",
+      "kind": "Aux",
+      "equation": "Base Demand * (1 + 0.25 * COS(6.28319 * (Time - 200) / 365))",
+      "units": "m3/day",
+      "comment": "Total demand at the depots.",
+      "pos": [
+        565.0,
+        405.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Expected Demand",
+      "kind": "Aux",
+      "equation": "SMOOTH(Demand, 7)",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        595.0,
+        260.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Port Open",
+      "kind": "Aux",
+      "equation": "1 - STEP(1, 180) + STEP(1, 194)",
+      "units": "dmnl",
+      "comment": "",
+      "pos": [
+        295.0,
+        22.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Shipping Time",
+      "kind": "Constant",
+      "equation": "14",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        400.0,
+        22.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Terminal Cover",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        615.0,
+        62.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Terminal Adjustment Time",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        570.0,
+        22.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Import Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Expected Demand + (Terminal Cover * Expected Demand - Terminal Stock + Shipping Time * Expected Demand - Import Pipeline) / Terminal Adjustment Time)",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        612.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 9,
+      "from_pt": [
+        680.0,
+        110.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Import Pipeline",
+      "kind": "Stock",
+      "equation": "42630",
+      "units": "m3",
+      "comment": "",
+      "pos": [
+        460.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Imports",
+      "kind": "Flow",
+      "equation": "Import Pipeline / Shipping Time * Port Open",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        330.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 9,
+      "to": 11,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Terminal Stock",
+      "kind": "Stock",
+      "equation": "30450",
+      "units": "m3",
+      "comment": "",
+      "pos": [
+        200.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Truck Capacity",
+      "kind": "Constant",
+      "equation": "5040",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        165.0,
+        22.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Minimum Dispatch Time",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        5.0,
+        22.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Available Dispatch",
+      "kind": "Aux",
+      "equation": "MIN(Terminal Stock / Minimum Dispatch Time, Truck Capacity)",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        60.0,
+        160.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Target Dispatch Time",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        300.0,
+        215.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Dispatch",
+      "kind": "Flow",
+      "equation": "MIN(Order Backlog / Target Dispatch Time, Available Dispatch)",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        200.0,
+        220.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 11,
+      "to": 20,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Order Backlog",
+      "kind": "Stock",
+      "equation": "3045",
+      "units": "m3",
+      "comment": "",
+      "pos": [
+        300.0,
+        560.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Orders Filled",
+      "kind": "Flow",
+      "equation": "Dispatch",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        170.0,
+        560.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 17,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        85.0,
+        560.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Transit Time",
+      "kind": "Constant",
+      "equation": "1.2",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        300.0,
+        420.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "In Transit",
+      "kind": "Stock",
+      "equation": "3654",
+      "units": "m3",
+      "comment": "",
+      "pos": [
+        200.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Deliveries",
+      "kind": "Flow",
+      "equation": "In Transit / Transit Time",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        335.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 20,
+      "to": 26,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Days of Cover",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        560.0,
+        715.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Desired Depot Stock",
+      "kind": "Aux",
+      "equation": "Days of Cover * Expected Demand",
+      "units": "m3",
+      "comment": "",
+      "pos": [
+        530.0,
+        650.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Depot Adjustment Time",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        350.0,
+        650.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Depot Orders",
+      "kind": "Flow",
+      "equation": "MAX(0, Expected Demand + (Desired Depot Stock - Depot Stock) / Depot Adjustment Time)",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        420.0,
+        560.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 17,
+      "from_pt": [
+        520.0,
+        560.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Depot Stock",
+      "kind": "Stock",
+      "equation": "15225",
+      "units": "m3",
+      "comment": "",
+      "pos": [
+        470.0,
+        330.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "Minimum Sales Time",
+      "kind": "Constant",
+      "equation": "0.25",
+      "units": "day",
+      "comment": "",
+      "pos": [
+        510.0,
+        525.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "Sales",
+      "kind": "Flow",
+      "equation": "MIN(Demand, Depot Stock / Minimum Sales Time)",
+      "units": "m3/day",
+      "comment": "",
+      "pos": [
+        470.0,
+        430.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 26,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        470.0,
+        490.0
+      ],
+      "view": 58,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 29,
+      "from": 1,
+      "to": 2,
+      "bend": 7.9,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 30,
+      "from": 2,
+      "to": 3,
+      "bend": 17.8,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 31,
+      "from": 3,
+      "to": 8,
+      "bend": 18.1,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 32,
+      "from": 6,
+      "to": 8,
+      "bend": 5.8,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 33,
+      "from": 11,
+      "to": 8,
+      "bend": 60.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 34,
+      "from": 5,
+      "to": 8,
+      "bend": -15.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 35,
+      "from": 9,
+      "to": 8,
+      "bend": -20.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 36,
+      "from": 7,
+      "to": 8,
+      "bend": 11.7,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 9,
+      "to": 10,
+      "bend": 20.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 38,
+      "from": 5,
+      "to": 10,
+      "bend": 13.5,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 39,
+      "from": 4,
+      "to": 10,
+      "bend": 11.4,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 40,
+      "from": 11,
+      "to": 14,
+      "bend": 17.8,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 41,
+      "from": 13,
+      "to": 14,
+      "bend": 17.8,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 42,
+      "from": 12,
+      "to": 14,
+      "bend": 20.8,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 43,
+      "from": 17,
+      "to": 16,
+      "bend": -110.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 44,
+      "from": 15,
+      "to": 16,
+      "bend": 12.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 45,
+      "from": 14,
+      "to": 16,
+      "bend": 18.3,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 46,
+      "from": 16,
+      "to": 18,
+      "bend": 150.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 47,
+      "from": 20,
+      "to": 21,
+      "bend": 16.2,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 48,
+      "from": 19,
+      "to": 21,
+      "bend": 11.6,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 49,
+      "from": 22,
+      "to": 23,
+      "bend": 8.6,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 50,
+      "from": 3,
+      "to": 23,
+      "bend": -50.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 51,
+      "from": 3,
+      "to": 25,
+      "bend": -120.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 52,
+      "from": 23,
+      "to": 25,
+      "bend": 17.1,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 53,
+      "from": 26,
+      "to": 25,
+      "bend": 28.2,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 54,
+      "from": 24,
+      "to": 25,
+      "bend": 13.7,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 55,
+      "from": 2,
+      "to": 28,
+      "bend": 11.8,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 56,
+      "from": 26,
+      "to": 28,
+      "bend": 12.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 57,
+      "from": 27,
+      "to": 28,
+      "bend": 12.4,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 365.0,
+    "time_step": 0.0625,
+    "time_units": "day",
+    "method": "Euler"
+  },
+  "next_id": 146,
+  "sheets": [
+    {
+      "id": 58,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 145,
+      "name": "Causal loops",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 103,
+            "text": "Terminal Stock",
+            "pos": [
+              218.0,
+              230.0
+            ]
+          },
+          {
+            "id": 104,
+            "text": "Import Orders",
+            "pos": [
+              140.0,
+              152.0
+            ]
+          },
+          {
+            "id": 105,
+            "text": "Import Pipeline",
+            "pos": [
+              62.0,
+              230.0
+            ]
+          },
+          {
+            "id": 106,
+            "text": "Imports",
+            "pos": [
+              140.0,
+              308.0
+            ]
+          },
+          {
+            "id": 107,
+            "text": "Available Dispatch",
+            "pos": [
+              320.0,
+              292.0
+            ]
+          },
+          {
+            "id": 108,
+            "text": "Dispatch",
+            "pos": [
+              440.0,
+              230.0
+            ]
+          },
+          {
+            "id": 109,
+            "text": "Idle Trucks",
+            "pos": [
+              405.0,
+              420.0
+            ]
+          },
+          {
+            "id": 110,
+            "text": "In Transit",
+            "pos": [
+              499.7,
+              115.3
+            ]
+          },
+          {
+            "id": 111,
+            "text": "Deliveries",
+            "pos": [
+              660.3,
+              115.3
+            ]
+          },
+          {
+            "id": 112,
+            "text": "Depot Stock",
+            "pos": [
+              720.0,
+              230.0
+            ]
+          },
+          {
+            "id": 113,
+            "text": "Depot Orders",
+            "pos": [
+              660.3,
+              344.7
+            ]
+          },
+          {
+            "id": 114,
+            "text": "Order Backlog",
+            "pos": [
+              499.7,
+              344.7
+            ]
+          },
+          {
+            "id": 115,
+            "text": "Supply Line",
+            "pos": [
+              580.0,
+              242.0
+            ]
+          },
+          {
+            "id": 116,
+            "text": "Port Open",
+            "pos": [
+              140.0,
+              385.0
+            ]
+          },
+          {
+            "id": 117,
+            "text": "Demand",
+            "pos": [
+              742.0,
+              300.0
+            ]
+          },
+          {
+            "id": 118,
+            "text": "Days of Cover",
+            "pos": [
+              685.0,
+              440.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 119,
+            "from": 103,
+            "to": 104,
+            "bend": 22.9,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 120,
+            "from": 104,
+            "to": 105,
+            "bend": 22.9,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 121,
+            "from": 105,
+            "to": 106,
+            "bend": 22.9,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 122,
+            "from": 106,
+            "to": 103,
+            "bend": 22.9,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 123,
+            "from": 103,
+            "to": 107,
+            "bend": 14.3,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 124,
+            "from": 107,
+            "to": 108,
+            "bend": -16.2,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 125,
+            "from": 108,
+            "to": 103,
+            "bend": 48.8,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 126,
+            "from": 108,
+            "to": 109,
+            "bend": 13.5,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 127,
+            "from": 109,
+            "to": 107,
+            "bend": -23.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 128,
+            "from": 108,
+            "to": 110,
+            "bend": -15.8,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 129,
+            "from": 110,
+            "to": 111,
+            "bend": -25.3,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 130,
+            "from": 111,
+            "to": 112,
+            "bend": -15.8,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 131,
+            "from": 112,
+            "to": 113,
+            "bend": -15.8,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 132,
+            "from": 113,
+            "to": 114,
+            "bend": -25.3,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 133,
+            "from": 114,
+            "to": 108,
+            "bend": -15.8,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 134,
+            "from": 114,
+            "to": 115,
+            "bend": 15.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 135,
+            "from": 110,
+            "to": 115,
+            "bend": 15.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 136,
+            "from": 115,
+            "to": 113,
+            "bend": 15.6,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 137,
+            "from": 116,
+            "to": 106,
+            "bend": -15.4,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 138,
+            "from": 117,
+            "to": 112,
+            "bend": 14.7,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 139,
+            "from": 118,
+            "to": 113,
+            "bend": 19.7,
+            "polarity": "+",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 140,
+            "pos": [
+              140.0,
+              230.0
+            ],
+            "reinforcing": false,
+            "label": "B3 Resupply",
+            "clockwise": false
+          },
+          {
+            "id": 141,
+            "pos": [
+              329.0,
+              205.0
+            ],
+            "reinforcing": false,
+            "label": "B2 Drain",
+            "clockwise": false
+          },
+          {
+            "id": 142,
+            "pos": [
+              372.0,
+              325.0
+            ],
+            "reinforcing": false,
+            "label": "B4 Trucks",
+            "clockwise": true
+          },
+          {
+            "id": 143,
+            "pos": [
+              625.0,
+              185.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Depot control",
+            "clockwise": true
+          },
+          {
+            "id": 144,
+            "pos": [
+              580.0,
+              302.0
+            ],
+            "reinforcing": false,
+            "label": "B5 Supply line",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

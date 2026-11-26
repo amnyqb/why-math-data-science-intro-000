@@ -1,0 +1,264 @@
+{UTF-8}
+{ Chapter 16: an integrated project model. The rework cycle of the Prologue, with a deadline, overtime and fatigue,
+  hiring through a rookie-to-veteran ageing chain, and a deadline that may erode. Time in weeks. }
+Project Scope=
+	1000
+	~	tasks
+	~	Tasks in the original scope.
+	|
+Work To Do= INTEG(
+	Scope Change + Rework Release - Correct Work - Flawed Work,
+	Project Scope)
+	~	tasks
+	~	Work in the plan not yet done: original tasks, changes, and rework released back into the plan.
+	|
+Work Done= INTEG(
+	Correct Work,
+	0)
+	~	tasks
+	~	Work done right.
+	|
+Undiscovered Rework= INTEG(
+	Flawed Work - Rework Discovery,
+	0)
+	~	tasks
+	~	Flawed work that still looks finished.
+	|
+Change Size=
+	0
+	~	tasks
+	~	Tasks added by the client's change orders. Scenario "changes": 150.
+	|
+Change Time=
+	30
+	~	week
+	|
+Change Duration=
+	20
+	~	week
+	~	Weeks over which the change orders arrive.
+	|
+Scope Change=
+	Change Size * PULSE(Change Time, Change Duration) / Change Duration
+	~	tasks/week
+	|
+Minimum Task Time=
+	1
+	~	week
+	|
+Progress=
+	MIN(Capacity, Work To Do / Minimum Task Time)
+	~	tasks/week
+	~	Tasks completed each week, right or wrong.
+	|
+Correct Work=
+	Progress * (1 - Error Fraction)
+	~	tasks/week
+	|
+Flawed Work=
+	Progress * Error Fraction
+	~	tasks/week
+	|
+Discovery Time=
+	8
+	~	week
+	~	Average time before a flaw is found. Policy "catch rework early": 3.
+	|
+Rework Discovery=
+	Undiscovered Rework / Discovery Time
+	~	tasks/week
+	|
+Known Rework= INTEG(
+	Rework Discovery - Rework Release,
+	0)
+	~	tasks
+	~	Flaws found but not yet planned back into the work.
+	|
+Rework Planning Time=
+	2
+	~	week
+	|
+Rework Release=
+	Known Rework / Rework Planning Time
+	~	tasks/week
+	|
+Known Work Remaining=
+	Work To Do + Known Rework
+	~	tasks
+	~	What managers can see is left: flawed work that looks finished is not in it.
+	|
+Base Error Fraction=
+	0.2
+	~	dmnl
+	~	Share of a rested veteran team's work that is flawed.
+	|
+Rookie Error Multiplier=
+	2
+	~	dmnl
+	~	A rookie's error rate relative to a veteran's.
+	|
+Experience Effect on Errors=
+	XIDZ(Veterans + Rookie Error Multiplier * Rookies, Veterans + Rookies, 1)
+	~	dmnl
+	~	Average error multiplier of the team, weighted by head count.
+	|
+Fatigue Sensitivity of Errors=
+	2
+	~	dmnl
+	~	Rise in the error multiplier per unit of sustained overtime.
+	|
+Fatigue Effect on Errors=
+	1 + Fatigue Sensitivity of Errors * (Fatigue - 1)
+	~	dmnl
+	|
+Error Fraction=
+	MIN(0.9, Base Error Fraction * Experience Effect on Errors * Fatigue Effect on Errors)
+	~	dmnl
+	|
+Veterans= INTEG(
+	Assimilation,
+	Initial Veterans)
+	~	people
+	|
+Initial Veterans=
+	10
+	~	people
+	|
+Rookies= INTEG(
+	Hiring - Assimilation,
+	0)
+	~	people
+	|
+Assimilation Time=
+	12
+	~	week
+	~	Average time for a rookie to become fully productive.
+	|
+Assimilation=
+	Rookies / Assimilation Time
+	~	people/week
+	|
+Rookie Productivity=
+	0.5
+	~	dmnl
+	~	A rookie's output relative to a veteran's.
+	|
+Mentoring per Rookie=
+	0.25
+	~	dmnl
+	~	Share of a veteran's time each rookie takes up.
+	|
+Effective Staff=
+	MAX(0, Veterans + Rookie Productivity * Rookies - Mentoring per Rookie * Rookies)
+	~	people
+	|
+Productivity=
+	1
+	~	tasks/people/week
+	~	Tasks per veteran per week at normal hours.
+	|
+Fatigue Productivity Loss=
+	0.5
+	~	dmnl
+	~	Fall in productivity per unit of sustained overtime.
+	|
+Fatigue Effect on Productivity=
+	MAX(0.2, 1 - Fatigue Productivity Loss * (Fatigue - 1))
+	~	dmnl
+	|
+Capacity=
+	Effective Staff * Productivity * Overtime * Fatigue Effect on Productivity
+	~	tasks/week
+	|
+Normal Capacity=
+	Effective Staff * Productivity
+	~	tasks/week
+	|
+Deadline= INTEG(
+	Deadline Change,
+	Initial Deadline)
+	~	week
+	~	The scheduled finish date.
+	|
+Initial Deadline=
+	100
+	~	week
+	|
+Deadline Flexibility=
+	0
+	~	dmnl
+	~	0: the deadline is held; 1: it slips towards the expected finish. Policy "let the deadline erode": 1.
+	|
+Deadline Adjustment Time=
+	8
+	~	week
+	|
+Expected Finish=
+	Time + XIDZ(Known Work Remaining, Normal Capacity, 1000)
+	~	week
+	~	When managers expect to finish, from the work they can see and the capacity at normal hours.
+	|
+Deadline Change=
+	Deadline Flexibility * MAX(0, Expected Finish - Deadline) / Deadline Adjustment Time
+	~	dmnl
+	|
+Minimum Time Remaining=
+	4
+	~	week
+	|
+Time Remaining=
+	MAX(Minimum Time Remaining, Deadline - Time)
+	~	week
+	|
+Required Rate=
+	Known Work Remaining / Time Remaining
+	~	tasks/week
+	|
+Schedule Pressure=
+	XIDZ(Required Rate, Normal Capacity, 1)
+	~	dmnl
+	|
+Maximum Overtime=
+	1.4
+	~	dmnl
+	~	Hours worked relative to normal at most. Policy "no overtime": 1.
+	|
+Overtime=
+	MIN(Maximum Overtime, MAX(1, Schedule Pressure))
+	~	dmnl
+	|
+Fatigue Onset Time=
+	6
+	~	week
+	|
+Fatigue=
+	SMOOTH(Overtime, Fatigue Onset Time)
+	~	dmnl
+	~	Sustained overtime: recent hours relative to normal.
+	|
+Desired Staff=
+	Required Rate / Productivity
+	~	people
+	|
+Hiring Time=
+	4
+	~	week
+	|
+Hiring Cutoff=
+	0
+	~	week
+	~	No hiring when fewer weeks than this remain before the deadline. Policy "no late hiring": 30.
+	|
+Hiring Allowed=
+	MAX(0, MIN(1, (Time Remaining - Hiring Cutoff) / Minimum Time Remaining))
+	~	dmnl
+	~	1 while more than the cutoff remains, falling to 0 over four weeks.
+	|
+Hiring=
+	Hiring Allowed * MAX(0, Desired Staff - Veterans - Rookies) / Hiring Time
+	~	people/week
+	|
+INITIAL TIME = 0 ~ week ~ |
+FINAL TIME = 250 ~ week ~ |
+TIME STEP = 0.0625 ~ week ~ |
+SAVEPER = TIME STEP ~ week ~ |

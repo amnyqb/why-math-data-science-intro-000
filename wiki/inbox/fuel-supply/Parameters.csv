@@ -1,0 +1,9 @@
+Name,Value,Units,Min,Max,Description,Per,Combine,Module,Lever
+Target day,25,Day of month,15,30,Every tank should reach its target stock by the end of this day and be held there.,,,Inputs & limits,yes
+Barrels per truck,215,Barrel/Truck,150,300,One truck carries this many barrels (1000 barrels = 1 MB).,,,Inputs & limits,yes
+Capacity,0,MB,0,1000,Tank capacity (average of the plan query).,Tank,,Inputs & limits,
+Max fill,0.9,Fraction,0.3,1,Maximum filling level the power plant allows; it is also the target the optimal plan fills to (Stock_Limits).,Tank,,Inputs & limits,yes
+Min fill,0.85,Fraction,0.2,1,Minimum stock level (SFI); below it a tank is at risk.,Tank,,Inputs & limits,
+Max trucks per day,99999,Truck/Day,0,400,"Most trucks the unloading skids can take in a day (Unloading_Skids). 99999 = no skid data, no limit applied.",Tank,,Inputs & limits,yes
+Ready,1,Yes/No,0,1,"1 when capacity, max fill and stock are known; tanks that are not ready get no optimal plan.",Tank,,Inputs & limits,
+Opening stock,0,MB,0,1000,Actual stock on the as-of date.,Tank,,Inputs & limits,

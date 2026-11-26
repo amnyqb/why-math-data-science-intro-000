@@ -1,0 +1,631 @@
+[
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "100"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "0.125"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Week"
+ },
+ {
+  "op": "set_setting",
+  "key": "method",
+  "value": "euler"
+ },
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "Industrial dynamics: a production-distribution chain"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Inventory",
+  "kind": "stock",
+  "equation": "Cover Time * Initial Demand",
+  "units": "units",
+  "doc": "Goods on hand"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Backlog",
+  "kind": "stock",
+  "equation": "Order Fill Time * Initial Demand",
+  "units": "units",
+  "doc": "Orders received and not yet shipped"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Pipeline",
+  "kind": "stock",
+  "equation": "Retailer Transit Delay * Initial Demand",
+  "units": "units",
+  "doc": "Goods ordered and on the way (in production at the factory)"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Inventory",
+  "kind": "stock",
+  "equation": "Cover Time * Initial Demand",
+  "units": "units",
+  "doc": "Goods on hand"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Backlog",
+  "kind": "stock",
+  "equation": "Order Fill Time * Initial Demand",
+  "units": "units",
+  "doc": "Orders received and not yet shipped"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Pipeline",
+  "kind": "stock",
+  "equation": "Distributor Transit Delay * Initial Demand",
+  "units": "units",
+  "doc": "Goods ordered and on the way (in production at the factory)"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Inventory",
+  "kind": "stock",
+  "equation": "Cover Time * Initial Demand",
+  "units": "units",
+  "doc": "Goods on hand"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Backlog",
+  "kind": "stock",
+  "equation": "Order Fill Time * Initial Demand",
+  "units": "units",
+  "doc": "Orders received and not yet shipped"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Pipeline",
+  "kind": "stock",
+  "equation": "Production Delay * Initial Demand",
+  "units": "units",
+  "doc": "Goods ordered and on the way (in production at the factory)"
+ },
+ {
+  "op": "add_var",
+  "name": "Cumulative Delivered",
+  "kind": "stock",
+  "equation": "0",
+  "units": "units",
+  "doc": "Goods delivered to customers so far"
+ },
+ {
+  "op": "add_var",
+  "name": "Cumulative Starts",
+  "kind": "stock",
+  "equation": "0",
+  "units": "units",
+  "doc": "Production started so far"
+ },
+ {
+  "op": "add_var",
+  "name": "Initial Demand",
+  "kind": "constant",
+  "equation": "100",
+  "units": "units/Week",
+  "doc": "Customer demand before the step"
+ },
+ {
+  "op": "add_var",
+  "name": "Step Size",
+  "kind": "constant",
+  "equation": "10",
+  "units": "units/Week",
+  "doc": "Size of the step in customer demand"
+ },
+ {
+  "op": "add_var",
+  "name": "Step Time",
+  "kind": "constant",
+  "equation": "5",
+  "units": "Week",
+  "doc": "When the step happens"
+ },
+ {
+  "op": "add_var",
+  "name": "Demand Averaging Time",
+  "kind": "constant",
+  "equation": "4",
+  "units": "Week",
+  "doc": "Information delay: time over which each stage smooths the orders it receives"
+ },
+ {
+  "op": "add_var",
+  "name": "Cover Time",
+  "kind": "constant",
+  "equation": "3",
+  "units": "Week",
+  "doc": "Desired inventory, in weeks of expected demand"
+ },
+ {
+  "op": "add_var",
+  "name": "Adjustment Time",
+  "kind": "constant",
+  "equation": "4",
+  "units": "Week",
+  "doc": "Time over which a stage closes gaps in inventory and supply line"
+ },
+ {
+  "op": "add_var",
+  "name": "Supply Line Weight",
+  "kind": "constant",
+  "equation": "0.5",
+  "units": "1",
+  "doc": "How much of the supply-line gap a stage corrects (0 = ignores goods on the way, 1 = full)"
+ },
+ {
+  "op": "add_var",
+  "name": "Order Fill Time",
+  "kind": "constant",
+  "equation": "1",
+  "units": "Week",
+  "doc": "Time to work through the backlog when stock is on hand"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Transit Delay",
+  "kind": "constant",
+  "equation": "2",
+  "units": "Week",
+  "doc": "Material delay, distributor to retailer"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Transit Delay",
+  "kind": "constant",
+  "equation": "3",
+  "units": "Week",
+  "doc": "Material delay, factory to distributor"
+ },
+ {
+  "op": "add_var",
+  "name": "Production Delay",
+  "kind": "constant",
+  "equation": "4",
+  "units": "Week",
+  "doc": "Material delay, production start to finished goods"
+ },
+ {
+  "op": "add_var",
+  "name": "Customer Orders",
+  "kind": "flow",
+  "equation": "Initial Demand + STEP(Step Size, Step Time)",
+  "units": "units/Week",
+  "to": "Retailer Backlog",
+  "doc": "Customer demand with a step"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Expected Demand",
+  "kind": "aux",
+  "equation": "SMOOTH(Customer Orders, Demand Averaging Time)",
+  "units": "units/Week",
+  "doc": "Orders received, smoothed (information delay)"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Desired Inventory",
+  "kind": "aux",
+  "equation": "Cover Time * Retailer Expected Demand",
+  "units": "units"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Desired Pipeline",
+  "kind": "aux",
+  "equation": "Retailer Transit Delay * Retailer Expected Demand",
+  "units": "units"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Shipments",
+  "kind": "aux",
+  "equation": "MIN(Retailer Backlog, Retailer Inventory) / Order Fill Time",
+  "units": "units/Week",
+  "doc": "Shipments the stage can make now"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Receipts",
+  "kind": "flow",
+  "equation": "Retailer Pipeline / Retailer Transit Delay",
+  "units": "units/Week",
+  "from": "Retailer Pipeline",
+  "to": "Retailer Inventory",
+  "doc": "Goods arriving (first-order material delay)"
+ },
+ {
+  "op": "add_var",
+  "name": "Customer Shipments",
+  "kind": "flow",
+  "equation": "Retailer Shipments",
+  "units": "units/Week",
+  "from": "Retailer Inventory",
+  "to": "Cumulative Delivered",
+  "doc": "Goods leaving the stock"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Orders Filled",
+  "kind": "flow",
+  "equation": "Retailer Shipments",
+  "units": "units/Week",
+  "from": "Retailer Backlog",
+  "doc": "Backlog cleared by the shipment"
+ },
+ {
+  "op": "add_var",
+  "name": "Retailer Orders",
+  "kind": "flow",
+  "equation": "MAX(0, Retailer Expected Demand + (Retailer Desired Inventory - Retailer Inventory) / Adjustment Time + Supply Line Weight * (Retailer Desired Pipeline - Retailer Pipeline) / Adjustment Time)",
+  "units": "units/Week",
+  "to": "Distributor Backlog",
+  "doc": "Order placed on the next stage up (production starts at the factory)"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Expected Demand",
+  "kind": "aux",
+  "equation": "SMOOTH(Retailer Orders, Demand Averaging Time)",
+  "units": "units/Week",
+  "doc": "Orders received, smoothed (information delay)"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Desired Inventory",
+  "kind": "aux",
+  "equation": "Cover Time * Distributor Expected Demand",
+  "units": "units"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Desired Pipeline",
+  "kind": "aux",
+  "equation": "Distributor Transit Delay * Distributor Expected Demand",
+  "units": "units"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Shipments",
+  "kind": "aux",
+  "equation": "MIN(Distributor Backlog, Distributor Inventory) / Order Fill Time",
+  "units": "units/Week",
+  "doc": "Shipments the stage can make now"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Receipts",
+  "kind": "flow",
+  "equation": "Distributor Pipeline / Distributor Transit Delay",
+  "units": "units/Week",
+  "from": "Distributor Pipeline",
+  "to": "Distributor Inventory",
+  "doc": "Goods arriving (first-order material delay)"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Dispatch",
+  "kind": "flow",
+  "equation": "Distributor Shipments",
+  "units": "units/Week",
+  "from": "Distributor Inventory",
+  "to": "Retailer Pipeline",
+  "doc": "Goods leaving the stock"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Orders Filled",
+  "kind": "flow",
+  "equation": "Distributor Shipments",
+  "units": "units/Week",
+  "from": "Distributor Backlog",
+  "doc": "Backlog cleared by the shipment"
+ },
+ {
+  "op": "add_var",
+  "name": "Distributor Orders",
+  "kind": "flow",
+  "equation": "MAX(0, Distributor Expected Demand + (Distributor Desired Inventory - Distributor Inventory) / Adjustment Time + Supply Line Weight * (Distributor Desired Pipeline - Distributor Pipeline) / Adjustment Time)",
+  "units": "units/Week",
+  "to": "Factory Backlog",
+  "doc": "Order placed on the next stage up (production starts at the factory)"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Expected Demand",
+  "kind": "aux",
+  "equation": "SMOOTH(Distributor Orders, Demand Averaging Time)",
+  "units": "units/Week",
+  "doc": "Orders received, smoothed (information delay)"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Desired Inventory",
+  "kind": "aux",
+  "equation": "Cover Time * Factory Expected Demand",
+  "units": "units"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Desired Pipeline",
+  "kind": "aux",
+  "equation": "Production Delay * Factory Expected Demand",
+  "units": "units"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Shipments",
+  "kind": "aux",
+  "equation": "MIN(Factory Backlog, Factory Inventory) / Order Fill Time",
+  "units": "units/Week",
+  "doc": "Shipments the stage can make now"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Receipts",
+  "kind": "flow",
+  "equation": "Factory Pipeline / Production Delay",
+  "units": "units/Week",
+  "from": "Factory Pipeline",
+  "to": "Factory Inventory",
+  "doc": "Goods arriving (first-order material delay)"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Dispatch",
+  "kind": "flow",
+  "equation": "Factory Shipments",
+  "units": "units/Week",
+  "from": "Factory Inventory",
+  "to": "Distributor Pipeline",
+  "doc": "Goods leaving the stock"
+ },
+ {
+  "op": "add_var",
+  "name": "Factory Orders Filled",
+  "kind": "flow",
+  "equation": "Factory Shipments",
+  "units": "units/Week",
+  "from": "Factory Backlog",
+  "doc": "Backlog cleared by the shipment"
+ },
+ {
+  "op": "add_var",
+  "name": "Production Starts",
+  "kind": "flow",
+  "equation": "MAX(0, Factory Expected Demand + (Factory Desired Inventory - Factory Inventory) / Adjustment Time + Supply Line Weight * (Factory Desired Pipeline - Factory Pipeline) / Adjustment Time)",
+  "units": "units/Week",
+  "to": "Factory Pipeline",
+  "doc": "Order placed on the next stage up (production starts at the factory)"
+ },
+ {
+  "op": "add_var",
+  "name": "Starts Tally",
+  "kind": "flow",
+  "equation": "Production Starts",
+  "units": "units/Week",
+  "to": "Cumulative Starts",
+  "doc": "Accounting copy of production starts"
+ },
+ {
+  "op": "add_var",
+  "name": "Amplification",
+  "kind": "aux",
+  "equation": "Production Starts / Customer Orders",
+  "units": "1",
+  "doc": "Factory production starts relative to customer demand"
+ },
+ {
+  "op": "add_var",
+  "name": "Material in System",
+  "kind": "aux",
+  "equation": "Retailer Inventory + Retailer Pipeline + Distributor Inventory + Distributor Pipeline + Factory Inventory + Factory Pipeline",
+  "units": "units",
+  "doc": "All goods held or moving"
+ },
+ {
+  "op": "add_group",
+  "name": "Customer",
+  "vars": [
+   "Customer Orders",
+   "Initial Demand",
+   "Step Size",
+   "Step Time"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Retailer stock",
+  "vars": [
+   "Retailer Inventory",
+   "Retailer Backlog",
+   "Retailer Pipeline",
+   "Retailer Receipts",
+   "Customer Shipments",
+   "Retailer Orders Filled",
+   "Retailer Shipments"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Retailer decision",
+  "vars": [
+   "Retailer Orders",
+   "Retailer Expected Demand",
+   "Retailer Desired Inventory",
+   "Retailer Desired Pipeline"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Distributor stock",
+  "vars": [
+   "Distributor Inventory",
+   "Distributor Backlog",
+   "Distributor Pipeline",
+   "Distributor Receipts",
+   "Distributor Dispatch",
+   "Distributor Orders Filled",
+   "Distributor Shipments"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Distributor decision",
+  "vars": [
+   "Distributor Orders",
+   "Distributor Expected Demand",
+   "Distributor Desired Inventory",
+   "Distributor Desired Pipeline"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Factory stock",
+  "vars": [
+   "Factory Inventory",
+   "Factory Backlog",
+   "Factory Pipeline",
+   "Factory Receipts",
+   "Factory Dispatch",
+   "Factory Orders Filled",
+   "Factory Shipments"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Factory decision",
+  "vars": [
+   "Production Starts",
+   "Factory Expected Demand",
+   "Factory Desired Inventory",
+   "Factory Desired Pipeline"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Policy",
+  "vars": [
+   "Demand Averaging Time",
+   "Cover Time",
+   "Adjustment Time",
+   "Supply Line Weight",
+   "Order Fill Time"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Delays",
+  "vars": [
+   "Retailer Transit Delay",
+   "Distributor Transit Delay",
+   "Production Delay"
+  ]
+ },
+ {
+  "op": "add_group",
+  "name": "Accounting",
+  "vars": [
+   "Cumulative Delivered",
+   "Cumulative Starts",
+   "Starts Tally",
+   "Material in System",
+   "Amplification"
+  ]
+ },
+ {
+  "op": "set_lever",
+  "var": "Supply Line Weight",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Supply Line Weight",
+  "min": 0,
+  "max": 1
+ },
+ {
+  "op": "set_lever",
+  "var": "Adjustment Time",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Adjustment Time",
+  "min": 1,
+  "max": 12
+ },
+ {
+  "op": "set_lever",
+  "var": "Demand Averaging Time",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Demand Averaging Time",
+  "min": 1,
+  "max": 12
+ },
+ {
+  "op": "set_lever",
+  "var": "Cover Time",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Cover Time",
+  "min": 1,
+  "max": 6
+ },
+ {
+  "op": "set_lever",
+  "var": "Step Size",
+  "on": true
+ },
+ {
+  "op": "set_slider",
+  "var": "Step Size",
+  "min": 0,
+  "max": 30
+ },
+ {
+  "op": "set_purpose",
+  "problem": "Why does a small step in customer demand swing production far more than it swings sales, and what makes the swing smaller?",
+  "kind": "understand behaviour",
+  "out_of_scope": "prices, capacity limits, shortages that lose customers, real product mix"
+ },
+ {
+  "op": "add_objective",
+  "title": "Calm factory",
+  "kind": "stay within a band",
+  "test": "Production starts peak less than 1.5 times the new customer demand (110 units/week).",
+  "var": "Production Starts"
+ },
+ {
+  "op": "add_objective",
+  "title": "Customers served",
+  "kind": "stay within a band",
+  "test": "Retailer backlog stays near one week of demand.",
+  "var": "Retailer Backlog"
+ }
+]

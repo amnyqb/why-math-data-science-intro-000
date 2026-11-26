@@ -1,0 +1,681 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 2,
+      "name": "a",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT LOOKUPS('lookups.CSV', ',', '1', 'e2')] subscript currently required for GET DIRECT LOOKUPS  ~ This one uses a lowercase letter in the cell reference (atypical, but valid in Vensim).",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [
+        [
+          2020.0,
+          0.0
+        ],
+        [
+          2021.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "DimA",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "a from named xlsx",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT LOOKUPS('lookups.xlsx', 'a', '1', 'E2')] subscript currently required for GET DIRECT LOOKUPS",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [
+        [
+          2020.0,
+          0.0
+        ],
+        [
+          2021.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "DimA",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "a from tagged xlsx",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET DIRECT LOOKUPS('?lookups', 'a', '1', 'E2')] subscript currently required for GET DIRECT LOOKUPS",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [
+        [
+          2020.0,
+          0.0
+        ],
+        [
+          2021.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "DimA",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "a from named xlsx using GET XLS",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET XLS LOOKUPS('lookups.xlsx', 'a', '1', 'E2')] subscript currently required for GET XLS LOOKUPS",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [
+        [
+          2020.0,
+          0.0
+        ],
+        [
+          2021.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "DimA",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "a from tagged xlsx using GET XLS",
+      "kind": "Lookup",
+      "equation": "Time",
+      "units": "",
+      "comment": "[Vensim data: GET XLS LOOKUPS('?lookups', 'a', '1', 'E2')] subscript currently required for GET XLS LOOKUPS",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [
+        [
+          2020.0,
+          0.0
+        ],
+        [
+          2021.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "DimA",
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "b",
+      "kind": "Aux",
+      "equation": "a[A1](Time)",
+      "units": "",
+      "comment": "access the lookup",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "b from named xlsx",
+      "kind": "Aux",
+      "equation": "a from named xlsx[A1](Time)",
+      "units": "",
+      "comment": "access the lookup",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "b from tagged xlsx",
+      "kind": "Aux",
+      "equation": "a from tagged xlsx[A1](Time)",
+      "units": "",
+      "comment": "access the lookup",
+      "pos": [
+        500.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "b from named xlsx using GET XLS",
+      "kind": "Aux",
+      "equation": "a from named xlsx using GET XLS[A1](Time)",
+      "units": "",
+      "comment": "access the lookup",
+      "pos": [
+        690.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "b from tagged xlsx using GET XLS",
+      "kind": "Aux",
+      "equation": "a from tagged xlsx using GET XLS[A1](Time)",
+      "units": "",
+      "comment": "access the lookup",
+      "pos": [
+        880.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "c",
+      "kind": "Aux",
+      "equation": "LOOKUP INVERT(a[A1], 0.5)",
+      "units": "",
+      "comment": "look up y for an x value (returns 2035)",
+      "pos": [
+        120.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "d",
+      "kind": "Aux",
+      "equation": "LOOKUP FORWARD(a[A1], 2028.1)",
+      "units": "",
+      "comment": "look up using the next x without interpolation (returns 0.3)",
+      "pos": [
+        310.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "e",
+      "kind": "Aux",
+      "equation": "LOOKUP FORWARD(a[A1], 2028)",
+      "units": "",
+      "comment": "no effect when the x value exists in the lookup (returns 0.266667)",
+      "pos": [
+        500.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "f",
+      "kind": "Aux",
+      "equation": "a[A1](2028.1)",
+      "units": "",
+      "comment": "regular lookups extrapolate by default",
+      "pos": [
+        690.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "g",
+      "kind": "Lookup",
+      "equation": "",
+      "units": "",
+      "comment": "lookup definition",
+      "pos": [
+        880.0,
+        380.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ],
+        [
+          2.0,
+          2.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "h",
+      "kind": "Aux",
+      "equation": "LOOKUP FORWARD(g, 1)",
+      "units": "",
+      "comment": "non-subscripted look up",
+      "pos": [
+        120.0,
+        510.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 18,
+      "from": 2,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 19,
+      "from": 2,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 20,
+      "from": 2,
+      "to": 14,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 21,
+      "from": 16,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 2020.0,
+    "final_time": 2050.0,
+    "time_step": 1.0,
+    "time_units": "",
+    "method": "Euler"
+  },
+  "next_id": 21,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "DimA",
+      "items": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

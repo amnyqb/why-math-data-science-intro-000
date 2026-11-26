@@ -1,0 +1,20 @@
+{
+  "font": "Source Serif 4",
+  "mono_font": "Source Code Pro",
+  "text_scale": 1.0,
+  "line_scale": 1.15,
+  "arrow_weight": 1,
+  "arrow_shape": "curved",
+  "arrow_head": "filled",
+  "diagram_style": "cards",
+  "width_mm": 130,
+  "caption_size": 13,
+  "colors": {
+    "stock": "#1f3a5f",
+    "stock_fill": "#eef3fa",
+    "flow": "#2b7a78",
+    "aux": "#b5651d",
+    "link": "#5c6370",
+    "text": "#1a1a1a"
+  }
+}

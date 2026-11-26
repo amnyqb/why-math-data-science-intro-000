@@ -1,0 +1,3 @@
+Name,Equation,Units,Description
+Total Population,Susceptible + Infected + Recovered,People,
+Fraction Infected,Infected / Total Population,Dmnl,

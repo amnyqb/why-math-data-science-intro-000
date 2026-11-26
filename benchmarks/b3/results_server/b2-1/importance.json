@@ -1,0 +1,402 @@
+{
+  "dominance_base_run": {
+    "loop_count": 2,
+    "loops": [
+      {
+        "id": 1,
+        "mean_relative_score": -0.5113327309921495,
+        "polarity": "B",
+        "scored": true,
+        "share_of_time_dominant": 0.5552083333333333,
+        "variables": [
+          "Inventory",
+          "Inventory Shortfall",
+          "Production Required to Adjust Inventory",
+          "Desired Production",
+          "Desired Workforce",
+          "Net Hiring",
+          "Workforce",
+          "Production Rate"
+        ]
+      },
+      {
+        "id": 2,
+        "mean_relative_score": -0.40429226900785054,
+        "polarity": "B",
+        "scored": true,
+        "share_of_time_dominant": 0.36041666666666666,
+        "variables": [
+          "Workforce",
+          "Net Hiring"
+        ]
+      }
+    ],
+    "runs": 1,
+    "times": 960,
+    "truncated": false,
+    "unscored_loops": 0
+  },
+  "dominance_ensemble": {
+    "loop_count": 2,
+    "loops": [
+      {
+        "id": 1,
+        "mean_relative_score": -0.4844414758749833,
+        "polarity": "B",
+        "scored": true,
+        "share_of_time_dominant": 0.498203125,
+        "variables": [
+          "Inventory",
+          "Inventory Shortfall",
+          "Production Required to Adjust Inventory",
+          "Desired Production",
+          "Desired Workforce",
+          "Net Hiring",
+          "Workforce",
+          "Production Rate"
+        ]
+      },
+      {
+        "id": 2,
+        "mean_relative_score": -0.43118352412501926,
+        "polarity": "B",
+        "scored": true,
+        "share_of_time_dominant": 0.417421875,
+        "variables": [
+          "Workforce",
+          "Net Hiring"
+        ]
+      }
+    ],
+    "runs": 40,
+    "times": 960,
+    "truncated": false,
+    "unscored_loops": 0
+  },
+  "eigenvalues": {
+    "eigenvalues": [
+      {
+        "im": -0.33071891384585017,
+        "period": 18.998566589717974,
+        "re": -0.12499999999515415,
+        "time_constant": 8.000000000310134
+      },
+      {
+        "im": 0.33071891384585017,
+        "period": 18.998566589717974,
+        "re": -0.12499999999515415,
+        "time_constant": 8.000000000310134
+      }
+    ],
+    "elasticity": [
+      {
+        "elasticities": [
+          {
+            "d_im_per_ln": -1.4228063172083694e-10,
+            "d_re_per_ln": 0.0,
+            "im": 1.42280631744725e-10,
+            "re": 3.7643916794992805e-10
+          },
+          {
+            "d_im_per_ln": 1.4228063172083694e-10,
+            "d_re_per_ln": 0.0,
+            "im": -1.42280631744725e-10,
+            "re": 3.7643916794992805e-10
+          }
+        ],
+        "param": "Productivity per Worker",
+        "value": 2.0
+      },
+      {
+        "elasticities": [
+          {
+            "d_im_per_ln": 0.0,
+            "d_re_per_ln": 0.0,
+            "im": 0.0,
+            "re": -0.0
+          },
+          {
+            "d_im_per_ln": 0.0,
+            "d_re_per_ln": 0.0,
+            "im": -0.0,
+            "re": 0.0
+          }
+        ],
+        "param": "Desired Inventory",
+        "value": 100.0
+      },
+      {
+        "elasticities": [
+          {
+            "d_im_per_ln": 0.14174236628336778,
+            "d_re_per_ln": 0.12501250124954122,
+            "im": 0.18900962280439806,
+            "re": -0.5000275527334394
+          },
+          {
+            "d_im_per_ln": -0.14174236628336778,
+            "d_re_per_ln": 0.12501250124954122,
+            "im": -0.18900962280439806,
+            "re": -0.5000275527334394
+          }
+        ],
+        "param": "Hiring Time",
+        "value": 4.0
+      },
+      {
+        "elasticities": [
+          {
+            "d_im_per_ln": 0.18899342103912975,
+            "d_re_per_ln": 0.0,
+            "im": -0.18899342107086062,
+            "re": -0.500029591543916
+          },
+          {
+            "d_im_per_ln": -0.18899342103912975,
+            "d_re_per_ln": 0.0,
+            "im": 0.18899342107086062,
+            "re": -0.500029591543916
+          }
+        ],
+        "param": "Inventory Correction Time",
+        "value": 2.0
+      },
+      {
+        "elasticities": [
+          {
+            "d_im_per_ln": 0.0,
+            "d_re_per_ln": 0.0,
+            "im": 0.0,
+            "re": -0.0
+          },
+          {
+            "d_im_per_ln": 0.0,
+            "d_re_per_ln": 0.0,
+            "im": -0.0,
+            "re": 0.0
+          }
+        ],
+        "param": "Demand Adjustment Time",
+        "value": 2.0
+      },
+      {
+        "elasticities": [
+          {
+            "d_im_per_ln": 0.0,
+            "d_re_per_ln": 0.0,
+            "im": 0.0,
+            "re": -0.0
+          },
+          {
+            "d_im_per_ln": 0.0,
+            "d_re_per_ln": 0.0,
+            "im": -0.0,
+            "re": 0.0
+          }
+        ],
+        "param": "Demand Step",
+        "value": 10.0
+      }
+    ],
+    "states": [
+      "Inventory",
+      "Workforce"
+    ],
+    "time": 20.0
+  },
+  "removable": [],
+  "sobol": {
+    "goals": [
+      {
+        "converged": true,
+        "failed_runs": 0,
+        "goal": "Inventory trough",
+        "indices": [
+          {
+            "param": "Productivity per Worker",
+            "s1": 3.6167988887749544e-17,
+            "s1_conf": 1.2391806798516183e-16,
+            "st": 7.736194458207475e-30,
+            "st_conf": 5.988248669917933e-31
+          },
+          {
+            "param": "Desired Inventory",
+            "s1": 0.5989814746829152,
+            "s1_conf": 0.02978654438380566,
+            "st": 0.5923129412946576,
+            "st_conf": 0.022558606997286196
+          },
+          {
+            "param": "Hiring Time",
+            "s1": 0.03665700499988926,
+            "s1_conf": 0.011090784193650186,
+            "st": 0.0572419891691609,
+            "st_conf": 0.003833951452360972
+          },
+          {
+            "param": "Inventory Correction Time",
+            "s1": 0.0446864741284485,
+            "s1_conf": 0.010548205944665186,
+            "st": 0.0660747686040039,
+            "st_conf": 0.004742751971912131
+          },
+          {
+            "param": "Demand Adjustment Time",
+            "s1": 0.01501693797207788,
+            "s1_conf": 0.007043417722345414,
+            "st": 0.0194437188527563,
+            "st_conf": 0.0015077818349402176
+          },
+          {
+            "param": "Demand Step",
+            "s1": 0.28812703406073986,
+            "s1_conf": 0.022537324850736208,
+            "st": 0.32951141356834357,
+            "st_conf": 0.017639216985335496
+          }
+        ],
+        "max_change_n_to_2n": 0.013333123089506627,
+        "sum_s1": 0.9834689258440708,
+        "variance": 1430.2309265201911
+      },
+      {
+        "converged": true,
+        "failed_runs": 0,
+        "goal": "Workforce peak",
+        "indices": [
+          {
+            "param": "Productivity per Worker",
+            "s1": 0.9567431072815045,
+            "s1_conf": 0.04229844852997709,
+            "st": 0.9819098982047302,
+            "st_conf": 0.030202136401015083
+          },
+          {
+            "param": "Desired Inventory",
+            "s1": -6.0862175522554174e-18,
+            "s1_conf": 7.739034371823257e-18,
+            "st": 3.273211247225121e-32,
+            "st_conf": 2.9053980089043454e-33
+          },
+          {
+            "param": "Hiring Time",
+            "s1": 0.0002004487521363081,
+            "s1_conf": 0.0008350500583843618,
+            "st": 0.0004035102656442581,
+            "st_conf": 0.00004284440410010027
+          },
+          {
+            "param": "Inventory Correction Time",
+            "s1": -0.00018478934153723383,
+            "s1_conf": 0.0010897681778140322,
+            "st": 0.000659925131530516,
+            "st_conf": 0.00006154869876971829
+          },
+          {
+            "param": "Demand Adjustment Time",
+            "s1": 0.00026355651615205504,
+            "s1_conf": 0.00029633410163946446,
+            "st": 0.00005192366620877693,
+            "st_conf": 5.300726834048413e-6
+          },
+          {
+            "param": "Demand Step",
+            "s1": 0.028375813385730857,
+            "s1_conf": 0.007643140189888778,
+            "st": 0.03633010825138659,
+            "st_conf": 0.002097158616073592
+          }
+        ],
+        "max_change_n_to_2n": 0.008710877338574896,
+        "sum_s1": 0.9853981365939865,
+        "variance": 499.9445595007753
+      },
+      {
+        "converged": true,
+        "failed_runs": 0,
+        "goal": "Inventory at 30 months",
+        "indices": [
+          {
+            "param": "Productivity per Worker",
+            "s1": 2.4755880185336916e-17,
+            "s1_conf": 2.2904174651283825e-16,
+            "st": 2.8645362041199696e-29,
+            "st_conf": 2.202396293597947e-30
+          },
+          {
+            "param": "Desired Inventory",
+            "s1": 0.9898701687883372,
+            "s1_conf": 0.03768725607734017,
+            "st": 0.9874331203133551,
+            "st_conf": 0.03211733506996903
+          },
+          {
+            "param": "Hiring Time",
+            "s1": -0.0003789114603197368,
+            "s1_conf": 0.005203693474813662,
+            "st": 0.01571154988455804,
+            "st_conf": 0.0011099493488099226
+          },
+          {
+            "param": "Inventory Correction Time",
+            "s1": 0.009595689878287758,
+            "s1_conf": 0.008599460087320413,
+            "st": 0.036717302011068396,
+            "st_conf": 0.0031509773102292187
+          },
+          {
+            "param": "Demand Adjustment Time",
+            "s1": 0.0061663709717112445,
+            "s1_conf": 0.0047861930567643035,
+            "st": 0.009896069464475035,
+            "st_conf": 0.0013241795650814384
+          },
+          {
+            "param": "Demand Step",
+            "s1": -0.0019588967301389444,
+            "s1_conf": 0.004339847058839989,
+            "st": 0.010448003474676728,
+            "st_conf": 0.0011083055542780815
+          }
+        ],
+        "max_change_n_to_2n": 0.006516304471094525,
+        "sum_s1": 1.0032944214478776,
+        "variance": 857.9257363262454
+      }
+    ],
+    "params": [
+      {
+        "max": 4.0,
+        "min": 1.0,
+        "name": "Productivity per Worker"
+      },
+      {
+        "max": 150.0,
+        "min": 50.0,
+        "name": "Desired Inventory"
+      },
+      {
+        "max": 8.0,
+        "min": 1.0,
+        "name": "Hiring Time"
+      },
+      {
+        "max": 8.0,
+        "min": 0.5,
+        "name": "Inventory Correction Time"
+      },
+      {
+        "max": 8.0,
+        "min": 0.5,
+        "name": "Demand Adjustment Time"
+      },
+      {
+        "max": 20.0,
+        "min": 0.0,
+        "name": "Demand Step"
+      }
+    ],
+    "runs": 32768,
+    "samples": 2048
+  }
+}

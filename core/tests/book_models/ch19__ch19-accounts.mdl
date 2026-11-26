@@ -1,0 +1,80 @@
+{UTF-8}
+{ Chapter 19: business accounts won by a sales team and lost to churn. The sales team doubles at month 12; new reps take time to become productive. }
+Base Reps=
+	10
+	~	rep
+	~	Sales reps before the expansion.
+	|
+Added Reps=
+	10
+	~	rep
+	~	Reps added at the expansion.
+	|
+Expansion Month=
+	12
+	~	month
+	~	When the new reps join.
+	|
+Sales Reps=
+	Base Reps + STEP(Added Reps, Expansion Month)
+	~	rep
+	~	Reps on the payroll.
+	|
+Ramp Time=
+	4
+	~	month
+	~	Average time for a new rep to reach full productivity.
+	|
+Effective Reps=
+	SMOOTH(Sales Reps, Ramp Time)
+	~	rep
+	~	Reps at full productivity equivalent.
+	|
+Rep Productivity=
+	3
+	~	accounts/rep/month
+	~	Accounts won per fully productive rep per month.
+	|
+Acquisitions=
+	Effective Reps * Rep Productivity
+	~	accounts/month
+	~	Accounts won per month.
+	|
+Churn Fraction=
+	0.05
+	~	1/month
+	~	Share of accounts lost per month.
+	|
+Churn=
+	Accounts * Churn Fraction
+	~	accounts/month
+	~	Accounts lost per month.
+	|
+Accounts= INTEG(
+	Acquisitions - Churn,
+	Acquisitions / Churn Fraction)
+	~	accounts
+	~	Active business accounts; starts in balance.
+	|
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+FINAL TIME  = 48
+	~	month
+	~	The final time for the simulation.
+	|
+INITIAL TIME  = 0
+	~	month
+	~	The initial time for the simulation.
+	|
+SAVEPER  = 
+        TIME STEP
+	~	month [0,?]
+	~	The frequency with which output is stored.
+	|
+TIME STEP  = 0.125
+	~	month [0,?]
+	~	The time step for the simulation.
+	|

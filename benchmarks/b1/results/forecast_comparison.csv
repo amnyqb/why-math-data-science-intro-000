@@ -1,0 +1,3 @@
+measure,F1_median,F2_median,median_rel_diff_F2_vs_F1,p05,p95,share_F2_better,wilcoxon_p
+RMSSE,1.516648,1.127878,-0.284524,-0.693072,0.206159,0.857143,0.0
+SPL,0.3812,0.279026,-0.347958,-0.687218,0.17235,0.771429,0.0

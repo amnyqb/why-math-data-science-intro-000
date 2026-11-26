@@ -1,0 +1,3 @@
+engineConfigName,generations,llmCalls,cost ($),$/generation,unpriced calls
+merlin-agent-sonnet-5-5,13,13,1.8597,0.1431,0
+socrates-agent-sonnet-5-5,13,150,2.4804,0.1908,0

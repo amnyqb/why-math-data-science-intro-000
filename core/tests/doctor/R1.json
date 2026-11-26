@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE R1: variables with no description"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "10",
+  "units": "widget",
+  "doc": ""
+ },
+ {
+  "op": "add_var",
+  "name": "In",
+  "kind": "constant",
+  "equation": "1",
+  "units": "widget/Day",
+  "doc": ""
+ },
+ {
+  "op": "add_var",
+  "name": "Fill",
+  "kind": "flow",
+  "equation": "In",
+  "units": "widget/Day",
+  "doc": "",
+  "to": "S"
+ }
+]

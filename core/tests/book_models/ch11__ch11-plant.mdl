@@ -1,0 +1,87 @@
+{UTF-8}
+{ Chapter 11: is the plant worth it at 1% a month? Construction spending for 10 months, then a margin that ramps up, over a 10-year horizon. Present value is kept as a stock of discounted cash. }
+Construction Cost=
+	3e+06
+	~	dollars
+	~	|
+Construction Time=
+	10
+	~	month
+	~	|
+Construction Spending=
+	IF THEN ELSE(Time < Construction Time, Construction Cost / Construction Time, 0)
+	~	dollars/month
+	~	Spent evenly while the plant is built.
+	|
+Plant Available=
+	STEP(1, Construction Time)
+	~	dmnl
+	~	|
+Ramp Up Time=
+	6
+	~	month
+	~	Average time to reach full output once the plant is built.
+	|
+Ramp Up=
+	(Plant Available - Utilisation) / Ramp Up Time
+	~	1/month
+	~	|
+Utilisation= INTEG(
+	Ramp Up,
+	0)
+	~	dmnl
+	~	Fraction of full output reached.
+	|
+Full Margin=
+	60000
+	~	dollars/month
+	~	Monthly margin at full output.
+	|
+Margin=
+	Full Margin * Utilisation
+	~	dollars/month
+	~	|
+Cash Flow=
+	Margin - Construction Spending
+	~	dollars/month
+	~	|
+Cumulative Cash= INTEG(
+	Cash Flow,
+	0)
+	~	dollars
+	~	Undiscounted: what an accountant's running total shows.
+	|
+Discount Rate=
+	0.01
+	~	1/month
+	~	Continuous rate per month.
+	|
+Discount Factor=
+	EXP(-Discount Rate * Time)
+	~	dmnl
+	~	|
+Discounted Cash Flow=
+	Cash Flow * Discount Factor
+	~	dollars/month
+	~	Each month's cash, valued today.
+	|
+Present Value= INTEG(
+	Discounted Cash Flow,
+	0)
+	~	dollars
+	~	The value today of the cash flows so far: a stock of discounted cash.
+	|
+Built In NPV=
+	NPV(Cash Flow, Discount Rate, 0, 1)
+	~	dollars
+	~	The same quantity from the simulator's own function.
+	|
+Annual Return=
+	INTERNAL RATE OF RETURN(Cash Flow, 12, 0)
+	~	1/year
+	~	The rate per year (compounded yearly) that makes the cash flows so far worth nothing today. Read per 12 months because the per-month form fails on long runs (see the notes).
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 120 ~ month ~ |
+TIME STEP = 0.0625 ~ month ~ |
+SAVEPER = 0.0625 ~ month ~ |

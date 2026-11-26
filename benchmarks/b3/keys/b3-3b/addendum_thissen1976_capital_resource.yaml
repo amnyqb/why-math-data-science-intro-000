@@ -1,0 +1,253 @@
+# Addendum key, case B3-3b. Thissen 1976, IEEE SMC 6(7), pp. 455-466 (printed page numbers).
+# Text read from papers/Thissen-1976-capital-resource.txt. Figure-only content (Figs. 1, 4, 5, 6, 10, 12) is not digitised.
+- case: B3-3b
+  finding: "The capital and resource sector is the motor of the model; its growth-then-decline behaviour is imposed on all other sectors, and the retroaction (via allocation of industrial output to agriculture) is of little importance."
+  type: core_structure
+  qualitative: true
+  source: "Thissen, 1976, p. 456, Section II (and Abstract, p. 455)"
+  version: "World3, ultimate version of Meadows et al. 1974 (Dynamics of Growth in a Finite World); standard run"
+
+- case: B3-3b
+  finding: "Capital and resources submodels interact heavily under standard-run and similar conditions and are treated as one sector, with three state variables IC, SC, NR."
+  type: core_structure
+  qualitative: true
+  source: "Thissen, 1976, p. 456, Section II and Table I"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Capital and population peak in the middle of the 21st century then decline in the standard run; the decline is mainly caused by scarcity of resources."
+  type: behaviour
+  qualitative: true
+  source: "Thissen, 1976, p. 455, Section II, Fig. 1"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Exponential growth of the economic variables is caused by the assumptions on capital productivity and by the lack of any influence of resource scarcity while not more than 40 percent of initial resources have been used."
+  type: dominant_loop
+  qualitative: true
+  source: "Thissen, 1976, p. 465, Section VIII"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Decline is inevitable because nonrenewable resources are limited and resource use is proportional to industrial output; collapse is enforced by the sharp drop in capital productivity (FCAOR rise) once more than 50 percent of initial resources are used, while FIOAC is not diminished."
+  type: dominant_loop
+  qualitative: true
+  source: "Thissen, 1976, p. 465, Section VIII"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Growth turns to decline around 2025 owing to the fast rise of FCAOR (standard-run trajectory in the FIOAA-FCAOR plane); no growth is possible once FCAOR exceeds 0.5."
+  type: behaviour
+  phase: "around 2025"
+  value: "growth turns to decline around 2025; no growth if FCAOR > 0.5"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 463, Section VI-C, Fig. 10"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "First-round simplification: CUF can be set to 1 (it is exactly 1 until 2070 and differs only slightly from 1 from 2070 to 2100 in the standard run), eliminating one input variable (job sector) of the sector."
+  type: reduction_size
+  qualitative: true
+  source: "Thissen, 1976, p. 457, Section IV"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Table functions depending on IOPC are mostly unused in the standard run, since IOPC varies only between 0 and 400 dollars per head per year; ISOPC and PCRUM can be approximated as proportional to IOPC."
+  type: reduction_size
+  value: "IOPC between 0 and 400 dollars/person-year; PCRUM = 0.0053 * IOPC; ISOPC = 1.67 * IOPC"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, pp. 457-458, Section IV, equations (1) and (2), Fig. 3"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "With PCRUM and ISOPC proportional to IOPC, population POP has no direct influence on the capital and resource sector (NRUR = a_pc * IO); test calculations (Fig. 4) confirmed this. The only external variable that matters is FIOAA; the subsystem is virtually independent of population."
+  type: leverage_parameter
+  qualitative: true
+  source: "Thissen, 1976, p. 458, Section IV, equations (3), (4), Fig. 4"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Piecewise-linear simplification of FIOAS: a_fi = -0.20, b_fi = 0.30 if SOPC < ISOPC and a_fi = -0.10, b_fi = 0.20 if SOPC > ISOPC; a fully linear version a_fi = -0.13, b_fi = 0.24 introduces no significant change in standard-run behaviour."
+  type: reduction_size
+  value: "a_fi = -0.13, b_fi = 0.24 (fully linear); -0.20/0.30 and -0.10/0.20 (two-part)"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 458, Section V, equations (5) and (6)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "FCAOR is broken into two parts: FCAOR = 0.05 if NRFR > 0.5, and FCAOR = 1 + a_fc * NRFR with a_fc = -1.90 if NRFR < 0.5; the simplification does not significantly affect model behaviour."
+  type: reduction_size
+  value: "FCAOR = 0.05 (NRFR > 0.5); a_fc = -1.90 (NRFR < 0.5)"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 458, Section V, equation (7); p. 459, Table IV"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "The simplified sector model (Table IV: three state equations for IC, SC, NR with input FIOAA only, CUF = 1, linear PCRUM, ISOPC, FIOAS and two-part FCAOR) reproduces the standard run with only slight differences (Fig. 5)."
+  type: reduction_size
+  value: "3 state variables (IC, SC, NR); 1 input variable (FIOAA)"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 459, Section V, Table IV, Fig. 5"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Eight parameter groups act identically in the simplified model: (1) 1-FIOAA-FIOAC, (2) b_fi, (3) CUF, (4) (1-FCAOR)/ICOR, (5) ALIC, (6) a_fi/(a_is*SCOR), (7) ALSC, (8) a_pc*NRUF."
+  type: core_structure
+  value: "8 parameter groups"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 459, Section V-A (Parameter Groups), Table V"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Sensitivity (original equations): the outcome is very sensitive to parameter group 1 (1-FIOAA-FIOAC, i.e. FIOAC and FIOAA); similar sensitivity for the groups (1-FCAOR)/ICOR, CUF and ALIC. Variations in other parameters have less effect."
+  type: leverage_parameter
+  qualitative: true
+  source: "Thissen, 1976, p. 459, Section V-B (Sensitivity Tests), Fig. 6"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "A change in a_pc*NRUF initially affects only NR and influences other variables only after resources have been used for more than 40 percent of their initial value and FCAOR begins to rise. Larger variations only give more pronounced effects."
+  type: leverage_parameter
+  qualitative: true
+  source: "Thissen, 1976, pp. 459-460, Section V-B"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Total industrial output over time is bounded: the integral of IO from 1900 to infinity equals (NR(1900) - NR(infinity))/a_pc <= NR(1900)/a_pc; changes causing earlier and faster capital growth lead to a more sudden, faster and earlier drop; moderated growth gives a longer growth and more gradual decline. This follows from PCRUM being nearly linear in IOPC."
+  type: dominant_loop
+  qualitative: true
+  source: "Thissen, 1976, p. 460, Section V-C, equations (8)-(10)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "The service-capital subsystem (SC) can be regarded as a single-input (IO), single-output (FIOAS) transfer system acting as a feedback loop on IC, and acts in a stabilising way with respect to outside disturbances; FIOAS reacts immediately to sudden changes in FCAOR and later to FIOAA."
+  type: dominant_loop
+  qualitative: true
+  source: "Thissen, 1976, pp. 460-461, Section VI-A, Figs. 7, 8"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "SC behaves as a linear first-order system with IO as input: time constant T_s = 6 years if SC < a_is*IO, 9 years if SC > a_is*IO, and static gain 1.8 (= b_fi * T_s)."
+  type: core_structure
+  value: "T_s = 6 years (SC < a_is*IO) or 9 years (SC > a_is*IO); static gain 1.8"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 461, Section VI-A, equations (11)-(13)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "During the growth phase (NRFR > 0.5) with FIOAA constant, FIOAS can be approximated by a first-order system, linearised around FIOAS = 0.122 with time constant of approximately 5 years (4.8) and static value FIOAS_stat = 0.122 + 0.22*(U - 0.45); FIOAS rises as U rises, partially compensating the effect of U on capital growth."
+  type: core_structure
+  value: "time constant 4.8 years (about 5); FIOAS_stat = 0.122 + 0.22*(U - 0.45); linearisation point FIOAS = 0.122, U = 0.45"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 462, Section VI-B, equations (19)-(24)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Replacing the whole service subsystem (as it influences capital growth) by the FIOAS state equation (19) gives only minor changes relative to the standard run (decline in IC and SC a few years earlier)."
+  type: reduction_size
+  qualitative: true
+  source: "Thissen, 1976, p. 462, Section VI-B"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Growth phase linearisation of the IC-SC system (NRFR > 0.5, FCAOR = 0.05, FIOAA = 0.12, FIOAS linear with a_fi = -0.20, b_fi = 0.30): first eigenvalue lambda1 = 0.032 per year with eigenvector V1 = (1, 0.47)."
+  type: core_structure
+  value: "lambda1 = 0.032 (per year); V1 = (1, 0.47)"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 463, Section VI-C, equation (28)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Growth phase linearisation of the IC-SC system: second eigenvalue lambda2 = -0.23 per year with eigenvector V2 = (1, -1.69)."
+  type: core_structure
+  value: "lambda2 = -0.23 (per year); V2 = (1, -1.69)"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 463, Section VI-C, equation (28)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "The positive eigenvalue gives exponential growth of the IC-SC component along V1 with a doubling time of about 22 years; the component along V2 declines, so (IC, SC) approaches V1."
+  type: behaviour
+  value: "doubling time about 22 years"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 463, Section VI-C, Fig. 11"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "The eigenvalue condition A11*A22 - A12*A21 < 0 (sufficient for one positive and one negative eigenvalue) divides the FIOAA-FCAOR plane into growth and decline areas; for all 0 < FIOAA < 0.4 and 0.05 < FCAOR <= 1 the matrix A has either two negative eigenvalues or one positive and one negative."
+  type: core_structure
+  value: "0 < FIOAA < 0.4; 0.05 < FCAOR <= 1; condition A11*A22 - A12*A21 < 0"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 463, Section VI-C, equations (25), (26), Fig. 10"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "The 1900 initialisation of IC and SC deviates from the positive eigenvector V1: for FIOAA = 0.12 the SC/IC ratio along V1 would be 0.47 while the actual ratio is 0.68; the state vector nevertheless approaches V1 within a few decades."
+  type: behaviour
+  value: "SC/IC = 0.47 on V1 versus 0.68 actual in 1900"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 463, Section VI-C"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Run backwards in time the linearised IC-SC model has eigenvalue signs effectively reversed: the V1 component decays with a time constant of 31 years and the V2 component grows with time constant 4.3 years, so IC becomes negative within a few decades. Backcasting reveals strong negative feedback loops and imperfect initialisation, not invalid structure."
+  type: behaviour
+  value: "backward V1 decay constant 31 years; backward V2 growth time constant 4.3 years"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, pp. 463-464, Section VI-C"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Decline phase (NRFR < 0.5) analytical state-space trajectory in the IC-NRFR plane (equations (33), (34), for FIOAI = 0.32) agrees closely with the standard-run trajectory; IC inevitably tends to zero in the long run unless NRI = infinity, a_pc = 0, or FCAOR stays at 0.05, and part of the resources is left unused."
+  type: behaviour
+  qualitative: true
+  source: "Thissen, 1976, pp. 464-465, Section VI-D, equations (33), (34), Fig. 12"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "In the decline phase the group ICOR/ALIC also appears; multiplying ICOR and ALIC by the same constant leaves the IC-NRFR trajectory unchanged but shifts the growth-and-decline pattern to the right in time, with peak IC and ultimate NRFR unaffected."
+  type: leverage_parameter
+  qualitative: true
+  source: "Thissen, 1976, p. 465, Section VI-D, conclusion 2"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Alternative FCAOR table FCAOR = a_fc*NRFR + b_fc (NRFR < 0.5): for all resources to be used up at the end of the standard run b_fc must be 0.77 and a_fc = -1.44, showing the ultimate NRFR can be chosen through a_fc and b_fc."
+  type: leverage_parameter
+  value: "b_fc = 0.77; a_fc = -1.44"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 465, Section VI-D, equations (35), (36)"
+  version: "World3, ultimate version of Meadows et al. 1974; standard run"
+
+- case: B3-3b
+  finding: "Job sector: CUF differs from 1 only if IOPC exceeds about 1500 dollars/person-year (few agricultural inputs per hectare and/or labour force smaller than jobs), i.e. in off-normal runs only during decline; the author judges the job sector tentative and not worth more attention."
+  type: core_structure
+  value: "CUF differs from 1 only for IOPC above approximately 1500 dollars/person-year"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 465, Section VII-A"
+  version: "World3, ultimate version of Meadows et al. 1974; nonstandard runs"
+
+- case: B3-3b
+  finding: "Population influence on the capital and resource sector via the ISOPC table is negligible as long as IOPC is below 1600; for IOPC above 1000 the PCRUM slope diminishes (lower resource usage than linear). The direct influence of population is only slight for a wide range of IOPC; the influence via agriculture (FIOAA) is not so often negligible."
+  type: core_structure
+  value: "ISOPC negligible-nonlinearity limit IOPC < 1600; PCRUM slope diminishes above IOPC 1000; standard-run IOPC does not exceed 400"
+  qualitative: false
+  digitised: false
+  source: "Thissen, 1976, p. 465, Section VII-B"
+  version: "World3, ultimate version of Meadows et al. 1974; nonstandard runs"

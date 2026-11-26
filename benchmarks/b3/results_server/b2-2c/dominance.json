@@ -1,0 +1,528 @@
+{
+  "loop_count": 25,
+  "loops": [
+    {
+      "id": 18,
+      "mean_relative_score": -0.22953560958335367,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.295,
+      "variables": [
+        "Delivery Rate Average DRA11",
+        "adjusting DRA"
+      ]
+    },
+    {
+      "id": 9,
+      "mean_relative_score": -0.18445569927703265,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.24,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing market delivery delay",
+        "Delivery Delay Recognized by Market DDRM14",
+        "Sales Effectiveness from Delay Multiplier SEDM15",
+        "Sales Effectiveness from Delay SW SEDS",
+        "Sales Effectiveness SE18",
+        "Orders Booked OB3"
+      ]
+    },
+    {
+      "id": 22,
+      "mean_relative_score": -0.11156738385988392,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.145,
+      "variables": [
+        "Delivery Delay Taditional DDT19",
+        "decreasing traditional delivery delay"
+      ]
+    },
+    {
+      "id": 21,
+      "mean_relative_score": -0.1459732054145345,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.135,
+      "variables": [
+        "Delivery Delay Recognized by Market DDRM14",
+        "decreasing market delivery delay"
+      ]
+    },
+    {
+      "id": 12,
+      "mean_relative_score": 0.11428255834068819,
+      "polarity": "R",
+      "scored": true,
+      "share_of_time_dominant": 0.095,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing market delivery delay",
+        "Delivery Delay Recognized by Market DDRM14",
+        "Sales Effectiveness from Delay Multiplier SEDM15",
+        "Sales Effectiveness from Delay SW SEDS",
+        "Sales Effectiveness SE18",
+        "Orders Booked OB3"
+      ]
+    },
+    {
+      "id": 1,
+      "mean_relative_score": -0.0784242700723708,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.065,
+      "variables": [
+        "Salesmen S1",
+        "Salesmen Hired SH6"
+      ]
+    },
+    {
+      "id": 20,
+      "mean_relative_score": -0.10743999127795784,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.02,
+      "variables": [
+        "Delivery Delay Recognized by Company DDRC13",
+        "reducing company delivery delay"
+      ]
+    },
+    {
+      "id": 13,
+      "mean_relative_score": -0.028321282174178317,
+      "polarity": "B",
+      "scored": true,
+      "share_of_time_dominant": 0.005,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10"
+      ]
+    },
+    {
+      "id": 2,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Salesmen S1",
+        "Salesman Switch SSW2",
+        "Orders Booked OB3",
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Budget B4",
+        "Indicated Salesmen IS5",
+        "Salesmen Hired SH6"
+      ]
+    },
+    {
+      "id": 3,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Salesmen S1",
+        "Salesman Switch SSW2",
+        "Orders Booked OB3",
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Budget B4",
+        "Indicated Salesmen IS5",
+        "Salesmen Hired SH6"
+      ]
+    },
+    {
+      "id": 4,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Salesmen S1",
+        "Salesman Switch SSW2",
+        "Orders Booked OB3",
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing traditional delivery delay",
+        "Delivery Delay Taditional DDT19",
+        "Delivery Delay Operating Goal DDOG20",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Budget B4",
+        "Indicated Salesmen IS5",
+        "Salesmen Hired SH6"
+      ]
+    },
+    {
+      "id": 5,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Salesmen S1",
+        "Salesman Switch SSW2",
+        "Orders Booked OB3",
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing traditional delivery delay",
+        "Delivery Delay Taditional DDT19",
+        "Delivery Delay Operating Goal DDOG20",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Budget B4",
+        "Indicated Salesmen IS5",
+        "Salesmen Hired SH6"
+      ]
+    },
+    {
+      "id": 6,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Salesmen S1",
+        "Salesman Switch SSW2",
+        "Orders Booked OB3",
+        "Backlog BL7",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Budget B4",
+        "Indicated Salesmen IS5",
+        "Salesmen Hired SH6"
+      ]
+    },
+    {
+      "id": 7,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Rate DR10"
+      ]
+    },
+    {
+      "id": 8,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10"
+      ]
+    },
+    {
+      "id": 10,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing traditional delivery delay",
+        "Delivery Delay Taditional DDT19",
+        "Delivery Delay Operating Goal DDOG20",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Rate DR10"
+      ]
+    },
+    {
+      "id": 11,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Backlog BL7",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing traditional delivery delay",
+        "Delivery Delay Taditional DDT19",
+        "Delivery Delay Operating Goal DDOG20",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9",
+        "Delivery Rate DR10"
+      ]
+    },
+    {
+      "id": 14,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27"
+      ]
+    },
+    {
+      "id": 15,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9"
+      ]
+    },
+    {
+      "id": 16,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing traditional delivery delay",
+        "Delivery Delay Taditional DDT19",
+        "Delivery Delay Operating Goal DDOG20",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27"
+      ]
+    },
+    {
+      "id": 17,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Delivery Rate DR10",
+        "adjusting DRA",
+        "Delivery Rate Average DRA11",
+        "Delivery Delay Indicated DDI12",
+        "increasing company delivery delay",
+        "Delivery Delay Recognized by Company DDRC13",
+        "increasing traditional delivery delay",
+        "Delivery Delay Taditional DDT19",
+        "Delivery Delay Operating Goal DDOG20",
+        "Delivery Delay Condition DDC21",
+        "Capacity Expansion Fraction",
+        "CEFSW23",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25",
+        "Production Capacity PC27",
+        "Delivery Delay Minimum DDM8",
+        "Production Capacity Fraction PCF9"
+      ]
+    },
+    {
+      "id": 19,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "Production Capacity PC27",
+        "Production Capacity Ordering PCO24",
+        "delay3 stage 1 of production capacity receiving pcr25",
+        "delay3 stage 2 of production capacity receiving pcr25",
+        "delay3 stage 3 of production capacity receiving pcr25",
+        "Production Capacity Receiving PCR25"
+      ]
+    },
+    {
+      "id": 23,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "delay3 stage 1 of production capacity receiving pcr25"
+      ]
+    },
+    {
+      "id": 24,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "delay3 stage 2 of production capacity receiving pcr25"
+      ]
+    },
+    {
+      "id": 25,
+      "mean_relative_score": 0.0,
+      "polarity": "?",
+      "scored": true,
+      "share_of_time_dominant": 0.0,
+      "variables": [
+        "delay3 stage 3 of production capacity receiving pcr25"
+      ]
+    }
+  ],
+  "runs": 1,
+  "times": 200,
+  "truncated": false,
+  "unscored_loops": 0
+}

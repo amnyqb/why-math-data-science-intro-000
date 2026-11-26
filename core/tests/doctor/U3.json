@@ -1,0 +1,68 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE U3: a percent unit"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "Share",
+  "kind": "constant",
+  "equation": "5",
+  "units": "%",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Base",
+  "kind": "constant",
+  "equation": "100",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Part",
+  "kind": "aux",
+  "equation": "Base * Share",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "0",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "F",
+  "kind": "flow",
+  "equation": "Part",
+  "units": "widget/Day",
+  "doc": "test",
+  "to": "S"
+ }
+]

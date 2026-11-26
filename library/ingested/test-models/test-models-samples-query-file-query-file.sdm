@@ -1,0 +1,6888 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "NewOrderPattern",
+      "kind": "Lookup",
+      "equation": "Time/UnitConversionFactor",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        657.0,
+        164.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          530.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          60.0,
+          0.0
+        ],
+        [
+          61.0,
+          500.0
+        ],
+        [
+          62.0,
+          0.0
+        ],
+        [
+          120.0,
+          0.0
+        ],
+        [
+          121.0,
+          500.0
+        ],
+        [
+          122.0,
+          0.0
+        ],
+        [
+          180.0,
+          0.0
+        ],
+        [
+          181.0,
+          500.0
+        ],
+        [
+          182.0,
+          0.0
+        ],
+        [
+          210.0,
+          0.0
+        ],
+        [
+          211.0,
+          500.0
+        ],
+        [
+          212.0,
+          0.0
+        ],
+        [
+          270.0,
+          0.0
+        ],
+        [
+          271.0,
+          500.0
+        ],
+        [
+          272.0,
+          0.0
+        ],
+        [
+          330.0,
+          0.0
+        ],
+        [
+          331.0,
+          500.0
+        ],
+        [
+          332.0,
+          0.0
+        ],
+        [
+          390.0,
+          0.0
+        ],
+        [
+          391.0,
+          500.0
+        ],
+        [
+          392.0,
+          0.0
+        ],
+        [
+          420.0,
+          0.0
+        ],
+        [
+          421.0,
+          500.0
+        ],
+        [
+          422.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          451.0,
+          350.0
+        ],
+        [
+          452.0,
+          0.0
+        ],
+        [
+          465.0,
+          0.0
+        ],
+        [
+          466.0,
+          350.0
+        ],
+        [
+          467.0,
+          0.0
+        ],
+        [
+          480.0,
+          0.0
+        ],
+        [
+          481.0,
+          350.0
+        ],
+        [
+          482.0,
+          0.0
+        ],
+        [
+          495.0,
+          0.0
+        ],
+        [
+          496.0,
+          400.0
+        ],
+        [
+          497.0,
+          0.0
+        ],
+        [
+          510.0,
+          0.0
+        ],
+        [
+          511.0,
+          400.0
+        ],
+        [
+          512.0,
+          0.0
+        ],
+        [
+          525.0,
+          0.0
+        ],
+        [
+          526.0,
+          435.0
+        ],
+        [
+          527.0,
+          0.0
+        ],
+        [
+          540.0,
+          0.0
+        ],
+        [
+          541.0,
+          15.0
+        ],
+        [
+          542.0,
+          0.0
+        ],
+        [
+          575.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "UnitConversionFactor",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        717.0,
+        116.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "IncomeDue",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        1543.0,
+        610.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "IncomeDelay",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        1471.0,
+        538.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "JwiresIncome",
+      "kind": "Flow",
+      "equation": "DELAY FIXED(RetailerIncome, IncomeDelay , 0 )",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        863.0,
+        603.5
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 3,
+      "to": 73,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "RetailerIncome",
+      "kind": "Flow",
+      "equation": "Downpayment",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        1423.0,
+        610.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 3,
+      "from_pt": [
+        1323.0,
+        610.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "GST Expenses",
+      "kind": "Aux",
+      "equation": "(GSTReceived-GSTPaid)*Sales",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        1566.0,
+        868.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "RevenueDue",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        2158.0,
+        215.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "I2",
+      "kind": "Flow",
+      "equation": "(SalesPricePerStove+GSTReceived)*Sales*I2Fraction*(1-I2Default)",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2038.0,
+        215.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 8,
+      "from_pt": [
+        1938.0,
+        215.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "GSTReceived",
+      "kind": "Aux",
+      "equation": "SalesPricePerStove*GSTpercent",
+      "units": "Rs/Stoves",
+      "comment": "Rcd: received",
+      "pos": [
+        2050.0,
+        540.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "I1",
+      "kind": "Flow",
+      "equation": "(SalesPricePerStove+GSTReceived)*Sales*I1Fraction*(1-I1Default)",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2038.0,
+        215.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 8,
+      "from_pt": [
+        1938.0,
+        215.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "GSTPaid",
+      "kind": "Aux",
+      "equation": "AppliedCost*GSTpercent",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        718.0,
+        765.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "GSTpercent",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        653.0,
+        658.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "ParamResearchRC",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        1531.0,
+        782.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "NumberOfPersonForRandM",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        2798.0,
+        1249.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "AwarenessMarketingCost",
+      "kind": "Flow",
+      "equation": "(Banners +Pamphlets +VideosAndPR)/DebitDay +LocalNewsChannel+LocalNewspaper",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2508.0,
+        1369.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 20,
+      "from_pt": [
+        2408.0,
+        1369.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "RetailerSalary",
+      "kind": "Aux",
+      "equation": "PULSE(0, FreqRetailer )*Retailers*RsPerDayPerRetailer",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2999.0,
+        738.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "CCCsalary",
+      "kind": "Aux",
+      "equation": "PULSE(0, FreqCCC )*CCCs*RsPerDayPerCCC",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        3134.0,
+        653.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Channel",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "Channel",
+      "comment": "",
+      "pos": [
+        2037.0,
+        1118.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "CumAwarenessMarketingCost",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        2628.0,
+        1369.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "CumResearchRelatedCost",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        3153.0,
+        424.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "RsPerDayPerRetailer",
+      "kind": "Aux",
+      "equation": "1000/30",
+      "units": "Rs/(Day*Person)",
+      "comment": "\"Rs/Month/Retailer\" 1000",
+      "pos": [
+        2891.0,
+        833.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "FreqRetailer",
+      "kind": "Aux",
+      "equation": "9*30",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        3051.0,
+        868.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Newspaper",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "Newspaper",
+      "comment": "",
+      "pos": [
+        2123.0,
+        1336.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "EquipmentsCost",
+      "kind": "Aux",
+      "equation": "PULSE(21+1,1)*(Qty laptops*PricePerLaptop+QtyTab*PricePerTablet)/DebitDay",
+      "units": "Rs/Day",
+      "comment": "Start of the fourth week",
+      "pos": [
+        2422.0,
+        751.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 26,
+      "name": "FreqRetailersAndCCC",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        3145.0,
+        1180.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 27,
+      "name": "FreqCCC",
+      "kind": "Aux",
+      "equation": "9*30",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        3248.0,
+        785.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 28,
+      "name": "FreqNews",
+      "kind": "Aux",
+      "equation": "10*30",
+      "units": "Day",
+      "comment": "10 month",
+      "pos": [
+        2067.0,
+        1193.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 29,
+      "name": "FreqNewspaper",
+      "kind": "Aux",
+      "equation": "5*30",
+      "units": "Day",
+      "comment": "5 months",
+      "pos": [
+        2329.0,
+        1288.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 30,
+      "name": "RandMRetailersCost",
+      "kind": "Aux",
+      "equation": "NumberOfPersonForRandM*RsPerTrainingRandMReatilers",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2910.0,
+        1148.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 31,
+      "name": "RsPerDayPerCCC",
+      "kind": "Aux",
+      "equation": "2000/30",
+      "units": "Rs/(Day*Person)",
+      "comment": "Rs/Month/CCC is 2000",
+      "pos": [
+        3257.0,
+        737.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 32,
+      "name": "Retailers",
+      "kind": "Aux",
+      "equation": "TotalShops*RetailerPerShop",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        3206.0,
+        857.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 33,
+      "name": "RsPerTrainingRandMReatilers",
+      "kind": "Constant",
+      "equation": "10000",
+      "units": "Rs/(Day*Person)",
+      "comment": "",
+      "pos": [
+        2994.0,
+        1335.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 34,
+      "name": "RetailersCCCTrainingCost",
+      "kind": "Aux",
+      "equation": "FreqRetailersAndCCC*RsPerTrainingRetailerCCC",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        3018.0,
+        1068.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 35,
+      "name": "RsPerDayPerChannel",
+      "kind": "Aux",
+      "equation": "2000/30",
+      "units": "Rs/(Day*Channel)",
+      "comment": "\"Rs/Month/Channel\" 2000",
+      "pos": [
+        1935.0,
+        1163.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 36,
+      "name": "RsPerDayPerNewspaper",
+      "kind": "Aux",
+      "equation": "5000/30",
+      "units": "Rs/Day/Newspaper",
+      "comment": "\"Rs/Month/Newspaper\"5000",
+      "pos": [
+        2096.0,
+        1251.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 37,
+      "name": "LocalNewspaper",
+      "kind": "Aux",
+      "equation": "PULSE(0, FreqNewspaper )*RsPerDayPerNewspaper*Newspaper",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2363.0,
+        1205.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 38,
+      "name": "RsPerTrainingRetailerCCC",
+      "kind": "Constant",
+      "equation": "25000",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        3073.0,
+        1267.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 39,
+      "name": "ResearchRelatedCost",
+      "kind": "Flow",
+      "equation": "UserAdoptionCompensation+RetailerSalary+CCCsalary",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        3033.0,
+        424.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 21,
+      "from_pt": [
+        2933.0,
+        424.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 40,
+      "name": "LocalNewsChannel",
+      "kind": "Aux",
+      "equation": "PULSE(0, FreqNews )*RsPerDayPerChannel*Channel",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2288.0,
+        1141.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 41,
+      "name": "Pamphlets",
+      "kind": "Aux",
+      "equation": "PULSE(14+1,1 )*QtyPamphlet*RsPerPamphlet",
+      "units": "Rs",
+      "comment": "start of the third week",
+      "pos": [
+        2223.0,
+        1060.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 42,
+      "name": "Banners",
+      "kind": "Aux",
+      "equation": "PULSE(14+1,1 )*QtyBanners*RsPerbanner",
+      "units": "Rs",
+      "comment": "once in the start of third week",
+      "pos": [
+        2291.0,
+        997.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 43,
+      "name": "DebitDay",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        2622.0,
+        749.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 44,
+      "name": "PrintingStationaryCost",
+      "kind": "Aux",
+      "equation": "PULSE(7+1,1)*50000",
+      "units": "Rs/Day",
+      "comment": "START OF THE second WEEK ITSELF",
+      "pos": [
+        2706.0,
+        973.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 45,
+      "name": "RsPerbanner",
+      "kind": "Constant",
+      "equation": "800",
+      "units": "Rs/unit",
+      "comment": "",
+      "pos": [
+        1978.0,
+        950.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 46,
+      "name": "Qty laptops",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "unit",
+      "comment": "",
+      "pos": [
+        2554.0,
+        540.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 47,
+      "name": "QtyTab",
+      "kind": "Constant",
+      "equation": "0",
+      "units": "unit",
+      "comment": "",
+      "pos": [
+        2411.0,
+        846.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 48,
+      "name": "QtyBanners",
+      "kind": "Constant",
+      "equation": "40",
+      "units": "unit",
+      "comment": "",
+      "pos": [
+        2082.0,
+        903.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 49,
+      "name": "QtyPamphlet",
+      "kind": "Constant",
+      "equation": "100000",
+      "units": "unit",
+      "comment": "",
+      "pos": [
+        2047.0,
+        1004.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 50,
+      "name": "VideosAndPR",
+      "kind": "Aux",
+      "equation": "PULSE(14+1,1 )*50000",
+      "units": "Rs",
+      "comment": "once in the start of the third week",
+      "pos": [
+        2478.0,
+        1162.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 51,
+      "name": "PricePerLaptop",
+      "kind": "Constant",
+      "equation": "40000",
+      "units": "Rs/unit",
+      "comment": "",
+      "pos": [
+        2422.0,
+        610.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 52,
+      "name": "PricePerTablet",
+      "kind": "Constant",
+      "equation": "5000",
+      "units": "Rs/unit",
+      "comment": "",
+      "pos": [
+        2309.0,
+        900.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 53,
+      "name": "RsPerPamphlet",
+      "kind": "Constant",
+      "equation": "0.5",
+      "units": "Rs/unit",
+      "comment": "",
+      "pos": [
+        1878.0,
+        1047.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 54,
+      "name": "ProfessionalECookingCost",
+      "kind": "Constant",
+      "equation": "75000",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2804.0,
+        1094.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 55,
+      "name": "TOTForFO",
+      "kind": "Constant",
+      "equation": "15000",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        3009.0,
+        987.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 56,
+      "name": "ProjectLeadCostPerMonth",
+      "kind": "Aux",
+      "equation": "ProjectLead*RsPerMonthPerProjectLead",
+      "units": "Rs/Month",
+      "comment": "",
+      "pos": [
+        1344.0,
+        950.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 57,
+      "name": "ProjectLead",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        893.0,
+        952.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 58,
+      "name": "RsPerMonthPerProjectLead",
+      "kind": "Aux",
+      "equation": "3750*30",
+      "units": "Rs/(Month*Person)",
+      "comment": "",
+      "pos": [
+        1075.0,
+        972.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 59,
+      "name": "I2Default",
+      "kind": "Aux",
+      "equation": "0/100",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        2440.0,
+        474.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 60,
+      "name": "DownpaymentFraction",
+      "kind": "Aux",
+      "equation": "100/100",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        1841.0,
+        753.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 61,
+      "name": "I2Duration",
+      "kind": "Constant",
+      "equation": "60",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        2236.0,
+        743.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 62,
+      "name": "I1Default",
+      "kind": "Aux",
+      "equation": "0/100",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        2576.0,
+        245.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 63,
+      "name": "I1Due",
+      "kind": "Flow",
+      "equation": "DELAY FIXED(I1, I1Duration , 0)",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2010.0,
+        437.5
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 8,
+      "to": 103,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 64,
+      "name": "I1Duration",
+      "kind": "Constant",
+      "equation": "30",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        2220.0,
+        637.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 65,
+      "name": "I1Fraction",
+      "kind": "Aux",
+      "equation": "0/100",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        2482.0,
+        276.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 66,
+      "name": "I2Due",
+      "kind": "Flow",
+      "equation": "DELAY FIXED(I2, I2Duration , 0 )",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2010.0,
+        437.5
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 8,
+      "to": 103,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 67,
+      "name": "I2Fraction",
+      "kind": "Aux",
+      "equation": "0/100",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        2273.0,
+        468.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 68,
+      "name": "AddnGrant",
+      "kind": "Aux",
+      "equation": "(PULSE(1,1)*9.422*1e+06 + PULSE(1,1)*340)",
+      "units": "Rs/Day",
+      "comment": "(PULSE(1,1)*9.422*1e+06 + PULSE(1,1)*340)",
+      "pos": [
+        1093.0,
+        660.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 69,
+      "name": "EnergyConsumptionRate",
+      "kind": "Flow",
+      "equation": "kWhPerStovePerDay*WorkingProductsInHouseholds",
+      "units": "unit/Day",
+      "comment": "",
+      "pos": [
+        37.0,
+        377.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 72,
+      "from_pt": [
+        -63.0,
+        377.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 70,
+      "name": "ParamFC",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        1565.0,
+        716.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 71,
+      "name": "ParamSetupC",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Dmnl",
+      "comment": "",
+      "pos": [
+        1241.0,
+        822.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 72,
+      "name": "TotalEnergyConsumption",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "unit",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        157.0,
+        377.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 73,
+      "name": "CumIncome",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        183.0,
+        597.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 74,
+      "name": "FixedCost",
+      "kind": "Aux",
+      "equation": "(PULSE TRAIN(30, 1 , 30, 571 )*(TotalManpowerMonthlyCost)/DebitDayPerMonth)",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2735.0,
+        201.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 75,
+      "name": "InitialSetupCost",
+      "kind": "Aux",
+      "equation": "PrintingStationaryCost  +TrainingCost + EquipmentsCost +AwarenessMarketingCost",
+      "units": "Rs/Day",
+      "comment": "sum of all initial costs",
+      "pos": [
+        2577.0,
+        870.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 76,
+      "name": "CumSalesRelatedCost",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        631.0,
+        1400.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 77,
+      "name": "JwiresMargin",
+      "kind": "Constant",
+      "equation": "521",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        1150.0,
+        1451.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 78,
+      "name": "SalesPricePerStove",
+      "kind": "Constant",
+      "equation": "4271",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        1897.0,
+        473.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 79,
+      "name": "AppliedCost",
+      "kind": "Aux",
+      "equation": "IF THEN ELSE(CumulativeOrder>=OrderQtyWithIoT, CostPriceWithOutIoT , CostPriceISwithIoT    )",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        819.0,
+        534.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 80,
+      "name": "OrderQtyWithIoT",
+      "kind": "Constant",
+      "equation": "1530",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        503.0,
+        412.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 81,
+      "name": "CumExpense",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        175.0,
+        844.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 82,
+      "name": "CostPriceWithOutIoT",
+      "kind": "Constant",
+      "equation": "3412.5",
+      "units": "Rs/Stoves",
+      "comment": "old value   0*3250",
+      "pos": [
+        393.0,
+        460.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 83,
+      "name": "IoTCost",
+      "kind": "Constant",
+      "equation": "2100",
+      "units": "Rs/Stoves",
+      "comment": "5513-3250",
+      "pos": [
+        388.0,
+        613.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 84,
+      "name": "OrderRate",
+      "kind": "Flow",
+      "equation": "Orders",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        424.0,
+        319.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 85,
+      "from_pt": [
+        324.0,
+        319.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 85,
+      "name": "CumulativeOrder",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        544.0,
+        319.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 86,
+      "name": "MECSGrantRate",
+      "kind": "Flow",
+      "equation": "PULSE(1,1)*2.92162e+06 + PULSE(1,1)*5 + PULSE(2*30,1)*2.75625e+06 + PULSE(4*30,1)*2.75625e+06",
+      "units": "Rs/Day",
+      "comment": "PULSE(1,1)*2.92162e+06 + PULSE(1,1)*5 + PULSE(2*30,1)*2.75625e+06 +    PULSE(4*30,1)*2.75625e+06   at start of 1st, 3rd and 5th month   PULSE(1,0)*2.92162e+06 + PULSE(1,0)*5 = First Grant amount..This was    chosen, because Vensim neglects the values after 5 decimal places if we    put 2921625 as our first grant, so both values are separated",
+      "pos": [
+        63.0,
+        597.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 73,
+      "from_pt": [
+        -37.0,
+        597.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 87,
+      "name": "UserAdoptionCompensation",
+      "kind": "Aux",
+      "equation": "PULSE(270+1,1)*NoOfStoves*RsPerStove/DebitDay",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        2772.0,
+        606.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 88,
+      "name": "JWIRESStaff",
+      "kind": "Aux",
+      "equation": "Accountants + Storekeeper + ProjectManager + NumberOfFOs + ProjectLead",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        561.0,
+        1112.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 89,
+      "name": "RetailerPerShop",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Person/Shop",
+      "comment": "",
+      "pos": [
+        1912.0,
+        1459.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 90,
+      "name": "NoOfStoves",
+      "kind": "Constant",
+      "equation": "1500",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        2909.0,
+        701.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 91,
+      "name": "RsPerStove",
+      "kind": "Constant",
+      "equation": "750",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        2767.0,
+        738.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 92,
+      "name": "kWhPerStovePerDay",
+      "kind": "Aux",
+      "equation": "RANDOM UNIFORM( 0.23 , 0.53 , 1 )",
+      "units": "unit/Stoves/Day",
+      "comment": "RANDOM UNIFORM( 0.23 , 0.53 , 1 ): from MECS phase II activation plan    report",
+      "pos": [
+        240.0,
+        174.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 93,
+      "name": "DispatchRate",
+      "kind": "Flow",
+      "equation": "MIN(RetailersStockDiscrepancy/LT2,StockAtJwires/Minimum Leadtime)",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        1399.5,
+        378.5
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 110,
+      "to": 109,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 94,
+      "name": "OrderPattern",
+      "kind": "Lookup",
+      "equation": "Time/UnitConversionFactor",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        457.0,
+        248.0
+      ],
+      "table": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          530.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          60.0,
+          0.0
+        ],
+        [
+          61.0,
+          500.0
+        ],
+        [
+          62.0,
+          0.0
+        ],
+        [
+          120.0,
+          0.0
+        ],
+        [
+          121.0,
+          500.0
+        ],
+        [
+          122.0,
+          0.0
+        ],
+        [
+          210.0,
+          0.0
+        ],
+        [
+          211.0,
+          500.0
+        ],
+        [
+          212.0,
+          0.0
+        ],
+        [
+          270.0,
+          0.0
+        ],
+        [
+          271.0,
+          500.0
+        ],
+        [
+          272.0,
+          0.0
+        ],
+        [
+          330.0,
+          0.0
+        ],
+        [
+          331.0,
+          500.0
+        ],
+        [
+          332.0,
+          0.0
+        ],
+        [
+          390.0,
+          0.0
+        ],
+        [
+          391.0,
+          700.0
+        ],
+        [
+          392.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          451.0,
+          700.0
+        ],
+        [
+          452.0,
+          0.0
+        ],
+        [
+          480.0,
+          0.0
+        ],
+        [
+          481.0,
+          800.0
+        ],
+        [
+          482.0,
+          0.0
+        ],
+        [
+          510.0,
+          0.0
+        ],
+        [
+          511.0,
+          800.0
+        ],
+        [
+          512.0,
+          0.0
+        ],
+        [
+          540.0,
+          0.0
+        ],
+        [
+          541.0,
+          800.0
+        ],
+        [
+          542.0,
+          0.0
+        ],
+        [
+          575.0,
+          0.0
+        ]
+      ],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 95,
+      "name": "BalanceFunds",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        1240.0,
+        618.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 96,
+      "name": "Expenses",
+      "kind": "Flow",
+      "equation": "Order Cost + SalesRelatedCost +InitialSetupCost*ParamSetupC + FixedCost*ParamFC+  ResearchRelatedCost  *ParamResearchRC + GST Expenses",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        55.0,
+        844.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 81,
+      "from_pt": [
+        -45.0,
+        844.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 97,
+      "name": "Downpayment",
+      "kind": "Flow",
+      "equation": "Sales*(SalesPricePerStove+GSTReceived)*DownpaymentFraction",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        1742.0,
+        660.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 103,
+      "from_pt": [
+        1642.0,
+        660.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 98,
+      "name": "Order Cost",
+      "kind": "Aux",
+      "equation": "(Orders*(AppliedCost+GSTPaid))",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        932.0,
+        702.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 99,
+      "name": "Trainees",
+      "kind": "Aux",
+      "equation": "TotalShops*RetailerPerShop + JWIRESStaff + CCCs",
+      "units": "Person",
+      "comment": "30CCC, 10Retailers, 6JWIRESStaff  ~ :SUPPLEMENTARY",
+      "pos": [
+        1844.0,
+        1375.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 100,
+      "name": "TrainingCost",
+      "kind": "Aux",
+      "equation": "PULSE(1,1)*(TOTForFO+ProfessionalECookingCost+RandMRetailersCost+RetailersCCCTrainingCost   )",
+      "units": "Rs/Day",
+      "comment": "start of project itself",
+      "pos": [
+        2822.0,
+        917.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 101,
+      "name": "ProjectManagerCostPerMonth",
+      "kind": "Aux",
+      "equation": "ProjectManager*RsPerMonthPerProjectManager",
+      "units": "Rs/Month",
+      "comment": "",
+      "pos": [
+        1354.0,
+        1023.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 102,
+      "name": "TotalManpowerMonthlyCost",
+      "kind": "Aux",
+      "equation": "AccountantCostPerMonth+StorekeeperCostPerMonth+FOsCostperMonth+ProjectManagerCostPerMonth    + ProjectLeadCostPerMonth",
+      "units": "Rs/Month",
+      "comment": "",
+      "pos": [
+        1593.0,
+        1073.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 103,
+      "name": "Revenue",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Rs",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        1862.0,
+        660.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 104,
+      "name": "Orders",
+      "kind": "Flow",
+      "equation": "OrderPattern*0 + NewOrderPattern*1",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        871.0,
+        378.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 137,
+      "from_pt": [
+        771.0,
+        378.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 105,
+      "name": "SalesRelatedCost",
+      "kind": "Flow",
+      "equation": "Sales*(TeamPaymentPerSale + ShopPaymentPerSale + JwiresMargin)",
+      "units": "Rs/Day",
+      "comment": "",
+      "pos": [
+        511.0,
+        1400.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 76,
+      "from_pt": [
+        411.0,
+        1400.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 106,
+      "name": "SalesPattern",
+      "kind": "Aux",
+      "equation": "PULSE TRAIN(1*30,30,0,2*30-1)*50/30 + PULSE TRAIN(2*30,30,0,3*30-1)*100/30  + PULSE TRAIN   (3*30,30,0,4*30-1)*250/30 + PULSE TRAIN(4*30,30,0,5*30-1)*300/30 + PULSE TRAIN(5*30   ,60,0,7*30-1)*400/30 + PULSE TRAIN(7*30,90,0,10*30-1)*200/30 +  PULSE TRAIN(10*30,60   ,0,12*30-1)*250/30+ PULSE TRAIN(12*30,60,0,14*30-1)*300/30 +  PULSE TRAIN(14*30,30,   0,15*30-1)*500/30  + PULSE TRAIN(15*30,30,0,16*30-1)*600/30  + PULSE TRAIN(16*30,90   ,0,570-1)*800/30",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        1887.0,
+        299.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 107,
+      "name": "CostPriceISwithIoT",
+      "kind": "Aux",
+      "equation": "CostPriceWithOutIoT+IoTCost",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        534.0,
+        549.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 108,
+      "name": "WorkingProductsInHouseholds",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        1960.0,
+        388.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 109,
+      "name": "StockAtRetailers",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        1564.0,
+        374.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 110,
+      "name": "StockAtJwires",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        1235.0,
+        383.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 111,
+      "name": "Accountants",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Person",
+      "comment": "admin or accountant",
+      "pos": [
+        944.0,
+        1173.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 112,
+      "name": "AccountantCostPerMonth",
+      "kind": "Aux",
+      "equation": "Accountants*RsPerMonthPerAccountant",
+      "units": "Rs/Month",
+      "comment": "",
+      "pos": [
+        1344.0,
+        1171.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 113,
+      "name": "DebitDayPerMonth",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Day/Month",
+      "comment": "",
+      "pos": [
+        3007.0,
+        276.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 114,
+      "name": "ProjectManager",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Person",
+      "comment": "Proj. Manager and Proj. Lead",
+      "pos": [
+        907.0,
+        1010.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 115,
+      "name": "StorekeeperCostPerMonth",
+      "kind": "Aux",
+      "equation": "Storekeeper*RsPerMonthPerStorekeeper",
+      "units": "Rs/Month",
+      "comment": "",
+      "pos": [
+        1358.0,
+        1232.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 116,
+      "name": "Storekeeper",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Person",
+      "comment": "storekeeper",
+      "pos": [
+        942.0,
+        1245.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 117,
+      "name": "RsPerMonthPerFO",
+      "kind": "Aux",
+      "equation": "1500*30",
+      "units": "Rs/Month/Person",
+      "comment": "",
+      "pos": [
+        1106.0,
+        1103.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 118,
+      "name": "RsPerMonthPerAccountant",
+      "kind": "Aux",
+      "equation": "1500*30",
+      "units": "Rs/(Month*Person)",
+      "comment": "",
+      "pos": [
+        1119.0,
+        1195.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 119,
+      "name": "RsPerMonthPerStorekeeper",
+      "kind": "Aux",
+      "equation": "763.75*30",
+      "units": "Rs/(Month*Person)",
+      "comment": "",
+      "pos": [
+        1143.0,
+        1265.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 120,
+      "name": "RsPerMonthPerProjectManager",
+      "kind": "Aux",
+      "equation": "3250*30",
+      "units": "Rs/Month/Person",
+      "comment": "",
+      "pos": [
+        1116.0,
+        1031.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 121,
+      "name": "CCCPerShop",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "Person/Shop",
+      "comment": "3CCCs per shop",
+      "pos": [
+        1719.0,
+        1452.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 122,
+      "name": "ShopPaymentPerSale",
+      "kind": "Constant",
+      "equation": "200",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        1386.0,
+        1378.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 123,
+      "name": "FOperDistrict",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Person/District",
+      "comment": "",
+      "pos": [
+        731.0,
+        1105.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 124,
+      "name": "FOsCostperMonth",
+      "kind": "Aux",
+      "equation": "NumberOfFOs*RsPerMonthPerFO",
+      "units": "Rs/Month",
+      "comment": "",
+      "pos": [
+        1343.0,
+        1085.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 125,
+      "name": "TotalShops",
+      "kind": "Aux",
+      "equation": "Districts*ShopsPerDistrict",
+      "units": "Shop",
+      "comment": "",
+      "pos": [
+        1590.0,
+        99.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 126,
+      "name": "TeamPaymentPerSale",
+      "kind": "Constant",
+      "equation": "300",
+      "units": "Rs/Stoves",
+      "comment": "",
+      "pos": [
+        1365.0,
+        1464.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 127,
+      "name": "CCCs",
+      "kind": "Aux",
+      "equation": "CCCPerShop*TotalShops",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        1548.0,
+        1373.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 128,
+      "name": "NumberOfFOs",
+      "kind": "Aux",
+      "equation": "Districts*FOperDistrict",
+      "units": "Person",
+      "comment": "",
+      "pos": [
+        911.0,
+        1090.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 129,
+      "name": "LT1",
+      "kind": "Constant",
+      "equation": "30",
+      "units": "Day",
+      "comment": "LeadtimeSupplierJwires",
+      "pos": [
+        952.0,
+        192.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 130,
+      "name": "LT2",
+      "kind": "Constant",
+      "equation": "3",
+      "units": "Day",
+      "comment": "LeadtimeJwiresRetailer",
+      "pos": [
+        1188.0,
+        227.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 131,
+      "name": "Deliveries",
+      "kind": "Flow",
+      "equation": "DELAY FIXED(Orders, LT1 , 0)",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        1113.0,
+        380.5
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 137,
+      "to": 110,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 132,
+      "name": "DesiredInventoryPerShop",
+      "kind": "Constant",
+      "equation": "10",
+      "units": "Stoves/Shop",
+      "comment": "",
+      "pos": [
+        2033.0,
+        119.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 133,
+      "name": "DesiredStockAtRetailers",
+      "kind": "Aux",
+      "equation": "DesiredInventoryPerShop*ShopsPerDistrict*Districts",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        1824.0,
+        236.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 134,
+      "name": "RetailersStockDiscrepancy",
+      "kind": "Aux",
+      "equation": "(DesiredStockAtRetailers-StockAtRetailers)",
+      "units": "Stoves",
+      "comment": "",
+      "pos": [
+        1496.0,
+        240.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 135,
+      "name": "Districts",
+      "kind": "Constant",
+      "equation": "2",
+      "units": "District",
+      "comment": "",
+      "pos": [
+        1349.0,
+        105.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 136,
+      "name": "Minimum Leadtime",
+      "kind": "Constant",
+      "equation": "1",
+      "units": "Day",
+      "comment": "",
+      "pos": [
+        1522.0,
+        454.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 137,
+      "name": "OrdersInPipeline",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "Stoves",
+      "comment": "~ :SUPPLEMENTARY",
+      "pos": [
+        991.0,
+        378.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 138,
+      "name": "Sales",
+      "kind": "Flow",
+      "equation": "MIN(SalesPattern, StockAtRetailers/Minimum Leadtime)*0 + SalesPattern",
+      "units": "Stoves/Day",
+      "comment": "",
+      "pos": [
+        1762.0,
+        381.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 109,
+      "to": 108,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 139,
+      "name": "ShopsPerDistrict",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "Shop/District",
+      "comment": "",
+      "pos": [
+        1800.0,
+        111.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 140,
+      "name": "BalanceFunds net flow",
+      "kind": "Flow",
+      "equation": "(JwiresIncome-Expenses) + (MECSGrantRate)+ AddnGrant",
+      "units": "",
+      "comment": "",
+      "pos": [
+        1120.0,
+        618.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 95,
+      "from_pt": [
+        1020.0,
+        618.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 141,
+      "from": 1,
+      "to": 104,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 142,
+      "from": 2,
+      "to": 1,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 143,
+      "from": 2,
+      "to": 94,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 144,
+      "from": 4,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 145,
+      "from": 6,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 146,
+      "from": 7,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 147,
+      "from": 9,
+      "to": 66,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 148,
+      "from": 10,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 149,
+      "from": 10,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 150,
+      "from": 10,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 151,
+      "from": 10,
+      "to": 97,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 152,
+      "from": 11,
+      "to": 63,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 153,
+      "from": 12,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 154,
+      "from": 12,
+      "to": 98,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 155,
+      "from": 13,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 156,
+      "from": 13,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 157,
+      "from": 14,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 158,
+      "from": 15,
+      "to": 30,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 159,
+      "from": 16,
+      "to": 75,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 160,
+      "from": 17,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 161,
+      "from": 18,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 162,
+      "from": 19,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 163,
+      "from": 22,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 164,
+      "from": 23,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 165,
+      "from": 24,
+      "to": 37,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 166,
+      "from": 25,
+      "to": 75,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 167,
+      "from": 26,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 168,
+      "from": 27,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 169,
+      "from": 28,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 170,
+      "from": 29,
+      "to": 37,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 171,
+      "from": 30,
+      "to": 100,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 172,
+      "from": 31,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 173,
+      "from": 32,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 174,
+      "from": 33,
+      "to": 30,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 175,
+      "from": 34,
+      "to": 100,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 176,
+      "from": 35,
+      "to": 40,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 177,
+      "from": 36,
+      "to": 37,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 178,
+      "from": 37,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 179,
+      "from": 38,
+      "to": 34,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 180,
+      "from": 39,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 181,
+      "from": 40,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 182,
+      "from": 41,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 183,
+      "from": 42,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 184,
+      "from": 43,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 185,
+      "from": 43,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 186,
+      "from": 43,
+      "to": 87,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 187,
+      "from": 44,
+      "to": 75,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 188,
+      "from": 45,
+      "to": 42,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 189,
+      "from": 46,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 190,
+      "from": 47,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 191,
+      "from": 48,
+      "to": 42,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 192,
+      "from": 49,
+      "to": 41,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 193,
+      "from": 50,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 194,
+      "from": 51,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 195,
+      "from": 52,
+      "to": 25,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 196,
+      "from": 53,
+      "to": 41,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 197,
+      "from": 54,
+      "to": 100,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 198,
+      "from": 55,
+      "to": 100,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 199,
+      "from": 56,
+      "to": 102,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 200,
+      "from": 57,
+      "to": 56,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 201,
+      "from": 57,
+      "to": 88,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 202,
+      "from": 58,
+      "to": 56,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 203,
+      "from": 59,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 204,
+      "from": 60,
+      "to": 97,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 205,
+      "from": 61,
+      "to": 66,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 206,
+      "from": 62,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 207,
+      "from": 64,
+      "to": 63,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 208,
+      "from": 65,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 209,
+      "from": 67,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 210,
+      "from": 70,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 211,
+      "from": 71,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 212,
+      "from": 74,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 213,
+      "from": 75,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 214,
+      "from": 77,
+      "to": 105,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 215,
+      "from": 78,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 216,
+      "from": 78,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 217,
+      "from": 78,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 218,
+      "from": 78,
+      "to": 97,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 219,
+      "from": 79,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 220,
+      "from": 79,
+      "to": 98,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 221,
+      "from": 80,
+      "to": 79,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 222,
+      "from": 82,
+      "to": 79,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 223,
+      "from": 82,
+      "to": 107,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 224,
+      "from": 83,
+      "to": 107,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 225,
+      "from": 85,
+      "to": 79,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 226,
+      "from": 87,
+      "to": 39,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 227,
+      "from": 88,
+      "to": 99,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 228,
+      "from": 89,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 229,
+      "from": 89,
+      "to": 99,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 230,
+      "from": 90,
+      "to": 87,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 231,
+      "from": 91,
+      "to": 87,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 232,
+      "from": 92,
+      "to": 69,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 233,
+      "from": 94,
+      "to": 104,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 234,
+      "from": 97,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 235,
+      "from": 98,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 236,
+      "from": 100,
+      "to": 75,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 237,
+      "from": 101,
+      "to": 102,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 238,
+      "from": 102,
+      "to": 74,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 239,
+      "from": 104,
+      "to": 84,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 240,
+      "from": 104,
+      "to": 98,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 241,
+      "from": 104,
+      "to": 131,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 242,
+      "from": 105,
+      "to": 96,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 243,
+      "from": 106,
+      "to": 138,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 244,
+      "from": 107,
+      "to": 79,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 245,
+      "from": 108,
+      "to": 69,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 246,
+      "from": 109,
+      "to": 134,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 247,
+      "from": 109,
+      "to": 138,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 248,
+      "from": 110,
+      "to": 93,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 249,
+      "from": 111,
+      "to": 88,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 250,
+      "from": 111,
+      "to": 112,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 251,
+      "from": 112,
+      "to": 102,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 252,
+      "from": 113,
+      "to": 74,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 253,
+      "from": 114,
+      "to": 88,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 254,
+      "from": 114,
+      "to": 101,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 255,
+      "from": 115,
+      "to": 102,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 256,
+      "from": 116,
+      "to": 88,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 257,
+      "from": 116,
+      "to": 115,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 258,
+      "from": 117,
+      "to": 124,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 259,
+      "from": 118,
+      "to": 112,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 260,
+      "from": 119,
+      "to": 115,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 261,
+      "from": 120,
+      "to": 101,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 262,
+      "from": 121,
+      "to": 127,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 263,
+      "from": 122,
+      "to": 105,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 264,
+      "from": 123,
+      "to": 128,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 265,
+      "from": 124,
+      "to": 102,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 266,
+      "from": 125,
+      "to": 32,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 267,
+      "from": 125,
+      "to": 99,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 268,
+      "from": 125,
+      "to": 127,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 269,
+      "from": 126,
+      "to": 105,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 270,
+      "from": 127,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 271,
+      "from": 127,
+      "to": 99,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 272,
+      "from": 128,
+      "to": 88,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 273,
+      "from": 128,
+      "to": 124,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 274,
+      "from": 129,
+      "to": 131,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 275,
+      "from": 130,
+      "to": 93,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 276,
+      "from": 132,
+      "to": 133,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 277,
+      "from": 133,
+      "to": 134,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 278,
+      "from": 134,
+      "to": 93,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 279,
+      "from": 135,
+      "to": 125,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 280,
+      "from": 135,
+      "to": 128,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 281,
+      "from": 135,
+      "to": 133,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 282,
+      "from": 136,
+      "to": 93,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 283,
+      "from": 136,
+      "to": 138,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 284,
+      "from": 138,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 285,
+      "from": 138,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 286,
+      "from": 138,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 287,
+      "from": 138,
+      "to": 97,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 288,
+      "from": 138,
+      "to": 105,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 289,
+      "from": 139,
+      "to": 125,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 290,
+      "from": 139,
+      "to": 133,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 291,
+      "from": 5,
+      "to": 140,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 292,
+      "from": 96,
+      "to": 140,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 293,
+      "from": 86,
+      "to": 140,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 294,
+      "from": 68,
+      "to": 140,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 571.0,
+    "time_step": 1.0,
+    "time_units": "Day",
+    "method": "Euler"
+  },
+  "next_id": 294,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

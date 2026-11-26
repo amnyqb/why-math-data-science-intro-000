@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "note": "Clean room: these are Dynamist's own values, taken from its source. None were read from the original program.",
+  "values": [
+    {"name": "new model initial time", "group": "simulation", "value": 0, "unit": "time units", "source": "src/model.rs Settings::default"},
+    {"name": "new model final time", "group": "simulation", "value": 100, "unit": "time units", "source": "src/model.rs Settings::default"},
+    {"name": "new model time step", "group": "simulation", "value": 0.25, "unit": "time units", "source": "src/model.rs Settings::default"},
+    {"name": "new model time unit", "group": "simulation", "value": "Month", "source": "src/model.rs Settings::default"},
+    {"name": "default integration method", "group": "simulation", "value": "Euler", "source": "src/model.rs Settings::default (Runge-Kutta 4 selectable)"},
+    {"name": "example final time", "group": "example model", "value": 60, "unit": "Day", "source": "src/model.rs Model::example"},
+    {"name": "example time step", "group": "example model", "value": 0.125, "unit": "Day", "source": "src/model.rs Model::example"},
+    {"name": "example initial susceptible", "group": "example model", "value": 9990, "unit": "People", "source": "src/model.rs Model::example"},
+    {"name": "example initial infected", "group": "example model", "value": 10, "unit": "People", "source": "src/model.rs Model::example"},
+    {"name": "example contact rate", "group": "example model", "value": 6, "source": "src/model.rs Model::example"},
+    {"name": "example infectivity", "group": "example model", "value": 0.25, "source": "src/model.rs Model::example"},
+    {"name": "example illness duration", "group": "example model", "value": 5, "unit": "Day", "source": "src/model.rs Model::example"},
+    {"name": "snap grid", "group": "diagram", "value": 12, "unit": "points", "source": "src/arrange.rs GRID"},
+    {"name": "snap to grid on start", "group": "diagram", "value": true, "source": "src/app.rs App::new"},
+    {"name": "picture export scale", "group": "export", "value": 3, "unit": "pixels per point (about 288 dpi)", "source": "src/app.rs App::new"},
+    {"name": "optimizer runs (quick / normal / thorough)", "group": "optimize", "value": "150 / 450 / 1500", "source": "src/optimize.rs budget"},
+    {"name": "inbox re-read interval", "group": "inbox", "value": 2, "unit": "s", "source": "src/inbox.rs Inbox::refresh"}
+  ]
+}

@@ -1,0 +1,28 @@
+{UTF-8}
+{ Chapter 2: one balancing loop. A distribution centre refills its stock towards a target. }
+Target Inventory=
+	800
+	~	cases
+	~	|
+Inventory Gap=
+	Target Inventory - Inventory
+	~	cases
+	~	|
+Adjustment Time=
+	5
+	~	day
+	~	Time over which the planner closes the gap.
+	|
+Refills=
+	Inventory Gap / Adjustment Time
+	~	cases/day
+	~	|
+Inventory= INTEG(
+	Refills,
+	200)
+	~	cases
+	~	|
+INITIAL TIME = 0 ~ day ~ |
+FINAL TIME = 30 ~ day ~ |
+TIME STEP = 0.0625 ~ day ~ |
+SAVEPER = 0.0625 ~ day ~ |

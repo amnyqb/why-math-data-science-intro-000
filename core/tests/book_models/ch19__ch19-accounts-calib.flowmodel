@@ -1,0 +1,1002 @@
+{
+ "title": "Imported model",
+ "vars": [
+  {
+   "id": 1,
+   "name": "Base Reps",
+   "kind": "Constant",
+   "equation": "10",
+   "units": "rep",
+   "comment": "Sales reps before the expansion.",
+   "pos": [
+    60,
+    20
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 2,
+   "name": "Added Reps",
+   "kind": "Constant",
+   "equation": "10",
+   "units": "rep",
+   "comment": "Reps added at the expansion.",
+   "pos": [
+    60,
+    100
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 3,
+   "name": "Expansion Month",
+   "kind": "Constant",
+   "equation": "12",
+   "units": "month",
+   "comment": "When the new reps join.",
+   "pos": [
+    200,
+    -30
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 4,
+   "name": "Sales Reps",
+   "kind": "Aux",
+   "equation": "Base Reps + STEP(Added Reps, Expansion Month)",
+   "units": "rep",
+   "comment": "Reps on the payroll.",
+   "pos": [
+    200,
+    60
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 5,
+   "name": "Ramp Time",
+   "kind": "Constant",
+   "equation": "4",
+   "units": "month",
+   "comment": "Average time for a new rep to reach full productivity.",
+   "pos": [
+    470,
+    90
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 6,
+   "name": "Effective Reps",
+   "kind": "Aux",
+   "equation": "SMOOTH(Sales Reps, Ramp Time)",
+   "units": "rep",
+   "comment": "Reps at full productivity equivalent.",
+   "pos": [
+    330,
+    120
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 7,
+   "name": "Rep Productivity",
+   "kind": "Constant",
+   "equation": "3",
+   "units": "accounts/rep/month",
+   "comment": "Accounts won per fully productive rep per month.",
+   "pos": [
+    260,
+    340
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 8,
+   "name": "Acquisitions",
+   "kind": "Flow",
+   "equation": "Effective Reps * Rep Productivity",
+   "units": "accounts/month",
+   "comment": "Accounts won per month.",
+   "pos": [
+    260,
+    230
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 11,
+   "from_pt": [
+    130,
+    230
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 9,
+   "name": "Churn Fraction",
+   "kind": "Constant",
+   "equation": "0.05",
+   "units": "1/month",
+   "comment": "Share of accounts lost per month.",
+   "pos": [
+    580,
+    340
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 10,
+   "name": "Churn",
+   "kind": "Flow",
+   "equation": "Accounts * Churn Fraction",
+   "units": "accounts/month",
+   "comment": "Accounts lost per month.",
+   "pos": [
+    580,
+    230
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": 11,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    720,
+    230
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 11,
+   "name": "Accounts",
+   "kind": "Stock",
+   "equation": "Acquisitions / Churn Fraction",
+   "units": "accounts",
+   "comment": "Active business accounts; starts in balance.",
+   "pos": [
+    420,
+    230
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 12,
+   "name": "Accounts Data Table",
+   "kind": "Lookup",
+   "equation": "",
+   "units": "accounts",
+   "comment": "Observed accounts at each month end (synthetic history, seed 19).",
+   "pos": [
+    310.0,
+    380.0
+   ],
+   "table": [
+    [
+     1.0,
+     594.4
+    ],
+    [
+     2.0,
+     614.9
+    ],
+    [
+     3.0,
+     606.2
+    ],
+    [
+     4.0,
+     590.7
+    ],
+    [
+     5.0,
+     610.1
+    ],
+    [
+     6.0,
+     578.2
+    ],
+    [
+     7.0,
+     608.9
+    ],
+    [
+     8.0,
+     591.6
+    ],
+    [
+     9.0,
+     609.5
+    ],
+    [
+     10.0,
+     606.6
+    ],
+    [
+     11.0,
+     588.5
+    ],
+    [
+     12.0,
+     607.9
+    ],
+    [
+     13.0,
+     608.2
+    ],
+    [
+     14.0,
+     602.1
+    ],
+    [
+     15.0,
+     654.8
+    ],
+    [
+     16.0,
+     652.7
+    ],
+    [
+     17.0,
+     640.8
+    ],
+    [
+     18.0,
+     662.8
+    ],
+    [
+     19.0,
+     702.2
+    ],
+    [
+     20.0,
+     722.2
+    ],
+    [
+     21.0,
+     726.8
+    ],
+    [
+     22.0,
+     775.9
+    ],
+    [
+     23.0,
+     778.7
+    ],
+    [
+     24.0,
+     783.3
+    ],
+    [
+     25.0,
+     809.2
+    ],
+    [
+     26.0,
+     830.0
+    ],
+    [
+     27.0,
+     826.6
+    ],
+    [
+     28.0,
+     853.9
+    ],
+    [
+     29.0,
+     855.1
+    ],
+    [
+     30.0,
+     893.1
+    ],
+    [
+     31.0,
+     921.2
+    ],
+    [
+     32.0,
+     906.6
+    ],
+    [
+     33.0,
+     944.0
+    ],
+    [
+     34.0,
+     934.0
+    ],
+    [
+     35.0,
+     961.4
+    ],
+    [
+     36.0,
+     967.5
+    ],
+    [
+     37.0,
+     968.0
+    ],
+    [
+     38.0,
+     988.4
+    ],
+    [
+     39.0,
+     988.2
+    ],
+    [
+     40.0,
+     1020.4
+    ],
+    [
+     41.0,
+     1025.7
+    ],
+    [
+     42.0,
+     1051.5
+    ],
+    [
+     43.0,
+     1019.7
+    ],
+    [
+     44.0,
+     1065.8
+    ],
+    [
+     45.0,
+     1055.6
+    ],
+    [
+     46.0,
+     1069.8
+    ],
+    [
+     47.0,
+     1067.6
+    ],
+    [
+     48.0,
+     1099.9
+    ]
+   ],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 13,
+   "name": "Accounts Data",
+   "kind": "Aux",
+   "equation": "Accounts Data Table(Time)",
+   "units": "accounts",
+   "comment": "Observed accounts, interpolated between month ends.",
+   "pos": [
+    500.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 14,
+   "name": "Fit Weight",
+   "kind": "Aux",
+   "equation": "STEP(1, 1)",
+   "units": "dmnl",
+   "comment": "Counts error only from the first observation onwards.",
+   "pos": [
+    690.0,
+    380.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 15,
+   "name": "Squared Error Rate",
+   "kind": "Flow",
+   "equation": "Fit Weight * (Accounts - Accounts Data) ^ 2 / Error Period",
+   "units": "accounts*accounts/month",
+   "comment": "Squared gap between model and data, spread over each month.",
+   "pos": [
+    190.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": 17,
+   "from_pt": [
+    90.0,
+    510.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 16,
+   "name": "Error Period",
+   "kind": "Constant",
+   "equation": "1",
+   "units": "month",
+   "comment": "The interval between observations.",
+   "pos": [
+    120.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  },
+  {
+   "id": 17,
+   "name": "Fit Error",
+   "kind": "Stock",
+   "equation": "0",
+   "units": "accounts*accounts",
+   "comment": "Accumulated squared error: the objective to minimise.",
+   "pos": [
+    310.0,
+    510.0
+   ],
+   "table": [],
+   "slider": null,
+   "non_negative": false,
+   "from": null,
+   "to": null,
+   "from_pt": [
+    -80.0,
+    0.0
+   ],
+   "to_pt": [
+    80.0,
+    0.0
+   ],
+   "view": 0,
+   "set": null,
+   "by_item": [],
+   "rollup": "Total",
+   "lever": false,
+   "lever_scale": 1.0
+  }
+ ],
+ "links": [
+  {
+   "id": 18,
+   "from": 1,
+   "to": 4,
+   "bend": 17.5,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 19,
+   "from": 2,
+   "to": 4,
+   "bend": 17.5,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 20,
+   "from": 3,
+   "to": 4,
+   "bend": 10.8,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 21,
+   "from": 4,
+   "to": 6,
+   "bend": -15,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 22,
+   "from": 5,
+   "to": 6,
+   "bend": 10,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 23,
+   "from": 6,
+   "to": 8,
+   "bend": 15.6,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 24,
+   "from": 7,
+   "to": 8,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 25,
+   "from": 11,
+   "to": 10,
+   "bend": -40,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 26,
+   "from": 9,
+   "to": 10,
+   "bend": 0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 27,
+   "from": 8,
+   "to": 11,
+   "bend": 30,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 28,
+   "from": 9,
+   "to": 11,
+   "bend": -20,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 29,
+   "from": 12,
+   "to": 13,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 30,
+   "from": 14,
+   "to": 15,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 31,
+   "from": 11,
+   "to": 15,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 32,
+   "from": 13,
+   "to": 15,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  },
+  {
+   "id": 33,
+   "from": 16,
+   "to": 15,
+   "bend": 0.0,
+   "polarity": "",
+   "delay_mark": false,
+   "weight": 1,
+   "dashed": false,
+   "color": null,
+   "shape": null,
+   "head": null,
+   "via": []
+  }
+ ],
+ "notes": [],
+ "settings": {
+  "initial_time": 0.0,
+  "final_time": 48.0,
+  "time_step": 0.125,
+  "time_units": "month",
+  "method": "Euler"
+ },
+ "next_id": 33,
+ "sheets": [],
+ "groups": [],
+ "modules": [],
+ "scenarios": [],
+ "trend_style": {
+  "title": "",
+  "subtitle": "",
+  "x_label": "",
+  "y_label": "",
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "legend": "TopRight",
+  "grid": true,
+  "line_width": 1.0,
+  "markers": false,
+  "time_marker": true,
+  "compare": true,
+  "colors": []
+ },
+ "sets": [],
+ "arrow_shape": "Curved",
+ "arrow_head": "Filled",
+ "diagram_style": "Cards",
+ "module_style": "Detailed",
+ "functions": [],
+ "checks": [],
+ "defs": [],
+ "instances": [],
+ "manifest": {
+  "title": "",
+  "description": "",
+  "levers": [],
+  "outputs": [],
+  "scenarios": [],
+  "bindings": [],
+  "validity": [],
+  "tests": [],
+  "goals": [],
+  "reduced_from": ""
+ }
+}

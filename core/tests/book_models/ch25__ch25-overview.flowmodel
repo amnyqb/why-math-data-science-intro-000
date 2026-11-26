@@ -1,0 +1,1243 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Customers",
+      "kind": "Stock",
+      "equation": "2000",
+      "units": "customers",
+      "comment": "Active customers.",
+      "pos": [
+        240.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Referrals",
+      "kind": "Flow",
+      "equation": "Customers * (0.07) * Attractiveness * (1 - Customers / (20000))",
+      "units": "customers/month",
+      "comment": "Word of mouth: customers bring customers while the market is not yet served.",
+      "pos": [
+        100.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 1,
+      "from_pt": [
+        10.0,
+        60.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Customer Losses",
+      "kind": "Flow",
+      "equation": "Customers * (0.02) / MAX(0.2, Attractiveness)",
+      "units": "customers/month",
+      "comment": "Churn rises as attractiveness falls.",
+      "pos": [
+        400.0,
+        60.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 1,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        510.0,
+        60.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Customer Requests",
+      "kind": "Flow",
+      "equation": "Customers * (0.5)",
+      "units": "jobs/month",
+      "comment": "",
+      "pos": [
+        100.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 6,
+      "from_pt": [
+        10.0,
+        300.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Rework Returns",
+      "kind": "Flow",
+      "equation": "Completions * (1 - Quality) * (0.5)",
+      "units": "jobs/month",
+      "comment": "Faulty jobs sent back are redone free of charge.",
+      "pos": [
+        265.0,
+        410.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 6,
+      "from_pt": [
+        265.0,
+        495.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Backlog",
+      "kind": "Stock",
+      "equation": "500",
+      "units": "jobs",
+      "comment": "",
+      "pos": [
+        265.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "Effective Staff",
+      "kind": "Aux",
+      "equation": "MAX(0, Veterans + Rookies * ((0.5) - (0.1)))",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        380.0,
+        520.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Work Pressure",
+      "kind": "Aux",
+      "equation": "XIDZ((Backlog / (0.5)), (Effective Staff * (160) / Standard Time per Job), 2)",
+      "units": "dmnl",
+      "comment": "",
+      "pos": [
+        590.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Actual Time per Job",
+      "kind": "Aux",
+      "equation": "Standard Time per Job * (MIN(1.2, MAX(0.7, 1 - (0.3) * (Work Pressure - 1))))",
+      "units": "hours/job",
+      "comment": "",
+      "pos": [
+        580.0,
+        400.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Capacity",
+      "kind": "Aux",
+      "equation": "Effective Staff * (160) / Actual Time per Job",
+      "units": "jobs/month",
+      "comment": "",
+      "pos": [
+        410.0,
+        405.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Completions",
+      "kind": "Flow",
+      "equation": "MIN(Capacity, Backlog / (0.25))",
+      "units": "jobs/month",
+      "comment": "",
+      "pos": [
+        420.0,
+        300.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 6,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        505.0,
+        300.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Quality",
+      "kind": "Aux",
+      "equation": "MIN(1, (Actual Time per Job / (8)) ^ (1.5))",
+      "units": "dmnl",
+      "comment": "Fraction of jobs done right first time.",
+      "pos": [
+        470.0,
+        480.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "Standard Change",
+      "kind": "Flow",
+      "equation": "((MIN((8), (0) * (8) + (1 - (0)) * Actual Time per Job)) - Standard Time per Job) / IF THEN ELSE((MIN((8), (0) * (8) + (1 - (0)) * Actual Time per Job)) < Standard Time per Job, (6), (24))",
+      "units": "hours/job/month",
+      "comment": "",
+      "pos": [
+        470.0,
+        150.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 14,
+      "from_pt": [
+        370.0,
+        150.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "Standard Time per Job",
+      "kind": "Stock",
+      "equation": "8",
+      "units": "hours/job",
+      "comment": "The norm used for planning staff.",
+      "pos": [
+        625.0,
+        150.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "Desired Effective Staff",
+      "kind": "Aux",
+      "equation": "(MAX(0, (MAX(0, (SMOOTH(Customer Requests + Rework Returns, (3))) * (1 + (XIDZ(Customer Requests + Rework Returns - (SMOOTH(Customer Requests + Rework Returns, (3))), (SMOOTH(Customer Requests + Rework Returns, (3))) * (3), 0)) * (0)))) + (Backlog - (MAX(0, (SMOOTH(Customer Requests + Rework Returns, (3))) * (1 + (XIDZ(Customer Requests + Rework Returns - (SMOOTH(Customer Requests + Rework Returns, (3))), (SMOOTH(Customer Requests + Rework Returns, (3))) * (3), 0)) * (0)))) * (0.5)) / (6))) * Standard Time per Job / (160) * (1 + (0))",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        25.0,
+        520.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "Veteran Attrition",
+      "kind": "Flow",
+      "equation": "Veterans / (36)",
+      "units": "person/month",
+      "comment": "",
+      "pos": [
+        580.0,
+        600.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 21,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        690.0,
+        600.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 17,
+      "name": "Rookie Quits",
+      "kind": "Flow",
+      "equation": "Rookies / (24)",
+      "units": "person/month",
+      "comment": "",
+      "pos": [
+        200.0,
+        700.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 20,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        200.0,
+        785.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 18,
+      "name": "Hiring",
+      "kind": "Flow",
+      "equation": "MAX(0, Veteran Attrition + Rookie Quits + (Desired Effective Staff - Effective Staff) / (3))",
+      "units": "person/month",
+      "comment": "Replaces leavers and closes the gap in effective staff; ignores rookies still assimilating.",
+      "pos": [
+        75.0,
+        600.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 20,
+      "from_pt": [
+        0.0,
+        600.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Assimilation",
+      "kind": "Flow",
+      "equation": "Rookies / ((6) * MIN(2, MAX(1, 1 + (1) * (Work Pressure - 1))))",
+      "units": "person/month",
+      "comment": "",
+      "pos": [
+        315.0,
+        600.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 20,
+      "to": 21,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 20,
+      "name": "Rookies",
+      "kind": "Stock",
+      "equation": "8",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        200.0,
+        600.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 21,
+      "name": "Veterans",
+      "kind": "Stock",
+      "equation": "47",
+      "units": "person",
+      "comment": "",
+      "pos": [
+        430.0,
+        600.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Attractiveness",
+      "kind": "Aux",
+      "equation": "((SMOOTH(Quality, 3)) ^ (1)) * (MIN(1.2, MAX(0.3, ((0.5) / (SMOOTH((XIDZ(Backlog, Completions, (0.5))), 2))) ^ 0.5))) * (((400) / (400)) ^ (-(1.5)))",
+      "units": "dmnl",
+      "comment": "",
+      "pos": [
+        240.0,
+        145.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Revenue",
+      "kind": "Flow",
+      "equation": "(Completions - Rework Returns) * (400)",
+      "units": "$/month",
+      "comment": "Rework is not billed.",
+      "pos": [
+        100.0,
+        860.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 24,
+      "from_pt": [
+        10.0,
+        860.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 24,
+      "name": "Cash",
+      "kind": "Stock",
+      "equation": "500000",
+      "units": "$",
+      "comment": "",
+      "pos": [
+        240.0,
+        860.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 25,
+      "name": "Costs",
+      "kind": "Flow",
+      "equation": "((Rookies + Veterans) * (6000)) + (Hiring * (10000)) + (40000)",
+      "units": "$/month",
+      "comment": "Wages, hiring and fixed costs.",
+      "pos": [
+        400.0,
+        860.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 24,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        510.0,
+        860.0
+      ],
+      "view": 67,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 26,
+      "from": 1,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 27,
+      "from": 22,
+      "to": 2,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 28,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 29,
+      "from": 22,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 31,
+      "from": 11,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 32,
+      "from": 12,
+      "to": 5,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 33,
+      "from": 21,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 34,
+      "from": 20,
+      "to": 7,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 35,
+      "from": 6,
+      "to": 8,
+      "bend": -40.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 37,
+      "from": 14,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 38,
+      "from": 14,
+      "to": 9,
+      "bend": -30.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 39,
+      "from": 8,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 41,
+      "from": 9,
+      "to": 10,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 42,
+      "from": 10,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 43,
+      "from": 6,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 44,
+      "from": 9,
+      "to": 12,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 45,
+      "from": 9,
+      "to": 13,
+      "bend": 40.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 46,
+      "from": 14,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 51,
+      "from": 21,
+      "to": 16,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 52,
+      "from": 20,
+      "to": 17,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 53,
+      "from": 16,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 54,
+      "from": 17,
+      "to": 18,
+      "bend": -48.5,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 55,
+      "from": 15,
+      "to": 18,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 56,
+      "from": 7,
+      "to": 18,
+      "bend": 26.2,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 57,
+      "from": 20,
+      "to": 19,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 180.0,
+    "time_step": 0.0625,
+    "time_units": "month",
+    "figure_model": true,
+    "method": "Euler"
+  },
+  "next_id": 67,
+  "sheets": [
+    {
+      "id": 67,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

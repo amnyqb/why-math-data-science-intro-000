@@ -1,0 +1,80 @@
+[
+ {
+  "op": "set_doc",
+  "name": "Capex",
+  "doc": "Installed cost per kWp (Fraunhofer ISE 2024, southern Germany)"
+ },
+ {
+  "op": "set_doc",
+  "name": "OM",
+  "doc": "Operation and maintenance cost per kWp and year"
+ },
+ {
+  "op": "set_doc",
+  "name": "Yield",
+  "doc": "Energy yield per kWp and year in the first year"
+ },
+ {
+  "op": "set_doc",
+  "name": "Degradation",
+  "doc": "Fraction of output lost each year"
+ },
+ {
+  "op": "set_doc",
+  "name": "Debt Share",
+  "doc": "Share of the investment financed by debt"
+ },
+ {
+  "op": "set_doc",
+  "name": "Cost of Debt",
+  "doc": "Nominal interest rate on debt"
+ },
+ {
+  "op": "set_doc",
+  "name": "Cost of Equity",
+  "doc": "Nominal return required by equity"
+ },
+ {
+  "op": "set_doc",
+  "name": "Inflation",
+  "doc": "General inflation per year, to turn the nominal rate into a real one"
+ },
+ {
+  "op": "set_doc",
+  "name": "kWh per MWh",
+  "doc": "Conversion from EUR per kWh to EUR per MWh"
+ },
+ {
+  "op": "set_doc",
+  "name": "Year Length",
+  "doc": "Conversion: one Year, the unit that an exponent measured in years is divided by"
+ },
+ {
+  "op": "set_doc",
+  "name": "Real WACC",
+  "doc": "Real weighted average cost of capital: the nominal WACC deflated by inflation"
+ },
+ {
+  "op": "set_doc",
+  "name": "Output",
+  "doc": "Energy produced in the year, after degradation"
+ },
+ {
+  "op": "set_doc",
+  "name": "LCOE",
+  "doc": "Levelised cost of energy: discounted costs over discounted energy"
+ },
+ {
+  "op": "set_purpose",
+  "problem": "What does a kilowatt hour from solar PV cost over the life of the plant, and which inputs move it most?",
+  "kind": "explain a behaviour",
+  "out_of_scope": "Grid effects, curtailment, taxes"
+ },
+ {
+  "op": "add_objective",
+  "title": "Reproduce the published cost",
+  "kind": "reach a target",
+  "test": "LCOE in 2024 for southern Germany lies between 40.5 and 41.5 EUR/MWh",
+  "var": "LCOE"
+ }
+]

@@ -1,0 +1,203 @@
+{UTF-8}
+{ Chapter 21: a distributor's ordering policy, with a running cost of holding stock and of backorders, ready for optimisation. }
+Base Demand=
+	100
+	~	units/week
+	~	Customer demand before the change.
+	|
+Step Height=
+	20
+	~	units/week
+	~	Permanent rise in demand at week 10.
+	|
+Season Amplitude=
+	0
+	~	dmnl
+	~	Seasonal swing as a fraction of base demand (52-week cycle).
+	|
+Noise Level=
+	15
+	~	units/week
+	~	Standard deviation of week-to-week noise in demand.
+	|
+Noise Correlation Time=
+	4
+	~	week
+	~	How long a run of high or low demand typically lasts.
+	|
+White Noise=
+	Noise Level * SQRT(2 * Noise Correlation Time / TIME STEP) * RANDOM NORMAL(-6, 6, 0, 1, Noise Seed)
+	~	units/week
+	~	Independent draws each time step, scaled so the smoothed noise has standard deviation Noise Level.
+	|
+Demand Noise= INTEG(
+	(White Noise - Demand Noise) / Noise Correlation Time,
+	0)
+	~	units/week
+	~	Pink (autocorrelated) noise in demand.
+	|
+Noise Seed=
+	1
+	~	dmnl
+	~	Seed of the random demand noise (one seed, one demand history).
+	|
+Demand=
+	MAX(0, Base Demand * (1 + Season Amplitude * SIN(2 * 3.14159 * Time / Season Period)) + STEP(Step Height, 10) + Demand Noise)
+	~	units/week
+	~	Orders from customers.
+	|
+Season Period=
+	52
+	~	week
+	~		|
+Forecast Time=
+	4
+	~	week
+	~	Time to adjust the demand forecast.
+	|
+Expected Demand=
+	SMOOTH(Demand, Forecast Time)
+	~	units/week
+	~	Smoothed demand used for ordering.
+	|
+Safety Weeks=
+	2
+	~	week
+	~	Weeks of expected demand held as safety stock (lever).
+	|
+Desired Inventory=
+	Safety Weeks * Expected Demand
+	~	units
+	~		|
+Initial Inventory=
+	Safety Weeks * Base Demand
+	~	units
+	~	Start in balance with the safety stock.
+	|
+Net Inventory= INTEG(
+	Arrivals - Demand,
+	Initial Inventory)
+	~	units
+	~	Stock on hand minus backorders (negative means customers are waiting).
+	|
+Supply Delay=
+	4
+	~	week
+	~	Average time from order to arrival.
+	|
+Initial Supply Line=
+	Supply Delay * Base Demand
+	~	units
+	~	Start in balance.
+	|
+Supply Line= INTEG(
+	Orders - Arrivals,
+	Initial Supply Line)
+	~	units
+	~	Ordered but not yet received.
+	|
+Arrivals=
+	Supply Line / Supply Delay
+	~	units/week
+	~		|
+Adjustment Time=
+	2
+	~	week
+	~	Time over which inventory and supply line gaps are closed (lever).
+	|
+Supply Line Weight=
+	0
+	~	dmnl
+	~	Fraction of the supply line gap the ordering rule corrects (lever).
+	|
+Desired Supply Line=
+	Supply Delay * Expected Demand
+	~	units
+	~		|
+Rule Orders=
+	MAX(0, Expected Demand + (Desired Inventory - Net Inventory) / Adjustment Time + Supply Line Weight * (Desired Supply Line - Supply Line) / Adjustment Time)
+	~	units/week
+	~	The stock management rule.
+	|
+Plan Orders=
+	100
+	~	units/week
+	~	Orders set by an outside plan (model predictive control writes this equation).
+	|
+Plan Mode=
+	0
+	~	dmnl
+	~	1: orders follow Plan Orders; 0: the rule.
+	|
+Supplier Capacity=
+	1000
+	~	units/week
+	~	Most the supplier can accept in a week (1000: no limit).
+	|
+Orders=
+	MIN(Supplier Capacity, IF THEN ELSE(Plan Mode > 0.5, Plan Orders, Rule Orders))
+	~	units/week
+	~		|
+Holding Cost=
+	0.2
+	~	dollar/unit/week
+	~	Cost of keeping one unit in stock for a week.
+	|
+Backorder Cost=
+	2
+	~	dollar/unit/week
+	~	Cost of making one customer unit wait a week.
+	|
+Holding Cost Rate=
+	Holding Cost * MAX(Net Inventory, 0)
+	~	dollar/week
+	~		|
+Backorder Cost Rate=
+	Backorder Cost * MAX(-Net Inventory, 0)
+	~	dollar/week
+	~		|
+Total Holding Cost= INTEG(
+	Holding Cost Rate,
+	0)
+	~	dollar
+	~		|
+Total Backorder Cost= INTEG(
+	Backorder Cost Rate,
+	0)
+	~	dollar
+	~		|
+Order Change Cost=
+	5
+	~	dollar/unit
+	~	Cost of departing from the expected demand rate, per unit of departure each week, scaled by base demand.
+	|
+Order Variation Cost Rate=
+	Order Change Cost * (Orders - Expected Demand) * (Orders - Expected Demand) / Base Demand
+	~	dollar/week
+	~	Quadratic cost of erratic orders (overtime, expediting and upstream amplification).
+	|
+Total Order Variation Cost= INTEG(
+	Order Variation Cost Rate,
+	0)
+	~	dollar
+	~		|
+Backorder Unit Weeks= INTEG(
+	MAX(-Net Inventory, 0),
+	0)
+	~	unit*week
+	~	Customer units kept waiting, summed over the weeks they waited (a service measure).
+	|
+Operating Cost=
+	Total Holding Cost + Total Order Variation Cost
+	~	dollar
+	~	Cost of stock and of erratic ordering, without the cost of backorders.
+	|
+Total Cost=
+	Total Holding Cost + Total Backorder Cost + Total Order Variation Cost
+	~	dollar
+	~	The objective.
+	|
+FINAL TIME = 104 ~ week ~ |
+INITIAL TIME = 0 ~ week ~ |
+SAVEPER = 0.25 ~ week ~ |
+TIME STEP = 0.25 ~ week ~ |

@@ -1,0 +1,549 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 6,
+      "name": "WORK FLOW",
+      "kind": "Aux",
+      "equation": "WORK FORCE[MACHINERS] *         PRODUCTIVITY[MACHINERS]",
+      "units": "Part/year",
+      "comment": "Rate of progress in manufacture phases.",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "PRODUCTS",
+      "by_item": [
+        {
+          "item": "SYSTEMS",
+          "equation": "WORK FORCE[ASSEMBLERS] *         PRODUCTIVITY[ASSEMBLERS]",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "WORK FORCE",
+      "kind": "Constant",
+      "equation": "5",
+      "units": "Part/year",
+      "comment": "Rate of progress.",
+      "pos": [
+        310.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "MFG SKILLS",
+      "by_item": [
+        {
+          "item": "ASSEMBLERS",
+          "equation": "10",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "PRODUCTIVITY",
+      "kind": "Constant",
+      "equation": "0.6",
+      "units": "",
+      "comment": "Productivity in manufacture phases.",
+      "pos": [
+        500.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "MFG SKILLS",
+      "by_item": [
+        {
+          "item": "ASSEMBLERS",
+          "equation": "0.7",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "POPULATION",
+      "kind": "Stock",
+      "equation": "INITIAL POPULATION[INFANT]",
+      "units": "",
+      "comment": "",
+      "pos": [
+        690.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "AGE",
+      "by_item": [
+        {
+          "item": "CHILD",
+          "equation": "INITIAL POPULATION[CHILD]",
+          "table": []
+        },
+        {
+          "item": "TEEN",
+          "equation": "INITIAL POPULATION[TEEN]",
+          "table": []
+        },
+        {
+          "item": "MIDDLE",
+          "equation": "INITIAL POPULATION[MIDDLE]",
+          "table": []
+        },
+        {
+          "item": "OLD",
+          "equation": "INITIAL POPULATION[OLD]",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "births",
+      "kind": "Constant",
+      "equation": "200",
+      "units": "People/year",
+      "comment": "New briths",
+      "pos": [
+        880.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "aging",
+      "kind": "Constant",
+      "equation": "300",
+      "units": "People/year",
+      "comment": "Number of people that increase to the next AGE",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "AGE",
+      "by_item": [
+        {
+          "item": "CHILD",
+          "equation": "280",
+          "table": []
+        },
+        {
+          "item": "TEEN",
+          "equation": "200",
+          "table": []
+        },
+        {
+          "item": "MIDDLE",
+          "equation": "150",
+          "table": []
+        },
+        {
+          "item": "OLD",
+          "equation": "100",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "INITIAL POPULATION",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "People",
+      "comment": "Initial population",
+      "pos": [
+        310.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "AGE",
+      "by_item": [
+        {
+          "item": "CHILD",
+          "equation": "900",
+          "table": []
+        },
+        {
+          "item": "TEEN",
+          "equation": "900",
+          "table": []
+        },
+        {
+          "item": "MIDDLE",
+          "equation": "800",
+          "table": []
+        },
+        {
+          "item": "OLD",
+          "equation": "200",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "POPULATION net flow",
+      "kind": "Flow",
+      "equation": "births - aging[INFANT]",
+      "units": "",
+      "comment": "",
+      "pos": [
+        570.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 9,
+      "from_pt": [
+        470.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 0,
+      "set": "AGE",
+      "by_item": [
+        {
+          "item": "CHILD",
+          "equation": "aging[INFANT]                - aging[CHILD]",
+          "table": []
+        },
+        {
+          "item": "TEEN",
+          "equation": "aging[CHILD]                - aging[TEEN]",
+          "table": []
+        },
+        {
+          "item": "MIDDLE",
+          "equation": "aging[TEEN]                - aging[MIDDLE]",
+          "table": []
+        },
+        {
+          "item": "OLD",
+          "equation": "aging[MIDDLE]                - aging[OLD]",
+          "table": []
+        }
+      ],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 14,
+      "from": 7,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 15,
+      "from": 8,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 16,
+      "from": 12,
+      "to": 9,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 17,
+      "from": 10,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 18,
+      "from": 11,
+      "to": 13,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 100.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "Euler"
+  },
+  "next_id": 18,
+  "sheets": [],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [
+    {
+      "id": 1,
+      "name": "MFG SKILLS",
+      "items": [
+        "MACHINERS",
+        "ASSEMBLERS"
+      ],
+      "parent": "PRODUCTS",
+      "parent_of": [
+        "PARTS",
+        "SYSTEMS"
+      ],
+      "note": ""
+    },
+    {
+      "id": 2,
+      "name": "PRODUCTS",
+      "items": [
+        "PARTS",
+        "SYSTEMS"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 3,
+      "name": "AGE",
+      "items": [
+        "INFANT",
+        "CHILD",
+        "TEEN",
+        "MIDDLE",
+        "OLD"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 4,
+      "name": "ALL BUT YOUNGEST",
+      "items": [
+        "CHILD",
+        "TEEN",
+        "MIDDLE",
+        "OLD"
+      ],
+      "parent": null,
+      "parent_of": [],
+      "note": ""
+    },
+    {
+      "id": 5,
+      "name": "PREVIOUS COHORT",
+      "items": [
+        "INFANT",
+        "CHILD",
+        "TEEN",
+        "MIDDLE"
+      ],
+      "parent": "ALL BUT YOUNGEST",
+      "parent_of": [
+        "CHILD",
+        "TEEN",
+        "MIDDLE",
+        "OLD"
+      ],
+      "note": ""
+    }
+  ],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

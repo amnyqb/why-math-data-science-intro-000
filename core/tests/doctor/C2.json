@@ -1,0 +1,71 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE C2: estimates that cannot be told apart"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "100",
+  "units": "m",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "K",
+  "kind": "constant",
+  "equation": "0.1",
+  "units": "1/Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Out",
+  "kind": "flow",
+  "equation": "S * K",
+  "units": "m/Day",
+  "doc": "test",
+  "from": "S"
+ },
+ {
+  "op": "set_calibration",
+  "calibration": {
+   "params": [
+    {
+     "name": "K",
+     "value": 0.1
+    }
+   ],
+   "fits": [],
+   "correlations": [
+    [
+     "K",
+     "S",
+     0.95
+    ]
+   ]
+  }
+ }
+]

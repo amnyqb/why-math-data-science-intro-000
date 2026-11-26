@@ -1,0 +1,40 @@
+goal,param,mu,mu_star,sigma,class,n,converged
+Backlog peak,Salesman Constant SCT,171542.99035549012,171542.99035549012,77988.85541309518,NonlinearOrInteracting,100,true
+Backlog peak,Salesman Adjustment Time SAT,0,0,0,Negligible,100,true
+Backlog peak,Salesman Salary SS,0,0,0,Negligible,100,true
+Backlog peak,Revenue to Sales RS,0,0,0,Negligible,100,true
+Backlog peak,Delivery Rate Adjustment Time DRAT,-11853.020956169381,11853.020956169381,11611.603673186344,Negligible,100,true
+Backlog peak,Production Capacity Receiving Delay PCRD,0,0,0,Negligible,100,true
+Backlog peak,Delivery Delay Bias DDB,0,0,0,Negligible,100,true
+Backlog peak,Time for Delivery Delay Recognition by Company TDDRC,34873.076724584236,34873.2315414031,31834.052646473203,NonlinearOrInteracting,100,true
+Backlog peak,Time for Delivery Delay Recognition by Market TDDRM,49907.590097590175,49907.69430540283,37271.52459794384,NonlinearOrInteracting,100,true
+Backlog peak,Time for Delivery Delay Traditional TDDT,0,0,0,Negligible,100,true
+Backlog peak,Delivery Delay Management Goal DDMG,0,0,0,Negligible,100,true
+Backlog peak,Sales Effectiveness Maximum SEM,140098.8298547353,140098.8298547353,75206.07164990279,NonlinearOrInteracting,100,true
+Backlog peak,Production Capacity Initial PCI,-33396.323683804534,40954.019217975154,34242.84585153456,NonlinearOrInteracting,100,true
+Backlog at the end,Salesman Constant SCT,59219.84691523079,66762.68470971896,50042.54356429503,NonlinearOrInteracting,100,true
+Backlog at the end,Salesman Adjustment Time SAT,0,0,0,Negligible,100,true
+Backlog at the end,Salesman Salary SS,0,0,0,Negligible,100,true
+Backlog at the end,Revenue to Sales RS,0,0,0,Negligible,100,true
+Backlog at the end,Delivery Rate Adjustment Time DRAT,1048.2837807902424,9046.605687526204,18155.80375709715,NonlinearOrInteracting,100,true
+Backlog at the end,Production Capacity Receiving Delay PCRD,0,0,0,Negligible,100,true
+Backlog at the end,Delivery Delay Bias DDB,0,0,0,Negligible,100,true
+Backlog at the end,Time for Delivery Delay Recognition by Company TDDRC,7700.647355577756,30622.87948363426,54841.63716901822,NonlinearOrInteracting,100,true
+Backlog at the end,Time for Delivery Delay Recognition by Market TDDRM,-7730.7802667706965,26204.27664383994,53504.44552470516,NonlinearOrInteracting,100,true
+Backlog at the end,Time for Delivery Delay Traditional TDDT,0,0,0,Negligible,100,true
+Backlog at the end,Delivery Delay Management Goal DDMG,0,0,0,Negligible,100,true
+Backlog at the end,Sales Effectiveness Maximum SEM,44930.187257279504,54436.14370140047,46489.34675861689,NonlinearOrInteracting,100,true
+Backlog at the end,Production Capacity Initial PCI,23793.656103788653,34094.19038617351,43716.94158436725,NonlinearOrInteracting,100,true
+Delivery delay (company) peak,Salesman Constant SCT,10.86781864834283,10.86781864834283,7.326460836249837,NonlinearOrInteracting,100,true
+Delivery delay (company) peak,Salesman Adjustment Time SAT,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Salesman Salary SS,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Revenue to Sales RS,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Delivery Rate Adjustment Time DRAT,-0.5344449960108328,0.7039961214010151,0.6666322011258853,Negligible,100,true
+Delivery delay (company) peak,Production Capacity Receiving Delay PCRD,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Delivery Delay Bias DDB,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Time for Delivery Delay Recognition by Company TDDRC,1.075491783637027,1.188070904257688,1.277929621664425,Negligible,100,true
+Delivery delay (company) peak,Time for Delivery Delay Recognition by Market TDDRM,4.118049271213484,4.118049271213484,3.6064236234637788,NonlinearOrInteracting,100,true
+Delivery delay (company) peak,Time for Delivery Delay Traditional TDDT,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Delivery Delay Management Goal DDMG,0,0,0,Negligible,100,true
+Delivery delay (company) peak,Sales Effectiveness Maximum SEM,9.154745631622752,9.154745631622752,5.60614836177121,NonlinearOrInteracting,100,true
+Delivery delay (company) peak,Production Capacity Initial PCI,-11.90340937249326,11.90340937249326,8.28380963245891,NonlinearOrInteracting,100,true

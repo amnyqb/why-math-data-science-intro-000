@@ -1,0 +1,858 @@
+{
+  "title": "Imported model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Win Rate",
+      "kind": "Constant",
+      "equation": "0.2",
+      "units": "1/month",
+      "comment": "New contracts won per month per existing contract, through references.",
+      "pos": [
+        360.0,
+        30.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Service Capacity",
+      "kind": "Constant",
+      "equation": "1000",
+      "units": "contracts",
+      "comment": "Contracts the service team can hold before crowding drives losses up to the win rate.",
+      "pos": [
+        620.0,
+        30.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "Contract Wins",
+      "kind": "Flow",
+      "equation": "Contracts * Win Rate",
+      "units": "contracts/month",
+      "comment": "",
+      "pos": [
+        200.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 5,
+      "from_pt": [
+        80.0,
+        120.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "Contract Losses",
+      "kind": "Flow",
+      "equation": "Contracts * Win Rate * Contracts / Service Capacity",
+      "units": "contracts/month",
+      "comment": "Losses rise with crowding: each contract's loss rate grows with the share of capacity in use.",
+      "pos": [
+        530.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 5,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        650.0,
+        120.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "Contracts",
+      "kind": "Stock",
+      "equation": "50",
+      "units": "contracts",
+      "comment": "",
+      "pos": [
+        360.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 11,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 6,
+      "from": 5,
+      "to": 3,
+      "bend": 30.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 7,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 8,
+      "from": 5,
+      "to": 4,
+      "bend": -30.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 1,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 2,
+      "to": 4,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 48.0,
+    "time_step": 0.0625,
+    "time_units": "month",
+    "method": "Euler"
+  },
+  "next_id": 226,
+  "sheets": [
+    {
+      "id": 11,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 182,
+      "name": "Shared stock",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 171,
+            "text": "Backlog",
+            "pos": [
+              181.0,
+              120.0
+            ]
+          },
+          {
+            "id": 172,
+            "text": "Order Rate",
+            "pos": [
+              20.0,
+              120.0
+            ]
+          },
+          {
+            "id": 173,
+            "text": "Delivery Delay",
+            "pos": [
+              100.0,
+              40.0
+            ]
+          },
+          {
+            "id": 174,
+            "text": "Shipments",
+            "pos": [
+              342.0,
+              120.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 175,
+            "from": 171,
+            "to": 173,
+            "bend": 23.1,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 176,
+            "from": 173,
+            "to": 172,
+            "bend": 23.5,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 177,
+            "from": 172,
+            "to": 171,
+            "bend": 80.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 178,
+            "from": 171,
+            "to": 174,
+            "bend": -80.0,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 179,
+            "from": 174,
+            "to": 171,
+            "bend": -80.0,
+            "polarity": "-",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 180,
+            "pos": [
+              100.0,
+              108.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Customers wait",
+            "clockwise": true
+          },
+          {
+            "id": 181,
+            "pos": [
+              262.0,
+              108.0
+            ],
+            "reinforcing": false,
+            "label": "B2 Work it off",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 197,
+      "name": "Shared resource",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 184,
+            "text": "Problems",
+            "pos": [
+              102.0,
+              165.0
+            ]
+          },
+          {
+            "id": 185,
+            "text": "Firefighting Hours",
+            "pos": [
+              200.0,
+              67.0
+            ]
+          },
+          {
+            "id": 186,
+            "text": "Improvement Hours",
+            "pos": [
+              298.0,
+              165.0
+            ]
+          },
+          {
+            "id": 187,
+            "text": "Process Quality",
+            "pos": [
+              200.0,
+              263.0
+            ]
+          },
+          {
+            "id": 188,
+            "text": "Fixes",
+            "pos": [
+              72.7,
+              37.7
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 189,
+            "from": 184,
+            "to": 185,
+            "bend": -28.7,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 190,
+            "from": 185,
+            "to": 186,
+            "bend": -28.7,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 191,
+            "from": 186,
+            "to": 187,
+            "bend": -28.7,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 192,
+            "from": 187,
+            "to": 184,
+            "bend": -28.7,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 193,
+            "from": 185,
+            "to": 188,
+            "bend": 48.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 194,
+            "from": 188,
+            "to": 184,
+            "bend": 48.6,
+            "polarity": "-",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 195,
+            "pos": [
+              103.8,
+              68.8
+            ],
+            "reinforcing": false,
+            "label": "B1",
+            "clockwise": false
+          },
+          {
+            "id": 196,
+            "pos": [
+              200.0,
+              165.0
+            ],
+            "reinforcing": true,
+            "label": "R1 Starve improvement",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 212,
+      "name": "Shared goal",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 199,
+            "text": "Inventory Gap",
+            "pos": [
+              185.0,
+              60.0
+            ]
+          },
+          {
+            "id": 200,
+            "text": "Inventory",
+            "pos": [
+              185.0,
+              310.0
+            ]
+          },
+          {
+            "id": 201,
+            "text": "Orders",
+            "pos": [
+              60.0,
+              185.0
+            ]
+          },
+          {
+            "id": 202,
+            "text": "Expediting",
+            "pos": [
+              310.0,
+              185.0
+            ]
+          },
+          {
+            "id": 203,
+            "text": "Target Inventory",
+            "pos": [
+              305.0,
+              20.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 204,
+            "from": 199,
+            "to": 201,
+            "bend": 36.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 205,
+            "from": 201,
+            "to": 200,
+            "bend": 36.6,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 206,
+            "from": 200,
+            "to": 199,
+            "bend": 8.0,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 207,
+            "from": 199,
+            "to": 202,
+            "bend": -36.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 208,
+            "from": 202,
+            "to": 200,
+            "bend": -36.6,
+            "polarity": "+",
+            "delay": false
+          },
+          {
+            "id": 209,
+            "from": 203,
+            "to": 199,
+            "bend": -16.0,
+            "polarity": "+",
+            "delay": false
+          }
+        ],
+        "loops": [
+          {
+            "id": 210,
+            "pos": [
+              123.0,
+              190.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Order",
+            "clockwise": true
+          },
+          {
+            "id": 211,
+            "pos": [
+              249.0,
+              190.0
+            ],
+            "reinforcing": false,
+            "label": "B2 Expedite",
+            "clockwise": false
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    },
+    {
+      "id": 225,
+      "name": "In series",
+      "kind": "CausalLoop",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [
+          {
+            "id": 214,
+            "text": "Retailer Inventory",
+            "pos": [
+              170.0,
+              48.0
+            ]
+          },
+          {
+            "id": 215,
+            "text": "Retailer Orders",
+            "pos": [
+              170.0,
+              192.0
+            ]
+          },
+          {
+            "id": 216,
+            "text": "Distributor Orders",
+            "pos": [
+              390.0,
+              48.0
+            ]
+          },
+          {
+            "id": 217,
+            "text": "Distributor Inventory",
+            "pos": [
+              390.0,
+              192.0
+            ]
+          }
+        ],
+        "links": [
+          {
+            "id": 218,
+            "from": 214,
+            "to": 215,
+            "bend": -72.0,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 219,
+            "from": 215,
+            "to": 214,
+            "bend": -72.0,
+            "polarity": "+",
+            "delay": true
+          },
+          {
+            "id": 220,
+            "from": 215,
+            "to": 217,
+            "bend": 45.0,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 221,
+            "from": 217,
+            "to": 216,
+            "bend": 72.0,
+            "polarity": "-",
+            "delay": false
+          },
+          {
+            "id": 222,
+            "from": 216,
+            "to": 217,
+            "bend": 72.0,
+            "polarity": "+",
+            "delay": true
+          }
+        ],
+        "loops": [
+          {
+            "id": 223,
+            "pos": [
+              170.0,
+              120.0
+            ],
+            "reinforcing": false,
+            "label": "B1 Retailer",
+            "clockwise": true
+          },
+          {
+            "id": 224,
+            "pos": [
+              390.0,
+              120.0
+            ],
+            "reinforcing": false,
+            "label": "B2 Distributor",
+            "clockwise": true
+          }
+        ]
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Classic",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  },
+  "figure_style": {
+    "font": "Arial, Liberation Sans, Helvetica, sans-serif",
+    "mono_font": "Consolas, Menlo, Liberation Mono, monospace",
+    "text_scale": 0.9,
+    "line_scale": 1.15,
+    "width_mm": 130.0,
+    "background": "#ffffff",
+    "colors": {
+      "accent": "#000000",
+      "accent_soft": "#ffffff",
+      "aux": "#000000",
+      "border": "#000000",
+      "constant": "#000000",
+      "error": "#000000",
+      "flow": "#000000",
+      "grid": "#ffffff",
+      "link": "#000000",
+      "lookup": "#000000",
+      "muted": "#000000",
+      "ok": "#000000",
+      "panel": "#ffffff",
+      "stock": "#000000",
+      "stock_fill": "#ffffff",
+      "surface": "#ffffff",
+      "text": "#000000"
+    },
+    "arrow_shape": "curved",
+    "arrow_head": "filled",
+    "arrow_weight": 1,
+    "diagram_style": "classic",
+    "caption_size": 13.0
+  }
+}

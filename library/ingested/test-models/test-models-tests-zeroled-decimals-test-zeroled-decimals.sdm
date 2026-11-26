@@ -1,0 +1,580 @@
+{
+  "title": "Imported XMILE model",
+  "vars": [
+    {
+      "id": 1,
+      "name": "stock0",
+      "kind": "Stock",
+      "equation": "0.34",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "stock1neg",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "",
+      "comment": "",
+      "pos": [
+        320.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "stock1pos",
+      "kind": "Stock",
+      "equation": "0.4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        520.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 4,
+      "name": "stockmixed",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "",
+      "comment": "",
+      "pos": [
+        720.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 5,
+      "name": "stocknegatives",
+      "kind": "Stock",
+      "equation": "0.25",
+      "units": "",
+      "comment": "",
+      "pos": [
+        920.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "stockpositives",
+      "kind": "Stock",
+      "equation": "0",
+      "units": "",
+      "comment": "",
+      "pos": [
+        1120.0,
+        120.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        -80.0,
+        0.0
+      ],
+      "to_pt": [
+        80.0,
+        0.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 7,
+      "name": "flow7",
+      "kind": "Flow",
+      "equation": "TIME",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 4,
+      "to": null,
+      "from_pt": [
+        50.0,
+        250.0
+      ],
+      "to_pt": [
+        190.0,
+        250.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "flow1",
+      "kind": "Flow",
+      "equation": "0.34",
+      "units": "",
+      "comment": "",
+      "pos": [
+        320.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 6,
+      "from_pt": [
+        250.0,
+        250.0
+      ],
+      "to_pt": [
+        390.0,
+        250.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 9,
+      "name": "flow1n",
+      "kind": "Flow",
+      "equation": "0.1",
+      "units": "",
+      "comment": "",
+      "pos": [
+        520.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 2,
+      "to": null,
+      "from_pt": [
+        450.0,
+        250.0
+      ],
+      "to_pt": [
+        590.0,
+        250.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 10,
+      "name": "flow1p",
+      "kind": "Flow",
+      "equation": "0.4",
+      "units": "",
+      "comment": "",
+      "pos": [
+        720.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 3,
+      "from_pt": [
+        650.0,
+        250.0
+      ],
+      "to_pt": [
+        790.0,
+        250.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "flow2",
+      "kind": "Flow",
+      "equation": "-0.67",
+      "units": "",
+      "comment": "",
+      "pos": [
+        920.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 5,
+      "to": null,
+      "from_pt": [
+        850.0,
+        250.0
+      ],
+      "to_pt": [
+        990.0,
+        250.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 12,
+      "name": "flow3",
+      "kind": "Flow",
+      "equation": "0.72",
+      "units": "",
+      "comment": "",
+      "pos": [
+        1120.0,
+        250.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 6,
+      "from_pt": [
+        1050.0,
+        250.0
+      ],
+      "to_pt": [
+        1190.0,
+        250.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 13,
+      "name": "flow4",
+      "kind": "Flow",
+      "equation": "0.00003",
+      "units": "",
+      "comment": "",
+      "pos": [
+        120.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 5,
+      "to": null,
+      "from_pt": [
+        50.0,
+        380.0
+      ],
+      "to_pt": [
+        190.0,
+        380.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 14,
+      "name": "flow5",
+      "kind": "Flow",
+      "equation": "0.5",
+      "units": "",
+      "comment": "",
+      "pos": [
+        320.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 4,
+      "to": null,
+      "from_pt": [
+        250.0,
+        380.0
+      ],
+      "to_pt": [
+        390.0,
+        380.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 15,
+      "name": "flow6",
+      "kind": "Flow",
+      "equation": "0.1223",
+      "units": "",
+      "comment": "",
+      "pos": [
+        520.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 4,
+      "from_pt": [
+        450.0,
+        380.0
+      ],
+      "to_pt": [
+        590.0,
+        380.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 16,
+      "name": "flow8",
+      "kind": "Flow",
+      "equation": "0.3",
+      "units": "",
+      "comment": "",
+      "pos": [
+        720.0,
+        380.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 4,
+      "to": null,
+      "from_pt": [
+        650.0,
+        380.0
+      ],
+      "to_pt": [
+        790.0,
+        380.0
+      ],
+      "view": 17,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 10.0,
+    "time_step": 1.0,
+    "time_units": "Month",
+    "method": "RungeKutta4"
+  },
+  "next_id": 17,
+  "sheets": [
+    {
+      "id": 17,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "",
+    "description": "",
+    "levers": [],
+    "outputs": [],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [],
+    "reduced_from": ""
+  }
+}

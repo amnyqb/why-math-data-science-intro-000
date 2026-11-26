@@ -1,0 +1,194 @@
+{UTF-8}
+{ Chapter 24 overview: one terminal and all depots added into one, for the stock and flow figure. The truck cycle is reduced to a fixed truck capacity here; ch24-fuel.mdl has the full fleet. }
+Base Demand=
+	4000
+	~	m3/day
+	~	
+	|
+
+Demand=
+	Base Demand * (1 + 0.25 * COS(6.28319 * (Time - 200) / 365))
+	~	m3/day
+	~	Total demand at the depots.
+	|
+
+Expected Demand=
+	SMOOTH(Demand, 7)
+	~	m3/day
+	~	
+	|
+
+Port Open=
+	1 - STEP(1, 180) + STEP(1, 194)
+	~	dmnl
+	~	
+	|
+
+Shipping Time=
+	14
+	~	day
+	~	
+	|
+
+Terminal Cover=
+	10
+	~	day
+	~	
+	|
+
+Terminal Adjustment Time=
+	10
+	~	day
+	~	
+	|
+
+Import Orders=
+	MAX(0, Expected Demand + (Terminal Cover * Expected Demand - Terminal Stock + Shipping Time * Expected Demand - Import Pipeline) / Terminal Adjustment Time)
+	~	m3/day
+	~	
+	|
+
+Import Pipeline= INTEG(
+	Import Orders - Imports,
+	42630)
+	~	m3
+	~	
+	|
+
+Imports=
+	Import Pipeline / Shipping Time * Port Open
+	~	m3/day
+	~	
+	|
+
+Terminal Stock= INTEG(
+	Imports - Dispatch,
+	30450)
+	~	m3
+	~	
+	|
+
+Truck Capacity=
+	5040
+	~	m3/day
+	~	
+	|
+
+Minimum Dispatch Time=
+	0.5
+	~	day
+	~	
+	|
+
+Available Dispatch=
+	MIN(Terminal Stock / Minimum Dispatch Time, Truck Capacity)
+	~	m3/day
+	~	
+	|
+
+Target Dispatch Time=
+	1
+	~	day
+	~	
+	|
+
+Dispatch=
+	MIN(Order Backlog / Target Dispatch Time, Available Dispatch)
+	~	m3/day
+	~	
+	|
+
+Order Backlog= INTEG(
+	Depot Orders - Orders Filled,
+	3045)
+	~	m3
+	~	
+	|
+
+Orders Filled=
+	Dispatch
+	~	m3/day
+	~	
+	|
+
+Transit Time=
+	1.2
+	~	day
+	~	
+	|
+
+In Transit= INTEG(
+	Dispatch - Deliveries,
+	3654)
+	~	m3
+	~	
+	|
+
+Deliveries=
+	In Transit / Transit Time
+	~	m3/day
+	~	
+	|
+
+Days of Cover=
+	5
+	~	day
+	~	
+	|
+
+Desired Depot Stock=
+	Days of Cover * Expected Demand
+	~	m3
+	~	
+	|
+
+Depot Adjustment Time=
+	3
+	~	day
+	~	
+	|
+
+Depot Orders=
+	MAX(0, Expected Demand + (Desired Depot Stock - Depot Stock) / Depot Adjustment Time)
+	~	m3/day
+	~	
+	|
+
+Depot Stock= INTEG(
+	Deliveries - Sales,
+	15225)
+	~	m3
+	~	
+	|
+
+Minimum Sales Time=
+	0.25
+	~	day
+	~	
+	|
+
+Sales=
+	MIN(Demand, Depot Stock / Minimum Sales Time)
+	~	m3/day
+	~	
+	|
+
+INITIAL TIME = 0
+	~	day
+	~	
+	|
+
+FINAL TIME = 365
+	~	day
+	~	
+	|
+
+TIME STEP = 0.0625
+	~	day
+	~	
+	|
+
+SAVEPER = 1
+	~	day
+	~	
+	|

@@ -1,0 +1,94 @@
+{UTF-8}
+{ Chapter 9: trucks queue for the loading bays of a fuel depot. Three ways to write the loading flow. }
+Base Arrivals=
+	9
+	~	truck/hour
+	~	Trucks arriving per hour outside the morning peak.
+	|
+Peak Extra=
+	6
+	~	truck/hour
+	~	Extra trucks per hour between Peak Start and Peak End (0: steady arrivals).
+	|
+Peak Start=
+	6
+	~	hour
+	~	|
+Peak End=
+	10
+	~	hour
+	~	|
+Truck Arrivals=
+	Base Arrivals + STEP(Peak Extra, Peak Start) - STEP(Peak Extra, Peak End)
+	~	truck/hour
+	~	|
+Bays=
+	3
+	~	dmnl
+	~	Loading bays (gantries).
+	|
+Rate per Bay=
+	4
+	~	truck/hour
+	~	Trucks one bay can load per hour (15 minutes each).
+	|
+Loading Capacity=
+	Bays * Rate per Bay
+	~	truck/hour
+	~	|
+Formulation=
+	3
+	~	dmnl
+	~	1: hard MIN. 2: exponential fuzzy MIN. 3: hyperbolic (pointwise stationary fluid flow).
+	|
+Minimum Wait=
+	0.05
+	~	hour
+	~	Shortest time from the gate to a free bay (3 minutes).
+	|
+Queue Time Constant=
+	0.115
+	~	hour
+	~	Scale of the exponential formulation.
+	|
+Half Queue=
+	0.46
+	~	truck
+	~	Trucks waiting at which loading runs at half capacity (hyperbolic formulation).
+	|
+Loading Starts=
+	IF THEN ELSE(Formulation = 1, MIN(Loading Capacity, Trucks Waiting / Minimum Wait),
+	IF THEN ELSE(Formulation = 2, Loading Capacity * (1 - EXP(-Trucks Waiting / (Loading Capacity * Queue Time Constant))),
+	Loading Capacity * Trucks Waiting / (Trucks Waiting + Half Queue)))
+	~	truck/hour
+	~	Trucks leaving the line for a bay. 1: hard MIN. 2: exponential. 3: hyperbolic.
+	|
+Trucks Waiting= INTEG(
+	Truck Arrivals - Loading Starts,
+	0)
+	~	truck
+	~	Trucks in line at the gate, not yet at a bay.
+	|
+Utilisation=
+	Loading Starts / Loading Capacity
+	~	dmnl
+	~	|
+Line Tracker=
+	QUEUE FIFO(Truck Arrivals, Loading Starts, 0)
+	~	truck
+	~	The same line, kept in order of arrival so that waits can be read.
+	|
+Oldest Wait=
+	QUEUE AGE OLDEST(Line Tracker)
+	~	hour
+	~	How long the truck at the front has waited.
+	|
+Little Wait=
+	XIDZ(Trucks Waiting, Loading Starts, 0)
+	~	hour
+	~	Little's law estimate of the wait: trucks in line divided by the rate at which they leave it.
+	|
+INITIAL TIME = 0 ~ hour ~ |
+FINAL TIME = 24 ~ hour ~ |
+TIME STEP = 0.0625 ~ hour ~ |
+SAVEPER = 0.0625 ~ hour ~ |

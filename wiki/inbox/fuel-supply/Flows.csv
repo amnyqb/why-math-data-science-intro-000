@@ -1,0 +1,5 @@
+Name,Equation,From stock,To stock,Units,Description,Per,Combine,Module
+Delivery optimal plan,Trucks planned * Barrels per truck / 1000,,Stock optimal plan,MB/Day,Trucks of the optimal plan unloaded today.,Tank,,Plans / Optimal plan / Tank balance
+Burn optimal plan,Consumption forecast,Stock optimal plan,,MB/Day,What the power plant burns today (forecast).,Tank,,Plans / Optimal plan / Tank balance
+Delivery current plan,Current plan trucks * Barrels per truck / 1000,,Stock current plan,MB/Day,Trucks the current plan brings today.,Tank,,Plans / Current plan
+Burn current plan,Consumption forecast,Stock current plan,,MB/Day,What the power plant burns today (forecast).,Tank,,Plans / Current plan

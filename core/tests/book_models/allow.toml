@@ -1,0 +1,128 @@
+# Accepted doctor findings in the book models.
+# Only confirmed errors fail the review gate, so only those are listed. Each entry names the model, the rule or code, the variable and why it is accepted.
+
+[[allow]]
+model = "ch09__ch09-depot.flowmodel"
+rule = "N5"
+var = ""
+reason = "The time step is longer than the fastest eigenvalue time constant the linearisation finds; the book runs the model as printed. Not reviewed one by one."
+
+[[allow]]
+model = "ch09__ch09-depot.mdl"
+rule = "N5"
+var = ""
+reason = "The time step is longer than the fastest eigenvalue time constant the linearisation finds; the book runs the model as printed. Not reviewed one by one."
+
+[[allow]]
+model = "ch22__ch22-reduced2.flowmodel"
+rule = "unit-declared"
+var = "Factory Desired Supply Line"
+reason = "The chapter model declares units loosely: its equation gives a different unit than the declaration. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch22__ch22-reduced2.flowmodel"
+rule = "unit-declared"
+var = "Work in Process"
+reason = "The chapter model declares units loosely: its equation gives a different unit than the declaration. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch22__ch22-reduced2.flowmodel"
+rule = "unit-dimension-mismatch"
+var = "Factory Arrivals"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-declared"
+var = "Capacity"
+reason = "The chapter model declares units loosely: its equation gives a different unit than the declaration. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-declared"
+var = "Work Pressure"
+reason = "The chapter model declares units loosely: its equation gives a different unit than the declaration. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Assimilation"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Completions"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Costs"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Customer Losses"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Customer Requests"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Desired Effective Staff"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Hiring"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Referrals"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Revenue"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Rookie Quits"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Standard Change"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch25__ch25-overview.mdl"
+rule = "unit-dimension-mismatch"
+var = "Veteran Attrition"
+reason = "The chapter model adds a quantity to a flow or mixes an amount with a rate. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch26__ch26-desk-slip.flowmodel"
+rule = "unit-scale-mismatch"
+var = "Resolutions"
+reason = "The chapter model declares a unit in another scale than its equation gives. Kept as the book prints it; not reviewed one by one."
+
+[[allow]]
+model = "ch29__ch29-pipeline-v1.flowmodel"
+rule = "check"
+var = "Inventory"
+reason = "The chapter model states a service-level check that its own base run just misses (369.6 against 370); the chapter uses it as the example of a failed check."

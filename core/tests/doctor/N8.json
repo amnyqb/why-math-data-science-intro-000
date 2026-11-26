@@ -1,0 +1,52 @@
+[
+ {
+  "op": "set_setting",
+  "key": "title",
+  "value": "RULE N8: a stock too slow for the run"
+ },
+ {
+  "op": "set_setting",
+  "key": "initial_time",
+  "value": "0"
+ },
+ {
+  "op": "set_setting",
+  "key": "final_time",
+  "value": "10"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_step",
+  "value": "1"
+ },
+ {
+  "op": "set_setting",
+  "key": "time_units",
+  "value": "Day"
+ },
+ {
+  "op": "add_var",
+  "name": "S",
+  "kind": "stock",
+  "equation": "10",
+  "units": "widget",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Rate",
+  "kind": "constant",
+  "equation": "0.001",
+  "units": "1/Day",
+  "doc": "test"
+ },
+ {
+  "op": "add_var",
+  "name": "Leak",
+  "kind": "flow",
+  "equation": "S * Rate",
+  "units": "widget/Day",
+  "doc": "test",
+  "from": "S"
+ }
+]

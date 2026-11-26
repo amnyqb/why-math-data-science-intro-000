@@ -1,0 +1,408 @@
+{
+  "title": "",
+  "vars": [
+    {
+      "id": 1,
+      "name": "Delivery time",
+      "kind": "Constant",
+      "equation": "4",
+      "units": "Week",
+      "comment": "Average time a shipment spends on the way.",
+      "pos": [
+        140.0,
+        110.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        60.0,
+        100.0
+      ],
+      "to_pt": [
+        220.0,
+        100.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 2,
+      "name": "Orders",
+      "kind": "Aux",
+      "equation": "100 + STEP(20, 5)",
+      "units": "Unit/Week",
+      "comment": "Orders placed: 100 a week, 120 from week 5.",
+      "pos": [
+        345.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        100.0
+      ],
+      "to_pt": [
+        420.0,
+        100.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 3,
+      "name": "In transit",
+      "kind": "Stock",
+      "equation": "Orders * Delivery time",
+      "units": "Unit",
+      "comment": "Goods on the road (starts balanced with orders).",
+      "pos": [
+        160.0,
+        320.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        660.0,
+        100.0
+      ],
+      "to_pt": [
+        820.0,
+        100.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 6,
+      "name": "Shipping",
+      "kind": "Flow",
+      "equation": "Orders",
+      "units": "Unit/Week",
+      "comment": "Goods leave the factory as soon as they are ordered.",
+      "pos": [
+        30.0,
+        255.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": 3,
+      "from_pt": [
+        -100.0,
+        190.0
+      ],
+      "to_pt": [
+        620.0,
+        100.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Arrivals mixed",
+      "kind": "Flow",
+      "equation": "In transit / Delivery time",
+      "units": "Unit/Week",
+      "comment": "First-order delay: the more on the road, the more arrive.",
+      "pos": [
+        290.0,
+        385.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": 3,
+      "to": null,
+      "from_pt": [
+        460.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        450.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    },
+    {
+      "id": 11,
+      "name": "Arrivals fixed",
+      "kind": "Aux",
+      "equation": "DELAY(Orders, Delivery time, exact=True)",
+      "units": "Unit/Week",
+      "comment": "Fixed delay: every shipment takes exactly the delivery time.",
+      "pos": [
+        550.0,
+        640.0
+      ],
+      "table": [],
+      "slider": null,
+      "non_negative": false,
+      "from": null,
+      "to": null,
+      "from_pt": [
+        260.0,
+        190.0
+      ],
+      "to_pt": [
+        420.0,
+        190.0
+      ],
+      "view": 14,
+      "set": null,
+      "by_item": [],
+      "rollup": "Total",
+      "lever": false,
+      "lever_scale": 1.0
+    }
+  ],
+  "links": [
+    {
+      "id": 4,
+      "from": 2,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 5,
+      "from": 1,
+      "to": 3,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 7,
+      "from": 2,
+      "to": 6,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 9,
+      "from": 3,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 10,
+      "from": 1,
+      "to": 8,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 12,
+      "from": 2,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    },
+    {
+      "id": 13,
+      "from": 1,
+      "to": 11,
+      "bend": 0.0,
+      "polarity": "",
+      "delay_mark": false,
+      "weight": 1,
+      "dashed": false,
+      "color": null,
+      "shape": null,
+      "head": null,
+      "via": []
+    }
+  ],
+  "notes": [],
+  "settings": {
+    "initial_time": 0.0,
+    "final_time": 40.0,
+    "time_step": 0.125,
+    "time_units": "Week",
+    "method": "Euler"
+  },
+  "next_id": 14,
+  "sheets": [
+    {
+      "id": 14,
+      "name": "Model",
+      "kind": "Diagram",
+      "table_mode": "Variables",
+      "columns": [],
+      "widgets": [],
+      "cld": {
+        "nodes": [],
+        "links": [],
+        "loops": []
+      },
+      "opt": {
+        "maximize": false,
+        "goal": "",
+        "measure": "Peak",
+        "levers": [],
+        "limits": [],
+        "effort": 2
+      },
+      "module": null,
+      "compare_vars": [],
+      "compare_measure": null,
+      "caption": "",
+      "source": ""
+    }
+  ],
+  "groups": [],
+  "modules": [],
+  "scenarios": [],
+  "trend_style": {
+    "title": "",
+    "subtitle": "",
+    "x_label": "",
+    "y_label": "",
+    "x_min": null,
+    "x_max": null,
+    "y_min": null,
+    "y_max": null,
+    "legend": "TopRight",
+    "grid": true,
+    "line_width": 1.0,
+    "markers": false,
+    "time_marker": true,
+    "compare": true,
+    "colors": []
+  },
+  "sets": [],
+  "arrow_shape": "Curved",
+  "arrow_head": "Filled",
+  "diagram_style": "Cards",
+  "module_style": "Detailed",
+  "functions": [],
+  "checks": [],
+  "defs": [],
+  "instances": [],
+  "manifest": {
+    "title": "A shipment delay",
+    "description": "Two ways to model the same delay.",
+    "levers": [
+      {
+        "name": "Delivery time",
+        "units": "Week",
+        "min": 1.0,
+        "max": 12.0,
+        "default": null,
+        "explanation": "",
+        "group": ""
+      }
+    ],
+    "outputs": [
+      {
+        "variable": "Orders",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      },
+      {
+        "variable": "Arrivals mixed",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      },
+      {
+        "variable": "Arrivals fixed",
+        "chart": "line",
+        "units": "",
+        "reference_lines": []
+      }
+    ],
+    "scenarios": [],
+    "bindings": [],
+    "validity": [],
+    "tests": [],
+    "goals": [
+      {
+        "name": "Goods in transit at the end",
+        "output": "In transit",
+        "measure": "final",
+        "direction": "min",
+        "policies": [],
+        "protected_ranking": false,
+        "transform": ""
+      }
+    ],
+    "reduced_from": ""
+  }
+}

@@ -1,0 +1,7075 @@
+[
+ {
+  "slug": "test-models-samples-lotka-volterra-lotka-volterra",
+  "title": "Lotka Volterra",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/Lotka_Volterra/Lotka_Volterra.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/Lotka_Volterra/Lotka_Volterra.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-lotka-volterra-lotka-volterra.sdm",
+  "notes": "2 stocks, 4 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-population-subscripted-population-model",
+  "title": "Subscripted Population Model",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/Population/Subscripted Population Model.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/Population/Subscripted Population Model.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-population-subscripted-population-model.sdm",
+  "notes": "1 stocks, 2 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-query-file-query-file",
+  "title": "Query file",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 4,
+  "difficulty": 4,
+  "question": "Imported from samples/Query_file/Query_file.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/Query_file/Query_file.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-query-file-query-file.sdm",
+  "notes": "15 stocks, 19 flows, 56 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-roessler-chaos-roessler-chaos",
+  "title": "roessler chaos",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/Roessler_Chaos/roessler_chaos.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/Roessler_Chaos/roessler_chaos.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-roessler-chaos-roessler-chaos.sdm",
+  "notes": "3 stocks, 3 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-sir-sir",
+  "title": "SIR",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/SIR/SIR.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/SIR/SIR.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-sir-sir.sdm",
+  "notes": "3 stocks, 2 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-sir-sir-reciprocal-dt",
+  "title": "SIR reciprocal dt",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/SIR/SIR_reciprocal-dt.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/SIR/SIR_reciprocal-dt.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-sir-sir-reciprocal-dt.sdm",
+  "notes": "3 stocks, 2 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-workforce-workforce",
+  "title": "workforce",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/Workforce/workforce.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/Workforce/workforce.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-workforce-workforce.sdm",
+  "notes": "3 stocks, 4 flows, 9 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-arrays-a2a-a2a",
+  "title": "a2a",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/arrays/a2a/a2a.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/arrays/a2a/a2a.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-arrays-a2a-a2a.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-arrays-non-a2a-non-a2a-gf",
+  "title": "non a2a gf",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/arrays/non-a2a/non-a2a-gf.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/arrays/non-a2a/non-a2a-gf.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-arrays-non-a2a-non-a2a-gf.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-arrays-non-a2a-non-a2a",
+  "title": "non a2a",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/arrays/non-a2a/non-a2a.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/arrays/non-a2a/non-a2a.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-arrays-non-a2a-non-a2a.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-bpowers-hares-and-lynxes-modules-model",
+  "title": "model",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/bpowers-hares_and_lynxes_modules/model.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/bpowers-hares_and_lynxes_modules/model.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-bpowers-hares-and-lynxes-modules-model.sdm",
+  "notes": "3 stocks, 5 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-display-1style",
+  "title": "1style",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/display/1style.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/display/1style.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-display-1style.sdm",
+  "notes": "1 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-display-multipoint-connection",
+  "title": "multipoint connection",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/display/multipoint-connection.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/display/multipoint-connection.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-display-multipoint-connection.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-pendulum-single-pendulum",
+  "title": "Single Pendulum",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/pendulum/Single_Pendulum.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/pendulum/Single_Pendulum.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-pendulum-single-pendulum.sdm",
+  "notes": "2 stocks, 2 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-simple-harmonic-oscillator-simple-harmonic-oscillator",
+  "title": "simple harmonic oscillator",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from samples/simple_harmonic_oscillator/simple_harmonic_oscillator.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/simple_harmonic_oscillator/simple_harmonic_oscillator.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-simple-harmonic-oscillator-simple-harmonic-oscillator.sdm",
+  "notes": "2 stocks, 2 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-teacup-teacup",
+  "title": "teacup",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/teacup/teacup.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/teacup/teacup.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-teacup-teacup.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-teacup-teacup-mdl",
+  "title": "teacup mdl",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/teacup/teacup_mdl.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/teacup/teacup_mdl.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-teacup-teacup-mdl.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-samples-teacup-teacup-w-diagram",
+  "title": "teacup w diagram",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from samples/teacup/teacup_w_diagram.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (samples/teacup/teacup_w_diagram.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-samples-teacup-teacup-w-diagram.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-abs-test-abs",
+  "title": "test abs",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/abs/test_abs.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/abs/test_abs.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-abs-test-abs.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-active-initial-test-active-initial",
+  "title": "test active initial",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/active_initial/test_active_initial.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/active_initial/test_active_initial.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-active-initial-test-active-initial.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-active-initial-circular-test-active-initial-circular",
+  "title": "test active initial circular",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/active_initial_circular/test_active_initial_circular.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/active_initial_circular/test_active_initial_circular.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-active-initial-circular-test-active-initial-circular.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-allocate-available-test-allocate-available",
+  "title": "test allocate available",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/allocate_available/test_allocate_available.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/allocate_available/test_allocate_available.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-allocate-available-test-allocate-available.sdm",
+  "notes": "0 stocks, 0 flows, 114 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-allocate-by-priority-test-allocate-by-priority",
+  "title": "test allocate by priority",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/allocate_by_priority/test_allocate_by_priority.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/allocate_by_priority/test_allocate_by_priority.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-allocate-by-priority-test-allocate-by-priority.sdm",
+  "notes": "0 stocks, 0 flows, 141 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-arguments-test-arguments",
+  "title": "test arguments",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/arguments/test_arguments.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/arguments/test_arguments.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-arguments-test-arguments.sdm",
+  "notes": "0 stocks, 0 flows, 5 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-arithmetics-test-arithmetics",
+  "title": "test arithmetics",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/arithmetics/test_arithmetics.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/arithmetics/test_arithmetics.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-arithmetics-test-arithmetics.sdm",
+  "notes": "0 stocks, 0 flows, 7 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-arithmetics-exp-test-arithmetics-exp",
+  "title": "test arithmetics exp",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/arithmetics_exp/test_arithmetics_exp.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/arithmetics_exp/test_arithmetics_exp.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-arithmetics-exp-test-arithmetics-exp.sdm",
+  "notes": "0 stocks, 0 flows, 7 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-array-with-line-break-test-array-with-line-break",
+  "title": "test array with line break",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/array_with_line_break/test_array_with_line_break.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/array_with_line_break/test_array_with_line_break.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-array-with-line-break-test-array-with-line-break.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-builtin-max-builtin-max",
+  "title": "builtin max",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/builtin_max/builtin_max.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/builtin_max/builtin_max.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-builtin-max-builtin-max.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-builtin-min-builtin-min",
+  "title": "builtin min",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/builtin_min/builtin_min.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/builtin_min/builtin_min.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-builtin-min-builtin-min.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-chained-initialization-test-chained-initialization",
+  "title": "test chained initialization",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/chained_initialization/test_chained_initialization.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/chained_initialization/test_chained_initialization.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-chained-initialization-test-chained-initialization.sdm",
+  "notes": "4 stocks, 4 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-comparisons-comparisons",
+  "title": "comparisons",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/comparisons/comparisons.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/comparisons/comparisons.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-comparisons-comparisons.sdm",
+  "notes": "0 stocks, 0 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-conditional-subscripts-test-conditional-subscripts",
+  "title": "test conditional subscripts",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/conditional_subscripts/test_conditional_subscripts.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/conditional_subscripts/test_conditional_subscripts.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-conditional-subscripts-test-conditional-subscripts.sdm",
+  "notes": "0 stocks, 0 flows, 218 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-constant-expressions-test-constant-expressions",
+  "title": "test constant expressions",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/constant_expressions/test_constant_expressions.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/constant_expressions/test_constant_expressions.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-constant-expressions-test-constant-expressions.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-data-from-other-model-model-to-generate-data",
+  "title": "model to generate data",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 4,
+  "difficulty": 4,
+  "question": "Imported from tests/data_from_other_model/model_to_generate_data.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/data_from_other_model/model_to_generate_data.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-data-from-other-model-model-to-generate-data.sdm",
+  "notes": "18 stocks, 18 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-delay-fixed-test-delay-fixed",
+  "title": "test delay fixed",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/delay_fixed/test_delay_fixed.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/delay_fixed/test_delay_fixed.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-delay-fixed-test-delay-fixed.sdm",
+  "notes": "0 stocks, 0 flows, 9 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-delay-numeric-error-test-delay-numeric-error",
+  "title": "test delay numeric error",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/delay_numeric_error/test_delay_numeric_error.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/delay_numeric_error/test_delay_numeric_error.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-delay-numeric-error-test-delay-numeric-error.sdm",
+  "notes": "1 stocks, 2 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-delay-parentheses-test-delay-parentheses",
+  "title": "test delay parentheses",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/delay_parentheses/test_delay_parentheses.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/delay_parentheses/test_delay_parentheses.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-delay-parentheses-test-delay-parentheses.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-delay-pipeline-test-pipeline-delays",
+  "title": "test pipeline delays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/delay_pipeline/test_pipeline_delays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/delay_pipeline/test_pipeline_delays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-delay-pipeline-test-pipeline-delays.sdm",
+  "notes": "0 stocks, 0 flows, 11 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-delay-xmile-test-delay-xmile",
+  "title": "test delay xmile",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/delay_xmile/test_delay_xmile.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/delay_xmile/test_delay_xmile.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-delay-xmile-test-delay-xmile.sdm",
+  "notes": "1 stocks, 1 flows, 5 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-elm-count-test-elm-count",
+  "title": "test elm count",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/elm_count/test_elm_count.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/elm_count/test_elm_count.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-elm-count-test-elm-count.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-euler-step-vs-saveper-test-euler-step-vs-saveper",
+  "title": "test euler step vs saveper",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/euler_step_vs_saveper/test_euler_step_vs_saveper.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/euler_step_vs_saveper/test_euler_step_vs_saveper.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-euler-step-vs-saveper-test-euler-step-vs-saveper.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-eval-order-eval-order",
+  "title": "eval order",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/eval_order/eval_order.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/eval_order/eval_order.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-eval-order-eval-order.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-except-test-except",
+  "title": "test except",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 4,
+  "difficulty": 4,
+  "question": "Imported from tests/except/test_except.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/except/test_except.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-except-test-except.sdm",
+  "notes": "13 stocks, 13 flows, 41 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-except-multiple-test-except-multiple",
+  "title": "test except multiple",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/except_multiple/test_except_multiple.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/except_multiple/test_except_multiple.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-except-multiple-test-except-multiple.sdm",
+  "notes": "0 stocks, 0 flows, 62 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-except-subranges-test-except-subranges",
+  "title": "test except subranges",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/except_subranges/test_except_subranges.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/except_subranges/test_except_subranges.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-except-subranges-test-except-subranges.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-exp-test-exp",
+  "title": "test exp",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/exp/test_exp.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/exp/test_exp.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-exp-test-exp.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-exponentiation-exponentiation",
+  "title": "exponentiation",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/exponentiation/exponentiation.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/exponentiation/exponentiation.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-exponentiation-exponentiation.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-forecast-test-forecast",
+  "title": "test forecast",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/forecast/test_forecast.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/forecast/test_forecast.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-forecast-test-forecast.sdm",
+  "notes": "0 stocks, 0 flows, 11 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-fully-invalid-names-test-fully-invalid-names",
+  "title": "test fully invalid names",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/fully_invalid_names/test_fully_invalid_names.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/fully_invalid_names/test_fully_invalid_names.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-fully-invalid-names-test-fully-invalid-names.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-function-capitalization-test-function-capitalization",
+  "title": "test function capitalization",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/function_capitalization/test_function_capitalization.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/function_capitalization/test_function_capitalization.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-function-capitalization-test-function-capitalization.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-game-test-game",
+  "title": "test game",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/game/test_game.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/game/test_game.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-game-test-game.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-constants-test-get-constants",
+  "title": "test get constants",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_constants/test_get_constants.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_constants/test_get_constants.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-constants-test-get-constants.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-constants-incomplete-subscript-test-get-constants-incomplete-subscript",
+  "title": "test get constants incomplete subscript",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_constants_incomplete_subscript/test_get_constants_incomplete_subscript.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_constants_incomplete_subscript/test_get_constants_incomplete_subscript.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-constants-incomplete-subscript-test-get-constants-incomplete-subscript.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-constants-subranges-test-get-constants-subranges",
+  "title": "test get constants subranges",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_constants_subranges/test_get_constants_subranges.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_constants_subranges/test_get_constants_subranges.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-constants-subranges-test-get-constants-subranges.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-data-test-get-data",
+  "title": "test get data",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_data/test_get_data.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_data/test_get_data.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-data-test-get-data.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-subscript-3d-arrays-xls-test-get-subscript-3d-arrays-xls",
+  "title": "test get subscript 3d arrays xls",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_subscript_3d_arrays_xls/test_get_subscript_3d_arrays_xls.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_subscript_3d_arrays_xls/test_get_subscript_3d_arrays_xls.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-subscript-3d-arrays-xls-test-get-subscript-3d-arrays-xls.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-time-value-test-get-time-value",
+  "title": "test get time value",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_time_value/test_get_time_value.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_time_value/test_get_time_value.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-time-value-test-get-time-value.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-time-value-test-get-time-value-simple",
+  "title": "test get time value simple",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_time_value/test_get_time_value_simple.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_time_value/test_get_time_value_simple.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-time-value-test-get-time-value-simple.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-values-order-test-get-values-order",
+  "title": "test get values order",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_values_order/test_get_values_order.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_values_order/test_get_values_order.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-values-order-test-get-values-order.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-get-xls-cellrange-test-get-xls-cellrange",
+  "title": "test get xls cellrange",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/get_xls_cellrange/test_get_xls_cellrange.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/get_xls_cellrange/test_get_xls_cellrange.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-get-xls-cellrange-test-get-xls-cellrange.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-if-stmt-if-stmt",
+  "title": "if stmt",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/if_stmt/if_stmt.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/if_stmt/if_stmt.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-if-stmt-if-stmt.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-initial-function-test-initial",
+  "title": "test initial",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/initial_function/test_initial.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/initial_function/test_initial.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-initial-function-test-initial.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-input-functions-test-inputs",
+  "title": "test inputs",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/input_functions/test_inputs.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/input_functions/test_inputs.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-input-functions-test-inputs.sdm",
+  "notes": "1 stocks, 1 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-invert-matrix-test-invert-matrix",
+  "title": "test invert matrix",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/invert_matrix/test_invert_matrix.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/invert_matrix/test_invert_matrix.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-invert-matrix-test-invert-matrix.sdm",
+  "notes": "0 stocks, 0 flows, 30 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-limits-test-limits",
+  "title": "test limits",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/limits/test_limits.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/limits/test_limits.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-limits-test-limits.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-line-breaks-test-line-breaks",
+  "title": "test line breaks",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/line_breaks/test_line_breaks.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/line_breaks/test_line_breaks.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-line-breaks-test-line-breaks.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-line-continuation-test-line-continuation",
+  "title": "test line continuation",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/line_continuation/test_line_continuation.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/line_continuation/test_line_continuation.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-line-continuation-test-line-continuation.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-ln-test-ln",
+  "title": "test ln",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/ln/test_ln.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/ln/test_ln.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-ln-test-ln.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-log-test-log",
+  "title": "test log",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/log/test_log.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/log/test_log.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-log-test-log.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-logicals-test-logicals",
+  "title": "test logicals",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/logicals/test_logicals.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/logicals/test_logicals.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-logicals-test-logicals.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-logicals-test-logicals-caseinsensitive",
+  "title": "test logicals caseinsensitive",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/logicals/test_logicals_caseinsensitive.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/logicals/test_logicals_caseinsensitive.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-logicals-test-logicals-caseinsensitive.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-test-lookups",
+  "title": "test lookups",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups/test_lookups.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups/test_lookups.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-test-lookups.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-test-lookups-no-indirect",
+  "title": "test lookups no indirect",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups/test_lookups_no-indirect.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups/test_lookups_no-indirect.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-test-lookups-no-indirect.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-test-lookups-xpts-sep",
+  "title": "test lookups xpts sep",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups/test_lookups_xpts_sep.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups/test_lookups_xpts_sep.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-test-lookups-xpts-sep.sdm",
+  "notes": "1 stocks, 1 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-test-lookups-xscale",
+  "title": "test lookups xscale",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups/test_lookups_xscale.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups/test_lookups_xscale.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-test-lookups-xscale.sdm",
+  "notes": "1 stocks, 1 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-test-lookups-ypts-sep",
+  "title": "test lookups ypts sep",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups/test_lookups_ypts_sep.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups/test_lookups_ypts_sep.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-test-lookups-ypts-sep.sdm",
+  "notes": "1 stocks, 1 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-funcnames-test-lookups-funcnames",
+  "title": "test lookups funcnames",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups_funcnames/test_lookups_funcnames.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups_funcnames/test_lookups_funcnames.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-funcnames-test-lookups-funcnames.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-inline-test-lookups-inline",
+  "title": "test lookups inline",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups_inline/test_lookups_inline.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups_inline/test_lookups_inline.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-inline-test-lookups-inline.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-inline-bounded-test-lookups-inline-bounded",
+  "title": "test lookups inline bounded",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups_inline_bounded/test_lookups_inline_bounded.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups_inline_bounded/test_lookups_inline_bounded.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-inline-bounded-test-lookups-inline-bounded.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-with-expr-test-lookups-with-expr",
+  "title": "test lookups with expr",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups_with_expr/test_lookups_with_expr.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups_with_expr/test_lookups_with_expr.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-with-expr-test-lookups-with-expr.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-lookups-without-range-test-lookups-without-range",
+  "title": "test lookups without range",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/lookups_without_range/test_lookups_without_range.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/lookups_without_range/test_lookups_without_range.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-lookups-without-range-test-lookups-without-range.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-macro-cross-reference-test-macro-cross-reference",
+  "title": "test macro cross reference",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/macro_cross_reference/test_macro_cross_reference.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/macro_cross_reference/test_macro_cross_reference.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-macro-cross-reference-test-macro-cross-reference.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-macro-expression-test-macro-expression",
+  "title": "test macro expression",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/macro_expression/test_macro_expression.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/macro_expression/test_macro_expression.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-macro-expression-test-macro-expression.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-macro-multi-expression-test-macro-multi-expression",
+  "title": "test macro multi expression",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/macro_multi_expression/test_macro_multi_expression.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/macro_multi_expression/test_macro_multi_expression.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-macro-multi-expression-test-macro-multi-expression.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-macro-multi-macros-test-macro-multi-macros",
+  "title": "test macro multi macros",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/macro_multi_macros/test_macro_multi_macros.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/macro_multi_macros/test_macro_multi_macros.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-macro-multi-macros-test-macro-multi-macros.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-macro-trailing-definition-test-macro-trailing-definition",
+  "title": "test macro trailing definition",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/macro_trailing_definition/test_macro_trailing_definition.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/macro_trailing_definition/test_macro_trailing_definition.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-macro-trailing-definition-test-macro-trailing-definition.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-model-doc-model-doc",
+  "title": "model doc",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/model_doc/model_doc.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/model_doc/model_doc.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-model-doc-model-doc.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-multiple-lines-def-test-multiple-lines-def",
+  "title": "test multiple lines def",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/multiple_lines_def/test_multiple_lines_def.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/multiple_lines_def/test_multiple_lines_def.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-multiple-lines-def-test-multiple-lines-def.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-na-test-na",
+  "title": "test na",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/na/test_na.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/na/test_na.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-na-test-na.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-nested-functions-test-nested-functions",
+  "title": "test nested functions",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/nested_functions/test_nested_functions.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/nested_functions/test_nested_functions.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-nested-functions-test-nested-functions.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-non-negative-all-test-non-negative-all1",
+  "title": "test non negative all1",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/non_negative_all/test_non_negative_all1.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/non_negative_all/test_non_negative_all1.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-non-negative-all-test-non-negative-all1.sdm",
+  "notes": "4 stocks, 4 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-non-negative-all-test-non-negative-all2",
+  "title": "test non negative all2",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/non_negative_all/test_non_negative_all2.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/non_negative_all/test_non_negative_all2.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-non-negative-all-test-non-negative-all2.sdm",
+  "notes": "4 stocks, 4 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-non-negative-stocks-test-non-negative-stocks",
+  "title": "test non negative stocks",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/non_negative_stocks/test_non_negative_stocks.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/non_negative_stocks/test_non_negative_stocks.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-non-negative-stocks-test-non-negative-stocks.sdm",
+  "notes": "4 stocks, 4 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-non-negative-stocks-test-non-negative-stocks-behavior",
+  "title": "test non negative stocks behavior",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/non_negative_stocks/test_non_negative_stocks_behavior.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/non_negative_stocks/test_non_negative_stocks_behavior.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-non-negative-stocks-test-non-negative-stocks-behavior.sdm",
+  "notes": "4 stocks, 4 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-number-handling-test-number-handling",
+  "title": "test number handling",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/number_handling/test_number_handling.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/number_handling/test_number_handling.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-number-handling-test-number-handling.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-parentheses-test-parens",
+  "title": "test parens",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/parentheses/test_parens.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/parentheses/test_parens.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-parentheses-test-parens.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-pi-test-pi",
+  "title": "test pi",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/pi/test_pi.xmile; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/pi/test_pi.xmile)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-pi-test-pi.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-power-power",
+  "title": "power",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/power/power.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/power/power.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-power-power.sdm",
+  "notes": "0 stocks, 0 flows, 19 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-reality-checks-test-reality-checks",
+  "title": "test reality checks",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/reality_checks/test_reality_checks.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/reality_checks/test_reality_checks.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-reality-checks-test-reality-checks.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-reference-capitalization-test-reference-capitalization",
+  "title": "test reference capitalization",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/reference_capitalization/test_reference_capitalization.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/reference_capitalization/test_reference_capitalization.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-reference-capitalization-test-reference-capitalization.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-repeated-subscript-test-repeated-subscript",
+  "title": "test repeated subscript",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/repeated_subscript/test_repeated_subscript.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/repeated_subscript/test_repeated_subscript.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-repeated-subscript-test-repeated-subscript.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-rounding-test-rounding",
+  "title": "test rounding",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/rounding/test_rounding.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/rounding/test_rounding.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-rounding-test-rounding.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-sample-if-true-test-sample-if-true",
+  "title": "test sample if true",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/sample_if_true/test_sample_if_true.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/sample_if_true/test_sample_if_true.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-sample-if-true-test-sample-if-true.sdm",
+  "notes": "0 stocks, 0 flows, 27 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-smaller-range-test-smaller-range",
+  "title": "test smaller range",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/smaller_range/test_smaller_range.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/smaller_range/test_smaller_range.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-smaller-range-test-smaller-range.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-smooth-and-stock-test-smooth-and-stock",
+  "title": "test smooth and stock",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from tests/smooth_and_stock/test_smooth_and_stock.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/smooth_and_stock/test_smooth_and_stock.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-smooth-and-stock-test-smooth-and-stock.sdm",
+  "notes": "2 stocks, 2 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-special-characters-xmile-test-special-variable-names",
+  "title": "test special variable names",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from tests/special_characters_xmile/test_special_variable_names.stmx; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/special_characters_xmile/test_special_variable_names.stmx)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-special-characters-xmile-test-special-variable-names.sdm",
+  "notes": "2 stocks, 4 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-sqrt-test-sqrt",
+  "title": "test sqrt",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/sqrt/test_sqrt.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/sqrt/test_sqrt.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-sqrt-test-sqrt.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subrange-merge-test-subrange-merge",
+  "title": "test subrange merge",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subrange_merge/test_subrange_merge.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subrange_merge/test_subrange_merge.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subrange-merge-test-subrange-merge.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-1d-arrays-test-subscript-1d-arrays",
+  "title": "test subscript 1d arrays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_1d_arrays/test_subscript_1d_arrays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_1d_arrays/test_subscript_1d_arrays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-1d-arrays-test-subscript-1d-arrays.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-2d-arrays-test-subscript-2d-arrays",
+  "title": "test subscript 2d arrays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/subscript_2d_arrays/test_subscript_2d_arrays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_2d_arrays/test_subscript_2d_arrays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-2d-arrays-test-subscript-2d-arrays.sdm",
+  "notes": "6 stocks, 6 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-3d-arrays-test-subscript-3d-arrays",
+  "title": "test subscript 3d arrays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 4,
+  "difficulty": 4,
+  "question": "Imported from tests/subscript_3d_arrays/test_subscript_3d_arrays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_3d_arrays/test_subscript_3d_arrays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-3d-arrays-test-subscript-3d-arrays.sdm",
+  "notes": "12 stocks, 12 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-3d-arrays-lengthwise-test-subscript-3d-arrays-lengthwise",
+  "title": "test subscript 3d arrays lengthwise",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_3d_arrays_lengthwise/test_subscript_3d_arrays_lengthwise.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_3d_arrays_lengthwise/test_subscript_3d_arrays_lengthwise.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-3d-arrays-lengthwise-test-subscript-3d-arrays-lengthwise.sdm",
+  "notes": "0 stocks, 0 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-3d-arrays-widthwise-test-subscript-3d-arrays-widthwise",
+  "title": "test subscript 3d arrays widthwise",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_3d_arrays_widthwise/test_subscript_3d_arrays_widthwise.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_3d_arrays_widthwise/test_subscript_3d_arrays_widthwise.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-3d-arrays-widthwise-test-subscript-3d-arrays-widthwise.sdm",
+  "notes": "0 stocks, 0 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-aggregation-test-subscript-aggregation",
+  "title": "test subscript aggregation",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/subscript_aggregation/test_subscript_aggregation.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_aggregation/test_subscript_aggregation.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-aggregation-test-subscript-aggregation.sdm",
+  "notes": "6 stocks, 6 flows, 59 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-constant-call-test-subscript-constant-call",
+  "title": "test subscript constant call",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_constant_call/test_subscript_constant_call.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_constant_call/test_subscript_constant_call.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-constant-call-test-subscript-constant-call.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-copy-test-subscript-copy",
+  "title": "test subscript copy",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_copy/test_subscript_copy.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_copy/test_subscript_copy.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-copy-test-subscript-copy.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-copy-test-subscript-copy2",
+  "title": "test subscript copy2",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_copy/test_subscript_copy2.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_copy/test_subscript_copy2.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-copy-test-subscript-copy2.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-definition-test-subscript-definition",
+  "title": "test subscript definition",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_definition/test_subscript_definition.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_definition/test_subscript_definition.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-definition-test-subscript-definition.sdm",
+  "notes": "0 stocks, 0 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-docs-subscript-docs",
+  "title": "subscript docs",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_docs/subscript_docs.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_docs/subscript_docs.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-docs-subscript-docs.sdm",
+  "notes": "0 stocks, 0 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-element-name-test-subscript-element-name",
+  "title": "test subscript element name",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_element_name/test_subscript_element_name.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_element_name/test_subscript_element_name.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-element-name-test-subscript-element-name.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-individually-defined-1-of-2d-arrays-subscript-individually-defined-1-of-2d-arrays",
+  "title": "subscript individually defined 1 of 2d arrays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/subscript_individually_defined_1_of_2d_arrays/subscript_individually_defined_1_of_2d_arrays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_individually_defined_1_of_2d_arrays/subscript_individually_defined_1_of_2d_arrays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-individually-defined-1-of-2d-arrays-subscript-individually-defined-1-of-2d-arrays.sdm",
+  "notes": "6 stocks, 6 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-individually-defined-1-of-2d-arrays-from-floats-subscript-individually-defined-1-of-2d-arrays-from-floats",
+  "title": "subscript individually defined 1 of 2d arrays from floats",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/subscript_individually_defined_1_of_2d_arrays_from_floats/subscript_individually_defined_1_of_2d_arrays_from_floats.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_individually_defined_1_of_2d_arrays_from_floats/subscript_individually_defined_1_of_2d_arrays_from_floats.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-individually-defined-1-of-2d-arrays-from-floats-subscript-individually-defined-1-of-2d-arrays-from-floats.sdm",
+  "notes": "6 stocks, 6 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-individually-defined-1d-arrays-subscript-individually-defined-1d-arrays",
+  "title": "subscript individually defined 1d arrays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_individually_defined_1d_arrays/subscript_individually_defined_1d_arrays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_individually_defined_1d_arrays/subscript_individually_defined_1d_arrays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-individually-defined-1d-arrays-subscript-individually-defined-1d-arrays.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-individually-defined-stocks-test-subscript-individually-defined-stocks",
+  "title": "test subscript individually defined stocks",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 4,
+  "difficulty": 4,
+  "question": "Imported from tests/subscript_individually_defined_stocks/test_subscript_individually_defined_stocks.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_individually_defined_stocks/test_subscript_individually_defined_stocks.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-individually-defined-stocks-test-subscript-individually-defined-stocks.sdm",
+  "notes": "12 stocks, 12 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-logicals-test-subscript-logicals",
+  "title": "test subscript logicals",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_logicals/test_subscript_logicals.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_logicals/test_subscript_logicals.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-logicals-test-subscript-logicals.sdm",
+  "notes": "0 stocks, 0 flows, 69 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-mapping-simple-test-subscript-mapping-simple",
+  "title": "test subscript mapping simple",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 4,
+  "difficulty": 4,
+  "question": "Imported from tests/subscript_mapping_simple/test_subscript_mapping_simple.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_mapping_simple/test_subscript_mapping_simple.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-mapping-simple-test-subscript-mapping-simple.sdm",
+  "notes": "19 stocks, 19 flows, 28 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-mapping-vensim-test-subscript-mapping-vensim",
+  "title": "test subscript mapping vensim",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_mapping_vensim/test_subscript_mapping_vensim.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_mapping_vensim/test_subscript_mapping_vensim.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-mapping-vensim-test-subscript-mapping-vensim.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-mixed-assembly-test-subscript-mixed-assembly",
+  "title": "test subscript mixed assembly",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_mixed_assembly/test_subscript_mixed_assembly.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_mixed_assembly/test_subscript_mixed_assembly.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-mixed-assembly-test-subscript-mixed-assembly.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-multiples-test-multiple-subscripts",
+  "title": "test multiple subscripts",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from tests/subscript_multiples/test_multiple_subscripts.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_multiples/test_multiple_subscripts.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-multiples-test-multiple-subscripts.sdm",
+  "notes": "2 stocks, 2 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-selection-subscript-selection",
+  "title": "subscript selection",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_selection/subscript_selection.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_selection/subscript_selection.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-selection-subscript-selection.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-subranges-test-subscript-subrange",
+  "title": "test subscript subrange",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_subranges/test_subscript_subrange.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_subranges/test_subscript_subrange.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-subranges-test-subscript-subrange.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-subranges-equal-test-subscript-subrange-equal",
+  "title": "test subscript subrange equal",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_subranges_equal/test_subscript_subrange_equal.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_subranges_equal/test_subscript_subrange_equal.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-subranges-equal-test-subscript-subrange-equal.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-switching-subscript-switching",
+  "title": "subscript switching",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_switching/subscript_switching.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_switching/subscript_switching.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-switching-subscript-switching.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-transposition-test-subscript-transposition",
+  "title": "test subscript transposition",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_transposition/test_subscript_transposition.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_transposition/test_subscript_transposition.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-transposition-test-subscript-transposition.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscript-updimensioning-test-subscript-updimensioning",
+  "title": "test subscript updimensioning",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscript_updimensioning/test_subscript_updimensioning.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscript_updimensioning/test_subscript_updimensioning.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscript-updimensioning-test-subscript-updimensioning.sdm",
+  "notes": "0 stocks, 0 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-delays-test-subscripted-delays",
+  "title": "test subscripted delays",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 5,
+  "difficulty": 5,
+  "question": "Imported from tests/subscripted_delays/test_subscripted_delays.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_delays/test_subscripted_delays.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-delays-test-subscripted-delays.sdm",
+  "notes": "100 stocks, 100 flows, 200 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-flows-test-subscripted-flows",
+  "title": "test subscripted flows",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_flows/test_subscripted_flows.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_flows/test_subscripted_flows.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-flows-test-subscripted-flows.sdm",
+  "notes": "1 stocks, 1 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-if-then-else-test-subscripted-if-then-else",
+  "title": "test subscripted if then else",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_if_then_else/test_subscripted_if_then_else.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_if_then_else/test_subscripted_if_then_else.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-if-then-else-test-subscripted-if-then-else.sdm",
+  "notes": "0 stocks, 0 flows, 35 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-logicals-test-subscripted-logicals",
+  "title": "test subscripted logicals",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_logicals/test_subscripted_logicals.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_logicals/test_subscripted_logicals.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-logicals-test-subscripted-logicals.sdm",
+  "notes": "0 stocks, 0 flows, 120 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-lookups-test-subscripted-lookups",
+  "title": "test subscripted lookups",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_lookups/test_subscripted_lookups.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_lookups/test_subscripted_lookups.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-lookups-test-subscripted-lookups.sdm",
+  "notes": "0 stocks, 0 flows, 35 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-ramp-step-test-subscripted-ramp-step",
+  "title": "test subscripted ramp step",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_ramp_step/test_subscripted_ramp_step.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_ramp_step/test_subscripted_ramp_step.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-ramp-step-test-subscripted-ramp-step.sdm",
+  "notes": "0 stocks, 0 flows, 79 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-round-test-subscripted-round",
+  "title": "test subscripted round",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_round/test_subscripted_round.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_round/test_subscripted_round.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-round-test-subscripted-round.sdm",
+  "notes": "0 stocks, 0 flows, 61 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-trend-test-subscripted-trend",
+  "title": "test subscripted trend",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_trend/test_subscripted_trend.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_trend/test_subscripted_trend.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-trend-test-subscripted-trend.sdm",
+  "notes": "0 stocks, 0 flows, 40 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-trig-test-subscripted-trig",
+  "title": "test subscripted trig",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_trig/test_subscripted_trig.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_trig/test_subscripted_trig.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-trig-test-subscripted-trig.sdm",
+  "notes": "0 stocks, 0 flows, 97 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subscripted-xidz-test-subscripted-xidz",
+  "title": "test subscripted xidz",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subscripted_xidz/test_subscripted_xidz.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subscripted_xidz/test_subscripted_xidz.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subscripted-xidz-test-subscripted-xidz.sdm",
+  "notes": "0 stocks, 0 flows, 50 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-subset-duplicated-coord-test-subset-duplicated-coord",
+  "title": "test subset duplicated coord",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/subset_duplicated_coord/test_subset_duplicated_coord.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/subset_duplicated_coord/test_subset_duplicated_coord.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-subset-duplicated-coord-test-subset-duplicated-coord.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-time-test-time",
+  "title": "test time",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/time/test_time.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/time/test_time.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-time-test-time.sdm",
+  "notes": "1 stocks, 3 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-trend-test-trend",
+  "title": "test trend",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/trend/test_trend.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/trend/test_trend.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-trend-test-trend.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-trig-test-trig",
+  "title": "test trig",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/trig/test_trig.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/trig/test_trig.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-trig-test-trig.sdm",
+  "notes": "1 stocks, 1 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-unchangeable-constant-test-unchangeable-constant",
+  "title": "test unchangeable constant",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/unchangeable_constant/test_unchangeable_constant.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/unchangeable_constant/test_unchangeable_constant.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-unchangeable-constant-test-unchangeable-constant.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-unicode-characters-unicode-test-model",
+  "title": "unicode test model",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/unicode_characters/unicode_test_model.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/unicode_characters/unicode_test_model.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-unicode-characters-unicode-test-model.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-variable-ranges-test-variable-ranges",
+  "title": "test variable ranges",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/variable_ranges/test_variable_ranges.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/variable_ranges/test_variable_ranges.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-variable-ranges-test-variable-ranges.sdm",
+  "notes": "1 stocks, 1 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-with-lookup-test-with-lookup",
+  "title": "test with lookup",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/with_lookup/test_with_lookup.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/with_lookup/test_with_lookup.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-with-lookup-test-with-lookup.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-xidz-zidz-xidz-zidz",
+  "title": "xidz zidz",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from tests/xidz_zidz/xidz_zidz.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/xidz_zidz/xidz_zidz.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-xidz-zidz-xidz-zidz.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "test-models-tests-zeroled-decimals-test-zeroled-decimals",
+  "title": "test zeroled decimals",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "test-models",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 3,
+  "difficulty": 3,
+  "question": "Imported from tests/zeroled_decimals/test_zeroled_decimals.mdl; question to be written.",
+  "authors": [
+   "test-models contributors"
+  ],
+  "year": null,
+  "source": "test-models (tests/zeroled_decimals/test_zeroled_decimals.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/test-models/test-models-tests-zeroled-decimals-test-zeroled-decimals.sdm",
+  "notes": "6 stocks, 6 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-active-initial-active-initial",
+  "title": "active initial",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/active_initial/active_initial.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/active_initial/active_initial.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-active-initial-active-initial.sdm",
+  "notes": "1 stocks, 1 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-allocate-allocate",
+  "title": "allocate",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/allocate/allocate.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/allocate/allocate.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-allocate-allocate.sdm",
+  "notes": "0 stocks, 0 flows, 16 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-allocate-by-priority-allocate-by-priority",
+  "title": "allocate by priority",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/allocate_by_priority/allocate_by_priority.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/allocate_by_priority/allocate_by_priority.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-allocate-by-priority-allocate-by-priority.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-allocate-ptype-allocate-ptype",
+  "title": "allocate ptype",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/allocate_ptype/allocate_ptype.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/allocate_ptype/allocate_ptype.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-allocate-ptype-allocate-ptype.sdm",
+  "notes": "0 stocks, 0 flows, 7 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-comments-comments",
+  "title": "comments",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/comments/comments.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/comments/comments.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-comments-comments.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-comments-expected",
+  "title": "expected",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/comments/expected.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/comments/expected.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-comments-expected.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-delay-delay",
+  "title": "delay",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/delay/delay.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/delay/delay.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-delay-delay.sdm",
+  "notes": "0 stocks, 0 flows, 13 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-delayfixed-delayfixed",
+  "title": "delayfixed",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/delayfixed/delayfixed.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/delayfixed/delayfixed.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-delayfixed-delayfixed.sdm",
+  "notes": "1 stocks, 2 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-delayfixed2-delayfixed2",
+  "title": "delayfixed2",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/delayfixed2/delayfixed2.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/delayfixed2/delayfixed2.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-delayfixed2-delayfixed2.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-depreciate-depreciate",
+  "title": "depreciate",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/depreciate/depreciate.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/depreciate/depreciate.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-depreciate-depreciate.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directconst-directconst",
+  "title": "directconst",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directconst/directconst.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directconst/directconst.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directconst-directconst.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directconst-invalidcell-directconst-invalidcell",
+  "title": "directconst invalidcell",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directconst_invalidcell/directconst_invalidcell.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directconst_invalidcell/directconst_invalidcell.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directconst-invalidcell-directconst-invalidcell.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directdata-directdata",
+  "title": "directdata",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directdata/directdata.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directdata/directdata.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directdata-directdata.sdm",
+  "notes": "0 stocks, 0 flows, 14 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directdata-endofdata-directdata-endofdata",
+  "title": "directdata endofdata",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directdata_endofdata/directdata_endofdata.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directdata_endofdata/directdata_endofdata.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directdata-endofdata-directdata-endofdata.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directdata-invalidcell-directdata-invalidcell",
+  "title": "directdata invalidcell",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directdata_invalidcell/directdata_invalidcell.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directdata_invalidcell/directdata_invalidcell.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directdata-invalidcell-directdata-invalidcell.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directlookups-directlookups",
+  "title": "directlookups",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directlookups/directlookups.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directlookups/directlookups.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directlookups-directlookups.sdm",
+  "notes": "0 stocks, 0 flows, 10 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directlookups-endofdata-directlookups-endofdata",
+  "title": "directlookups endofdata",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directlookups_endofdata/directlookups_endofdata.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directlookups_endofdata/directlookups_endofdata.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directlookups-endofdata-directlookups-endofdata.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-directlookups-invalidcell-directlookups-invalidcell",
+  "title": "directlookups invalidcell",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/directlookups_invalidcell/directlookups_invalidcell.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/directlookups_invalidcell/directlookups_invalidcell.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-directlookups-invalidcell-directlookups-invalidcell.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-elmcount-elmcount",
+  "title": "elmcount",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/elmcount/elmcount.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/elmcount/elmcount.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-elmcount-elmcount.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-extdata-extdata",
+  "title": "extdata",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/extdata/extdata.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/extdata/extdata.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-extdata-extdata.sdm",
+  "notes": "0 stocks, 0 flows, 17 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-flatten-expected",
+  "title": "expected",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/flatten/expected.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/flatten/expected.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-flatten-expected.sdm",
+  "notes": "0 stocks, 0 flows, 4 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-flatten-input1",
+  "title": "input1",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/flatten/input1.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/flatten/input1.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-flatten-input1.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-flatten-input2",
+  "title": "input2",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/flatten/input2.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/flatten/input2.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-flatten-input2.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-gamma-ln-gamma-ln",
+  "title": "gamma ln",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/gamma_ln/gamma_ln.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/gamma_ln/gamma_ln.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-gamma-ln-gamma-ln.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-getdata-getdata",
+  "title": "getdata",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/getdata/getdata.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/getdata/getdata.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-getdata-getdata.sdm",
+  "notes": "0 stocks, 0 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-index-index",
+  "title": "index",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/index/index.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/index/index.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-index-index.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-initial-initial",
+  "title": "initial",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/initial/initial.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/initial/initial.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-initial-initial.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-interleaved-interleaved",
+  "title": "interleaved",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/interleaved/interleaved.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/interleaved/interleaved.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-interleaved-interleaved.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-invertmatrix-invertmatrix",
+  "title": "invertmatrix",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/invertmatrix/invertmatrix.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/invertmatrix/invertmatrix.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-invertmatrix-invertmatrix.sdm",
+  "notes": "0 stocks, 0 flows, 8 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-longeqns-longeqns",
+  "title": "longeqns",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/longeqns/longeqns.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/longeqns/longeqns.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-longeqns-longeqns.sdm",
+  "notes": "0 stocks, 0 flows, 28 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-lookup-lookup",
+  "title": "lookup",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/lookup/lookup.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/lookup/lookup.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-lookup-lookup.sdm",
+  "notes": "0 stocks, 0 flows, 18 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-npv-npv",
+  "title": "npv",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/npv/npv.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/npv/npv.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-npv-npv.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-power-power",
+  "title": "power",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/power/power.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/power/power.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-power-power.sdm",
+  "notes": "0 stocks, 0 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-preprocess-expected",
+  "title": "expected",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/preprocess/expected.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/preprocess/expected.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-preprocess-expected.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-prune-prune",
+  "title": "prune",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/prune/prune.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/prune/prune.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-prune-prune.sdm",
+  "notes": "0 stocks, 0 flows, 25 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-pulsetrain-pulsetrain",
+  "title": "pulsetrain",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/pulsetrain/pulsetrain.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/pulsetrain/pulsetrain.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-pulsetrain-pulsetrain.sdm",
+  "notes": "0 stocks, 0 flows, 1 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-quantum-quantum",
+  "title": "quantum",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/quantum/quantum.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/quantum/quantum.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-quantum-quantum.sdm",
+  "notes": "0 stocks, 0 flows, 8 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-same-family-179-same-family-179",
+  "title": "same family 179",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/same_family_179/same_family_179.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/same_family_179/same_family_179.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-same-family-179-same-family-179.sdm",
+  "notes": "0 stocks, 0 flows, 10 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-same-family-278-same-family-278",
+  "title": "same family 278",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/same_family_278/same_family_278.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/same_family_278/same_family_278.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-same-family-278-same-family-278.sdm",
+  "notes": "0 stocks, 0 flows, 12 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-sample-sample",
+  "title": "sample",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/sample/sample.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/sample/sample.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-sample-sample.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-separateall-separateall",
+  "title": "separateall",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/separateall/separateall.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/separateall/separateall.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-separateall-separateall.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-sir-sir",
+  "title": "sir",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from models/sir/sir.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/sir/sir.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-sir-sir.sdm",
+  "notes": "3 stocks, 2 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-smooth-smooth",
+  "title": "smooth",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/smooth/smooth.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/smooth/smooth.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-smooth-smooth.sdm",
+  "notes": "0 stocks, 0 flows, 46 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-smooth3-smooth3",
+  "title": "smooth3",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 2,
+  "difficulty": 2,
+  "question": "Imported from models/smooth3/smooth3.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/smooth3/smooth3.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-smooth3-smooth3.sdm",
+  "notes": "3 stocks, 3 flows, 9 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-specialchars-specialchars",
+  "title": "specialchars",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/specialchars/specialchars.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/specialchars/specialchars.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-specialchars-specialchars.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-subalias-subalias",
+  "title": "subalias",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/subalias/subalias.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/subalias/subalias.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-subalias-subalias.sdm",
+  "notes": "0 stocks, 0 flows, 0 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-subscript-subscript",
+  "title": "subscript",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/subscript/subscript.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/subscript/subscript.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-subscript-subscript.sdm",
+  "notes": "0 stocks, 0 flows, 43 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-sum-sum",
+  "title": "sum",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/sum/sum.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/sum/sum.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-sum-sum.sdm",
+  "notes": "0 stocks, 0 flows, 62 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-sumif-sumif",
+  "title": "sumif",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "lookup",
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/sumif/sumif.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/sumif/sumif.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-sumif-sumif.sdm",
+  "notes": "0 stocks, 0 flows, 2 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-trend-trend",
+  "title": "trend",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/trend/trend.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/trend/trend.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-trend-trend.sdm",
+  "notes": "1 stocks, 1 flows, 3 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-trig-trig",
+  "title": "trig",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/trig/trig.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/trig/trig.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-trig-trig.sdm",
+  "notes": "0 stocks, 0 flows, 6 aux; imports and runs; mechanical tags only."
+ },
+ {
+  "slug": "sdeverywhere-models-vector-vector",
+  "title": "vector",
+  "category": [
+   "benchmark"
+  ],
+  "domain": [
+   "generic"
+  ],
+  "skills": [
+   "stocks-and-flows"
+  ],
+  "features": [
+   "units"
+  ],
+  "special": [
+   "imported",
+   "sdeverywhere",
+   "needs-review"
+  ],
+  "level": "intermediate",
+  "status": "built",
+  "simplicity": 1,
+  "difficulty": 1,
+  "question": "Imported from models/vector/vector.mdl; question to be written.",
+  "authors": [
+   "sdeverywhere contributors"
+  ],
+  "year": null,
+  "source": "sdeverywhere (models/vector/vector.mdl)",
+  "licence": "MIT",
+  "file": "library/ingested/sdeverywhere/sdeverywhere-models-vector-vector.sdm",
+  "notes": "0 stocks, 0 flows, 28 aux; imports and runs; mechanical tags only."
+ }
+]

@@ -1,0 +1,97 @@
+{UTF-8}
+{ Chapter 28: a cohort of 10,000 contract customers. One aggregate stock with the average churn rate against five segments whose churn rates differ (the conditional means of the quintiles of a gamma distribution with shape 2 and mean 0.05 per month). }
+Segment:
+	S1, S2, S3, S4, S5
+	~	~	Five equal segments of the cohort, from the most loyal (S1) to the least (S5).
+	|
+Average Churn Rate=
+	0.05
+	~	1/month
+	~	Average fraction of customers who leave per month, as a single number.
+	|
+Cohort Size=
+	10000
+	~	customer
+	~	Customers signed at month 0.
+	|
+Aggregate Customers= INTEG(
+	-Aggregate Churn,
+	Cohort Size)
+	~	customer
+	~	The cohort as one stock.
+	|
+Aggregate Churn=
+	Aggregate Customers * Average Churn Rate
+	~	customer/month
+	~	|
+Segment Churn Rate[Segment]=
+	0.01275, 0.02746, 0.04213, 0.06154, 0.10612
+	~	1/month
+	~	Churn rate of each segment; their average is 0.05.
+	|
+Segment Customers[Segment]= INTEG(
+	-Segment Churn[Segment],
+	Cohort Size / 5)
+	~	customer
+	~	The cohort split into five segments.
+	|
+Segment Churn[Segment]=
+	Segment Customers[Segment] * Segment Churn Rate[Segment]
+	~	customer/month
+	~	|
+Customers=
+	SUM(Segment Customers[Segment!])
+	~	customer
+	~	Customers still active, all segments.
+	|
+Total Churn=
+	SUM(Segment Churn[Segment!])
+	~	customer/month
+	~	|
+Observed Churn Rate=
+	ZIDZ(Total Churn, Customers)
+	~	1/month
+	~	The churn rate a manager would measure: total churn over active customers.
+	|
+Margin per Customer=
+	1
+	~	dollar/customer/month
+	~	Monthly margin per active customer.
+	|
+Discount Rate=
+	0.01
+	~	1/month
+	~	|
+Discount Factor=
+	EXP(-Discount Rate * Time)
+	~	dmnl
+	~	|
+Aggregate Value= INTEG(
+	Aggregate Customers * Margin per Customer * Discount Factor,
+	0)
+	~	dollar
+	~	Present value of the cohort's margin, aggregate model.
+	|
+Segment Value= INTEG(
+	Customers * Margin per Customer * Discount Factor,
+	0)
+	~	dollar
+	~	Present value of the cohort's margin, segmented model.
+	|
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+FINAL TIME  = 60
+	~	month
+	~	|
+INITIAL TIME  = 0
+	~	month
+	~	|
+SAVEPER  = TIME STEP
+	~	month
+	~	|
+TIME STEP  = 0.0625
+	~	month
+	~	|

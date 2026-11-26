@@ -1,0 +1,778 @@
+{UTF-8}
+Base Marketing=
+	20000
+	~	USD/month
+	~	Monthly marketing budget once launched.
+	|
+Launch Time=
+	1
+	~	month
+	~	Month the marketing starts.
+	|
+Campaign Size=
+	0
+	~	USD
+	~	Extra one-off campaign budget (test input).
+	|
+Campaign Time=
+	12
+	~	month
+	~	
+	|
+Campaign Length=
+	1
+	~	month
+	~	
+	|
+Marketing Spend=
+	Base Marketing * STEP(1, Launch Time) + Campaign Size / Campaign Length * PULSE(Campaign Time, Campaign Length)
+	~	USD/month
+	~	
+	|
+Acquisition Cost=
+	400
+	~	USD/customer
+	~	Marketing spend needed to win one customer (CAC).
+	|
+Reference Price=
+	120
+	~	USD/customer/month
+	~	Price the market regards as normal.
+	|
+Relative Price=
+	Price / Reference Price
+	~	dmnl
+	~	
+	|
+Effect of Price on Acquisition table(
+	[(0,0)-(3,3)],(0,2.5),(0.5,1.8),(0.8,1.25),(1,1),(1.2,0.75),(1.5,0.45),(2,0.2),(3,0.05))
+	~	dmnl
+	~	Normalised: 1 at the reference price; elasticity about -1.3 at the normal point.
+	|
+Effect of Price on Acquisition=
+	Effect of Price on Acquisition table(Relative Price)
+	~	dmnl
+	~	
+	|
+Effect of Price on Churn table(
+	[(0,0)-(3,3)],(0,0.7),(0.5,0.8),(1,1),(1.5,1.4),(2,2),(3,3))
+	~	dmnl
+	~	Customers who pay more leave sooner.
+	|
+Effect of Price on Churn=
+	Effect of Price on Churn table(Relative Price)
+	~	dmnl
+	~	
+	|
+Marketing Acquisition=
+	Marketing Spend / Acquisition Cost * Effect of Price on Acquisition
+	~	customer/month
+	~	
+	|
+Referral Rate=
+	0.03
+	~	1/month
+	~	New customers won each month per existing customer, while the market is untouched.
+	|
+Market Size=
+	20000
+	~	customer
+	~	Customers the offer could reach in this city.
+	|
+Word of Mouth Acquisition=
+	Customers * Referral Rate * MAX(0, 1 - Customers / Market Size) * Quality Effect on Referrals * Effect of Price on Acquisition
+	~	customer/month
+	~	
+	|
+Acquisition=
+	Marketing Acquisition + Word of Mouth Acquisition
+	~	customer/month
+	~	
+	|
+Churn Fraction=
+	0.04
+	~	1/month
+	~	Share of customers who cancel each month when service is normal.
+	|
+Churn=
+	Customers * Churn Fraction * Quality Effect on Churn * Effect of Price on Churn
+	~	customer/month
+	~	
+	|
+Customers= INTEG(
+	Acquisition - Churn,
+	0)
+	~	customer
+	~	Paying subscribers.
+	|
+Base Price=
+	120
+	~	USD/customer/month
+	~	
+	|
+Price Change=
+	0
+	~	dmnl
+	~	Fractional price change (test input).
+	|
+Price Change Time=
+	18
+	~	month
+	~	
+	|
+Price=
+	Base Price * (1 + Price Change * STEP(1, Price Change Time))
+	~	USD/customer/month
+	~	Monthly subscription price.
+	|
+Revenue=
+	Customers * Price
+	~	USD/month
+	~	Subscription revenue earned each month.
+	|
+Unit Service Cost=
+	20
+	~	USD/customer/month
+	~	Materials and third-party cost of serving one customer for a month.
+	|
+Service Cost=
+	Customers * Unit Service Cost
+	~	USD/month
+	~	
+	|
+Salary=
+	5000
+	~	USD/person/month
+	~	Salary and on-costs of one person.
+	|
+Customers per Staff=
+	100
+	~	customer/person
+	~	Customers one experienced person can serve well.
+	|
+Perception Time=
+	2
+	~	month
+	~	
+	|
+Forecast Horizon=
+	0
+	~	month
+	~	How far ahead hiring looks along the customer trend (0: no forecast).
+	|
+Perceived Customers=
+	SMOOTH(Customers, Perception Time)
+	~	customer
+	~	
+	|
+Customer Trend=
+	(Customers - Perceived Customers) / Perception Time
+	~	customer/month
+	~	
+	|
+Planned Customers=
+	MAX(0, Perceived Customers + Forecast Horizon * Customer Trend)
+	~	customer
+	~	
+	|
+Hiring Delay=
+	2
+	~	month
+	~	
+	|
+Staff Adjustment Time=
+	2
+	~	month
+	~	
+	|
+Tenure=
+	24
+	~	month
+	~	Average stay of an experienced person.
+	|
+Rookie Quit Time=
+	18
+	~	month
+	~	
+	|
+Training Time=
+	4
+	~	month
+	~	Time for a rookie to become fully productive.
+	|
+Rookie Productivity=
+	0.5
+	~	dmnl
+	~	A rookie does this fraction of an experienced person's work.
+	|
+Mentoring Load=
+	0.1
+	~	dmnl
+	~	Share of a veteran's time spent on each rookie.
+	|
+Minimum Staff=
+	4
+	~	person
+	~	
+	|
+Hiring Policy=
+	1
+	~	dmnl
+	~	0: hire to the customer plan; 1: hire only once customers are seen to wait.
+	|
+Perceived Service Time=
+	SMOOTH(Service Time, Perception Time)
+	~	month
+	~	
+	|
+Plan Staff=
+	Planned Customers / Customers per Staff
+	~	person
+	~	
+	|
+Pressure Staff=
+	Staff * Perceived Service Time / Target Service Time
+	~	person
+	~	Staff the waiting times seem to call for.
+	|
+Desired Staff=
+	MAX(Minimum Staff, IF THEN ELSE(Hiring Policy = 1, Pressure Staff, Plan Staff))
+	~	person
+	~	
+	|
+Staff=
+	Rookies + Veterans
+	~	person
+	~	
+	|
+Promotion=
+	Rookies / Training Time
+	~	person/month
+	~	
+	|
+Rookie Quits=
+	Rookies / Rookie Quit Time
+	~	person/month
+	~	
+	|
+Veteran Attrition=
+	Veterans / Tenure
+	~	person/month
+	~	
+	|
+Hiring Starts=
+	MAX(0, Veteran Attrition + Rookie Quits + (Desired Staff - Staff - Recruits in Pipeline) / Staff Adjustment Time) * Hiring Allowed
+	~	person/month
+	~	
+	|
+Hires=
+	DELAY3(Hiring Starts, Hiring Delay)
+	~	person/month
+	~	
+	|
+Recruits in Pipeline= INTEG(
+	Hiring Starts - Hires,
+	0)
+	~	person
+	~	
+	|
+Rookies= INTEG(
+	Hires - Promotion - Rookie Quits,
+	0)
+	~	person
+	~	
+	|
+Veterans= INTEG(
+	Promotion - Veteran Attrition,
+	4)
+	~	person
+	~	
+	|
+Effective Staff=
+	MAX(0, Veterans + Rookie Productivity * Rookies - Mentoring Load * Rookies)
+	~	person
+	~	Experienced-equivalent people available for customer work.
+	|
+Payroll=
+	Staff * Salary
+	~	USD/month
+	~	
+	|
+Overhead=
+	30000
+	~	USD/month
+	~	Product team, rent, software and other fixed costs.
+	|
+Requests per Customer=
+	1
+	~	request/customer/month
+	~	Service visits or tickets each customer needs a month.
+	|
+Request Arrivals=
+	Customers * Requests per Customer
+	~	request/month
+	~	
+	|
+Target Service Time=
+	0.5
+	~	month
+	~	Time to complete a request that customers regard as normal.
+	|
+Standard Time per Request= INTEG(
+	Change in Standard,
+	Normal Time per Request)
+	~	hour/request
+	~	The working norm: time people now regard as enough for a request.
+	|
+Recovery Time=
+	24
+	~	month
+	~	Time for an eroded norm to recover once pressure eases.
+	|
+Change in Standard=
+	IF THEN ELSE(Indicated Time per Request < Standard Time per Request, (Indicated Time per Request - Standard Time per Request) / Erosion Time, (Indicated Time per Request - Standard Time per Request) / Recovery Time)
+	~	hour/request/month
+	~	Norms fall fast and recover slowly.
+	|
+Normal Time per Request=
+	1.2
+	~	hour/request
+	~	Time a request needs to be done properly.
+	|
+Erosion Time=
+	6
+	~	month
+	~	Time for the working norm to drift towards what pressure allows.
+	|
+Anchor Weight=
+	0
+	~	dmnl
+	~	Weight on the external standard (0: the norm can drift freely).
+	|
+Hours per Person=
+	150
+	~	hour/person/month
+	~	
+	|
+Pressure Time per Request=
+	Normal Time per Request / MAX(1, Work Pressure)
+	~	hour/request
+	~	
+	|
+Indicated Time per Request=
+	Anchor Weight * Normal Time per Request + (1 - Anchor Weight) * MIN(Normal Time per Request, Pressure Time per Request)
+	~	hour/request
+	~	
+	|
+Normal Capacity=
+	Effective Staff * Hours per Person / Normal Time per Request
+	~	request/month
+	~	
+	|
+Work Pressure=
+	XIDZ(Backlog / Target Service Time, Normal Capacity, 1)
+	~	dmnl
+	~	Requests that should be done this month over normal capacity.
+	|
+Capacity=
+	Normal Capacity * Normal Time per Request / Standard Time per Request
+	~	request/month
+	~	Rushed work gets more done.
+	|
+Work Quality=
+	Standard Time per Request / Normal Time per Request
+	~	dmnl
+	~	1: done properly; below 1: corners cut.
+	|
+Minimum Service Time=
+	0.25
+	~	month
+	~	
+	|
+Completions=
+	MIN(Capacity, Backlog / Minimum Service Time)
+	~	request/month
+	~	
+	|
+Backlog= INTEG(
+	Request Arrivals - Completions,
+	0)
+	~	request
+	~	Requests waiting to be done.
+	|
+Service Time=
+	XIDZ(Backlog, Completions, Minimum Service Time)
+	~	month
+	~	Average wait, by Little's law.
+	|
+Relative Service Time=
+	Service Time / Target Service Time
+	~	dmnl
+	~	
+	|
+Churn Sensitivity=
+	0.5
+	~	dmnl
+	~	Extra churn per unit of service gap.
+	|
+Service Gap=
+	MAX(0, Relative Service Time - 1)
+	~	dmnl
+	~	How much longer than normal customers wait.
+	|
+Quality Perception Time=
+	3
+	~	month
+	~	Time for customers to notice that work is rushed.
+	|
+Perceived Work Quality=
+	SMOOTH(Work Quality, Quality Perception Time)
+	~	dmnl
+	~	
+	|
+Quality Sensitivity=
+	2
+	~	dmnl
+	~	Extra churn per unit of quality shortfall.
+	|
+Quality Shortfall=
+	MAX(0, 1 - Perceived Work Quality)
+	~	dmnl
+	~	
+	|
+Quality Effect on Churn=
+	1 + Churn Sensitivity * Service Gap + Quality Sensitivity * Quality Shortfall
+	~	dmnl
+	~	
+	|
+Quality Effect on Referrals=
+	1 / (1 + Service Gap + Quality Sensitivity * Quality Shortfall)
+	~	dmnl
+	~	
+	|
+Minimum Runway=
+	6
+	~	month
+	~	Hiring stops when runway falls below this.
+	|
+Runway Rule=
+	1
+	~	dmnl
+	~	1: hire only while runway allows; 0: hire to plan whatever the cash.
+	|
+Hiring Allowed=
+	IF THEN ELSE(Runway Rule = 1, IF THEN ELSE(Runway < Minimum Runway, 0, 1), 1)
+	~	dmnl
+	~	
+	|
+Operating Expenses=
+	Service Cost + Payroll + Overhead + Marketing Spend
+	~	USD/month
+	~	Cash expenses recognised each month.
+	|
+Founder Capital=
+	400000
+	~	USD
+	~	Cash the founders and friends put in at the start.
+	|
+Round Width=
+	1
+	~	month
+	~	Funds of a round arrive over one month.
+	|
+Seed Amount=
+	1000000
+	~	USD
+	~	
+	|
+Seed Time=
+	6
+	~	month
+	~	
+	|
+Series A Amount=
+	0
+	~	USD
+	~	
+	|
+Series A Time=
+	24
+	~	month
+	~	
+	|
+Equity Raised=
+	Seed Amount / Round Width * PULSE(Seed Time, Round Width) + Series A Amount / Round Width * PULSE(Series A Time, Round Width)
+	~	USD/month
+	~	
+	|
+Collection Time=
+	1
+	~	month
+	~	Average time customers take to pay an invoice.
+	|
+Billings=
+	Revenue
+	~	USD/month
+	~	T(AR+): invoices sent.
+	|
+Revenue Earned=
+	Revenue
+	~	USD/month
+	~	T(RE+): revenue recognised.
+	|
+Collections=
+	Accounts Receivable / Collection Time
+	~	USD/month
+	~	T(Cash+) and T(AR-): invoices paid.
+	|
+Cash Collected=
+	Collections
+	~	USD/month
+	~	
+	|
+Accounts Receivable= INTEG(
+	Billings - Collections,
+	0)
+	~	USD
+	~	Invoices not yet paid.
+	|
+Cash Expenses=
+	Operating Expenses
+	~	USD/month
+	~	T(Cash-)
+	|
+Expenses Recognised=
+	Operating Expenses
+	~	USD/month
+	~	T(RE-)
+	|
+Cash from Investors=
+	Equity Raised
+	~	USD/month
+	~	T(Cash+)
+	|
+Capital Issued=
+	Equity Raised
+	~	USD/month
+	~	T(Paid-in Capital+)
+	|
+Cash= INTEG(
+	Cash Collected + Cash from Investors - Cash Expenses,
+	Founder Capital)
+	~	USD
+	~	
+	|
+Paid in Capital= INTEG(
+	Capital Issued,
+	Founder Capital)
+	~	USD
+	~	Equity put in by founders and investors.
+	|
+Retained Earnings= INTEG(
+	Revenue Earned - Expenses Recognised,
+	0)
+	~	USD
+	~	Accumulated profit or loss.
+	|
+Total Assets=
+	Cash + Accounts Receivable
+	~	USD
+	~	
+	|
+Total Liabilities and Equity=
+	Paid in Capital + Retained Earnings
+	~	USD
+	~	The start-up has no debt in this model.
+	|
+Balance Gap=
+	Total Assets - Total Liabilities and Equity
+	~	USD
+	~	Must be zero at every step: the balance sheet balances.
+	|
+Net Income=
+	Revenue Earned - Expenses Recognised
+	~	USD/month
+	~	
+	|
+Net Cash Flow=
+	Cash Collected - Cash Expenses
+	~	USD/month
+	~	Operating cash flow, before funding.
+	|
+Burn Rate=
+	MAX(0, -Net Cash Flow)
+	~	USD/month
+	~	
+	|
+Runway=
+	IF THEN ELSE(Burn Rate > 0, Cash / MAX(Burn Rate, 1), 99)
+	~	month
+	~	Months of cash left at the current burn.
+	|
+Contribution per Customer=
+	Price - Unit Service Cost - Requests per Customer * Cost per Request
+	~	USD/customer/month
+	~	
+	|
+Cost per Request=
+	XIDZ(Payroll, Completions, 0)
+	~	USD/request
+	~	Payroll spread over the requests done.
+	|
+Effective Churn=
+	XIDZ(Churn, Customers, Churn Fraction)
+	~	1/month
+	~	
+	|
+Lifetime Value=
+	XIDZ(Contribution per Customer, Effective Churn, 0)
+	~	USD/customer
+	~	
+	|
+Cost to Win a Customer=
+	Acquisition Cost
+	~	USD/customer
+	~	
+	|
+LTV to CAC=
+	Lifetime Value / Cost to Win a Customer
+	~	dmnl
+	~	
+	|
+CAC Payback=
+	XIDZ(Cost to Win a Customer, Contribution per Customer, 99)
+	~	month
+	~	
+	|
+Discount Rate=
+	0.02
+	~	1/month
+	~	Monthly rate a venture investor might use (about 27% a year).
+	|
+Discount Factor=
+	EXP(-Discount Rate * Time)
+	~	dmnl
+	~	
+	|
+Discounted Cash Flow=
+	Net Cash Flow * Discount Factor
+	~	USD/month
+	~	
+	|
+Present Value of Operations= INTEG(
+	Discounted Cash Flow,
+	0)
+	~	USD
+	~	Operating cash flows, discounted to month 0.
+	|
+Founder Shares=
+	8000000
+	~	share
+	~	
+	|
+Option Pool Shares=
+	1000000
+	~	share
+	~	Reserved for employees before the seed round.
+	|
+Seed Pre Money=
+	4500000
+	~	USD
+	~	
+	|
+Series A Pre Money=
+	15000000
+	~	USD
+	~	
+	|
+Shares Before Seed=
+	Founder Shares + Option Pool Shares
+	~	share
+	~	
+	|
+Seed Shares=
+	Shares Before Seed * Seed Amount / Seed Pre Money
+	~	share
+	~	New shares = pre-money shares x investment / pre-money valuation.
+	|
+Series A Shares=
+	(Shares Before Seed + Seed Shares) * Series A Amount / Series A Pre Money
+	~	share
+	~	
+	|
+Shares Issued=
+	Seed Shares / Round Width * PULSE(Seed Time, Round Width) + Series A Shares / Round Width * PULSE(Series A Time, Round Width)
+	~	share/month
+	~	
+	|
+Shares Outstanding= INTEG(
+	Shares Issued,
+	Shares Before Seed)
+	~	share
+	~	Fully diluted shares.
+	|
+Founder Ownership=
+	Founder Shares / Shares Outstanding
+	~	dmnl
+	~	
+	|
+Seed Share Price=
+	Seed Pre Money / Shares Before Seed
+	~	USD/share
+	~	
+	|
+Data Until=
+	12.0
+	~	month
+	~	Last month of data used in the fit.
+	|
+Customer Data table(
+	[(0,0)-(12,635.5)],(0,0),(1,9),(2,24),(3,92),(4,118),(5,171),(6,206),(7,246),(8,284),(9,333),(10,336),(11,382),(12,423))
+	~	customer
+	~	Observed paying customers at month ends.
+	|
+Customer Data=
+	Customer Data table(Time / Data Time Unit)
+	~	customer
+	~	
+	|
+Cancellation Data table(
+	[(0,0)-(12,35.5)],(0,0),(1,2),(2,1),(3,5),(4,3),(5,4),(6,4),(7,7),(8,17),(9,19),(10,19),(11,14),(12,23))
+	~	customer/month
+	~	Observed cancellations per month.
+	|
+Cancellation Data=
+	Cancellation Data table(Time / Data Time Unit)
+	~	customer/month
+	~	
+	|
+Data Time Unit=
+	1
+	~	month
+	~	
+	|
+Cancellation Weight=
+	11.111111111111112
+	~	month*month
+	~	Weight of the cancellation series in the fit (0: customers only).
+	|
+In Fit Window=
+	IF THEN ELSE(Time <= Data Until, 1, 0)
+	~	dmnl
+	~	
+	|
+Squared Error Rate=
+	In Fit Window * ((Customers - Customer Data) * (Customers - Customer Data) + Cancellation Weight * (Churn - Cancellation Data) * (Churn - Cancellation Data)) / Data Time Unit
+	~	customer*customer/month
+	~	
+	|
+Fit Error= INTEG(
+	Squared Error Rate,
+	0)
+	~	customer*customer
+	~	Misfit between model and data over the fit window.
+	|
+INITIAL TIME = 0 ~ month ~ |
+FINAL TIME = 12 ~ month ~ |
+TIME STEP = 0.125 ~ month ~ |
+SAVEPER = 0.125 ~ month ~ |
